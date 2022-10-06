@@ -32,7 +32,7 @@
 % ----------------------------------------------------------------------
 % Dedication page (optional)
 % ----------------------------------------------------------------------
-%\input{Thesis_Dedication} % file "Thesis_Dedication.tex"
+\input{Thesis_Dedication} % file "Thesis_Dedication.tex"
 
 
 
@@ -111,16 +111,24 @@
 % ----------------------------------------------------------------------
 %\glsaddall
 
-\include{Introduction}
-\include{Chapter_Publickey}
-\include{Chapter_QKD}
-\include{Chapter_FidelityAndUhlmann}
-\include{Chapter_TopoQW}
-\include{Chapter_DynamicalPTs}
-\include{Chapter_Conclusions}
+% My chapters
+\include{Introduction/Introduction}
+%\include{Chapter_TechnicalOverview}
+%\include{Chapter_QuantumObliviousTransfer}
+%\include{Chapter_QuantumAndClassicalObliviousTransfer}
+%\include{Chapter_QuantumObliviousLinearEvaluation}
+%\include{Chapter_QuantumAssistedSecureMultipartyComputationSystem}
 
-\include{AppendixA}
-\include{AppendixB}
+% Chryshoula chapters
+%\include{Chapter_Publickey}
+%\include{Chapter_QKD}
+%\include{Chapter_FidelityAndUhlmann}
+%\include{Chapter_TopoQW}
+%\include{Chapter_DynamicalPTs}
+%\include{Chapter_Conclusions}
+
+%\include{AppendixA}
+%\include{AppendixB}
 
 %
 % ----------------------------------------------------------------------
@@ -137,7 +145,7 @@
 %\bibliographystyle{plain}
 % > unsorted with entries appearing in the order in which the citations appear.
 
-\bibliography{bibforthesis}
+\bibliography{References/References}
 \bibliographystyle{unsrt}
 \addcontentsline{toc}{chapter}{\bibname}
 % > entries ordered alphabetically, with first names and names of journals and months abbreviated

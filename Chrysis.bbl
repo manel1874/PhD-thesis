@@ -1,0 +1,258 @@
+\begin{thebibliography}{10}
+
+\bibitem{Wang11}
+Jun Wang.
+\newblock Personal genomes: For one and for all.
+\newblock {\em Science}, 331(6018):690--690, 2011.
+
+\bibitem{NS08}
+Arvind Narayanan and Vitaly Shmatikov.
+\newblock Robust de-anonymization of large sparse datasets.
+\newblock In {\em 2008 IEEE Symposium on Security and Privacy (sp 2008)}, pages
+  111--125, 2008.
+
+\bibitem{L02}
+Latanya Sweeney.
+\newblock k-anonymity: A model for protecting privacy.
+\newblock {\em International Journal of Uncertainty, Fuzziness and
+  Knowledge-Based Systems}, 10(05):557--570, 2002.
+
+\bibitem{Homer08}
+Nils Homer, Szabolcs Szelinger, Margot Redman, David Duggan, Waibhav Tembe,
+  Jill Muehling, John~V. Pearson, Dietrich~A. Stephan, Stanley~F. Nelson, and
+  David~W. Craig.
+\newblock Resolving individuals contributing trace amounts of {DNA} to highly
+  complex mixtures using high-density {SNP} genotyping microarrays.
+\newblock {\em {PLoS} Genetics}, 4(8):e1000167, August 2008.
+
+\bibitem{Gymrek13}
+M.~Gymrek, A.~L. McGuire, D.~Golan, E.~Halperin, and Y.~Erlich.
+\newblock Identifying personal genomes by surname inference.
+\newblock {\em Science}, 339(6117):321--324, January 2013.
+
+\bibitem{EUdataregulations2016}
+2016 reform of eu data protection rules.
+\newblock https://eur-lex.europa.eu/eli/reg/2016/679/oj, 2016.
+
+\bibitem{Li2016}
+Ninghui Li, Min Lyu, Dong Su, and Weining Yang.
+\newblock Differential privacy: From theory to practice.
+\newblock {\em Synthesis Lectures on Information Security, Privacy, and Trust},
+  8(4):1--138, October 2016.
+
+\bibitem{Armknecht2015}
+Frederik Armknecht, C.~Boyd, Christopher Carr, K.~Gj{\o}steen, Angela
+  J{\"a}schke, Christian~A. Reuter, and Martin Strand.
+\newblock A guide to fully homomorphic encryption.
+\newblock {\em IACR Cryptol. ePrint Arch.}, 2015:1192, 2015.
+
+\bibitem{Yao82}
+A.~C. {Yao}.
+\newblock Protocols for secure computations.
+\newblock In {\em 23rd Annual Symposium on Foundations of Computer Science
+  (sfcs 1982)}, pages 160--164, 1982.
+
+\bibitem{Y86}
+Andrew Chi-Chih Yao.
+\newblock How to generate and exchange secrets.
+\newblock In {\em 27th Annual Symposium on Foundations of Computer Science
+  (sfcs 1986)}. {IEEE}, October 1986.
+
+\bibitem{Goldreich87}
+O.~Goldreich, S.~Micali, and A.~Wigderson.
+\newblock How to play {ANY} mental game.
+\newblock In {\em Proceedings of the nineteenth annual {ACM} conference on
+  Theory of computing - {STOC} '87}. {ACM} Press, 1987.
+
+\bibitem{Bendlin11}
+Rikke Bendlin, Ivan Damg{\aa}rd, Claudio Orlandi, and Sarah Zakarias.
+\newblock Semi-homomorphic encryption and multiparty computation.
+\newblock In {\em Advances in Cryptology {\textendash} {EUROCRYPT} 2011}, pages
+  169--188. Springer Berlin Heidelberg, 2011.
+
+\bibitem{D12}
+Ivan Damg{\aa}rd, Valerio Pastro, Nigel Smart, and Sarah Zakarias.
+\newblock Multiparty computation from somewhat homomorphic encryption.
+\newblock In {\em Lecture Notes in Computer Science}, pages 643--662. Springer
+  Berlin Heidelberg, 2012.
+
+\bibitem{K88}
+Joe Kilian.
+\newblock Founding cryptography on oblivious transfer.
+\newblock In {\em Proceedings of the twentieth annual {ACM} symposium on Theory
+  of computing - {STOC} '88}. {ACM} Press, 1988.
+
+\bibitem{DPSZ12}
+Ivan Damg{\aa}rd, Valerio Pastro, Nigel Smart, and Sarah Zakarias.
+\newblock Multiparty computation from somewhat homomorphic encryption.
+\newblock In {\em Lecture Notes in Computer Science}, pages 643--662. Springer
+  Berlin Heidelberg, 2012.
+
+\bibitem{IR99}
+R.~Impagliazzo and S.~Rudich.
+\newblock Limits on the provable consequences of one-way permutations.
+\newblock In {\em Proceedings of the Twenty-First Annual ACM Symposium on
+  Theory of Computing}, STOC '89, page 44–61, New York, NY, USA, 1989.
+  Association for Computing Machinery.
+
+\bibitem{Sho95}
+Peter~W. Shor.
+\newblock Polynomial-time algorithms for prime factorization and discrete
+  logarithms on a quantum computer.
+\newblock {\em SIAM Journal on Computing}, 26(5):1484--1509, 1997.
+
+\bibitem{B15}
+Anne Broadbent and Christian Schaffner.
+\newblock Quantum cryptography beyond quantum key distribution.
+\newblock {\em Designs, Codes and Cryptography}, 78(1):351--382, December 2015.
+
+\bibitem{PSAN13}
+A.~N. Pinto, N.~A. Silva, A.~Almeida, and N.~J. Muga.
+\newblock Using quantum technologies to improve fiber optic communication
+  systems.
+\newblock {\em IEEE Communications Magazine}, 8(51):42--48, August 2013.
+
+\bibitem{CK11}
+Andre Chailloux and Iordanis Kerenidis.
+\newblock Optimal bounds for quantum bit commitment.
+\newblock In {\em 2011 {IEEE} 52nd Annual Symposium on Foundations of Computer
+  Science}. {IEEE}, October 2011.
+
+\bibitem{CK09}
+Andr{\'{e}} Chailloux and Iordanis Kerenidis.
+\newblock Optimal quantum strong coin flipping.
+\newblock In {\em 2009 50th Annual {IEEE} Symposium on Foundations of Computer
+  Science}. {IEEE}, October 2009.
+
+\bibitem{BFK09}
+Anne Broadbent, Joseph Fitzsimons, and Elham Kashefi.
+\newblock Universal blind quantum computation.
+\newblock In {\em 2009 50th Annual {IEEE} Symposium on Foundations of Computer
+  Science}. {IEEE}, October 2009.
+
+\bibitem{Unr14}
+Dominique Unruh.
+\newblock Quantum position verification in the random oracle model.
+\newblock In Juan~A. Garay and Rosario Gennaro, editors, {\em Advances in
+  Cryptology -- CRYPTO 2014}, pages 1--18, Berlin, Heidelberg, 2014. Springer
+  Berlin Heidelberg.
+
+\bibitem{DFSS14}
+Ivan Damg{\aa}rd, Serge Fehr, Louis Salvail, and Christian Schaffner.
+\newblock Secure identification and {QKD} in the bounded-quantum-storage model.
+\newblock {\em Theoretical Computer Science}, 560:12--26, December 2014.
+
+\bibitem{DFLSS09}
+Ivan Damg{\aa}rd, Serge Fehr, Carolin Lunemann, Louis Salvail, and Christian
+  Schaffner.
+\newblock Improving the security of quantum protocols via commit-and-open.
+\newblock In Shai Halevi, editor, {\em Advances in Cryptology - CRYPTO 2009},
+  pages 408--427, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
+
+\bibitem{BBCS92}
+Charles~H. Bennett, Gilles Brassard, Claude Cr{\'e}peau, and
+  Marie-H{\'e}l{\`e}ne Skubiszewska.
+\newblock Practical quantum oblivious transfer.
+\newblock In Joan Feigenbaum, editor, {\em Advances in Cryptology --- CRYPTO
+  '91}, pages 351--366, Berlin, Heidelberg, 1992. Springer Berlin Heidelberg.
+
+\bibitem{GLSV21}
+Alex~B. Grilo, Huijia Lin, Fang Song, and Vinod Vaikuntanathan.
+\newblock Oblivious transfer is in miniqcrypt.
+\newblock In Anne Canteaut and Fran{\c{c}}ois-Xavier Standaert, editors, {\em
+  Advances in Cryptology -- EUROCRYPT 2021}, pages 531--561, Cham, 2021.
+  Springer International Publishing.
+
+\bibitem{BCKM21}
+James Bartusek, Andrea Coladangelo, Dakshita Khurana, and Fermi Ma.
+\newblock One-way functions imply secure computation in a quantum world.
+\newblock In Tal Malkin and Chris Peikert, editors, {\em Advances in Cryptology
+  -- CRYPTO 2021}, pages 467--496, Cham, 2021. Springer International
+  Publishing.
+
+\bibitem{KOS16}
+Marcel Keller, Emmanuela Orsini, and Peter Scholl.
+\newblock {MASCOT}.
+\newblock In {\em Proceedings of the 2016 {ACM} {SIGSAC} Conference on Computer
+  and Communications Security}. {ACM}, October 2016.
+
+\bibitem{ALSZ13}
+Gilad Asharov, Yehuda Lindell, Thomas Schneider, and Michael Zohner.
+\newblock More efficient oblivious transfer and extensions for faster secure
+  computation.
+\newblock In {\em Proceedings of the 2013 ACM SIGSAC Conference on Computer \&
+  Communications Security}, CCS '13, pages 535--548, New York, NY, USA, 2013.
+  Association for Computing Machinery.
+
+\bibitem{KOS15}
+Marcel Keller, Emmanuela Orsini, and Peter Scholl.
+\newblock Actively secure ot extension with optimal overhead.
+\newblock In {\em Advances in Cryptology - CRYPTO 2015}, volume 9215 of {\em
+  Lecture Notes in Computer Science}, pages 724--741. Springer, August 2015.
+\newblock Date of Acceptance: 08/05/2015.
+
+\bibitem{BPT00}
+H.~Bechmann-Pasquinucci and W.~Tittel.
+\newblock Quantum cryptography using larger alphabets.
+\newblock {\em Phys. Rev. A}, 61:062308, May 2000.
+
+\bibitem{DEBZ10}
+Thomas Durt, Berthold-Georg Englert, Ingemar Bengtsson, and Karol Zyczkowski.
+\newblock On mutually unbiased bases.
+\newblock {\em International Journal of Quantum Information}, 08(04):535--640,
+  2010.
+
+\bibitem{Zhongetal2015}
+Tian Zhong, Hongchao Zhou, Robert~D Horansky, Catherine Lee, Varun~B Verma,
+  Adriana~E Lita, Alessandro Restelli, Joshua~C Bienfang, Richard~P Mirin,
+  Thomas Gerrits, Sae~Woo Nam, Francesco Marsili, Matthew~D Shaw, Zheshen
+  Zhang, Ligong Wang, Dirk Englund, Gregory~W Wornell, Jeffrey~H Shapiro, and
+  Franco N~C Wong.
+\newblock Photon-efficient quantum key distribution using
+  time{\textendash}energy entanglement with high-dimensional encoding.
+\newblock {\em New Journal of Physics}, 17(2):022002, 2015.
+
+\bibitem{BHVBFHM18}
+Fr\'{e}d\'{e}ric Bouchard, Natalia~Herrera Valencia, Florian Brandt, Robert
+  Fickler, Marcus Huber, and Mehul Malik.
+\newblock Measuring azimuthal and radial modes of photons.
+\newblock {\em Opt. Express}, 26(24):31925--31941, Nov 2018.
+
+\bibitem{DHMPPV21}
+Mirdit Doda, Marcus Huber, Gl\'aucia Murta, Matej Pivoluska, Martin Plesch, and
+  Chrysoula Vlachou.
+\newblock Quantum key distribution overcoming extreme noise: Simultaneous
+  subspace coding using high-dimensional entanglement.
+\newblock {\em Phys. Rev. Applied}, 15:034003, Mar 2021.
+
+\bibitem{SPM21}
+Manuel~B. Santos, Armando~N. Pinto, and Paulo Mateus.
+\newblock Quantum and classical oblivious transfer: A comparative analysis.
+\newblock {\em {IET} Quantum Communication}, 2(2):42--53, May 2021.
+
+\bibitem{SMV22}
+Manuel~B. Santos, Paulo Mateus, and Chrysoula Vlachou.
+\newblock Quantum universally composable oblivious linear evaluation, 2022.
+
+\bibitem{SGPM22}
+Manuel~B. Santos, Ana~C. Gomes, Armando~N. Pinto, and Paulo Mateus.
+\newblock Private computation of phylogenetic trees based on quantum
+  technologies.
+\newblock {\em {IEEE} Access}, 10:38065--38088, 2022.
+
+\bibitem{SGPM21}
+Manuel~B. Santos, Ana~C. Gomes, Armando~N. Pinto, and Paulo Mateus.
+\newblock Quantum secure multiparty computation of phylogenetic trees of
+  {SARS}-{CoV}-2 genome.
+\newblock In {\em 2021 Telecoms Conference ({ConfTELE})}. {IEEE}, February
+  2021.
+
+\bibitem{POS+20}
+Armando~N. Pinto, Laura Ortiz, Manuel Santos, Ana~C. Gomes, Juan~P. Brito,
+  Nelson~J. Muga, Nuno~A. Silva, Paulo Mateus, and Vicente Martin.
+\newblock Quantum enabled private recognition of composite signals in genome
+  and proteins.
+\newblock In {\em 2020 22nd International Conference on Transparent Optical
+  Networks ({ICTON})}. {IEEE}, July 2020.
+
+\end{thebibliography}

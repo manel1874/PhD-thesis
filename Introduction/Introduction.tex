@@ -1,0 +1,100 @@
+%\documentclass[11pt]{report}
+
+
+
+%\begin{document}
+
+\chapter{Introduction}
+%\addcontentsline{toc}{chapter}{Introduction}
+
+The emerging fields of Data Mining and Data Analysis have deeply benefited from the increasing power of computers \cite{Wang11}. However, its need for a massive and methodical collection of data can lead to the complete or partial leak of private sensitive information, such as in the case of the genomics field \cite{NS08, L02, Homer08, Gymrek13}. As a consequence, the aggregation of data from different sources is most of the times blocked due to legally imposed regulations such as the General Data Protection Regulation (GDPR) \cite{EUdataregulations2016}. Although this has the benefit of protecting people's privacy, it also has the downside of preventing honest players from accessing data necessary to tackle some of the most important issues in our society. 
+
+%********************************** %First Section  **************************************
+\section*{Secure Multiparty Computation}
+
+
+To overcome the privacy-related issues described above, several privacy-enhancing technologies have been proposed \cite{Li2016, Armknecht2015, Yao82}. One important area of research is Secure Multiparty Computation (SMC). This technology allows a set of $n$ parties $P_i$ to jointly compute some function $f( x_1, ..., x_n ) = (y_1, ..., y_n)$ without disclosing their inputs to the other parties. The security requirements of SMC are equivalent to an ideal case, where every party $P_i$ sends his inputs to some independent and trusted third party, who computes $f()$ and sends back to each party their corresponding output.
+
+Since Yao seminal work \cite{Y86}, several SMC protocols have been developed, rendering different framework implementations \cite{Goldreich87, Bendlin11, D12}. However, they can generally be separated into two types according to the circuit logic being used: boolean or arithmetic. In each case, the efficiency and security of SMC heavily rely on the efficiency and security of important cryptographic primitives. Boolean-based SMC protocols rely on Oblivious Transfer (OT) \cite{K88} and arithmetic-based rely on Oblivious Linear Evaluation (OLE) \cite{DPSZ12}. Impagliazzo and Rudich \cite{IR99} proved that both OT and OLE protocols require public cryptography and cannot just rely on symmetric cryptography. This is an unfortunate result both from an efficiency and security perspective. Indeed, symmetric cryptography is lighter than asymmetric cryptography and requires less computational assumptions\cite{GetCitation}. Moreover, with the emergence of quantum computers, Shor’s algorithm \cite{Sho95} jeopardizes all the current public-key methods based on RSA, Elliptic Curves or Diffie-Hellman, in which many OT and OLE implementations rely on. This puts at risk the deployment of classical OT and OLE, which ultimately leads to the exposure of the SMC parties’ private inputs. Thus, it is essential to develop SMC methods secure against quantum computers while not compromising state-of-the-art performance levels.
+
+
+\section*{A Quantum Era}
+
+We are now in the beginning of what is known to be
+the second quantum revolution. Quantum technology has evolved to a point where we can integrate quantum exotic features into complex engineering systems. Most of the applications lie in the field of quantum cryptography, where one thrives to find protocols that offer some advantage over their classical counterparts. As analysed in \cite{B15, PSAN13}, these advantages can be of two types:
+
+\begin{enumerate}
+    \item Improve the security requirements, rendering protocols that are information-theoretically secure or require fewer computational assumptions;
+    \item Achieve new primitives that were previously not possible just with classical techniques.
+\end{enumerate}
+Despite the most famous use-case of quantum cryptography being quantum key distribution (QKD), other primitives play an important role in this quest. Some examples of these cryptographic tasks are bit commitment \cite{CK11}, coin flipping \cite{CK09}, delegated quantum computation \cite{BFK09}, position verification \cite{Unr14}, and password-based identification \cite{DFSS14, DFLSS09}. 
+
+Also, the intrinsic randomness provided by quantum phenomena is an ideal resource to develop quantum communication protocols for oblivious transfer (OT) \cite{BBCS92}. Remarkably, there is a distinctive difference between classical and quantum OT from a security standpoint, as the latter is proved to be possible assuming only the existence of quantum-hard one-way functions \cite{GLSV21, BCKM21}. This means quantum OT can be based only on symmetric cryptography, requiring weaker security assumptions than classical OT. Moreover, these quantum protocols frequently have a desirable property that guarantees information-theoretic security after the execution of the protocol. This property is commonly called everlasting security. This greatly improves the security of SMC protocols, allowing them to have their security based on symmetric cryptography alone and with this important feature of everlasting security. Regarding oblivious linear evaluation (OLE) primitive, it is known that it can be reduced to OT \cite{KOS16} through classical methods that do not require further assumptions. Therefore, it seems natural to use quantum OT to generate quantum-secure OLE instances.
+
+
+\section*{Contributions and Outline} %Section - 1.2
+
+Despite the many advances, the adoption of quantum cryptography by secure multiparty computation (SMC) systems is still reduced. This is due to the efficiency challenges imposed by quantum technology and the need of high throughput of both OT and OLE primitives in boolean- and arithmetic-based SMC, respectively.
+
+The overall goal of this dissertation is to give one step closer to the adoption of quantum cryptography by SMC systems. We do this with three contributions. In our first contribution, we start the studying of comparing the efficiency of both classical and quantum protocols. Our second contribution is the first quantum OLE protocol which does not rely on OT. Our last contribution is an implementation of a special-purpose SMC system applied to genomics analysis assisted with quantum OT. Along the way, we produced a review dedicated to quantum OT protocols alone. Usually, its analysis is integrated into more general surveys under the topic of “quantum cryptography”, leading to a less in-depth exposition of the topic.
+
+We describe the contributions in a bit more detail.
+
+\
+
+\noindent\textbf{Efficiency of classical and quantum OT protocols.} To the best of our knowledge, there is no comparative study on the efficiency of quantum and classical approaches. This is mainly caused by two reasons. From a theoretical perspective, the use of different types of information (quantum and classical) makes it difficult to make a fair comparison based on the protocols' complexity. Also, from a practical standpoint, there is still a discrepancy in the technological maturity between quantum and classical techniques. Quantum technology is still in its infancy,  whereas classical processors and communication have many decades of development. 
+
+Despite these constraints, we compare the complexity and operations efficiency of classical and quantum protocols. To achieve this, we realize that both classical and quantum protocols can be divided into two phases: offline and online. The offline phase is characterize by the fact that it is independent of the parties' inputs. This means that, from a practical point-of-view, this phase produces the resources necessary to use during the online phase, where we take into consideration the parties' inputs. It can be argued that the offline phase is not so hungry-efficient as the online phase. As a consequence, for comparison purposes, we can focus on the online phase. Fortunately, the online phase of quantum OT is solely based on classical communications. Therefore, it is possible and fair to compare the online phase of both classical and quantum protocols. 
+
+We make a detailed comparison between the complexity of the online phase of two state-of-the-art classical OT protocols \cite{ALSZ13, KOS15} and an optimized quantum OT protocol. We conclude that the online phase of quantum OT competes with its classical counterparts and has the potential to be more efficient.
+
+\
+
+\noindent\textbf{Quantum oblivious linear evaluation protocol.} Our second contribution is a quantum protocol for OLE with quantum universally composable (quantum-UC) security in the $\mathcal{F}_{\textbf{COM}}-$hybrid model, i.e. when assuming the existence of a commitment functionality, $\mathcal{F}_{\textbf{COM}}$. To obtain a secure protocol, we take advantage of the properties of Mutually Unbiased Bases in high-dimensional Hilbert spaces with prime and prime-power dimension. Such a choice is motivated by recent theoretical and experimental advances that pave the way for the development and realization of new solutions for quantum cryptography \cite{BPT00,DEBZ10,Zhongetal2015,BHVBFHM18,DHMPPV21}. 
+
+To the best of our knowledge our protocol is the first quantum-UC secure quantum OLE proposal. Moreover, it is not based on any quantum OT implementation which would be the standard approach. %Instead, we only assume the existence of a commitment functionality that seems to be a simpler task than OT, as argued in \cite{Unruh10}.
+We consider the static corruption adversarial model with both semi-honest and malicious adversaries. We develop a weaker version of OLE, which may be of independent interest. We also modify the proposed protocol to generate quantum-UC secure vector OLE (VOLE). We give bounds on the possible size of VOLE according to the security parameters.
+
+\
+
+\noindent\textbf{Quantum assisted secure multiparty computation.} Individuals’ privacy and legal regulations demand genomic data be handled and studied with highly secure privacy-preserving techniques. In this contribution, we propose a feasible secure multiparty computation (SMC) system assisted with quantum cryptographic protocols that is designed to compute a phylogenetic tree from a set of private genome sequences. This system adapts several distance-based methods (Unweighted Pair Group Method with Arithmetic mean, Neighbour-Joining, Fitch-Margoliash) into a private setting where the sequences owned by each party are not disclosed to the other members present in the protocol. We do not apply a generic implementation of SMC to the problem of phylogenetic trees. Instead, we develop a tailored private protocol for this use case in order to improve efficiency. 
+
+We theoretically evaluate the performance and privacy guarantees of the system through a complexity analysis and security proof and give an extensive explanation about the implementation details and cryptographic protocols. We also implement a quantum-assisted secure phylogenetic tree computation based on the Libscapi implementation of the Yao protocol, the PHYLIP library and simulated keys of two quantum systems: quantum oblivious key distribution and quantum key distribution.\footnote{ The code can be accessed at the following repo: \href{https://github.com/manel1874/QSHY/tree/dev-cq-phylip}{https://github.com/manel1874/QSHY/tree/dev-cq-phylip}}. This demonstrates its effectiveness and practicality. We benchmark our implementation against a classical-only solution and we conclude that both approaches render similar execution times. The only difference between the quantum and classical systems is the time overhead taken by the oblivious key management system of the quantum-assisted approach.
+
+\
+
+The results are presented as follows. We start presenting SMC protocols based on OT and OLE at Chapter 2. Then, at Chapter 3 we introduce some quantum information concepts and security definitions used throughout the thesis. Chapter 4 is devoted to quantum oblivious transfer protocols. Then, in Chapter 5 we compare classical and quantum approaches for OT. In Chapter 6 we present out quantum OLE protocol along with its security proof. Finally, in Chapter 7, we presented our implementation of quantum-assisted SMC system applied to phylogeny analysis.
+
+
+\
+
+\noindent\textbf{Published research}
+
+This thesis is based on research published in various journals. During my PhD I was involved in the following projects.
+
+\begin{itemize}
+	\item\cite{SPM21} Manuel B. Santos, Paulo Mateus, and Armando N. Pinto. “Quantum Oblivious Transfer:
+A Short Review”. In: Entropy 24.7 (July 2022), p. 945.
+
+	\item\cite{SPM21} Manuel B. Santos, Armando N. Pinto, and Paulo Mateus. “Quantum and classical
+oblivious transfer: A comparative analysis”. In: IET Quantum Communication 2.2 (May 2021), pp. 42–53.
+
+	\item\cite{SMV22} Manuel B. Santos, Paulo Mateus, and Chrysoula Vlachou. Quantum Universally
+Composable Oblivious Linear Evaluation. 2022. DOI: 10.48550/ARXIV.2204.14171. Poster at QCrypt2022.
+
+	\item\cite{SGPM22} Manuel B. Santos et al. “Private Computation of Phylogenetic Trees Based on Quantum
+Technologies”. In: IEEE Access 10 (2022), pp. 38065–38088.
+
+	\item\cite{SGPM21} Manuel B. Santos et al. “Quantum Secure Multiparty Computation of Phylogenetic Trees of SARS-CoV-2 Genome”. In: 2021 Telecoms Conference (ConfTELE). IEEE, Feb. 2021.
+
+\item\cite{POS+20} Armando N. Pinto et al. “Quantum Enabled Private Recognition of Composite Signals
+in Genome and Proteins”. In: 2020 22nd International Conference on Transparent Optical
+Networks (ICTON). IEEE, July 2020. 
+\end{itemize}
+
+
+Chapter 4 is based on \cite{SPM21}. Chapter 5 is based on the work developed on both \cite{SPM21} and \cite{SGPM22}. Chapter 6 presents all the results from \cite{SMV22}. Finally, Chapter 7 is the combination of \cite{SGPM22, SGPM21, POS+20}
+
+%\bibliography{bibforthesis}
+%\bibliographystyle{unsrt}
+%\end{document}

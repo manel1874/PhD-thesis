@@ -1,0 +1,2709 @@
+@string{jan="January"}
+@string{feb="February"}
+@string{mar="March"}
+@string{apr="April"}
+@string{may="May"}
+@string{jun="June"}
+@string{jul="July"}
+@string{aug="August"}
+@string{sep="September"}
+@string{oct="October"}
+@string{nov="November"}
+@string{dec="December"}
+
+@inproceedings{GKMRV00,
+  doi = {10.1109/sfcs.2000.892121},
+  url = {https://doi.org/10.1109/sfcs.2000.892121},
+  publisher = {{IEEE} Comput. Soc},
+  author = {Y. Gertner and S. Kannan and T. Malkin and O. Reingold and M. Viswanathan},
+  title = {The relationship between public key encryption and oblivious transfer},
+  booktitle = {Proceedings 41st Annual Symposium on Foundations of Computer Science},
+  year = {2000}
+}
+
+@INPROCEEDINGS{Yao82,  
+author={A. C. {Yao}},  booktitle={23rd Annual Symposium on Foundations of Computer Science (sfcs 1982)},   title={Protocols for secure computations},   year={1982},  volume={},  number={},  pages={160-164},  doi={10.1109/SFCS.1982.38}}
+
+@inproceedings{GMW87,
+author = {Goldreich, O. and Micali, S. and Wigderson, A.},
+title = {How to Play ANY Mental Game},
+year = {1987},
+isbn = {0897912217},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/28395.28420},
+doi = {10.1145/28395.28420},
+booktitle = {Proceedings of the Nineteenth Annual ACM Symposium on Theory of Computing},
+pages = {218–229},
+numpages = {12},
+location = {New York, New York, USA},
+series = {STOC '87}
+}
+
+@article{ALSZ16,
+  title={More efficient oblivious transfer extensions},
+  author={Asharov, Gilad and Lindell, Yehuda and Schneider, Thomas and Zohner, Michael},
+  journal={Journal of Cryptology},
+  volume={30},
+  number={3},
+  pages={805--858},
+  year={2017},
+  publisher={Springer}
+}
+
+@inproceedings{KOS15,
+title = "Actively Secure OT Extension with Optimal Overhead",
+keywords = "Oblivious transfer, Extensions, Protocols",
+author = "Marcel Keller and Emmanuela Orsini and Peter Scholl",
+note = "Date of Acceptance: 08/05/2015",
+year = "2015",
+month = aug,
+day = "20",
+doi = "10.1007/978-3-662-47989-6_35",
+language = "English",
+isbn = "978-3-662-47988-9",
+volume = "9215",
+series = "Lecture Notes in Computer Science",
+publisher = "Springer",
+pages = "724--741",
+booktitle = "Advances in Cryptology - CRYPTO 2015",
+}
+
+
+@InProceedings{BBCS92,
+author="Bennett, Charles H.
+and Brassard, Gilles
+and Cr{\'e}peau, Claude
+and Skubiszewska, Marie-H{\'e}l{\`e}ne",
+editor="Feigenbaum, Joan",
+title="Practical Quantum Oblivious Transfer",
+booktitle="Advances in Cryptology --- CRYPTO '91",
+year="1992",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="351--366",
+abstract="We describe a protocol for quantum oblivious transfer, utilizing faint pulses of polarized light, by which one of two mutually distrustful parties (``Alice'') transmits two one-bit messages in such a way that the other party (``Bob'') can choose which message he gets but cannot obtain information about both messages (he will learn his chosen bit's value with exponentially small error probability and may gain at most exponentially little information about the value of the other bit), and Alice will be entirely ignorant of which bit he received. Neither party can cheat (ie deviate from the protocol while appearing to follow it) in such a way as to obtain more information than what is given by the description of the protocol. Our protocol is easy to modify in order to implement the All-or-Nothing Disclosure of one out of two string messages, and it can be used to implement bit commitment and oblivious circuit evaluation without complexity-theoretic assumptions, in a way that remains secure even against cheaters that have unlimited computing power. Moreover, this protocol is practical in that it can be realized with available optoelectronic apparatus while being immune to any technologically feasible attack for the foreseeable future.",
+isbn="978-3-540-46766-3"
+}
+
+@inproceedings{K88,
+  doi = {10.1145/62212.62215},
+  url = {https://doi.org/10.1145/62212.62215},
+  year = {1988},
+  publisher = {{ACM} Press},
+  author = {Joe Kilian},
+  title = {Founding cryptography on oblivious transfer},
+  booktitle = {Proceedings of the twentieth annual {ACM} symposium on Theory of computing  - {STOC} {\textquotesingle}88}
+}
+
+@inbook{S99,
+    author="Salvail, Louis",
+    editor="Damg{\aa}rd, Ivan Bjerre",
+    title="The Search for the Holy Grail in Quantum Cryptography",
+    bookTitle="Lectures on Data Security: Modern Cryptology in Theory and Practice",
+    year="1999",
+    publisher="Springer Berlin Heidelberg",
+    address="Berlin, Heidelberg",
+    pages="183--216",
+    abstract="In 1982, Bennett and Brassard suggested a new way to provide privacy in long distance communications with security based on the correctness of the basic principles of quantum mechanics. The scheme allows two parties, Alice and Bob, sharing no secret information in the first place, to exchange messages that nobody else can figure out. The only requirement is a quantum channel and a normal phone line connecting the two parties. The fact that quantum mechanics provides unconditional secure communications is a remarkable result that cannot be achieved by classical techniques alone. Apart from secure communication, cryptography is also interested in tasks that aim at protecting one party against a potentially dishonest peer. This scenario, called secure twoparty computation, is usually modelled by a function f(xA,xB) where xA and xB are Alice's and Bob's secret input respectively. They would like to execute a protocol that produces z = f(xA,xB) to both parties without disclosing their secret input to the other party. The only information about a secret input that can be leaked toward the other party is what the output z itself discloses about it. Unlike secure communication, secure two-party computation does not assume that Alice and Bob are honest. One honest party's input should remain secret whatever the other party's behaviour. It is well-known that in order to find a protocol for secure two-party computation, one must have access to a secure bit commitment scheme. Unfortunately, in 1996 Mayers showed that no secure quantum bit commitment scheme exists. Similarly to the classical case (where trapdoor one-way functions are needed) quantum cryptography does not provide secure two-party computation for free. In this paper, we discuss the possibilities and limits of quantum cryptography for two-party computation. We describe the essential distinctions between classical and quantum cryptography in this scenario.",
+    isbn="978-3-540-48969-6",
+    doi="10.1007/3-540-48969-X_9",
+    url="https://doi.org/10.1007/3-540-48969-X_9"
+}
+
+@inproceedings{Y95,
+  doi = {10.1145/225058.225085},
+  url = {https://doi.org/10.1145/225058.225085},
+  year = {1995},
+  publisher = {{ACM} Press},
+  author = {Andrew Chi-Chih Yao},
+  title = {Security of quantum protocols against coherent measurements},
+  booktitle = {Proceedings of the twenty-seventh annual {ACM} symposium on Theory of computing  - {STOC} {\textquotesingle}95}
+}
+
+
+@inproceedings{BCJL93,
+  doi = {10.1109/sfcs.1993.366851},
+  url = {https://doi.org/10.1109/sfcs.1993.366851},
+  publisher = {{IEEE}},
+  author = {G. Brassard and C. Crepeau and R. Jozsa and D. Langlois},
+  title = {A quantum bit commitment scheme provably unbreakable by both parties},
+  booktitle = {Proceedings of 1993 {IEEE} 34th Annual Foundations of Computer Science},
+  year = {1993}
+}
+
+@misc{M96,
+  doi = {10.48550/ARXIV.QUANT-PH/9603015},
+  url = {https://arxiv.org/abs/quant-ph/9603015},
+  author = {Mayers,  Dominic},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {The Trouble with Quantum Bit Commitment},
+  publisher = {arXiv},
+  year = {1996},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@article{LC97,
+  doi = {10.1103/physrevlett.78.3410},
+  url = {https://doi.org/10.1103/physrevlett.78.3410},
+  year = {1997},
+  month = apr,
+  publisher = {American Physical Society ({APS})},
+  volume = {78},
+  number = {17},
+  pages = {3410--3413},
+  author = {Hoi-Kwong Lo and H. F. Chau},
+  title = {Is Quantum Bit Commitment Really Possible?},
+  journal = {Physical Review Letters}
+}
+
+@article{M97,
+  doi = {10.1103/physrevlett.78.3414},
+  url = {https://doi.org/10.1103/physrevlett.78.3414},
+  year = {1997},
+  month = apr,
+  publisher = {American Physical Society ({APS})},
+  volume = {78},
+  number = {17},
+  pages = {3414--3417},
+  author = {Dominic Mayers},
+  title = {Unconditionally Secure Quantum Bit Commitment is Impossible},
+  journal = {Physical Review Letters}
+}
+
+@article{BC96,
+  doi = {10.1145/235666.235669},
+  url = {https://doi.org/10.1145/235666.235669},
+  year = {1996},
+  month = sep,
+  publisher = {Association for Computing Machinery ({ACM})},
+  volume = {27},
+  number = {3},
+  pages = {13--24},
+  author = {Gilles Brassard and Claude Cr{\'{e}}peau},
+  title = {25 years of quantum cryptography},
+  journal = {{ACM} {SIGACT} News}
+}
+
+@article{L97,
+  doi = {10.1103/physreva.56.1154},
+  url = {https://doi.org/10.1103/physreva.56.1154},
+  year = {1997},
+  month = aug,
+  publisher = {American Physical Society ({APS})},
+  volume = {56},
+  number = {2},
+  pages = {1154--1162},
+  author = {Hoi-Kwong Lo},
+  title = {Insecurity of quantum secure computations},
+  journal = {Physical Review A}
+}
+
+@InProceedings{SJFHV13,
+author="Fehr, Serge
+and Katz, Jonathan
+and Song, Fang
+and Zhou, Hong-Sheng
+and Zikas, Vassilis",
+editor="Sahai, Amit",
+title="Feasibility and Completeness of Cryptographic Tasks in the Quantum World",
+booktitle="Theory of Cryptography",
+year="2013",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="281--296",
+abstract="It is known that cryptographic feasibility results can change by moving from the classical to the quantum world. With this in mind, we study the feasibility of realizing functionalities in the framework of universal composability, with respect to both computational and information-theoretic security. With respect to computational security, we show that existing feasibility results carry over unchanged from the classical to the quantum world; a functionality is ``trivial'' (i.e., can be realized without setup) in the quantum world if and only if it is trivial in the classical world. The same holds with regard to functionalities that are complete (i.e., can be used to realize arbitrary other functionalities).",
+isbn="978-3-642-36594-2"
+}
+
+@article{C07,
+  doi = {10.1103/physreva.76.062308},
+  url = {https://doi.org/10.1103/physreva.76.062308},
+  year = {2007},
+  month = dec,
+  publisher = {American Physical Society ({APS})},
+  volume = {76},
+  number = {6},
+  author = {Roger Colbeck},
+  title = {Impossibility of secure two-party classical computation},
+  journal = {Physical Review A}
+}
+
+@article{BCS12,
+  doi = {10.1103/physrevlett.109.160501},
+  url = {https://doi.org/10.1103/physrevlett.109.160501},
+  year = {2012},
+  month = oct,
+  publisher = {American Physical Society ({APS})},
+  volume = {109},
+  number = {16},
+  author = {Harry Buhrman and Matthias Christandl and Christian Schaffner},
+  title = {Complete Insecurity of Quantum Protocols for Classical Two-Party Computation},
+  journal = {Physical Review Letters}
+}
+
+@article{SSS14,
+  doi = {10.1142/s0219749914500415},
+  url = {https://doi.org/10.1142/s0219749914500415},
+  year = {2014},
+  month = dec,
+  publisher = {World Scientific Pub Co Pte Lt},
+  volume = {13},
+  number = {04},
+  pages = {1450041},
+  author = {Louis Salvail and Christian Schaffner and Miroslava Sot{\'{a}}kov{\'{a}}},
+  title = {Quantifying the leakage of quantum protocols for classical two-party cryptography},
+  journal = {International Journal of Quantum Information}
+}
+
+
+@misc{BCMS97,
+  doi = {10.48550/ARXIV.QUANT-PH/9712023},
+  url = {https://arxiv.org/abs/quant-ph/9712023},
+  author = {Brassard,  Gilles and Crépeau,  Claude and Mayers,  Dominic and Salvail,  Louis},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {A brief review on the impossibility of quantum bit commitment},
+  publisher = {arXiv},
+  year = {1997},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@misc{Y00,
+  doi = {10.48550/ARXIV.QUANT-PH/0006109},
+  url = {https://arxiv.org/abs/quant-ph/0006109},
+  author = {Yuen,  Horace P.},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Unconditionally Secure Quantum Bit Commitment Is Possible},
+  publisher = {arXiv},
+  year = {2000},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@article{B01,
+  doi = {10.1023/a:1017597528026},
+  url = {https://doi.org/10.1023/a:1017597528026},
+  year = {2001},
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {31},
+  number = {5},
+  pages = {735--756},
+  author = {Jeffrey Bub},
+  title = {The quantum bit commitment theorem},
+  journal = {Foundations of Physics}
+}
+
+@misc{Y02,
+  doi = {10.48550/ARXIV.QUANT-PH/0207089},
+  url = {https://arxiv.org/abs/quant-ph/0207089},
+  author = {Yuen,  Horace P.},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Quantum bit commitment and unconditional security},
+  publisher = {arXiv},
+  year = {2002},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@misc{Y04,
+  doi = {10.48550/ARXIV.QUANT-PH/0305144},
+  url = {https://arxiv.org/abs/quant-ph/0305144},
+  author = {Yuen,  Horace P.},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {How to Build Unconditionally Secure Quantum Bit Commitment Protocols},
+  publisher = {arXiv},
+  year = {2003},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@misc{C03,
+  doi = {10.48550/ARXIV.QUANT-PH/0112120},
+  url = {https://arxiv.org/abs/quant-ph/0112120},
+  author = {Cheung,  Chi-Yee},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Quantum Bit Commitment can be Unconditionally Secure},
+  publisher = {arXiv},
+  year = {2001},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@misc{C05,
+  doi = {10.48550/ARXIV.QUANT-PH/0508180},
+  url = {https://arxiv.org/abs/quant-ph/0508180},
+  author = {Cheung,  Chi-Yee},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Secret parameters in quantum bit commitment},
+  publisher = {arXiv},
+  year = {2005},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@article{Che07,
+  doi = {10.1142/s0217979207045517},
+  url = {https://doi.org/10.1142/s0217979207045517},
+  year = {2007},
+  month = sep,
+  publisher = {World Scientific Pub Co Pte Lt},
+  volume = {21},
+  number = {23n24},
+  pages = {4271--4274},
+  author = {CHI-YEE CHEUNG},
+  title = {QUANTUM BIT COMMITMENT WITH SECRET PARAMETERS},
+  journal = {International Journal of Modern Physics B}
+}
+
+@article{A07,
+  doi = {10.1103/physreva.76.032328},
+  url = {https://doi.org/10.1103/physreva.76.032328},
+  year = {2007},
+  month = sep,
+  publisher = {American Physical Society ({APS})},
+  volume = {76},
+  number = {3},
+  author = {Giacomo Mauro D'Ariano and Dennis Kretschmann and Dirk Schlingemann and Reinhard F. Werner},
+  title = {Reexamination of quantum bit commitment: The possible and the impossible},
+  journal = {Physical Review A}
+}
+
+@misc{H13,
+  doi = {10.48550/ARXIV.1306.5357},
+  url = {https://arxiv.org/abs/1306.5357},
+  author = {He,  Guang Ping},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Comment on "A short impossibility proof of quantum bit commitment"},
+  publisher = {arXiv},
+  year = {2013},
+  copyright = {arXiv.org perpetual,  non-exclusive license}
+}
+
+@article{CAPSW13,
+  doi = {10.1016/j.physleta.2013.02.045},
+  url = {https://doi.org/10.1016/j.physleta.2013.02.045},
+  year = {2013},
+  month = jun,
+  publisher = {Elsevier {BV}},
+  volume = {377},
+  number = {15},
+  pages = {1076--1087},
+  author = {Giulio Chiribella and Giacomo Mauro D'Ariano and Paolo Perinotti and Dirk Schlingemann and Reinhard Werner},
+  title = {A short impossibility proof of quantum bit commitment},
+  journal = {Physics Letters A}
+}
+
+@article{CAP10,
+  doi = {10.1103/physreva.81.062348},
+  url = {https://doi.org/10.1103/physreva.81.062348},
+  year = {2010},
+  month = jun,
+  publisher = {American Physical Society ({APS})},
+  volume = {81},
+  number = {6},
+  author = {Giulio Chiribella and Giacomo Mauro D'Ariano and Paolo Perinotti},
+  title = {Probabilistic theories with purification},
+  journal = {Physical Review A}
+}
+
+@article{SHW20,
+  doi = {10.3390/axioms9010028},
+  url = {https://doi.org/10.3390/axioms9010028},
+  year = {2020},
+  month = mar,
+  publisher = {{MDPI} {AG}},
+  volume = {9},
+  number = {1},
+  pages = {28},
+  author = {Xin Sun and Feifei He and Quanlong Wang},
+  title = {Impossibility of Quantum Bit Commitment,  a Categorical Perspective},
+  journal = {Axioms}
+}
+
+
+@mastersthesis{K12,
+  author  = "Katriel Cohn-Gordon",
+  title   = "Commitment Algorithms",
+  school  = "University of Oxford, Oxford, UK",
+  year    = "2012"
+}
+
+@article{W83,
+  doi = {10.1145/1008908.1008920},
+  url = {https://doi.org/10.1145/1008908.1008920},
+  year = {1983},
+  month = jan,
+  publisher = {Association for Computing Machinery ({ACM})},
+  volume = {15},
+  number = {1},
+  pages = {78--88},
+  author = {Stephen Wiesner},
+  title = {Conjugate coding},
+  journal = {{ACM} {SIGACT} News}
+}
+
+@InProceedings{BK22,
+author="Broadbent, Anne
+and Karvonen, Martti",
+editor="Bouyer, Patricia
+and Schr{\"o}der, Lutz",
+title="Categorical composable cryptography",
+booktitle="Foundations of Software Science and Computation Structures",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="161--183",
+abstract="We formalize the simulation paradigm of cryptography in terms of category theory and show that protocols secure against abstract attacks form a symmetric monoidal category, thus giving an abstract model of composable security definitions in cryptography. Our model is able to incorporate computational security, set-up assumptions and various attack models such as colluding or independently acting subsets of adversaries in a modular, flexible fashion. We conclude by using string diagrams to rederive the security of the one-time pad and no-go results concerning the limits of bipartite and tripartite cryptography, ruling out e.g., composable commitments and broadcasting.",
+isbn="978-3-030-99253-8"
+}
+
+
+@incollection{BBBW83,
+  doi = {10.1007/978-1-4757-0602-4_26},
+  url = {https://doi.org/10.1007/978-1-4757-0602-4_26},
+  year = {1983},
+  publisher = {Springer {US}},
+  pages = {267--275},
+  author = {Charles H. Bennett and Gilles Brassard and Seth Breidbart and Stephen Wiesner},
+  title = {Quantum Cryptography,  or Unforgeable Subway Tokens},
+  booktitle = {Advances in Cryptology}
+}
+
+@article{BBB14,
+  doi = {10.1007/s11047-014-9453-6},
+  url = {https://doi.org/10.1007/s11047-014-9453-6},
+  year = {2014},
+  month = oct,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {13},
+  number = {4},
+  pages = {453--458},
+  author = {Charles H. Bennett and Gilles Brassard and Seth Breidbart},
+  title = {Quantum Cryptography {II}: How to re-use a one-time pad safely even if P={NP}},
+  journal = {Natural Computing}
+}
+
+
+@article{BB84,
+  doi = {10.1016/j.tcs.2014.05.025},
+  url = {https://doi.org/10.1016/j.tcs.2014.05.025},
+  year = {2014},
+  month = dec,
+  publisher = {Elsevier {BV}},
+  volume = {560},
+  pages = {7--11},
+  author = {Charles H. Bennett and Gilles Brassard},
+  title = {Quantum cryptography: Public key distribution and coin tossing},
+  journal = {Theoretical Computer Science}
+}
+
+@article{DFSS14,
+  doi = {10.1016/j.tcs.2014.09.014},
+  url = {https://doi.org/10.1016/j.tcs.2014.09.014},
+  year = {2014},
+  month = dec,
+  publisher = {Elsevier {BV}},
+  volume = {560},
+  pages = {12--26},
+  author = {Ivan Damg{\aa}rd and Serge Fehr and Louis Salvail and Christian Schaffner},
+  title = {Secure identification and {QKD} in the bounded-quantum-storage model},
+  journal = {Theoretical Computer Science}
+}
+
+
+
+@InProceedings{FS09,
+author="Fehr, Serge
+and Schaffner, Christian",
+editor="Reingold, Omer",
+title="Composing Quantum Protocols in a Classical Environment",
+booktitle="Theory of Cryptography",
+year="2009",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="350--367",
+abstract="We propose a general security definition for cryptographic quantum protocols that implement classical non-reactive two-party tasks. The definition is expressed in terms of simple quantum- information-theoretic conditions which must be satisfied by the protocol to be secure. The conditions are uniquely determined by the ideal functionality {\$}{\backslash}mathcal{\{}F{\}}{\$}defining the cryptographic task to be implemented. We then show the following composition result. If quantum protocols $\pi$1,...,$\pi$â securely implement ideal functionalities {\$}{\backslash}mathcal{\{}F{\}}{\_}1,{\backslash}ldots,{\backslash}mathcal{\{}F{\}}{\_}{\backslash}ell{\$}according to our security definition, then any purely classical two-party protocol, which makes sequential calls to {\$}{\backslash}mathcal{\{}F{\}}{\_}1,{\backslash}ldots,{\backslash}mathcal{\{}F{\}}{\_}{\backslash}ell{\$}, is equally secure as the protocol obtained by replacing the calls to {\$}{\backslash}mathcal{\{}F{\}}{\_}1,{\backslash}ldots,{\backslash}mathcal{\{}F{\}}{\_}{\backslash}ell{\$}with the respective quantum protocols $\pi$1,...,$\pi$â. Hence, our approach yields the minimal security requirements which are strong enough for the typical use of quantum protocols as subroutines within larger classical schemes. Finally, we show that recently proposed quantum protocols for secure identification and oblivious transfer in the bounded-quantum-storage model satisfy our security definition, and thus compose in the above sense.",
+isbn="978-3-642-00457-5"
+}
+
+
+@article{JSGBBWZ11,
+  doi = {10.1103/physreva.83.022301},
+  url = {https://doi.org/10.1103/physreva.83.022301},
+  year = {2011},
+  month = feb,
+  publisher = {American Physical Society ({APS})},
+  volume = {83},
+  number = {2},
+  author = {Markus Jakobi and Christoph Simon and Nicolas Gisin and Jean-Daniel Bancal and Cyril Branciard and Nino Walenta and Hugo Zbinden},
+  title = {Practical private database queries based on a quantum-key-distribution protocol},
+  journal = {Physical Review A}
+}
+
+
+@article{Lemus20,
+  doi = {10.3390/app10124080},
+  url = {https://doi.org/10.3390/app10124080},
+  year = {2020},
+  month = jun,
+  publisher = {{MDPI} {AG}},
+  volume = {10},
+  number = {12},
+  pages = {4080},
+  author = {Mariano Lemus and Mariana F. Ramos and Preeti Yadav and Nuno A. Silva and Nelson J. Muga and Andr{\'{e}} Souto and Nikola Paunkovi{\'{c}} and Paulo Mateus and Armando N. Pinto},
+  title = {Generation and Distribution of Quantum Oblivious Keys for Secure Multiparty Computation},
+  journal = {Applied Sciences}
+}
+
+@article{KWW12,
+  doi = {10.1109/tit.2011.2177772},
+  url = {https://doi.org/10.1109/tit.2011.2177772},
+  year = {2012},
+  month = mar,
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  volume = {58},
+  number = {3},
+  pages = {1962--1984},
+  author = {Robert Konig and Stephanie Wehner and J\"{u}rg Wullschleger},
+  title = {Unconditional Security From Noisy Quantum Storage},
+  journal = {{IEEE} Transactions on Information Theory}
+}
+
+@inproceedings{MS94,
+  doi = {10.1109/phycmp.1994.363696},
+  url = {https://doi.org/10.1109/phycmp.1994.363696},
+  publisher = {{IEEE} Comput. Soc. Press},
+  author = {D. Mayers and L. Salvail},
+  title = {Quantum oblivious transfer is secure against all individual measurements},
+  booktitle = {Proceedings Workshop on Physics and Computation. {PhysComp} {\textquotesingle}94},
+  year = {1994}
+}
+
+@inproceedings{CK88,
+  doi = {10.1109/sfcs.1988.21920},
+  url = {https://doi.org/10.1109/sfcs.1988.21920},
+  year = {1988},
+  publisher = {{IEEE}},
+  author = {C. Crepeau and J. Kilian},
+  title = {Achieving oblivious transfer using weakened security assumptions},
+  booktitle = {[Proceedings 1988] 29th Annual Symposium on Foundations of Computer Science}
+}
+
+@incollection{M96b,
+  doi = {10.1007/3-540-68697-5_26},
+  url = {https://doi.org/10.1007/3-540-68697-5_26},
+  year = {1996},
+  publisher = {Springer Berlin Heidelberg},
+  pages = {343--357},
+  author = {Dominic Mayers},
+  title = {Quantum Key Distribution and String Oblivious Transfer in Noisy Channels},
+  booktitle = {Advances in Cryptology {\textemdash} {CRYPTO} '96}
+}
+
+@InProceedings{DFLSS09,
+author="Damg{\aa}rd, Ivan
+and Fehr, Serge
+and Lunemann, Carolin
+and Salvail, Louis
+and Schaffner, Christian",
+editor="Halevi, Shai",
+title="Improving the Security of Quantum Protocols via Commit-and-Open",
+booktitle="Advances in Cryptology - CRYPTO 2009",
+year="2009",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="408--427",
+abstract="We consider two-party quantum protocols starting with a transmission of some random BB84 qubits followed by classical messages. We show a general ``compiler'' improving the security of such protocols: if the original protocol is secure against an ``almost honest'' adversary, then the compiled protocol is secure against an arbitrary computationally bounded (quantum) adversary. The compilation preserves the number of qubits sent and the number of rounds up to a constant factor. The compiler also preserves security in the bounded-quantum-storage model (BQSM), so if the original protocol was BQSM-secure, the compiled protocol can only be broken by an adversary who has large quantum memory and large computing power. This is in contrast to known BQSM-secure protocols, where security breaks down completely if the adversary has larger quantum memory than expected. We show how our technique can be applied to quantum identification and oblivious transfer protocols.",
+isbn="978-3-642-03356-8"
+}
+
+@incollection{U10,
+  doi = {10.1007/978-3-642-13190-5_25},
+  url = {https://doi.org/10.1007/978-3-642-13190-5_25},
+  year = {2010},
+  publisher = {Springer Berlin Heidelberg},
+  pages = {486--505},
+  author = {Dominique Unruh},
+  title = {Universally Composable Quantum Multi-party Computation},
+  booktitle = {Advances in Cryptology {\textendash} {EUROCRYPT} 2010}
+}
+
+@InProceedings{GLSV21,
+author="Grilo, Alex B.
+and Lin, Huijia
+and Song, Fang
+and Vaikuntanathan, Vinod",
+editor="Canteaut, Anne
+and Standaert, Fran{\c{c}}ois-Xavier",
+title="Oblivious Transfer Is in MiniQCrypt",
+booktitle="Advances in Cryptology -- EUROCRYPT 2021",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="531--561",
+abstract="MiniQCrypt is a world where quantum-secure one-way functions exist, and quantum communication is possible. We construct an oblivious transfer (OT) protocol in MiniQCrypt that achieves simulation-security in the plain model against malicious quantum polynomial-time adversaries, building on the foundational work of Cr{\'e}peau and Killian (FOCS 1988) and Bennett, Brassard, Cr{\'e}peau and Skubiszewska (CRYPTO 1991). Combining the OT protocol with prior works, we obtain secure two-party and multi-party computation protocols also in MiniQCrypt. This is in contrast to the classical world, where it is widely believed that one-way functions alone do not give us OT.",
+isbn="978-3-030-77886-6"
+}
+
+@InProceedings{BCKM21,
+author="Bartusek, James
+and Coladangelo, Andrea
+and Khurana, Dakshita
+and Ma, Fermi",
+editor="Malkin, Tal
+and Peikert, Chris",
+title="One-Way Functions Imply Secure Computation in a Quantum World",
+booktitle="Advances in Cryptology -- CRYPTO 2021",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="467--496",
+abstract="We prove that quantum-hard one-way functions imply simulation-secure quantum oblivious transfer (QOT), which is known to suffice for secure computation of arbitrary quantum functionalities. Furthermore, our construction only makes black-box use of the quantum-hard one-way function.",
+isbn="978-3-030-84242-0"
+}
+
+@incollection{BF10,
+  doi = {10.1007/978-3-642-14623-7_39},
+  url = {https://doi.org/10.1007/978-3-642-14623-7_39},
+  year = {2010},
+  publisher = {Springer Berlin Heidelberg},
+  pages = {724--741},
+  author = {Niek J. Bouman and Serge Fehr},
+  title = {Sampling in a Quantum Population,  and Applications},
+  booktitle = {Advances in Cryptology {\textendash} {CRYPTO} 2010}
+}
+
+@InProceedings{DFRSS07,
+author="Damg{\aa}rd, Ivan B.
+and Fehr, Serge
+and Renner, Renato
+and Salvail, Louis
+and Schaffner, Christian",
+editor="Menezes, Alfred",
+title="A Tight High-Order Entropic Quantum Uncertainty Relation with Applications",
+booktitle="Advances in Cryptology - CRYPTO 2007",
+year="2007",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="360--378",
+abstract="We derive a new entropic quantum uncertainty relation involving min-entropy. The relation is tight and can be applied in various quantum-cryptographic settings.",
+isbn="978-3-540-74143-5"
+}
+
+@misc{R06,
+      title={Security of Quantum Key Distribution}, 
+      author={Renato Renner},
+      year={2006},
+      eprint={quant-ph/0512258},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph}
+}
+
+@InProceedings{CDMS04,
+author="Cr{\'e}peau, Claude
+and Dumais, Paul
+and Mayers, Dominic
+and Salvail, Louis",
+editor="Naor, Moni",
+title="Computational Collapse of Quantum State with Application to Oblivious Transfer",
+booktitle="Theory of Cryptography",
+year="2004",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="374--393",
+abstract="Quantum 2-party cryptography differs from its classical counterpart in at least one important way: Given blak-box access to a perfect commitment scheme there exists a secure 1-2 quantum oblivious transfer. This reduction proposed by Cr{\'e}peau and Kilian was proved secure against any receiver by Yao, in the case where perfect commitments are used. However, quantum commitments would normally be based on computational assumptions. A natural question therefore arises: What happens to the security of the above reduction when computationally secure commitments are used instead of perfect ones?",
+isbn="978-3-540-24638-1"
+}
+
+@InProceedings{CF01,
+author="Canetti, Ran
+and Fischlin, Marc",
+editor="Kilian, Joe",
+title="Universally Composable Commitments",
+booktitle="Advances in Cryptology --- CRYPTO 2001",
+year="2001",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="19--40",
+abstract="We propose a new security measure for commitment protocols, called Universally Composable (UC) Commitment. The measure guarantees that commitment protocols behave like an ``ideal commitment service,'' even when concurrently composed with an arbitrary set of protocols. This is a strong guarantee: it implies that security is maintained even when an unbounded number of copies of the scheme are running concurrently, it implies non-malleability (not only with respect to other copies of the same protocol but even with respect to other protocols), it provides resilience to selective decommitment, and more.",
+isbn="978-3-540-44647-7"
+}
+
+@inproceedings{DFSS05,
+  doi = {10.1109/sfcs.2005.30},
+  url = {https://doi.org/10.1109/sfcs.2005.30},
+  publisher = {{IEEE}},
+  author = {I.B. Damgard and S. Fehr and L. Salvail and C. Schaffner},
+  title = {Cryptography In the Bounded Quantum-Storage Model},
+  booktitle = {46th Annual {IEEE} Symposium on Foundations of Computer Science ({FOCS}{\textquotesingle}05)},
+  year = {2005}
+}
+
+@article{WST08,
+  doi = {10.1103/physrevlett.100.220502},
+  url = {https://doi.org/10.1103/physrevlett.100.220502},
+  year = {2008},
+  month = jun,
+  publisher = {American Physical Society ({APS})},
+  volume = {100},
+  number = {22},
+  author = {Stephanie Wehner and Christian Schaffner and Barbara M. Terhal},
+  title = {Cryptography from Noisy Storage},
+  journal = {Physical Review Letters}
+}
+
+@ARTICLE {PSAN13,
+author={A. N. Pinto and N. A. Silva and A. Almeida and N. J. Muga},
+doi={},
+journal={IEEE Communications Magazine},
+title={Using Quantum Technologies to Improve Fiber Optic Communication Systems},
+year={2013},
+month={August},
+volume={8},
+number={51},
+pages={42-48},
+ISSN={0163-6804}
+}
+
+@article{S10,
+  doi = {10.1103/physreva.82.032308},
+  url = {https://doi.org/10.1103/physreva.82.032308},
+  year = {2010},
+  month = sep,
+  publisher = {American Physical Society ({APS})},
+  volume = {82},
+  number = {3},
+  author = {Christian Schaffner},
+  title = {Simple protocols for oblivious transfer and secure identification in the noisy-quantum-storage model},
+  journal = {Physical Review A}
+}
+
+@InProceedings{WW08,
+author="Wehner, Stephanie
+and Wullschleger, J{\"u}rg",
+editor="Aceto, Luca
+and Damg{\aa}rd, Ivan
+and Goldberg, Leslie Ann
+and Halld{\'o}rsson, Magn{\'u}s M.
+and Ing{\'o}lfsd{\'o}ttir, Anna
+and Walukiewicz, Igor",
+title="Composable Security in the Bounded-Quantum-Storage Model",
+booktitle="Automata, Languages and Programming",
+year="2008",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="604--615",
+abstract="We give a new, simulation-based, definition for security in the bounded-quantum-storage model, and show that this definition allows for sequential composition of protocols. Damg{\aa}rd et al. (FOCS '05, CRYPTO '07) showed how to securely implement bit commitment and oblivious transfer in the bounded-quantum-storage model, where the adversary is only allowed to store a limited number of qubits. However, their security definitions did only apply to the standalone setting, and it was not clear if their protocols could be composed. Indeed, we show that these protocols are not composable in our framework without a small refinement. We then prove the security of their randomized oblivious transfer protocol with our refinement. Secure implementations of oblivious transfer and bit commitment follow easily by a (classical) reduction to randomized oblivious transfer.",
+isbn="978-3-540-70583-3"
+}
+
+@InProceedings{U11,
+author="Unruh, Dominique",
+editor="Paterson, Kenneth G.",
+title="Concurrent Composition in the Bounded Quantum Storage Model",
+booktitle="Advances in Cryptology -- EUROCRYPT 2011",
+year="2011",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="467--486",
+abstract="We define the BQS-UC model, a variant of the UC model, that deals with protocols in the bounded quantum storage model. We present a statistically secure commitment protocol in the BQS-UC model that composes concurrently with other protocols and an (a-priori) polynomially-bounded number of instances of itself. Our protocol has an efficient simulator which is important if one wishes to compose our protocol with protocols that are only computationally secure. Combining our result with prior results, we get a statistically BQS-UC secure constant-round protocol for general two-party computation without the need for any setup assumption.",
+isbn="978-3-642-20465-4"
+}
+
+@article{F10,
+  doi = {10.1007/s10701-010-9408-4},
+  url = {https://doi.org/10.1007/s10701-010-9408-4},
+  year = {2010},
+  month = jan,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {40},
+  number = {5},
+  pages = {494--531},
+  author = {Serge Fehr},
+  title = {Quantum Cryptography},
+  journal = {Foundations of Physics}
+}
+
+@incollection{RK05,
+  doi = {10.1007/978-3-540-30576-7_22},
+  url = {https://doi.org/10.1007/978-3-540-30576-7_22},
+  year = {2005},
+  publisher = {Springer Berlin Heidelberg},
+  pages = {407--425},
+  author = {Renato Renner and Robert K\"{o}nig},
+  title = {Universally Composable Privacy Amplification Against Quantum Adversaries},
+  booktitle = {Theory of Cryptography}
+}
+
+@misc{R05,
+  doi = {10.48550/ARXIV.QUANT-PH/0512258},
+  url = {https://arxiv.org/abs/quant-ph/0512258},
+  author = {Renner,  Renato},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Security of Quantum Key Distribution},
+  publisher = {arXiv},
+  year = {2005},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@inproceedings{SGPM21,
+  doi = {10.1109/conftele50222.2021.9435479},
+  url = {https://doi.org/10.1109/conftele50222.2021.9435479},
+  year = {2021},
+  month = feb,
+  publisher = {{IEEE}},
+  author = {Manuel B. Santos and Ana C. Gomes and Armando N. Pinto and Paulo Mateus},
+  title = {Quantum Secure Multiparty Computation of Phylogenetic Trees of {SARS}-{CoV}-2 Genome},
+  booktitle = {2021 Telecoms Conference ({ConfTELE})}
+}
+
+@article{SMP22,
+  doi = {10.3390/e24070945},
+  url = {https://doi.org/10.3390/e24070945},
+  year = {2022},
+  month = jul,
+  publisher = {{MDPI} {AG}},
+  volume = {24},
+  number = {7},
+  pages = {945},
+  author = {Manuel B. Santos and Paulo Mateus and Armando N. Pinto},
+  title = {Quantum Oblivious Transfer: A Short Review},
+  journal = {Entropy}
+}
+
+@misc{SMV22,
+  doi = {10.48550/ARXIV.2204.14171},
+  url = {https://arxiv.org/abs/2204.14171},
+  author = {Santos,  Manuel B. and Mateus,  Paulo and Vlachou,  Chrysoula},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Quantum Universally Composable Oblivious Linear Evaluation},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {arXiv.org perpetual,  non-exclusive license}
+}
+
+@article{MW11,
+  doi = {10.1103/physreva.83.022329},
+  url = {https://doi.org/10.1103/physreva.83.022329},
+  year = {2011},
+  month = feb,
+  publisher = {American Physical Society ({APS})},
+  volume = {83},
+  number = {2},
+  author = {Prabha Mandayam and Stephanie Wehner},
+  title = {Achieving the physical limits of the bounded-storage model},
+  journal = {Physical Review A}
+}
+
+@inproceedings{Y86,
+  doi = {10.1109/sfcs.1986.25},
+  url = {https://doi.org/10.1109/sfcs.1986.25},
+  year = {1986},
+  month = oct,
+  publisher = {{IEEE}},
+  author = {Andrew Chi-Chih Yao},
+  title = {How to generate and exchange secrets},
+  booktitle = {27th Annual Symposium on Foundations of Computer Science (sfcs 1986)}
+}
+
+@article{MR09,
+  doi = {10.1088/1367-2630/11/8/085006},
+  url = {https://doi.org/10.1088/1367-2630/11/8/085006},
+  year = {2009},
+  month = aug,
+  publisher = {{IOP} Publishing},
+  volume = {11},
+  number = {8},
+  pages = {085006},
+  author = {J\"{o}rn M\"{u}ller-Quade and Renato Renner},
+  title = {Composability in quantum cryptography},
+  journal = {New Journal of Physics}
+}
+
+@misc{BM04,
+  doi = {10.48550/ARXIV.QUANT-PH/0409062},
+  url = {https://arxiv.org/abs/quant-ph/0409062},
+  author = {Ben-Or,  Michael and Mayers,  Dominic},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {General Security Definition and Composability for Quantum \& Classical Protocols},
+  publisher = {arXiv},
+  year = {2004},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@misc{U04,
+  doi = {10.48550/ARXIV.QUANT-PH/0409125},
+  url = {https://arxiv.org/abs/quant-ph/0409125},
+  author = {Unruh,  Dominique},
+  keywords = {Quantum Physics (quant-ph),  Cryptography and Security (cs.CR),  FOS: Physical sciences,  FOS: Physical sciences,  FOS: Computer and information sciences,  FOS: Computer and information sciences},
+  title = {Simulatable security for quantum protocols},
+  publisher = {arXiv},
+  year = {2004},
+  copyright = {Assumed arXiv.org perpetual,  non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+@inproceedings{MR11,
+    author       = {Ueli Maurer and Renato Renner},
+    title        = {Abstract Cryptography},
+    editor       = {Bernard Chazelle},
+    booktitle    = {The Second Symposium on Innovations in Computer Science, ICS 2011},
+    pages        = {1--21},
+    year         = {2011},
+    month        = {1},
+    publisher    = {Tsinghua University Press},
+}
+
+@article{C20,
+  doi = {10.1145/3402457},
+  url = {https://doi.org/10.1145/3402457},
+  year = {2020},
+  month = oct,
+  publisher = {Association for Computing Machinery ({ACM})},
+  volume = {67},
+  number = {5},
+  pages = {1--94},
+  author = {Ran Canetti},
+  title = {Universally Composable Security},
+  journal = {Journal of the {ACM}}
+}
+
+@inproceedings{A02,
+  doi = {10.1145/509907.509999},
+  url = {https://doi.org/10.1145/509907.509999},
+  year = {2002},
+  publisher = {{ACM} Press},
+  author = {Scott Aaronson},
+  title = {Quantum lower bound for the collision problem},
+  booktitle = {Proceedings of the thiry-fourth annual {ACM} symposium on Theory of computing  - {STOC} {\textquotesingle}02}
+}
+
+@article{N91,
+  doi = {10.1007/bf00196774},
+  url = {https://doi.org/10.1007/bf00196774},
+  year = {1991},
+  month = jan,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {4},
+  number = {2},
+  pages = {151--158},
+  author = {Moni Naor},
+  title = {Bit commitment using pseudorandomness},
+  journal = {Journal of Cryptology}
+}
+
+@article{HILL99,
+  doi = {10.1137/s0097539793244708},
+  url = {https://doi.org/10.1137/s0097539793244708},
+  year = {1999},
+  month = jan,
+  publisher = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
+  volume = {28},
+  number = {4},
+  pages = {1364--1396},
+  author = {Johan H{\AA}stad and Russell Impagliazzo and Leonid A. Levin and Michael Luby},
+  title = {A Pseudorandom Generator from any One-way Function},
+  journal = {{SIAM} Journal on Computing}
+}
+
+@inproceedings{HR07,
+  doi = {10.1145/1250790.1250792},
+  url = {https://doi.org/10.1145/1250790.1250792},
+  year = {2007},
+  publisher = {{ACM} Press},
+  author = {Iftach Haitner and Omer Reingold},
+  title = {Statistically-hiding commitment from any one-way function},
+  booktitle = {Proceedings of the thirty-ninth annual {ACM} symposium on Theory of computing  - {STOC} {\textquotesingle}07}
+}
+
+@article{STW09,
+  author    = {Christian Schaffner and
+               Barbara M. Terhal and
+               Stephanie Wehner},
+  title     = {Robust cryptography in the noisy-quantum-storage model},
+  journal   = {Quantum Inf. Comput.},
+  volume    = {9},
+  number    = {11{\&}12},
+  pages     = {963--996},
+  year      = {2009},
+  url       = {https://doi.org/10.26421/QIC9.11-12-4},
+  doi       = {10.26421/QIC9.11-12-4},
+  timestamp = {Thu, 29 Apr 2021 18:05:34 +0200},
+  biburl    = {https://dblp.org/rec/journals/qic/SchaffnerTW11.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{WCSL10,
+  doi = {10.1103/physreva.81.052336},
+  url = {https://doi.org/10.1103/physreva.81.052336},
+  year = {2010},
+  month = may,
+  publisher = {American Physical Society ({APS})},
+  volume = {81},
+  number = {5},
+  author = {Stephanie Wehner and Marcos Curty and Christian Schaffner and Hoi-Kwong Lo},
+  title = {Implementation of two-party protocols in the noisy-storage model},
+  journal = {Physical Review A}
+}
+
+@InProceedings{DHRS04,
+author="Ding, Yan Zong
+and Harnik, Danny
+and Rosen, Alon
+and Shaltiel, Ronen",
+editor="Naor, Moni",
+title="Constant-Round Oblivious Transfer in the Bounded Storage Model",
+booktitle="Theory of Cryptography",
+year="2004",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="446--472",
+abstract="We present a constant round protocol for Oblivious Transfer in Maurer's bounded storage model. In this model, a long random string {\$}{\backslash}mathcal{\{}R{\}}{\$}is initially transmitted and each of the parties interacts based on a small portion of {\$}{\backslash}mathcal{\{}R{\}}{\$}. Even though the portions stored by the honest parties are small, security is guaranteed against any malicious party that remembers almost all of the string {\$}{\backslash}mathcal{\{}R{\}}{\$}.",
+isbn="978-3-540-24638-1"
+}
+
+@phdthesis{S07,
+  author  = "Savvides, George.",
+  title   = "Interactive hashing and reductions between Oblivious Transfer variants",
+  school  = "McGill University, School of Computer Science",
+  year    = "2007"
+}
+
+@inproceedings{CCM98,
+  doi = {10.1109/sfcs.1998.743500},
+  url = {https://doi.org/10.1109/sfcs.1998.743500},
+  publisher = {{IEEE} Comput. Soc},
+  author = {C. Cachin and C. Crepeau and J. Marcil},
+  title = {Oblivious transfer with a memory-bounded receiver},
+  booktitle = {Proceedings 39th Annual Symposium on Foundations of Computer Science (Cat. No.98CB36280)},
+  year = {1998}
+}
+
+@article{PAB+20,
+  doi = {10.1364/aop.361502},
+  url = {https://doi.org/10.1364/aop.361502},
+  year = {2020},
+  month = dec,
+  publisher = {The Optical Society},
+  volume = {12},
+  number = {4},
+  pages = {1012},
+  author = {S. Pirandola and U. L. Andersen and L. Banchi and M. Berta and D. Bunandar and R. Colbeck and D. Englund and T. Gehring and C. Lupo and C. Ottaviani and J. L. Pereira and M. Razavi and J. Shamsul Shaari and M. Tomamichel and V. C. Usenko and G. Vallone and P. Villoresi and P. Wallden},
+  title = {Advances in quantum cryptography},
+  journal = {Advances in Optics and Photonics}
+}
+
+@article{SH22,
+  doi = {10.3390/e24020260},
+  url = {https://doi.org/10.3390/e24020260},
+  year = {2022},
+  month = feb,
+  publisher = {{MDPI} {AG}},
+  volume = {24},
+  number = {2},
+  pages = {260},
+  author = {Shihai Sun and Anqi Huang},
+  title = {A Review of Security Evaluation of Practical Quantum Key Distribution System},
+  journal = {Entropy}
+}
+
+@article{JBI+16,
+  doi = {10.1080/00107514.2016.1148333},
+  url = {https://doi.org/10.1080/00107514.2016.1148333},
+  year = {2016},
+  month = mar,
+  publisher = {Informa {UK} Limited},
+  volume = {57},
+  number = {3},
+  pages = {366--387},
+  author = {Nitin Jain and Birgit Stiller and Imran Khan and Dominique Elser and Christoph Marquardt and Gerd Leuchs},
+  title = {Attacks on practical quantum key distribution systems (and how to prevent them)},
+  journal = {Contemporary Physics}
+}
+
+@article{MY04,
+  author    = {Dominic Mayers and
+               Andrew Chi{-}Chih Yao},
+  title     = {Self testing quantum apparatus},
+  journal   = {Quantum Inf. Comput.},
+  volume    = {4},
+  number    = {4},
+  pages     = {273--286},
+  year      = {2004},
+  url       = {https://doi.org/10.26421/QIC4.4-3},
+  doi       = {10.26421/QIC4.4-3},
+  timestamp = {Fri, 30 Apr 2021 10:56:19 +0200},
+  biburl    = {https://dblp.org/rec/journals/qic/MayersY04.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{E91,
+  doi = {10.1103/physrevlett.67.661},
+  url = {https://doi.org/10.1103/physrevlett.67.661},
+  year = {1991},
+  month = aug,
+  publisher = {American Physical Society ({APS})},
+  volume = {67},
+  number = {6},
+  pages = {661--663},
+  author = {Artur K. Ekert},
+  title = {Quantum cryptography based on Bell's theorem},
+  journal = {Physical Review Letters}
+}
+
+@article{KW16,
+  doi = {10.1088/1367-2630/18/5/055004},
+  url = {https://doi.org/10.1088/1367-2630/18/5/055004},
+  year = {2016},
+  month = may,
+  publisher = {{IOP} Publishing},
+  volume = {18},
+  number = {5},
+  pages = {055004},
+  author = {Jedrzej Kaniewski and Stephanie Wehner},
+  title = {Device-independent two-party cryptography secure against sequential attacks},
+  journal = {New Journal of Physics}
+}
+
+@article{CHSH69,
+  doi = {10.1103/physrevlett.23.880},
+  url = {https://doi.org/10.1103/physrevlett.23.880},
+  year = {1969},
+  month = oct,
+  publisher = {American Physical Society ({APS})},
+  volume = {23},
+  number = {15},
+  pages = {880--884},
+  author = {John F. Clauser and Michael A. Horne and Abner Shimony and Richard A. Holt},
+  title = {Proposed Experiment to Test Local Hidden-Variable Theories},
+  journal = {Physical Review Letters}
+}
+
+@article{RTK+18,
+  doi = {10.1103/physreva.97.062307},
+  url = {https://doi.org/10.1103/physreva.97.062307},
+  year = {2018},
+  month = jun,
+  publisher = {American Physical Society ({APS})},
+  volume = {97},
+  number = {6},
+  author = {J{\'{e}}r{\'{e}}my Ribeiro and Le Phuc Thinh and Jedrzej Kaniewski and Jonas Helsen and Stephanie Wehner},
+  title = {Device independence for two-party cryptography and position verification with memoryless devices},
+  journal = {Physical Review A}
+}
+
+@article{MDR+19,
+  doi = {10.1088/2058-9565/ab2819},
+  url = {https://doi.org/10.1088/2058-9565/ab2819},
+  year = {2019},
+  month = jul,
+  publisher = {{IOP} Publishing},
+  volume = {4},
+  number = {3},
+  pages = {035011},
+  author = {G Murta and S B van Dam and J Ribeiro and R Hanson and S Wehner},
+  title = {Towards a realization of device-independent quantum key distribution},
+  journal = {Quantum Science and Technology}
+}
+
+
+@article{LCQ12,
+  doi = {10.1103/physrevlett.108.130503},
+  url = {https://doi.org/10.1103/physrevlett.108.130503},
+  year = {2012},
+  month = mar,
+  publisher = {American Physical Society ({APS})},
+  volume = {108},
+  number = {13},
+  author = {Hoi-Kwong Lo and Marcos Curty and Bing Qi},
+  title = {Measurement-Device-Independent Quantum Key Distribution},
+  journal = {Physical Review Letters}
+}
+
+@article{SRK+15,
+  doi = {10.1103/physreva.91.032326},
+  url = {https://doi.org/10.1103/physreva.91.032326},
+  year = {2015},
+  month = mar,
+  publisher = {American Physical Society ({APS})},
+  volume = {91},
+  number = {3},
+  author = {Shihan Sajeed and Igor Radchenko and Sarah Kaiser and Jean-Philippe Bourgoin and Anna Pappa and Laurent Monat and Matthieu Legr{\'{e}} and Vadim Makarov},
+  title = {Attacks exploiting deviation of mean photon number in quantum key distribution and coin tossing},
+  journal = {Physical Review A}
+}
+
+@misc{RW20,
+  doi = {10.48550/ARXIV.2004.10515},
+  url = {https://arxiv.org/abs/2004.10515},
+  author = {Ribeiro,  Jeremy and Wehner,  Stephanie},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {On Bit Commitment and Oblivious Transfer in Measurement-Device Independent settings},
+  publisher = {arXiv},
+  year = {2020},
+  copyright = {arXiv.org perpetual,  non-exclusive license}
+}
+
+@article{ZGG+20,
+  doi = {10.3390/s20216351},
+  url = {https://doi.org/10.3390/s20216351},
+  year = {2020},
+  month = nov,
+  publisher = {{MDPI} {AG}},
+  volume = {20},
+  number = {21},
+  pages = {6351},
+  author = {Zishuai Zhou and Qisheng Guang and Chaohui Gao and Dong Jiang and Lijun Chen},
+  title = {Measurement-Device-Independent Two-Party Cryptography with Error Estimation},
+  journal = {Sensors}
+}
+
+
+@misc{P15,
+      author = {Chris Peikert},
+      title = {A Decade of Lattice Cryptography},
+      howpublished = {Cryptology ePrint Archive, Paper 2015/939},
+      year = {2015},
+      note = {\url{https://eprint.iacr.org/2015/939}},
+      url = {https://eprint.iacr.org/2015/939}
+}
+
+@article{MDC+21,
+  doi = {10.1088/1367-2630/ac304b},
+  url = {https://doi.org/10.1088/1367-2630/ac304b},
+  year = {2021},
+  month = dec,
+  publisher = {{IOP} Publishing},
+  volume = {23},
+  number = {12},
+  pages = {123021},
+  author = {Tony Metger and Yfke Dulek and Andrea Coladangelo and Rotem Arnon-Friedman},
+  title = {Device-independent quantum key distribution from computational assumptions},
+  journal = {New Journal of Physics}
+}
+
+@article{MV21,
+  doi = {10.22331/q-2021-09-16-544},
+  url = {https://doi.org/10.22331/q-2021-09-16-544},
+  year = {2021},
+  month = sep,
+  publisher = {Verein zur Forderung des Open Access Publizierens in den Quantenwissenschaften},
+  volume = {5},
+  pages = {544},
+  author = {Tony Metger and Thomas Vidick},
+  title = {Self-testing of a single quantum device under computational assumptions},
+  journal = {Quantum}
+}
+
+@misc{BY21,
+  doi = {10.48550/ARXIV.2111.08595},
+  url = {https://arxiv.org/abs/2111.08595},
+  author = {Broadbent,  Anne and Yuen,  Peter},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Device-Independent Oblivious Transfer from the Bounded-Quantum-Storage-Model and Computational Assumptions},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {arXiv.org perpetual,  non-exclusive license}
+}
+
+@InProceedings{GKR08,
+author="Goldwasser, Shafi
+and Kalai, Yael Tauman
+and Rothblum, Guy N.",
+editor="Wagner, David",
+title="One-Time Programs",
+booktitle="Advances in Cryptology -- CRYPTO 2008",
+year="2008",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="39--56",
+abstract="In this work, we introduce one-time programs, a new computational paradigm geared towards security applications. A one-time program can be executed on a single input, whose value can be specified at run time. Other than the result of the computation on this input, nothing else about the program is leaked. Hence, a one-time program is like a black box function that may be evaluated once and then ``self destructs.'' This also extends to k-time programs, which are like black box functions that can be evaluated k times and then self destruct.",
+isbn="978-3-540-85174-5"
+}
+
+@misc{PR21,
+  doi = {10.48550/ARXIV.2102.00021},
+  url = {https://arxiv.org/abs/2102.00021},
+  author = {Portmann,  Christopher and Renner,  Renato},
+  keywords = {Quantum Physics (quant-ph),  Cryptography and Security (cs.CR),  Information Theory (cs.IT),  FOS: Physical sciences,  FOS: Physical sciences,  FOS: Computer and information sciences,  FOS: Computer and information sciences},
+  title = {Security in Quantum Cryptography},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {arXiv.org perpetual,  non-exclusive license}
+}
+
+@article{B15,
+  doi = {10.1007/s10623-015-0157-4},
+  url = {https://doi.org/10.1007/s10623-015-0157-4},
+  year = {2015},
+  month = dec,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {78},
+  number = {1},
+  pages = {351--382},
+  author = {Anne Broadbent and Christian Schaffner},
+  title = {Quantum cryptography beyond quantum key distribution},
+  journal = {Designs,  Codes and Cryptography}
+}
+
+@inproceedings{B05,
+  doi = {10.1109/itwtpi.2005.1543949},
+  url = {https://doi.org/10.1109/itwtpi.2005.1543949},
+  publisher = {{IEEE}},
+  author = {G. Brassard},
+  title = {Brief history of quantum cryptography: a personal perspective},
+  booktitle = {{IEEE} Information Theory Workshop on Theory and Practice in Information-Theoretic Security.},
+  year = {2005}
+}
+
+@article{M06,
+  doi = {10.1007/s00450-006-0011-z},
+  url = {https://doi.org/10.1007/s00450-006-0011-z},
+  year = {2006},
+  month = sep,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {21},
+  number = {1-2},
+  pages = {39--54},
+  author = {J\"{o}rn M\"{u}ller-Quade},
+  title = {Quantum cryptography beyond key exchange},
+  journal = {Informatik - Forschung und Entwicklung}
+}
+
+@inproceedings{L14,
+  doi = {10.1145/2554797.2554823},
+  url = {https://doi.org/10.1145/2554797.2554823},
+  year = {2014},
+  month = jan,
+  publisher = {{ACM}},
+  author = {Yi-Kai Liu},
+  title = {Building one-time memories from isolated qubits},
+  booktitle = {Proceedings of the 5th conference on Innovations in theoretical computer science}
+}
+
+
+@article{HW94,
+  doi = {10.1080/09500349414552221},
+  url = {https://doi.org/10.1080/09500349414552221},
+  year = {1994},
+  month = dec,
+  publisher = {Informa {UK} Limited},
+  volume = {41},
+  number = {12},
+  pages = {2385--2390},
+  author = {Paul Hausladen and William K. Wootters},
+  title = {A `Pretty Good' Measurement for Distinguishing Quantum States},
+  journal = {Journal of Modern Optics}
+}
+
+@InProceedings{L14b,
+author="Liu, Yi-Kai",
+editor="Garay, Juan A.
+and Gennaro, Rosario",
+title="Single-Shot Security for One-Time Memories in the Isolated Qubits Model",
+booktitle="Advances in Cryptology -- CRYPTO 2014",
+year="2014",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="19--36",
+abstract="One-time memories (OTM's) are simple, tamper-resistant cryptographic devices, which can be used to implement sophisticated functionalities such as one-time programs. Can one construct OTM's whose security follows from some physical principle? This is not possible in a fully-classical world, or in a fully-quantum world, but there is evidence that OTM's can be built using ``isolated qubits'' --- qubits that cannot be entangled, but can be accessed using adaptive sequences of single-qubit measurements.",
+isbn="978-3-662-44381-1"
+}
+
+@InProceedings{L15,
+author="Liu, Yi-Kai",
+editor="Oswald, Elisabeth
+and Fischlin, Marc",
+title="Privacy Amplification in the Isolated Qubits Model",
+booktitle="Advances in Cryptology - EUROCRYPT 2015",
+year="2015",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="785--814",
+abstract="Isolated qubits are a special class of quantum devices, which can be used to implement tamper-resistant cryptographic hardware such as one-time memories (OTM's). Unfortunately, these OTM constructions leak some information, and standard methods for privacy amplification cannot be applied here, because the adversary has advance knowledge of the hash function that the honest parties will use.",
+isbn="978-3-662-46803-6"
+}
+
+@article{Col07,
+  doi = {10.1103/physreva.76.062308},
+  url = {https://doi.org/10.1103/physreva.76.062308},
+  year = {2007},
+  month = dec,
+  publisher = {American Physical Society ({APS})},
+  volume = {76},
+  number = {6},
+  author = {Roger Colbeck},
+  title = {Impossibility of secure two-party classical computation},
+  journal = {Physical Review A}
+}
+
+@article{Col06,
+  doi = {10.1103/physreva.73.032320},
+  url = {https://doi.org/10.1103/physreva.73.032320},
+  year = {2006},
+  month = mar,
+  publisher = {American Physical Society ({APS})},
+  volume = {73},
+  number = {3},
+  author = {Roger Colbeck and Adrian Kent},
+  title = {Variable-bias coin tossing},
+  journal = {Physical Review A}
+}
+
+@misc{Kan15,
+  doi = {10.48550/ARXIV.1512.00602},
+  url = {https://arxiv.org/abs/1512.00602},
+  author = {Kaniewski,  Jedrzej},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {Relativistic quantum cryptography},
+  publisher = {arXiv},
+  year = {2015},
+  copyright = {arXiv.org perpetual,  non-exclusive license}
+}
+
+@misc{LR21,
+  doi = {10.48550/ARXIV.2106.11200},
+  url = {https://arxiv.org/abs/2106.11200},
+  author = {Laneve,  Lorenzo and del Rio,  Lidia},
+  keywords = {Quantum Physics (quant-ph),  Cryptography and Security (cs.CR),  FOS: Physical sciences,  FOS: Physical sciences,  FOS: Computer and information sciences,  FOS: Computer and information sciences},
+  title = {Impossibility of composable Oblivious Transfer in relativistic quantum cryptography},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
+}
+
+@article{VPL19,
+  doi = {10.1088/1367-2630/ab0e3b},
+  url = {https://doi.org/10.1088/1367-2630/ab0e3b},
+  year = {2019},
+  month = apr,
+  publisher = {{IOP} Publishing},
+  volume = {21},
+  number = {4},
+  pages = {043057},
+  author = {V Vilasini and Christopher Portmann and L{\'{\i}}dia del Rio},
+  title = {Composable security in relativistic quantum cryptography},
+  journal = {New Journal of Physics}
+}
+
+@article{Pit16,
+  doi = {10.1103/physreva.93.062346},
+  url = {https://doi.org/10.1103/physreva.93.062346},
+  year = {2016},
+  month = jun,
+  publisher = {American Physical Society ({APS})},
+  volume = {93},
+  number = {6},
+  author = {Dami{\'{a}}n Pital{\'{u}}a-Garc{\'{\i}}a},
+  title = {Spacetime-constrained oblivious transfer},
+  journal = {Physical Review A}
+}
+
+@article{PK18,
+  doi = {10.1103/physreva.98.032327},
+  url = {https://doi.org/10.1103/physreva.98.032327},
+  year = {2018},
+  month = sep,
+  publisher = {American Physical Society ({APS})},
+  volume = {98},
+  number = {3},
+  author = {Dami{\'{a}}n Pital{\'{u}}a-Garc{\'{\i}}a and Iordanis Kerenidis},
+  title = {Practical and unconditionally secure spacetime-constrained oblivious transfer},
+  journal = {Physical Review A}
+}
+
+@article{Pit19,
+  doi = {10.1103/physreva.100.012302},
+  url = {https://doi.org/10.1103/physreva.100.012302},
+  year = {2019},
+  month = jul,
+  publisher = {American Physical Society ({APS})},
+  volume = {100},
+  number = {1},
+  author = {Dami{\'{a}}n Pital{\'{u}}a-Garc{\'{\i}}a},
+  title = {One-out-of-m spacetime-constrained oblivious transfer},
+  journal = {Physical Review A}
+}
+
+@article{Ken11,
+  doi = {10.1103/physreva.84.012328},
+  url = {https://doi.org/10.1103/physreva.84.012328},
+  year = {2011},
+  month = jul,
+  publisher = {American Physical Society ({APS})},
+  volume = {84},
+  number = {1},
+  author = {Adrian Kent},
+  title = {Location-oblivious data transfer with flying entangled qudits},
+  journal = {Physical Review A}
+}
+
+@article{CKS10,
+  author    = {Andr{\'{e}} Chailloux and
+               Iordanis Kerenidis and
+               Jamie Sikora},
+  title     = {Lower bounds for quantum oblivious transfer},
+  journal   = {Quantum Inf. Comput.},
+  volume    = {13},
+  number    = {1-2},
+  pages     = {158--177},
+  year      = {2013},
+  url       = {https://doi.org/10.26421/QIC13.1-2-9},
+  doi       = {10.26421/QIC13.1-2-9},
+  timestamp = {Thu, 29 Apr 2021 18:05:33 +0200},
+  biburl    = {https://dblp.org/rec/journals/qic/ChaillouxKS13.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{CGS16,
+  title={Optimal bounds for semi-honest quantum oblivious transfer},
+  author={Andr{\'e} Chailloux and Gus Gutoski and Jamie Sikora},
+  journal={Chic. J. Theor. Comput. Sci.},
+  year={2016},
+  volume={2016}
+}
+
+@article{He15,
+  doi = {10.1007/s11128-015-0970-8},
+  url = {https://doi.org/10.1007/s11128-015-0970-8},
+  year = {2015},
+  month = mar,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {14},
+  number = {6},
+  pages = {2153--2170},
+  author = {Guang Ping He},
+  title = {Secure quantum weak oblivious transfer against individual measurements},
+  journal = {Quantum Information Processing}
+}
+
+@misc{OS22,
+  doi = {10.48550/ARXIV.2203.08268},
+  url = {https://arxiv.org/abs/2203.08268},
+  author = {Osborn,  Sarah and Sikora,  Jamie},
+  keywords = {Quantum Physics (quant-ph),  FOS: Physical sciences,  FOS: Physical sciences},
+  title = {A constant lower bound for any quantum protocol for secure function evaluation},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {arXiv.org perpetual,  non-exclusive license}
+}
+
+@article{GRS18,
+  doi = {10.22331/q-2018-09-03-89},
+  url = {https://doi.org/10.22331/q-2018-09-03-89},
+  year = {2018},
+  month = sep,
+  publisher = {Verein zur Forderung des Open Access Publizierens in den Quantenwissenschaften},
+  volume = {2},
+  pages = {89},
+  author = {Gus Gutoski and Ansis Rosmanis and Jamie Sikora},
+  title = {Fidelity of quantum strategies with applications to cryptography},
+  journal = {Quantum}
+}
+
+@article{ASR+21,
+  doi = {10.1103/prxquantum.2.010335},
+  url = {https://doi.org/10.1103/prxquantum.2.010335},
+  year = {2021},
+  month = mar,
+  publisher = {American Physical Society ({APS})},
+  volume = {2},
+  number = {1},
+  author = {Ryan Amiri and Robert St{\'{a}}rek and David Reichmuth and Ittoop V. Puthoor and Michal Mi{\v{c}}uda and Ladislav Mi{\v{s}}ta,  Jr. and Miloslav Du{\v{s}}ek and Petros Wallden and Erika Andersson},
+  title = {Imperfect 1-Out-of-2 Quantum Oblivious Transfer: Bounds,  a Protocol,  and its Experimental Implementation},
+  journal = {{PRX} Quantum}
+}
+
+@article{SARG04,
+  doi = {10.1103/physrevlett.92.057901},
+  url = {https://doi.org/10.1103/physrevlett.92.057901},
+  year = {2004},
+  month = feb,
+  publisher = {American Physical Society ({APS})},
+  volume = {92},
+  number = {5},
+  author = {Valerio Scarani and Antonio Ac{\'{\i}}n and Gr{\'{e}}goire Ribordy and Nicolas Gisin},
+  title = {Quantum Cryptography Protocols Robust against Photon Number Splitting Attacks for Weak Laser Pulse Implementations},
+  journal = {Physical Review Letters}
+}
+
+@article{GLWC12,
+author = {Fei Gao and Bin Liu and Qiao-Yan Wen and Hui Chen},
+journal = {Opt. Express},
+keywords = {Quantum optics; Quantum cryptography ; Photons; Quantum communications; Quantum cryptography; Quantum key distribution; Quantum memories; Quantum memory},
+number = {16},
+pages = {17411--17420},
+publisher = {OSA},
+title = {Flexible quantum private queries based on quantum key distribution},
+volume = {20},
+month = {Jul},
+year = {2012},
+url = {http://www.opticsexpress.org/abstract.cfm?URI=oe-20-16-17411},
+doi = {10.1364/OE.20.017411}
+}
+
+@article{PJ12,
+author = {Rao, Panduranga and Jakobi, Markus},
+year = {2012},
+month = {08},
+pages = {},
+title = {Towards Communication-Efficient Quantum Oblivious Key Distribution},
+volume = {87},
+journal = {Physical Review A},
+doi = {10.1103/PhysRevA.87.012331}
+}
+
+@ARTICLE{ZGGLW13,
+       author = {{Zhang}, Jia-Li and {Guo}, Fen-Zhuo and {Gao}, Fei and {Liu}, Bin and
+         {Wen}, Qiao-Yan},
+        title = "{Private database queries based on counterfactual quantum key distribution}",
+      journal = {Physical Review A},
+     keywords = {03.67.Dd, 03.67.Hk, Quantum cryptography, Quantum communication},
+         year = 2013,
+        month = aug,
+       volume = {88},
+       number = {2},
+          eid = {022334},
+        pages = {022334},
+          doi = {10.1103/PhysRevA.88.022334},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2013PhRvA..88b2334Z},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{WGWW14,
+author = {Wei, Chun-Yan and Gao, Fei and Wen, Qiao-Yan and Wang, Tian-Yin},
+year = {2014},
+month = {12},
+pages = {7537},
+title = {Practical quantum private query of blocks based on unbalanced-state Bennett-Brassard-1984 quantum-key-distribution protocol},
+volume = {4},
+journal = {Scientific reports},
+doi = {10.1038/srep07537}
+}
+
+@article{CLMST14,
+  title={Performing private database queries in a real-world environment using a quantum protocol},
+  author={Philip Chan and Itzel Lucio-Martinez and Xiaofan Mo and Christoph Simon and Wolfgang Tittel},
+  journal={Scientific Reports},
+  year={2014},
+  volume={4}
+}
+
+@ARTICLE{GLHW15,
+  author={F. {Gao} and B. {Liu} and W. {Huang} and Q. {Wen}},
+  journal={IEEE Journal of Selected Topics in Quantum Electronics}, 
+  title={Postprocessing of the Oblivious Key in Quantum Private Query}, 
+  year={2015},
+  volume={21},
+  number={3},
+  pages={98-108},}
+  
+  @article{LGHW15,
+author = {Liu, Bin and Gao, Fei and Huang, Wei and Wen, Q.Y.},
+year = {2015},
+month = {10},
+pages = {},
+title = {QKD-based quantum private query without a failure probability},
+volume = {58},
+journal = {Science China: Physics, Mechanics and Astronomy},
+doi = {10.1007/s11433-015-5714-3}
+}
+
+@ARTICLE{YQSWL15,
+       author = {{Yu}, Fang and {Qiu}, Daowen and {Situ}, Haozhen and {Wang}, Xiaoming and
+         {Long}, Shun},
+        title = "{Enhancing user privacy in SARG04-based private database query protocols}",
+      journal = {Quantum Information Processing},
+     keywords = {Quantum private database query, User privacy, SARG04-based},
+         year = 2015,
+        month = nov,
+       volume = {14},
+       number = {11},
+        pages = {4201-4210},
+          doi = {10.1007/s11128-015-1091-0},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015QuIP...14.4201Y},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{Zhou18,
+	doi = {10.1088/0253-6102/69/1/31},
+	url = {https://doi.org/10.1088%2F0253-6102%2F69%2F1%2F31},
+	year = 2018,
+	month = {jan},
+	publisher = {{IOP} Publishing},
+	volume = {69},
+	number = {1},
+	pages = {31},
+	author = {Yi-Hua Zhou and Xue-Wei Bai and Lei-Lei Li and Wei-Min Shi and Yu-Guang Yang},
+	title = {A Quantum Private Query Protocol for Enhancing both User and Database Privacy},
+	journal = {Communications in Theoretical Physics}
+}
+
+@ARTICLE{WCLWG18,
+  author={C. {Wei} and X. {Cai} and B. {Liu} and T. {Wang} and F. {Gao}},
+  journal={IEEE Transactions on Computers}, 
+  title={A Generic Construction of Quantum-Oblivious-Key-Transfer-Based Private Query with Ideal Database Security and Zero Failure}, 
+  year={2018},
+  volume={67},
+  number={1},
+  pages={2-8},}
+
+@ARTICLE{WWG16,
+       author = {{Wei}, Chun-Yan and {Wang}, Tian-Yin and {Gao}, Fei},
+        title = "{Practical quantum private query with better performance in resisting joint-measurement attack}",
+      journal = {Physical Review A},
+         year = 2016,
+        month = apr,
+       volume = {93},
+       number = {4},
+          eid = {042318},
+        pages = {042318},
+          doi = {10.1103/PhysRevA.93.042318},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016PhRvA..93d2318W},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+      }
+      
+@ARTICLE{YLLCZZS16,
+       author = {{Yang}, Yu-Guang and {Liu}, Zhi-Chao and {Li}, Jian and {Chen}, Xiu-Bo and
+         {Zuo}, Hui-Juan and {Zhou}, Yi-Hua and {Shi}, Wei-Min},
+        title = "{Quantum private query with perfect user privacy against a joint-measurement attack}",
+      journal = {Physics Letters A},
+     keywords = {Quantum private query, Quantum key distribution, Communication complexity, Security},
+         year = 2016,
+        month = dec,
+       volume = {380},
+       number = {48},
+        pages = {4033-4038},
+          doi = {10.1016/j.physleta.2016.10.017},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016PhLA..380.4033Y},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+}
+
+@article{CZWYZL19,
+author = {Chang, Yan and Zhang, Shi-Bin and Wan, Guo-gen and Yan, Li-Li and Zhang, Yan and Li, Xue-Yang},
+year = {2019},
+month = {05},
+pages = {},
+title = {Practical Two-Way QKD-Based Quantum Private Query with Better Performance in User Privacy},
+volume = {58},
+journal = {International Journal of Theoretical Physics},
+doi = {10.1007/s10773-019-04062-2}
+}
+
+@ARTICLE{DL19,
+       author = {{Du}, Zhenlong and {Li}, Xiaoli},
+        title = "{Robust High Capability QKD-Based Database Private Query}",
+      journal = {International Journal of Theoretical Physics},
+     keywords = {Quantum private query, Quantum key distribution, Query privacy, Bell state},
+         year = 2019,
+        month = feb,
+       volume = {58},
+       number = {2},
+        pages = {391-398},
+          doi = {10.1007/s10773-018-3940-y},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019IJTP...58..391D},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{YZY15,
+       author = {{Yang}, Yu-Guang and {Zhang}, Ming-Ou and {Yang}, Rui},
+        title = "{Private database queries using one quantum state}",
+      journal = {Quantum Information Processing},
+     keywords = {Quantum private query, Semiquantum key distribution, User security, Database security},
+         year = 2015,
+        month = mar,
+       volume = {14},
+       number = {3},
+        pages = {1017-1024},
+          doi = {10.1007/s11128-014-0902-z},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015QuIP...14.1017Y},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{YLH20,
+author = {Ye, Tian-Yu and Li, Hong-Kun and Hu, Jia-Li},
+year = {2020},
+month = {05},
+pages = {},
+title = {Semi-Quantum Private Query Protocol Without Invoking the Measurement Capability of Classical User},
+journal = {International Journal of Theoretical Physics},
+doi = {10.1007/s10773-020-04476-3}
+}
+
+@article{MPR17,
+  doi = {10.1103/physreva.95.042344},
+  url = {https://doi.org/10.1103/physreva.95.042344},
+  year = {2017},
+  month = apr,
+  publisher = {American Physical Society ({APS})},
+  volume = {95},
+  number = {4},
+  author = {Arpita Maitra and Goutam Paul and Sarbani Roy},
+  title = {Device-independent quantum private query},
+  journal = {Physical Review A}
+}
+
+@article{GIKM00,
+  doi = {10.1006/jcss.1999.1689},
+  url = {https://doi.org/10.1006/jcss.1999.1689},
+  year = {2000},
+  month = jun,
+  publisher = {Elsevier {BV}},
+  volume = {60},
+  number = {3},
+  pages = {592--629},
+  author = {Yael Gertner and Yuval Ishai and Eyal Kushilevitz and Tal Malkin},
+  title = {Protecting Data Privacy in Private Information Retrieval Schemes},
+  journal = {Journal of Computer and System Sciences}
+}
+
+@article{GLM08,
+  doi = {10.1103/physrevlett.100.230502},
+  url = {https://doi.org/10.1103/physrevlett.100.230502},
+  year = {2008},
+  month = jun,
+  publisher = {American Physical Society ({APS})},
+  volume = {100},
+  number = {23},
+  author = {Vittorio Giovannetti and Seth Lloyd and Lorenzo Maccone},
+  title = {Quantum Private Queries},
+  journal = {Physical Review Letters}
+}
+
+@article{GLM10,
+  doi = {10.1109/tit.2010.2048446},
+  url = {https://doi.org/10.1109/tit.2010.2048446},
+  year = {2010},
+  month = jul,
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  volume = {56},
+  number = {7},
+  pages = {3465--3477},
+  author = {Vittorio Giovannetti and Seth Lloyd and Lorenzo Maccone},
+  title = {Quantum Private Queries: Security Analysis},
+  journal = {{IEEE} Transactions on Information Theory}
+}
+
+@article{O11,
+  doi = {10.1103/physreva.84.022313},
+  url = {https://doi.org/10.1103/physreva.84.022313},
+  year = {2011},
+  month = aug,
+  publisher = {American Physical Society ({APS})},
+  volume = {84},
+  number = {2},
+  author = {Lukasz Olejnik},
+  title = {Secure quantum private information retrieval using phase-encoded queries},
+  journal = {Physical Review A}
+}
+
+@techreport{Rabin81,
+  author      =  "Michael O. Rabin",
+  title       =  "How to exchange secrets with oblivious transfer",
+  institution =  "Aiken Computation Laboratory, Harvard University",
+  year        =  "1981",
+  number      =  "TR-81"
+}
+
+@InProceedings{C88,
+author="Cr{\'e}peau, Claude",
+editor="Pomerance, Carl",
+title="Equivalence Between Two Flavours of Oblivious Transfers",
+booktitle="Advances in Cryptology --- CRYPTO '87",
+year="1988",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="350--354",
+abstract="The concept of oblivious transfer (O.T.) that was induced by Halpern and Rabin m] turned out to be a very useful tool in designing cryptographic protocols. The related notion of ``one-out-of-two oblivious transfer'' was proposed by Even, Goldreich and Lempel in [EGL] together with some applications. Some more applications of this protocol can be found in recent papers [BCR], [GMWj. So far, the two notions where believed to be closely related but not known to be equivalent. This paper presents a proof that these two notions are computationally equivalent.",
+isbn="978-3-540-48184-3"
+}
+
+@article{HW06,
+  doi = {10.1103/physreva.73.044304},
+  url = {https://doi.org/10.1103/physreva.73.044304},
+  year = {2006},
+  month = apr,
+  publisher = {American Physical Society ({APS})},
+  volume = {73},
+  number = {4},
+  author = {Guang Ping He and Z. D. Wang},
+  title = {Nonequivalence of two flavors of oblivious transfer at the quantum level},
+  journal = {Physical Review A}
+}
+
+@article{HW06b,
+  doi = {10.1103/physreva.73.012331},
+  url = {https://doi.org/10.1103/physreva.73.012331},
+  year = {2006},
+  month = jan,
+  publisher = {American Physical Society ({APS})},
+  volume = {73},
+  number = {1},
+  author = {Guang Ping He and Z. D. Wang},
+  title = {Oblivious transfer using quantum entanglement},
+  journal = {Physical Review A}
+}
+
+@article{YSPX15,
+  doi = {10.1016/j.ijleo.2015.07.151},
+  url = {https://doi.org/10.1016/j.ijleo.2015.07.151},
+  year = {2015},
+  month = dec,
+  publisher = {Elsevier {BV}},
+  volume = {126},
+  number = {23},
+  pages = {3838--3843},
+  author = {Yu-Guang Yang and Si-Jia Sun and Qing-Xiang Pan and Peng Xu},
+  title = {Quantum oblivious transfer based on unambiguous set discrimination},
+  journal = {Optik}
+}
+
+@article{YYL+15,
+  doi = {10.1007/s11128-015-1013-1},
+  url = {https://doi.org/10.1007/s11128-015-1013-1},
+  year = {2015},
+  month = may,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {14},
+  number = {8},
+  pages = {3031--3040},
+  author = {Yu-Guang Yang and Rui Yang and He Lei and Wei-Min Shi and Yi-Hua Zhou},
+  title = {Quantum oblivious transfer with relaxed constraints on the receiver},
+  journal = {Quantum Information Processing}
+}
+
+@article{BCW03,
+  doi = {10.1007/s00145-002-0146-4},
+  url = {https://doi.org/10.1007/s00145-002-0146-4},
+  year = {2003},
+  month = mar,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {16},
+  number = {4},
+  pages = {219--237},
+  author = {Gilles Brassard and Claude Cr{\'{e}}peau and Stefan Wolf},
+  title = {Oblivious Transfers and Privacy Amplification},
+  journal = {Journal of Cryptology}
+}
+
+@unpublished{SSH+21,
+author = {Lara Stroh and Robert Stárek and Nikola Horová and Ittoop V. Puthoor and  Miloslav Du\v{s}ek and Erika Andersson},
+title = {{A non-interactive XOR quantum oblivious transfer protocol}},
+addendum = {Poster presented at QCrypt 2021, Amsterdam, The Netherlands}
+}
+
+@article{KST22,
+  doi = {10.22331/q-2022-05-30-725},
+  url = {https://doi.org/10.22331/q-2022-05-30-725},
+  year = {2022},
+  month = may,
+  publisher = {Verein zur Forderung des Open Access Publizierens in den Quantenwissenschaften},
+  volume = {6},
+  pages = {725},
+  author = {Srijita Kundu and Jamie Sikora and Ernest Y.-Z. Tan},
+  title = {A device-independent protocol for {XOR} oblivious transfer},
+  journal = {Quantum}
+}
+
+@article{ZLS+19,
+  doi = {10.1007/s10773-019-04206-4},
+  url = {https://doi.org/10.1007/s10773-019-04206-4},
+  year = {2019},
+  month = aug,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {58},
+  number = {10},
+  pages = {3333--3341},
+  author = {MeiLing Zhang and Jin Li and Sha Shi and YuanHua Liu and QingJi Zheng},
+  title = {A Novel Application of Probabilistic Teleportation: p-Rabin Quantum Oblivious Transfer of a Qubit},
+  journal = {International Journal of Theoretical Physics}
+}
+
+@article{WCS+10,
+  doi = {10.1103/physreva.81.052336},
+  url = {https://doi.org/10.1103/physreva.81.052336},
+  year = {2010},
+  month = may,
+  publisher = {American Physical Society ({APS})},
+  volume = {81},
+  number = {5},
+  author = {Stephanie Wehner and Marcos Curty and Christian Schaffner and Hoi-Kwong Lo},
+  title = {Implementation of two-party protocols in the noisy-storage model},
+  journal = {Physical Review A}
+}
+
+@article{ENG+14,
+  doi = {10.1038/ncomms4418},
+  url = {https://doi.org/10.1038/ncomms4418},
+  year = {2014},
+  month = mar,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {5},
+  number = {1},
+  author = {C. Erven and N. Ng and N. Gigov and R. Laflamme and S. Wehner and G. Weihs},
+  title = {An experimental implementation of oblivious transfer in the noisy storage model},
+  journal = {Nature Communications}
+}
+
+@article{FGS+18,
+  doi = {10.1038/s41467-018-03729-4},
+  url = {https://doi.org/10.1038/s41467-018-03729-4},
+  year = {2018},
+  month = apr,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {9},
+  number = {1},
+  author = {Fabian Furrer and Tobias Gehring and Christian Schaffner and Christoph Pacher and Roman Schnabel and Stephanie Wehner},
+  title = {Continuous-variable protocol for oblivious transfer in the noisy-storage model},
+  journal = {Nature Communications}
+}
+
+@inproceedings{CK09,
+  doi = {10.1109/focs.2009.71},
+  url = {https://doi.org/10.1109/focs.2009.71},
+  year = {2009},
+  month = oct,
+  publisher = {{IEEE}},
+  author = {Andr{\'{e}} Chailloux and Iordanis Kerenidis},
+  title = {Optimal Quantum Strong Coin Flipping},
+  booktitle = {2009 50th Annual {IEEE} Symposium on Foundations of Computer Science}
+}
+
+@inproceedings{CK11,
+  doi = {10.1109/focs.2011.42},
+  url = {https://doi.org/10.1109/focs.2011.42},
+  year = {2011},
+  month = oct,
+  publisher = {{IEEE}},
+  author = {Andre Chailloux and Iordanis Kerenidis},
+  title = {Optimal Bounds for Quantum Bit Commitment},
+  booktitle = {2011 {IEEE} 52nd Annual Symposium on Foundations of Computer Science}
+}
+
+@article{U18,
+  doi = {10.1007/s00145-018-9278-z},
+  url = {https://doi.org/10.1007/s00145-018-9278-z},
+  year = {2018},
+  month = mar,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {31},
+  number = {4},
+  pages = {965--1011},
+  author = {Dominique Unruh},
+  title = {Everlasting Multi-party Computation},
+  journal = {Journal of Cryptology}
+}
+
+@article{TR11,
+  doi = {10.1103/physrevlett.106.110506},
+  url = {https://doi.org/10.1103/physrevlett.106.110506},
+  year = {2011},
+  month = mar,
+  publisher = {American Physical Society ({APS})},
+  volume = {106},
+  number = {11},
+  author = {Marco Tomamichel and Renato Renner},
+  title = {Uncertainty Relation for Smooth Entropies},
+  journal = {Physical Review Letters}
+}
+
+@article{BCC+10,
+  doi = {10.1038/nphys1734},
+  url = {https://doi.org/10.1038/nphys1734},
+  year = {2010},
+  month = jul,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {6},
+  number = {9},
+  pages = {659--662},
+  author = {Mario Berta and Matthias Christandl and Roger Colbeck and Joseph M. Renes and Renato Renner},
+  title = {The uncertainty principle in the presence of quantum memory},
+  journal = {Nature Physics}
+}
+
+@inproceedings{BFK09,
+  doi = {10.1109/focs.2009.36},
+  url = {https://doi.org/10.1109/focs.2009.36},
+  year = {2009},
+  month = oct,
+  publisher = {{IEEE}},
+  author = {Anne Broadbent and Joseph Fitzsimons and Elham Kashefi},
+  title = {Universal Blind Quantum Computation},
+  booktitle = {2009 50th Annual {IEEE} Symposium on Foundations of Computer Science}
+}
+
+@InProceedings{Unr14,
+author="Unruh, Dominique",
+editor="Garay, Juan A.
+and Gennaro, Rosario",
+title="Quantum Position Verification in the Random Oracle Model",
+booktitle="Advances in Cryptology -- CRYPTO 2014",
+year="2014",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="1--18",
+abstract="We present a quantum position verification scheme in the random oracle model. In contrast to prior work, our scheme does not require bounded storage/retrieval/entanglement assumptions. We also give an efficient position-based authentication protocol. This enables secret and authenticated communication with an entity that is only identified by its position in space.",
+isbn="978-3-662-44381-1"
+}
+
+
+@article{SPM21,
+  doi = {10.1049/qtc2.12010},
+  url = {https://doi.org/10.1049/qtc2.12010},
+  year = {2021},
+  month = may,
+  publisher = {Institution of Engineering and Technology ({IET})},
+  volume = {2},
+  number = {2},
+  pages = {42--53},
+  author = {Manuel B. Santos and Armando N. Pinto and Paulo Mateus},
+  title = {Quantum and classical oblivious transfer: A comparative analysis},
+  journal = {{IET} Quantum Communication}
+}
+
+
+@inproceedings{SGPM21,
+  doi = {10.1109/conftele50222.2021.9435479},
+  url = {https://doi.org/10.1109/conftele50222.2021.9435479},
+  year = {2021},
+  month = feb,
+  publisher = {{IEEE}},
+  author = {Manuel B. Santos and Ana C. Gomes and Armando N. Pinto and Paulo Mateus},
+  title = {Quantum Secure Multiparty Computation of Phylogenetic Trees of {SARS}-{CoV}-2 Genome},
+  booktitle = {2021 Telecoms Conference ({ConfTELE})}
+}
+
+@inproceedings{POS+20,
+  doi = {10.1109/icton51198.2020.9203042},
+  url = {https://doi.org/10.1109/icton51198.2020.9203042},
+  year = {2020},
+  month = jul,
+  publisher = {{IEEE}},
+  author = {Armando N. Pinto and Laura Ortiz and Manuel Santos and Ana C. Gomes and Juan P. Brito and Nelson J. Muga and Nuno A. Silva and Paulo Mateus and Vicente Martin},
+  title = {Quantum Enabled Private Recognition of Composite Signals in Genome and Proteins},
+  booktitle = {2020 22nd International Conference on Transparent Optical Networks ({ICTON})}
+}
+
+@article{SGPM22,
+  doi = {10.1109/access.2022.3158416},
+  url = {https://doi.org/10.1109/access.2022.3158416},
+  year = {2022},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  volume = {10},
+  pages = {38065--38088},
+  author = {Manuel B. Santos and Ana C. Gomes and Armando N. Pinto and Paulo Mateus},
+  title = {Private Computation of Phylogenetic Trees Based on Quantum Technologies},
+  journal = {{IEEE} Access}
+}
+
+@inproceedings{KOS16,
+  doi = {10.1145/2976749.2978357},
+  url = {https://doi.org/10.1145/2976749.2978357},
+  year = {2016},
+  month = oct,
+  publisher = {{ACM}},
+  author = {Marcel Keller and Emmanuela Orsini and Peter Scholl},
+  title = {{MASCOT}},
+  booktitle = {Proceedings of the 2016 {ACM} {SIGSAC} Conference on Computer and Communications Security}
+}
+
+@InProceedings{Che04,
+author="Chang, Yan-Cheng",
+editor="Wang, Huaxiong
+and Pieprzyk, Josef
+and Varadharajan, Vijay",
+title="Single Database Private Information Retrieval with Logarithmic Communication",
+booktitle="Information Security and Privacy",
+year="2004",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="50--61",
+abstract="We study the problem of single database private information retrieval, and present a solution with only logarithmic server-side communication complexity and a solution with only logarithmic user-side communication complexity. Previously the best result could only achieve polylogarithmic communication on each side, and was based on certain less well-studied assumptions in number theory [6]. On the contrary, our schemes are based on Paillier's cryptosystem [16], which along with its variants have drawn extensive studies in recent cryptographic researches [3, 4, 8, 9], and have many important applications [7, 8].",
+isbn="978-3-540-27800-9"
+}
+
+@InProceedings{MEP17,
+author="Orr{\`u}, Michele
+and Orsini, Emmanuela
+and Scholl, Peter",
+editor="Handschuh, Helena",
+title="Actively Secure 1-out-of-N OT Extension with Application to Private Set Intersection",
+booktitle="Topics in Cryptology -- CT-RSA 2017",
+year="2017",
+publisher="Springer International Publishing",
+address="Cham",
+pages="381--396",
+abstract="This paper describes a 1-out-of-N oblivious transfer (OT) extension protocol with active security, which achieves very low overhead on top of the passively secure protocol of Kolesnikov and Kumaresan (Crypto 2011). Our protocol obtains active security using a consistency check which requires only simple computation and has a communication overhead that is independent of the total number of OTs to be produced. We prove its security in both the random oracle model and the standard model, assuming a variant of correlation robustness. We describe an implementation, which demonstrates our protocol only costs around 5--30{\%} more than the passively secure protocol.",
+isbn="978-3-319-52153-4"
+}
+
+@article{BHM+19,
+  doi = {10.1007/s11277-019-06544-2},
+  url = {https://doi.org/10.1007/s11277-019-06544-2},
+  year = {2019},
+  month = may,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {108},
+  number = {4},
+  pages = {2663--2674},
+  author = {Bo Bi and Darong Huang and Bo Mi and Zhenping Deng and Hongyang Pan},
+  title = {Efficient {LBS} Security-Preserving Based on {NTRU} Oblivious Transfer},
+  journal = {Wireless Personal Communications}
+}
+
+@article{YAVV22,
+  doi = {10.1145/3503045},
+  url = {https://doi.org/10.1145/3503045},
+  year = {2022},
+  month = jan,
+  publisher = {Association for Computing Machinery ({ACM})},
+  author = {Vijay Kumar Yadav and Nitish Andola and Shekhar Verma and S Venkatesan},
+  title = {A Survey of Oblivious Transfer Protocol},
+  journal = {{ACM} Computing Surveys}
+}
+
+@inproceedings{IR89,
+author = {Impagliazzo, Russel and Rudich, Steven},
+title = {Limits on the Provable Consequences of One-Way Permutations},
+year = {1989},
+isbn = {0897913078},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/73007.73012},
+doi = {10.1145/73007.73012},
+booktitle = {Proceedings of the Twenty-First Annual ACM Symposium on Theory of Computing},
+pages = {44–61},
+numpages = {18},
+location = {Seattle, Washington, USA},
+series = {STOC '89}
+}
+
+@inproceedings{NP01,
+  title={Efficient oblivious transfer protocols},
+  author={M. Naor and Benny Pinkas},
+  booktitle={SODA '01},
+  year={2001}
+}
+
+@article{EGL85,
+author = {Even, Shimon and Goldreich, Oded and Lempel, Abraham},
+title = {A Randomized Protocol for Signing Contracts},
+year = {1985},
+issue_date = {June 1985},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {28},
+number = {6},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3812.3818},
+doi = {10.1145/3812.3818},
+journal = {Commun. ACM},
+month = jun,
+pages = {637-647},
+numpages = {11}
+}
+
+@inproceedings{CO15,
+author = {Chou, Tung and Orlandi, Claudio},
+title = {The Simplest Protocol for Oblivious Transfer},
+year = {2015},
+isbn = {9783319221731},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-319-22174-8_3},
+doi = {10.1007/978-3-319-22174-8_3},
+booktitle = {Proceedings of the 4th International Conference on Progress in Cryptology -- LATINCRYPT 2015 - Volume 9230},
+pages = {40–58},
+numpages = {19}
+}
+
+@Article{Sho95,
+author = {Shor, Peter W.},
+title = {Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer},
+journal = {SIAM Journal on Computing},
+volume = {26},
+number = {5},
+pages = {1484-1509},
+year = {1997},
+doi = {10.1137/S0097539795293172},
+URL = {https://doi.org/10.1137/S0097539795293172},
+eprint = {https://doi.org/10.1137/S0097539795293172}
+}
+
+@article{AGM06,
+  doi = {10.1103/physrevlett.97.120405},
+  url = {https://doi.org/10.1103/physrevlett.97.120405},
+  year = {2006},
+  month = sep,
+  publisher = {American Physical Society ({APS})},
+  volume = {97},
+  number = {12},
+  author = {Antonio Ac{\'{\i}}n and Nicolas Gisin and Lluis Masanes},
+  title = {From Bell's Theorem to Secure Quantum Key Distribution},
+  journal = {Physical Review Letters}
+}
+
+@article{RQMZ21,
+  author    = {Zhenbang Rong and
+               Daowen Qiu and
+               Paulo Mateus and
+               Xiangfu Zou},
+  title     = {Mediated semi-quantum secure direct communication},
+  journal   = {Quantum Inf. Process.},
+  volume    = {20},
+  number    = {2},
+  pages     = {58},
+  year      = {2021},
+  url       = {https://doi.org/10.1007/s11128-020-02965-2},
+  doi       = {10.1007/s11128-020-02965-2},
+  timestamp = {Fri, 09 Apr 2021 18:29:15 +0200},
+  biburl    = {https://dblp.org/rec/journals/qip/RongQMZ21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{CZZS18,
+  doi = {10.1007/s11433-018-9224-5},
+  url = {https://doi.org/10.1007/s11433-018-9224-5},
+  year = {2018},
+  month = jul,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {61},
+  number = {9},
+  author = {Shan-Shan Chen and Lan Zhou and Wei Zhong and Yu-Bo Sheng},
+  title = {Three-step three-party quantum secure direct communication},
+  journal = {Science China Physics,  Mechanics and Astronomy}
+}
+
+@article{LL20,
+	doi = {10.1088/1367-2630/ab8ab5},
+	url = {https://doi.org/10.1088/1367-2630/ab8ab5},
+	year = 2020,
+	month = {jun},
+	publisher = {{IOP} Publishing},
+	volume = {22},
+	number = {6},
+	pages = {063017},
+	author = {Tao Li and Gui-Lu Long},
+	title = {Quantum secure direct communication based on single-photon Bell-state measurement},
+	journal = {New Journal of Physics},
+	abstract = {Security loopholes exploiting the flaws of practical apparatus, especially non-ideal photon detectors, are pressing issues in practical quantum communication. We propose a simple quantum secure direct communication protocol based on single-photon Bell-state measurement and remove side-channel attacks on photon detectors. This quantum communication protocol in principle works in a deterministic way, and it does not require the two-photon interference of photons from independent sources. The single-photon Bell-state measurement with a unity efficiency can be constructed with only linear optics, which significantly simplifies its experimental implementation. Furthermore, we prove that our quantum secure direct communication protocol is immune to general detector-side-channel attacks.}
+}
+
+@article{SZL22,
+title = {One-step quantum secure direct communication},
+journal = {Science Bulletin},
+volume = {67},
+number = {4},
+pages = {367-374},
+year = {2022},
+issn = {2095-9273},
+doi = {https://doi.org/10.1016/j.scib.2021.11.002},
+url = {https://www.sciencedirect.com/science/article/pii/S2095927321006940},
+author = {Yu-Bo Sheng and Lan Zhou and Gui-Lu Long},
+keywords = {Quantum secure direct communication, Hyperentanglement, Nonlocal Bell-state analysis},
+abstract = {Quantum secure direct communication (QSDC) attracts much attention for it can transmit secret messages directly without sharing a key. In this article, we propose a one-step QSDC protocol, which only requires to distribute polarization-spatial-mode hyperentanglement for one round. In this QSDC protocol, the eavesdropper cannot obtain any message, so that this protocol is unconditionally secure in principle. This protocol is a two-way quantum communication and has high capacity for it can transmit two bits of secret messages with one pair of hyperentanglement. With entanglement fidelities of both polarization and spatial-mode degrees of freedom being 0.98, the maximal communication distance of this one-step QSDC can reach about 216Â km. QSDC can also be used to generate the key. In this regard, the key generation rate is estimated about 2.5 times of that in the entanglement-based QKD with the communication distance of 150Â km. With the help of future quantum repeaters, this QSDC protocol can provide unconditionally secure communication over arbitrarily long distance.}
+}
+
+@InProceedings{B95,
+author="Beaver, Donald",
+editor="Coppersmith, Don",
+title="Precomputing Oblivious Transfer",
+booktitle="Advances in Cryptology --- CRYPT0' 95",
+year="1995",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="97--109",
+abstract="Alice and Bob are too untrusting of computer scientists to let their privacy depend on unproven assumptions such as the existence of one-way functions. Firm believers in Schr{\"o}dinger and Heisenberg, they might accept a quantum OT device, but IBM's prototype is not yet portable. Instead, as part of their prenuptial agreement, they decide to visit IBM and perform some OT's in advance, so that any later divorces, coin-flipping or other important interactions can be done more conveniently, without needing expensive third parties.",
+isbn="978-3-540-44750-4"
+}
+
+@article {Wang11,
+	author = {Wang, Jun},
+	title = {Personal Genomes: For One and for All},
+	volume = {331},
+	number = {6018},
+	pages = {690--690},
+	year = {2011},
+	doi = {10.1126/science.1202811},
+	publisher = {American Association for the Advancement of Science},
+	issn = {0036-8075},
+	URL = {https://science.sciencemag.org/content/331/6018/690.1},
+	eprint = {https://science.sciencemag.org/content/331/6018/690.1.full.pdf},
+	journal = {Science}
+}
+
+@INPROCEEDINGS{NS08,
+  author={Narayanan, Arvind and Shmatikov, Vitaly},
+  booktitle={2008 IEEE Symposium on Security and Privacy (sp 2008)}, 
+  title={Robust De-anonymization of Large Sparse Datasets}, 
+  year={2008},
+  volume={},
+  number={},
+  pages={111-125},
+  doi={10.1109/SP.2008.33}}
+  
+  @article{L02,
+author = {Sweeney, Latanya},
+title = {k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY},
+journal = {International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems},
+volume = {10},
+number = {05},
+pages = {557-570},
+year = {2002},
+doi = {10.1142/S0218488502001648},
+
+URL = { 
+        https://doi.org/10.1142/S0218488502001648
+    
+},
+eprint = { 
+        https://doi.org/10.1142/S0218488502001648
+    
+}
+,
+    abstract = { Consider a data holder, such as a hospital or a bank, that has a privately held collection of person-specific, field structured data. Suppose the data holder wants to share a version of the data with researchers. How can a data holder release a version of its private data with scientific guarantees that the individuals who are the subjects of the data cannot be re-identified while the data remain practically useful? The solution provided in this paper includes a formal protection model named k-anonymity and a set of accompanying policies for deployment. A release provides k-anonymity protection if the information for each person contained in the release cannot be distinguished from at least k-1 individuals whose information also appears in the release. This paper also examines re-identification attacks that can be realized on releases that adhere to k-anonymity unless accompanying policies are respected. The k-anonymity protection model is important because it forms the basis on which the real-world systems known as Datafly, ÎŒ-Argus and k-Similar provide guarantees of privacy protection. }
+}
+
+@article{Homer08,
+  doi = {10.1371/journal.pgen.1000167},
+  url = {https://doi.org/10.1371/journal.pgen.1000167},
+  year = {2008},
+  month = aug,
+  publisher = {Public Library of Science ({PLoS})},
+  volume = {4},
+  number = {8},
+  pages = {e1000167},
+  author = {Nils Homer and Szabolcs Szelinger and Margot Redman and David Duggan and Waibhav Tembe and Jill Muehling and John V. Pearson and Dietrich A. Stephan and Stanley F. Nelson and David W. Craig},
+  editor = {Peter M. Visscher},
+  title = {Resolving Individuals Contributing Trace Amounts of {DNA} to Highly Complex Mixtures Using High-Density {SNP} Genotyping Microarrays},
+  journal = {{PLoS} Genetics}
+}
+
+@article{Gymrek13,
+  doi = {10.1126/science.1229566},
+  url = {https://doi.org/10.1126/science.1229566},
+  year = {2013},
+  month = jan,
+  publisher = {American Association for the Advancement of Science ({AAAS})},
+  volume = {339},
+  number = {6117},
+  pages = {321--324},
+  author = {M. Gymrek and A. L. McGuire and D. Golan and E. Halperin and Y. Erlich},
+  title = {Identifying Personal Genomes by Surname Inference},
+  journal = {Science}
+}
+
+@misc{EUdataregulations2016,
+    title = {2016 reform of EU data protection rules},
+    howpublished = {https://eur-lex.europa.eu/eli/reg/2016/679/oj},
+    organization = {European Commission},
+    year = {2016},
+    urldate = {2021-09-30}
+}
+
+@article{Li2016,
+  doi = {10.2200/s00735ed1v01y201609spt018},
+  url = {https://doi.org/10.2200/s00735ed1v01y201609spt018},
+  year = {2016},
+  month = oct,
+  publisher = {Morgan {\&} Claypool Publishers {LLC}},
+  volume = {8},
+  number = {4},
+  pages = {1--138},
+  author = {Ninghui Li and Min Lyu and Dong Su and Weining Yang},
+  title = {Differential Privacy: From Theory to Practice},
+  journal = {Synthesis Lectures on Information Security,  Privacy,  and Trust}
+}
+
+@article{Armknecht2015,
+  title={A Guide to Fully Homomorphic Encryption},
+  author={Frederik Armknecht and C. Boyd and Christopher Carr and K. Gj{\o}steen and Angela J{\"a}schke and Christian A. Reuter and Martin Strand},
+  journal={IACR Cryptol. ePrint Arch.},
+  year={2015},
+  volume={2015},
+  pages={1192}
+}
+
+@incollection{Bendlin11,
+  doi = {10.1007/978-3-642-20465-4_11},
+  url = {https://doi.org/10.1007/978-3-642-20465-4_11},
+  year = {2011},
+  publisher = {Springer Berlin Heidelberg},
+  pages = {169--188},
+  author = {Rikke Bendlin and Ivan Damg{\aa}rd and Claudio Orlandi and Sarah Zakarias},
+  title = {Semi-homomorphic Encryption and Multiparty Computation},
+  booktitle = {Advances in Cryptology {\textendash} {EUROCRYPT} 2011}
+}
+
+@incollection{D12,
+  doi = {10.1007/978-3-642-32009-5_38},
+  url = {https://doi.org/10.1007/978-3-642-32009-5_38},
+  year = {2012},
+  publisher = {Springer Berlin Heidelberg},
+  pages = {643--662},
+  author = {Ivan Damg{\aa}rd and Valerio Pastro and Nigel Smart and Sarah Zakarias},
+  title = {Multiparty Computation from Somewhat Homomorphic Encryption},
+  booktitle = {Lecture Notes in Computer Science}
+}
+
+@inproceedings{Goldreich87,
+  doi = {10.1145/28395.28420},
+  url = {https://doi.org/10.1145/28395.28420},
+  year = {1987},
+  publisher = {{ACM} Press},
+  author = {O. Goldreich and S. Micali and A. Wigderson},
+  title = {How to play {ANY} mental game},
+  booktitle = {Proceedings of the nineteenth annual {ACM} conference on Theory of computing  - {STOC} {\textquotesingle}87}
+}
+
+@incollection{DPSZ12,
+  doi = {10.1007/978-3-642-32009-5_38},
+  url = {https://doi.org/10.1007/978-3-642-32009-5_38},
+  year = {2012},
+  publisher = {Springer Berlin Heidelberg},
+  pages = {643--662},
+  author = {Ivan Damg{\aa}rd and Valerio Pastro and Nigel Smart and Sarah Zakarias},
+  title = {Multiparty Computation from Somewhat Homomorphic Encryption},
+  booktitle = {Lecture Notes in Computer Science}
+}
+
+@inproceedings{IR99,
+author = {Impagliazzo, R. and Rudich, S.},
+title = {Limits on the Provable Consequences of One-Way Permutations},
+year = {1989},
+isbn = {0897913078},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/73007.73012},
+doi = {10.1145/73007.73012},
+booktitle = {Proceedings of the Twenty-First Annual ACM Symposium on Theory of Computing},
+pages = {44–61},
+numpages = {18},
+location = {Seattle, Washington, USA},
+series = {STOC '89}
+}
+
+@InProceedings{GLSV21,
+author="Grilo, Alex B.
+and Lin, Huijia
+and Song, Fang
+and Vaikuntanathan, Vinod",
+editor="Canteaut, Anne
+and Standaert, Fran{\c{c}}ois-Xavier",
+title="Oblivious Transfer Is in MiniQCrypt",
+booktitle="Advances in Cryptology -- EUROCRYPT 2021",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="531--561",
+abstract="MiniQCrypt is a world where quantum-secure one-way functions exist, and quantum communication is possible. We construct an oblivious transfer (OT) protocol in MiniQCrypt that achieves simulation-security in the plain model against malicious quantum polynomial-time adversaries, building on the foundational work of Cr{\'e}peau and Killian (FOCS 1988) and Bennett, Brassard, Cr{\'e}peau and Skubiszewska (CRYPTO 1991). Combining the OT protocol with prior works, we obtain secure two-party and multi-party computation protocols also in MiniQCrypt. This is in contrast to the classical world, where it is widely believed that one-way functions alone do not give us OT.",
+isbn="978-3-030-77886-6"
+}
+
+@InProceedings{BCKM21,
+author="Bartusek, James
+and Coladangelo, Andrea
+and Khurana, Dakshita
+and Ma, Fermi",
+editor="Malkin, Tal
+and Peikert, Chris",
+title="One-Way Functions Imply Secure Computation in a Quantum World",
+booktitle="Advances in Cryptology -- CRYPTO 2021",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="467--496",
+abstract="We prove that quantum-hard one-way functions imply simulation-secure quantum oblivious transfer (QOT), which is known to suffice for secure computation of arbitrary quantum functionalities. Furthermore, our construction only makes black-box use of the quantum-hard one-way function.",
+isbn="978-3-030-84242-0"
+}
+
+@article{BPT00,
+  title = {Quantum cryptography using larger alphabets},
+  author = {Bechmann-Pasquinucci, H. and Tittel, W.},
+  journal = {Phys. Rev. A},
+  volume = {61},
+  issue = {6},
+  pages = {062308},
+  numpages = {6},
+  year = {2000},
+  month = {May},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.61.062308},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.61.062308}
+}
+
+@article{DEBZ10,
+author = {Durt, Thomas and Englert, Berthold-Georg and Bengtsson, Ingemar and Zyczkowski, Karol},
+title = {On Mutually Unbiased Bases},
+journal = {International Journal of Quantum Information},
+volume = {08},
+number = {04},
+pages = {535-640},
+year = {2010},
+doi = {10.1142/S0219749910006502},
+
+URL = { 
+        https://doi.org/10.1142/S0219749910006502
+    
+},
+eprint = { 
+        https://doi.org/10.1142/S0219749910006502
+    }
+}
+
+@article{Zhongetal2015,
+  doi = {10.1088/1367-2630/17/2/022002},
+  url = {https://doi.org/10.1088/1367-2630/17/2/022002},
+  year = {2015},
+  publisher = {{IOP} Publishing},
+  volume = {17},
+  number = {2},
+  pages = {022002},
+  author = {Tian Zhong and Hongchao Zhou and Robert D Horansky and Catherine Lee and Varun B Verma and Adriana E Lita and Alessandro Restelli and Joshua C Bienfang and Richard P Mirin and Thomas Gerrits and Sae Woo Nam and Francesco Marsili and Matthew D Shaw and Zheshen Zhang and Ligong Wang and Dirk Englund and Gregory W Wornell and Jeffrey H Shapiro and Franco N C Wong},
+  title = {Photon-efficient quantum key distribution using time{\textendash}energy entanglement with high-dimensional encoding},
+  journal = {New Journal of Physics}
+}
+
+@article{BHVBFHM18,
+author = {Fr\'{e}d\'{e}ric Bouchard and Natalia Herrera Valencia and Florian Brandt and Robert Fickler and Marcus Huber and Mehul Malik},
+journal = {Opt. Express},
+keywords = {Light beams; Phase modulation; Phase plates; Photon polarization; Quantum communications; Quantum information processing},
+number = {24},
+pages = {31925--31941},
+publisher = {OSA},
+title = {Measuring azimuthal and radial modes of photons},
+volume = {26},
+month = {Nov},
+year = {2018},
+url = {http://opg.optica.org/oe/abstract.cfm?URI=oe-26-24-31925},
+doi = {10.1364/OE.26.031925}
+}
+
+@article{DHMPPV21,
+  title = {Quantum Key Distribution Overcoming Extreme Noise: Simultaneous Subspace Coding Using High-Dimensional Entanglement},
+  author = {Doda, Mirdit and Huber, Marcus and Murta, Gl\'aucia and Pivoluska, Matej and Plesch, Martin and Vlachou, Chrysoula},
+  journal = {Phys. Rev. Applied},
+  volume = {15},
+  issue = {3},
+  pages = {034003},
+  numpages = {15},
+  year = {2021},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevApplied.15.034003},
+  url = {https://link.aps.org/doi/10.1103/PhysRevApplied.15.034003}
+}
+
+@inproceedings{ALSZ13,
+author = {Asharov, Gilad and Lindell, Yehuda and Schneider, Thomas and Zohner, Michael},
+title = {More Efficient Oblivious Transfer and Extensions for Faster Secure Computation},
+year = {2013},
+isbn = {9781450324779},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2508859.2516738},
+doi = {10.1145/2508859.2516738},
+booktitle = {Proceedings of the 2013 ACM SIGSAC Conference on Computer \& Communications Security},
+pages = {535-548},
+numpages = {14},
+keywords = {secure computation, oblivious transfer extensions, semi-honest adversaries},
+location = {Berlin, Germany},
+series = {CCS '13}
+}
