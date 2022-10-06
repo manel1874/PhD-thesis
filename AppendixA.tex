@@ -1,0 +1,188 @@
+%\documentclass[11pt]{report}
+%\linespread{1.3} %1.3 for one and a half spacing, 1.6 for double
+%\usepackage{amsmath, amsthm, amssymb, float, graphicx, caption, subcaption, cite, braket, url,color}
+%%\usepackage[nohug,heads=vee]{diagrams}
+%%\diagramstyle[labelstyle=\scriptstyle]
+%%\graphicspath{{./Figures/}}
+%\usepackage[margin=2.5cm]{geometry}
+%%\title{Title}
+%%\author{Chrysoula Vlachou}
+%%\date{}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{proposition}{Proposition}
+%%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}
+%\newcommand{\N}{\mathbb N}
+%\newcommand{\R}{\mathbb R}
+%\newcommand{\C}{\mathbb C}
+%\newcommand{\Hilb}{\mathcal H}
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+%\newcommand{\mmobh}{\textlatin{M\"ob}(\mathbb{H})}
+%\newcommand{\areah}{\textlatin{area}_{\mathbb{H}}}
+%\newcommand{\dth}{d_{\mathbb{H}}}
+%\newcommand{\tdth}{$d_{\mathbb{H}}$ }
+%\def\h{\mathbb H}
+%\DeclareMathOperator{\tr}{Tr}
+%\def\I{\hat I}
+%\def\ds{\displaystyle}
+%\def\ppmod{\!\!\!\!\!\pmod}
+%\newcommand{\q}[1]{\vec{#1}\cdot\vec{\sigma}}
+%
+%
+%
+%\newcommand{\innerproduct}[2]{\langle #1 | #2 \rangle}
+%\def\mobh{\textlatin{M\"ob}({\mathbb H})}
+%
+%
+%
+%\begin{document}
+\appendix
+\chapter*{Appendix A\\Analytic derivation of the closed expressions for the fidelity and $\Delta$}
+\addcontentsline{toc}{section}{Appendix A}
+As already mentioned, the fidelity between two states $\rho$ and $\rho'$ is given by
+\begin{equation}
+F(\rho,\rho')=\text{Tr}\sqrt{\sqrt{\rho}\rho'\sqrt{\rho}}.
+\end{equation}
+We consider unnormalized thermal states $\rho=\exp(-\beta H)$ and $\rho'=\exp(-\beta' H')$. At the end of the calculation one must, of course, normalize the expressions appropriately. We wish to find closed expressions for the fidelity and the quantity $\Delta$ with respect to these thermal states. In order to do that we will proceed by finding $e^C$, such that
+\begin{equation}
+e^{A}e^{B}e^{A}=e^{C},
+\end{equation}
+for $A=-\beta H$, $B=-\beta'H'$ and, ultimately, take the square root of the result. The previous equation is equivalent to
+\begin{equation}
+e^{A}e^{B}=e^{C}e^{-A}.
+\label{eq:1}
+\end{equation}
+The Hamiltonians $H$ and $H'$ are taken to be of the form $\q{h}$, and thus we can write
+\begin{equation}
+e^{A}=a_0+\q{a}, \nonumber \\
+e^{B}=b_0+\q{b}, \nonumber \\
+e^{C}=c_0+\q{c},
+\end{equation}
+where all the coefficients are real, with the following constraints:
+\begin{eqnarray}
+\label{eq:c1}
+\begin{cases}
+& 1=\det e^{A}=a_{0}^2-\vec{a}^2,\\
+\label{eq:c2}
+& 1=\det e^{B}=b_{0}^2-\vec{b}^2,\\
+\label{eq:c3}
+& 1=\det e^{C}=c_{0}^2-\vec{c}^2,
+\end{cases}
+\end{eqnarray}
+which are equivalent to $\tr A = \tr B = \tr C = 0$, since Pauli matrices are traceless. Let us proceed by expanding the LHS and the RHS of Eq.\eqref{eq:1},
+\begin{eqnarray}
+& (a_0+\q{a})(b_0+\q{b})=(c_0+\q{c})(a_0-\q{a}) \nonumber \\
+& \Leftrightarrow a_0 b_0+ a_0\q{b}+\q{a}b_0+ (\q{a})(\q{b}) = c_0 a_0-c_0\q{a}+\q{c}a_0 -(\q{c})(\q{a})  \nonumber \\
+& \Leftrightarrow a_0 b_0 +a_0 \q{b}+\q{a}b_0+ \vec{a}\cdot\vec{b}+i(\vec{a}\times \vec{b})\cdot \vec{\sigma}=c_0 a_0-c_0\q{a}+\q{c}a_0 -\vec{c}\cdot\vec{a}-i(\vec{c}\times \vec{a})\cdot\vec{\sigma}.
+\end{eqnarray}
+Now, collecting terms in $1$, $\vec{\sigma}$ and $i\vec{\sigma}$, we get a system of linear equations on $c_0$ and $\vec{c}$,
+\begin{equation}
+\label{Eq:LS1}
+\begin{cases}
+& a_0 b_0+\vec{a}\cdot\vec{b}- a_0 c_0 +\vec{a}\cdot\vec{c}=0,\\
+& a_0\vec{b}+b_0\vec{a}+\vec{a}c_0-a_0\vec{c}=0,\\
+& \vec{a}\times \vec{b}-\vec{a}\times \vec{c}=0.
+\end{cases}
+\end{equation}
+The third equation from \eqref{Eq:LS1} can be written as $\vec{a}\times(\vec{b}-\vec{c})=0$, whose solution is given by $\vec{c}=\vec{b}+\lambda\vec{a}$, where $\lambda$ is a real number. This means that the solution depends only on two real parameters: $c_0$ and $\lambda$. Hence, we are left with a simpler system given by,
+\begin{equation}
+\begin{cases}
+& a_0 b_0+\vec{a}\cdot\vec{b}- a_0 c_0 +\vec{a}\cdot(\vec{b}+\lambda\vec{a})=0\\
+& a_0\vec{b}+b_0\vec{a}+\vec{a}c_0-a_0(\vec{b}+\lambda \vec{a})=0
+\end{cases}.
+\end{equation}
+Or,
+\begin{equation}
+\begin{cases}
+& a_0 c_0 -\lambda\vec{a}^2=a_0 b_0+2\vec{a}\cdot\vec{b}\\
+& (a_0\lambda-c_0)\vec{a}=b_0\vec{a}
+\end{cases}.
+\end{equation}
+In matrix form, the above system of equations can be written as
+\begin{equation}
+\left[\begin{array}{cc}
+a_0 & -\vec{a}^2\\
+-1 & a_0	
+\end{array}\right]\left[\begin{array}{c}
+c_0\\
+\lambda	
+\end{array}
+\right]=\left[\begin{array}{c}
+a_0 b_0+2\vec{a}\cdot\vec{b}\\
+b_0
+\end{array}
+\right].
+\end{equation}
+Inverting the matrix, we get
+\begin{eqnarray}
+\left[\begin{array}{c}
+c_0\\
+\lambda	
+\end{array}
+\right]&=\frac{1}{a_0^2-\vec{a}^2}\left[\begin{array}{cc}
+a_0 & \vec{a}^2\\
+1 & a_0	
+\end{array}\right]\left[\begin{array}{c}
+a_0 b_0+2\vec{a}\cdot\vec{b}\\
+b_0
+\end{array}
+\right] \nonumber \\
+&=\left[\begin{array}{c}
+(2 a_0 ^2-1) b_0+2 a_0\vec{a}\cdot\vec{b}\\
+2(a_0 b_0+\vec{a}\cdot\vec{b})
+\end{array}
+\right],
+\end{eqnarray}
+where we used the constraints \eqref{eq:c1}. Because of the constraints, $c_0$ and $\lambda$ are not independent, namely,
+$e^C=c_0+(\vec{b}+\lambda \vec{a})\cdot\vec{\sigma}$, and we get
+\begin{equation}
+c_0^2-(\vec{b}+\lambda \vec{a})^2=c_0^2-\vec{b}^2-2\lambda \vec{a}\cdot \vec{b}-\vec{a}^2=1.
+\end{equation}
+Now we want to make $A=-\beta H/2\equiv-\xi \vec{x}\cdot \vec\sigma/2$ and $B=-\beta 'H'\equiv-\zeta \vec{y}\cdot \vec\sigma$, with $\vec{x}^2=\vec{y}^2=1$ and $\xi$ and $\zeta$ real parameters, meaning,
+\begin{equation}
+a_0=\cosh(\xi/2) \text{ and } \vec{a}=-\sinh(\xi/2) \vec{x},\\
+b_0=\cosh(\zeta) \text{ and } \vec{b}=-\sinh(\zeta) \vec{y}.	
+\end{equation}
+If we write $C=\rho \vec{z}\cdot \vec \sigma$ (because the product of matrices with determinant $1$ has to have determinant $1$, it has to be of this form),
+\begin{eqnarray}
+c_0 =\cosh(\rho)& =(2 a_0 ^2-1) b_0+2 a_0\vec{a}\cdot\vec{b}= \nonumber \\
+&(2\cosh ^2(\xi/2)-1)\cosh(\zeta)+2\cosh(\xi/2)\sinh(\xi/2)\sinh(\zeta)\vec{x}\cdot\vec{y}= \nonumber \\
+&\cosh(\xi)\cosh(\zeta)+\sinh(\xi)\sinh(\zeta)\vec{x}\cdot\vec{y}.
+\end{eqnarray}
+For all the expressions concerning fidelity, we wish to compute $\text{Tr}(e^{C/2})=2\cosh(\rho/2)$. If we use the formula $\cosh(\rho/2)=\sqrt{(1+\cosh(\rho))/2}$, we obtain,
+\begin{equation}
+\tr(e^{C/2})=2\sqrt{\frac{(1+\cosh(\xi)\cosh(\zeta)+\sinh(\xi)\sinh(\zeta)\vec{x}\cdot\vec{y})}{2}}.
+\end{equation}
+Hence, if we let $\xi= \beta E/2$, $\vec{x}=\vec{n}$, $\zeta=\beta' E'/2$ and $\vec{y}=\vec{n}'$, then
+\begin{equation}
+\tr(\sqrt{e^{-\beta H/2}e^{-\beta' H'}e^{-\beta H/2}})=2\sqrt{\frac{(1+\cosh(\beta E/2 )\cosh(\beta'E'/2)+\sinh(\beta E/2)\sinh(\beta'E'/2)\vec{n}\cdot\vec{n}')}{2}}.
+\end{equation}
+To be able to compute the fidelities, we will just need the following expression relating the traces of quadratic many-body fermion Hamiltonians (preserving the number operator) and the single-particle sector Hamiltonian obtained by projection:
+\begin{equation}
+\tr(e^{-\beta \mathcal{H}})=\tr(e^{-\beta \Psi^{\dagger}H\Psi})=\det(I+e^{-\beta H}).
+\end{equation}
+From the previous results, it is straightforward to derive the following formulae for the fidelities concerning the thermal states considered:\\
+
+\begin{eqnarray}
+	F(\rho,\rho')&=\prod_{k\in\mathcal{B}}\frac{\tr(e^{-\mathcal{C}_k/2})}{\tr(e^{-\beta \mathcal{H}_k})\tr(e^{-\beta' \mathcal{H}'_k})}\nonumber\\
+	&=\prod_{k\in\mathcal{B}}\frac{\det(I+e^{-C_k/2})}{\det^{1/2}(I+e^{-\beta H_k})\det^{1/2}(I+e^{-\beta' H'_k})}\nonumber\\
+	&=\prod_{k\in\mathcal{B}}\frac{2+\sqrt{2\left(1+\cosh(E_k/2T)\cosh(E'_k/2T')+\sinh(E_k/2T)\sinh(E'_k/2T')\vec{n}_k\cdot\vec{n}'_k\right)}}{\sqrt{(2+ 2\cosh (E_k/2T))(2+2\cosh (E'_k/2T'))}},\\
+	\nonumber
+\end{eqnarray}
+		
+where the matrix $C_k$ is such that $e^{-C_k}=e^{-\beta H_k/2}e^{-\beta' H'_k}e^{-\beta H_k/2}$ and $\mathcal{C}_k=\Psi_k^{\dagger}C_k\Psi_k$ is the corresponding many-body quadratic operator. \\
+
+To compute $\Delta(\rho,\rho')$ one needs, in addition, $\tr \sqrt{\rho}\sqrt{\rho'}$. This can be done along the lines of what was presented above, hence we shall omit the proof for the sake of briefness and directly provide the result: 
+\begin{equation}
+\tr \sqrt{\rho}\sqrt{\rho'}=\prod_{k\in \mathcal{B}}\frac{2+2\left(\cosh(E_k/4T)\cosh(E'_k/4T')+\sinh(E_k/4T)\sinh(E'_k/4T')\vec{n}_k\cdot\vec{n}'_k\right)}{\sqrt{(2+ 2\cosh (E_k/2T))(2+2\cosh (E'_k/2T'))}}
+\end{equation}
+ 
+
+%
+%
+%
+%\bibliography{bibforthesis}
+%\bibliographystyle{unsrt}
+%
+%\end{document}

@@ -1,0 +1,53 @@
+\BOOKMARK [1][-]{section*.5}{List of Figures}{}% 1
+\BOOKMARK [1][-]{section*.7}{List of Tables}{}% 2
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{1.2 Public-key cryptography}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{1.3 Quantum key distribution}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{1.4 One-dimensional discrete-time quantum walks}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.4.1}{1.4.1 Shift operator on the circle}{section.1.4}% 8
+\BOOKMARK [1][-]{section.1.5}{1.5 Free-fermion systems exhibiting non-trivial topological order}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.6}{1.6 The fidelity, the Uhlmann connection and their use in the study of phase transitions of systems in equilibrium}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.7}{1.7 Phase transitions of systems out of equilibrium }{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.8}{1.8 Structure of the thesis}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{2 A public-key cryptographic system based on quantum walks}{}% 13
+\BOOKMARK [1][-]{section.2.1}{2.1 Public-key encryption based on discrete-time quantum walks}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Correctness of the protocol}{section.2.1}% 15
+\BOOKMARK [1][-]{section.2.2}{2.2 Security of the protocol}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.3}{2.3 Efficiency of the protocol}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.4}{2.4 Conclusions}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{3 Quantum key distribution based on quantum walks}{}% 19
+\BOOKMARK [1][-]{section.3.1}{3.1 Two-way quantum key distribution protocol}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Security of the protocol}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Efficiency and quantum memory requirements}{section.3.1}% 22
+\BOOKMARK [1][-]{section.3.2}{3.2 One-way quantum key distribution protocol}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Security of the protocol}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Evaluation}{section.3.2}% 25
+\BOOKMARK [1][-]{section.3.3}{3.3 Semi-quantum key distribution protocol}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Proof of robustness}{section.3.3}% 27
+\BOOKMARK [1][-]{section.3.4}{3.4 Practical attacks}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.5}{3.5 Conclusions}{chapter.3}% 29
+\BOOKMARK [0][-]{chapter.4}{4 Fidelity and Uhlmann connection analysis of fermionic systems undergoing phase transitions}{}% 30
+\BOOKMARK [1][-]{section.4.1}{4.1 Fidelity and \040analysis of topological insulators and superconductors}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.2}{4.2 Edge states of topological insulators and superconductors}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Topological insulators}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Topological superconductors}{section.4.2}% 34
+\BOOKMARK [1][-]{section.4.3}{4.3 Fidelity and \040analysis of BCS superconductors}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{4.4 The choice of the parameter space in the study of topological phase transitions}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{5 Simulation of topological systems with quantum walks}{}% 37
+\BOOKMARK [1][-]{section.5.1}{5.1 Topological quantum walks}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.2}{5.2 Boltzmann-Gibbs density operators}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.3}{5.3 Fidelity and \040analysis}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.4}{5.4 The edge states}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.5}{5.5 Conclusions}{chapter.5}% 42
+\BOOKMARK [0][-]{chapter.6}{6 Phase transitions at finite temperatures of topological systems out of equilibrium}{}% 43
+\BOOKMARK [1][-]{section.6.1}{6.1 Dynamical \(quantum\) phase transitions and the associated susceptibilities}{chapter.6}% 44
+\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 DQPTs for pure states}{section.6.1}% 45
+\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Generalisations at finite temperatures}{section.6.1}% 46
+\BOOKMARK [2][-]{subsection.6.1.3}{6.1.3 Two-band systems}{section.6.1}% 47
+\BOOKMARK [2][-]{subsection.6.1.4}{6.1.4 Comparing the two approaches}{section.6.1}% 48
+\BOOKMARK [1][-]{section.6.2}{6.2 DPTs of topological insulators at finite temperatures}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 SSH model \(1D\)}{section.6.2}% 50
+\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 MD model \(2D\)}{section.6.2}% 51
+\BOOKMARK [1][-]{section.6.3}{6.3 Conclusions}{chapter.6}% 52
+\BOOKMARK [0][-]{chapter.7}{7 Conclusions}{}% 53

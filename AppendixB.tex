@@ -1,0 +1,473 @@
+%\documentclass[11pt]{report}
+%\linespread{1.3} %1.3 for one and a half spacing, 1.6 for double
+%\usepackage{amsmath, amsthm, amssymb, float, graphicx, caption, subcaption, cite, braket, url}
+%%\usepackage[nohug,heads=vee]{diagrams}
+%%\diagramstyle[labelstyle=\scriptstyle]
+%%\graphicspath{{./Figures/}}
+%\usepackage[margin=2.5cm]{geometry}
+%%\title{Title}
+%%\author{Chrysoula Vlachou}
+%%\date{}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{proposition}{Proposition}
+%
+%\newtheorem{definition}{Definition}
+%\newcommand{\N}{\mathbb N}
+%\newcommand{\R}{\mathbb R}
+%\newcommand{\C}{\mathbb C}
+%\newcommand{\Hilb}{\mathcal H}
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+%\newcommand{\mmobh}{\textlatin{M\"ob}(\mathbb{H})}
+%\newcommand{\areah}{\textlatin{area}_{\mathbb{H}}}
+%\newcommand{\dth}{d_{\mathbb{H}}}
+%\newcommand{\tdth}{$d_{\mathbb{H}}$ }
+%\def\h{\mathbb H}
+%\DeclareMathOperator{\tr}{Tr}
+%\def\I{\hat I}
+%\def\ds{\displaystyle}
+%\def\ppmod{\!\!\!\!\!\pmod}
+%\newcommand{\q}[1]{\vec{#1}\cdot\vec{\sigma}}
+%\usepackage{mathrsfs}
+%
+%
+%\newcommand{\innerproduct}[2]{\langle #1 | #2 \rangle}
+%\def\mobh{\textlatin{M\"ob}({\mathbb H})}
+%
+%
+%
+%\begin{document}
+\appendix
+\chapter*{Appendix B\\Analytic derivation of the dynamical susceptibilities}  
+\addcontentsline{toc}{section}{Appendix B}
+\label{sec:Los.vs.Fid}
+
+\section*{Zero-temperature case}
+
+Let $\mathscr{H}$ be a Hilbert space. Suppose we have a family of Hamiltonians $\{H(\lambda):\lambda \in M\}$ where $M$ is a smooth  compact manifold of the Hamiltonian's parameters. We assume that aside from a closed finite subset of $M$, $C=\{\lambda_{i}\}_{i=1}^{n}\subset M$, the Hamiltonian is gapped and the ground state subspace is one-dimensional. Locally, on $M-C$, we can find a ground state (with unit norm) described by $\ket{\psi(\lambda)}$. Take $\lambda_i\in C$, and let $U$ be an open neighbourhood containing $\lambda_i$. Of course, for sufficiently small $U$, on the open set $U-\{\lambda_i\}$ one can find a smooth assignment $\lambda\mapsto \ket{\psi(\lambda)}$. Consider a curve $[0,1]\ni s\mapsto \lambda(s)\in U$, with initial condition $\lambda(0)=\lambda_0$, such that $\lambda(s_0)=\lambda_i$ for some $s_0\in[0,1]$. The family of Hamiltonians $H(s):=H(\lambda(s))$ is well-defined for every $s\in [0,1]$. The family of states $\ket{\psi(s)}\equiv \ket{\psi(\lambda(s))}$ is well-defined for $s\neq s_0$ and so is the ground state energy
+\begin{equation*}
+E(s):=\bra{\psi(s)}H(s)\ket{\psi(s)}.
+\end{equation*} 
+The overlap,
+\begin{equation*}
+\mathcal{A}(s):=\bra{\psi(0)}\exp(-itH(s))\ket{\psi(0)},
+\end{equation*}
+is well-defined. We can write
+\begin{equation*}
+\exp(-itH(s))=\exp(-itH(0)) T\exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\}.
+\end{equation*}
+If we take the derivative with respect to $t$, we find
+\begin{equation*}
+H(s)=H(0) +\exp(-itH(0))V(s,t)\exp(itH(0))
+\end{equation*}
+so,
+\begin{equation*}
+V(s,t)=\exp(itH(0)) (H(s)-H(0))\exp(-itH(0)).
+\end{equation*}
+We can now write, since $\ket{\psi(0)}$ is an eigenvector of $H(0)$,
+\begin{equation*}
+\mathcal{A}(s)=e^{-it E(0)} \bra{\psi(0)}T\exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\}\ket{\psi(0)}.
+\end{equation*}
+We now perform an expansion of the overlap
+\begin{equation*}
+\bra{\psi(0)}T\exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\}\ket{\psi(0)}
+\end{equation*}
+in powers of $s$. Notice that
+\begin{equation*}
+ T \exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\}= I -i\int_{0}^{t} d\tau V(s,\tau)-\frac{1}{2}\int_{0}^{t}\int_{0}^{t}d\tau_2 d\tau_1 T\{V(s,\tau_2) V(s,\tau_1)\}+\dots
+\end{equation*}
+and hence
+\begin{equation*}
+\frac{d}{ds}\left(T \exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\}\right)\bigg|_{s=0}=-i\int_{0}^{t} d\tau \frac{\partial V}{\partial s}(0,\tau)
+\end{equation*}
+and
+\begin{equation*}
+\frac{d^2}{ds^2}\left(T \exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\}\right)\bigg|_{s=0}=-i\int_{0}^{t}d\tau \frac{\partial^2V}{\partial s^2}(0,\tau)-\int_{0}^{t}\int_{0}^t d\tau_2d\tau_1T\left\{\frac{\partial V}{\partial s}(0,\tau_2)\frac{\partial V}{\partial s}(0,\tau_1)\right\}.
+\end{equation*}
+Therefore,
+
+
+\begin{eqnarray*}
+&\bra{\psi(0)}T\exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\} \ket{\psi(0)} = 
+1-is\bra{\psi(0)}\int_{0}^{t} d\tau \frac{\partial V}{\partial s}(0,\tau)\ket{\psi(0)}\\
+&+\frac{s^2}{2}\left[-i\bra{\psi(0)}\!\!\int_{0}^{t}\!\!\!d\tau \frac{\partial^2V}{\partial s^2}(0,\tau)\ket{\psi(0)}\! - \!\bra{\psi(0)}\!\!\int_{0}^{t}\!\!\!\int_{0}^t \!\!\! d\tau_2d\tau_1T\!\left\{\frac{\partial V}{\partial s}(0,\tau_2)\frac{\partial V}{\partial s}(0,\tau_1)\right\}\ket{\psi(0)}\right]
++\text{O}(s^3).
+\end{eqnarray*}
+
+
+Thus, by using the identity $\theta(\tau)+\theta(-\tau)=1$ of the Heaviside theta function, we obtain
+\begin{eqnarray*}
+|\mathcal{A}(s)|^2= & 1-s^2\big(\int_0^t\int_0^t d\tau_2d\tau_1\bra{\psi(0)}\frac{1}{2}\left\{\frac{\partial V}{\partial s}(0,\tau_2),\frac{\partial V}{\partial s}(0,\tau_1)\right\}\ket{\psi(0)}
+\\&-\bra{\psi(0)}\frac{\partial V}{\partial s}(0,\tau_2)\ket{\psi(0)}\bra{\psi(0)}\frac{\partial V}{\partial s}(0,\tau_1)\ket{\psi(0)}\big) +\text{O}(s^3).
+\end{eqnarray*}
+If we denote the expectation value $\bra{\psi(0)}\ast\ket{\psi(0)}\equiv\langle \ast\rangle$ we can write,
+\begin{eqnarray*}
+|\mathcal{A}(s)|^2= & 1-s^2\int_{0}^t\int_0^td\tau_2d\tau_1 \left[\langle\frac{1}{2}\left\{\frac{\partial V}{\partial s}(0,\tau_2),\frac{\partial V}{\partial s}(0,\tau_1)\right\}\rangle -\langle\frac{\partial V}{\partial s}(0,\tau_2)\rangle\langle\frac{\partial V}{\partial s}(0,\tau_1)\rangle \right]+\text{O}(s^3)\\ & = 1 - \chi s^2 + \text{O}(s^3),
+\end{eqnarray*}
+where
+\begin{equation*}
+\chi\equiv\int_{0}^t\int_0^td\tau_2d\tau_1 \left[\langle\frac{1}{2}\left\{\frac{\partial V}{\partial s}(0,\tau_2),\frac{\partial V}{\partial s}(0,\tau_1)\right\}\rangle -\langle\frac{\partial V}{\partial s}(0,\tau_2)\rangle\langle\frac{\partial V}{\partial s}(0,\tau_1)\rangle \right]
+\end{equation*}
+is the dynamical susceptibility and is naturally nonnegative. In fact, defining $V_{a}(\tau)=e^{i\tau H(0)}\partial H/\partial \lambda^{a}(\lambda_0)e^{-i\tau H(0)}$ such that, by the chain rule,
+\begin{equation*}
+\frac{\partial V}{\partial s}(0,\tau)=V_{a}(\tau)\frac{\partial\lambda^{a}}{\partial s}(0),
+\end{equation*}
+we can write,
+\begin{equation*}
+\chi=g_{ab}(\lambda_0)\frac{\partial\lambda^{a}}{\partial s}(0)\frac{\partial\lambda^{b}}{\partial s}(0),
+\end{equation*}
+with the metric tensor given by
+\begin{equation}
+g_{ab}(\lambda_0)=\int_{0}^t\int_0^td\tau_2d\tau_1 \left[\langle\frac{1}{2}\left\{V_a(\tau_2),V_b(\tau_1)\right\}\rangle -\langle V_a(\tau_2)\rangle\langle V_b(\tau_1)\rangle \right].
+\label{eq:dis-metric}
+\end{equation}
+
+
+\section*{Dynamical fidelity susceptibility $\chi$ at finite temperature}
+
+A possible generalisation of the zero-temperature LE to finite temperatures is through  the Uhlmann fidelity, since the zero temperature $|\mathcal{A}(s)|$ is precisely the fidelity between the states $\ket{\psi(0)}$ and $\exp(-itH(s))\ket{\psi(0)}$. Since the Uhlmann fidelity between two close mixed states is determined by the Bures metric, we begin by revisiting the derivation of the latter for the case of interest, i.e., two-level systems.
+
+
+\subsection*{Bures metric for a two-level system}
+
+Take a curve of full-rank density operators $t\mapsto \rho(t)$ and an horizontal lift $t\mapsto W(t)$, with $W(0)=\sqrt{\rho(0)}$. Then the Bures metric is given by
+\begin{equation*}
+g_{\rho(t)}(\frac{d\rho}{dt},\frac{d\rho}{dt})=\tr \left\{\frac{dW^{\dagger}}{dt}\frac{dW}{dt}\right\}.
+\end{equation*}
+The horizontality condition is given by
+\begin{equation*}
+W^{\dagger}\frac{dW}{dt}=\frac{dW}{dt}^{\dagger}W,
+\end{equation*}
+for each $t$. In the full-rank case, we can find a unique Hermitian matrix $G(t)$, such that 
+\begin{equation*}
+\frac{dW}{dt}=G(t)W
+\end{equation*}
+solves the horizontality condition
+\begin{equation*}
+W^{\dagger}\frac{dW}{dt}=W^{\dagger}GW=\frac{dW}{dt}^{\dagger}W.
+\end{equation*} 
+Also, $G$ is such that
+\begin{equation*}
+\frac{d\rho}{dt}=\frac{d}{dt}(WW^{\dagger})=G\rho+\rho G.
+\end{equation*}
+If $L_{\rho}$ ($R_\rho$) is left  (right) multiplication by $\rho$, we have, formally,
+\begin{equation*}
+G=(L_{\rho}+R_{\rho})^{-1}\frac{d\rho}{dt}.
+\end{equation*}
+Therefore,
+\begin{eqnarray*}
+g_{\rho(t)}(\frac{d\rho}{dt},\frac{d\rho}{dt})&=\tr \left\{\frac{dW^{\dagger}}{dt}\frac{dW}{dt}\right\}=\tr\left\{G^2\rho\right\}\\
+&=\frac{1}{2}\tr\{G(\rho G+G\rho)\}\\
+&=\frac{1}{2}\tr\{G\frac{d\rho}{dt}\}=\frac{1}{2}\tr\left\{(L_{\rho}+R_{\rho})^{-1}\frac{d\rho}{dt}\frac{d\rho}{dt}\right\}.
+\end{eqnarray*}
+If we write $\rho(t)$ in the diagonal basis,
+\begin{equation*}
+\rho(t)=\sum_{i}p_i(t)\ket{i(t)}\bra{i(t)}
+\end{equation*}
+we find
+\begin{equation*}
+g_{\rho(t)}(\frac{d\rho}{dt},\frac{d\rho}{dt})=\frac{1}{2}\tr\left\{(L_{\rho}+R_{\rho})^{-1}\frac{d\rho}{dt}\frac{d\rho}{dt}\right\}
+=\frac{1}{2}\sum_{i,j}\frac{1}{p_i(t)+p_j(t)}\bra{i(t)}\frac{d\rho}{dt}\ket{j(t)}\bra{j(t)}\frac{d\rho}{dt}\ket{i(t)}.
+\end{equation*}
+Hence, using the diagonal basis of $\rho$, we can read off the metric tensor at $\rho$ as
+\begin{equation*}
+g_{\rho}=\frac{1}{2}\sum_{i,j}\frac{1}{p_i+p_j}\bra{i}d\rho\ket{j}\bra{j}d\rho\ket{i}.
+\end{equation*}
+This is the result for general full rank density operators. For two-level systems, writing
+\begin{equation*}
+\rho=\frac{1}{2}(1-X^{\mu}\sigma_{\mu}),
+\end{equation*}
+and defining variables $|X|=r$ and $n^{\mu}=X^{\mu}/|X|$, we can express $g_{\rho}$ as
+\begin{equation*}
+g_{\rho}=\left[\frac{1}{1+r}+\frac{1}{1-r}\right]d\rho_{11}^2 +d\rho_{12}d\rho_{21}
+=\frac{1}{1-r^2}d\rho_{11}^2+d\rho_{12}d\rho_{21},
+\end{equation*}
+where we used $d\rho_{11}=-d\rho_{22}$. Notice that
+\begin{equation*}
+d\rho_{11}=\frac{1}{2}\tr\{d\rho U\sigma_{3}U^{-1}\}=\frac{1}{2}\tr\{d\rho n^{\mu}\sigma_{\mu}\},
+\end{equation*}
+where $U$ is a unitary matrix diagonalising $\rho$, $U\sigma_3U^{-1}=n^{\mu}\sigma_{\mu}$. Now,
+\begin{equation*}
+d\rho=-\frac{1}{2}dX^{\mu}\sigma_{\mu},
+\end{equation*}
+and hence
+\begin{equation*}
+d\rho_{11}=-\frac{1}{2}dX^{\mu}n_{\mu}=-\frac{1}{2}dr.
+\end{equation*}
+On the other hand,
+\begin{eqnarray*}
+d\rho_{12}d\rho_{21}&=\frac{1}{4}\tr\{d\rho U(\sigma_1-i\sigma_2)U^{-1}\}\tr\{d\rho U(\sigma_1-i\sigma_2)U^{-1}\}\\
+&=\frac{1}{4}\left[\tr\{d\rho U\sigma_1U^{-1}\}\tr\{d\rho U\sigma_1U^{-1}\}+\tr\{d\rho U\sigma_2U^{-1}\}\tr\{d\rho U\sigma_2U^{-1}\}\right]\\
+&=\frac{1}{4}\delta_{\mu\nu}(dX^{\mu}-n^{\mu}n_{\lambda}dX^{\lambda})(dX^{\nu}-n^{\nu}n_{\sigma}dX^{\sigma})=\frac{1}{4}r^2dn^{\mu}dn_{\mu},
+\end{eqnarray*}
+where we used the fact that the vectors $(u,v)$ defined by the equations $U\sigma_1U^{-1}=u^{\mu}\sigma_{\mu}$ and $U\sigma_2U^{-1}=v^{\mu}\sigma_{\mu}$ form an orthonormal basis for the orthogonal complement in $\mathbb{R}^3$ of the line generated by $n^{\mu}$ (which corresponds to the tangent space to the unit sphere $S^2$ at $n^{\mu}$). Thus, we obtain the final expression for the squared line element
+\begin{equation}
+ds^2=\frac{1}{4}\left(\frac{dr^2}{1-r^2}+r^2\delta_{\mu\nu}dn^{\mu}dn^{\nu}\right).
+\label{Eq: Bures Metric}
+\end{equation}
+
+The above expression is ill-defined for the pure state case of $r=1$. Nevertheless, the limiting case of $r\to 1$ as the metric is smooth as we will now show by introducing another coordinate patch. The set of pure states is defined by $r=1$, i.e., they correspond to the boundary of the $3$-dimensional ball $B=\{X \ :\  |X| = r \leq 1\}$ which, topologically, is the set of all density matrices in dimension $2$. Introducing the change of variable $r = \cos u$, with $u \in [0,\pi /2)$, the metric becomes 
+\begin{equation*}
+ds^2=\frac{1}{4}\left(du^2 + (\cos u)^2\delta_{\mu\nu}dn^{\mu}dn^{\nu}\right),
+\end{equation*}
+which is well defined also for the pure-state case of $r=\cos(0) = 1$. Restricting it to the unit sphere, the metric coincides with the Fubini-Study metric, also known as the quantum metric, on the space of pure states $\mathbb{C}P^1\cong S^2$, i.e., the Bloch sphere. Therefore, there is no problem on taking the pure-state limit of this metric on the space of states, since it reproduces the correct result.
+
+\subsection*{The pullback of the Bures metric}
+
+We have a map
+\begin{eqnarray*}
+M\ni \lambda\mapsto \rho(\lambda)&=U(\lambda)\rho_0U(\lambda)^{-1}=\frac{1}{2}U(\lambda)\left(I -X^\mu\sigma_\mu\right)U(\lambda)^{-1},
+\end{eqnarray*}
+with
+\begin{equation*}
+U(\lambda)=\exp(-itH(\lambda)),
+\end{equation*}
+and we take
+\begin{equation*}
+\rho_0=\frac{\exp(-\beta H(\lambda_{0}))}{\tr\left\{\exp(-\beta H(\lambda_{0})\right\}}, \text{ for some }\lambda_0\in M.
+\end{equation*}
+We use the curve $[0,1] \ni s\mapsto \lambda(s)$, with $\lambda(0)=\lambda_0$, to obtain a curve of density operators
+\begin{equation*}
+s\mapsto \rho(s):=\rho(\lambda(s)).
+\end{equation*}
+Notice that $\rho(0)=\rho_0$. The fidelity we consider is then
+\begin{equation*}
+F(\rho(0),\rho(s))=\tr\left(\sqrt{\sqrt{\rho(0)}\rho(s)\sqrt{\rho(0)}}\right).	
+\end{equation*}
+Recall that for $2\times 2$ density operators of full rank the Bures line element reads
+\begin{equation*}
+ds^2=\frac{1}{4}\left(\frac{dr^2}{1-r^2}+ r^2 \delta_{\mu\nu} dn^{\mu}dn^{\nu}\right),
+\end{equation*}
+where
+\begin{equation*}
+n^{\mu}=X^{\mu}/|X| \text{ and } r=|X|,
+\end{equation*}
+with
+\begin{equation*}
+\rho= \frac{1}{2}\left(I-X^{\mu}\sigma_\mu\right).
+\end{equation*}
+Now,
+\begin{equation*}
+\rho(\lambda)=\frac{1}{2}\left(I- R^{\mu}_{\ \nu}(\lambda) X^{\nu}\sigma_{\mu}\right),
+\end{equation*}
+with $R^{\mu}_{\ \nu}(\lambda)$ being the unique $\text{SO}(3)$ element satisfying
+\begin{equation*}
+U(\lambda)\sigma_{\mu}U(\lambda)^{-1}=R_{\ \mu}^{\nu}(\lambda)\sigma_{\nu}.
+\end{equation*}
+We then have, pulling back the coordinates,
+\begin{equation*}
+r(\lambda)=|X|=\text{constant} \  \text{ and } \  n^{\mu}(\lambda)=R^{\mu}_{\ \nu}(\lambda)n^{\nu}.
+\end{equation*}
+Therefore,
+\begin{eqnarray*}
+ds^2=\frac{1}{4}r^2\delta_{\mu\nu}\frac{\partial n^{\mu}}{\partial \lambda^{a}}\frac{\partial n^{\nu}}{\partial \lambda^{b}}d\lambda^{a}d\lambda^{b}=\frac{1}{4}r^2\delta_{\mu\nu}n^{\sigma}n^{\tau}\frac{\partial R^{\mu}_{\ \sigma}}{\partial \lambda^{a}}\frac{\partial R^{\nu}_{\ \tau}}{\partial \lambda^{b}}d\lambda^{a}d\lambda^{b},
+\end{eqnarray*}
+which in terms of the Euclidean metric on the tangent bundle of $\mathbb{R}^3$, denoted by $\langle \ast , \ast\rangle$, takes the form
+\begin{equation*} 
+g_{ab}(\lambda)=\frac{1}{4} r^2\langle R^{-1}\frac{\partial R}{\partial \lambda^{a}}n,  R^{-1}\frac{\partial R}{\partial \lambda^{b}} n\rangle,
+\end{equation*}
+written in terms of the pullback of the Maurer-Cartan form in $\text{SO}(3)$, $R^{-1}dR$. We can further pullback by the curve $s\mapsto \lambda(s)$ and evaluate at $s=0$
+\begin{equation*}
+\chi=g_{ab}(\lambda_0)\frac{\partial \lambda^a}{\partial s}(0)\frac{\partial \lambda^{b}}{\partial s}(0)=\frac{1}{4} r^2\langle R^{-1}\frac{\partial R}{\partial \lambda^{a}}n,  R^{-1}\frac{\partial R}{\partial \lambda^{b}} n\rangle\frac{\partial \lambda^a}{\partial s}(0)\frac{\partial \lambda^{b}}{\partial s}(0),
+\end{equation*}
+which gives us the expansion of the fidelity
+\begin{equation*}
+F(s)\equiv F(\rho(0),\rho(s))=1-\frac{1}{2}\chi s^2 +\dots
+\end{equation*}
+We now evaluate $\chi$. Note that
+\begin{equation*}
+dU\sigma_{\mu}U^{-1} +U\sigma_{\mu}dU^{-1} = U[U^{-1}dU,\sigma_{\mu}]U^{-1} = dR^{\nu}_{\ \mu}\sigma_\nu.
+\end{equation*}
+Now, we can parameterise
+\begin{equation*}
+U=y^{0}I+iy^{\mu}\sigma_{\mu}, \text{ with } |y|^2=1. 
+\end{equation*}
+Therefore,
+\begin{equation*}
+U^{-1}dU=(y^0 -iy^{\mu}\sigma_\mu)(dy^0 +idy^{\nu}\sigma_{\nu})
+=i(y^0dy^{\mu}-y^{\mu}dy^{0})\sigma_{\mu}+\frac{i}{2}(y^{\mu}dy^{\nu} - y^{\nu}dy^{\mu})\varepsilon_{\mu\nu}^{\lambda}\sigma_{\lambda};
+\end{equation*},
+\begin{eqnarray*}
+[U^{-1}dU,\sigma_{\kappa}]&=-2\left[(y^0dy^{\mu}-y^{\mu}dy^{0})\varepsilon_{\mu\kappa}^{\tau}+\frac{1}{2}(y^{\mu}dy^{\nu} - y^{\nu}dy^{\mu})\varepsilon_{\mu\nu}^{\lambda}\varepsilon_{\lambda\kappa}^{\tau}\right]\sigma_{\tau}\\
+&=-2\left[(y^0dy^{\mu}-y^{\mu}dy^{0})\varepsilon_{\mu\kappa}^{\ \ \ \tau}+\frac{1}{2}(y^{\mu}dy^{\nu} - y^{\nu}dy^{\mu})(\delta_{\mu\kappa}\delta^{\tau}_{\nu}-\delta_{\mu}^{\tau}\delta^{\nu}_{\kappa})\right]\sigma_{\tau}\\
+&=-2\left[(y^0dy^{\mu}-y^{\mu}dy^{0})\varepsilon_{\mu\kappa}^{\ \ \ \tau}+(y^{\kappa}dy^{\tau}-y^{\tau}dy^{\kappa})\right]\sigma_{\tau}\\
+&=2\left[(y^0dy^{\mu}-y^{\mu}dy^{0})\varepsilon_{\mu\ \ \kappa}^{\ \tau}+(y^{\tau}dy^{\kappa}-y^{\kappa}dy^{\tau})\right]\sigma_{\tau}\equiv (R^{-1}dR)^{\tau}_{\ \kappa}\sigma_{\tau}.
+\end{eqnarray*}
+Observe that for $H(\lambda)=x^{\mu}(\lambda)\sigma_{\mu}$ we have,
+\begin{equation*}
+y^0(\lambda)=\cos(|x(\lambda)|t) \text{ and } y^{\mu}=-\sin(|x(\lambda)|t)\frac{x^{\mu}(\lambda)}{|x(\lambda)|}.
+\end{equation*}
+Therefore,
+\begin{eqnarray*}
+dy^{0} & =-\sin(|x(\lambda)|t)d|x(\lambda)|,\\
+dy^{\mu} & =-\cos(|x(\lambda)|t)\frac{x^{\mu}(\lambda)}{|x(\lambda)|}d|x(\lambda)|-\sin(|x(\lambda)|t)d\left(\frac{x^{\mu}(\lambda)}{|x(\lambda)|}\right).
+\end{eqnarray*}
+After a bit of algebra, we get
+\begin{eqnarray*}
+&y^0dy^{\mu}-y^{\mu}dy^0  =\frac{x^{\mu}(\lambda)}{|x(\lambda)|}d|x(\lambda)|-\sin(|x(\lambda)|)\cos(|x(\lambda)|)d\left(\frac{x^{\mu}(\lambda)}{|x(\lambda)|}\right),\\
+&y^{\mu}dy^{\nu}-y^{\nu}dy^{\mu} =2\sin^2(|x(\lambda)|t)\frac{x^{[\mu}(\lambda)}{|x(\lambda)|}d\left(\frac{x^{\nu]}(\lambda)}{|x(\lambda)|}\right).
+\end{eqnarray*}
+Thus,
+\begin{equation*}
+(R^{-1}dR)^{\tau}_{\kappa}=2\frac{x^{\mu}(\lambda)}{|x(\lambda)|}d|x(\lambda)|\varepsilon_{\mu\kappa}^{\ \tau}-\sin(2|x(\lambda)|t)d\left(\frac{x^{\mu}(\lambda)}{|x(\lambda)|}\right)\varepsilon_{\mu\kappa}^{\ \tau}+4\sin^2(|x(\lambda)|t)\frac{x^{[\tau}(\lambda)}{|x(\lambda)|}d\left(\frac{x^{\kappa]}(\lambda)}{|x(\lambda)|}\right).
+\end{equation*}
+At $s=0$, $\lambda(0)=\lambda_0$ and the coordinate $n^{\mu}(\lambda(0))=x^{\mu}(\lambda_0)/|x(\lambda_0)|$, so the previous expression reduces to
+\begin{eqnarray*}
+(R^{-1}dR(\lambda_0))^{\tau}_{\ \kappa}n^{\kappa}=& 6(R^{-1}dR(\lambda_0))^{\tau}_{\ \kappa}\frac{x^{\kappa}(\lambda_0)}{|x(\lambda_0)|}\\
+= & -\sin(2|x(\lambda_0)|t)\frac{1}{|x(\lambda_0)|^2}\varepsilon^{\tau}_{\ \ \mu \kappa}x^{\mu}(\lambda_0)dx^{\kappa}(\lambda_0)- (1-\cos(2|x(\lambda_0)|t))d\left(\frac{x^{\mu}}{|x|}\right)(\lambda_0).
+\end{eqnarray*}
+Notice that the first term is perpendicular to the second. Therefore, we find
+\begin{footnotesize}
+\begin{eqnarray*}
+& \chi ds^2 =\frac{1}{4}r^2|R^{-1}dR n|^2 \\ & =\frac{1}{4}r^2\left[\sin^2(2|x(\lambda_0)|t)\frac{1}{|x(\lambda_0)|^4}\left(\delta^{\lambda}_{\mu}\delta^{\sigma}_{\kappa}-\delta^{\sigma}_{\mu}\delta^{\lambda}_{\kappa}\right)x^{\mu}(\lambda)dx^{k}(\lambda)x_{\lambda}(\lambda_0)dx_{\sigma}(\lambda_0)+\left(1-\cos(2|x(\lambda_0|t)^2\langle P dx(\lambda_0),Pdx(\lambda_0)\rangle\right)\right]\\
+&=r^2\frac{\sin^2(|x(\lambda_0)|t)}{|x(\lambda_0)|^2}\langle P \frac{\partial x}{\partial \lambda^a}(\lambda_0),P\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle\frac{\partial \lambda^a}{\partial s}(0)\frac{\partial \lambda^b}{\partial s}(0)ds^2,
+\end{eqnarray*}\end{footnotesize}
+where we have introduced the projector $P:T_{x}\mathbb{R}^3=T_{x}S^{2}_{|x|}\oplus N_{x}S^{2}_{|x|}\to T_{x}S^{2}_{|x|}$ onto the tangent space of the sphere of radius $|x|$ at $x$. In other words, the pullback metric by $\rho$ of the Bures metric at $\lambda_0$ is given by
+\begin{eqnarray*}
+g_{ab}(\lambda_0)&=r^2\frac{\sin^2(|x(\lambda_0)|t)}{|x(\lambda_0)|^2}\langle P \frac{\partial x}{\partial \lambda^a}(\lambda_0),P\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle\\
+&=\tanh^2(\beta |x(\lambda_0)|)\frac{\sin^2(|x(\lambda_0)|t)}{|x(\lambda_0)|^2}\langle P \frac{\partial x}{\partial \lambda^a}(\lambda_0),P\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle.
+\end{eqnarray*}
+
+%
+\section*{Dynamical interferometric susceptibility $\tilde{\chi}$ at finite temperature}
+
+We can replace the average $\langle e^{-itH(s)}\rangle\equiv \bra{\psi(0)}e^{-itH(s)}\ket{\psi(0)}$ by the corresponding average of $e^{itH(0)}e^{-itH(s)}$ on the mixed state $\rho(\lambda_0)=\rho(0)=\exp(-\beta H(0))/\tr\{\exp(-\beta H(0))\}$ (note its implicit temperature dependence):
+\begin{equation*}
+\mathcal{A}(s)=\tr\left\{\rho(0)T\exp\left\{-i\int_{0}^{t} d\tau V(s,\tau)\right\}\right\}.
+\end{equation*}
+It is easy to see that $|\mathcal{A}(s)|^2$ has the same expansion as before with the average on $\ket{\psi(0)}$ replaced by the average on $\rho(0)$.
+
+We now proceed to compute $\tilde{\chi}$, or equivalently $\tilde{g}_{ab}(\lambda_0)$, in the case of a two-level system, where we can write
+\begin{equation*}
+\rho(\lambda)=\frac{e^{-\beta H(\lambda)}}{\tr\{e^{-\beta H(\lambda)}\}}=\frac{1}{2}(I-X^{\mu}(\lambda)\sigma_{\mu}),
+\end{equation*}
+and define variables $r(\lambda)=|X(\lambda)|$ and $n^{\mu}(\lambda)=X^{\mu}(\lambda)/|X(\lambda)|$.
+Writing $H(\lambda)=x^{\mu}(\lambda)\sigma_{\mu}$ (and $H(s)\equiv H(\lambda(s))$), we have
+\begin{equation*}
+V_{a}(\tau)=\frac{\partial x^{\mu}}{\partial \lambda^{a}}(\lambda_0)e^{i\tau H(0)}\sigma_{\mu} e^ {-i\tau H(0)}.
+\end{equation*}
+Hence, its expectation value is
+\begin{equation*}
+\langle V_{a}(\tau)\rangle =\frac{1}{\tr\{e^{-\beta H(\lambda)}\}} \tr\left\{e^{-\beta H(0)}\sigma_{\mu}\right\}\frac{\partial x^{\mu}}{\partial \lambda^{a}}(\lambda_0)
+=r(\lambda_0)n_{\mu}(\lambda_0)\frac{\partial x^{\mu}}{\partial \lambda^{a}}(\lambda_0)=X_{\mu}(\lambda_0)\frac{\partial x^{\mu}}{\partial \lambda^a}(\lambda_0),
+\end{equation*}
+which is independent of $\tau$. We then have
+\begin{eqnarray*}
+\langle V_{a}(\tau_2)\rangle \langle V_{b}(\tau_1)\rangle &=(r(\lambda_0))^2n_{\mu}(\lambda_0)\frac{\partial x^{\mu}}{\partial \lambda^{a}}(\lambda_0)n_{\nu}(\lambda_0)\frac{\partial x^{\nu}}{\partial \lambda^{b}}(\lambda_0)\\
+&=\tanh^2(\beta|x(\lambda_0)|)\frac{x_{\mu}}{|x(\lambda_0)|}\frac{\partial x^{\mu}}{\partial \lambda^{a}}(\lambda_0)\frac{x_{\nu}}{|x(\lambda_0)|}\frac{\partial x^{\nu}}{\partial \lambda^{b}}(\lambda_0),
+\end{eqnarray*}
+where we used $X^{\mu}(\lambda_0)=\tanh(\beta |x(\lambda_0)|)x^{\mu}(\lambda_0)/|x(\lambda_0)|$.
+Now, using the cyclic property of the trace, we get
+\begin{small}
+\begin{eqnarray}
+\!\!\!\!\!\!\!\!\frac{1}{2\tr\{e^{-\beta H(0)}\}}\tr \left\{ e^{-\beta H(\lambda)}\{V_{a}(\tau_2),V_{b}(\tau_1)\} \right\}&=
+\frac{1}{2\tr\{e^{-\beta H(0)}\}}\tr \left\{ e^{-\beta H(0)}\{\sigma_{\mu},\sigma_{\nu}\}\right\}R^{\mu}_{\ \lambda}(\tau_2)R^{\nu}_{\ \sigma}(\tau_1)\frac{\partial x^{\lambda}}{\partial \lambda^{a}}(\lambda_0)\frac{\partial x^{\sigma}}{\partial \lambda^{b}}(\lambda_0)\nonumber\\
+&=\delta_{\mu\nu}R^{\mu}_{\ \lambda}(\tau_2)R^{\nu}_{\ \sigma}(\tau_1)\frac{\partial x^{\lambda}}{\partial \lambda^{a}}(\lambda_0)\frac{\partial x^{\sigma}}{\partial \lambda^{b}}(\lambda_0),
+\label{eq:anti-com}
+\end{eqnarray}
+\end{small}
+where $R^{\mu}_{\ \nu}(\tau)$ is the rotation matrix defined by the equation
+\begin{equation}
+e^{i\tau H(0)}\sigma_{\nu}e^{-i\tau H(0)}=R^{\mu}_{\ \nu}(\tau)\sigma_{\mu}.
+\label{eq:su(2)toso(3)}
+\end{equation}
+We can explicitly write $R^{\mu}_{\ \nu}(\tau)$ as
+\begin{equation*}
+R^{\mu}_{\nu}(\tau)=\cos(2\tau |x(\lambda_0)|)\delta^{\mu}_{\nu}+(1-\cos(2\tau|x(\lambda_0)|))n^{\mu}(\lambda_0)n_{\nu}(\lambda_0)+\sin(2\tau |x(\lambda_0)|)n^{\lambda}(\lambda_0)\varepsilon_{\lambda\nu}^{\mu}.
+\end{equation*}
+Using the previous equation, and because $\{R(\tau)\}$ forms a one-parameter group, we can write
+\begin{equation*}
+\delta_{\mu\nu}R^{\mu}_{\ \lambda}(\tau_2)R^{\nu}_{\ \sigma}(\tau_1)=\delta_{\kappa\lambda}R^{\kappa}_{\ \sigma }(\tau_2-\tau_1).
+\end{equation*}
+Since  $\tilde{\chi}$ (i.e., the metric $\tilde{g}_{ab}$; recall its zero-temperature expression from Equation~\eqref{eq:dis-metric}) has to be symmetric under the label exchange $a\leftrightarrow b$, the relevant symmetric part of Equation~\eqref{eq:anti-com} is
+\begin{small}\begin{equation*}
+\cos\left[2(\tau_2-\tau_1)|x(\lambda_0)|\right]\delta_{\mu\nu}\frac{\partial x^{\mu}}{\partial \lambda^{a}}(\lambda_0)\frac{\partial x^{\nu}}{\partial \lambda^{b}}(\lambda_0)
++(1-\cos\left[2(\tau_2-\tau_1)|x(\lambda_0)|\right])\frac{x_{\mu}}{|x(\lambda_0)|}\frac{\partial x^{\mu}}{\partial \lambda^{a}}(\lambda_0)\frac{x_{\nu}}{|x(\lambda_0)|}\frac{\partial x^{\nu}}{\partial \lambda^{b}}(\lambda_0).
+\end{equation*}\end{small}
+Putting everything together gives
+\begin{eqnarray*}
+\langle\frac{1}{2}\left\{V_a(\tau_2),V_b(\tau_1)\right\}\rangle -\langle V_a(\tau_2)\rangle\langle V_b(\tau_1)\rangle
+=&\cos\left[2(\tau_2-\tau_1)|x(\lambda_0)|\right]\langle P\frac{\partial x}{\partial \lambda^a} (\lambda_0),P\frac{\partial x}{\partial \lambda^b} (\lambda_0)\rangle  \\
+&+(1-\tanh^2(\beta|x(\lambda_0)|)) \langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^a}(\lambda_0) \rangle\langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle.
+\end{eqnarray*}
+
+The integral on $\tau_1$ and $\tau_2$ can now be performed, using
+\begin{eqnarray*}
+&\int_{0}^{t}\int_{0}^{t}d\tau_2d\tau_1\cos[2(\tau_2-\tau_1)\varepsilon]=\int_{0}^{t}\int_{0}^{t}d\tau_2d\tau_1\left(\cos(2\tau_2\epsilon)\cos(2\tau_1\epsilon)+\sin(2\tau_2\epsilon)\sin(2\tau_1\epsilon)\right)\\
+&=\frac{1}{4\epsilon^2}\left[\sin^2(2t\epsilon) + (\cos(2t\epsilon)-1)(\cos(2t\epsilon)-1)\right]=\frac{1}{4\epsilon^2}\left[2-2\cos(2t\epsilon)\right]=\frac{\sin^2(t\epsilon)}{\epsilon^2}.
+\end{eqnarray*}
+So, the interferometric metric is
+\begin{footnotesize}
+\begin{equation*}
+\tilde{g}_{ab}(\lambda_0)=\frac{\sin^2(|x(\lambda_0)|t)}{|x(\lambda_0)|^2}[\langle P \frac{\partial x}{\partial \lambda^a}(\lambda_0),P\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle]+t^2(1-\tanh^2(\beta |x(\lambda_0|))\langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^a}(\lambda_0) \rangle\langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle.
+\end{equation*}\end{footnotesize}
+The dynamical interferometric susceptibility is then given by
+\begin{footnotesize}
+\begin{eqnarray*}
+\tilde{\chi}&=\tilde{g}_{ab}(\lambda_0)\frac{\partial \lambda^a}{\partial s}(0)\frac{\partial \lambda^b}{\partial s}(0)=\int_{0}^t\int_0^td\tau_2d\tau_1 \left[\langle\frac{1}{2}\left\{\frac{\partial V}{\partial s}(0,\tau_2),\frac{\partial V}{\partial s}(0,\tau_1)\right\}\rangle -\langle\frac{\partial V}{\partial s}(0,\tau_2)\rangle\langle\frac{\partial V}{\partial s}(0,\tau_1)\rangle \right]\\
+&=\{\frac{\sin^2(|x(\lambda_0)|t)}{|x(\lambda_0)|^2}[\langle P \frac{\partial x}{\partial \lambda^a}(\lambda_0),P\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle]+t^2(1-\tanh^2(\beta |x(\lambda_0|))\langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^a}(\lambda_0) \rangle\langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle\}\frac{\partial \lambda^a}{\partial s}(0)\frac{\partial \lambda^b}{\partial s}(0),
+\end{eqnarray*}\end{footnotesize}
+with the average taken with respect to the thermal state $\rho_0=\rho(0)\equiv \rho(\lambda_0)$. Also, as mentioned previously, we have the expansion
+\begin{equation*}
+|\mathcal{A}(s)|^2 =|\tr \left[\rho(0)\exp(it H(0))\exp(-it H(s))\right]|^2=\left|\tr\left[\rho(0) T\exp(-i\int_{0}^{t}d\tau V(s,\tau))\right]\right|^2=1-\tilde{\chi}s^2 +\dots
+\end{equation*}
+The difference between the two susceptibilities is given by:
+\begin{footnotesize}\begin{eqnarray*}
+&\tilde{\chi}-\chi=\\
+& (1-\tanh^2(\beta|x(\lambda_0)|))\{\frac{\sin^2(|x(\lambda_0)|t)}{|x(\lambda_0)|^2}[\langle P \frac{\partial x}{\partial \lambda^a}(\lambda_0),P\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle]+t^2\langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^a}(\lambda_0) \rangle\langle \frac{x(\lambda_0)}{|x(\lambda_0)|},\frac{\partial x}{\partial \lambda^b}(\lambda_0)\rangle\}\frac{\partial \lambda^a}{\partial s}(0)\frac{\partial \lambda^b}{\partial s}(0).
+\end{eqnarray*}\end{footnotesize}
+As $\beta\to +\infty$, i.e., as the temperature goes to zero, the two susceptibilities are equal. Now, the function
+\begin{equation*}
+f(t)=\frac{\sin^2(\epsilon t)}{\epsilon^2}
+\end{equation*}
+is well approximated by $t^2$ for small enough $\epsilon$. In that case the sum of the two terms appearing in the difference between susceptibilities is just proportional the pull-back Euclidean metric on $T\mathbb{R}^3$. 
+
+%
+
+\subsection*{The pullback of the interferometric (Riemannian) metric on the space of unitaries}
+
+We first observe that each full rank density operator $\rho$ defines a Hermitian inner product in the vector space of linear maps of a Hilbert space $\mathscr{H}$, i.e., $\text{End}(\mathscr{H})$, given by,
+\begin{equation*}
+\langle A,B\rangle_{\rho}\equiv \tr \{\rho A^{\dagger}B\}.
+\end{equation*}
+This inner product then defines a Riemannian metric on the trivial tangent bundle of the vector space $\text{End}(\mathscr{H})$. Since the unitary group $\text{U}(\mathscr{H})\subset \text{End}(\mathscr{H})$, by restriction we get a Riemannian metric on $\text{U}(\mathscr{H})$. If we choose $\rho$ to be $e^{-\beta H(\lambda)}/\tr \{e^{-\beta H(\lambda)}\}$, then take the pullback by the map $\Phi_{t}: M\ni \lambda_f\mapsto e^{-it H(\lambda_f)}\in\text{U}(\mathscr{H})$ and evaluate at $\lambda_f=\lambda$, to obtain the desired metric.
+
+Next, we show that this version of LE is closely related to the interferometric geometric phase introduced by Sj\"{o}qvist \emph{ et. al}~\cite{sjo:pat:eke:ana:eri:oi:ved:00,ton:sjo:kwe:oh}. To see this, consider the family of distances in $\text{U}(\mathscr{H})$, $d_{\rho}$, parametrised by a full rank density operator $\rho$, defined as
+\begin{equation*}
+d^2_{\rho}(U_1,U_2)=\tr\{\rho (U_1-U_2)^{\dagger}(U_1-U_2)\}=2(1-\text{Re}\langle U_1, U_2\rangle_{\rho}),
+\end{equation*}
+where $\langle \ast , \ast \rangle_{\rho}$ is the Hermitian inner product defined previously. In terms of the spectral representation of $\rho=\sum_{j}p_j\ket{j}\bra{j}$, we have
+\begin{equation*}
+\langle U_1, U_2\rangle_{\rho}=\sum_{j}p_j\bra{j} U_1^{\dagger} U_2 \ket{j}.
+\end{equation*}
+The Hermitian inner product is invariant under $U_{i}\mapsto U_{i}\cdot D$, $i=1,2$, where $D$ is a phase matrix
+\begin{equation*}
+D=e^{i\alpha}\sum_{j}\ket{j}\bra{j}.
+\end{equation*}
+For the interferometric geometric phase, one enlarges this gauge symmetry to the subgroup of unitaries preserving $\rho$, i.e., the gauge degree of freedom is $U(1)\otimes\cdots\otimes U(1)$. However, since we are interested in the interferometric LE previously defined, we choose not to do that, as we only need the diagonal subgroup, i. e., we only have a global phase. Next, promoting this global $\text{U}(1)$-gauge degree of freedom to a local one, i.e., demanding that we only care about unitaries modulo a phase, we see that, upon changing $U_i\mapsto U_i\cdot D_i$, $i=1,2$,  we have
+\begin{eqnarray*}
+\langle U_1, U_2\rangle_{\rho}\mapsto & \langle U_1\cdot D_1, U_2\cdot D_2\rangle_{\rho}=\sum_{j}p_j\bra{j} U_1^{\dagger} U_2 \ket{j} e^{i(\alpha_{2}-\alpha_{1})}.
+\end{eqnarray*}
+We can choose gauges, i.e., $D_1$ and $D_2$, minimising $d^2_{\rho}(U_1\cdot D_1,U_2\cdot D_2)$, obtaining
+\begin{equation*}
+d^2_{\rho}(U_1\cdot D_1, U_2\cdot D_2)=2(1-|\langle U_1\cdot D_1,U_2\cdot D_2\rangle_\rho|)
+=2(1-|\langle U_1,U_2\rangle_\rho|).
+\end{equation*}
+Now, if $\{U_i=U(t_i)\}_{1\leq i\leq N}$ were the discretisation of a path of unitaries $t\mapsto U(t)$, $t\in[0,1]$, applying the minimisation process locally, i.e., between adjacent unitaries $U_{i+1}$ and $U_i$, in the limit $N\to \infty$ we get a notion of parallel transport on the principal bundle $\text{U}(\mathscr{H})\to \text{U}(\mathscr{H})/\text{U}(1)$. In particular, the parallel transport condition reads as
+\begin{equation*}
+\tr\left\{ \rho U^{\dagger}(t)\frac{dU}{dt}(t)\right\}=0, \text{ for all } t\in[0,1].
+\end{equation*}
+If we take $\rho=\exp(-\beta H(\lambda_i))/\tr\{e^{-\beta H(\lambda_i)}\}$, $U_1=\exp(-it H(\lambda_i))$ and $U_2=\exp(-it H(\lambda_f))$, then the interferometric LE is
+\begin{equation*}
+\mathcal{L}(t,\beta;\lambda_f,\lambda_i)=|\langle U_1,U_2\rangle_{\rho}|=\langle \widetilde{U}_1, \widetilde{U}_2\rangle_{\rho},
+\end{equation*}
+where $\widetilde{U}_i=U_i\cdot D_i$ ($i=1,2$) correspond to representatives satisfying the discrete version of the parallel transport condition.
+
+
+%	
+%
+%\bibliography{bibforthesis}
+%\bibliographystyle{unsrt}
+%
+%
+%\end{document}

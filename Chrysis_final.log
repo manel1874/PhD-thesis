@@ -1,0 +1,3499 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.2)  10 SEP 2018 10:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Chrysis_final.tex
+(./Chrysis_final.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup4
+)
+(./Thesis_Preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen111
+\captionmargin@=\dimen112
+\captionwidth=\dimen113
+\caption@tempdima=\dimen114
+\caption@indent=\dimen115
+\caption@parindent=\dimen116
+\caption@hangindent=\dimen117
+)
+\c@ContinuedFloat=\count91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen118
+)
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count92
+))
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen121
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen122
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen123
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip10
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks17
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks18
+\eqnshift@=\dimen124
+\alignsep@=\dimen125
+\tagshift@=\dimen126
+\tagwidth@=\dimen127
+\totwidth@=\dimen128
+\lineht@=\dimen129
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+\c@subfigure=\count105
+\c@subtable=\count106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen130
+\extrarowheight=\dimen131
+\NC@list=\toks27
+\extratabsurround=\skip49
+\backup@length=\skip50
+))
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count107
+\rotFPtop=\skip51
+\rotFPbot=\skip52
+\rot@float@box=\box29
+\rot@mess@toks=\toks28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen132
+\Hy@linkcounter=\count108
+\Hy@pagecounter=\count109
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count110
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count111
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen133
+\Fld@menulength=\count112
+\Field@Width=\dimen134
+\Fld@charsize=\dimen135
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count113
+\c@Item=\count114
+\c@Hfootnote=\count115
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count116
+\c@bookmark@seq@number=\count117
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip53
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 391.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 391.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 391.
+
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 391
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
+Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip54
+\bibsep=\skip55
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count118
+)
+(/usr/share/texlive/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2004/08/31 v1.71 
+\dashlinedash=\dimen136
+\dashlinegap=\dimen137
+\adl@box=\box30
+\adl@height=\dimen138
+\adl@heightsave=\dimen139
+\adl@depth=\dimen140
+\adl@depthsave=\dimen141
+\adl@finaldepth=\dimen142
+\adl@columns=\count119
+\adl@ncol=\count120
+\adl@currentcolumn=\count121
+\adl@currentcolumnsave=\count122
+\adl@totalheight=\count123
+\adl@totalheightsave=\count124
+\adl@dash=\count125
+\adl@gap=\count126
+\adl@cla=\count127
+\adl@clb=\count128
+\adl@everyvbox=\toks29
+\adl@LTpagetotal=\dimen143
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 143.
+) (./bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/slashed.sty
+Package: slashed 1997/01/16 v0.01 Feynman Slashed Character Notation (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+\c@theorem=\count129
+\c@corollary=\count130
+\c@lemma=\count131
+\c@definition=\count132
+\c@proposition=\count133
+\c@remark=\count134
+
+(/usr/share/texlive/texmf-dist/tex/latex/braket/braket.sty)
+\c@protocol=\count135
+)
+(./Chrysis_final.aux (./Introduction.aux) (./Chapter_Publickey.aux)
+(./Chapter_QKD.aux) (./Chapter_FidelityAndUhlmann.aux) (./Chapter_TopoQW.aux
+
+LaTeX Warning: Label `Conclusions and Outlook' multiply defined.
+
+) (./Chapter_DynamicalPTs.aux
+
+LaTeX Warning: Label `Subsec: DQPT for pure states' multiply defined.
+
+) (./Chapter_Conclusions.aux) (./AppendixA.aux) (./AppendixB.aux))
+\openout1 = `Chrysis_final.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: hypcap package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: End \AtBeginDocument code.
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count136
+\scratchdimen=\dimen144
+\scratchbox=\box31
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen145
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks31
+)
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring ON on input line 7.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count142
+)
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
+
+(./Chrysis_final.out) (./Chrysis_final.out)
+\@outlinefile=\write3
+\openout3 = `Chrysis_final.out'.
+
+ (./Cover_print_1st_page_Final.tex
+<IST_A_CMYK_POS.pdf, id=241, 845.0471pt x 597.51233pt>
+File: IST_A_CMYK_POS.pdf Graphic file (type pdf)
+
+<use IST_A_CMYK_POS.pdf>
+Package pdftex.def Info: IST_A_CMYK_POS.pdf used on input line 32.
+(pdftex.def)             Requested size: -78.38533pt x -74.25978pt.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 36.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 48.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 52.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./IST_A_CMYK_POS.pdf>]
+[2
+
+]
+File: IST_A_CMYK_POS.pdf Graphic file (type pdf)
+ <use IST_A_CMYK_POS.pdf>
+Package pdftex.def Info: IST_A_CMYK_POS.pdf used on input line 83.
+(pdftex.def)             Requested size: -78.38533pt x -74.25978pt.
+) (./abstract.tex [3] [4
+
+]
+Underfull \vbox (badness 2762) has occurred while \output is active []
+
+ [5])
+(./resumo.tex [6]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no § in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
+
+])
+(./acknowledgments.tex [8]) [9
+
+] [10
+
+] (./Chrysis_final.toc
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [11])
+\tf@toc=\write4
+\openout4 = `Chrysis_final.toc'.
+
+ [12] [13]
+[14
+
+] (./Chrysis_final.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page xvii undefined on
+ input line 23.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page xvii undefined on
+ input line 24.
+
+[17])
+\tf@lof=\write5
+\openout5 = `Chrysis_final.lof'.
+
+ [18] (./Chrysis_final.lot)
+\tf@lot=\write6
+\openout6 = `Chrysis_final.lot'.
+
+ [19
+
+
+] [20
+
+] (./List_of_Abbreviations.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--78
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21
+
+]
+[22]
+\openout2 = `Introduction.aux'.
+
+ (./Introduction.tex
+Chapter 1.
+
+Package natbib Warning: Citation `riv:sha:adl:78' on page 1 undefined on input 
+line 12.
+
+
+Package natbib Warning: Citation `gol:gol:hal:97' on page 1 undefined on input 
+line 12.
+
+
+Package natbib Warning: Citation `fort:13' on page 1 undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `sho:97' on page 1 undefined on input line 14.
+
+
+
+Package natbib Warning: Citation `wie:83' on page 1 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `ben:bra:84' on page 1 undefined on input line
+ 15.
+
+
+Package natbib Warning: Citation `sho:pre:00' on page 1 undefined on input line
+ 15.
+
+
+Package natbib Warning: Citation `may:01' on page 1 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `urs:etal:07' on page 1 undefined on input lin
+e 15.
+
+
+Package natbib Warning: Citation `sch:07' on page 1 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `tak:sas:tam:koa:15' on page 1 undefined on in
+put line 15.
+
+
+Package natbib Warning: Citation `pug:kai:bou:jin:sul:agn:ani:mak:cho:hig:jen:1
+7' on page 1 undefined on input line 15.
+
+
+Package natbib Warning: Citation `idquantique' on page 1 undefined on input lin
+e 15.
+
+
+Package natbib Warning: Citation `yin:etal:17' on page 1 undefined on input lin
+e 15.
+
+
+Package natbib Warning: Citation `vie:bei:qkd:sat:18' on page 1 undefined on in
+put line 15.
+
+[1
+
+
+
+]
+
+Package natbib Warning: Citation `aha:dav:zag:93' on page 2 undefined on input 
+line 22.
+
+
+Package natbib Warning: Citation `far:gut:98' on page 2 undefined on input line
+ 23.
+
+
+Package natbib Warning: Citation `chi:etal:03' on page 2 undefined on input lin
+e 23.
+
+
+Package natbib Warning: Citation `kem:03' on page 2 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `amb:03' on page 2 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `san:08' on page 2 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `cha:nov:amb:oma:16' on page 2 undefined on in
+put line 23.
+
+
+Package natbib Warning: Citation `nov:cha:moh:nev:oma:16' on page 2 undefined o
+n input line 23.
+
+
+Package natbib Warning: Citation `por:13' on page 2 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `chi:09' on page 2 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `lov:coo:eve:tre:ken:10' on page 2 undefined o
+n input line 23.
+
+
+Package natbib Warning: Citation `chi:gos:web:13' on page 2 undefined on input 
+line 23.
+
+
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+ [2]
+
+Package natbib Warning: Citation `roh:fit:gil:15' on page 3 undefined on input 
+line 25.
+
+
+Package natbib Warning: Citation `yan:pan:sun:xu:15' on page 3 undefined on inp
+ut line 25.
+
+
+Package natbib Warning: Citation `warshaw:mem:17' on page 3 undefined on input 
+line 28.
+
+
+Package natbib Warning: Citation `vienna:mem:18' on page 3 undefined on input l
+ine 28.
+
+
+Package natbib Warning: Citation `ber:chr:col:ren:ren:10' on page 3 undefined o
+n input line 29.
+
+
+Package natbib Warning: Citation `dam:feh:ren:sal:sch:07' on page 3 undefined o
+n input line 29.
+
+
+Package natbib Warning: Citation `weh:sch:ter:08' on page 3 undefined on input 
+line 29.
+
+
+Package natbib Warning: Citation `sch:ter:weh:09' on page 3 undefined on input 
+line 29.
+
+
+Package natbib Warning: Citation `ng:jos:che:kur:weh:12' on page 3 undefined on
+ input line 29.
+
+
+Package natbib Warning: Citation `koe:weh:wul:12' on page 3 undefined on input 
+line 29.
+
+
+Package natbib Warning: Citation `bou:feh:gon:sch:13' on page 3 undefined on in
+put line 29.
+
+
+Package natbib Warning: Citation `lou:alm:and:pin:mat:pau:14' on page 3 undefin
+ed on input line 29.
+
+
+Package natbib Warning: Citation `has:kan:10' on page 3 undefined on input line
+ 32.
+
+
+Package natbib Warning: Citation `qi:zha:11' on page 3 undefined on input line 
+32.
+
+
+Package natbib Warning: Citation `ber:hug:13' on page 3 undefined on input line
+ 32.
+
+
+Package natbib Warning: Citation `nay:sim:ste:fre:das:08' on page 3 undefined o
+n input line 32.
+
+
+Package natbib Warning: Citation `kit:03' on page 3 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `bra:has:mic:10' on page 3 undefined on input 
+line 32.
+
+
+Package natbib Warning: Citation `bro:los:pac:sel:woo:16' on page 3 undefined o
+n input line 33.
+
+
+Package natbib Warning: Citation `bro:los:pac:sel:woo:16' on page 3 undefined o
+n input line 33.
+
+
+Package natbib Warning: Citation `kit:03' on page 3 undefined on input line 33.
+
+
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 43.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
+ [5]
+
+Package natbib Warning: Citation `fort:13' on page 6 undefined on input line 65
+.
+
+
+Package natbib Warning: Citation `sho:97' on page 6 undefined on input line 65.
+
+
+
+Package natbib Warning: Citation `oka:tan:uch:00' on page 6 undefined on input 
+line 65.
+
+
+Package natbib Warning: Citation `kaw:etal:05' on page 6 undefined on input lin
+e 65.
+
+
+Package natbib Warning: Citation `nik:08' on page 6 undefined on input line 65.
+
+
+
+Package natbib Warning: Citation `sey:nik:alb:12' on page 6 undefined on input 
+line 65.
+
+
+Package natbib Warning: Citation `ben:bra:84' on page 6 undefined on input line
+ 71.
+
+
+Package natbib Warning: Citation `eke:91' on page 6 undefined on input line 71.
+
+
+
+Package natbib Warning: Citation `may:01' on page 6 undefined on input line 71.
+
+
+
+Package natbib Warning: Citation `ren:05' on page 6 undefined on input line 71.
+
+
+
+Package natbib Warning: Citation `sca:ren:08' on page 6 undefined on input line
+ 71.
+
+
+Package natbib Warning: Citation `tom:lev:17' on page 6 undefined on input line
+ 71.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+
+Package natbib Warning: Citation `ben:bra:84' on page 7 undefined on input line
+ 73.
+
+
+Package natbib Warning: Citation `eke:91' on page 7 undefined on input line 73.
+
+
+
+Package natbib Warning: Citation `woo:zur:82' on page 7 undefined on input line
+ 73.
+
+
+Package natbib Warning: Citation `cof:kun:woo:00' on page 7 undefined on input 
+line 73.
+
+
+Package natbib Warning: Citation `bel:64' on page 7 undefined on input line 73.
+
+
+
+Package natbib Warning: Citation `chsh:ineq:69' on page 7 undefined on input li
+ne 73.
+
+
+Package natbib Warning: Citation `ben:bra:mer:92' on page 7 undefined on input 
+line 73.
+
+
+Package natbib Warning: Citation `aci:mas:gis:03' on page 7 undefined on input 
+line 73.
+
+
+Package natbib Warning: Citation `cur:lew:lut:04' on page 7 undefined on input 
+line 73.
+
+
+Package natbib Warning: Citation `cur:guh:lew:lut:05' on page 7 undefined on in
+put line 73.
+
+
+Package natbib Warning: Citation `aci:gis:mas:06' on page 7 undefined on input 
+line 73.
+
+
+Package natbib Warning: Citation `maa:uff:88' on page 7 undefined on input line
+ 77.
+
+
+Package natbib Warning: Citation `ren:boi:09' on page 7 undefined on input line
+ 77.
+
+
+Package natbib Warning: Citation `ber:chr:col:ren:ren:10' on page 7 undefined o
+n input line 77.
+
+
+Package natbib Warning: Citation `weh:win:10' on page 7 undefined on input line
+ 77.
+
+
+Package natbib Warning: Citation `tom:ren:11' on page 7 undefined on input line
+ 77.
+
+
+Package natbib Warning: Citation `ng:ber:weh:12' on page 7 undefined on input l
+ine 77.
+
+
+Package natbib Warning: Citation `col:ber:tom:weh:17' on page 7 undefined on in
+put line 77.
+
+
+Package natbib Warning: Citation `dev:win:05' on page 7 undefined on input line
+ 77.
+
+
+Package natbib Warning: Citation `tom:lim:gis:ren:12' on page 7 undefined on in
+put line 77.
+
+
+Package natbib Warning: Citation `pir:aci:bru:gis:mas:sca:09' on page 7 undefin
+ed on input line 79.
+
+
+Package natbib Warning: Citation `mas:pir:aci:11' on page 7 undefined on input 
+line 79.
+
+
+Package natbib Warning: Citation `vaz:vid:14' on page 7 undefined on input line
+ 79.
+
+
+Package natbib Warning: Citation `agu:ram:kof:paw:16' on page 7 undefined on in
+put line 79.
+
+
+Package natbib Warning: Citation `cla:hor:shi:holt:69' on page 7 undefined on i
+nput line 79.
+
+
+Package natbib Warning: Citation `col:gis:lin:mas:pop:02' on page 7 undefined o
+n input line 79.
+
+
+Package natbib Warning: Citation `sal:aug:rem:tur:wit:aci:pir:17' on page 7 und
+efined on input line 79.
+
+
+Package natbib Warning: Citation `wis:jon:doh:07' on page 7 undefined on input 
+line 79.
+
+
+Package natbib Warning: Citation `jon:wis:doh:07' on page 7 undefined on input 
+line 79.
+
+
+Package natbib Warning: Citation `he:dru:rei:11' on page 7 undefined on input l
+ine 79.
+
+
+Package natbib Warning: Citation `skr:cav:15' on page 7 undefined on input line
+ 79.
+
+
+Package natbib Warning: Citation `skr:cav:17' on page 7 undefined on input line
+ 79.
+
+
+Package natbib Warning: Citation `cav:he:rei:wis:11' on page 7 undefined on inp
+ut line 79.
+
+
+Package natbib Warning: Citation `he:rei:13' on page 7 undefined on input line 
+79.
+
+
+Package natbib Warning: Citation `rei:dru:bow:cav:lam:bac:and:leu:09' on page 7
+ undefined on input line 79.
+
+
+Package natbib Warning: Citation `bra:cav:wal:sca:wis:12' on page 7 undefined o
+n input line 79.
+
+
+Package natbib Warning: Citation `woo:pir:15' on page 7 undefined on input line
+ 79.
+
+[7]
+
+Package natbib Warning: Citation `beaudry:15' on page 8 undefined on input line
+ 81.
+
+
+Package natbib Warning: Citation `pir:aci:mas:gir:boy:mat:mau:olm:hay:luo:man:m
+on:10' on page 8 undefined on input line 81.
+
+
+Package natbib Warning: Citation `aci:mas:pir:12' on page 8 undefined on input 
+line 81.
+
+
+Package natbib Warning: Citation `mat:skr:bra:cav:aci:15' on page 8 undefined o
+n input line 81.
+
+
+Package natbib Warning: Citation `aci:pir:ver:wit:16' on page 8 undefined on in
+put line 81.
+
+
+Package natbib Warning: Citation `aci:mas:16' on page 8 undefined on input line
+ 81.
+
+
+Package natbib Warning: Citation `and:bad:dum:cab:18' on page 8 undefined on in
+put line 81.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+
+Package natbib Warning: Citation `bec:tit:00' on page 9 undefined on input line
+ 83.
+
+
+Package natbib Warning: Citation `cer:bou:kar:gis:02' on page 9 undefined on in
+put line 83.
+
+
+Package natbib Warning: Citation `bru:chr:eke:eng:ber:kas:mac:03' on page 9 und
+efined on input line 83.
+
+
+Package natbib Warning: Citation `nik:alb:05' on page 9 undefined on input line
+ 83.
+
+
+Package natbib Warning: Citation `she:sca:10' on page 9 undefined on input line
+ 83.
+
+
+Package natbib Warning: Citation `cha:15' on page 9 undefined on input line 83.
+
+
+
+Underfull \vbox (badness 3128) has occurred while \output is active []
+
+ [9]
+
+Package natbib Warning: Citation `hal:88' on page 10 undefined on input line 13
+2.
+
+
+Package natbib Warning: Citation `wen:90' on page 10 undefined on input line 13
+2.
+
+
+Package natbib Warning: Citation `kos:tho:72' on page 10 undefined on input lin
+e 132.
+
+
+Package natbib Warning: Citation `kos:tho:73' on page 10 undefined on input lin
+e 132.
+
+
+Package natbib Warning: Citation `hal:83' on page 10 undefined on input line 13
+2.
+
+
+Package natbib Warning: Citation `and:07' on page 10 undefined on input line 13
+2.
+
+
+Package natbib Warning: Citation `tknn:82' on page 10 undefined on input line 1
+32.
+
+
+Package natbib Warning: Citation `ber:84' on page 10 undefined on input line 13
+2.
+
+
+Package natbib Warning: Citation `zen:che:zho:wen:15' on page 10 undefined on i
+nput line 132.
+
+
+Package natbib Warning: Citation `ando:13' on page 10 undefined on input line 1
+32.
+
+
+Package natbib Warning: Citation `kit:09' on page 10 undefined on input line 13
+3.
+
+
+Package natbib Warning: Citation `sch:ryu:fur:lud:08' on page 10 undefined on i
+nput line 133.
+
+[10]
+
+Package natbib Warning: Citation `sac:07' on page 11 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `lan:37' on page 11 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `x:g:wen:91' on page 11 undefined on input lin
+e 138.
+
+
+Package natbib Warning: Citation `ryu:hat:02' on page 11 undefined on input lin
+e 138.
+
+
+Package natbib Warning: Citation `vid:lat:ric:kit:03' on page 11 undefined on i
+nput line 141.
+
+
+Package natbib Warning: Citation `ham:ion:zan:05' on page 11 undefined on input
+ line 141.
+
+
+Package natbib Warning: Citation `ham:zha:haa:lid:08' on page 11 undefined on i
+nput line 141.
+
+
+Package natbib Warning: Citation `hal:ham:12' on page 11 undefined on input lin
+e 141.
+
+
+Package natbib Warning: Citation `aba:ham:zan:08' on page 11 undefined on input
+ line 141.
+
+
+Package natbib Warning: Citation `zan:pau:06' on page 11 undefined on input lin
+e 141.
+
+
+Package natbib Warning: Citation `zan:ven:gio:07' on page 11 undefined on input
+ line 141.
+
+
+Package natbib Warning: Citation `zha:zho:09' on page 11 undefined on input lin
+e 141.
+
+
+Package natbib Warning: Citation `oli:sac:14' on page 11 undefined on input lin
+e 141.
+
+
+Package natbib Warning: Citation `pau:sac:nog:vie:dug' on page 11 undefined on 
+input line 141.
+
+
+Package natbib Warning: Citation `gu:kwo:nin:wen:lin:08' on page 11 undefined o
+n input line 141.
+
+
+Package natbib Warning: Citation `maz:ham:12' on page 11 undefined on input lin
+e 141.
+
+
+Package natbib Warning: Citation `zan:gio:coz:07' on page 11 undefined on input
+ line 141.
+
+
+Underfull \vbox (badness 6675) has occurred while \output is active []
+
+ [11]
+
+Package natbib Warning: Citation `viy:riv:del:12' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `riv:viy:del:13' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `bar:bar:krau:rico:ima:zol:die:13' on page 12 
+undefined on input line 143.
+
+
+Package natbib Warning: Citation `nie:hub:14' on page 12 undefined on input lin
+e 143.
+
+
+Package natbib Warning: Citation `bar:waw:alt:flei:die:17' on page 12 undefined
+ on input line 143.
+
+
+Package natbib Warning: Citation `grus:17' on page 12 undefined on input line 1
+43.
+
+
+Package natbib Warning: Citation `uhl:89' on page 12 undefined on input line 14
+3.
+
+
+Package natbib Warning: Citation `sjo:15' on page 12 undefined on input line 14
+3.
+
+
+Package natbib Warning: Citation `car:pac:05' on page 12 undefined on input lin
+e 143.
+
+
+Package natbib Warning: Citation `reu:har:ple:07' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `uhl:89' on page 12 undefined on input line 14
+3.
+
+
+Package natbib Warning: Citation `hub:93' on page 12 undefined on input line 14
+3.
+
+
+Package natbib Warning: Citation `viy:riv:del:14' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `viy:riv:del:2d:14' on page 12 undefined on in
+put line 143.
+
+
+Package natbib Warning: Citation `zho:aro:14' on page 12 undefined on input lin
+e 143.
+
+
+Package natbib Warning: Citation `pau:vie:08' on page 12 undefined on input lin
+e 143.
+
+
+Package natbib Warning: Citation `viy:riv:mar:15' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `tid:sjo:03' on page 12 undefined on input lin
+e 143.
+
+
+Package natbib Warning: Citation `abe:kul:sjo:oi:07' on page 12 undefined on in
+put line 143.
+
+
+Package natbib Warning: Citation `uhl:pha:exp:11' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `viy:riv:gas:wal:fil:del:18' on page 12 undefi
+ned on input line 143.
+
+
+Package natbib Warning: Citation `sjo:15' on page 12 undefined on input line 14
+3.
+
+
+Package natbib Warning: Citation `kem:que:smi:16' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `bud:die:15' on page 12 undefined on input lin
+e 143.
+
+
+Package natbib Warning: Citation `zan:ven:gio:07' on page 12 undefined on input
+ line 143.
+
+
+Package natbib Warning: Citation `pau:vie:08' on page 12 undefined on input lin
+e 143.
+
+
+Package natbib Warning: Citation `pau:vie:08' on page 12 undefined on input lin
+e 147.
+
+[12]
+
+Package natbib Warning: Citation `fuchs:96' on page 13 undefined on input line 
+162.
+
+[13]
+
+Package natbib Warning: Citation `ben:zyc:06' on page 14 undefined on input lin
+e 190.
+
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+
+Package natbib Warning: Citation `zan:pau:06' on page 16 undefined on input lin
+e 224.
+
+
+Package natbib Warning: Citation `pau:vie:08' on page 16 undefined on input lin
+e 224.
+
+
+Package natbib Warning: Citation `pau:vie:08' on page 16 undefined on input lin
+e 226.
+
+
+Package natbib Warning: Citation `hey:pol:keh:13' on page 16 undefined on input
+ line 237.
+
+
+Package natbib Warning: Citation `kar:sch:13' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `and:sir:14' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `vaj:dor:14' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `hey:15' on page 16 undefined on input line 23
+7.
+
+
+Package natbib Warning: Citation `kar:sch:17' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `hal:zau:17' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `zau:hal:17' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `hom:abe:zau:hal:17' on page 16 undefined on i
+nput line 237.
+
+
+Package natbib Warning: Citation `vaj:dor:15' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `sch:keh:15' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `bud:hey:16' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `hua:bal:16' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `jaf:joh:17' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `sed:flei:sir:17' on page 16 undefined on inpu
+t line 237.
+
+
+Package natbib Warning: Citation `jur:etal:17' on page 16 undefined on input li
+ne 237.
+
+
+Package natbib Warning: Citation `fla:etal:18' on page 16 undefined on input li
+ne 237.
+
+
+Package natbib Warning: Citation `qua:son:liu:zan:sun:06' on page 16 undefined 
+on input line 237.
+
+
+Package natbib Warning: Citation `zan:pau:06' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `zan:qua:wan:sun:07' on page 16 undefined on i
+nput line 237.
+
+
+Package natbib Warning: Citation `pol:muk:gre:moo:10' on page 16 undefined on i
+nput line 237.
+
+
+Package natbib Warning: Citation `jac:ven:zan:11' on page 16 undefined on input
+ line 237.
+
+
+Package natbib Warning: Citation `ven:zan:10' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `ven:tac:san:san:11' on page 16 undefined on i
+nput line 237.
+
+
+Package natbib Warning: Citation `jac:ven:zan:11' on page 16 undefined on input
+ line 237.
+
+
+Package natbib Warning: Citation `hey:bud:17' on page 16 undefined on input lin
+e 237.
+
+
+Package natbib Warning: Citation `bah:ban:dut:17' on page 16 undefined on input
+ line 237.
+
+
+Package natbib Warning: Citation `lan:fra:hal:17' on page 16 undefined on input
+ line 238.
+
+
+Package natbib Warning: Citation `hal:zau:mcc:veg:sch:kas:17' on page 16 undefi
+ned on input line 238.
+
+
+Package natbib Warning: Citation `zan:pau:06' on page 16 undefined on input lin
+e 239.
+
+
+Package natbib Warning: Citation `pau:sac:nog:vie:dug' on page 16 undefined on 
+input line 239.
+
+
+Package natbib Warning: Citation `zan:ven:gio:07' on page 16 undefined on input
+ line 239.
+
+
+Package natbib Warning: Citation `aba:ham:zan:08' on page 16 undefined on input
+ line 239.
+
+
+Package natbib Warning: Citation `zha:zho:09' on page 16 undefined on input lin
+e 239.
+
+
+Package natbib Warning: Citation `sjo:pat:eke:ana:eri:oi:ved:00' on page 16 und
+efined on input line 239.
+
+
+Package natbib Warning: Citation `bah:ban:dut:17' on page 16 undefined on input
+ line 239.
+
+[16] [17]
+
+Package natbib Warning: Citation `ali:12' on page 18 undefined on input line 25
+5.
+
+
+Package natbib Warning: Citation `ipp:riz:gio:maz:16' on page 18 undefined on i
+nput line 255.
+
+
+Package natbib Warning: Citation `majorana:17' on page 18 undefined on input li
+ne 255.
+
+
+Package natbib Warning: Citation `majorana:twist:17' on page 18 undefined on in
+put line 255.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 18 undefined on i
+nput line 256.
+
+
+Package natbib Warning: Citation `kit:12' on page 18 undefined on input line 25
+6.
+
+) [18]
+\openout2 = `Chapter_Publickey.aux'.
+
+ (./Chapter_Publickey.tex [19
+
+
+] [20
+
+]
+Chapter 2.
+
+Package natbib Warning: Citation `vla:rod:mat:pau:sou:15' on page 21 undefined 
+on input line 59.
+
+[21]
+Overfull \hbox (17.23164pt too wide) in paragraph at lines 64--64
+[]\OT1/cmr/bx/n/17.28 Public-key en-cryp-tion based on discrete-time quan-
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+
+Overfull \hbox (2.1299pt too wide) in paragraph at lines 80--83
+[]$[]$ \OT1/cmr/m/it/12 with $\OML/cmm/m/it/12 k [] \OMS/cmsy/m/n/12 2  []I \OT
+1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m
+/n/12 2\OML/cmm/m/it/12 ; [] ; d\OMS/cmsy/m/n/12 g$\OT1/cmr/m/it/12 , $\OML/cmm
+/m/it/12 t [] \OMS/cmsy/m/n/12 2  []T \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/
+cmm/m/it/12 t[]; [] ; t[]\OMS/cmsy/m/n/12 g ^^Z \U/msb/m/n/12 N$\OT1/cmr/m/it/1
+2 , $\OML/cmm/m/it/12 l \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ;
+ [] ; \OT1/cmr/m/n/12 2[] \OMS/cmsy/m/n/12 ^^@  []\OT1/cmr/m/n/12 1\OMS/cmsy/m/
+n/12 g$
+ []
+
+[22] [23] [24]
+Underfull \vbox (badness 5802) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+
+Package natbib Warning: Citation `rya:laf:boi;laf:05' on page 27 undefined on i
+nput line 271.
+
+
+Package natbib Warning: Citation `san:etal:12' on page 27 undefined on input li
+ne 272.
+
+
+Package natbib Warning: Citation `nik:08' on page 27 undefined on input line 27
+6.
+
+[27]
+
+Package natbib Warning: Citation `pmat:npaunkovic:jrodr:asouto:14' on page 28 u
+ndefined on input line 278.
+
+) [28]
+\openout2 = `Chapter_QKD.aux'.
+
+ (./Chapter_QKD.tex
+Chapter 3.
+
+Package natbib Warning: Citation `vla:kra:mat:pau:sou:17' on page 29 undefined 
+on input line 52.
+
+[29
+
+
+
+]
+
+Package natbib Warning: Citation `nik:08' on page 30 undefined on input line 61
+.
+
+
+Package natbib Warning: Citation `sey:nik:alb:12' on page 30 undefined on input
+ line 61.
+
+<protocol_QKD.png, id=777, 1030.85126pt x 389.455pt>
+File: protocol_QKD.png Graphic file (type png)
+ <use protocol_QKD.png>
+Package pdftex.def Info: protocol_QKD.png used on input line 70.
+(pdftex.def)             Requested size: 455.24411pt x 171.99063pt.
+
+[30 <./protocol_QKD.png>] [31]
+
+Package natbib Warning: Citation `ben:bra:84' on page 32 undefined on input lin
+e 140.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+[32] [33] [34] [35]
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
+<protocol_one-way.png, id=815, 993.7125pt x 418.56375pt>
+File: protocol_one-way.png Graphic file (type png)
+
+<use protocol_one-way.png>
+Package pdftex.def Info: protocol_one-way.png used on input line 217.
+(pdftex.def)             Requested size: 455.24411pt x 191.75607pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36] [37 <./protocol_one-way.png>]
+
+Package natbib Warning: Citation `yao:86' on page 38 undefined on input line 24
+7.
+
+
+Package natbib Warning: Citation `ben:bra:mer:92' on page 38 undefined on input
+ line 252.
+
+
+Package natbib Warning: Citation `lo:cha:99' on page 38 undefined on input line
+ 252.
+
+[38]
+
+Package natbib Warning: Citation `lo:cha:ard:05' on page 39 undefined on input 
+line 271.
+
+
+Package natbib Warning: Citation `ren:gis:kra:05' on page 39 undefined on input
+ line 271.
+
+
+Package natbib Warning: Citation `chr:kon:ren:09' on page 39 undefined on input
+ line 271.
+
+
+Package natbib Warning: Citation `ren:07' on page 39 undefined on input line 27
+1.
+
+
+Package natbib Warning: Citation `dev:win:05' on page 39 undefined on input lin
+e 273.
+
+
+Package natbib Warning: Citation `ber:chr:col:ren:ren:10' on page 39 undefined 
+on input line 291.
+
+
+Package natbib Warning: Citation `ber:chr:col:ren:ren:10' on page 39 undefined 
+on input line 302.
+
+[39]
+
+Package natbib Warning: Citation `aha:amb:kem:vaz:01' on page 40 undefined on i
+nput line 324.
+
+
+Package natbib Warning: Citation `kem:03' on page 40 undefined on input line 32
+4.
+
+[40] <overlap-piover4.png, id=851, 280.04625pt x 177.66376pt>
+File: overlap-piover4.png Graphic file (type png)
+
+<use overlap-piover4.png>
+Package pdftex.def Info: overlap-piover4.png used on input line 343.
+(pdftex.def)             Requested size: 168.02904pt x 106.59906pt.
+
+
+Package natbib Warning: Citation `bae:aci:07' on page 41 undefined on input lin
+e 349.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41 <./overlap-piover4.png>] <maxNoisePiOver4.png, id=860, 296.60812pt x 214.5
+5156pt>
+File: maxNoisePiOver4.png Graphic file (type png)
+
+<use maxNoisePiOver4.png>
+Package pdftex.def Info: maxNoisePiOver4.png used on input line 377.
+(pdftex.def)             Requested size: 177.96623pt x 128.73192pt.
+ <maxNoiseBigT.png, id=869, 376.40625pt x 216.81pt>
+File: maxNoiseBigT.png Graphic file (type png)
+
+<use maxNoiseBigT.png>
+Package pdftex.def Info: maxNoiseBigT.png used on input line 384.
+(pdftex.def)             Requested size: 225.84547pt x 130.08699pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[42 <./maxNoisePiOver4.png>]
+<maxNoiseCompare.png, id=876, 339.51843pt x 216.05719pt>
+File: maxNoiseCompare.png Graphic file (type png)
+
+<use maxNoiseCompare.png>
+Package pdftex.def Info: maxNoiseCompare.png used on input line 393.
+(pdftex.def)             Requested size: 203.71262pt x 129.6353pt.
+
+<maxNoiseCompareBigT.png, id=879, 339.51843pt x 213.79875pt>
+File: maxNoiseCompareBigT.png Graphic file (type png)
+
+<use maxNoiseCompareBigT.png>
+Package pdftex.def Info: maxNoiseCompareBigT.png used on input line 399.
+(pdftex.def)             Requested size: 203.71262pt x 128.28023pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43 <./maxNoiseBigT.png> <./maxNoiseCompare.png>]
+<Table1.pdf, id=885, 478.47186pt x 76.6083pt>
+File: Table1.pdf Graphic file (type pdf)
+ <use Table1.pdf>
+Package pdftex.def Info: Table1.pdf used on input line 426.
+(pdftex.def)             Requested size: 526.32066pt x 84.26936pt.
+
+Overfull \hbox (71.07655pt too wide) in paragraph at lines 426--427
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+
+ []
+
+[44 <./maxNoiseCompareBigT.png> <./Table1.pdf>]
+<Table2.pdf, id=961, 503.05553pt x 72.12285pt>
+File: Table2.pdf Graphic file (type pdf)
+ <use Table2.pdf>
+Package pdftex.def Info: Table2.pdf used on input line 437.
+(pdftex.def)             Requested size: 503.05429pt x 72.12265pt.
+
+Overfull \hbox (47.81018pt too wide) in paragraph at lines 437--438
+[][] 
+ []
+
+
+Package natbib Warning: Citation `nay:vis:00' on page 45 undefined on input lin
+e 442.
+
+
+Package natbib Warning: Citation `ven:and:12' on page 45 undefined on input lin
+e 442.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
+
+ []
+
+[45 <./Table2.pdf>]
+
+Package natbib Warning: Citation `boy:ken:mor:07' on page 46 undefined on input
+ line 451.
+
+
+Package natbib Warning: Citation `boy:gel:ken:mor:09' on page 46 undefined on i
+nput line 451.
+
+
+Package natbib Warning: Citation `boy:ken:mor:07' on page 46 undefined on input
+ line 452.
+
+<semi_quantum_QKD.png, id=1014, 1028.84375pt x 547.04375pt>
+File: semi_quantum_QKD.png Graphic file (type png)
+
+<use semi_quantum_QKD.png>
+Package pdftex.def Info: semi_quantum_QKD.png used on input line 464.
+(pdftex.def)             Requested size: 364.19667pt x 193.64679pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[46] [47 <./semi_quantum_QKD.png (PNG copy)>]
+
+Package natbib Warning: Citation `krawec2015security' on page 48 undefined on i
+nput line 527.
+
+
+Package natbib Warning: Citation `krawec2016security' on page 48 undefined on i
+nput line 527.
+
+
+Package natbib Warning: Citation `krawec2016quantum' on page 48 undefined on in
+put line 527.
+
+
+Package natbib Warning: Citation `zha:qiu:mat:16' on page 48 undefined on input
+ line 527.
+
+
+Package natbib Warning: Citation `boy:ken:mor:07' on page 48 undefined on input
+ line 527.
+
+
+Package natbib Warning: Citation `boy:gel:ken:mor:09' on page 48 undefined on i
+nput line 527.
+
+[48]
+
+Package natbib Warning: Citation `zou:qiu:li:wu:li:09' on page 49 undefined on 
+input line 534.
+
+
+Package natbib Warning: Citation `kra:14' on page 49 undefined on input line 53
+4.
+
+[49]
+Overfull \hbox (35.08714pt too wide) in paragraph at lines 570--571
+\OT1/cmr/m/n/12 pect-ing to find $[]$. This is equiv-a-lent to her mea-sur-ing 
+in the QW ba-sis $\OMS/cmsy/m/n/12 f[] \OML/cmm/m/it/12 ; [] ; []  ; []\OMS/cms
+y/m/n/12 g$\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+[51] [52]
+
+Package natbib Warning: Citation `sca:bsc:csr:dus:lut:pee:09' on page 53 undefi
+ned on input line 642.
+
+
+Package natbib Warning: Citation `jai:sti:kha:els:mar:leu:16' on page 53 undefi
+ned on input line 642.
+
+
+Package natbib Warning: Citation `dia:lo:qi:yua:16' on page 53 undefined on inp
+ut line 642.
+
+
+Package natbib Warning: Citation `bed:arr:lin:17' on page 53 undefined on input
+ line 642.
+
+
+Package natbib Warning: Citation `dix:etal:17' on page 53 undefined on input li
+ne 642.
+
+
+Package natbib Warning: Citation `bra:lut:mor:san:00' on page 53 undefined on i
+nput line 644.
+
+
+Package natbib Warning: Citation `lut:00' on page 53 undefined on input line 64
+4.
+
+
+Package natbib Warning: Citation `lut:jah:02' on page 53 undefined on input lin
+e 644.
+
+
+Package natbib Warning: Citation `hwa:03' on page 53 undefined on input line 64
+6.
+
+
+Package natbib Warning: Citation `hwa:03' on page 53 undefined on input line 64
+6.
+
+
+Package natbib Warning: Citation `lo:ma:che:05' on page 53 undefined on input l
+ine 646.
+
+
+Package natbib Warning: Citation `wan:05a' on page 53 undefined on input line 6
+46.
+
+
+Package natbib Warning: Citation `wan:05b' on page 53 undefined on input line 6
+46.
+
+
+Package natbib Warning: Citation `har:ett:hug:nor:05' on page 53 undefined on i
+nput line 646.
+
+
+Package natbib Warning: Citation `ma:qi:zha:lo:05' on page 53 undefined on inpu
+t line 646.
+
+
+Package natbib Warning: Citation `wan:wan:bjo:kar:07' on page 53 undefined on i
+nput line 646.
+
+
+Package natbib Warning: Citation `ros:pet:har:ric:dal:tya:mcc:nam:bae:had:hug:n
+or:09' on page 53 undefined on input line 646.
+
+
+Package natbib Warning: Citation `luc:dyn:fro:yua:shi:15' on page 53 undefined 
+on input line 646.
+
+[53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+
+Package natbib Warning: Citation `vak:mak:hje:01' on page 55 undefined on input
+ line 656.
+
+
+Package natbib Warning: Citation `luc:cho:war:dyn:yua:shi:15' on page 55 undefi
+ned on input line 656.
+
+
+Package natbib Warning: Citation `saj:min:jai:mak:17' on page 55 undefined on i
+nput line 656.
+
+
+Package natbib Warning: Citation `kur:zar:may:wei:01' on page 55 undefined on i
+nput line 656.
+
+
+Package natbib Warning: Citation `gis:fas:kra:zbi:rib:06' on page 55 undefined 
+on input line 656.
+
+
+Package natbib Warning: Citation `liz:lop:lop:16' on page 55 undefined on input
+ line 658.
+
+
+Package natbib Warning: Citation `lyd:wie:wit:els:ska:mak:10' on page 55 undefi
+ned on input line 660.
+
+
+Package natbib Warning: Citation `wie:lyd:wit:els:ska:mar:mak:leu:11' on page 5
+5 undefined on input line 660.
+
+
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+ [55]
+
+Package natbib Warning: Citation `liu:lin:kur:ska:mak:ger:14' on page 56 undefi
+ned on input line 664.
+
+
+Package natbib Warning: Citation `sti:14' on page 56 undefined on input line 66
+4.
+
+
+Package natbib Warning: Citation `ele:ozh:kur:gol:mak:15' on page 56 undefined 
+on input line 664.
+
+
+Package natbib Warning: Citation `wan:wan:qin:wei:zha:16' on page 56 undefined 
+on input line 664.
+
+
+Package natbib Warning: Citation `lee:par:woo:par:kim:han:moo:16' on page 56 un
+defined on input line 664.
+
+
+Package natbib Warning: Citation `mak:ani:ska:06' on page 56 undefined on input
+ line 666.
+
+
+Package natbib Warning: Citation `lam:kur:07' on page 56 undefined on input lin
+e 666.
+
+
+Package natbib Warning: Citation `zha:fun:qi:che:lo:08' on page 56 undefined on
+ input line 666.
+
+
+Package natbib Warning: Citation `qi:fun:lo:ma:07' on page 56 undefined on inpu
+t line 666.
+
+[56]
+
+Package natbib Warning: Citation `bec:tit:00' on page 57 undefined on input lin
+e 670.
+
+
+Package natbib Warning: Citation `cer:bou:kar:gis:02' on page 57 undefined on i
+nput line 670.
+
+
+Package natbib Warning: Citation `bru:chr:eke:eng:ber:kas:mac:03' on page 57 un
+defined on input line 670.
+
+
+Package natbib Warning: Citation `nik:alb:05' on page 57 undefined on input lin
+e 670.
+
+
+Package natbib Warning: Citation `she:sca:10' on page 57 undefined on input lin
+e 670.
+
+
+Package natbib Warning: Citation `cha:15' on page 57 undefined on input line 67
+0.
+
+
+Package natbib Warning: Citation `cha:15' on page 57 undefined on input line 67
+3.
+
+
+Package natbib Warning: Citation `get:10' on page 57 undefined on input line 67
+5.
+
+
+Package natbib Warning: Citation `get:jar:mis:14' on page 57 undefined on input
+ line 675.
+
+
+Package natbib Warning: Citation `roh:bre:gil:13' on page 57 undefined on input
+ line 675.
+
+
+Package natbib Warning: Citation `kra:15' on page 57 undefined on input line 67
+5.
+
+
+Package natbib Warning: Citation `aha:amb:kem:vaz:01' on page 57 undefined on i
+nput line 675.
+
+
+Package natbib Warning: Citation `bru:car:amb:03' on page 57 undefined on input
+ line 675.
+
+
+Package natbib Warning: Citation `boy:ken:mor:07' on page 57 undefined on input
+ line 677.
+
+
+Package natbib Warning: Citation `krawec2015security' on page 57 undefined on i
+nput line 677.
+
+[57]) [58]
+\openout2 = `Chapter_FidelityAndUhlmann.aux'.
+
+ (./Chapter_FidelityAndUhlmann.tex [59
+
+
+] [60
+
+]
+Chapter 4.
+
+Package natbib Warning: Citation `mer:vla:pau:vie:17' on page 61 undefined on i
+nput line 59.
+
+[61]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\Delta' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 67.
+
+
+Package natbib Warning: Citation `su:sch:hee:79' on page 62 undefined on input 
+line 69.
+
+
+Package natbib Warning: Citation `cre:99' on page 62 undefined on input line 69
+.
+
+
+Package natbib Warning: Citation `ber:pat:ami:del:09' on page 62 undefined on i
+nput line 69.
+
+
+Package natbib Warning: Citation `kit:cha:01' on page 62 undefined on input lin
+e 69.
+
+
+Overfull \hbox (9.03712pt too wide) detected at line 83
+[]\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Z; ^^Z[]\OT1/cmr/m/n/12
+ ) = [] []\OML/cmm/m/it/12 ;
+ []
+
+
+Overfull \hbox (25.14394pt too wide) detected at line 87
+[]\OT1/cmr/m/n/12 ^^A(\OML/cmm/m/it/12 ^^Z; ^^Z[]\OT1/cmr/m/n/12 ) = \OML/cmm/m
+/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Z; ^^Z[]\OT1/cmr/m/n/12 ) \OMS/cmsy
+/m/n/12 ^^@ [] []\OML/cmm/m/it/12 :
+ []
+
+
+Package natbib Warning: Citation `su:sch:hee:79' on page 62 undefined on input 
+line 90.
+
+
+Underfull \vbox (badness 5741) has occurred while \output is active []
+
+ [62]
+<SSH_fidelity_theta.pdf, id=1114, 361.35pt x 283.0575pt>
+File: SSH_fidelity_theta.pdf Graphic file (type pdf)
+
+<use SSH_fidelity_theta.pdf>
+Package pdftex.def Info: SSH_fidelity_theta.pdf used on input line 98.
+(pdftex.def)             Requested size: 105.15823pt x 75.11353pt.
+
+<SSH_fidelity_T.pdf, id=1115, 361.35pt x 283.0575pt>
+File: SSH_fidelity_T.pdf Graphic file (type pdf)
+ <use SSH_fidelity_T.pdf>
+Package pdftex.def Info: SSH_fidelity_T.pdf used on input line 101.
+(pdftex.def)             Requested size: 105.15823pt x 75.11353pt.
+
+<SSH_uhlmann_theta.pdf, id=1116, 377.74065pt x 281.65979pt>
+File: SSH_uhlmann_theta.pdf Graphic file (type pdf)
+
+<use SSH_uhlmann_theta.pdf>
+Package pdftex.def Info: SSH_uhlmann_theta.pdf used on input line 104.
+(pdftex.def)             Requested size: 105.16145pt x 75.11223pt.
+
+
+Package natbib Warning: Citation `cre:99' on page 63 undefined on input line 10
+9.
+
+
+Package natbib Warning: Citation `ber:pat:ami:del:09' on page 63 undefined on i
+nput line 109.
+
+<CL_fidelity_theta.pdf, id=1118, 361.35pt x 283.0575pt>
+File: CL_fidelity_theta.pdf Graphic file (type pdf)
+
+<use CL_fidelity_theta.pdf>
+Package pdftex.def Info: CL_fidelity_theta.pdf used on input line 122.
+(pdftex.def)             Requested size: 101.97679pt x 87.41002pt.
+
+<CL_fidelity_T.pdf, id=1119, 361.35pt x 283.0575pt>
+File: CL_fidelity_T.pdf Graphic file (type pdf)
+ <use CL_fidelity_T.pdf>
+Package pdftex.def Info: CL_fidelity_T.pdf used on input line 125.
+(pdftex.def)             Requested size: 101.97679pt x 87.41002pt.
+
+<CL_uhlmann_theta.pdf, id=1120, 361.35pt x 281.05pt>
+File: CL_uhlmann_theta.pdf Graphic file (type pdf)
+
+<use CL_uhlmann_theta.pdf>
+Package pdftex.def Info: CL_uhlmann_theta.pdf used on input line 128.
+(pdftex.def)             Requested size: 101.97679pt x 87.40762pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `kit:cha:01' on page 63 undefined on input lin
+e 134.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63 <./SSH_fidelity_theta.pdf> <./SSH_fidelity_T.pdf
+
+pdfTeX warning: pdflatex (file ./SSH_fidelity_T.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+> <./SSH_uhlmann_theta.pdf>]
+<kitaev_fidelity_theta.pdf, id=1155, 361.35pt x 283.0575pt>
+File: kitaev_fidelity_theta.pdf Graphic file (type pdf)
+
+<use kitaev_fidelity_theta.pdf>
+Package pdftex.def Info: kitaev_fidelity_theta.pdf used on input line 143.
+(pdftex.def)             Requested size: 105.15823pt x 75.11353pt.
+
+<kitaev_fidelity_T.pdf, id=1156, 361.35pt x 283.0575pt>
+File: kitaev_fidelity_T.pdf Graphic file (type pdf)
+
+<use kitaev_fidelity_T.pdf>
+Package pdftex.def Info: kitaev_fidelity_T.pdf used on input line 146.
+(pdftex.def)             Requested size: 105.15823pt x 75.11353pt.
+
+<kitaev_uhlmann_theta.pdf, id=1157, 361.35pt x 281.05pt>
+File: kitaev_uhlmann_theta.pdf Graphic file (type pdf)
+
+<use kitaev_uhlmann_theta.pdf>
+Package pdftex.def Info: kitaev_uhlmann_theta.pdf used on input line 149.
+(pdftex.def)             Requested size: 105.15823pt x 75.11258pt.
+ [64 <./CL_fidelity_theta.pdf> <./CL_fidelity_T.pdf
+
+pdfTeX warning: pdflatex (file ./CL_fidelity_T.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./CL_uhlmann_theta.pdf
+
+pdfTeX warning: pdflatex (file ./CL_uhlmann_theta.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./kitaev_fidelity_theta.pdf
+
+pdfTeX warning: pdflatex (file ./kitaev_fidelity_theta.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./kitaev_fidelity_T.pdf
+
+pdfTeX warning: pdflatex (file ./kitaev_fidelity_T.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./kitaev_uhlmann_theta.pdf
+
+pdfTeX warning: pdflatex (file ./kitaev_uhlmann_theta.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
+
+Package natbib Warning: Citation `x:g:wen:91' on page 65 undefined on input lin
+e 159.
+
+
+Package natbib Warning: Citation `ryu:hat:02' on page 65 undefined on input lin
+e 159.
+
+[65] <fermisea_topological.pdf, id=1189, 361.35pt x 231.86626pt>
+File: fermisea_topological.pdf Graphic file (type pdf)
+
+<use fermisea_topological.pdf>
+Package pdftex.def Info: fermisea_topological.pdf used on input line 170.
+(pdftex.def)             Requested size: 180.67456pt x 115.93283pt.
+
+<fermisea_trivial.pdf, id=1190, 361.35pt x 231.86626pt>
+File: fermisea_trivial.pdf Graphic file (type pdf)
+
+<use fermisea_trivial.pdf>
+Package pdftex.def Info: fermisea_trivial.pdf used on input line 174.
+(pdftex.def)             Requested size: 180.67456pt x 115.93283pt.
+
+<occupation_T_100.pdf, id=1192, 361.35pt x 233.87375pt>
+File: occupation_T_100.pdf Graphic file (type pdf)
+
+<use occupation_T_100.pdf>
+Package pdftex.def Info: occupation_T_100.pdf used on input line 187.
+(pdftex.def)             Requested size: 198.74312pt x 128.63094pt.
+
+<occupation_zero_T.pdf, id=1193, 361.35pt x 239.89626pt>
+File: occupation_zero_T.pdf Graphic file (type pdf)
+
+<use occupation_zero_T.pdf>
+Package pdftex.def Info: occupation_zero_T.pdf used on input line 188.
+(pdftex.def)             Requested size: 198.74312pt x 131.94334pt.
+
+<occupation_finite_T_trivial.pdf, id=1194, 361.35pt x 227.85126pt>
+File: occupation_finite_T_trivial.pdf Graphic file (type pdf)
+
+<use occupation_finite_T_trivial.pdf>
+Package pdftex.def Info: occupation_finite_T_trivial.pdf used on input line 192
+.
+(pdftex.def)             Requested size: 198.74312pt x 125.31857pt.
+
+<occupation_zero_T_trivial.pdf, id=1195, 361.35pt x 240.9pt>
+File: occupation_zero_T_trivial.pdf Graphic file (type pdf)
+
+<use occupation_zero_T_trivial.pdf>
+Package pdftex.def Info: occupation_zero_T_trivial.pdf used on input line 193.
+(pdftex.def)             Requested size: 198.74312pt x 132.49539pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `viy:riv:del:12' on page 66 undefined on input
+ line 198.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66 <./fermisea_topological.pdf> <./fermisea_trivial.pdf
+
+pdfTeX warning: pdflatex (file ./fermisea_trivial.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] <majorana_paper_plot.pdf, id=1218, 300.12125pt x 315.1775pt>
+File: majorana_paper_plot.pdf Graphic file (type pdf)
+
+<use majorana_paper_plot.pdf>
+Package pdftex.def Info: majorana_paper_plot.pdf used on input line 209.
+(pdftex.def)             Requested size: 180.07413pt x 189.10796pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `qua:zur:10' on page 67 undefined on input lin
+e 215.
+
+
+Underfull \vbox (badness 1742) has occurred while \output is active []
+
+ [67 <./occupation_T_100.pdf> <./occupation_zero_T.pdf
+
+pdfTeX warning: pdflatex (file ./occupation_zero_T.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./occupation_finite_T_trivial.pdf
+
+pdfTeX warning: pdflatex (file ./occupation_finite_T_trivial.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./occupation_zero_T_trivial.pdf
+
+pdfTeX warning: pdflatex (file ./occupation_zero_T_trivial.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>]
+
+Package natbib Warning: Citation `ali:12' on page 68 undefined on input line 21
+7.
+
+
+Package natbib Warning: Citation `ipp:riz:gio:maz:16' on page 68 undefined on i
+nput line 217.
+
+
+Package natbib Warning: Citation `majorana:17' on page 68 undefined on input li
+ne 217.
+
+
+Package natbib Warning: Citation `majorana:twist:17' on page 68 undefined on in
+put line 217.
+
+
+Package natbib Warning: Citation `rod:mat:pau:sou:17' on page 68 undefined on i
+nput line 217.
+
+
+Package natbib Warning: Citation `pir:ott:spe:wee:bra:llo:geh:jac:and:15' on pa
+ge 68 undefined on input line 217.
+
+
+Package natbib Warning: Citation `ber:chr:col:ren:ren:10' on page 68 undefined 
+on input line 217.
+
+
+Package natbib Warning: Citation `dam:feh:ren:sal:sch:07' on page 68 undefined 
+on input line 217.
+
+
+Package natbib Warning: Citation `weh:sch:ter:08' on page 68 undefined on input
+ line 217.
+
+
+Package natbib Warning: Citation `sch:ter:weh:09' on page 68 undefined on input
+ line 217.
+
+
+Package natbib Warning: Citation `ng:jos:che:kur:weh:12' on page 68 undefined o
+n input line 217.
+
+
+Package natbib Warning: Citation `koe:weh:wul:12' on page 68 undefined on input
+ line 217.
+
+
+Package natbib Warning: Citation `bou:feh:gon:sch:13' on page 68 undefined on i
+nput line 217.
+
+
+Package natbib Warning: Citation `lou:alm:and:pin:mat:pau:14' on page 68 undefi
+ned on input line 217.
+
+
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
+ [68 <./majorana_paper_plot.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 222.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\Delta' on input line 222.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 222.
+
+
+Package natbib Warning: Citation `bar:coo:sch:57' on page 69 undefined on input
+ line 224.
+
+
+Package natbib Warning: Citation `pau:vie:08' on page 69 undefined on input lin
+e 229.
+
+<BCS_fidelity_theta.pdf, id=1266, 380.77095pt x 261.73746pt>
+File: BCS_fidelity_theta.pdf Graphic file (type pdf)
+
+<use BCS_fidelity_theta.pdf>
+Package pdftex.def Info: BCS_fidelity_theta.pdf used on input line 233.
+(pdftex.def)             Requested size: 87.40698pt x 65.55402pt.
+
+<BCS_fidelity_T.pdf, id=1267, 382.89087pt x 262.69824pt>
+File: BCS_fidelity_T.pdf Graphic file (type pdf)
+
+<use BCS_fidelity_T.pdf>
+Package pdftex.def Info: BCS_fidelity_T.pdf used on input line 236.
+(pdftex.def)             Requested size: 87.40869pt x 65.55414pt.
+
+<BCS_delta_theta.pdf, id=1268, 372.3503pt x 263.41331pt>
+File: BCS_delta_theta.pdf Graphic file (type pdf)
+
+<use BCS_delta_theta.pdf>
+Package pdftex.def Info: BCS_delta_theta.pdf used on input line 239.
+(pdftex.def)             Requested size: 87.40573pt x 65.55573pt.
+
+<BCS_delta_T.pdf, id=1269, 390.77824pt x 267.27594pt>
+File: BCS_delta_T.pdf Graphic file (type pdf)
+ <use BCS_delta_T.pdf>
+Package pdftex.def Info: BCS_delta_T.pdf used on input line 242.
+(pdftex.def)             Requested size: 87.40851pt x 65.55453pt.
+
+
+Package natbib Warning: Citation `zan:ven:gio:07' on page 69 undefined on input
+ line 250.
+
+[69 <./BCS_fidelity_theta.pdf> <./BCS_fidelity_T.pdf> <./BCS_delta_theta.pdf> <
+./BCS_delta_T.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+
+Package natbib Warning: Citation `viy:riv:del:14' on page 71 undefined on input
+ line 270.
+
+
+Package natbib Warning: Citation `ber:84' on page 71 undefined on input line 27
+5.
+
+
+Package natbib Warning: Citation `viy:riv:del:14' on page 71 undefined on input
+ line 275.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--282
+
+ []
+
+
+Package natbib Warning: Citation `and:mat:uem:75' on page 71 undefined on input
+ line 283.
+
+[71] [72]) [73]
+\openout2 = `Chapter_TopoQW.aux'.
+
+ (./Chapter_TopoQW.tex [74
+
+
+
+]
+Chapter 5.
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 75 undefined on i
+nput line 57.
+
+
+Package natbib Warning: Citation `sch:ryu:fur:lud:08' on page 75 undefined on i
+nput line 57.
+
+
+Package natbib Warning: Citation `kit:09' on page 75 undefined on input line 57
+.
+
+
+Package natbib Warning: Citation `kit:12' on page 75 undefined on input line 57
+.
+
+
+Package natbib Warning: Citation `kit:exp:12' on page 75 undefined on input lin
+e 57.
+
+
+Package natbib Warning: Citation `rak:asb:alb:16' on page 75 undefined on input
+ line 57.
+
+
+Package natbib Warning: Citation `gro:bra:alt:mes:asb:16' on page 75 undefined 
+on input line 57.
+
+
+Package natbib Warning: Citation `mug:cel:mas:asb:lew:lob:16' on page 75 undefi
+ned on input line 57.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 75 undefined on i
+nput line 61.
+
+
+Package natbib Warning: Citation `kit:12' on page 75 undefined on input line 61
+.
+
+
+Package natbib Warning: Citation `mer:vla:pau:vie:17:qw' on page 75 undefined o
+n input line 65.
+
+[75] [76]
+
+Package natbib Warning: Citation `sch:ryu:fur:lud:08' on page 77 undefined on i
+nput line 74.
+
+
+Package natbib Warning: Citation `kit:09' on page 77 undefined on input line 74
+.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 77 undefined on i
+nput line 75.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 77 undefined on i
+nput line 75.
+
+
+Package natbib Warning: Citation `kit:ber:rud:dem:10' on page 77 undefined on i
+nput line 92.
+
+
+Package natbib Warning: Citation `sch:ryu:fur:lud:08' on page 77 undefined on i
+nput line 92.
+
+
+Package natbib Warning: Citation `kit:09' on page 77 undefined on input line 92
+.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+
+Package natbib Warning: Citation `kit:ber:rud:dem:10' on page 78 undefined on i
+nput line 98.
+
+
+Package natbib Warning: Citation `asb:12' on page 78 undefined on input line 99
+.
+
+
+Package natbib Warning: Citation `asb:obu:13' on page 78 undefined on input lin
+e 99.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 78 undefined on i
+nput line 99.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 78 undefined on i
+nput line 111.
+
+
+Package natbib Warning: Citation `kit:12' on page 78 undefined on input line 11
+1.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 79 undefined on i
+nput line 129.
+
+
+Package natbib Warning: Citation `kit:12' on page 79 undefined on input line 12
+9.
+
+
+Package natbib Warning: Citation `shi:mor:miy:15' on page 79 undefined on input
+ line 158.
+
+
+Package natbib Warning: Citation `shi:thi:mor:han:may:16' on page 79 undefined 
+on input line 158.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 79 undefined on i
+nput line 158.
+
+
+Package natbib Warning: Citation `asb:12' on page 79 undefined on input line 15
+8.
+
+
+Package natbib Warning: Citation `asb:obu:13' on page 79 undefined on input lin
+e 158.
+
+
+Package natbib Warning: Citation `kit:exp:12' on page 79 undefined on input lin
+e 158.
+
+
+Package natbib Warning: Citation `bar:exp:16' on page 79 undefined on input lin
+e 158.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
+
+Package natbib Warning: Citation `vie:10' on page 80 undefined on input line 17
+3.
+
+
+Package natbib Warning: Citation `rig:dun:yur:ols:07' on page 80 undefined on i
+nput line 173.
+
+
+Package natbib Warning: Citation `rig:mur:ols:06' on page 80 undefined on input
+ line 173.
+
+
+Package natbib Warning: Citation `vid:rig:16' on page 80 undefined on input lin
+e 173.
+
+
+Underfull \vbox (badness 1946) has occurred while \output is active []
+
+ [80]
+Overfull \hbox (16.64404pt too wide) in paragraph at lines 175--176
+[]\OT1/cmr/m/n/12 Since the pre-vi-ous zero-temperature stud-ies (both the-o-re
+t-i-cal and ex-per-i-men-tal) of symmetry-
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\Delta' on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 202.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81]
+Overfull \hbox (31.25966pt too wide) detected at line 211
+[]\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 %[]; %[]\OT1/cmr/m/n/12 )
+ = [] []\OML/cmm/m/it/12 ;
+ []
+
+
+Overfull \hbox (24.07938pt too wide) detected at line 221
+[]\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Z[]; ^^Z[]\OT1/cmr/m/n/
+12 ) = []\OML/cmm/m/it/12 ;
+ []
+
+
+Overfull \hbox (12.16725pt too wide) detected at line 224
+[]\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Z[]; ^^Z[]\OT1/cmr/m/n/
+12 ) = [] []\OML/cmm/m/it/12 :
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82]
+Overfull \hbox (11.34822pt too wide) detected at line 229
+[][][][] \OT1/cmr/m/n/12 = [] []\OML/cmm/m/it/12 ;
+ []
+
+
+Overfull \hbox (4.16794pt too wide) detected at line 238
+[][][][] \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 ;
+ []
+
+<plot3.pdf, id=1441, 361.35pt x 275.0275pt>
+File: plot3.pdf Graphic file (type pdf)
+ <use plot3.pdf>
+Package pdftex.def Info: plot3.pdf used on input line 252.
+(pdftex.def)             Requested size: 111.0745pt x 83.30623pt.
+
+<plot4.pdf, id=1442, 361.35pt x 275.0275pt>
+File: plot4.pdf Graphic file (type pdf)
+ <use plot4.pdf>
+Package pdftex.def Info: plot4.pdf used on input line 253.
+(pdftex.def)             Requested size: 111.0745pt x 83.30623pt.
+
+<plot1.pdf, id=1443, 361.35pt x 275.0275pt>
+File: plot1.pdf Graphic file (type pdf)
+ <use plot1.pdf>
+Package pdftex.def Info: plot1.pdf used on input line 254.
+(pdftex.def)             Requested size: 111.0745pt x 83.30623pt.
+
+<plot2.pdf, id=1444, 349.02797pt x 257.65018pt>
+File: plot2.pdf Graphic file (type pdf)
+ <use plot2.pdf>
+Package pdftex.def Info: plot2.pdf used on input line 255.
+(pdftex.def)             Requested size: 111.07877pt x 83.30286pt.
+
+<plot7.pdf, id=1445, 354.7934pt x 269.44374pt>
+File: plot7.pdf Graphic file (type pdf)
+ <use plot7.pdf>
+Package pdftex.def Info: plot7.pdf used on input line 260.
+(pdftex.def)             Requested size: 111.07838pt x 83.30467pt.
+
+<plot8.pdf, id=1446, 354.72073pt x 262.45152pt>
+File: plot8.pdf Graphic file (type pdf)
+ <use plot8.pdf>
+Package pdftex.def Info: plot8.pdf used on input line 261.
+(pdftex.def)             Requested size: 111.07729pt x 83.30539pt.
+
+<plot5.pdf, id=1447, 354.8157pt x 263.32901pt>
+File: plot5.pdf Graphic file (type pdf)
+ <use plot5.pdf>
+Package pdftex.def Info: plot5.pdf used on input line 262.
+(pdftex.def)             Requested size: 111.07454pt x 83.30266pt.
+
+<plot6.pdf, id=1448, 354.87451pt x 253.4553pt>
+File: plot6.pdf Graphic file (type pdf)
+ <use plot6.pdf>
+Package pdftex.def Info: plot6.pdf used on input line 263.
+(pdftex.def)             Requested size: 111.07669pt x 83.30403pt.
+
+Overfull \hbox (100.15425pt too wide) in paragraph at lines 250--270
+ []$ 
+ []
+
+
+Overfull \hbox (100.15425pt too wide) in paragraph at lines 250--270
+ []$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<a3fidm0.pdf, id=1449, 361.35pt x 279.0425pt>
+File: a3fidm0.pdf Graphic file (type pdf)
+ <use a3fidm0.pdf>
+Package pdftex.def Info: a3fidm0.pdf used on input line 276.
+(pdftex.def)             Requested size: 111.0745pt x 83.30463pt.
+
+<a3fidm1.pdf, id=1450, 361.35pt x 279.0425pt>
+File: a3fidm1.pdf Graphic file (type pdf)
+ <use a3fidm1.pdf>
+Package pdftex.def Info: a3fidm1.pdf used on input line 277.
+(pdftex.def)             Requested size: 111.0745pt x 83.30463pt.
+
+<a3fids0.pdf, id=1451, 361.35pt x 279.0425pt>
+File: a3fids0.pdf Graphic file (type pdf)
+ <use a3fids0.pdf>
+Package pdftex.def Info: a3fids0.pdf used on input line 278.
+(pdftex.def)             Requested size: 111.0745pt x 83.30463pt.
+
+<a3fids1.pdf, id=1452, 361.35pt x 269.005pt>
+File: a3fids1.pdf Graphic file (type pdf)
+ <use a3fids1.pdf>
+Package pdftex.def Info: a3fids1.pdf used on input line 279.
+(pdftex.def)             Requested size: 111.0745pt x 83.30447pt.
+
+<a3uhlm0.pdf, id=1453, 361.35pt x 274.02374pt>
+File: a3uhlm0.pdf Graphic file (type pdf)
+ <use a3uhlm0.pdf>
+Package pdftex.def Info: a3uhlm0.pdf used on input line 284.
+(pdftex.def)             Requested size: 111.0745pt x 83.30742pt.
+
+<a3uhlm1.pdf, id=1454, 361.35pt x 274.02374pt>
+File: a3uhlm1.pdf Graphic file (type pdf)
+ <use a3uhlm1.pdf>
+Package pdftex.def Info: a3uhlm1.pdf used on input line 285.
+(pdftex.def)             Requested size: 111.0745pt x 83.30742pt.
+
+<a3uhls0.pdf, id=1455, 361.35pt x 273.02pt>
+File: a3uhls0.pdf Graphic file (type pdf)
+ <use a3uhls0.pdf>
+Package pdftex.def Info: a3uhls0.pdf used on input line 286.
+(pdftex.def)             Requested size: 111.0745pt x 83.30638pt.
+
+<a3uhls1.pdf, id=1456, 346.81691pt x 243.80666pt>
+File: a3uhls1.pdf Graphic file (type pdf)
+ <use a3uhls1.pdf>
+Package pdftex.def Info: a3uhls1.pdf used on input line 287.
+(pdftex.def)             Requested size: 111.07893pt x 83.30609pt.
+
+Overfull \hbox (100.15425pt too wide) in paragraph at lines 274--294
+ []$ 
+ []
+
+
+Overfull \hbox (100.15425pt too wide) in paragraph at lines 274--294
+ []$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84 <./plot3.pdf> <./plot4.pdf
+
+pdfTeX warning: pdflatex (file ./plot4.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./plot1.pdf
+
+pdfTeX warning: pdflatex (file ./plot1.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./plot2.pdf> <./plot7.pdf> <./plot8.pdf> <./plot5.pdf> <./plot6.pdf> <./a3fi
+dm0.pdf
+
+pdfTeX warning: pdflatex (file ./a3fidm0.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+> <./a3fidm1.pdf
+
+pdfTeX warning: pdflatex (file ./a3fidm1.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+> <./a3fids0.pdf
+
+pdfTeX warning: pdflatex (file ./a3fids0.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+> <./a3fids1.pdf
+
+pdfTeX warning: pdflatex (file ./a3fids1.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+> <./a3uhlm0.pdf
+
+pdfTeX warning: pdflatex (file ./a3uhlm0.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+> <./a3uhlm1.pdf
+
+pdfTeX warning: pdflatex (file ./a3uhlm1.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+> <./a3uhls0.pdf
+
+pdfTeX warning: pdflatex (file ./a3uhls0.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+> <./a3uhls1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+
+Package natbib Warning: Citation `x:g:wen:91' on page 86 undefined on input lin
+e 305.
+
+
+Package natbib Warning: Citation `ryu:hat:02' on page 86 undefined on input lin
+e 305.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 86 undefined on i
+nput line 305.
+
+
+Package natbib Warning: Citation `kit:12' on page 86 undefined on input line 30
+5.
+
+<edgestates_BDI.pdf, id=1588, 631.38405pt x 334.34914pt>
+File: edgestates_BDI.pdf Graphic file (type pdf)
+
+<use edgestates_BDI.pdf>
+Package pdftex.def Info: edgestates_BDI.pdf used on input line 312.
+(pdftex.def)             Requested size: 252.54913pt x 133.73727pt.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 86 undefined on i
+nput line 314.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 86 undefined on i
+nput line 314.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<plot9.pdf, id=1589, 335.2525pt x 174.6525pt>
+File: plot9.pdf Graphic file (type pdf)
+ <use plot9.pdf>
+Package pdftex.def Info: plot9.pdf used on input line 320.
+(pdftex.def)             Requested size: 273.14908pt x 113.81325pt.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 86 undefined on i
+nput line 321.
+
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 86 undefined on i
+nput line 321.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `viy:riv:del:14' on page 86 undefined on input
+ line 328.
+
+[86] [87 <./edgestates_BDI.pdf> <./plot9.pdf>]
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 88 undefined on i
+nput line 338.
+
+
+Package natbib Warning: Citation `riv:viy:del:13' on page 88 undefined on input
+ line 338.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+) [88]
+\openout2 = `Chapter_DynamicalPTs.aux'.
+
+ (./Chapter_DynamicalPTs.tex
+Chapter 6.
+
+Package natbib Warning: Citation `su:sch:hee:79' on page 89 undefined on input 
+line 48.
+
+
+Package natbib Warning: Citation `qi:hug:zha:08' on page 89 undefined on input 
+line 48.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
+
+ []
+
+
+Package natbib Warning: Citation `mer:vla:pau:vie:viy:18' on page 89 undefined 
+on input line 52.
+
+[89
+
+
+
+]
+
+Package natbib Warning: Citation `hey:pol:keh:13' on page 90 undefined on input
+ line 60.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90]
+
+Package natbib Warning: Citation `chr:jam:12' on page 91 undefined on input lin
+e 93.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+Package natbib Warning: Citation `uhl:11' on page 91 undefined on input line 11
+4.
+
+[91]
+
+Package natbib Warning: Citation `bud:hey:16' on page 92 undefined on input lin
+e 123.
+
+
+Package natbib Warning: Citation `chr:jam:12' on page 92 undefined on input lin
+e 123.
+
+
+Package natbib Warning: Citation `sjo:pat:eke:ana:eri:oi:ved:00' on page 92 und
+efined on input line 140.
+
+
+Package natbib Warning: Citation `ton:sjo:kwe:oh' on page 92 undefined on input
+ line 140.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
+
+ []
+
+[92]
+
+Package natbib Warning: Citation `yan:lee:52' on page 93 undefined on input lin
+e 164.
+
+
+Package natbib Warning: Citation `lee:yan:52' on page 93 undefined on input lin
+e 164.
+
+
+Package natbib Warning: Citation `fis:65' on page 93 undefined on input line 16
+4.
+
+
+Package natbib Warning: Citation `pat:96' on page 93 undefined on input line 17
+0.
+
+[93] <susceptibility.pdf, id=1716, 479.7925pt x 333.245pt>
+File: susceptibility.pdf Graphic file (type pdf)
+
+<use susceptibility.pdf>
+Package pdftex.def Info: susceptibility.pdf used on input line 174.
+(pdftex.def)             Requested size: 239.89565pt x 166.62209pt.
+
+
+Package natbib Warning: Citation `hey:bud:17' on page 94 undefined on input lin
+e 181.
+
+
+Package natbib Warning: Citation `bah:ban:dut:17' on page 94 undefined on input
+ line 181.
+
+[94 <./susceptibility.pdf>]
+
+Package natbib Warning: Citation `hel:76' on page 95 undefined on input line 19
+2.
+
+
+Package natbib Warning: Citation `sjo:pat:eke:ana:eri:oi:ved:00' on page 95 und
+efined on input line 194.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+
+Package natbib Warning: Citation `bas:loc:sat:sin:ulb:13' on page 96 undefined 
+on input line 196.
+
+
+Package natbib Warning: Citation `hey:bud:17' on page 96 undefined on input lin
+e 200.
+
+
+Package natbib Warning: Citation `bah:ban:dut:17' on page 96 undefined on input
+ line 200.
+
+
+Overfull \hbox (49.79153pt too wide) in alignment at lines 207--209
+ [][][] []
+ []
+
+[96]
+
+Package natbib Warning: Citation `su:sch:hee:79' on page 97 undefined on input 
+line 209.
+
+
+Package natbib Warning: Citation `qi:hug:zha:08' on page 97 undefined on input 
+line 209.
+
+
+Package natbib Warning: Citation `su:sch:hee:79' on page 97 undefined on input 
+line 213.
+
+
+Package natbib Warning: Citation `ric:mel:82' on page 97 undefined on input lin
+e 213.
+
+<SSH_trivial_to_topological.pdf, id=1746, 684.5575pt x 472.76625pt>
+File: SSH_trivial_to_topological.pdf Graphic file (type pdf)
+
+<use SSH_trivial_to_topological.pdf>
+Package pdftex.def Info: SSH_trivial_to_topological.pdf used on input line 224.
+
+(pdftex.def)             Requested size: 205.36882pt x 141.83096pt.
+
+<SSH_topological_to_trivial.pdf, id=1747, 639.38875pt x 438.63875pt>
+File: SSH_topological_to_trivial.pdf Graphic file (type pdf)
+
+<use SSH_topological_to_trivial.pdf>
+Package pdftex.def Info: SSH_topological_to_trivial.pdf used on input line 233.
+
+(pdftex.def)             Requested size: 191.8181pt x 131.59264pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `qi:hug:zha:08' on page 97 undefined on input 
+line 243.
+
+[97 <./SSH_trivial_to_topological.pdf>]
+<MDM_trivial_L_topo_-1.pdf, id=1765, 691.58376pt x 454.69875pt>
+File: MDM_trivial_L_topo_-1.pdf Graphic file (type pdf)
+
+<use MDM_trivial_L_topo_-1.pdf>
+Package pdftex.def Info: MDM_trivial_L_topo_-1.pdf used on input line 261.
+(pdftex.def)             Requested size: 207.47672pt x 136.41068pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<MDM_topo_-1_trivial_L.pdf, id=1766, 691.58376pt x 454.69875pt>
+File: MDM_topo_-1_trivial_L.pdf Graphic file (type pdf)
+
+<use MDM_topo_-1_trivial_L.pdf>
+Package pdftex.def Info: MDM_topo_-1_trivial_L.pdf used on input line 268.
+(pdftex.def)             Requested size: 207.47672pt x 136.41068pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<MDM_topo_+1_topo_-1.pdf, id=1767, 691.58376pt x 460.72125pt>
+File: MDM_topo_+1_topo_-1.pdf Graphic file (type pdf)
+
+<use MDM_topo_+1_topo_-1.pdf>
+Package pdftex.def Info: MDM_topo_+1_topo_-1.pdf used on input line 275.
+(pdftex.def)             Requested size: 207.47672pt x 138.21744pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `kem:que:smi:16' on page 98 undefined on input
+ line 282.
+
+[98 <./SSH_topological_to_trivial.pdf>]
+<MDM_trivial_L_topo_+1.pdf, id=1780, 691.58376pt x 458.71375pt>
+File: MDM_trivial_L_topo_+1.pdf Graphic file (type pdf)
+
+<use MDM_trivial_L_topo_+1.pdf>
+Package pdftex.def Info: MDM_trivial_L_topo_+1.pdf used on input line 293.
+(pdftex.def)             Requested size: 207.47672pt x 137.61519pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<MDM_topo_-1_trivial_R.pdf, id=1781, 691.58376pt x 457.71pt>
+File: MDM_topo_-1_trivial_R.pdf Graphic file (type pdf)
+
+<use MDM_topo_-1_trivial_R.pdf>
+Package pdftex.def Info: MDM_topo_-1_trivial_R.pdf used on input line 302.
+(pdftex.def)             Requested size: 207.47672pt x 137.31406pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[99 <./MDM_trivial_L_topo_-1.pdf> <./MDM_topo_-1_trivial_L.pdf
+
+pdfTeX warning: pdflatex (file ./MDM_topo_-1_trivial_L.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>]
+
+Package natbib Warning: Citation `hey:bud:17' on page 100 undefined on input li
+ne 319.
+
+
+Package natbib Warning: Citation `bah:ban:dut:17' on page 100 undefined on inpu
+t line 319.
+
+) [100 <./MDM_topo_+1_topo_-1.pdf> <./MDM_trivial_L_topo_+1.pdf
+
+pdfTeX warning: pdflatex (file ./MDM_trivial_L_topo_+1.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [101 <./MDM_topo_-1_trivial_R.pdf>]
+\openout2 = `Chapter_Conclusions.aux'.
+
+ (./Chapter_Conclusions.tex [102
+
+
+
+]
+Chapter 7.
+
+Package natbib Warning: Citation `nik:08' on page 103 undefined on input line 4
+3.
+
+
+Package natbib Warning: Citation `bec:tit:00' on page 103 undefined on input li
+ne 46.
+
+
+Package natbib Warning: Citation `cer:bou:kar:gis:02' on page 103 undefined on 
+input line 46.
+
+
+Package natbib Warning: Citation `bru:chr:eke:eng:ber:kas:mac:03' on page 103 u
+ndefined on input line 46.
+
+
+Package natbib Warning: Citation `nik:alb:05' on page 103 undefined on input li
+ne 46.
+
+
+Package natbib Warning: Citation `she:sca:10' on page 103 undefined on input li
+ne 46.
+
+
+Package natbib Warning: Citation `cha:15' on page 103 undefined on input line 4
+6.
+
+
+Underfull \vbox (badness 3179) has occurred while \output is active []
+
+ [103]
+
+Package natbib Warning: Citation `kit:rud:ber:dem:10' on page 104 undefined on 
+input line 54.
+
+
+Package natbib Warning: Citation `kit:12' on page 104 undefined on input line 5
+4.
+
+
+Underfull \vbox (badness 6675) has occurred while \output is active []
+
+ [104])
+[105]
+\openout2 = `AppendixA.aux'.
+
+ (./AppendixA.tex [106
+
+
+
+]
+Overfull \hbox (33.07611pt too wide) in alignment at lines 74--78
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [107pdfTeX warning (ext4): destination with the same identifier (name{equation
+.Alph0.0.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.78 \end{eqnarray}
+                   ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [108]
+Overfull \hbox (34.2294pt too wide) detected at line 160
+[][]\OT1/cmr/m/n/12 ([]) = 2[]\OML/cmm/m/it/12 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+) [110]
+\openout2 = `AppendixB.aux'.
+
+ (./AppendixB.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [111
+
+
+
+]
+Overfull \hbox (53.59279pt too wide) detected at line 86
+[] [] [][] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 i [][] d^^\[]
+\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; ^^\\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ 
+[][] [][] \OML/cmm/m/it/12 d^^\[]d^^\[]T [] :
+ []
+
+
+Overfull \hbox (17.77174pt too wide) in alignment at lines 90--95
+ [][][] []
+ []
+
+
+Overfull \hbox (7.67407pt too wide) in alignment at lines 104--106
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [112]
+Underfull \vbox (badness 5548) has occurred while \output is active []
+
+ [113]
+Overfull \hbox (15.00194pt too wide) detected at line 171
+\OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ) =
+ [][] [] = [] [] [] [] [] [] [] [] [] \OML/cmm/m/it/12 :
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [114]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [115]
+Underfull \vbox (badness 7558) has occurred while \output is active []
+
+ [116]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [117]
+Overfull \hbox (22.98619pt too wide) detected at line 313
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]dR\OT1/cmr/m/n/12 )[] = 2[]\OML/cmm/m/it/1
+2 d\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U\OT
+1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 "[] \OMS/cmsy/m/n/12 ^^@ []\OT
+1/cmr/m/n/12 (2\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 (\OML/cmm/m/
+it/12 ^^U\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )
+\OML/cmm/m/it/12 d [] "[] \OT1/cmr/m/n/12 + 4 [][](\OMS/cmsy/m/n/12 j\OML/cmm/m
+/it/12 x\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 
+j\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 d [] :
+ []
+
+
+Overfull \hbox (45.15399pt too wide) in alignment at lines 315--318
+ [][][] []
+ []
+
+
+Overfull \hbox (63.85301pt too wide) in alignment at lines 321--324
+ [][][] []
+ []
+
+
+Overfull \hbox (10.12163pt too wide) in paragraph at lines 332--332
+[][]\OT1/cmr/bx/n/17.28 Dynamical in-ter-fer-o-met-ric sus-cep-ti-bil-ity $[]$ 
+at fi-nite tem-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [118]
+Overfull \hbox (67.65091pt too wide) in alignment at lines 362--367
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [119]
+Overfull \hbox (27.21497pt too wide) detected at line 386
+[] [] \OML/cmm/m/it/10.95 ^^N[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^U[]\
+OT1/cmr/m/n/10.95 )[](\OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 ) + (1 \OMS/c
+msy/m/n/10.95 ^^@ [] []\OT1/cmr/m/n/10.95 )[][](\OML/cmm/m/it/10.95 ^^U[]\OT1/c
+mr/m/n/10.95 )[][](\OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/1
+0.95 :
+ []
+
+
+Overfull \hbox (48.87743pt too wide) in alignment at lines 388--392
+ [][][] []
+ []
+
+
+Overfull \hbox (20.23311pt too wide) detected at line 403
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 ) = [][\OMS/cmsy/m/n/1
+0 h\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 )
+\OML/cmm/m/it/10 ; P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 )\
+OMS/cmsy/m/n/10 i\OT1/cmr/m/n/10 ] + \OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 (1 \OM
+S/cmsy/m/n/10 ^^@ [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^L\OMS/cmsy/m/n/10 j\O
+ML/cmm/m/it/10 x\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OMS/cmsy/m/n/10 j\OT1/c
+mr/m/n/10 ))\OMS/cmsy/m/n/10 h[]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 (\OML/cmm/
+m/it/10 ^^U[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 ih[]\OML/cmm/m/it/10 ; []\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 i\OML/cmm/m/i
+t/10 :
+ []
+
+
+Overfull \hbox (57.3232pt too wide) in alignment at lines 406--409
+ [][][] []
+ []
+
+
+Overfull \hbox (53.22801pt too wide) detected at line 413
+\OMS/cmsy/m/n/12 jA\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 )\OMS/cms
+y/m/n/12 j[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 j[] [] j[] \OT1/cmr/m/n/12 = []
+[] = 1 \OMS/cmsy/m/n/12 ^^@ []\OML/cmm/m/it/12 s[] \OT1/cmr/m/n/12 + []
+ []
+
+
+Overfull \hbox (44.39967pt too wide) in alignment at lines 415--418
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [120]
+
+Package natbib Warning: Citation `sjo:pat:eke:ana:eri:oi:ved:00' on page 121 un
+defined on input line 435.
+
+
+Package natbib Warning: Citation `ton:sjo:kwe:oh' on page 121 undefined on inpu
+t line 435.
+
+
+Underfull \vbox (badness 4531) has occurred while \output is active []
+
+ [121]
+Overfull \hbox (3.152pt too wide) in paragraph at lines 459--461
+\OT1/cmr/m/n/12 If we take $\OML/cmm/m/it/12 ^^Z \OT1/cmr/m/n/12 = [](\OMS/cmsy
+/m/n/12 ^^@\OML/cmm/m/it/12 ^^LH\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U[]\OT1/cmr
+/m/n/12 ))\OML/cmm/m/it/12 =[]\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 e[]\OMS/cmsy/m
+/n/12 g$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 U[] \OT1/cmr/m/n/12 = [](\OMS/cmsy/
+m/n/12 ^^@\OML/cmm/m/it/12 itH\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U[]\OT1/cmr/m
+/n/12 ))$ and $\OML/cmm/m/it/12 U[] \OT1/cmr/m/n/12 = [](\OMS/cmsy/m/n/12 ^^@\O
+ML/cmm/m/it/12 itH\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U[]\OT1/cmr/m/n/12 ))$,
+ []
+
+) [122]
+No file Chrysis_final.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+(./Chrysis_final.aux (./Introduction.aux) (./Chapter_Publickey.aux)
+(./Chapter_QKD.aux) (./Chapter_FidelityAndUhlmann.aux) (./Chapter_TopoQW.aux)
+(./Chapter_DynamicalPTs.aux) (./Chapter_Conclusions.aux) (./AppendixA.aux)
+(./AppendixB.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package rerunfilecheck Info: File `Chrysis_final.out' has not changed.
+(rerunfilecheck)             Checksum: ABBAFF2053B1D1CC955796E732FC79C3;4873.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+ ) 
+Here is how much of TeX's memory you used:
+ 9740 strings out of 494910
+ 145209 string characters out of 6179837
+ 258670 words of memory out of 5000000
+ 12357 multiletter control sequences out of 15000+600000
+ 35170 words of font info for 119 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 38i,14n,43p,3585b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/chrysoula/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </ho
+me/chrysoula/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrb1440.600pk> </home/chry
+soula/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/chrysoula/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecrb2074.600pk> </home/chrysoula/.texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecrb1728.600pk></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/rsfs/rsfs10.pfb>
+Output written on Chrysis_final.pdf (144 pages, 8185413 bytes).
+PDF statistics:
+ 2262 PDF objects out of 2487 (max. 8388607)
+ 1754 compressed objects within 18 object streams
+ 368 named destinations out of 1000 (max. 500000)
+ 758 words of extra memory for PDF output out of 10000 (max. 10000000)
+

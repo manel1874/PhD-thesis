@@ -1,0 +1,63 @@
+\contentsline {section}{Abstract}{v}{chapter*.1}
+\contentsline {section}{Resumo}{vii}{chapter*.2}
+\contentsline {section}{Acknowledgements}{ix}{chapter*.3}
+\contentsline {section}{List of Figures}{xv}{section*.5}
+\contentsline {section}{List of Tables}{xix}{section*.7}
+\contentsline {section}{List of Abbreviations}{xxi}{section*.9}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Public-key cryptography}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Quantum key distribution}{7}{section.1.3}
+\contentsline {section}{\numberline {1.4}One-dimensional discrete-time quantum walks}{9}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Shift operator on the circle}{10}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.5}Free-fermion systems exhibiting non-trivial topological order}{10}{section.1.5}
+\contentsline {section}{\numberline {1.6}The fidelity, the Uhlmann connection and their use in the study of phase transitions of systems in equilibrium}{12}{section.1.6}
+\contentsline {section}{\numberline {1.7}Phase transitions of systems out of equilibrium }{16}{section.1.7}
+\contentsline {section}{\numberline {1.8}Structure of the thesis}{17}{section.1.8}
+\contentsline {chapter}{\numberline {2}A public-key cryptographic system based on quantum walks}{21}{chapter.2}
+\contentsline {section}{\numberline {2.1}Public-key encryption based on discrete-time quantum walks}{22}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Correctness of the protocol}{23}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Security of the protocol}{24}{section.2.2}
+\contentsline {section}{\numberline {2.3}Efficiency of the protocol}{27}{section.2.3}
+\contentsline {section}{\numberline {2.4}Conclusions}{27}{section.2.4}
+\contentsline {chapter}{\numberline {3}Quantum key distribution based on quantum walks}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Two-way quantum key distribution protocol}{30}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Security of the protocol}{32}{subsection.3.1.1}
+\contentsline {subsubsection}{Standard verification}{32}{section*.12}
+\contentsline {subsubsection}{Verification using maximally entangled states}{34}{section*.13}
+\contentsline {subsection}{\numberline {3.1.2}Efficiency and quantum memory requirements}{35}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}One-way quantum key distribution protocol}{36}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Security of the protocol}{38}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Evaluation}{40}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Semi-quantum key distribution protocol}{46}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Proof of robustness}{48}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Practical attacks}{53}{section.3.4}
+\contentsline {section}{\numberline {3.5}Conclusions}{57}{section.3.5}
+\contentsline {chapter}{\numberline {4}Fidelity and Uhlmann connection analysis of fermionic systems undergoing phase transitions}{61}{chapter.4}
+\contentsline {section}{\numberline {4.1}Fidelity and $\Delta $ analysis of topological insulators and superconductors}{62}{section.4.1}
+\contentsline {section}{\numberline {4.2}Edge states of topological insulators and superconductors}{65}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Topological insulators}{65}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Topological superconductors}{67}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Fidelity and $\Delta $ analysis of BCS superconductors}{69}{section.4.3}
+\contentsline {section}{\numberline {4.4}The choice of the parameter space in the study of topological phase transitions}{71}{section.4.4}
+\contentsline {chapter}{\numberline {5}Simulation of topological systems with quantum walks}{75}{chapter.5}
+\contentsline {section}{\numberline {5.1}Topological quantum walks}{77}{section.5.1}
+\contentsline {section}{\numberline {5.2}Boltzmann-Gibbs density operators}{80}{section.5.2}
+\contentsline {section}{\numberline {5.3}Fidelity and $\Delta $ analysis}{82}{section.5.3}
+\contentsline {section}{\numberline {5.4}The edge states}{86}{section.5.4}
+\contentsline {section}{\numberline {5.5}Conclusions}{87}{section.5.5}
+\contentsline {chapter}{\numberline {6}Phase transitions at finite temperatures of topological systems out of equilibrium}{89}{chapter.6}
+\contentsline {section}{\numberline {6.1}Dynamical (quantum) phase transitions and the associated susceptibilities}{90}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}DQPTs for pure states}{90}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Generalisations at finite temperatures}{91}{subsection.6.1.2}
+\contentsline {subsubsection}{Fidelity Loschmidt Echo at $T>0$}{91}{section*.34}
+\contentsline {subsubsection}{Interferometric Loschmidt Echo at $T>0$}{92}{section*.35}
+\contentsline {subsection}{\numberline {6.1.3}Two-band systems}{93}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Comparing the two approaches}{94}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}DPTs of topological insulators at finite temperatures}{96}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}SSH model (1D)}{97}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}MD model (2D)}{98}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Conclusions}{99}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusions}{103}{chapter.7}
+\contentsline {section}{Appendix A}{107}{appendix*.44}
+\contentsline {section}{Appendix B}{111}{appendix*.45}

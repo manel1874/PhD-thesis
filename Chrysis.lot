@@ -1,0 +1,10 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Showing the optimal choice of QW parameters to maximise the noise tolerance ($Q_{\text {max}}$) of the resulting protocol. For this data, we searched for QWs with at most $T_{\text {max}} = 5000$ steps and with parameters $\theta ,\phi \in \{k\pi /10 \text { } | \text { } k = 0, 1, \cdots , 10\}$.\relax }}{42}{table.3.1}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Showing the optimal choice of QW parameters to maximise the noise tolerance ($Q_{\text {max}}$) of the resulting protocol. For this data, we searched for QWs with at most $T_{\text {max}} = 5000$ steps and with parameters $\theta ,\phi \in \{k\pi /20 \text { } | \text { } k = 0, 1, \cdots , 20\}$.\relax }}{43}{table.3.2}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Classes with CS in 1D and the respective QW protocols. The values of the parameters $\theta _1$ and $\theta _2$ that correspond to distinct topological phases are shown, as well as the respective winding numbers $\nu $ of each phase.\relax }}{75}{table.caption.28}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
