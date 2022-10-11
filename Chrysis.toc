@@ -23,4 +23,5 @@
 \contentsline {section}{\numberline {2.4}Functionality definitions}{8}{section.2.4}
 \contentsline {chapter}{\numberline {3}Quantum Oblivious Transfer}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Impossibility results}{10}{section.3.1}
-\contentsline {chapter}{Bibliography}{15}{chapter*.19}
+\contentsline {section}{\numberline {3.2}QOT BBCS-based protocols}{11}{section.3.2}
+\contentsline {chapter}{Bibliography}{20}{chapter*.19}

@@ -1,0 +1,50 @@
+%\documentclass[11pt]{report}
+
+
+
+%\begin{document}
+
+\chapter{Quantum Oblivious Transfer}
+%\addcontentsline{toc}{chapter}{Introduction}
+
+
+In a recent survey on classical oblivious transfer (OT) \cite{YAVV22}, all the analysed protocols require some form of asymmetric cryptography. Indeed, in the classical setting, it is impossible to develop information-theoretic secure OT or even reduce it to one-way functions, requiring some public-key computational assumptions. As shown by Impaggliazzo and Rudich \cite{IR89}, one-way functions (symmetric cryptography) alone do not imply key agreement (asymmetric cryptography). Also, Gertner et al. \cite{GKMRV00} pointed out that since it is known that OT implies key agreement, this sets a separation between symmetric cryptography and OT, leading to the conclusion that OT cannot be generated alone by symmetric cryptography. Otherwise, one could use one-way functions to implement key agreement through the OT construction. This poses a threat to all classical OT protocols \cite{EGL85, NP01, CO15} that are based on mathematical assumptions provably broken by a quantum computer \cite{Sho95}. Besides the security problem, asymmetric cryptography tends to be computationally more complex than symmetric cryptography, creating a problem in terms of speed when a large number of OTs are required. The classical post-quantum approach, thrives to find protocols resistant against quantum computer attacks. However, these are still based on complexity problems and are not necessarily less computationally expensive, than the previously mentioned ones. 
+
+In parallel to the classical post-quantum approach, the quantum cryptography community presented some OT protocols based on quantum technologies to tackle this security issue. Intriguingly enough, more than a decade before the first classical OT by Rabin (1981, \cite{Rabin81}) was published, Wiesner proposed a similar concept. However, at the time it was rejected for publication due to the lack of acceptance in the research community. The first published quantum OT (QOT) protocol, known as the BBCS (Bennett-Brassard-Cr{\'e}peau-Skubiszewska) protocol \cite{BBCS92} was only presented in 1992. Remarkably, there is a distinctive difference between classical and quantum OT from a security standpoint, as the latter is proved to be possible assuming only the existence of quantum-hard one-way functions \cite{GLSV21, BCKM21}. This means quantum OT requires weaker security assumptions than classical OT.
+
+In this chapter, we review the particular topic of quantum OT. We mainly comment on several important OT protocols, their underlying security models and assumptions. To the best of our knowledge, there is no prior survey dedicated to quantum OT protocols alone. Usually, its analysis is integrated into more general surveys under the topic of ``quantum cryptography", leading to a less in-depth exposition of the topic. For reference, we provide some distinctive reviews on the general topic of quantum cryptography \cite{BC96, B05, M06, F10, B15, PAB+20, PR21, SH22}.
+
+This chapter is divided as follows. We start by giving a brief overview of the impossibility results related to quantum OT. Then, we provide an exposition about some of the most well-known quantum OT protocols based on assumptions. Finally, we give a brief overview of OT protocols not covered throughout this thesis.
+
+%********************************** %First Section  **************************************
+\section{Impossibility results}
+
+The beginning of the development of quantum OT (QOT) came hand in hand with the development of quantum bit commitment (QBC). In fact, the first proposed QOT protocol (BBCS \cite{BBCS92}) reduces QOT to QBC . This sets a distinctive difference between classical and quantum protocols. Although bit commitment (BC) can be reduced to oblivious transfer (OT) \cite{K88}, the reverse is not true using only classical communication \cite{S99}. Therefore, Yao's proof \cite{Y95} of BBCS protocol \cite{BBCS92} gives quantum communications the enhanced quality of having an equivalence between QOT and QBC - they can be reduced to each other - a relation that is not known in the classical realm.
+
+At the time of the BBCS protocol, the quest for unconditionally secure QOT was based on the possibility of unconditional secure QBC. A year later, Brassard et al. presented a QBC protocol \cite{BCJL93} named after the authors, BCJL (Brassard-Crépeau-Jozsa-Langlois). However, this work presented a flawed proof of its unconditional security which was generally accepted for some time, until Mayers spotted an issue on it \cite{M96}. Just one year after, Lo and Chau \cite{LC97}, and Mayers \cite{M97} independently proved unconditional QBC to be impossible. Nevertheless, the existence of unconditionally secure QOT not based on QBC was still put as an open question \cite{BC96} even after the so-called no-go theorems \cite{LC97, M97}. However, Lo was able to prove directly that unconditionally secure QOT is also impossible \cite{L97}. He concluded this as a corollary of a more general result that states that secure two-party computations which allow only one of the parties to learn the result (one-side secure two-party computation) cannot be unconditionally secure. Lo's results triggered a line of research on the possibility of two-sided secure two-party computation (both parties are allowed to learn the result without having access to the other party's inputs), which was also proved by Colbeck to be impossible \cite{C07} and extended in subsequent works \cite{BCS12, SSS14, SJFHV13}. For a more in-depth review of the impossibility results presented by Lo, Chau and Mayers, we refer the interested reader to the following works \cite{BCMS97, S99}.
+
+Although the impossibility results have been well accepted in the quantum cryptography community, there was some criticism regarding the generality of the results \cite{Y00, Y02, Y04, C03}. This line of research reflects the view put forward by Yuen \cite{Y00} in the first of these papers: ``Since there is no known characterization of all possible QBC protocols, logically there can really be no general impossibility proof, strong or not, even if it were indeed impossible to have an unconditionally secure QBC protocol.'' In parallel, subsequent analyses were carried out, reaffirming the general belief of impossibility \cite{B01, C05, Che07}. However, most of the discord has ended with Ariano et al. proof \cite{A07} in 2007, giving an impossibility proof covering all conceivable protocols based on classical and quantum information theory. Subsequent work digested Ariano et al. \cite{A07} work, trying to present more succinct proofs \cite{CAP10, CAPSW13, H13} and to translate it into categorical quantum mechanics language \cite{K12, SHW20, BK22}. 
+
+Facing these impossibility results, the quantum cryptography community followed two main paths:
+
+\begin{enumerate}
+    \item Develop OT protocols under some assumptions. These could be based on limiting the technological power of the adversary (e.g. noisy-storage model, relativistic protocols, isolated-qubit model) or assuming the security of additional functionalities (e.g. bit commitment).
+    \item Develop OT protocols with a relaxed security definition. These allow the adversary to extract, with a given probability, some information (partial or total) about the honest party input/output. This approach leads to the concepts of weak OT  and weak private database query.
+\end{enumerate}
+
+In the next section, we explore protocols that produce a special primitive called \textit{oblivious keys} as an intermediate step.
+
+
+%********************************** %Second Section  **************************************
+\section{QOT BBCS-based protocols}
+
+In this section, we explore protocols that circumvent the no-go theorems \cite{LC97, M97} utilizing some assumptions. Some of the presented solutions are based on one-way functions, which are believed to be quantum-hard \cite{BCKM21, GLSV21,A02}, and others rely on some technological or physical limitation of the adversaries \cite{DFSS05, WST08, KWW12, L14, Pit16, Ken11}. The latter are qualitatively different from complexity-based assumptions on which post-quantum protocols rely. Also, all these assumptions have the important property that they only have to hold during the execution of the protocol for its security to be preserved. In other words, even if the assumptions lose their validity at some later point in time, the security of the protocol is not compromised, which also makes a major distinction from classical cryptographic approaches. This property is commonly known as \textit{everlasting} security \cite{U18}. 
+
+We start by presenting the first QOT protocol. Then, we see how this leads to the development of two assumption models: $\mathcal{F}_{\text{COM}}-$hybrid model and the limited-quantum-storage model.
+
+
+
+
+%\bibliography{bibforthesis}
+%\bibliographystyle{unsrt}
+%\end{document}

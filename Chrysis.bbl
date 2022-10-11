@@ -318,4 +318,182 @@ Tung Chou and Claudio Orlandi.
   in Cryptology -- LATINCRYPT 2015 - Volume 9230}, page 40–58, Berlin,
   Heidelberg, 2015. Springer-Verlag.
 
+\bibitem{BC96}
+Gilles Brassard and Claude Cr{\'{e}}peau.
+\newblock 25 years of quantum cryptography.
+\newblock {\em {ACM} {SIGACT} News}, 27(3):13--24, September 1996.
+
+\bibitem{B05}
+G.~Brassard.
+\newblock Brief history of quantum cryptography: a personal perspective.
+\newblock In {\em {IEEE} Information Theory Workshop on Theory and Practice in
+  Information-Theoretic Security.} {IEEE}, 2005.
+
+\bibitem{M06}
+J\"{o}rn M\"{u}ller-Quade.
+\newblock Quantum cryptography beyond key exchange.
+\newblock {\em Informatik - Forschung und Entwicklung}, 21(1-2):39--54,
+  September 2006.
+
+\bibitem{F10}
+Serge Fehr.
+\newblock Quantum cryptography.
+\newblock {\em Foundations of Physics}, 40(5):494--531, January 2010.
+
+\bibitem{PAB+20}
+S.~Pirandola, U.~L. Andersen, L.~Banchi, M.~Berta, D.~Bunandar, R.~Colbeck,
+  D.~Englund, T.~Gehring, C.~Lupo, C.~Ottaviani, J.~L. Pereira, M.~Razavi,
+  J.~Shamsul Shaari, M.~Tomamichel, V.~C. Usenko, G.~Vallone, P.~Villoresi, and
+  P.~Wallden.
+\newblock Advances in quantum cryptography.
+\newblock {\em Advances in Optics and Photonics}, 12(4):1012, December 2020.
+
+\bibitem{PR21}
+Christopher Portmann and Renato Renner.
+\newblock Security in quantum cryptography, 2021.
+
+\bibitem{SH22}
+Shihai Sun and Anqi Huang.
+\newblock A review of security evaluation of practical quantum key distribution
+  system.
+\newblock {\em Entropy}, 24(2):260, February 2022.
+
+\bibitem{S99}
+Louis Salvail.
+\newblock {\em The Search for the Holy Grail in Quantum Cryptography}, pages
+  183--216.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 1999.
+
+\bibitem{Y95}
+Andrew Chi-Chih Yao.
+\newblock Security of quantum protocols against coherent measurements.
+\newblock In {\em Proceedings of the twenty-seventh annual {ACM} symposium on
+  Theory of computing - {STOC} '95}. {ACM} Press, 1995.
+
+\bibitem{BCJL93}
+G.~Brassard, C.~Crepeau, R.~Jozsa, and D.~Langlois.
+\newblock A quantum bit commitment scheme provably unbreakable by both parties.
+\newblock In {\em Proceedings of 1993 {IEEE} 34th Annual Foundations of
+  Computer Science}. {IEEE}, 1993.
+
+\bibitem{M96}
+Dominic Mayers.
+\newblock The trouble with quantum bit commitment, 1996.
+
+\bibitem{LC97}
+Hoi-Kwong Lo and H.~F. Chau.
+\newblock Is quantum bit commitment really possible?
+\newblock {\em Physical Review Letters}, 78(17):3410--3413, April 1997.
+
+\bibitem{M97}
+Dominic Mayers.
+\newblock Unconditionally secure quantum bit commitment is impossible.
+\newblock {\em Physical Review Letters}, 78(17):3414--3417, April 1997.
+
+\bibitem{L97}
+Hoi-Kwong Lo.
+\newblock Insecurity of quantum secure computations.
+\newblock {\em Physical Review A}, 56(2):1154--1162, August 1997.
+
+\bibitem{C07}
+Roger Colbeck.
+\newblock Impossibility of secure two-party classical computation.
+\newblock {\em Physical Review A}, 76(6), December 2007.
+
+\bibitem{BCS12}
+Harry Buhrman, Matthias Christandl, and Christian Schaffner.
+\newblock Complete insecurity of quantum protocols for classical two-party
+  computation.
+\newblock {\em Physical Review Letters}, 109(16), October 2012.
+
+\bibitem{SSS14}
+Louis Salvail, Christian Schaffner, and Miroslava Sot{\'{a}}kov{\'{a}}.
+\newblock Quantifying the leakage of quantum protocols for classical two-party
+  cryptography.
+\newblock {\em International Journal of Quantum Information}, 13(04):1450041,
+  December 2014.
+
+\bibitem{SJFHV13}
+Serge Fehr, Jonathan Katz, Fang Song, Hong-Sheng Zhou, and Vassilis Zikas.
+\newblock Feasibility and completeness of cryptographic tasks in the quantum
+  world.
+\newblock In Amit Sahai, editor, {\em Theory of Cryptography}, pages 281--296,
+  Berlin, Heidelberg, 2013. Springer Berlin Heidelberg.
+
+\bibitem{BCMS97}
+Gilles Brassard, Claude Crépeau, Dominic Mayers, and Louis Salvail.
+\newblock A brief review on the impossibility of quantum bit commitment, 1997.
+
+\bibitem{Y00}
+Horace~P. Yuen.
+\newblock Unconditionally secure quantum bit commitment is possible, 2000.
+
+\bibitem{Y02}
+Horace~P. Yuen.
+\newblock Quantum bit commitment and unconditional security, 2002.
+
+\bibitem{Y04}
+Horace~P. Yuen.
+\newblock How to build unconditionally secure quantum bit commitment protocols,
+  2003.
+
+\bibitem{C03}
+Chi-Yee Cheung.
+\newblock Quantum bit commitment can be unconditionally secure, 2001.
+
+\bibitem{B01}
+Jeffrey Bub.
+\newblock The quantum bit commitment theorem.
+\newblock {\em Foundations of Physics}, 31(5):735--756, 2001.
+
+\bibitem{C05}
+Chi-Yee Cheung.
+\newblock Secret parameters in quantum bit commitment, 2005.
+
+\bibitem{Che07}
+CHI-YEE CHEUNG.
+\newblock Quantum bit commitment with secret parameters.
+\newblock {\em International Journal of Modern Physics B},
+  21(23n24):4271--4274, September 2007.
+
+\bibitem{A07}
+Giacomo~Mauro D'Ariano, Dennis Kretschmann, Dirk Schlingemann, and Reinhard~F.
+  Werner.
+\newblock Reexamination of quantum bit commitment: The possible and the
+  impossible.
+\newblock {\em Physical Review A}, 76(3), September 2007.
+
+\bibitem{CAP10}
+Giulio Chiribella, Giacomo~Mauro D'Ariano, and Paolo Perinotti.
+\newblock Probabilistic theories with purification.
+\newblock {\em Physical Review A}, 81(6), June 2010.
+
+\bibitem{CAPSW13}
+Giulio Chiribella, Giacomo~Mauro D'Ariano, Paolo Perinotti, Dirk Schlingemann,
+  and Reinhard Werner.
+\newblock A short impossibility proof of quantum bit commitment.
+\newblock {\em Physics Letters A}, 377(15):1076--1087, June 2013.
+
+\bibitem{H13}
+Guang~Ping He.
+\newblock Comment on "a short impossibility proof of quantum bit commitment",
+  2013.
+
+\bibitem{K12}
+Katriel Cohn-Gordon.
+\newblock Commitment algorithms.
+\newblock Master's thesis, University of Oxford, Oxford, UK, 2012.
+
+\bibitem{SHW20}
+Xin Sun, Feifei He, and Quanlong Wang.
+\newblock Impossibility of quantum bit commitment, a categorical perspective.
+\newblock {\em Axioms}, 9(1):28, March 2020.
+
+\bibitem{BK22}
+Anne Broadbent and Martti Karvonen.
+\newblock Categorical composable cryptography.
+\newblock In Patricia Bouyer and Lutz Schr{\"o}der, editors, {\em Foundations
+  of Software Science and Computation Structures}, pages 161--183, Cham, 2022.
+  Springer International Publishing.
+
 \end{thebibliography}

@@ -3,47 +3,49 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Chrysis.aux
 A level-1 auxiliary file: Introduction/Introduction.aux
 A level-1 auxiliary file: Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux
-A level-1 auxiliary file: Chapter_QuantumObliviousTransfer.aux
+A level-1 auxiliary file: Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux
 The style file: unsrt.bst
 Database file #1: References/References.bib
-You've used 51 entries,
+Warning--can't use both author and editor fields in S99
+You've used 84 entries,
             1791 wiz_defined-function locations,
-            815 strings with 13434 characters,
-and the built_in function-call counts, 14551 in all, are:
-= -- 1315
-> -- 691
-< -- 19
-+ -- 247
-- -- 196
-* -- 995
-:= -- 2198
-add.period$ -- 177
-call.type$ -- 51
-change.case$ -- 51
+            1005 strings with 17737 characters,
+and the built_in function-call counts, 21422 in all, are:
+= -- 1907
+> -- 991
+< -- 22
++ -- 363
+- -- 279
+* -- 1456
+:= -- 3276
+add.period$ -- 272
+call.type$ -- 84
+change.case$ -- 83
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 701
-empty$ -- 1397
-format.name$ -- 196
-if$ -- 3384
+cite$ -- 85
+duplicate$ -- 999
+empty$ -- 2120
+format.name$ -- 279
+if$ -- 4917
 int.to.chr$ -- 0
-int.to.str$ -- 51
-missing$ -- 48
-newline$ -- 257
-num.names$ -- 64
-pop$ -- 190
+int.to.str$ -- 84
+missing$ -- 72
+newline$ -- 413
+num.names$ -- 101
+pop$ -- 305
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 364
+skip$ -- 512
 stack$ -- 0
-substring$ -- 889
-swap$ -- 232
-text.length$ -- 19
+substring$ -- 1276
+swap$ -- 295
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 127
-width$ -- 53
-write$ -- 587
+warning$ -- 1
+while$ -- 193
+width$ -- 86
+write$ -- 928
+(There was 1 warning)
