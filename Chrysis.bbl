@@ -255,4 +255,67 @@ Armando~N. Pinto, Laura Ortiz, Manuel Santos, Ana~C. Gomes, Juan~P. Brito,
 \newblock In {\em 2020 22nd International Conference on Transparent Optical
   Networks ({ICTON})}. {IEEE}, July 2020.
 
+\bibitem{Rabin81}
+Michael~O. Rabin.
+\newblock How to exchange secrets with oblivious transfer.
+\newblock Technical Report TR-81, Aiken Computation Laboratory, Harvard
+  University, 1981.
+
+\bibitem{Che04}
+Yan-Cheng Chang.
+\newblock Single database private information retrieval with logarithmic
+  communication.
+\newblock In Huaxiong Wang, Josef Pieprzyk, and Vijay Varadharajan, editors,
+  {\em Information Security and Privacy}, pages 50--61, Berlin, Heidelberg,
+  2004. Springer Berlin Heidelberg.
+
+\bibitem{MEP17}
+Michele Orr{\`u}, Emmanuela Orsini, and Peter Scholl.
+\newblock Actively secure 1-out-of-n ot extension with application to private
+  set intersection.
+\newblock In Helena Handschuh, editor, {\em Topics in Cryptology -- CT-RSA
+  2017}, pages 381--396, Cham, 2017. Springer International Publishing.
+
+\bibitem{BHM+19}
+Bo~Bi, Darong Huang, Bo~Mi, Zhenping Deng, and Hongyang Pan.
+\newblock Efficient {LBS} security-preserving based on {NTRU} oblivious
+  transfer.
+\newblock {\em Wireless Personal Communications}, 108(4):2663--2674, May 2019.
+
+\bibitem{YAVV22}
+Vijay~Kumar Yadav, Nitish Andola, Shekhar Verma, and S~Venkatesan.
+\newblock A survey of oblivious transfer protocol.
+\newblock {\em {ACM} Computing Surveys}, January 2022.
+
+\bibitem{IR89}
+Russel Impagliazzo and Steven Rudich.
+\newblock Limits on the provable consequences of one-way permutations.
+\newblock In {\em Proceedings of the Twenty-First Annual ACM Symposium on
+  Theory of Computing}, STOC '89, page 44–61, New York, NY, USA, 1989.
+  Association for Computing Machinery.
+
+\bibitem{GKMRV00}
+Y.~Gertner, S.~Kannan, T.~Malkin, O.~Reingold, and M.~Viswanathan.
+\newblock The relationship between public key encryption and oblivious
+  transfer.
+\newblock In {\em Proceedings 41st Annual Symposium on Foundations of Computer
+  Science}. {IEEE} Comput. Soc, 2000.
+
+\bibitem{EGL85}
+Shimon Even, Oded Goldreich, and Abraham Lempel.
+\newblock A randomized protocol for signing contracts.
+\newblock {\em Commun. ACM}, 28(6):637--647, June 1985.
+
+\bibitem{NP01}
+M.~Naor and Benny Pinkas.
+\newblock Efficient oblivious transfer protocols.
+\newblock In {\em SODA '01}, 2001.
+
+\bibitem{CO15}
+Tung Chou and Claudio Orlandi.
+\newblock The simplest protocol for oblivious transfer.
+\newblock In {\em Proceedings of the 4th International Conference on Progress
+  in Cryptology -- LATINCRYPT 2015 - Volume 9230}, page 40–58, Berlin,
+  Heidelberg, 2015. Springer-Verlag.
+
 \end{thebibliography}

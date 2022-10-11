@@ -1,0 +1,95 @@
+%\documentclass[11pt]{report}
+
+
+
+%\begin{document}
+
+\chapter{Technical Overview}
+%\addcontentsline{toc}{chapter}{Introduction}
+
+
+
+%********************************** %First Section  **************************************
+\section{Secure Multiparty Computation}
+
+
+Estrutura da introdução:
+
+- Cometar que não sabemos mais do que o output da computação. Dar o exemplo da média de pesos. 2 pessoas sabemos o resultado. 3 já não. Ainda assim, pode revelar alguma coisa a mais. Note that, pratically, we can put together other PET such as Differential Privacy in oder to do this.
+
+
+
+
+Talk about two approaches: boolean and arithmetic. Discuss the advantages and disadvantages of each.
+
+\subsection{Boolean approach}
+
+Boolean approach is based on the Yao protocol. In order to do it we need OT. We start by presenting OT and then we describe the Yao protocol.
+
+
+\subsubsection{Oblivious Transfer}
+
+The study of oblivious transfer (OT) has been very active since its first proposal in 1981 by Rabin \cite{Rabin81}. The importance of OT comes from its wide number of applications. More specifically, one can prove that OT is equivalent to the secure two-party computation of general functions \cite{Y86, K88}, i.e. one can implement a secure two-party computation using OT as its building block. Additionally, this primitive can also be used for secure multi-party computation (SMC) \cite{KOS16}, private information retrieval \cite{Che04}, private set intersection \cite{MEP17}, and privacy-preserving location-based services \cite{BHM+19}. 
+
+
+
+
+
+
+
+
+
+Definition
+
+Small classical review 
+
+Base OT vs Extended OT
+
+\subsubsection{Yao protocol}
+
+Description
+
+Optimizations
+
+Security
+
+Generalizations of Yao: GMW, BMR
+
+\subsection{Arithmetic approach}
+
+\subsubsection{Oblivious Linear Evaluation}
+
+\subsubsection{SPDZ}
+
+
+
+
+
+%********************************** %Second Section  **************************************
+\section{Quantum Information}
+
+
+\subsection{Mathematical preliminaries}
+
+\subsection{Quantum states representation}
+
+\subsection{Entropy}
+
+\subsection{Two-universal functions}
+
+\subsection{Mutually Unbiased Basis}
+
+
+
+
+%********************************** %Third Section  **************************************
+\section{Universal Composability}
+
+
+%********************************** %Fourth Section  **************************************
+\section{Functionality definitions}
+
+
+%\bibliography{bibforthesis}
+%\bibliographystyle{unsrt}
+%\end{document}
