@@ -1,28 +1,28 @@
-\contentsline {section}{Abstract}{iii}{chapter*.1}
-\contentsline {section}{Resumo}{v}{chapter*.2}
-\contentsline {section}{Acknowledgements}{vii}{chapter*.3}
-\contentsline {section}{List of Figures}{xiii}{section*.6}
-\contentsline {section}{List of Tables}{xv}{section*.8}
-\contentsline {section}{List of Abbreviations}{xvii}{section*.10}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Technical Overview}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Secure Multiparty Computation}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Boolean approach}{7}{subsection.2.2.1}
-\contentsline {subsubsection}{Oblivious Transfer}{7}{section*.15}
-\contentsline {subsubsection}{Yao protocol}{8}{section*.16}
-\contentsline {subsection}{\numberline {2.2.2}Arithmetic approach}{8}{subsection.2.2.2}
-\contentsline {subsubsection}{Oblivious Linear Evaluation}{8}{section*.17}
-\contentsline {subsubsection}{SPDZ}{8}{section*.18}
-\contentsline {section}{\numberline {2.3}Quantum Information}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Quantum states representation}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Entropy}{8}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Two-universal functions}{8}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Mutually Unbiased Basis}{8}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Universal Composability}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Functionality definitions}{8}{section.2.5}
-\contentsline {chapter}{\numberline {3}Quantum Oblivious Transfer}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Impossibility results}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}BBCS-based protocols}{11}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}BBCS protocol}{12}{subsection.3.2.1}
-\contentsline {chapter}{Bibliography}{23}{chapter*.20}
+\contentsline {section}{Abstract}{iii}{chapter*.1}%
+\contentsline {section}{Resumo}{v}{chapter*.2}%
+\contentsline {section}{Acknowledgements}{vii}{chapter*.3}%
+\contentsline {section}{List of Figures}{xiii}{section*.6}%
+\contentsline {section}{List of Tables}{xv}{section*.8}%
+\contentsline {section}{List of Abbreviations}{xvii}{section*.10}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Technical Overview}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Secure Multiparty Computation}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Boolean approach}{7}{subsection.2.2.1}%
+\contentsline {subsubsection}{Oblivious Transfer}{7}{section*.15}%
+\contentsline {subsubsection}{Yao protocol}{8}{section*.16}%
+\contentsline {subsection}{\numberline {2.2.2}Arithmetic approach}{8}{subsection.2.2.2}%
+\contentsline {subsubsection}{Oblivious Linear Evaluation}{8}{section*.17}%
+\contentsline {subsubsection}{SPDZ}{8}{section*.18}%
+\contentsline {section}{\numberline {2.3}Quantum Information}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Quantum states representation}{8}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Entropy}{8}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Two-universal functions}{8}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Mutually Unbiased Basis}{8}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Universal Composability}{8}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Functionality definitions}{8}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Quantum Oblivious Transfer}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Impossibility results}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}BBCS-based protocols}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}BBCS protocol}{12}{subsection.3.2.1}%
+\contentsline {chapter}{Bibliography}{23}{chapter*.20}%

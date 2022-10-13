@@ -65,16 +65,16 @@ In 1983, Wiesner came up with the idea of \textit{quantum conjugate coding} \cit
             
             \textbf{Parameters:} $n$, security parameter; $\mathcal{F}$ two-universal family of hash functions.
             
-            $\mathsf{S}$ \textbf{input:} $(m_0, m_1)\in\{0,1\}^l$ (two messages). 
+            \textbf{Alices's input:} $(m_0, m_1)\in\{0,1\}^l$ (two messages). 
             
-            $\mathsf{R}$ \textbf{input:} $b\in\{0,1\}$ (bit choice).
+            \textbf{Bob's input:} $b\in\{0,1\}$ (bit choice).
             
             \
             
             \textit{BB84 phase}:
             \begin{enumerate}
-                \item $\mathsf{S}$ generates random bits $\bm{x}^{\mathsf{S}}\leftarrow_{\$}\{0,1\}^n$ and random bases $\bm{\theta}^{\mathsf{S}}\leftarrow_{\$}$~$\{+,\times\}^n$. Sends the state $\ket{\bm{x}^{\mathsf{S}}}_{\bm{\theta}^{\mathsf{S}}}$ to $\mathsf{R}$.
-                \item $\mathsf{R}$ randomly chooses bases $\bm{\theta}^{\mathsf{R}}\leftarrow_{\$}$~$\{+,\times\}^n$ to measure the received qubits. We denote by $\bm{x}^{\mathsf{R}}$ his output bits.
+                \item Alice generates random bits $\bm{x}^{\mathsf{A}}\leftarrow_{\$}\{0,1\}^n$ and random bases $\bm{\theta}^{\mathsf{A}}\leftarrow_{\$}$~$\{+,\times\}^n$. Sends the state $\ket{\bm{x}^{\mathsf{A}}}_{\bm{\theta}^{\mathsf{A}}}$ to Bob.
+                \item Bob randomly chooses bases $\bm{\theta}^{\mathsf{B}}\leftarrow_{\$}$~$\{+,\times\}^n$ to measure the received qubits. We denote by $\bm{x}^{\mathsf{B}}$ his output bits.
             \end{enumerate}
             
             \
@@ -82,8 +82,8 @@ In 1983, Wiesner came up with the idea of \textit{quantum conjugate coding} \cit
             \textit{Oblivious key phase}:
             \begin{enumerate}
             \setcounter{enumi}{2}
-                \item $\mathsf{S}$ reveals to $\mathsf{R}$ the bases $\bm{\theta}^{\mathsf{S}}$ used during the \textit{BB84 phase} and sets his oblivious key to $\mathsf{ok}^{\mathsf{S}}:=\bm{x}^{\mathsf{S}}$.
-                \item $\mathsf{R}$ computes $\mathsf{e}^\mathsf{R} = \bm{\theta}^{\mathsf{R}} \oplus \bm{\theta}^{\mathsf{S}}$ and sets $\mathsf{ok}^{\mathsf{R}}:=\bm{x}^{\mathsf{R}}$.
+                \item Alice reveals to Bob the bases $\bm{\theta}^{\mathsf{A}}$ used during the \textit{BB84 phase} and sets his oblivious key to $\mathsf{ok}^{\mathsf{A}}:=\bm{x}^{\mathsf{A}}$.
+                \item Bob computes $\mathsf{e}^\mathsf{B} = \bm{\theta}^{\mathsf{B}} \oplus \bm{\theta}^{\mathsf{A}}$ and sets $\mathsf{ok}^{\mathsf{B}}:=\bm{x}^{\mathsf{B}}$.
             \end{enumerate}
             
             \
@@ -91,21 +91,47 @@ In 1983, Wiesner came up with the idea of \textit{quantum conjugate coding} \cit
             \textit{Transfer phase}:
             \begin{enumerate}
             \setcounter{enumi}{4}
-                \item $\mathsf{R}$ defines $I_0 = \{ i : \mathsf{e}^{\mathsf{R}}_i = 0 \}$ and $I_1 = \{ i : \mathsf{e}^{\mathsf{R}}_i = 1 \}$ and sends the set $I_b$ to $\mathsf{S}$.
-                \item $\mathsf{S}$ picks two uniformly random hash functions $f_0, f_1 \in \mathcal{F}$, computes the pair of strings $(s_0, s_1)$ as $s_i = m_i \oplus f_i(\mathsf{ok}^{\mathsf{S}}_{I_{b\oplus i}})$ and sends the pairs $(f_0, f_1)$ and $(s_0, s_1)$ to $\mathsf{R}$.
-                \item $\mathsf{R}$ computes $m_b = s_b \oplus  f_i(\mathsf{ok}^{\mathsf{R}}_{I_0})$. 
+                \item Bob defines $I_0 = \{ i : \mathsf{e}^{\mathsf{B}}_i = 0 \}$ and $I_1 = \{ i : \mathsf{e}^{\mathsf{B}}_i = 1 \}$ and sends the set $I_b$ to Alice.
+                \item Alice picks two uniformly random hash functions $f_0, f_1 \in \mathcal{F}$, computes the pair of strings $(s_0, s_1)$ as $s_i = m_i \oplus f_i(\mathsf{ok}^{\mathsf{A}}_{I_{b\oplus i}})$ and sends the pairs $(f_0, f_1)$ and $(s_0, s_1)$ to Bob.
+                \item Bob computes $m_b = s_b \oplus  f_i(\mathsf{ok}^{\mathsf{B}}_{I_0})$. 
             \end{enumerate}
             
             \
             
-        $\mathsf{S}$ \textbf{output:} $\bot$.
+        \textbf{Alice's output:} $\bot$.
         
-        $\mathsf{R}$ \textbf{output:} $m_b$.
+        \textbf{output:} $m_b$.
         
         \end{tcolorbox}
     \caption{BBCS OT protocol.}
     \label{fig:BBCS}
 \end{figure}
+
+\
+
+\noindent\textbf{Oblivious keys.} The term \textit{oblivious key} was used for the first time by Fehr and Schaffner \cite{FS09} referring to a Random OT. However, under a subtle different concept, it was used by Jakobi et al. \cite{JSGBBWZ11} as a way to implement Private Database Queries (PDQ). In a recent work, Lemus et al. \cite{Lemus20} presented the concept of oblivious key applied to OT protocols. We can define it as follows.
+
+\begin{definition}[Oblivious key]
+An oblivious key shared between two parties, Alice and Bob, is a tuple $\mathsf{ok}:= \big( \mathsf{ok}^{\mathsf{A}}, (\mathsf{ok}^{\mathsf{B}}, \mathsf{e}^{\mathsf{B}}) \big)$ where $\mathsf{ok}^{\mathsf{A}}$ is Alice's key, $\mathsf{ok}^{\mathsf{B}}$ is Bob's key and $\mathsf{e}^{\mathsf{B}}$ is the Bob's signal string. $\mathsf{e}^{\mathsf{B}}$ indicates which indexes of $\mathsf{ok}^{\mathsf{A}}$ and $\mathsf{ok}^{\mathsf{B}}$ are correlated and which indexes are uncorrelated, i.e. $\mathsf{e}^{\mathsf{B}}_i = 0$ when the corresponding indexes are correlated and $\mathsf{e}^{\mathsf{B}}_i = 1$ when they are not.
+\label{def:ok}
+\end{definition}
+
+Note that, for some index $i$, when two index elements $\mathsf{ok}^{\mathsf{A}}_i$ and $\mathsf{ok}^{\mathsf{B}}_i$ are correlated, $\mathsf{ok}^{\mathsf{A}}_i=\mathsf{ok}^{\mathsf{B}}_i$. However, when they are uncorrelated, they are drawn independently. This means that both index elements may either be equal or different. Consider the following $\mathsf{ok}=\left( 001101101101, \left( 000101001100, 101000110001 \right) \right)$ as an example. We can check it is a well strucured oblivious key:
+
+\begin{equation*}
+    \left.\begin{array}{cc}
+      \mathsf{ok}^{\mathsf{A}} :& \tikzmarkin{a}\red{0}\,\,\,\, \tikzmarkin{b}\green{0}\,\,\,\, \tikzmarkin{c}\red{1}\,\,\,\, \tikzmarkin{d}\green{1}\,\,\,\, \tikzmarkin{e}\green{0}\,\,\,\, \tikzmarkin{f}\green{1}\,\,\,\, \tikzmarkin{g}\red{1}\,\,\,\, \tikzmarkin{h}\red{0}\,\,\,\, \tikzmarkin{i}\green{1}\,\,\,\, \tikzmarkin{j}\green{1}\,\,\,\, \tikzmarkin{k}\green{0}\,\,\,\, \tikzmarkin{l}\red{1}  \\
+      \mathsf{ok}^{\mathsf{B}} :& \red{0}\,\,\,\, \green{0}\,\,\,\, \red{0}\,\,\,\, \green{1}\,\,\,\, \green{0}\,\,\,\, \green{1}\,\,\,\, \red{0}\,\,\,\, \red{0}\,\,\,\, \green{1}\,\,\,\, \green{1}\,\,\,\, \green{0}\,\,\,\, \red{0} \\
+      \mathsf{e}^{\mathsf{B}} :& \red{1}\tikzmarkend{a}\,\,\,\, \green{0}\tikzmarkend{b}\,\,\,\, \red{1}\tikzmarkend{c}\,\,\,\, \green{0}\tikzmarkend{d}\,\,\,\, \green{0}\tikzmarkend{e}\,\,\,\, \green{0}\tikzmarkend{f}\,\,\,\, \red{1}\tikzmarkend{g}\,\,\,\, \red{1}\tikzmarkend{h}\,\,\,\, \green{0}\tikzmarkend{i}\,\,\,\, \green{0}\tikzmarkend{j}\,\,\,\, \green{0}\tikzmarkend{k}\,\,\,\, \red{1}\tikzmarkend{l}
+    \end{array}\right\} \mathsf{ok}
+\end{equation*}
+
+
+As we will see in later chapters, oblivious keys can be used as a resource to produce OT instances. In fact, we can draw a comparison between standard encryption keys and oblivious keys. In the same way as standard keys are the resource that allows the encryption of a specific message, oblivious keys are the resource that enables the performance of OT with messages. In other words, encryption methods consume standard keys, while OT methods consume oblivious keys. Moreover, it is worth stressing that oblivious keys are independent of the sender's messages  $m_0, m_1$ and are not the same as random OT. In fact, as Alice does not know the groups of indexes $I_0$ and $I_1$ computed by Bob after the basis revelation, Alice does not have her messages fully defined. A similar concept was defined by K\"onig et al.  \cite{KWW12} under the name of \textit{weak string erasure}. 
+
+\
+
+\noindent\textbf{Security.} Regarding security, the BBCS protocol is unconditionally secure against dishonest Alice. Intuitively, this comes from the fact that Alice does not receive any information from Bob other than some set of indexes $I_0$. However, the BBCS protocol is insecure against dishonest Bob. In its original paper \cite{BBCS92}, the authors describe a memory attack that provides Bob complete knowledge on both messages $m_0$ and $m_1$ without being detected. This can be achieved by having the receiver delay his measurements in step 2 to some moment after step 3. This procedure is commonly called the memory attack as it requires quantum \textit{memory} to hold the states until step 3. The authors suggest that, for the protocol to be secure, the receiver has to be forced to measure the received states at step 2. In the following sections, we present two common approaches to tackle this issue. We may assume the existence of commitments or set physical assumptions that constrain Bob from delaying his measurement.
 
 
 %\bibliography{bibforthesis}

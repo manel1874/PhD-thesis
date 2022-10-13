@@ -561,4 +561,25 @@ Charles~H. Bennett, Gilles Brassard, and Seth Breidbart.
   if p={NP}.
 \newblock {\em Natural Computing}, 13(4):453--458, October 2014.
 
+\bibitem{FS09}
+Serge Fehr and Christian Schaffner.
+\newblock Composing quantum protocols in a classical environment.
+\newblock In Omer Reingold, editor, {\em Theory of Cryptography}, pages
+  350--367, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
+
+\bibitem{JSGBBWZ11}
+Markus Jakobi, Christoph Simon, Nicolas Gisin, Jean-Daniel Bancal, Cyril
+  Branciard, Nino Walenta, and Hugo Zbinden.
+\newblock Practical private database queries based on a
+  quantum-key-distribution protocol.
+\newblock {\em Physical Review A}, 83(2), February 2011.
+
+\bibitem{Lemus20}
+Mariano Lemus, Mariana~F. Ramos, Preeti Yadav, Nuno~A. Silva, Nelson~J. Muga,
+  Andr{\'{e}} Souto, Nikola Paunkovi{\'{c}}, Paulo Mateus, and Armando~N.
+  Pinto.
+\newblock Generation and distribution of quantum oblivious keys for secure
+  multiparty computation.
+\newblock {\em Applied Sciences}, 10(12):4080, June 2020.
+
 \end{thebibliography}
