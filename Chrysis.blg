@@ -7,45 +7,45 @@ A level-1 auxiliary file: Chapter_QuantumObliviousTransfer/Chapter_QuantumOblivi
 The style file: unsrt.bst
 Database file #1: References/References.bib
 Warning--can't use both author and editor fields in S99
-You've used 84 entries,
+You've used 96 entries,
             1791 wiz_defined-function locations,
-            1005 strings with 17737 characters,
-and the built_in function-call counts, 21422 in all, are:
-= -- 1907
-> -- 991
-< -- 22
-+ -- 363
-- -- 279
-* -- 1456
-:= -- 3276
-add.period$ -- 272
-call.type$ -- 84
-change.case$ -- 83
+            1073 strings with 19279 characters,
+and the built_in function-call counts, 24020 in all, are:
+= -- 2150
+> -- 1084
+< -- 23
++ -- 400
+- -- 304
+* -- 1637
+:= -- 3683
+add.period$ -- 312
+call.type$ -- 96
+change.case$ -- 95
 chr.to.int$ -- 0
-cite$ -- 85
-duplicate$ -- 999
-empty$ -- 2120
-format.name$ -- 279
-if$ -- 4917
+cite$ -- 97
+duplicate$ -- 1126
+empty$ -- 2395
+format.name$ -- 304
+if$ -- 5503
 int.to.chr$ -- 0
-int.to.str$ -- 84
-missing$ -- 72
-newline$ -- 413
-num.names$ -- 101
-pop$ -- 305
+int.to.str$ -- 96
+missing$ -- 84
+newline$ -- 473
+num.names$ -- 113
+pop$ -- 337
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 512
+skip$ -- 560
 stack$ -- 0
-substring$ -- 1276
-swap$ -- 295
-text.length$ -- 22
+substring$ -- 1427
+swap$ -- 319
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 193
-width$ -- 86
-write$ -- 928
+while$ -- 218
+width$ -- 98
+write$ -- 1061
 (There was 1 warning)

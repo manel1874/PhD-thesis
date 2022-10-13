@@ -496,4 +496,69 @@ Anne Broadbent and Martti Karvonen.
   of Software Science and Computation Structures}, pages 161--183, Cham, 2022.
   Springer International Publishing.
 
+\bibitem{A02}
+Scott Aaronson.
+\newblock Quantum lower bound for the collision problem.
+\newblock In {\em Proceedings of the thiry-fourth annual {ACM} symposium on
+  Theory of computing - {STOC} '02}. {ACM} Press, 2002.
+
+\bibitem{DFSS05}
+I.B. Damgard, S.~Fehr, L.~Salvail, and C.~Schaffner.
+\newblock Cryptography in the bounded quantum-storage model.
+\newblock In {\em 46th Annual {IEEE} Symposium on Foundations of Computer
+  Science ({FOCS}'05)}. {IEEE}, 2005.
+
+\bibitem{WST08}
+Stephanie Wehner, Christian Schaffner, and Barbara~M. Terhal.
+\newblock Cryptography from noisy storage.
+\newblock {\em Physical Review Letters}, 100(22), June 2008.
+
+\bibitem{KWW12}
+Robert Konig, Stephanie Wehner, and J\"{u}rg Wullschleger.
+\newblock Unconditional security from noisy quantum storage.
+\newblock {\em {IEEE} Transactions on Information Theory}, 58(3):1962--1984,
+  March 2012.
+
+\bibitem{L14}
+Yi-Kai Liu.
+\newblock Building one-time memories from isolated qubits.
+\newblock In {\em Proceedings of the 5th conference on Innovations in
+  theoretical computer science}. {ACM}, January 2014.
+
+\bibitem{Pit16}
+Dami{\'{a}}n Pital{\'{u}}a-Garc{\'{\i}}a.
+\newblock Spacetime-constrained oblivious transfer.
+\newblock {\em Physical Review A}, 93(6), June 2016.
+
+\bibitem{Ken11}
+Adrian Kent.
+\newblock Location-oblivious data transfer with flying entangled qudits.
+\newblock {\em Physical Review A}, 84(1), July 2011.
+
+\bibitem{U18}
+Dominique Unruh.
+\newblock Everlasting multi-party computation.
+\newblock {\em Journal of Cryptology}, 31(4):965--1011, March 2018.
+
+\bibitem{W83}
+Stephen Wiesner.
+\newblock Conjugate coding.
+\newblock {\em {ACM} {SIGACT} News}, 15(1):78--88, January 1983.
+
+\bibitem{BB84}
+Charles~H. Bennett and Gilles Brassard.
+\newblock Quantum cryptography: Public key distribution and coin tossing.
+\newblock {\em Theoretical Computer Science}, 560:7--11, December 2014.
+
+\bibitem{BBBW83}
+Charles~H. Bennett, Gilles Brassard, Seth Breidbart, and Stephen Wiesner.
+\newblock Quantum cryptography, or unforgeable subway tokens.
+\newblock In {\em Advances in Cryptology}, pages 267--275. Springer {US}, 1983.
+
+\bibitem{BBB14}
+Charles~H. Bennett, Gilles Brassard, and Seth Breidbart.
+\newblock Quantum cryptography {II}: How to re-use a one-time pad safely even
+  if p={NP}.
+\newblock {\em Natural Computing}, 13(4):453--458, October 2014.
+
 \end{thebibliography}
