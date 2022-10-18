@@ -25,4 +25,9 @@
 \contentsline {section}{\numberline {3.1}Impossibility results}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}BBCS-based protocols}{11}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}BBCS protocol}{12}{subsection.3.2.1}%
-\contentsline {chapter}{Bibliography}{23}{chapter*.20}%
+\contentsline {subsection}{\numberline {3.2.2}BBCS in the $\mathcal {F}_{\textbf {COM}}-$hybrid model}{15}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}BBCS in the limited-quantum-storage model}{18}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Bounded-quantum-storage model}{18}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{20}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Hacking attacks to QOT}{23}{subsection.3.2.6}%
+\contentsline {chapter}{Bibliography}{36}{chapter*.23}%

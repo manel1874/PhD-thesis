@@ -2,3 +2,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces BBCS OT protocol.\relax }}{13}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces BBCS OT protocol in the $\mathcal {F}_{\textbf {COM}}-$hybrid model.\relax }}{15}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces BBCS OT protocol in the bounded-quantum-storage model.\relax }}{19}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces BBCS OT protocol in the noisy-quantum-storage model.\relax }}{22}{figure.caption.22}%

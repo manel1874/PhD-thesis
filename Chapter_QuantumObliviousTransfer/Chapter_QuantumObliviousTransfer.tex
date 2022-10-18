@@ -10,7 +10,7 @@
 
 In a recent survey on classical oblivious transfer (OT) \cite{YAVV22}, all the analysed protocols require some form of asymmetric cryptography. Indeed, in the classical setting, it is impossible to develop information-theoretic secure OT or even reduce it to one-way functions, requiring some public-key computational assumptions. As shown by Impaggliazzo and Rudich \cite{IR89}, one-way functions (symmetric cryptography) alone do not imply key agreement (asymmetric cryptography). Also, Gertner et al. \cite{GKMRV00} pointed out that since it is known that OT implies key agreement, this sets a separation between symmetric cryptography and OT, leading to the conclusion that OT cannot be generated alone by symmetric cryptography. Otherwise, one could use one-way functions to implement key agreement through the OT construction. This poses a threat to all classical OT protocols \cite{EGL85, NP01, CO15} that are based on mathematical assumptions provably broken by a quantum computer \cite{Sho95}. Besides the security problem, asymmetric cryptography tends to be computationally more complex than symmetric cryptography, creating a problem in terms of speed when a large number of OTs are required. The classical post-quantum approach, thrives to find protocols resistant against quantum computer attacks. However, these are still based on complexity problems and are not necessarily less computationally expensive, than the previously mentioned ones. 
 
-In parallel to the classical post-quantum approach, the quantum cryptography community presented some OT protocols based on quantum technologies to tackle this security issue. Intriguingly enough, more than a decade before the first classical OT by Rabin (1981, \cite{Rabin81}) was published, Wiesner proposed a similar concept. However, at the time it was rejected for publication due to the lack of acceptance in the research community. The first published quantum OT (QOT) protocol, known as the BBCS (Bennett-Brassard-Cr{\'e}peau-Skubiszewska) protocol \cite{BBCS92} was only presented in 1992. Remarkably, there is a distinctive difference between classical and quantum OT from a security standpoint, as the latter is proved to be possible assuming only the existence of quantum-hard one-way functions \cite{GLSV21, BCKM21}. This means quantum OT requires weaker security assumptions than classical OT.
+In parallel to the classical post-quantum approach, the quantum cryptography community tackled this security issue by presenting some OT protocols based on quantum technologies. Intriguingly enough, more than a decade before the first classical OT by Rabin (1981, \cite{Rabin81}) was published, Wiesner proposed a similar concept. However, at the time, it was rejected for publication due to the lack of acceptance in the research community. The first published quantum OT (QOT) protocol, known as the BBCS (Bennett-Brassard-Cr{\'e}peau-Skubiszewska) protocol \cite{BBCS92} was only presented in 1992. Remarkably, there is a distinctive difference between classical and quantum OT from a security standpoint, as the latter is proved to be possible assuming only the existence of quantum-hard one-way functions \cite{GLSV21, BCKM21}. This means quantum OT requires weaker security assumptions than classical OT.
 
 In this chapter, we review the particular topic of quantum OT. We mainly comment on several important OT protocols, their underlying security models and assumptions. To the best of our knowledge, there is no prior survey dedicated to quantum OT protocols alone. Usually, its analysis is integrated into more general surveys under the topic of ``quantum cryptography", leading to a less in-depth exposition of the topic. For reference, we provide some distinctive reviews on the general topic of quantum cryptography \cite{BC96, B05, M06, F10, B15, PAB+20, PR21, SH22}.
 
@@ -40,9 +40,11 @@ In the next section, we explore protocols that produce a special primitive calle
 
 In this section, we explore protocols that circumvent the no-go theorems \cite{LC97, M97} through assumptions. Some of the presented solutions are based on one-way functions, which are believed to be quantum-hard \cite{BCKM21, GLSV21,A02}, and others rely on technological or physical limitations of the adversaries \cite{DFSS05, WST08, KWW12, L14, Pit16, Ken11}. The latter are qualitatively different from complexity-based assumptions on which post-quantum protocols rely. Also, all these assumptions have the important property that they only have to hold during the execution of the protocol for its security to be preserved. In other words, even if the assumptions lose their validity at some later point in time, the security of the protocol is not compromised. This property is commonly known as \textit{everlasting} security \cite{U18}. Everlasting security is also a major distinctive feature of quantum protocols when compared with classical cryptographic approaches.
 
-We start by presenting the first QOT protocol. Then, we see how this leads to the development of two assumption models: $\mathcal{F}_{\text{COM}}-$hybrid model and the limited-quantum-storage model. 
+We start by presenting the first QOT protocol. Then, we see how this protocol led to the development of two assumption models: $\mathcal{F}_{\text{COM}}-$hybrid model and the limited-quantum-storage model. 
 
 \subsection{BBCS protocol}\label{sec:BBCS}
+
+{\cv Notation conflict: $\mathcal{F}$ to denote universal functions}
 
 In 1983, Wiesner came up with the idea of \textit{quantum conjugate coding} \cite{W83}. This technique is the main building block of many important quantum cryptographic protocols \cite{BB84, BBBW83, DFSS14}, including quantum oblivious transfer \cite{BBCS92}. It also goes under the name of \textit{quantum multiplexing} \cite{BBBW83}, \textit{quantum coding} \cite{BBB14} or \textit{BB84 coding} \cite{S99}. In quantum conjugate coding we encode classical information in two conjugate (non-orthogonal) bases. This allows us to have the distinctive property that measuring on one basis destroys the encoded information on the corresponding conjugate basis. So, when bit $0$ and $1$ are encoded by these two bases, no measurement is able to perfectly distinguish the states. We will be using the following bases in the two-dimensional Hilbert space $\mathcal{H}_2$:
 
@@ -51,7 +53,7 @@ In 1983, Wiesner came up with the idea of \textit{quantum conjugate coding} \cit
     \item Hadamard basis: $\times := \left\{\ket{0}_{\times}, \ket{1}_{\times}\right\} = \left\{\frac{1}{\sqrt{2}}\big( \ket{0}_{+} + \ket{1}_{+} \big), \frac{1}{\sqrt{2}}\big( \ket{0}_{+} - \ket{1}_{+} \big) \right\}$.
 \end{itemize}
 
-\noindent\textbf{Protocol \cite{BBCS92}.} The first proposal of a quantum oblivious transfer protocol (BBCS protocol) is presented in Figure~\ref{fig:BBCS} and builds on top of the quantum conjugate coding technique. Alice starts by using this coding to generate a set of qubits that are subsequently randomly measured by Bob. These two steps make up the first phase of the BB84 QKD protocol. For this reason, it is called the \textit{BB84 phase}. Next, with the output bits obtained by Bob and the random elements generated by Alice, both parties are ready to share a special type of key, known as \textit{oblivious key}. This is achieved when Alice reveals her bases $\bm{\theta}^{\mathsf{A}}$ to Bob. Using the oblivious key as a resource, Alice can then obliviously send one of the messages $m_0, m_1$ to Bob, ensuring that he is only able to know one of the messages. This is achieved using a two-universal family of hash functions $\mathcal{F}$ from $\{0,1\}^{n/2}$ to $\{0,1\}^{l}$. Recall, we use the notation $s\leftarrow_{\$}S$ to describe a situation where an element $s$ is drawn uniformly at random from the set $S$.
+\noindent\textbf{Protocol \cite{BBCS92}.} The first proposal of a quantum oblivious transfer protocol is presented in Figure~\ref{fig:BBCS} and it is called after its creators, Bennett-Brassard-Cr{\'e}peau-Skubiszewska (BBCS). It builds on top of the quantum conjugate coding technique. Alice starts by using this encoding to generate a set of qubits that are subsequently randomly measured by Bob. These two steps make up the first phase of the BB84 QKD protocol. For this reason, this is called the \textit{BB84 phase}. Next, both parties use the output bits obtained from Bob and the random elements generated by Alice to share a special type of key, known as \textit{oblivious key}. This is achieved when Alice reveals her bases $\bm{\theta}^{\mathsf{A}}$ to Bob. Using the oblivious key as a resource, Alice can then obliviously send one of the messages $m_0, m_1$ to Bob, ensuring that he is only able to know one of the messages. This is achieved using a two-universal family of hash functions $\mathcal{F}$ from $\{0,1\}^{n/2}$ to $\{0,1\}^{l}$. Recall, we use the notation $s\leftarrow_{\$}S$ to describe a situation where an element $s$ is drawn uniformly at random from the set $S$.
 
 \begin{figure}[h!]
     \centering
@@ -109,14 +111,14 @@ In 1983, Wiesner came up with the idea of \textit{quantum conjugate coding} \cit
 
 \
 
-\noindent\textbf{Oblivious keys.} The term \textit{oblivious key} was used for the first time by Fehr and Schaffner \cite{FS09} referring to a Random OT. However, under a subtle different concept, it was used by Jakobi et al. \cite{JSGBBWZ11} as a way to implement Private Database Queries (PDQ). In a recent work, Lemus et al. \cite{Lemus20} presented the concept of oblivious key applied to OT protocols. We can define it as follows.
+\noindent\textbf{Oblivious keys.}  As we saw in the BBCS protocol, oblivious keys can be used as a resource to produce OT instances. In fact, we can draw a comparison between standard encryption keys and oblivious keys. In the same way as standard keys are the resource that allows the encryption of a specific message, oblivious keys are the resource that enables the performance of OT with messages. In other words, encryption methods consume standard keys, while OT methods consume oblivious keys. The term, oblivious key, was used for the first time by Fehr and Schaffner \cite{FS09} referring to random OT. However, under a subtle different concept, it was put forth by Jakobi et al. \cite{JSGBBWZ11} and used to implement private database queries (PDQ). Also, in a recent work, Lemus et al. \cite{Lemus20} presented the concept of oblivious key applied to OT protocols. We can define it as follows.
 
 \begin{definition}[Oblivious key]
-An oblivious key shared between two parties, Alice and Bob, is a tuple $\mathsf{ok}:= \big( \mathsf{ok}^{\mathsf{A}}, (\mathsf{ok}^{\mathsf{B}}, \mathsf{e}^{\mathsf{B}}) \big)$ where $\mathsf{ok}^{\mathsf{A}}$ is Alice's key, $\mathsf{ok}^{\mathsf{B}}$ is Bob's key and $\mathsf{e}^{\mathsf{B}}$ is the Bob's signal string. $\mathsf{e}^{\mathsf{B}}$ indicates which indexes of $\mathsf{ok}^{\mathsf{A}}$ and $\mathsf{ok}^{\mathsf{B}}$ are correlated and which indexes are uncorrelated, i.e. $\mathsf{e}^{\mathsf{B}}_i = 0$ when the corresponding indexes are correlated and $\mathsf{e}^{\mathsf{B}}_i = 1$ when they are not.
+An oblivious key shared between two parties, Alice and Bob, is a tuple $\mathsf{ok}:= \big( \mathsf{ok}^{\mathsf{A}}, (\mathsf{ok}^{\mathsf{B}}, \mathsf{e}^{\mathsf{B}}) \big)$ where $\mathsf{ok}^{\mathsf{A}}$ is Alice's key, $\mathsf{ok}^{\mathsf{B}}$ is Bob's key and $\mathsf{e}^{\mathsf{B}}$ is Bob's signal string. $\mathsf{e}^{\mathsf{B}}$ indicates which indexes of $\mathsf{ok}^{\mathsf{A}}$ and $\mathsf{ok}^{\mathsf{B}}$ are correlated and which indexes are uncorrelated, i.e. $\mathsf{e}^{\mathsf{B}}_i = 0$ when the corresponding indexes are correlated and $\mathsf{e}^{\mathsf{B}}_i = 1$ when they are not.
 \label{def:ok}
 \end{definition}
 
-Note that, for some index $i$, when two index elements $\mathsf{ok}^{\mathsf{A}}_i$ and $\mathsf{ok}^{\mathsf{B}}_i$ are correlated, $\mathsf{ok}^{\mathsf{A}}_i=\mathsf{ok}^{\mathsf{B}}_i$. However, when they are uncorrelated, they are drawn independently. This means that both index elements may either be equal or different. Consider the following $\mathsf{ok}=\left( 001101101101, \left( 000101001100, 101000110001 \right) \right)$ as an example. We can check it is a well strucured oblivious key:
+Note that, for some index $i$, when two index elements $\mathsf{ok}^{\mathsf{A}}_i$ and $\mathsf{ok}^{\mathsf{B}}_i$ are correlated, $\mathsf{ok}^{\mathsf{A}}_i=\mathsf{ok}^{\mathsf{B}}_i$. However, when they are uncorrelated, they are drawn independently. This means that both index elements may either be equal or different. Consider the following oblivious key $\mathsf{ok}=\left( 001101101101, \left( 000101001100, 101000110001 \right) \right)$ as an example. We can check it is a well strucured oblivious key:
 
 \begin{equation*}
     \left.\begin{array}{cc}
@@ -126,12 +128,319 @@ Note that, for some index $i$, when two index elements $\mathsf{ok}^{\mathsf{A}}
     \end{array}\right\} \mathsf{ok}
 \end{equation*}
 
-
-As we will see in later chapters, oblivious keys can be used as a resource to produce OT instances. In fact, we can draw a comparison between standard encryption keys and oblivious keys. In the same way as standard keys are the resource that allows the encryption of a specific message, oblivious keys are the resource that enables the performance of OT with messages. In other words, encryption methods consume standard keys, while OT methods consume oblivious keys. Moreover, it is worth stressing that oblivious keys are independent of the sender's messages  $m_0, m_1$ and are not the same as random OT. In fact, as Alice does not know the groups of indexes $I_0$ and $I_1$ computed by Bob after the basis revelation, Alice does not have her messages fully defined. A similar concept was defined by K\"onig et al.  \cite{KWW12} under the name of \textit{weak string erasure}. 
+It is worth stressing that oblivious keys are independent of the sender's messages  $m_0, m_1$ and are not the same as random OT. In fact, as Alice does not know the groups of indexes $I_0$ and $I_1$ computed by Bob after the basis revelation, Alice does not have her messages fully defined. A similar concept was defined by K\"onig et al.  \cite{KWW12} under the name of \textit{weak string erasure}. 
 
 \
 
-\noindent\textbf{Security.} Regarding security, the BBCS protocol is unconditionally secure against dishonest Alice. Intuitively, this comes from the fact that Alice does not receive any information from Bob other than some set of indexes $I_0$. However, the BBCS protocol is insecure against dishonest Bob. In its original paper \cite{BBCS92}, the authors describe a memory attack that provides Bob complete knowledge on both messages $m_0$ and $m_1$ without being detected. This can be achieved by having the receiver delay his measurements in step 2 to some moment after step 3. This procedure is commonly called the memory attack as it requires quantum \textit{memory} to hold the states until step 3. The authors suggest that, for the protocol to be secure, the receiver has to be forced to measure the received states at step 2. In the following sections, we present two common approaches to tackle this issue. We may assume the existence of commitments or set physical assumptions that constrain Bob from delaying his measurement.
+\noindent\textbf{Security.} Regarding security, the BBCS protocol is unconditionally secure against dishonest Alice. Intuitively, this comes from the fact that Alice does not receive any information from Bob other than some set of indexes $I_0$. However, the BBCS protocol is insecure against dishonest Bob. In its original paper \cite{BBCS92}, the authors describe a memory attack that provides Bob complete knowledge on both messages $m_0$ and $m_1$ without being detected. This can be achieved by having the receiver delay his measurements in step 2 to some moment after step 3. This procedure is commonly called the memory attack as it requires quantum memory to hold the states until step 3. The authors suggest that, for the protocol to be secure, the receiver has to be forced to measure the received states at step 2. In the following sections, we present two common approaches to tackle this issue. We may assume the existence of commitments or set physical assumptions that constrain Bob from delaying his measurement.
+
+
+\subsection{BBCS in the $\mathcal{F}_{\textbf{COM}}-$hybrid model}\label{BBCS-com-hybrid}
+
+As mentioned in the previous section, a secure BBCS protocol requires Bob to measure his qubits in step 2. In this section, we follow the suggestion from the original BBCS paper \cite{BBCS92} and fix this loophole using a commitment scheme. Since we assume we have access to some commitment scheme, we call it $\mathcal{F}_{\textbf{COM}}-$hybrid model\footnote{The notation $\mathcal{F}_{\textbf{COM}}$ is commonly used for ideal functionalities. However, here we abuse the notation by using $\mathcal{F}_{\textbf{COM}}$ to refer to any commitment scheme (including the ideal commitment functionality).}.
+
+\begin{figure}[h!]
+\centering
+\begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+                        
+    \centerline{$\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ \textbf{protocol}}
+            
+    \
+    
+    \textbf{Parameters:} $n$, security parameter; $\mathcal{F}$ two-universal family of hash functions.
+    
+    \textbf{Alice's input:} $(m_0, m_1)\in\{0,1\}^l$ (two messages). 
+    
+    \textbf{Bob's input:} $b\in\{0,1\}$ (bit choice).
+    
+    \
+    
+    \textit{BB84 phase:} \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+    
+    
+    \
+    
+    \textit{Cut and choose phase}:
+    \begin{enumerate}
+    \setcounter{enumi}{2}
+        \item Bob commits to the bases used and the measured bits, i.e. $\textbf{COM}\big(\bm{\theta}^\mathsf{B}, \bm{x}^\mathsf{B}\big)$, and sends to Alice. %using $\mathcal{F}_{\textbf{com}}$.
+        \item Alice asks Bobto open a subset $T$ of commitments (e.g. $n/2$ elements) and receives $\{\theta_i^\mathsf{B}, x_i^\mathsf{B}\}_{i\in T}$.% from $\mathcal{F}_{\textbf{com}}$.
+        \item In case any opening is not correct or $x_i^\mathsf{B} \neq x_i^\mathsf{A}$ for $\theta_i^\mathsf{B} = \theta_i^\mathsf{A}$, abort. Otherwise, proceed. 
+    \end{enumerate}
+    
+    \
+    
+    \textit{Oblivious key phase:} \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+     
+    \
+     
+    \textit{Transfer phase:} \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+    
+    \
+    
+\textbf{Alice's output:} $\bot$.
+
+\textbf{Bob's output:} $m_b$.
+    
+\end{tcolorbox} 
+    \caption{BBCS OT protocol in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.}
+    \label{fig:BBCS_COM}
+\end{figure}
+
+\noindent\textbf{Protocol.} The modified BBCS (Figure~\ref{fig:BBCS_COM}) adds a \textit{cut and choose} phase that makes use of a commitment scheme \textbf{COM} to check whether Bob measured his qubits in step 2 or not. It goes as follows. Bob commits to the bases used to measure the qubits in the \textit{BB84 phase} and the resulting output bits. Then,Alice chooses a subset of qubits to be tested and asks Bob to open the corresponding commitments of the bases and output elements. If no inconsistency is found, both parties can proceed with the protocol. Note that the size of the testing subset has to be proportional to $n$ (security parameter), as this guarantees that the rest of the qubits were measured by Bob with overwhelming probability in $n$.
+
+\
+
+\noindent\textbf{Security.} Formally proving the security of this protocol led to a long line of research \cite{CK88, BBCS92, MS94, Y95, M96b, CDMS04, FS09, DFLSS09, U10, BF10, GLSV21, BCKM21}. Earlier proofs from the $90$'s started by analyzing the security of the protocol against limited adversaries that were only able to do individual measurements \cite{MS94}. Then, Yao \cite{Y95} was able to prove its security against more general adversaries capable of doing fully coherent measurements. Although these initial works \cite{MS94, Y95, M96b} were important to start developing a QOT security proof, they were based on unsatisfactory security definitions. At the time of these initial works, there was no composability framework \cite{FS09, U10} under which the security of the protocol could be considered. In modern quantum cryptography, these protocols are commonly proved in some quantum simulation-paradigm frameworks \cite{FS09, U10, DFLSS09, KWW12}. In these paradigms, the security is proved by showing that an adversary in a real execution of the protocol cannot cheat more than what he is allowed in an ideal execution, which is secure by definition. This is commonly proved by utilizing an entity, called simulator, whose role is to guarantee that a real execution of the protocol is indistinguishable from an ideal execution. Moreover, they measured the adversary's information through average-case measures (e.g. Collision Entropy, Mutual Information) which are proven to be weak security measures when applied to cryptography \cite{BCC+10, TR11}.
+
+More desirable worst-case measures started to be applied to quantum oblivious transfer around a decade later \cite{R06, DFRSS07}. These were based on the concept of \textit{min-entropy} \cite{BCC+10,TR11}, $H_{\text{min}}$, which, intuitively, reflects the maximum probability of an event to happen. More precisely, in order to prove security against dishonest Bob, one is interested in measuring Bob's min-entropy on Alice's oblivious key $\mathsf{ok}^{\mathsf{A}}$ conditioned on some quantum side information $E$ he may has, i.e. $H_{\text{min}}(\mathsf{ok}^{\mathsf{A}} | E)$. Informally, for a bipartite classical-quantum state $\rho_{X E}$ the conditional min-entropy $H_{\text{min}}(X | E)$ is given by 
+
+$$H_{\text{min}}(X | E)_{\rho_{X E}} := -\log P_{guess}(X|E),$$
+where $P_{guess}(X|E)$ is the probability the adversary guesses the value $x$ maximized over all possible measurements. Damg{\aa}rd et al. \cite{DFLSS09} were able to prove the stand-alone QOT security when equipped with this min-entropy measure and with the quantum simulation-paradigm framework developed by Fehr and Schaffner \cite{FS09}. Their argument to prove the security of the protocol against dishonest Bob can be summarized as follows. The cut and choose phase ensures that Bob's conditional min-entropy on the elements of $\mathsf{ok}^{\mathsf{A}}$ belonging to $I_{1}$ (indexes with uncorrelated elements between Alice's and Bob's oblivious keys) is lower-bounded by some value that is proportional to the security parameter, i.e. $H_{\text{min}}(\mathsf{ok}^{\mathsf{A}}_{I_{1}} | E) \geq n\lambda$ for some $\lambda > 0$. Note that this is equivalent to derive an upper bound on the guessing probability $P_{guess}(\mathsf{ok}^{\mathsf{A}}_{I_{1}}|E) \leq 2^{-n\lambda}$. Having deduced an expression for $\lambda$, they proceed by applying a random hash function $f$ from a two-universal family $\mathcal{F}$, $f\leftarrow_{\$}\mathcal{F}$. This final step ensures that $f(\mathsf{ok}^{\mathsf{A}}_{I_{1}})$ is statistically indistinguishable from uniform (privacy amplification theorem \cite{DFRSS07, RK05, R05}). The proof provided by Damg{\aa}rd et al. \cite{DFLSS09} was extended by Unruh \cite{U10} to the quantum Universal Composable (UC) model, making use of ideal commitments. Now, a natural question arises: 
+
+\
+
+\centerline{\textit{Which commitment schemes can be used to render simulation-based security?}}
+
+\
+
+\noindent\textbf{Commitment scheme.} The work by Aaronson \cite{A02} presented a non-constructive proof that ``indicates that collision-resistant hashing might still be possible in a quantum setting'', giving confidence in the use of commitment schemes based on quantum-hard one-way functions in the $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ protocol. Hopefully, it was shown that commitment schemes can be built from any one-way function \cite{N91, HILL99, HR07}, including quantum-hard one-way functions. Although it is intuitive to plug in into $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ a commitment scheme derived from a quantum-hard one-way function, this does not necessarily render a simulation-based secure protocol. This happens because the nature of the commitment scheme can make the simulation-based proof difficult or even impossible. For a detailed discussion see \cite{GLSV21}.
+
+Indeed, the commitment scheme must be quantum secure. Also, the simulator must have access to two intriguing properties: \textit{extractability} and \textit{equivocality}. Extractability means the simulator can extract the committed value from a malicious committer. Equivocal means the simulator can change the value of a committed value at a later time. Although it seems counter-intuitive to use a commitment scheme where we can violate both security properties (hiding and biding properties), it is fundamental to prove its security. Extractability is used by the simulator to prove security against the dishonest sender and equivocality is used by the simulator to prove security against the dishonest receiver. In the literature, there have been some proposals of the commitment schemes $COM$ with these properties based on:
+
+\begin{itemize}
+    \item Quantum-hard one-way functions \cite{BCKM21, GLSV21};
+    \item Common Reference String (CRS) model \cite{U10, CF01};
+    \item Bounded-quantum-storage model \cite{U11};
+    \item Quantum hardness of the Learning With Errors assumption \cite{DFLSS09}.
+\end{itemize}
+
+\
+
+\noindent\textbf{Composability.} The integration of secure OT executions in secure multiparty protocols \cite{Y86} should not lead to security breaches. Although it seems intuitive to assume that a secure OT protocol can be integrated within more complex protocols, proving this is highly non-trivial as it is not clear \textit{a priori} under which circumstances protocols can be composed \cite{MR09}. 
+
+The first step towards composability properties is the development of simulation based-security. However, this does not necessarily imply composability (see Section~$4.2$ of \cite{MR09} for more details), as a composability framework is also required. In the literature, there have been some proposals for such a framework. In summary, Fehr and Schaffner \cite{FS09} developed a composability framework that allows sequential composition of quantum protocols in a classical environment. The works developed by Ben-Or and Mayers \cite{BM04} and Unruh \cite{U04, U10} extended the classical Universal Composability model \cite{C20} to a quantum setting (quantum-UC model), allowing concurrent composability. Maurer and Renner \cite{MR11} developed a more general composability framework that does not depend on the models of computation, communication, and adversary behaviour. More recently, Broadbent and Karvonen \cite{BK22} created an abstract model of composable security in terms of category theory. Up until now, and to the best of our knowledge, the composable security of the protocol $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ was only proven in the Fehr and Schaffner model \cite{FS09} by Damg{\aa}rd et al. \cite{DFLSS09} and in the quantum-UC by Unruh \cite{U10}.
+
+
+
+\subsection{BBCS in the limited-quantum-storage model}
+
+In this section, we review protocols based on the limited-quantum-storage model. The protocols developed under this model avoid the no-go theorems because they rely their security on reasonable assumptions regarding the storage capabilities of both parties. Under this model, there are mainly two research lines. One was started by Damg{\aa}rd, Fehr, Salvail and Schaffner \cite{DFSS05}, who developed the bounded-storage model. In this model, the parties can only store a limited number of qubits. The other research line was initiated by Wehner, Schaffner and Terhal \cite{WST08}, who developed the noisy-storage model. In this model the parties can store \textit{all} qubits. However, they are assumed to be unstable, i.e. they only have imperfect noisy storage of qubits that forces some decoherence. In both models, the adversaries are forced to use their quantum memories as both parties have to wait a predetermined time $(\Delta t)$ during the protocol.
+
+\subsection{Bounded-quantum-storage model}
+
+In the bounded-quantum-storage model or BQS model for short, we assume that, during the waiting time $\Delta t$, the adversaries are only able to store a fraction $0< \gamma < 1$ of the transmitted qubits, i.e. the adversary is only able to keep $q = n\gamma$ qubits. The parameter $\gamma$ is commonly called the storage rate.
+
+\
+
+\noindent\textbf{Protocol.} The protocol in the BQS model, $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$, is very similar to the BBCS protocol $\Pi^{\textbf{BBCS}}$ presented in Figure~\ref{fig:BBCS}. The difference is that both parties have to wait a predetermined time ($\Delta t$) after step 2. This protocol is presented in Figure~\ref{fig:BBCS_Bounded}.
+
+\begin{figure}[h!]
+\centering
+\begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+    
+    \centerline{$\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ \textbf{protocol}}
+            
+    \
+    
+    \textbf{Parameters:} $n$, security parameter; $\mathcal{F}$  two-universal family of hash functions.
+    
+    \textbf{Alice's input:} $(m_0, m_1)\in\{0,1\}^l$ (two messages). 
+    
+    \textbf{Bob's input:} $b\in\{0,1\}$ (bit choice).
+    
+    \
+    
+    \textit{BB84 phase}: \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+    
+    
+    \
+    
+    \textit{Waiting time phase}:
+    \begin{enumerate}
+    \setcounter{enumi}{2}
+        \item Both parties wait time $\Delta t$.
+    \end{enumerate}
+    
+    \
+    
+    \textit{Oblivious key phase}: \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+     
+    \
+     
+    \textit{Transfer phase}: \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+    
+    \
+    
+\textbf{Alice's output:} $\bot$.
+
+\textbf{Bob's output:} $m_b$.
+    
+\end{tcolorbox}
+    \caption{BBCS OT protocol in the bounded-quantum-storage model.}
+    \label{fig:BBCS_Bounded}
+\end{figure}
+
+\
+
+\noindent\textbf{Security.} We just comment on the security against dishonest Bob because the justification for the security against dishonest Alice is the same as in the original BBCS protocol, $\Pi^{\textbf{BBCS}}$ (see Section~\ref{sec:BBCS}). 
+
+Under the BQS assumption, the waiting time ($\Delta t$) effectively prevents Bob from holding \textit{a large fraction} of qubits until Alice reveals the bases choices $\bm{\theta}^{\mathsf{A}}$ used during the \textit{BB84 phase}. This comes from the fact that a dishonest Bob is forced to measure a fraction of the qubits, leading him to lose information about Alice's bases $\bm{\theta}^{\mathsf{A}}$.
+
+More specifically, Damg{\aa}rd et al. \cite{DFRSS07} showed that, with overwhelming probability, the loss of information about Alice's oblivious key ($\mathsf{ok}^{\mathsf{A}}_{I_{1}}$) is described by a lower bound on the min-entropy \cite{F10}
+
+$$H_{\text{min}}(\mathsf{ok}^{\mathsf{A}}_{I_{1}} | E) \geq 
+\frac{1}{4}n - \gamma n - l - 1.$$
+Similarly to the $\mathcal{F}_{\textbf{COM}}-$hybrid model, the min-entropy value has to be bounded by a factor proportional to the security parameter $n$. To render a positive bound, we derive an upper bound on the fraction of qubits that can be saved in the receiver's quantum memory, while preserving the security of the protocol, i.e. $\gamma < \frac{1}{4}$. 
+
+The above upper bound was later improved by K\"onig et al. \cite{KWW12} to $\gamma < \frac{1}{2}$. The authors also showed that the BQS model is a special case of the noisy-quantum-storage model. Subsequently, based on higher-dimensional mutually unbiased bases, Mandayam and Wehner \cite{MW11} presented a protocol that is still secure when an adversary cannot store even a small fraction of the transmitted pulses. In this latter work, the storage rate $\gamma$ approaches $1$ for increasing dimension.
+
+\
+
+\noindent\textbf{Composability.} The initial proofs given by Damg{\aa}rd et al. \cite{DFSS05, DFRSS07} were only developed under the stand-alone security model \cite{WW08}. In this model the composability of the protocol is not guaranteed to be secure. These proofs were extended by Wehner and Wullschleger \cite{WW08} to a simulation-based framework that guarantees sequential composition. Also, in a parallel work, Fehr and Schaffner developed a sequential composability framework under which $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ is secure considering the BQS model. 
+
+The more desirable quantum-UC framework was extended by Unruh and combined with the BQS model \cite{U11}. In Unruh's work, he developed the concept of BQS-UC security which, as in UC security, implies a very similar composition theorem. The only difference is that in the BQS-UC framework we have to keep track of the quantum memory-bound used by the machines activated during the protocol. Under this framework, Unruh follows a different approach as he does not use the protocol $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ (Figure~\ref{fig:BBCS_Bounded}). He presents a BQS-UC secure commitment protocol and composes it with the $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ protocol (Figure~\ref{fig:BBCS_COM}) in order to get a constant-round protocol that BQS-UC-emulates any two-party functionality.
+
+\
+
+\subsection{Noisy-quantum-storage model}
+
+The noisy-quantum-storage model, or NQS model for short, is a generalization of the BQS model. In the NQS model, the adversaries are allowed to keep any fraction $\nu$ of the transmitted qubits (including the case $\nu=1$) but their quantum memory is assumed to be noisy \cite{KWW12}, i.e. it is impossible to store qubits for some amount of time ($\Delta t$) without undergoing decoherence. 
+
+More formally, the decoherence process of the qubits in the noisy storage is described by a completely positive trace preserving (CPTP) map (also called channel) $\mathcal{C}: \mathcal{B}(\mathcal{H}_{\text{in}})\rightarrow \mathcal{B}(\mathcal{H}_{\text{out}})$, where $\mathcal{H}_{\text{in/out}}$ is the Hilbert space of the stored qubits before (in) and after (out) the storing period $\Delta t$ and $\mathcal{B}(\mathcal{H})$ is the set of positive semi-definite operators with unitary trace acting on an Hilbert space $\mathcal{H}$. $\mathcal{C}$ receives a quantum state $\rho\in \mathcal{H}_{\text{in}}$ at time $t$ and outputs a quantum state $\rho'\in\mathcal{H}_{\text{out}}$ at a later time $t + \Delta t$. %See Figure~\ref{fig:NQS_scheme} for a description of the possible malicious behaviour. 
+
+With this formulation, we can easily see that the BQS model is a particular case of the NQS. In BQS, the channel is of the form $\mathcal{C} = \mathds{1}^{\otimes \nu n}$, where the storage rate $\nu$ is the fraction of transmitted qubits stored in the quantum memory. The most studied scenario is restricted to $n-$fold quantum channels, i.e. $\mathcal{C} = \mathcal{N}^{\otimes \nu n}$ \cite{S10, KWW12, WST08}, where the channel $\mathcal{N}$ is applied independently to each individual stored qubit. In this particular case, it is possible to derive specific security parameters.
+
+%\begin{figure}
+%    \centering
+%    \includegraphics[scale=.1]{fig/nqs_channel.jpeg}
+%    \caption{During waiting times $\Delta t$, the adversary must use his noisy quantum storage described by the CPTP map $\mathcal{C}$. Before using his quantum storage, he performs any (error-free) “encoding attack” of his choosing, which consists of a measurement or an encoding into an error-correcting code. After time $\Delta t$, he receives some additional information that he can use for decoding. Figure taken from \cite{WCSL10}.}
+%    \label{fig:NQS_scheme}
+%\end{figure}
+
+\
+
+\noindent\textbf{Protocols.} The protocol from BQS model $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ is also considered to be secure in the NQS model \cite{S10}. However, the first proposed protocol analysed in this general NQS model was developed by K\"onig et al. \cite{KWW12}. This protocol draws inspiration from the research line initiated by Cachin, Crépeau and Marcil \cite{CCM98} about classical OT in the bounded-classical-storage model \cite{DHRS04, S07}. Similar to these works \cite{CCM98, DHRS04, S07}, the protocol presented by K\"onig et al. \cite{KWW12} uses the following two important techniques in its classical post-processing phase: encoding of sets and interactive hashing. The former is defined as an injective function $\mathsf{Enc}: \{0,1\}^t \rightarrow T$, where $T$ is a set of all subsets of $[n]$ with size $n/4$. The latter is a two-party protocol between Alice and Bob with the following specifications. Bob inputs some message $W^t$ and both parties receive two messages $W^t_0$ and $W^t_1$ such that there exists some $b\in\{0,1\}$ with $W^t_b = W^t$. The index $b$ is unknown to Alice, and Bob has little control over the choice of the other message $W^t$, i.e. it is randomly chosen by the functionality. %A schematic representation of the interactive hashing functionality is given in Figure~\ref{fig:IH}.
+
+%\begin{figure}[h!]
+%    \centering
+%    \includegraphics[scale=.1]{fig/Interactive_hashing.jpeg}
+%    \caption{Interactive hashing functionality. Figure taken %from \cite{KWW12}.}
+%    \label{fig:IH}
+%\end{figure}
+
+In this review, we only present the na\"ive protocol presented in the original paper \cite{KWW12} as it is enough to give an intuition on the protocol. Although both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ protocols are different, we keep a similar notation for a comparison purpose. The protocol $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ (Figure~\ref{fig:BBCS_Noisy}) goes as follows. The first two phases (\textit{BB84} and \textit{Waiting time}) are the same as in $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ (Figure~\ref{fig:BBCS_Bounded}). Then, both parties generate a very similar resource to oblivious keys, named \textit{weak string erasure} (WSE). After this WSE process, the sender also holds the totality of the key $\mathsf{ok}^{\mathsf{S}}$, while the receiver holds a fourth of this key, i.e. the tuple $(I, \mathsf{ok}^{\mathsf{R}} := \mathsf{ok}^{\mathsf{S}}_I)$ where $I$ is the set of indexes they measured in the same basis and its size is given by $|I| = \frac{n}{4}$. Then, along with a method of encoding sets into binary strings, both parties use interactive hashing to generate two index subsets, $I_0$ and $I_1$, where the sender plays the role of Alice, and the receiver plays the role of Bob. The two subsets ($I_0$ and $I_1$) together with two $2-$universal hash functions are enough for the sender to generate her output messages $(m_0, m_1)$ and the receiver to get his bit choice along with the corresponding message $(b, m_b)$. For more details on the protocols for encodings of sets and interactive hashing, we refer to Ding et al. \cite{DHRS04} and Savvides \cite{S07}.
+
+\begin{figure}[h!]
+\centering
+\begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+                        
+    \centerline{Na\"ive $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ \textbf{protocol}}
+            
+    \
+    
+    \textbf{Parameters:} $n$, security parameter; $\mathcal{F}$ two-universal family of hash functions.
+    
+    $\mathsf{S}$ \textbf{input:} $\bot$.  
+    
+    $\mathsf{R}$ \textbf{input:} $\bot$. 
+    
+    \
+    
+    \textit{BB84 phase}: \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+    
+    
+    \
+    
+    \textit{Waiting time phase}: \textcolor{gray}{Same as in $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ (Figure~\ref{fig:BBCS_Bounded}).}
+    
+    \
+    
+    \textit{Weak String Erasure phase}: \textcolor{gray}{Similar to \textit{Oblivious key phase} of $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item $\mathsf{S}$ reveals to $\mathsf{R}$ the bases $\bm{\theta}^{\mathsf{S}}$ used during the \textit{BB84 phase} and sets his oblivious key to $\mathsf{ok}^{\mathsf{S}}:=\bm{x}^{\mathsf{S}}$.
+        
+        \item $\mathsf{R}$ computes $\mathsf{e}^\mathsf{R} = \bm{\theta}^{\mathsf{R}} \oplus \bm{\theta}^{\mathsf{S}}$. Then, he defines $I = \{ i : \mathsf{e}^{\mathsf{R}}_i = 0 \}$ and sets $\mathsf{ok}^{\mathsf{R}}:=\bm{x}^{\mathsf{R}}_{I}$.
+        
+        \item If $|I| < n/4$, $\mathsf{R}$ randomly adds elements to $I$ and pads the corresponding positions in $\mathsf{ok}^{\mathsf{R}}$ with $0$s. Otherwise, he randomly truncates $I$ to size $n/4$, and deletes the corresponding values in $\mathsf{ok}^{\mathsf{R}}$.
+    \end{enumerate}
+     
+    \ 
+     
+    \textit{Interactive hashing phase}: 
+    \begin{enumerate}
+        \setcounter{enumi}{6}
+        \item $\mathsf{S}$ and $\mathsf{R}$ execute interactive hashing with $\mathsf{R}$’s input $W$ to be equal to a description of $I = \mathsf{Enc}(W)$. They interpret the outputs $W_0$ and $W_1$ as descriptions of subsets $I_0$ and $I_1$ of $[n]$.
+    \end{enumerate}
+    
+    \
+    
+    \textit{Transfer phase}:
+            \begin{enumerate}
+            \setcounter{enumi}{4}
+                \item $\mathsf{S}$ generates random $f_0, f_1 \leftarrow_{\$}\mathcal{F}$ and sends them to $\mathsf{R}$.
+                \item $\mathsf{S}$ computes the pair of messages $(m_0, m_1)$ as $m_i = f_i(\mathsf{ok}^{\mathsf{S}}_{I_{i}})$.
+                \item $\mathsf{R}$ computes $b\in\{0, 1\}$ by comparing $I = I_b$ and computes $m_b = f_b(\mathsf{ok}^{\mathsf{R}}_{I})$. 
+            \end{enumerate}
+    
+    
+   
+    
+    \
+    
+$\mathsf{S}$ \textbf{output:} $(m_0, m_1)\in\{0,1\}^l$ (two messages).
+
+$\mathsf{R}$ \textbf{output:} $(b, m_b)$ where $b\in\{0,1\}$ (bit choice).
+    
+\end{tcolorbox}
+    \caption{BBCS OT protocol in the noisy-quantum-storage model.}
+    \label{fig:BBCS_Noisy}
+\end{figure}
+
+
+\
+
+\noindent\textbf{Security.} Based on the original BQS protocol (Figure~\ref{fig:BBCS_Bounded}), the first proofs in the NQS model were developed by Schaffner, Wehner and Terhal \cite{WST08, STW09}. However, in these initial works, the authors only considered individual-storage attacks, where the adversary treats all incoming qubits equally. Subsequently, Schaffner \cite{S10} was able to prove the security of $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ against arbitrary attacks in the more general NQS model defined by K\"onig et al. \cite{KWW12}. 
+
+In this more general NQS model, the security of both protocols $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ (Figures~\ref{fig:BBCS_Bounded} and \ref{fig:BBCS_Noisy}) against a dishonest receiver depends on the possibility to set a lower-bound on the min-entropy of the ``unknown'' key $\mathsf{ok}^{\mathsf{S}}_{I_{1-b}}$ given the receiver's quantum side information. His quantum side information is given by the output of the quantum channel $\mathcal{C}$ when applied to the received states. More formally, one has to lower-bound the expression $H_{\text{min}}\left(\mathsf{ok}^{\mathsf{S}}_{I_{1-b}} | \mathcal{C}\left(Q_{\text{in}}\right)\right)$, where $Q_{\text{in}}$ denotes the subsystem of the received states before undergoing decoherence. It is proven \cite{KWW12} that this lower-bound depends on the receiver's maximal success probability of correctly decoding a randomly chosen n-bit string $x \in \{0,1\}^n$ sent over the quantum
+channel $\mathcal{C}$, i.e. $P^{\mathcal{C}}_{\text{succ}}(n)$. This result is given by Lemma~\ref{lemma:NQS_sec_lemma}.
+
+\begin{lemma}[Lemma II.2. from \cite{KWW12}]
+
+Consider an arbitrary ccq-state $\rho_{XTQ}$, and
+let $\varepsilon, \varepsilon' > 0$ be arbitrary. Let $\mathcal{C} : \mathcal{B}(\mathcal{H}_{Q_{\text{in}}}) \rightarrow \mathcal{B}(\mathcal{H}_{Q_{\text{out}}})$ be an arbitrary CPTP map, where $\mathcal{H}_{Q_{\text{in}}}$ and $\mathcal{H}_{Q_{\text{out}}}$ are the Hilbert space corresponding to the subsystem $Q_{\text{in}}$ and $Q_{\text{out}}$, respectively. Then,
+
+$$H^{\varepsilon + \varepsilon'}_{\min}(X|T\mathcal{C}(Q)) \geq -\log P^{\mathcal{C}}_{\text{succ}}\left(\left\lfloor H^{\varepsilon}_{\min}(X|T) - \log\frac{1}{\varepsilon}\right\rfloor \right),$$ where $H^{\epsilon}$ denotes the smooth min-entropy.
+
+\label{lemma:NQS_sec_lemma}
+\end{lemma}
+
+For particular channels $\mathcal{C} = \mathcal{N}^{\otimes \nu }$, K\"onig et al. \cite{KWW12} concluded that security in the NQS model can be obtained in case
+
+$$\mathcal{C}_{\mathcal{N}} \cdot \nu < \frac{1}{2},$$
+where $\mathcal{C}_{\mathcal{N}}$ is the classical capacity of quantum channels $\mathcal{N}$ satisfying a particular property (strong-converse property).
+
+
+
+
+
+
+
+
+\subsection{Hacking attacks to QOT}
+
+
+Talk about what I wrote in the paper
+
+Talk about how to mitigate this
+
 
 
 %\bibliography{bibforthesis}

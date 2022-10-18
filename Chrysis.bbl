@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{Wang11}
 Jun Wang.
@@ -581,5 +581,175 @@ Mariano Lemus, Mariana~F. Ramos, Preeti Yadav, Nuno~A. Silva, Nelson~J. Muga,
 \newblock Generation and distribution of quantum oblivious keys for secure
   multiparty computation.
 \newblock {\em Applied Sciences}, 10(12):4080, June 2020.
+
+\bibitem{CK88}
+C.~Crepeau and J.~Kilian.
+\newblock Achieving oblivious transfer using weakened security assumptions.
+\newblock In {\em [Proceedings 1988] 29th Annual Symposium on Foundations of
+  Computer Science}. {IEEE}, 1988.
+
+\bibitem{MS94}
+D.~Mayers and L.~Salvail.
+\newblock Quantum oblivious transfer is secure against all individual
+  measurements.
+\newblock In {\em Proceedings Workshop on Physics and Computation. {PhysComp}
+  '94}. {IEEE} Comput. Soc. Press, 1994.
+
+\bibitem{M96b}
+Dominic Mayers.
+\newblock Quantum key distribution and string oblivious transfer in noisy
+  channels.
+\newblock In {\em Advances in Cryptology {\textemdash} {CRYPTO} '96}, pages
+  343--357. Springer Berlin Heidelberg, 1996.
+
+\bibitem{CDMS04}
+Claude Cr{\'e}peau, Paul Dumais, Dominic Mayers, and Louis Salvail.
+\newblock Computational collapse of quantum state with application to oblivious
+  transfer.
+\newblock In Moni Naor, editor, {\em Theory of Cryptography}, pages 374--393,
+  Berlin, Heidelberg, 2004. Springer Berlin Heidelberg.
+
+\bibitem{U10}
+Dominique Unruh.
+\newblock Universally composable quantum multi-party computation.
+\newblock In {\em Advances in Cryptology {\textendash} {EUROCRYPT} 2010}, pages
+  486--505. Springer Berlin Heidelberg, 2010.
+
+\bibitem{BF10}
+Niek~J. Bouman and Serge Fehr.
+\newblock Sampling in a quantum population, and applications.
+\newblock In {\em Advances in Cryptology {\textendash} {CRYPTO} 2010}, pages
+  724--741. Springer Berlin Heidelberg, 2010.
+
+\bibitem{BCC+10}
+Mario Berta, Matthias Christandl, Roger Colbeck, Joseph~M. Renes, and Renato
+  Renner.
+\newblock The uncertainty principle in the presence of quantum memory.
+\newblock {\em Nature Physics}, 6(9):659--662, July 2010.
+
+\bibitem{TR11}
+Marco Tomamichel and Renato Renner.
+\newblock Uncertainty relation for smooth entropies.
+\newblock {\em Physical Review Letters}, 106(11), March 2011.
+
+\bibitem{R06}
+Renato Renner.
+\newblock Security of quantum key distribution, 2006.
+
+\bibitem{DFRSS07}
+Ivan~B. Damg{\aa}rd, Serge Fehr, Renato Renner, Louis Salvail, and Christian
+  Schaffner.
+\newblock A tight high-order entropic quantum uncertainty relation with
+  applications.
+\newblock In Alfred Menezes, editor, {\em Advances in Cryptology - CRYPTO
+  2007}, pages 360--378, Berlin, Heidelberg, 2007. Springer Berlin Heidelberg.
+
+\bibitem{RK05}
+Renato Renner and Robert K\"{o}nig.
+\newblock Universally composable privacy amplification against quantum
+  adversaries.
+\newblock In {\em Theory of Cryptography}, pages 407--425. Springer Berlin
+  Heidelberg, 2005.
+
+\bibitem{R05}
+Renato Renner.
+\newblock Security of quantum key distribution, 2005.
+
+\bibitem{N91}
+Moni Naor.
+\newblock Bit commitment using pseudorandomness.
+\newblock {\em Journal of Cryptology}, 4(2):151--158, January 1991.
+
+\bibitem{HILL99}
+Johan H{\AA}stad, Russell Impagliazzo, Leonid~A. Levin, and Michael Luby.
+\newblock A pseudorandom generator from any one-way function.
+\newblock {\em {SIAM} Journal on Computing}, 28(4):1364--1396, January 1999.
+
+\bibitem{HR07}
+Iftach Haitner and Omer Reingold.
+\newblock Statistically-hiding commitment from any one-way function.
+\newblock In {\em Proceedings of the thirty-ninth annual {ACM} symposium on
+  Theory of computing - {STOC} '07}. {ACM} Press, 2007.
+
+\bibitem{CF01}
+Ran Canetti and Marc Fischlin.
+\newblock Universally composable commitments.
+\newblock In Joe Kilian, editor, {\em Advances in Cryptology --- CRYPTO 2001},
+  pages 19--40, Berlin, Heidelberg, 2001. Springer Berlin Heidelberg.
+
+\bibitem{U11}
+Dominique Unruh.
+\newblock Concurrent composition in the bounded quantum storage model.
+\newblock In Kenneth~G. Paterson, editor, {\em Advances in Cryptology --
+  EUROCRYPT 2011}, pages 467--486, Berlin, Heidelberg, 2011. Springer Berlin
+  Heidelberg.
+
+\bibitem{MR09}
+J\"{o}rn M\"{u}ller-Quade and Renato Renner.
+\newblock Composability in quantum cryptography.
+\newblock {\em New Journal of Physics}, 11(8):085006, August 2009.
+
+\bibitem{BM04}
+Michael Ben-Or and Dominic Mayers.
+\newblock General security definition and composability for quantum \&
+  classical protocols, 2004.
+
+\bibitem{U04}
+Dominique Unruh.
+\newblock Simulatable security for quantum protocols, 2004.
+
+\bibitem{C20}
+Ran Canetti.
+\newblock Universally composable security.
+\newblock {\em Journal of the {ACM}}, 67(5):1--94, October 2020.
+
+\bibitem{MR11}
+Ueli Maurer and Renato Renner.
+\newblock Abstract cryptography.
+\newblock In Bernard Chazelle, editor, {\em The Second Symposium on Innovations
+  in Computer Science, ICS 2011}, pages 1--21. Tsinghua University Press, 1
+  2011.
+
+\bibitem{MW11}
+Prabha Mandayam and Stephanie Wehner.
+\newblock Achieving the physical limits of the bounded-storage model.
+\newblock {\em Physical Review A}, 83(2), February 2011.
+
+\bibitem{WW08}
+Stephanie Wehner and J{\"u}rg Wullschleger.
+\newblock Composable security in the bounded-quantum-storage model.
+\newblock In Luca Aceto, Ivan Damg{\aa}rd, Leslie~Ann Goldberg, Magn{\'u}s~M.
+  Halld{\'o}rsson, Anna Ing{\'o}lfsd{\'o}ttir, and Igor Walukiewicz, editors,
+  {\em Automata, Languages and Programming}, pages 604--615, Berlin,
+  Heidelberg, 2008. Springer Berlin Heidelberg.
+
+\bibitem{S10}
+Christian Schaffner.
+\newblock Simple protocols for oblivious transfer and secure identification in
+  the noisy-quantum-storage model.
+\newblock {\em Physical Review A}, 82(3), September 2010.
+
+\bibitem{CCM98}
+C.~Cachin, C.~Crepeau, and J.~Marcil.
+\newblock Oblivious transfer with a memory-bounded receiver.
+\newblock In {\em Proceedings 39th Annual Symposium on Foundations of Computer
+  Science (Cat. No.98CB36280)}. {IEEE} Comput. Soc, 1998.
+
+\bibitem{DHRS04}
+Yan~Zong Ding, Danny Harnik, Alon Rosen, and Ronen Shaltiel.
+\newblock Constant-round oblivious transfer in the bounded storage model.
+\newblock In Moni Naor, editor, {\em Theory of Cryptography}, pages 446--472,
+  Berlin, Heidelberg, 2004. Springer Berlin Heidelberg.
+
+\bibitem{S07}
+George. Savvides.
+\newblock {\em Interactive hashing and reductions between Oblivious Transfer
+  variants}.
+\newblock PhD thesis, McGill University, School of Computer Science, 2007.
+
+\bibitem{STW09}
+Christian Schaffner, Barbara~M. Terhal, and Stephanie Wehner.
+\newblock Robust cryptography in the noisy-quantum-storage model.
+\newblock {\em Quantum Inf. Comput.}, 9(11{\&}12):963--996, 2009.
 
 \end{thebibliography}
