@@ -5,3 +5,6 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces BBCS OT protocol in the $\mathcal {F}_{\textbf {COM}}-$hybrid model.\relax }}{15}{figure.caption.20}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces BBCS OT protocol in the bounded-quantum-storage model.\relax }}{19}{figure.caption.21}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces BBCS OT protocol in the noisy-quantum-storage model.\relax }}{22}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Sender faked-state attack.\relax }}{25}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Sender trojan-horse attack.\relax }}{25}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Receiver trojan-horse attack.\relax }}{25}{figure.caption.26}%

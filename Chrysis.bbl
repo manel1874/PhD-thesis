@@ -752,4 +752,20 @@ Christian Schaffner, Barbara~M. Terhal, and Stephanie Wehner.
 \newblock Robust cryptography in the noisy-quantum-storage model.
 \newblock {\em Quantum Inf. Comput.}, 9(11{\&}12):963--996, 2009.
 
+\bibitem{KW16}
+Jedrzej Kaniewski and Stephanie Wehner.
+\newblock Device-independent two-party cryptography secure against sequential
+  attacks.
+\newblock {\em New Journal of Physics}, 18(5):055004, May 2016.
+
+\bibitem{BY21}
+Anne Broadbent and Peter Yuen.
+\newblock Device-independent oblivious transfer from the
+  bounded-quantum-storage-model and computational assumptions, 2021.
+
+\bibitem{RW20}
+Jeremy Ribeiro and Stephanie Wehner.
+\newblock On bit commitment and oblivious transfer in measurement-device
+  independent settings, 2020.
+
 \end{thebibliography}

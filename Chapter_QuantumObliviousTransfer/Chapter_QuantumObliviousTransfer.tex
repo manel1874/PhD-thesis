@@ -333,7 +333,7 @@ With this formulation, we can easily see that the BQS model is a particular case
 %    \label{fig:IH}
 %\end{figure}
 
-In this review, we only present the na\"ive protocol presented in the original paper \cite{KWW12} as it is enough to give an intuition on the protocol. Although both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ protocols are different, we keep a similar notation for a comparison purpose. The protocol $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ (Figure~\ref{fig:BBCS_Noisy}) goes as follows. The first two phases (\textit{BB84} and \textit{Waiting time}) are the same as in $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ (Figure~\ref{fig:BBCS_Bounded}). Then, both parties generate a very similar resource to oblivious keys, named \textit{weak string erasure} (WSE). After this WSE process, the sender also holds the totality of the key $\mathsf{ok}^{\mathsf{S}}$, while the receiver holds a fourth of this key, i.e. the tuple $(I, \mathsf{ok}^{\mathsf{R}} := \mathsf{ok}^{\mathsf{S}}_I)$ where $I$ is the set of indexes they measured in the same basis and its size is given by $|I| = \frac{n}{4}$. Then, along with a method of encoding sets into binary strings, both parties use interactive hashing to generate two index subsets, $I_0$ and $I_1$, where the sender plays the role of Alice, and the receiver plays the role of Bob. The two subsets ($I_0$ and $I_1$) together with two $2-$universal hash functions are enough for the sender to generate her output messages $(m_0, m_1)$ and the receiver to get his bit choice along with the corresponding message $(b, m_b)$. For more details on the protocols for encodings of sets and interactive hashing, we refer to Ding et al. \cite{DHRS04} and Savvides \cite{S07}.
+In this section, we only present the na\"ive protocol presented in the original paper \cite{KWW12} as it is enough to give an intuition on the protocol. Although both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ protocols are different, we keep a similar notation for a comparison purpose. The protocol $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ (Figure~\ref{fig:BBCS_Noisy}) goes as follows. The first two phases (\textit{BB84} and \textit{Waiting time}) are the same as in $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ (Figure~\ref{fig:BBCS_Bounded}). Then, both parties generate a very similar resource to oblivious keys, named \textit{weak string erasure} (WSE). After the WSE generation, Alice also holds the totality of the key $\mathsf{ok}^{\mathsf{A}}$, while Bob holds a fourth of this key, i.e. the tuple $(I, \mathsf{ok}^{\mathsf{B}} := \mathsf{ok}^{\mathsf{A}}_I)$ where $I$ is the set of indexes they measured in the same basis and its size is given by $|I| = \frac{n}{4}$. Then, along with a method of encoding sets into binary strings, both parties use interactive hashing to generate two index subsets, $I_0$ and $I_1$. The two subsets ($I_0$ and $I_1$) together with two $2-$universal hash functions are enough for Alice to generate her output messages $(m_0, m_1)$ and for Bob to get his bit choice along with the corresponding message $(b, m_b)$. For more details on the protocols for encodings of sets and interactive hashing, we refer to Ding et al. \cite{DHRS04} and Savvides \cite{S07}.
 
 \begin{figure}[h!]
 \centering
@@ -347,9 +347,9 @@ In this review, we only present the na\"ive protocol presented in the original p
     
     \textbf{Parameters:} $n$, security parameter; $\mathcal{F}$ two-universal family of hash functions.
     
-    $\mathsf{S}$ \textbf{input:} $\bot$.  
+    \textbf{Alice's input:} $\bot$.  
     
-    $\mathsf{R}$ \textbf{input:} $\bot$. 
+    \textbf{Bob's input:} $\bot$. 
     
     \
     
@@ -365,11 +365,11 @@ In this review, we only present the na\"ive protocol presented in the original p
     \textit{Weak String Erasure phase}: \textcolor{gray}{Similar to \textit{Oblivious key phase} of $\Pi^{\textbf{BBCS}}$ (Figure~\ref{fig:BBCS}).}
     \begin{enumerate}
         \setcounter{enumi}{3}
-        \item $\mathsf{S}$ reveals to $\mathsf{R}$ the bases $\bm{\theta}^{\mathsf{S}}$ used during the \textit{BB84 phase} and sets his oblivious key to $\mathsf{ok}^{\mathsf{S}}:=\bm{x}^{\mathsf{S}}$.
+        \item Alice reveals to Bob the bases $\bm{\theta}^{\mathsf{A}}$ used during the \textit{BB84 phase} and sets her oblivious key to $\mathsf{ok}^{\mathsf{A}}:=\bm{x}^{\mathsf{A}}$.
         
-        \item $\mathsf{R}$ computes $\mathsf{e}^\mathsf{R} = \bm{\theta}^{\mathsf{R}} \oplus \bm{\theta}^{\mathsf{S}}$. Then, he defines $I = \{ i : \mathsf{e}^{\mathsf{R}}_i = 0 \}$ and sets $\mathsf{ok}^{\mathsf{R}}:=\bm{x}^{\mathsf{R}}_{I}$.
+        \item Bob computes $\mathsf{e}^\mathsf{B} = \bm{\theta}^{\mathsf{B}} \oplus \bm{\theta}^{\mathsf{A}}$. Then, he defines $I = \{ i : \mathsf{e}^{\mathsf{B}}_i = 0 \}$ and sets $\mathsf{ok}^{\mathsf{B}}:=\bm{x}^{\mathsf{B}}_{I}$.
         
-        \item If $|I| < n/4$, $\mathsf{R}$ randomly adds elements to $I$ and pads the corresponding positions in $\mathsf{ok}^{\mathsf{R}}$ with $0$s. Otherwise, he randomly truncates $I$ to size $n/4$, and deletes the corresponding values in $\mathsf{ok}^{\mathsf{R}}$.
+        \item If $|I| < n/4$, Bob randomly adds elements to $I$ and pads the corresponding positions in $\mathsf{ok}^{\mathsf{B}}$ with $0$s. Otherwise, he randomly truncates $I$ to size $n/4$, and deletes the corresponding values in $\mathsf{ok}^{\mathsf{B}}$.
     \end{enumerate}
      
     \ 
@@ -377,7 +377,7 @@ In this review, we only present the na\"ive protocol presented in the original p
     \textit{Interactive hashing phase}: 
     \begin{enumerate}
         \setcounter{enumi}{6}
-        \item $\mathsf{S}$ and $\mathsf{R}$ execute interactive hashing with $\mathsf{R}$’s input $W$ to be equal to a description of $I = \mathsf{Enc}(W)$. They interpret the outputs $W_0$ and $W_1$ as descriptions of subsets $I_0$ and $I_1$ of $[n]$.
+        \item Alice and Bob execute interactive hashing with Bob’s input $W$ to be equal to a description of $I = \mathsf{Enc}(W)$. They interpret the outputs $W_0$ and $W_1$ as descriptions of subsets $I_0$ and $I_1$ of $[n]$.
     \end{enumerate}
     
     \
@@ -385,9 +385,9 @@ In this review, we only present the na\"ive protocol presented in the original p
     \textit{Transfer phase}:
             \begin{enumerate}
             \setcounter{enumi}{4}
-                \item $\mathsf{S}$ generates random $f_0, f_1 \leftarrow_{\$}\mathcal{F}$ and sends them to $\mathsf{R}$.
-                \item $\mathsf{S}$ computes the pair of messages $(m_0, m_1)$ as $m_i = f_i(\mathsf{ok}^{\mathsf{S}}_{I_{i}})$.
-                \item $\mathsf{R}$ computes $b\in\{0, 1\}$ by comparing $I = I_b$ and computes $m_b = f_b(\mathsf{ok}^{\mathsf{R}}_{I})$. 
+                \item Alice generates random $f_0, f_1 \leftarrow_{\$}\mathcal{F}$ and sends them to Bob.
+                \item Alice computes the pair of messages $(m_0, m_1)$ as $m_i = f_i(\mathsf{ok}^{\mathsf{S}}_{I_{i}})$.
+                \item Bob computes $b\in\{0, 1\}$ by comparing $I = I_b$ and computes $m_b = f_b(\mathsf{ok}^{\mathsf{B}}_{I})$. 
             \end{enumerate}
     
     
@@ -409,37 +409,173 @@ $\mathsf{R}$ \textbf{output:} $(b, m_b)$ where $b\in\{0,1\}$ (bit choice).
 
 \noindent\textbf{Security.} Based on the original BQS protocol (Figure~\ref{fig:BBCS_Bounded}), the first proofs in the NQS model were developed by Schaffner, Wehner and Terhal \cite{WST08, STW09}. However, in these initial works, the authors only considered individual-storage attacks, where the adversary treats all incoming qubits equally. Subsequently, Schaffner \cite{S10} was able to prove the security of $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ against arbitrary attacks in the more general NQS model defined by K\"onig et al. \cite{KWW12}. 
 
-In this more general NQS model, the security of both protocols $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ (Figures~\ref{fig:BBCS_Bounded} and \ref{fig:BBCS_Noisy}) against a dishonest receiver depends on the possibility to set a lower-bound on the min-entropy of the ``unknown'' key $\mathsf{ok}^{\mathsf{S}}_{I_{1-b}}$ given the receiver's quantum side information. His quantum side information is given by the output of the quantum channel $\mathcal{C}$ when applied to the received states. More formally, one has to lower-bound the expression $H_{\text{min}}\left(\mathsf{ok}^{\mathsf{S}}_{I_{1-b}} | \mathcal{C}\left(Q_{\text{in}}\right)\right)$, where $Q_{\text{in}}$ denotes the subsystem of the received states before undergoing decoherence. It is proven \cite{KWW12} that this lower-bound depends on the receiver's maximal success probability of correctly decoding a randomly chosen n-bit string $x \in \{0,1\}^n$ sent over the quantum
-channel $\mathcal{C}$, i.e. $P^{\mathcal{C}}_{\text{succ}}(n)$. This result is given by Lemma~\ref{lemma:NQS_sec_lemma}.
+In this more general NQS model, the security of both protocols $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ (Figures~\ref{fig:BBCS_Bounded} and \ref{fig:BBCS_Noisy}) against a dishonest receiver depends on the ability to set a lower-bound on the min-entropy of the ``unknown'' key $\mathsf{ok}^{\mathsf{A}}_{I_{1-b}}$ given the receiver's quantum side information. His quantum side information is given by the output of the quantum channel $\mathcal{C}$ when applied to the received states. More formally, one has to lower-bound the expression $H_{\text{min}}\left(\mathsf{ok}^{\mathsf{A}}_{I_{1-b}} | \mathcal{C}\left(Q_{\text{in}}\right)\right)$, where $Q_{\text{in}}$ denotes the subsystem of the received states before undergoing decoherence. It is proven \cite{KWW12} that this lower-bound depends on the receiver's maximal success probability of correctly decoding a randomly chosen n-bit string $x \in \{0,1\}^n$ sent over the quantum
+channel $\mathcal{C}$, i.e. $P^{\mathcal{C}}_{\text{succ}}(n)$. %This result is given by Lemma~\ref{lemma:NQS_sec_lemma}.
 
-\begin{lemma}[Lemma II.2. from \cite{KWW12}]
+%\begin{lemma}[Lemma II.2. from \cite{KWW12}]
 
-Consider an arbitrary ccq-state $\rho_{XTQ}$, and
-let $\varepsilon, \varepsilon' > 0$ be arbitrary. Let $\mathcal{C} : \mathcal{B}(\mathcal{H}_{Q_{\text{in}}}) \rightarrow \mathcal{B}(\mathcal{H}_{Q_{\text{out}}})$ be an arbitrary CPTP map, where $\mathcal{H}_{Q_{\text{in}}}$ and $\mathcal{H}_{Q_{\text{out}}}$ are the Hilbert space corresponding to the subsystem $Q_{\text{in}}$ and $Q_{\text{out}}$, respectively. Then,
+%Consider an arbitrary ccq-state $\rho_{XTQ}$, and let $\varepsilon, \varepsilon' > 0$ be arbitrary. Let $\mathcal{C} : \mathcal{B}(\mathcal{H}_{Q_{\text{in}}}) \rightarrow \mathcal{B}(\mathcal{H}_{Q_{\text{out}}})$ be an arbitrary CPTP map, where $\mathcal{H}_{Q_{\text{in}}}$ and $\mathcal{H}_{Q_{\text{out}}}$ are the Hilbert space corresponding to the subsystem $Q_{\text{in}}$ and $Q_{\text{out}}$, respectively. Then,
 
-$$H^{\varepsilon + \varepsilon'}_{\min}(X|T\mathcal{C}(Q)) \geq -\log P^{\mathcal{C}}_{\text{succ}}\left(\left\lfloor H^{\varepsilon}_{\min}(X|T) - \log\frac{1}{\varepsilon}\right\rfloor \right),$$ where $H^{\epsilon}$ denotes the smooth min-entropy.
+%$$H^{\varepsilon + \varepsilon'}_{\min}(X|T\mathcal{C}(Q)) \geq -\log P^{\mathcal{C}}_{\text{succ}}\left(\left\lfloor H^{\varepsilon}_{\min}(X|T) - \log\frac{1}{\varepsilon}\right\rfloor \right),$$ where $H^{\epsilon}$ denotes the smooth min-entropy.
 
-\label{lemma:NQS_sec_lemma}
-\end{lemma}
+%\label{lemma:NQS_sec_lemma}
+%\end{lemma}
 
 For particular channels $\mathcal{C} = \mathcal{N}^{\otimes \nu }$, K\"onig et al. \cite{KWW12} concluded that security in the NQS model can be obtained in case
 
-$$\mathcal{C}_{\mathcal{N}} \cdot \nu < \frac{1}{2},$$
-where $\mathcal{C}_{\mathcal{N}}$ is the classical capacity of quantum channels $\mathcal{N}$ satisfying a particular property (strong-converse property).
+$$c_{\mathcal{N}} \cdot \nu < \frac{1}{2},$$
+where $c_{\mathcal{N}}$ is the classical capacity of quantum channels $\mathcal{N}$ satisfying a particular property (strong-converse property).
+
+
+
+
+\subsection{Experimental attacks}
+
+Although QKD and QOT protocols are proved to be theoretically secure, experimental implementations may come with loopholes that allow to break their security. This mismatch between theory and practice comes from the fact that theoretical proofs usually assume that the physical apparatus of honest parties cannot be hacked. However, imperfections in both the generation and measurement the qubits can be exploited in multiple ways to perform quantum attacks. We refer the interested reader to proper review articles \cite{LCT14, Pirandola2020} on QKD attacks and possible mitigation measures. Here, we briefly discuss the impact of these attacks on BBCS-based QOT protocols.
+
+\subsubsection{QOT attacks}
+
+It is important to stress that there is a fundamental difference between QKD and QOT protocols. In QKD, both parties can cooperate to detect an external attack, whereas, in QOT, both parties are distrustful of each other. Moreover, QKD external attacks pressupose that the adversary has access to the quantum channel and is able to play some sort of man-in-the-middle attack. Regarding QOT protocols, both parties can already use their shared quantum channel to attack the other player. 
+
+(FIQUEI AQUI)
+
+
+In particular, for BBCS-based QOT protocols, Alice must not be able to know which set of indexes is known by Bob (i.e. $\mathsf{e}^\mathsf{B}$) and Bob must have limited knowledge on Alice's key (i.e. $\mathsf{ok}^\mathsf{A} $). However, both parties can use their quantum channel to gain some information (or control) about the set of bases used by the other. 
+
+Two of the most common attacks on quantum systems are faked-state attacks \cite{MH05} (FSA) and trojan-horses attacks \cite{GFKZR06} (THA). The former targets measurement apparatus and the former can target both preparation and measurement apparatus. In a prepare-and-measure setting, FSA can only be used by Alice (sender) while THA can be used by both. 
+
+FSA can be performed with well crafted optical signals that allow Alice to take control over Bob's measurement outcomes. In summary, as described by Jain et al. \cite{JSKEML16}, when both parties' bases coincide, the receiver's detector clicks; when these are incompatible, he gets no detection event ($\bot$). This way, Alice forces Bob to only use the qubit measurements where their bases coincide. So, the indexes corresponding to no detection events will be discarded by both parties whereas the others will be used in the rest of the protocol. This way, the sender has full knowledge of the receiver's bases and can easily distinguish $I_0$ from $I_1$. Note that the sender does not have to attack all measurement turns. He only needs one successful FSA to guess one basis. This happens with high probability in the number of attacks $q$,
+$$Pr[\text{Success sender's attack}] = 1 - \bigg(\frac{1}{2}\bigg)^q.$$ This attack is summarized in Figure~\ref{fig:A_FSA}. We denote by $\mathcal{S}_{\textbf{qokd}}(J)$ ($\mathcal{R}_{\textbf{qokd}}(J)$) the sender's (receiver's) quantum hacking procedure that provides him with the receiver's (sender's) bases from index set $J$.
+
+THA is achieved by sending bright pulses into the equipment under attack and scanning through the different reflections to obtain the bases used. Likewise the FSA, the sender only needs one successful attack as summarized in Figure~\ref{fig:A_THA}. However, the receiver's attack is more challenging. Not only he has to successfully guess \textit{all} the sender's bases, he also has to be able to correctly measure the corresponding qubits after leaking the sender's bases. Without the help of quantum memories, this procedure is much more difficult to succeed and allow the receiver to extract the whole key, $k^S$. The receiver's attack based on THA is summarized in Figure~\ref{fig:B_THA}.
 
 
 
 
 
+%This is more problematic if Bob undertakes passive basis choice (e.g. the basis choice is achieved by Bob's set-up randomly at the polarizing beam splitter)
+
+
+%To be more specific, even if Alice is able to find only \textit{one} Bob's choice base of the $j-$th index, she can perfectly guess Bob's bit choice $b$ when she receives the index set $I_b$. The attack is described in Figure~\ref{}. On the other hand, Bob's attack is more challenging because he has to successfully guess \textit{all} Alice's basis. Besides that, Bob attack is technologically more challenging than Alice's. This is because Bob has to be able to leak Alice basis and immediately measure the corresponding qubit. Otherwise, in case he has access to quantum memory he can hold the qubits before measuring them. However, this is unfeasible with current technology. Bob's attack is summarized in Figure~\ref{A_FSA}.
+
+
+\begin{figure}
+\begin{center}
+\fbox{%
+    \parbox{\linewidth}{%
+    \begin{center}
+        \textbf{Sender Faked-states attack}
+    \end{center}
+    
+    S input: $J$ with size $q$.
+    
+    \begin{enumerate}
+         \item S implements some attack $\mathcal{S}_{\textbf{qokd}}(\{J\}) = \{b_{R,j}\}_{j}$ where $b_{R,j}\in\{X, Z\}$ or $b_{R,j}=\bot$. 
+         \item If $\exists j$ such that $b_{R,j} \neq \bot$:
+         \begin{enumerate}
+            \item $b=0$ if $j\in I_b$, ;
+            \item $b=1$ if $j\notin I_b$.
+         \end{enumerate}
+         
+    \end{enumerate} 
+    
+    S outputs: $b$.
+    
+    }%
+}
+\caption{Sender faked-state attack.}
+\label{fig:A_FSA}
+\end{center}
+\end{figure}
 
 
 
-\subsection{Hacking attacks to QOT}
+
+\begin{figure}
+\begin{center}
+\fbox{%
+    \parbox{\linewidth}{%
+    \begin{center}
+        \textbf{Sender Trojan-horse attack}
+    \end{center}
+    
+    S input: $j$.
+    
+    \begin{enumerate}
+         \item S implements some attack $\mathcal{S}_{\textbf{qokd}}(\{j\}) = \{b_{R,j}\}$ where $b_{R,j}\in\{X, Z\}$. 
+         \item S compares the received base $b_{R,j}$ with her corresponding base $b_{S,j}$. Denote by $x_j := (b_{R,j} == b_{S,j})$. 
+         \item Upon receiving $I_b$ from R:
+         \begin{enumerate}
+             \item $b=x_j$ if $j\in I_b$;
+             \item $b=1-x_j$ if $j\notin I_b$.
+         \end{enumerate}
+         
+    \end{enumerate} 
+    
+    S outputs: $b$.
+    
+    }%
+}
+\caption{Sender trojan-horse attack.}
+\label{fig:A_THA}
+\end{center}
+\end{figure}
 
 
-Talk about what I wrote in the paper
+\begin{figure}
+\begin{center}
+\fbox{%
+    \parbox{\linewidth}{%
+    \begin{center}
+        \textbf{Receiver Trojan-horse attack}
+    \end{center}
+    
+    
+    \begin{enumerate}
+         \item R implements some attack to all qubits sent by S $\mathcal{R}_{\textbf{qokd}} = S$, where $S$ is the set of bases used by S.
+         \item R measures the received states with the correct bases, $S$. 
+    \end{enumerate} 
+    
+    R outputs: $k^S$.
+      
+    }%
+}
+\caption{Receiver trojan-horse attack.}
+\label{fig:B_THA}
+\end{center}
+\end{figure}
 
-Talk about how to mitigate this
+
+
+
+\subsubsection{Countermeasures}
+
+We have seen how two well-known quantum hacking techniques can undermine the security of oblivious keys and, consequently, the security of oblivious transfer. Fortunately, there are some countermeasures that can be applied that prevent such attacks from breaking
+the system's security. These countermeasures can be divided into two categories: security patches that tackle specific vulnerabilities and novel schemes that allow faulty devices. 
+
+Regarding the two presented possible attacks, it is commonly possible to implement security patches that prevent them. FSA can be prevented by placing an additional detector (usually called watchdog) at the entrance of the receiver's measurement device. This detector monitors possible malicious radiation that blinds his detector. Also, THA can be blocked by an isolator placed at both parties entrance devices. However, as mentioned by Jain et al. \cite{JSKEML16} these two countermeasures only prevent these attacks perfectly in case the isolators and watchdogs work at all desired frequencies, which is not the case in practice. 
+
+This \textit{security patches} strategy only tries to approximate the experimental implementation to the ideal protocol. However, since the ideal protocol does not assume faulty devices this task is very difficult to accomplish. A better approach to mitigate these securities issues is the development of novel schemes that allow faulty devices. This is the main aim of device-independent protocols which treat both sender and receiver devices as block boxes with minimal security guarantees. To the best of our knowledge, there are only two proposed DI protocols for oblivious keys \cite{KW16, BY21}. However, Kaniewski's protocol \cite{KW16} is just proven to be secure against sequential attacks and Broadbent's protocol \cite{BY21} uses post-quantum computational assumption. 
+
+To avoid the technological challenges of DI protocols, we can relax its security levels and work in the measurement-device-independent (MDI) setting. This approach allows two parties to perform QOKD with untrusted measurement devices while trusting in their sources. However, Ribeiro et al. \cite{RW20} showed that although the protocol is secure with ideal photon sources, it is not proven to be secure with imperfect sources.
+
+
+%Usually, this comes from the fact that in the theoretical proofs we assume that the devices owned by the parties cannot be corrupted by the adversary. However, in practice this assumption may not happen. Several attacks to QKD implementations have already been reported. Some of this attacks, in particular those presented by Makarov et al. \cite{}, allow the attacker to know the bases being used by the sender's transmitter module. As in the case of QKD systems, this attack is enough to render the QOKD protocol insecure. In fact, a malicious Alice is able to know the quantum basis used by Bob and, consequently, she can easily compute the index set $I_0$ by comparing with her basis choice. Likewise, using the attack set by Makarov, Bob can find Alice basis and measure all his states in the corresponding basis. This would allow him to know Alice's full key, $k^S$.
+
+%Regarding the mitigation measures to prevent attacks coming from insecure implementations, there is a fundamental difference between QKD and QOKD services that must be considered. In the case of QKD systems, Alice and Bob cooperate to prevent external attacks. However, QOKD systems do not have a 
+
+%In order to mitigate these issues 
+
+
+%Possible mitigation: use QKD mitigation on quantum technology. Possibly develop new protocols (such as the SARG04). Develop a device-independent protocol. Unfortunately, Wehner proved a negative result in the quantum storage model when there are imperfect photon sources. Possibly, it could be used in a commit-and-open model. The logic may be different.
+
+%However, there is still no device-independent protocol for QOKD. There is a negative result in the quantum storage model when there are imperfect photon sources. 
+
+
+%However, Kaniewski's protocol \cite{KW16} is only proved to be secure against some limited adversary (sequential attacks) and Ribeiro's protocol \cite{RW20} is proved to be not secure against Photon Number Splitting attacks. 
+
+%under the assumption of the absence of quantum memory. Also, this
+
 
 
 
