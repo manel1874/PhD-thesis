@@ -752,20 +752,125 @@ Christian Schaffner, Barbara~M. Terhal, and Stephanie Wehner.
 \newblock Robust cryptography in the noisy-quantum-storage model.
 \newblock {\em Quantum Inf. Comput.}, 9(11{\&}12):963--996, 2009.
 
+\bibitem{LCT14}
+Hoi-Kwong Lo, Marcos Curty, and Kiyoshi Tamaki.
+\newblock Secure quantum key distribution.
+\newblock {\em Nature Photonics}, 8(8):595--604, July 2014.
+
+\bibitem{Pirandola2020}
+S.~Pirandola, U.~L. Andersen, L.~Banchi, M.~Berta, D.~Bunandar, R.~Colbeck,
+  D.~Englund, T.~Gehring, C.~Lupo, C.~Ottaviani, J.~L. Pereira, M.~Razavi,
+  J.~Shamsul Shaari, M.~Tomamichel, V.~C. Usenko, G.~Vallone, P.~Villoresi, and
+  P.~Wallden.
+\newblock Advances in quantum cryptography.
+\newblock {\em Advances in Optics and Photonics}, 12(4):1012, December 2020.
+
+\bibitem{MH05}
+Vadim Makarov and Dag~R. Hjelme.
+\newblock Faked states attack on quantum cryptosystems.
+\newblock {\em Journal of Modern Optics}, 52(5):691--705, March 2005.
+
+\bibitem{GFKZR06}
+N.~Gisin, S.~Fasel, B.~Kraus, H.~Zbinden, and G.~Ribordy.
+\newblock Trojan-horse attacks on quantum-key-distribution systems.
+\newblock {\em Physical Review A}, 73(2), February 2006.
+
+\bibitem{JSKEML16}
+Nitin Jain, Birgit Stiller, Imran Khan, Dominique Elser, Christoph Marquardt,
+  and Gerd Leuchs.
+\newblock Attacks on practical quantum key distribution systems (and how to
+  prevent them).
+\newblock {\em Contemporary Physics}, 57(3):366--387, March 2016.
+
+\bibitem{JBI+16}
+Nitin Jain, Birgit Stiller, Imran Khan, Dominique Elser, Christoph Marquardt,
+  and Gerd Leuchs.
+\newblock Attacks on practical quantum key distribution systems (and how to
+  prevent them).
+\newblock {\em Contemporary Physics}, 57(3):366--387, March 2016.
+
+\bibitem{MY04}
+Dominic Mayers and Andrew~Chi{-}Chih Yao.
+\newblock Self testing quantum apparatus.
+\newblock {\em Quantum Inf. Comput.}, 4(4):273--286, 2004.
+
+\bibitem{E91}
+Artur~K. Ekert.
+\newblock Quantum cryptography based on bell's theorem.
+\newblock {\em Physical Review Letters}, 67(6):661--663, August 1991.
+
 \bibitem{KW16}
 Jedrzej Kaniewski and Stephanie Wehner.
 \newblock Device-independent two-party cryptography secure against sequential
   attacks.
 \newblock {\em New Journal of Physics}, 18(5):055004, May 2016.
 
+\bibitem{RTK+18}
+J{\'{e}}r{\'{e}}my Ribeiro, Le~Phuc Thinh, Jedrzej Kaniewski, Jonas Helsen, and
+  Stephanie Wehner.
+\newblock Device independence for two-party cryptography and position
+  verification with memoryless devices.
+\newblock {\em Physical Review A}, 97(6), June 2018.
+
+\bibitem{AGM06}
+Antonio Ac{\'{\i}}n, Nicolas Gisin, and Lluis Masanes.
+\newblock From bell's theorem to secure quantum key distribution.
+\newblock {\em Physical Review Letters}, 97(12), September 2006.
+
+\bibitem{CHSH69}
+John~F. Clauser, Michael~A. Horne, Abner Shimony, and Richard~A. Holt.
+\newblock Proposed experiment to test local hidden-variable theories.
+\newblock {\em Physical Review Letters}, 23(15):880--884, October 1969.
+
 \bibitem{BY21}
 Anne Broadbent and Peter Yuen.
 \newblock Device-independent oblivious transfer from the
   bounded-quantum-storage-model and computational assumptions, 2021.
 
+\bibitem{MDC+21}
+Tony Metger, Yfke Dulek, Andrea Coladangelo, and Rotem Arnon-Friedman.
+\newblock Device-independent quantum key distribution from computational
+  assumptions.
+\newblock {\em New Journal of Physics}, 23(12):123021, December 2021.
+
+\bibitem{MV21}
+Tony Metger and Thomas Vidick.
+\newblock Self-testing of a single quantum device under computational
+  assumptions.
+\newblock {\em Quantum}, 5:544, September 2021.
+
+\bibitem{P15}
+Chris Peikert.
+\newblock A decade of lattice cryptography.
+\newblock Cryptology ePrint Archive, Paper 2015/939, 2015.
+\newblock \url{https://eprint.iacr.org/2015/939}.
+
 \bibitem{RW20}
 Jeremy Ribeiro and Stephanie Wehner.
 \newblock On bit commitment and oblivious transfer in measurement-device
   independent settings, 2020.
+
+\bibitem{LCQ12}
+Hoi-Kwong Lo, Marcos Curty, and Bing Qi.
+\newblock Measurement-device-independent quantum key distribution.
+\newblock {\em Physical Review Letters}, 108(13), March 2012.
+
+\bibitem{MDR+19}
+G~Murta, S~B van Dam, J~Ribeiro, R~Hanson, and S~Wehner.
+\newblock Towards a realization of device-independent quantum key distribution.
+\newblock {\em Quantum Science and Technology}, 4(3):035011, July 2019.
+
+\bibitem{SRK+15}
+Shihan Sajeed, Igor Radchenko, Sarah Kaiser, Jean-Philippe Bourgoin, Anna
+  Pappa, Laurent Monat, Matthieu Legr{\'{e}}, and Vadim Makarov.
+\newblock Attacks exploiting deviation of mean photon number in quantum key
+  distribution and coin tossing.
+\newblock {\em Physical Review A}, 91(3), March 2015.
+
+\bibitem{ZGG+20}
+Zishuai Zhou, Qisheng Guang, Chaohui Gao, Dong Jiang, and Lijun Chen.
+\newblock Measurement-device-independent two-party cryptography with error
+  estimation.
+\newblock {\em Sensors}, 20(21):6351, November 2020.
 
 \end{thebibliography}

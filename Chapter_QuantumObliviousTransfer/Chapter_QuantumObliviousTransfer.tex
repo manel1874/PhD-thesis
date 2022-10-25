@@ -441,7 +441,7 @@ Although QKD and QOT protocols are proved to be theoretically secure, experiment
 
 It is important to stress that there is a fundamental difference between QKD and QOT protocols. In QKD, both parties can cooperate to detect an external attack, whereas, in QOT, both parties are distrustful of each other. Moreover, QKD external attacks pressupose that the adversary has physical access to the quantum channel and is able to play some sort of man-in-the-middle attack. Regarding QOT protocols, both parties are already linked by a quantum channel. Therefore, in principle, QOT attacks require less engineering effort to succeed as the adversary is already using the quantum channel.
 
-According to the security properties of QOT, Alice must not know Bob's bit $b$ and Bob must not know $m_{1-b}$. Regarding BBCS-based QOT protocols, its security depends on the security requirements of oblivious keys. This means that Alice must not be able to know which set of indexes is known by Bob (i.e. $\mathsf{e}^\mathsf{B}$) and Bob must have limited knowledge on Alice's key (i.e. $\mathsf{ok}^\mathsf{A}$). These two pieces of information ($\mathsf{e}^\mathsf{B}$ and $\mathsf{ok}^\mathsf{A}$) can be easily deduced if the adversary has access to the quantum bases used by the other party ($\bm{\theta}^{\mathsf{A}}$ or $\bm{\theta}^{\mathsf{B}}$). Indeed, Alice gets $\mathsf{e}^\mathsf{B}$ by computing $\bm{\theta}^{\mathsf{B}} \oplus \bm{\theta}^{\mathsf{A}}$ and Bob gets $\mathsf{ok}^\mathsf{A}$ by measuring all the qubits with Alice's bases $\bm{\theta}^{\mathsf{A}}$. Therefore, the main aim of the adversary is to use his quantum channel to gain some information (or control) about the set of bases used by the other. Two of the most common attacks on quantum systems are faked-state attacks \cite{MH05} (FSA) and trojan-horses attacks \cite{GFKZR06} (THA). The former targets measurement apparatus only and the latter can target both preparation and measurement apparatus. In a prepare-and-measure setting, FSA can only be used by Alice (sender) while THA can be used by both. For the sake of exposition, let us see how these two approaches can be used to attack both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\mathcal{F}_\textbf{COM}}$ protocols. The attacks on $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ follow the same reasoning but the notation vary slightly. 
+According to the security properties of QOT, Alice must not know Bob's bit $b$ and Bob must not know $m_{1-b}$. Regarding BBCS-based QOT protocols, its security depends on the security requirements of oblivious keys. Informally, this means that Alice must not be able to know which set of indexes is known by Bob (i.e. $\mathsf{e}^\mathsf{B}$) and Bob must have limited knowledge on Alice's key (i.e. $\mathsf{ok}^\mathsf{A}$). These two pieces of information ($\mathsf{e}^\mathsf{B}$ and $\mathsf{ok}^\mathsf{A}$) can be easily deduced if the adversary has access to the quantum bases used by the other party ($\bm{\theta}^{\mathsf{A}}$ or $\bm{\theta}^{\mathsf{B}}$). Indeed, Alice gets $\mathsf{e}^\mathsf{B}$ by computing $\bm{\theta}^{\mathsf{B}} \oplus \bm{\theta}^{\mathsf{A}}$ and Bob gets $\mathsf{ok}^\mathsf{A}$ by measuring all the qubits with Alice's bases $\bm{\theta}^{\mathsf{A}}$. Therefore, the main aim of the adversary is to use his quantum channel to gain some information (or control) about the set of bases used by the other. Two of the most common attacks on quantum systems are faked-state attacks \cite{MH05} (FSA) and trojan-horses attacks \cite{GFKZR06} (THA). The former targets measurement apparatus only and the latter can target both preparation and measurement apparatus. In a prepare-and-measure setting, FSA can only be used by Alice (sender) while THA can be used by both. For the sake of exposition, let us see how these two approaches can be used to attack both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\mathcal{F}_\textbf{COM}}$ protocols. The attacks on $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ follow the same reasoning but the notation vary slightly. 
 
 We denote by $\tilde{\bm{\theta}}^{\mathsf{B}}_J \leftarrow \mathcal{A}_{\textbf{qok}}(J)$ Alice's quantum hacking procedure ($\mathcal{A}_{\textbf{qok}}(J)$) that breaks the security requirements of oblivious keys and provides her with Bob's bases ($\tilde{\bm{\theta}}^{\mathsf{B}}_J$) from index set $J$. Similarly for Bob, i.e. $\tilde{\bm{\theta}}^{\mathsf{A}}_J \leftarrow \mathcal{B}_{\textbf{qok}}(J)$.
 
@@ -483,8 +483,8 @@ We denote by $\tilde{\bm{\theta}}^{\mathsf{B}}_J \leftarrow \mathcal{A}_{\textbf
 \
 
 \noindent\textbf{FSA attacks.} These attacks can be performed with well crafted optical signals that allow Alice to take control over Bob's measurement outcomes. In summary, as described by Jain et al. \cite{JSKEML16}, when both parties' bases coincide, Bob's detector clicks; when these are orthogonal, he gets no detection event ($\bot$). In other words, Alice forces Bob to only use the measurements where their bases coincide. So, the indexes corresponding to no detection events will be discarded by both parties whereas the others will be used in the rest of the protocol. This way, Alice gains full knowledge about Bob's bases and can easily distinguish $I_0$ from $I_1$. Note that Alice does not have to attack all measurement turns. She only needs one successful FSA to guess one basis. This happens with high probability in the number of attacks $q$,
-$$Pr[\text{Success sender's attack}] = 1 - \bigg(\frac{1}{2}\bigg)^q.$$
-From this basis, Alice can deduce to which set ($I_0$ or $I_1$) the corresponding index belongs, $j$. As Bob computes his message $m_b$ with the set where their basis coincide, and since Alice computes both messsages $m_0$ and $m_1$ out of both sets, she can determine Bob's message $m_b$. Indeed, $m_b$ will be the message that comes from the set where $j$ belongs. The attack $\rotPi^{\mathsf{A}}_{\textbf{FSA}}$ against both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\mathcal{F}_\textbf{COM}}$ is summarized in Figure~\ref{fig:A_FSA}.
+$$Pr[\text{Success Alice attack in }q\text{ rounds} ] = 1 - \bigg(\frac{1}{2}\bigg)^q.$$
+From this basis, Alice can deduce to which set ($I_0$ or $I_1$) the corresponding index ($j$) belongs. As Bob computes his message $m_b$ with the set where their basis coincide, and since Alice computes both messsages $m_0$ and $m_1$ out of both sets, she can determine Bob's message $m_b$. Indeed, $m_b$ will be the message that comes from the set where $j$ belongs. The attack $\rotPi^{\mathsf{A}}_{\textbf{FSA}}$ against both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\mathcal{F}_\textbf{COM}}$ is summarized in Figure~\ref{fig:A_FSA}.
 
 \begin{figure}[h!]
     \centering
@@ -523,7 +523,10 @@ From this basis, Alice can deduce to which set ($I_0$ or $I_1$) the correspondin
 
 \
 
-\noindent\textbf{THA attacks.} These types of attacks are achieved by sending bright pulses into the equipment under attack and scanning through the different reflections to obtain the bases used. Likewise the FSA, Alice only needs to successfully find one basis used by Bob. By comparing her basis and Bob's basis to that particular turn, she can find Bob's bit $b$. This attack $\rotPi^{\mathsf{A}}_{\textbf{THA}}$ is summarized in Figure~\ref{fig:A_THA}. However, Bob's attack through THA is more challenging. Not only he has to successfully guess \textit{all} Alices's bases, he also has to be able to correctly measure the corresponding qubits after leaking the sender's bases. Without the help of quantum memories, this procedure is much more difficult to succeed and allow Bob to extract the whole key, $\mathsf{ok}^{\mathsf{A}}$. The Bob's attack based on THA is summarized in Figure~\ref{fig:B_THA}.
+\noindent\textbf{THA attacks.} These types of attacks are performed by sending bright pulses into the equipment under attack and scanning through the different reflections to obtain the bases used. Likewise the FSA, Alice only needs to successfully find one basis used by Bob. By comparing her basis and Bob's basis to that particular turn, she can find Bob's bit $b$. This attack $\rotPi^{\mathsf{A}}_{\textbf{THA}}$ is summarized in Figure~\ref{fig:A_THA}. 
+
+Bob's attack through THA is more challenging. Not only he has to successfully guess \textit{all} Alices's bases, he also has to be able to correctly measure the corresponding qubits after leaking the sender's bases. Without the help of quantum memories, this procedure is much more difficult to succeed. %and allow Bob to extract the whole key, $\mathsf{ok}^{\mathsf{A}}$. 
+Bob's attack $\rotPi^{\mathsf{B}}_{\textbf{THA}}$ is summarized in Figure~\ref{fig:B_THA}.
 
 
 
@@ -534,28 +537,33 @@ From this basis, Alice can deduce to which set ($I_0$ or $I_1$) the correspondin
 
 %To be more specific, even if Alice is able to find only \textit{one} Bob's choice base of the $j-$th index, she can perfectly guess Bob's bit choice $b$ when she receives the index set $I_b$. The attack is described in Figure~\ref{}. On the other hand, Bob's attack is more challenging because he has to successfully guess \textit{all} Alice's basis. Besides that, Bob attack is technologically more challenging than Alice's. This is because Bob has to be able to leak Alice basis and immediately measure the corresponding qubit. Otherwise, in case he has access to quantum memory he can hold the qubits before measuring them. However, this is unfeasible with current technology. Bob's attack is summarized in Figure~\ref{A_FSA}.
 
+\begin{figure}[h!]
+    \centering
+        \begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+            
+            \centerline{$\rotPi^{\mathsf{B}}_{\textbf{THA}}$ attack}
+            
+            \
+            
+            \textbf{Parameters:}  $n$, security parameter..
+            
+            \
+            
+            \begin{enumerate}
+         \item Bob performs some trojan-horse attack to all qubits sent by Alice, i.e. $\left\{\tilde{\theta}^{\mathsf{A}}_{i}\right\}_{i\in [n]} \leftarrow \mathcal{B}_{\textbf{qok}}([n]) $ where $\tilde{\theta}^{\mathsf{A}}_{i}\in\{+, \times\}$.
+         \item Bob measures the received states $\ket{\bm{x}^{\textsf{A}}}_{\bm{\theta}^{\textsf{A}}}$ with the correct bases, $\left\{\tilde{\theta}^{\mathsf{A}}_{i}\right\}_{i\in [n]}$. 
+    \end{enumerate}    
+            
+            \
+            
+        \textbf{Bob's output:} $\mathsf{ok}^{\mathsf{A}}$.
 
-\begin{figure}
-\begin{center}
-\fbox{%
-    \parbox{\linewidth}{%
-    \begin{center}
-        \textbf{Receiver Trojan-horse attack}
-    \end{center}
-    
-    
-    \begin{enumerate}
-         \item R implements some attack to all qubits sent by S $\mathcal{R}_{\textbf{qokd}} = S$, where $S$ is the set of bases used by S.
-         \item R measures the received states with the correct bases, $S$. 
-    \end{enumerate} 
-    
-    R outputs: $k^S$.
-      
-    }%
-}
-\caption{Receiver trojan-horse attack.}
-\label{fig:B_THA}
-\end{center}
+        
+        \end{tcolorbox}
+    \caption{Bob trojan-horse attack to $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\mathcal{F}_\textbf{COM}}$ protocols.}
+    \label{fig:B_THA}
 \end{figure}
 
 
@@ -568,26 +576,30 @@ the system's security. These countermeasures can be divided into two categories:
 
 Regarding the two presented possible attacks, it is commonly possible to implement security patches that prevent them. FSA can be prevented by placing an additional detector (usually called watchdog) at the entrance of the receiver's measurement device. This detector monitors possible malicious radiation that blinds his detector. Also, THA can be blocked by an isolator placed at both parties entrance devices. However, as mentioned by Jain et al. \cite{JSKEML16} these two countermeasures only prevent these attacks perfectly in case the isolators and watchdogs work at all desired frequencies, which is not the case in practice. 
 
-This \textit{security patches} strategy only tries to approximate the experimental implementation to the ideal protocol. However, since the ideal protocol does not assume faulty devices this task is very difficult to accomplish. A better approach to mitigate these securities issues is the development of novel schemes that allow faulty devices. This is the main aim of device-independent protocols which treat both sender and receiver devices as block boxes with minimal security guarantees. To the best of our knowledge, there are only two proposed DI protocols for oblivious keys \cite{KW16, BY21}. However, Kaniewski's protocol \cite{KW16} is just proven to be secure against sequential attacks and Broadbent's protocol \cite{BY21} uses post-quantum computational assumption. 
+There is a research line focused on the study of security patches for each technological loophole \cite{JBI+16}. However, this approach pursues the difficult task of approximating the experimental implementations to the ideal protocols. It would be more desirable to develop protocols that already consider faulty devices and are robust against any kind of quantum hacking attack. This is the main goal of device-independent (DI) cryptography, where we drop the assumption that quantum devices cannot be controlled by the adversary and we treat them simply as black-boxes \cite{MY04, E91}. Here, we give a general overview of the state-of-the-art of DI protocols. For a more in-depth description, we refer to the corresponding original works.
 
-To avoid the technological challenges of DI protocols, we can relax its security levels and work in the measurement-device-independent (MDI) setting. This approach allows two parties to perform QOKD with untrusted measurement devices while trusting in their sources. However, Ribeiro et al. \cite{RW20} showed that although the protocol is secure with ideal photon sources, it is not proven to be secure with imperfect sources.
+\
 
+\noindent\textbf{Kaniewski-Wehner DI protocol \cite{KW16}.} The first DI protocol of QOT was presented in a joint work by Kaniewski and Wehner \cite{KW16} and its security proof was improved by Ribeiro et al. \cite{RTK+18}. The protocol was proved to be secure in the noisy-quantum-storage (NQS) model as it uses the original NQS protocol $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ (Figure 4) for trusted devices. It analyzes two cases leading to slightly different protocols. 
 
-%Usually, this comes from the fact that in the theoretical proofs we assume that the devices owned by the parties cannot be corrupted by the adversary. However, in practice this assumption may not happen. Several attacks to QKD implementations have already been reported. Some of this attacks, in particular those presented by Makarov et al. \cite{}, allow the attacker to know the bases being used by the sender's transmitter module. As in the case of QKD systems, this attack is enough to render the QOKD protocol insecure. In fact, a malicious Alice is able to know the quantum basis used by Bob and, consequently, she can easily compute the index set $I_0$ by comparing with her basis choice. Likewise, using the attack set by Makarov, Bob can find Alice basis and measure all his states in the corresponding basis. This would allow him to know Alice's full key, $k^S$.
+First, they assume that the devices have the same behaviour every time they are used (memoryless assumption). This assumption allows for testing the devices independently from the actual protocol, leading to a DI protocol in two phases: device-testing phase and protocol phase . Under this memoryless assumption, one can prove that the protocol is secure against general attacks using proof techniques borrowed from \cite{KWW12}. Then, they analyse the case \textit{without} the memoryless assumption. In that case, it is useless to test the devices in advance as they can change their behaviour later. Consequently, the structure of the initial DI protocol (with two well-separated phases) has to be changed to accommodate this more realistic scenario. That is, the rounds for the device-testing phase have to be intertwined with the rounds for the protocol phase. 
 
-%Regarding the mitigation measures to prevent attacks coming from insecure implementations, there is a fundamental difference between QKD and QOKD services that must be considered. In the case of QKD systems, Alice and Bob cooperate to prevent external attacks. However, QOKD systems do not have a 
-
-%In order to mitigate these issues 
-
-
-%Possible mitigation: use QKD mitigation on quantum technology. Possibly develop new protocols (such as the SARG04). Develop a device-independent protocol. Unfortunately, Wehner proved a negative result in the quantum storage model when there are imperfect photon sources. Possibly, it could be used in a commit-and-open model. The logic may be different.
-
-%However, there is still no device-independent protocol for QOKD. There is a negative result in the quantum storage model when there are imperfect photon sources. 
+As a common practice in DI protocols, the DI property comes from some violation of Bell inequalities \cite{AGM06}, which ensures a certain level of entanglement. This means that, in the protocol phase, the entanglement-based variant of $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ must be used. Here, the difference lies in the initial states prepared by Alice, which, for this case, are maximally entangled states $\ketbra{\Phi^+}$, where $\ket{\Phi^+} = \frac{1}{\sqrt{2}}(\ket{00} + \ket{11})$. The Bell inequality used in this case comes from the Clauser-Holt-Shimony-Horne (CHSH) inequality \cite{CHSH69}.
 
 
-%However, Kaniewski's protocol \cite{KW16} is only proved to be secure against some limited adversary (sequential attacks) and Ribeiro's protocol \cite{RW20} is proved to be not secure against Photon Number Splitting attacks. 
+\
 
-%under the assumption of the absence of quantum memory. Also, this
+\noindent\textbf{Broadbent-Yuen DI protocol \cite{BY21}.} More recently, Broadbent and Yuen \cite{BY21} used the $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ (Figure 3) to develop a DI protocol in the BQS model. Similar to Kaniewski and Wehner's work, the protocol is secure under the memoryless assumption. However, they do not require non-communication assumptions that ensure security from Bell inequality violations. Instead of using the CSHS inequality, their work uses a recent self-testing protocol \cite{MDC+21, MV21} based on a post-quantum computational assumption (hardness of Learning with Errors (LWE) problem \cite{P15}).
+
+\
+
+\noindent\textbf{Ribeiro-Wehner MDI protocol \cite{RW20}.} Ribeiro and Wehner \cite{RW20} developed an OT protocol in the measurement-device-independent (MDI) regime \cite{LCQ12} to avoid the technological challenges in the implementation of DI protocols \cite{MDR+19}. In this regime, two parties perform QOT with untrusted measurement devices while trusting their sources. In addition, this work was motivated by the fact that, so far, there is no security proof in the DI setting. Furthermore, many attacks on the non device-independent protocols affect the measurement devices rather than the sources \cite{SRK+15}. The presented protocol follows the research line of K\"onig et al. \cite{KWW12} and start by executing a weak string erasure in the MDI setting (MDI-WSE phase). For this reason, it is also proved to be secure in the NQS model.
+
+The initial MDI-WSE phase goes as follows. Both Alice and Bob send random states $\ket{\bm{x}^{\mathsf{A}}}_{\bm{\theta}^{\mathsf{A}}}$ and $\ket{\bm{x}^{\mathsf{B}}}_{\bm{\theta}^{\mathsf{B}}}$, respectively, to an external agent that can be controlled by the dishonest party. The external agent performs a Bell measurement on both received states and announces the result. Bob flips his bit according to the announced result to match Alice's bits. Then, both parties follow the $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ protocol (Figure 4) from the waiting time phase onward. A similar protocol was presented by Zhou et al. \cite{ZGG+20} which additionally takes into account error estimation to improve the security of the protocol.
+
+%This \textit{security patches} strategy only tries to approximate the experimental implementation to the ideal protocol. However, since the ideal protocol does not assume faulty devices this task is very difficult to accomplish. A better approach to mitigate these securities issues is the development of novel schemes that allow faulty devices. This is the main aim of device-independent protocols which treat both sender and receiver devices as block boxes with minimal security guarantees. To the best of our knowledge, there are only two proposed DI protocols for oblivious keys \cite{KW16, BY21}. However, Kaniewski's protocol \cite{KW16} is just proven to be secure against sequential attacks and Broadbent's protocol \cite{BY21} uses post-quantum computational assumption. 
+
+%To avoid the technological challenges of DI protocols, we can relax its security levels and work in the measurement-device-independent (MDI) setting. This approach allows two parties to perform QOKD with untrusted measurement devices while trusting in their sources. However, Ribeiro et al. \cite{RW20} showed that although the protocol is secure with ideal photon sources, it is not proven to be secure with imperfect sources.
 
 
 
