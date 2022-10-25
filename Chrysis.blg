@@ -4,48 +4,50 @@ The top-level auxiliary file: Chrysis.aux
 A level-1 auxiliary file: Introduction/Introduction.aux
 A level-1 auxiliary file: Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux
 A level-1 auxiliary file: Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux
+A level-1 auxiliary file: Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObliviousTransfer.aux
 The style file: unsrt.bst
 Database file #1: References/References.bib
+Warning--I didn't find a database entry for "BM89"
 Warning--can't use both author and editor fields in S99
-You've used 149 entries,
+You've used 150 entries,
             1791 wiz_defined-function locations,
-            1361 strings with 26919 characters,
-and the built_in function-call counts, 37272 in all, are:
-= -- 3320
-> -- 1733
+            1370 strings with 27130 characters,
+and the built_in function-call counts, 37478 in all, are:
+= -- 3336
+> -- 1744
 < -- 35
-+ -- 635
-- -- 486
-* -- 2581
-:= -- 5759
-add.period$ -- 482
-call.type$ -- 149
-change.case$ -- 147
++ -- 639
+- -- 489
+* -- 2600
+:= -- 5794
+add.period$ -- 485
+call.type$ -- 150
+change.case$ -- 148
 chr.to.int$ -- 0
-cite$ -- 150
-duplicate$ -- 1718
-empty$ -- 3670
-format.name$ -- 486
-if$ -- 8489
+cite$ -- 151
+duplicate$ -- 1727
+empty$ -- 3690
+format.name$ -- 489
+if$ -- 8533
 int.to.chr$ -- 0
-int.to.str$ -- 149
-missing$ -- 129
-newline$ -- 733
-num.names$ -- 182
-pop$ -- 504
+int.to.str$ -- 150
+missing$ -- 130
+newline$ -- 738
+num.names$ -- 183
+pop$ -- 505
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 870
+skip$ -- 873
 stack$ -- 0
-substring$ -- 2204
-swap$ -- 479
+substring$ -- 2213
+swap$ -- 480
 text.length$ -- 35
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 347
-width$ -- 152
-write$ -- 1646
-(There was 1 warning)
+while$ -- 349
+width$ -- 153
+write$ -- 1657
+(There were 2 warnings)
