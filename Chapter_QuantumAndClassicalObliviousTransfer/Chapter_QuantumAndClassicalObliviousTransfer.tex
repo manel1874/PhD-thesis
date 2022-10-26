@@ -6,7 +6,13 @@
 
 \chapter{Quantum and Classical Oblivious Transfer}
 
-In this chapter, we present a comparison between quantum and classical OT protocols. In chapter~\ref{chapter_QOT}, we reviewed several quantum OT protocols and, in particular, we explored BBCS-based QOT protocols. As we saw, this type of protocols have the particular feature of using oblivious keys, allowing to  divide these protocols into two main phases: precomputation phase and transfer phase. Furthermore, we will see that classical OT protocols can be devided into these two phases as well. This allows to compare both quantum and classical approaches at the transfer phase.
+In this chapter, we compare quantum and classical OT protocols. In chapter~\ref{chapter_QOT}, we reviewed several quantum OT protocols and, in particular, we explored BBCS-based QOT protocols. Beyond being resistant to quantum computer attacks, these protocols provide a practical way to perform OT within a secure multiparty computation (SMC) protocol. They era divided into two independent phases: oblivious key phase and transfer phase. The first phase corresponds to a precomputation phase that uses quantum technologies and is independent of the parties input elements ($m_0$, $m_1$ and $b$). The second phase is only based on classical communications and executes the OT based on the precomputed elements from the first phase (oblivious keys). Consequently, we do not need the quantum equipment to be running concurrently with the SMC execution. 
+
+Furthermore, as we will see, since the classical OT protocols can also be divided into these two phases, we can compare both quantum and classical approaches at the transfer phase.
+
+
+
+
 
 
 \section{Classical Oblivious Transfer}
