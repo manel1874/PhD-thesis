@@ -33,5 +33,5 @@
 \contentsline {subsubsection}{QOT attacks}{24}{section*.23}%
 \contentsline {subsubsection}{Countermeasures}{26}{section*.27}%
 \contentsline {chapter}{\numberline {4}Quantum and Classical Oblivious Transfer}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Classical Oblivious Transfer}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Classical Oblivious Transfer}{30}{section.4.1}%
 \contentsline {chapter}{Bibliography}{44}{chapter*.29}%
