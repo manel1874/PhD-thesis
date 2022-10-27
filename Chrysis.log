@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  27 OCT 2022 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  27 OCT 2022 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1226,20 +1226,7 @@ Underfull \vbox (badness 2302) has occurred while \output is active []
 Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [30]
-
-Package natbib Warning: Citation `Shor1995' on page 31 undefined on input line 
-72.
-
-[31]
-
-Package natbib Warning: Citation `Bernstein2017' on page 32 undefined on input 
-line 89.
-
-
-Package natbib Warning: Citation `Pirandola20' on page 32 undefined on input li
-ne 89.
-
-[32]
+[31] [32]
 
 Package natbib Warning: Citation `MVV01' on page 33 undefined on input line 113
 .
@@ -1247,7 +1234,7 @@ Package natbib Warning: Citation `MVV01' on page 33 undefined on input line 113
 
 Package natbib Warning: Citation `G11' on page 33 undefined on input line 121.
 
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=994, 462.52
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=999, 462.52
 8pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
@@ -1256,11 +1243,6 @@ Package pdftex.def Info: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSec
 cond.png  used on input line 124.
 (pdftex.def)             Requested size: 364.19667pt x 273.16086pt.
 [33]
-
-Package natbib Warning: Citation `Bernstein2017' on page 34 undefined on input 
-line 134.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>]
@@ -1437,10 +1419,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 27522 strings out of 480608
- 541216 string characters out of 5903629
- 840136 words of memory out of 5000000
- 42430 multiletter control sequences out of 15000+600000
+ 27530 strings out of 480608
+ 541370 string characters out of 5903629
+ 840170 words of memory out of 5000000
+ 42436 multiletter control sequences out of 15000+600000
  558616 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,18n,105p,2177b,1012s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1478,10 +1460,10 @@ st/fonts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist
 /fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/f
 onts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1728.pfb>
-Output written on Chrysis.pdf (76 pages, 751432 bytes).
+Output written on Chrysis.pdf (76 pages, 752182 bytes).
 PDF statistics:
- 1369 PDF objects out of 1440 (max. 8388607)
- 1203 compressed objects within 13 object streams
- 368 named destinations out of 1000 (max. 500000)
+ 1375 PDF objects out of 1440 (max. 8388607)
+ 1209 compressed objects within 13 object streams
+ 370 named destinations out of 1000 (max. 500000)
  471 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -911,4 +911,17 @@ David Adrian, Karthikeyan Bhargavan, Zakir Durumeric, Pierrick Gaudry, Matthew
   Communications Security}, CCS '15, pages 5--17, New York, NY, USA, 2015.
   Association for Computing Machinery.
 
+\bibitem{Bernstein2017}
+Daniel~J. Bernstein and Tanja Lange.
+\newblock Post-quantum cryptography.
+\newblock {\em Nature}, 549(7671):188--194, 2017.
+
+\bibitem{Pirandola20}
+S.~Pirandola, U.~L. Andersen, L.~Banchi, M.~Berta, D.~Bunandar, R.~Colbeck,
+  D.~Englund, T.~Gehring, C.~Lupo, C.~Ottaviani, J.~L. Pereira, M.~Razavi,
+  J.~Shamsul Shaari, M.~Tomamichel, V.~C. Usenko, G.~Vallone, P.~Villoresi, and
+  P.~Wallden.
+\newblock Advances in quantum cryptography.
+\newblock {\em Adv. Opt. Photon.}, 12(4):1012--1236, Dec 2020.
+
 \end{thebibliography}

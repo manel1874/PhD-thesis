@@ -91,9 +91,9 @@ In the research literature, there are mainly two approaches to tackle this issue
 
 \subsection{Efficiency issues}
 
-In the previous section we noted that every mitigation process used to increase security would bring a downside in efficiency: the generation of safe primes is more demanding; computations with bigger exponents and module primes is heavier in general; Post-Quantum solutions require stronger computational assumptions, thus it tends to increase their computational complexity. 
+In the previous section, we noted that every mitigation process used to increase security would bring a downside in efficiency: generating safe primes is more demanding, computing bigger exponents and module primes is heavier in general, and using post-quantum solutions require stronger computational assumptions and thus tends to increase the computational complexity. 
 
-Now, let us understand the efficiency limitations of the BM OT protocol. We start by looking at the operations used in the protocol (random number generation, modular multiplication, modular inversion, modular exponentiation, hash evaluation, XOR operation) from which the most demanding operation is modular exponentiation. For this reason, the complexity of BM OT heavily depends on the complexity of modular exponentiation. The number of modular exponentiation executed in each phase is summarized in the Table~\ref{table:BMOT_mexp}.
+Now, let us understand the efficiency limitations of the BM OT protocol. We start by looking at the operations used in the protocol (random number generation, modular multiplication, modular inversion, modular exponentiation, hash function evaluation, XOR operation) from which the most demanding operation is modular exponentiation. For this reason, the complexity of BM OT heavily depends on the complexity of modular exponentiation. The number of modular exponentiations executed in each phase is summarised in the Table~\ref{table:BMOT_mexp}.
 
 
 \begin{table}[h!]
@@ -110,22 +110,22 @@ Now, let us understand the efficiency limitations of the BM OT protocol. We star
 \label{table:BMOT_mexp}
 \end{table}
 
-One of the most efficient methods to compute general modular exponentiation with $n-$bit numbers is through a square-and-multiply algorithm along with Karatsuba multiplication. The former method takes $\mathcal{O}(n)$ multiplications and the latter has complexity $\mathcal{O}(n^{1.58})$. Thus, the overall method takes $\mathcal{O}(n^{2.58})$ $n-$bit operations \cite{MVV01}. In order to set an over-estimation on the OT generation rate, let us only consider the time (in CPU cycles) required to compute the modular exponentiation operations. We can use the following expression:
+One of the most efficient methods to compute general modular exponentiation with $n-$bit numbers is through a square-and-multiply algorithm along with Karatsuba multiplication. The former method takes $\mathcal{O}(n)$ multiplications and the latter has complexity $\mathcal{O}(n^{1.58})$. Thus, the overall method takes $\mathcal{O}(n^{2.58})$ $n-$bit operations \cite{MVV01}. To set an overestimation on the OT generation rate, let us only consider the time (in CPU cycles) required to compute all modular exponentiation operations. We can use the following expression:
 
 \begin{equation}
 \label{eq:nOTs}
 \Big( \frac{C_{mexp}}{C_{cycles}} \times N_{mexp} \Big)^{-1}
 \end{equation}
-where $C_{mexp}$ is the number of CPU cycles required to compute modular exponentiation, $C_{cycles}$ is the CPU frequency (number of cycles per second) and $N_{mexp}$ is the number of modular exponentiations performed in the OT implementation. This expression only renders an over-estimation because it depends on both the implementation of the modular exponentiation operation and the CPU frequency used. 
+where $C_{mexp}$ is the number of CPU cycles required to compute one modular exponentiation, $C_{cycles}$ is the CPU frequency (number of cycles per second) and $N_{mexp}$ is the number of modular exponentiations performed in the OT implementation. This expression only renders an overestimation because it depends on both the implementation of the modular exponentiation operation and the CPU frequency used. 
 
 Considering a standard CPU operating around $2.5$ GHz ($C_{cycles} = 2.5\times 10^9 $ cycles per second) and a very efficient implementation of modular exponentiation \cite{G11} ($C_{mexp} \sim 400\,000$ CPU cycles), the BM OT protocol would be able to perform at most $\sim 1041$ BM OTs in one second as represented in Fig.~\ref{fig:nOTsplot}.
 \begin{figure}[]
 \centering
 \includegraphics[width=0.8\textwidth]{Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png}
-\caption{Plot of expression (\ref{eq:nOTs}) on the over-estimation of OT rate against the number of modular exponentiation operations required per OT.}
+\caption{Plot of expression (\ref{eq:nOTs}) on the overestimation of OT rate against the number of modular exponentiation operations required per OT.}
 \label{fig:nOTsplot}
 \end{figure}
-Note that this is a very loose over-estimation on the number of OT per second. Here, we just took into consideration the computational complexity of modular exponentiation and we assumed that all the other operations do not have a big impact on the computation time. So, we can conclude that the real OT rate must be well below this threshold. In fact, as reported in \cite{ALSZ13}, it takes around $18$ ms to generate a similar OT protocol: Naor-Pinkas OT \cite{NP01}, which requires $5$ modular exponentiations. This corresponds to a rate of just $56$ OT per second.
+Note that this is a very loose overestimation on the number of OT per second. Here, we just took into consideration the computational complexity of modular exponentiation and we assumed that all the other operations do not have a big impact on the computation time. So, we can conclude that the real OT rate must be well below this threshold. In fact, as reported in \cite{ALSZ13}, it takes around $18$ ms to generate a similar OT protocol: Naor-Pinkas OT \cite{NP01}, which requires $5$ modular exponentiations. This corresponds to a rate of just $56$ OT per second.
 
 The OT rates presented above lead to serious constraints on the execution of SMC protocols that rely on OT. The Yao SMC protocol \cite{Yao82} uses boolean circuits to privately compute the desired functionality and requires as many OT as half the number of input wires. Thus, the execution time of the OT phase of the Yao protocol with a $32\, 000$ input boolean circuit would take at least $16$ seconds using our rough  OT rate estimation and around $2$m$23$s using Naor-Pinkas OT rate. In a deployment environment where it is required to evaluate several rounds of the same circuit, this approach turns out to be impractical and higher rates must be achieved.
 
@@ -157,7 +157,7 @@ In section \ref{Classical-OT} we divided the well known Bellare-Micali protocol 
 %\end{tabular*}}{}
 %\end{table}
 
-From the Table~\ref{table:ClassicalOT_comparison} we see that the most efficient protocol (SimpleOT \cite{CO15}) still requires one exponentiation operations and $2$ communication rounds. From the above formula (\ref{eq:nOTs}) and setting $C_{mcyles} = 2.5 \times 10^9$, $C_{mexp} = 400\,000$ and $N_{mexp} = 1$, we get an over-estimation of around $6 000$ OT per second. Comparing with the rate achieved by OT extension protocols ($10$ million OT in $2.62$), it is still very inefficient. Also, note that the number of modular exponentiations do not decrease in their random versions. 
+From the Table~\ref{table:ClassicalOT_comparison} we see that the most efficient protocol (SimpleOT \cite{CO15}) still requires one exponentiation operations and $2$ communication rounds. From the above formula (\ref{eq:nOTs}) and setting $C_{mcyles} = 2.5 \times 10^9$, $C_{mexp} = 400\,000$ and $N_{mexp} = 1$, we get an overestimation of around $6 000$ OT per second. Comparing with the rate achieved by OT extension protocols ($10$ million OT in $2.62$), it is still very inefficient. Also, note that the number of modular exponentiations do not decrease in their random versions. 
 
 This means that the current classical OT protocols have a computational complexity limited by $\mathcal{O}(n^{2.58})$ bit operations due to modular exponentiation. The O-OT protocols only depends on simple bit operations (XOR, truncation and comparison), meaning its computational complexity is linear in the length of the messages $\mathcal{O}(n)$.
 
