@@ -1,5 +1,19 @@
 \begin{thebibliography}{100}
 
+\bibitem{BM89}
+Mihir Bellare and Silvio Micali.
+\newblock Non-interactive oblivious transfer and applications.
+\newblock In {\em Proceedings on Advances in Cryptology}, CRYPTO -89, pages
+  547--557, Berlin, Heidelberg, 1989. Springer-Verlag.
+
+\bibitem{ALSZ13}
+Gilad Asharov, Yehuda Lindell, Thomas Schneider, and Michael Zohner.
+\newblock More efficient oblivious transfer and extensions for faster secure
+  computation.
+\newblock In {\em Proceedings of the 2013 ACM SIGSAC Conference on Computer \&
+  Communications Security}, CCS '13, pages 535--548, New York, NY, USA, 2013.
+  Association for Computing Machinery.
+
 \bibitem{Wang11}
 Jun Wang.
 \newblock Personal genomes: For one and for all.
@@ -175,14 +189,6 @@ Marcel Keller, Emmanuela Orsini, and Peter Scholl.
 \newblock {MASCOT}.
 \newblock In {\em Proceedings of the 2016 {ACM} {SIGSAC} Conference on Computer
   and Communications Security}. {ACM}, October 2016.
-
-\bibitem{ALSZ13}
-Gilad Asharov, Yehuda Lindell, Thomas Schneider, and Michael Zohner.
-\newblock More efficient oblivious transfer and extensions for faster secure
-  computation.
-\newblock In {\em Proceedings of the 2013 ACM SIGSAC Conference on Computer \&
-  Communications Security}, CCS '13, pages 535--548, New York, NY, USA, 2013.
-  Association for Computing Machinery.
 
 \bibitem{KOS15}
 Marcel Keller, Emmanuela Orsini, and Peter Scholl.
@@ -877,5 +883,32 @@ Zishuai Zhou, Qisheng Guang, Chaohui Gao, Dong Jiang, and Lijun Chen.
 \newblock Measurement-device-independent two-party cryptography with error
   estimation.
 \newblock {\em Sensors}, 20(21):6351, November 2020.
+
+\bibitem{PH78}
+S.~{Pohlig} and M.~{Hellman}.
+\newblock An improved algorithm for computing logarithms over gf(p) and its
+  cryptographic significance (corresp.).
+\newblock {\em IEEE Transactions on Information Theory}, 24(1):106--110, 1978.
+
+\bibitem{S71}
+D.~{Shanks}.
+\newblock Class number, a theory of factorization and genera.
+\newblock {\em In Proc. Symp. Pure Math., Providence, R.I.: American
+  Mathematical Society}, 20:415--440, 1971.
+
+\bibitem{P78}
+John~M. Pollard.
+\newblock {Monte Carlo methods for index computation mod $p$}.
+\newblock {\em Mathematics of Computation}, 32:918--924, 1978.
+
+\bibitem{ABDGGHHSTVVWZZ15}
+David Adrian, Karthikeyan Bhargavan, Zakir Durumeric, Pierrick Gaudry, Matthew
+  Green, J.~Alex Halderman, Nadia Heninger, Drew Springall, Emmanuel Thom\'{e},
+  Luke Valenta, Benjamin VanderSloot, Eric Wustrow, Santiago
+  Zanella-B\'{e}guelin, and Paul Zimmermann.
+\newblock Imperfect forward secrecy: How diffie-hellman fails in practice.
+\newblock In {\em Proceedings of the 22nd ACM SIGSAC Conference on Computer and
+  Communications Security}, CCS '15, pages 5--17, New York, NY, USA, 2015.
+  Association for Computing Machinery.
 
 \end{thebibliography}

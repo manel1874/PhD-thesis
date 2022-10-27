@@ -97,7 +97,7 @@ Throughout this chapter we abuse the notation and consider that the set of bases
             \textit{Transfer phase}:
             \begin{enumerate}
             \setcounter{enumi}{4}
-                \item Bob defines $I_0 = \{ i : \mathsf{e}^{\mathsf{B}}_i = 0 \}$ and $I_1 = \{ i : \mathsf{e}^{\mathsf{B}}_i = 1 \}$ and sends the set $I_b$ to Alice.
+                \item Bob defines $I_0 = \{ i : \mathsf{e}^{\mathsf{B}}_i = 0 \}$ and $I_1 = \{ i : \mathsf{e}^{\mathsf{B}}_i = 1 \}$ and sends the $(I_b, l_{1-b})$ to Alice.
                 \item Alice picks two uniformly random hash functions $f_0, f_1 \in \mathcal{F}$, computes the pair of strings $(s_0, s_1)$ as $s_i = m_i \oplus f_i(\mathsf{ok}^{\mathsf{A}}_{I_{b\oplus i}})$ and sends the pairs $(f_0, f_1)$ and $(s_0, s_1)$ to Bob.
                 \item Bob computes $m_b = s_b \oplus  f_i(\mathsf{ok}^{\mathsf{B}}_{I_0})$. 
             \end{enumerate}

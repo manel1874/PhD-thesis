@@ -2,3 +2,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Number of modular exponentiations in the BM protocol for each phase.\relax }}{33}{table.caption.29}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Computation complexity comparison between KOS15 OT extension and HQOT.\relax }}{40}{table.caption.34}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Complexity analysis where $n=3$, $M=10$, $s=32\tmspace +\thinmuskip {.1667em}000$ and $l, \kappa =128$.\relax }}{42}{table.4.3}%

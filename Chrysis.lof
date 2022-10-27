@@ -10,3 +10,6 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Bob trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{26}{figure.caption.26}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Bellare-Micali classical OT protocol divided into two phases \cite {BM89}.\relax }}{30}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Plot of expression (\ref {eq:nOTs}) on the over-estimation of OT rate against the number of modular exponentiation operations required per OT.\relax }}{34}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {ALSZ13}.\relax }}{37}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {K15}.\relax }}{43}{figure.caption.33}%
