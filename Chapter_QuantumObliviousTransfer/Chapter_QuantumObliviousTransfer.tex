@@ -71,7 +71,7 @@ Throughout this chapter we abuse the notation and consider that the set of bases
             
             \textbf{Parameters:} $n$, security parameter; $\mathcal{F}$ two-universal family of hash functions.
             
-            \textbf{Alices's input:} $(m_0, m_1)\in\{0,1\}^l$ (two messages). 
+            \textbf{Alice's input:} $(m_0, m_1)\in\{0,1\}^l$ (two messages). 
             
             \textbf{Bob's input:} $b\in\{0,1\}$ (bit choice).
             
@@ -106,7 +106,7 @@ Throughout this chapter we abuse the notation and consider that the set of bases
             
         \textbf{Alice's output:} $\bot$.
         
-        \textbf{output:} $m_b$.
+        \textbf{Bob's output:} $m_b$.
         
         \end{tcolorbox}
     \caption{BBCS OT protocol.}
@@ -455,7 +455,7 @@ We denote by $\tilde{\bm{\theta}}^{\mathsf{B}}_J \leftarrow \mathcal{A}_{\textbf
             
             \
             
-            \textbf{Alices's input:}  set of indexes $J$ of size $q$.
+            \textbf{Alice's input:}  set of indexes $J$ of size $q$.
             
             \
  
@@ -496,7 +496,7 @@ From this basis, Alice can deduce to which set ($I_0$ or $I_1$) the correspondin
             
             \
             
-            \textbf{Alices's input:}  one index element, $j$.
+            \textbf{Alice's input:}  one index element, $j$.
             
             \
             
@@ -525,7 +525,7 @@ From this basis, Alice can deduce to which set ($I_0$ or $I_1$) the correspondin
 
 \noindent\textbf{THA attacks.} These types of attacks are performed by sending bright pulses into the equipment under attack and scanning through the different reflections to obtain the bases used. Likewise the FSA, Alice only needs to successfully find one basis used by Bob. By comparing her basis and Bob's basis to that particular turn, she can find Bob's bit $b$. This attack $\rotPi^{\mathsf{A}}_{\textbf{THA}}$ is summarized in Figure~\ref{fig:A_THA}. 
 
-Bob's attack through THA is more challenging. Not only he has to successfully guess \textit{all} Alices's bases, he also has to be able to correctly measure the corresponding qubits after leaking the sender's bases. Without the help of quantum memories, this procedure is much more difficult to succeed. %and allow Bob to extract the whole key, $\mathsf{ok}^{\mathsf{A}}$. 
+Bob's attack through THA is more challenging. Not only he has to successfully guess \textit{all} Alice's bases, he also has to be able to correctly measure the corresponding qubits after leaking the sender's bases. Without the help of quantum memories, this procedure is much more difficult to succeed. %and allow Bob to extract the whole key, $\mathsf{ok}^{\mathsf{A}}$. 
 Bob's attack $\rotPi^{\mathsf{B}}_{\textbf{THA}}$ is summarized in Figure~\ref{fig:B_THA}.
 
 

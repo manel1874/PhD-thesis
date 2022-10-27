@@ -32,14 +32,15 @@
 \contentsline {subsection}{\numberline {3.2.6}Experimental attacks}{22}{subsection.3.2.6}%
 \contentsline {subsubsection}{QOT attacks}{24}{section*.23}%
 \contentsline {subsubsection}{Countermeasures}{26}{section*.27}%
-\contentsline {chapter}{\numberline {4}Quantum and Classical Oblivious Transfer}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Classical Oblivious Transfer}{30}{section.4.1}%
+\contentsline {chapter}{\numberline {4}Classical and quantum oblivious transfer}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Classical oblivious transfer}{30}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Security issues}{31}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Efficiency issues}{33}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}OT extension protocols}{35}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Oblivious Transfer complexity analysis}{35}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Classical OT}{36}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}OT extension}{37}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Oblivious Transfer comparison}{39}{subsection.4.2.3}%
-\contentsline {subsubsection}{KOS15 and HQOT comparison}{39}{section*.32}%
-\contentsline {chapter}{Bibliography}{58}{chapter*.35}%
+\contentsline {section}{\numberline {4.2}Oblivious transfer complexity analysis}{35}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Optimization}{35}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Classical OT}{37}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}OT extension}{38}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Oblivious Transfer comparison}{40}{subsection.4.2.4}%
+\contentsline {subsubsection}{KOS15 and HQOT comparison}{41}{section*.34}%
+\contentsline {chapter}{Bibliography}{58}{chapter*.37}%

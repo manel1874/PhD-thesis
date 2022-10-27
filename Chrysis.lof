@@ -11,5 +11,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Bellare-Micali classical OT protocol divided into two phases \cite {BM89}.\relax }}{30}{figure.caption.28}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Plot of expression (\ref {eq:nOTs}) on the overestimation of OT rate against the number of modular exponentiation operations required per OT.\relax }}{34}{figure.caption.30}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {ALSZ13}.\relax }}{37}{figure.caption.31}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {K15}.\relax }}{43}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Transfer phase of BBCS-based QOT protocols in the $\mathcal {F}_{\mathbf {COM}}-$hybrid model and bounded-quantum-storage model.\relax }}{36}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Transfer phase of BBCS-based QOT protocols in the $\mathcal {F}_{\mathbf {COM}}-$hybrid model and bounded-quantum-storage model.\relax }}{37}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {ALSZ13}.\relax }}{39}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {K15}.\relax }}{44}{figure.caption.35}%

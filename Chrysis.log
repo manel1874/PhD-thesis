@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  27 OCT 2022 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  27 OCT 2022 23:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1008,7 +1008,7 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@posthook=\toks49
 )
 (./Thesis_FrontCover.tex
-<IST_A_CMYK_POS.pdf, id=195, 845.0471pt x 597.51233pt>
+<IST_A_CMYK_POS.pdf, id=199, 845.0471pt x 597.51233pt>
 File: IST_A_CMYK_POS.pdf Graphic file (type pdf)
 <use IST_A_CMYK_POS.pdf>
 Package pdftex.def Info: IST_A_CMYK_POS.pdf  used on input line 5.
@@ -1064,7 +1064,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [12]
 (./Chrysis.lof
 
-Package natbib Warning: Citation `K15' on page xiii undefined on input line 15.
+Package natbib Warning: Citation `K15' on page xiii undefined on input line 17.
 
 
 )
@@ -1228,169 +1228,181 @@ Underfull \vbox (badness 4084) has occurred while \output is active []
  [30]
 [31] [32]
 
-Package natbib Warning: Citation `MVV01' on page 33 undefined on input line 113
+Package natbib Warning: Citation `MVV01' on page 33 undefined on input line 111
 .
 
 
-Package natbib Warning: Citation `G11' on page 33 undefined on input line 121.
+Package natbib Warning: Citation `G11' on page 33 undefined on input line 119.
 
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=999, 462.52
-8pt x 346.896pt>
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1010, 462.5
+28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
 <use Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>
 Package pdftex.def Info: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSec
-cond.png  used on input line 124.
+cond.png  used on input line 122.
 (pdftex.def)             Requested size: 455.24411pt x 341.44843pt.
 [33]
 Underfull \vbox (badness 1609) has occurred while \output is active []
 
  [34 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>]
 
-Package natbib Warning: Citation `B96' on page 35 undefined on input line 136.
+Package natbib Warning: Citation `B96' on page 35 undefined on input line 134.
 
 
 Package natbib Warning: Citation `IKNP03' on page 35 undefined on input line 13
-6.
+4.
 
 
-Package natbib Warning: Citation `N07' on page 35 undefined on input line 136.
+Package natbib Warning: Citation `N07' on page 35 undefined on input line 134.
 
 
 Package natbib Warning: Citation `NNOB12' on page 35 undefined on input line 13
-6.
+4.
 
 
 Package natbib Warning: Citation `ALSZ15' on page 35 undefined on input line 13
-6.
+4.
 
 
 Package natbib Warning: Citation `ALSZ15' on page 35 undefined on input line 13
-6.
-
-
-LaTeX Warning: Reference `HQOT' on page 35 undefined on input line 141.
-
-
-LaTeX Warning: Reference `O-OT' on page 35 undefined on input line 141.
+4.
 
 [35]
 
-LaTeX Warning: Reference `Classical-OT' on page 36 undefined on input line 145.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `HQOT' on page 36 undefined on input line 253.
+
+
+LaTeX Warning: Reference `O-OT' on page 36 undefined on input line 253.
+
+
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+ [36]
+
+LaTeX Warning: Reference `Classical-OT' on page 37 undefined on input line 257.
 
 
 
-LaTeX Warning: Reference `table:ClassicalOT_comparison' on page 36 undefined on
- input line 145.
+LaTeX Warning: Reference `table:ClassicalOT_comparison' on page 37 undefined on
+ input line 257.
 
 
-LaTeX Warning: Reference `table:ClassicalOT_comparison' on page 36 undefined on
- input line 160.
+LaTeX Warning: Reference `table:ClassicalOT_comparison' on page 37 undefined on
+ input line 272.
 
+[37]
 
-Package natbib Warning: Citation `PST19' on page 36 undefined on input line 164
+Package natbib Warning: Citation `PST19' on page 38 undefined on input line 276
 .
 
 
-Package natbib Warning: Citation `MR19' on page 36 undefined on input line 164.
+Package natbib Warning: Citation `MR19' on page 38 undefined on input line 276.
 
 
 
-Package natbib Warning: Citation `CrystalKyber17' on page 36 undefined on input
- line 164.
+Package natbib Warning: Citation `CrystalKyber17' on page 38 undefined on input
+ line 276.
 
 
-Package natbib Warning: Citation `NTRUOT1' on page 36 undefined on input line 1
-64.
+Package natbib Warning: Citation `NTRUOT1' on page 38 undefined on input line 2
+76.
 
 
-Package natbib Warning: Citation `NTRUOT2' on page 36 undefined on input line 1
-64.
+Package natbib Warning: Citation `NTRUOT2' on page 38 undefined on input line 2
+76.
 
 
-Package natbib Warning: Citation `NTRU' on page 36 undefined on input line 164.
+Package natbib Warning: Citation `NTRU' on page 38 undefined on input line 276.
 
 
-[36] [37]
 
 LaTeX Warning: Reference `table:CvsQ_OT_comparison_computation' on page 38 unde
-fined on input line 237.
+fined on input line 349.
 
 
 LaTeX Warning: Reference `table:CvsQ_OT_comparison_communication' on page 38 un
-defined on input line 237.
+defined on input line 349.
+
+[38]
+
+LaTeX Warning: Reference `table:CvsQ_OT_comparison_computation' on page 39 unde
+fined on input line 351.
 
 
-LaTeX Warning: Reference `table:CvsQ_OT_comparison_computation' on page 38 unde
-fined on input line 239.
+Underfull \vbox (badness 4217) has occurred while \output is active []
+
+ [39]
+
+Package natbib Warning: Citation `NISTSHA' on page 40 undefined on input line 3
+55.
 
 
-Package natbib Warning: Citation `NISTSHA' on page 38 undefined on input line 2
-43.
+Package natbib Warning: Citation `IKNP03' on page 40 undefined on input line 36
+6.
 
 
-Package natbib Warning: Citation `IKNP03' on page 38 undefined on input line 25
-4.
+Package natbib Warning: Citation `ALSZ15' on page 40 undefined on input line 36
+6.
 
 
-Package natbib Warning: Citation `ALSZ15' on page 38 undefined on input line 25
-4.
+Package natbib Warning: Citation `ALSZ15' on page 40 undefined on input line 36
+6.
 
 
-Package natbib Warning: Citation `ALSZ15' on page 38 undefined on input line 25
-4.
+Package natbib Warning: Citation `IKNP03' on page 40 undefined on input line 37
+1.
 
 
-Underfull \vbox (badness 1442) has occurred while \output is active []
-
- [38]
-
-Package natbib Warning: Citation `IKNP03' on page 39 undefined on input line 25
-9.
+Package natbib Warning: Citation `K15' on page 40 undefined on input line 371.
 
 
-Package natbib Warning: Citation `K15' on page 39 undefined on input line 259.
+Package natbib Warning: Citation `Santos2021' on page 40 undefined on input lin
+e 371.
+
+[40]
+
+Package natbib Warning: Citation `K15' on page 41 undefined on input line 379.
 
 
-Package natbib Warning: Citation `Santos2021' on page 39 undefined on input lin
-e 259.
-
-[39]
-
-Package natbib Warning: Citation `K15' on page 40 undefined on input line 267.
+Package natbib Warning: Citation `K15' on page 41 undefined on input line 439.
 
 
-Package natbib Warning: Citation `K15' on page 40 undefined on input line 327.
+Package natbib Warning: Citation `K15' on page 41 undefined on input line 440.
 
 
-Package natbib Warning: Citation `K15' on page 40 undefined on input line 328.
+Package natbib Warning: Citation `K15' on page 41 undefined on input line 440.
 
 
-Package natbib Warning: Citation `K15' on page 40 undefined on input line 328.
+LaTeX Warning: Float too large for page by 5.62886pt on input line 442.
 
 
-LaTeX Warning: Float too large for page by 5.62886pt on input line 330.
+Underfull \vbox (badness 1152) has occurred while \output is active []
+
+ [41]
+
+Package natbib Warning: Citation `K15' on page 42 undefined on input line 487.
+
+
+LaTeX Warning: Reference `perfEvaluation' on page 42 undefined on input line 48
+7.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
-
-Package natbib Warning: Citation `K15' on page 41 undefined on input line 375.
-
-
-LaTeX Warning: Reference `perfEvaluation' on page 41 undefined on input line 37
-5.
-
-) [41] [42] [43] (./Chrysis.bbl [44
-
-
-]
+ [42])
+[43] [44] (./Chrysis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 48--50
 []\OT1/cmr/m/n/12 2016 re-form of eu data pro-tec-tion rules.  https://eur-
  []
 
-[45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]) [58]
+[45
+
+
+] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]) [58]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1404,7 +1416,7 @@ viousTransfer.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
 Package rerunfilecheck Info: File `Chrysis.out' has not changed.
-(rerunfilecheck)             Checksum: E4009CCD1E96B25FEBFDCF4F9172BA16;2743.
+(rerunfilecheck)             Checksum: E0617B7CED394ED876CD27C20D2DEBDD;2815.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1419,10 +1431,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 27531 strings out of 480608
- 541387 string characters out of 5903629
- 840224 words of memory out of 5000000
- 42437 multiletter control sequences out of 15000+600000
+ 27545 strings out of 480608
+ 541576 string characters out of 5903629
+ 842520 words of memory out of 5000000
+ 42442 multiletter control sequences out of 15000+600000
  558616 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,18n,105p,2177b,1012s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1460,10 +1472,10 @@ st/fonts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist
 /fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/f
 onts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1728.pfb>
-Output written on Chrysis.pdf (76 pages, 752294 bytes).
+Output written on Chrysis.pdf (76 pages, 757828 bytes).
 PDF statistics:
- 1377 PDF objects out of 1440 (max. 8388607)
- 1211 compressed objects within 13 object streams
- 370 named destinations out of 1000 (max. 500000)
- 471 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1402 PDF objects out of 1440 (max. 8388607)
+ 1236 compressed objects within 13 object streams
+ 379 named destinations out of 1000 (max. 500000)
+ 479 words of extra memory for PDF output out of 10000 (max. 10000000)
 
