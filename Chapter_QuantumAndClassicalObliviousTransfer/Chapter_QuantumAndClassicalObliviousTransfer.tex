@@ -149,7 +149,7 @@ In this section, we compare the complexity of the transfer phase of an optimized
 
 \subsection{Optimization}
 
-Recall that both $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ can be divided into two phases: the oblivious key distribution phase (we also call it a \textit{precomputation} phase) and the transfer phase. It is interesting to note that both protocols follow the same steps in the transfer phase. We present the transfer phase of both protocols in Figure~\ref{fig:BBCS_Transfer}. We slighlty rewrite the protocol by using only one hash function ($H$ that describes a random oracle) instead of two random hash functions $f_0$ and $f_1$. This is done for comparison purposes and because, in practice, $H$ is implemented as a hash function, such as SHA.
+Recall that both $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ and $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ can be divided into two phases: the oblivious key distribution phase (we also call it a \textit{precomputation} phase) and the transfer phase. It is interesting to note that both protocols follow the same steps in the transfer phase. We present the transfer phase of both protocols in Figure~\ref{fig:BBCS_Transfer}. We slighlty rewrite the protocol by using only one hash function ($H$ describes a random oracle) instead of two random hash functions $f_0$ and $f_1$. This is done for comparison purposes and because, in practice, $H$ is implemented as a specific hash function, such as SHA.
 
 \begin{figure}[h!]
     \centering
@@ -192,13 +192,7 @@ Recall that both $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ and $\Pi^{\t
     \label{fig:BBCS_Transfer}
 \end{figure}
 
-Now, observe that Bob sends two sets $(I_b, I_{b\oplus 1})$ to Alice during the first communication round. This can be reduced as it is redundant to send both set of indexes. In fact, with only one set $(I_b)$ received, Alice is able to know its complement ($\overline{I_b} = I_{b\oplus 1}$)). Thus, we end up with the optimized protocol ($\Pi^{\textbf{BBCS}}_{\textbf{O}}$) presented in Figure~\ref{fig:BBCS_Transfer-optimized}.
-
-This optimized version requires less bandwidth when compared with the initially proposed transfer phase.
-
-COMENTAR AQUI O FACTO DE SE USAR COM COMPRIMENTO DO CONJUNTO I_0 (CHAVE) É O PARAMETRO DE SEGURANÇA SYMETRICO, QUE É MAIS OU MENOS DO TAMANHO DA MENSAGEM.
-
- In this case, Bob only needs to send $l$ bits to the sender, leading to an overall reduction of one fourth in the number of bits sent. 
+Now, observe that Bob sends two sets $(I_b, I_{b\oplus 1})$ to Alice during the first communication round (Figure~\ref{fig:BBCS_Transfer}, Step 5). This can be reduced as it is redundant to send both sets of indexes. In fact, with only one set $(I_b)$, Alice is able to know its complement ($\overline{I_b} = I_{b\oplus 1}$)). Thus, we end up with the optimized protocol ($\Pi^{\textbf{BBCS}}_{\textbf{O}}$) presented in Figure~\ref{fig:BBCS_Transfer-optimized}. This optimized version requires less bandwidth when compared with the initially proposed transfer phase. Now, note that the size of the sets, $I_0$ and $I_1$, depends on the security parameter $n$ (number of qubits initially sent). Also, the size of the sets is the symmetric security parameter $\kappa$, as these define the keys to be used in the hash scheme $H$. For comparison purposes, we consider that $\kappa = 128$. Furthermore, we can consider the messages, $m_0$ and $m_1$, to be garbled circuit's keys. As their size can be $l = 128, 192$ or $256$, we consider that $l\sim \kappa$ have the same order of magnitude, meaning they represent the same cost of bits. In this case, Bob only needs to send $l$ bits to Alice, leading to an overall reduction of one fourth in the number of bits sent. 
 
 \begin{figure}[h!]
     \centering

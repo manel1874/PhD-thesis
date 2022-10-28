@@ -170,7 +170,7 @@ As mentioned in the previous section, a secure BBCS protocol requires Bob to mea
     \begin{enumerate}
     \setcounter{enumi}{2}
         \item Bob commits to the bases used and the measured bits, i.e. $\textbf{COM}\big(\bm{\theta}^\mathsf{B}, \bm{x}^\mathsf{B}\big)$, and sends to Alice. %using $\mathcal{F}_{\textbf{com}}$.
-        \item Alice asks Bobto open a subset $T$ of commitments (e.g. $n/2$ elements) and receives $\{\theta_i^\mathsf{B}, x_i^\mathsf{B}\}_{i\in T}$.% from $\mathcal{F}_{\textbf{com}}$.
+        \item Alice asks Bob to open a subset $T$ of commitments (e.g. $n/2$ elements) and receives $\{\theta_i^\mathsf{B}, x_i^\mathsf{B}\}_{i\in T}$.% from $\mathcal{F}_{\textbf{com}}$.
         \item In case any opening is not correct or $x_i^\mathsf{B} \neq x_i^\mathsf{A}$ for $\theta_i^\mathsf{B} = \theta_i^\mathsf{A}$, abort. Otherwise, proceed. 
     \end{enumerate}
     
