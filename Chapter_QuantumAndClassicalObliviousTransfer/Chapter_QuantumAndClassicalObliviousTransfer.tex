@@ -307,7 +307,13 @@ Again, to compare OT extension protocols with $\Pi^{\textbf{BBCS}}_{\textbf{O}}$
     \label{fig:ALSZ13Protocol}
 \end{figure}
 
-Let us consider the OT extension protocol proposed in \cite{ALSZ13} (ALSZ13) and shown in Figure~\ref{fig:ALSZ13Protocol}. At the time of writing, it reports the fastest implementation: 10 million OT in 2.68 seconds. This protocol is originally divided into two phases: initial OT phase and OT extension phase. Note that these two phases correspond exactly to our division of precomputation and transfer phases. Thus, for comparative purposes, we are only interested in the second phase. In Tables~\ref{table:CvsQ_OT_comparison_computation} and~\ref{table:CvsQ_OT_comparison_communication}, we show the computational and communication complexity of both protocols, respectively.
+Let us consider the OT extension protocol proposed in \cite{ALSZ13} (ALSZ13) and shown in Figure~\ref{fig:ALSZ13Protocol}. At the time of writing, it reports the fastest implementation: 10 million OT in 2.68 seconds. This protocol is originally divided into two phases: initial OT phase and OT extension phase. Note that these two phases correspond exactly to our division of precomputation and transfer phases. Thus, for comparative purposes, we are only interested in the second phase.
+
+In Tables~\ref{table:CvsQ_OT_comparison_computation} and~\ref{table:CvsQ_OT_comparison_communication}, we show the computational and communication complexity of both protocols, respectively. In Table~\ref{table:CvsQ_OT_comparison_computation}, PRG stands for pseudorandom generator, $\kappa$ represents the number of base OTs executed in the OT extension precomputation phase, $m$ is the number of final OTs and $l$ is the length of the OT strings. We consider that $l \sim \kappa$ have the same order of magnitude, meaning they represent the same cost of bits. This is so, because $\kappa = 128$ in \cite{ALSZ13} and the key length used in the garbled circuits are $l = 128, 192$ or $256$. Now, we justify the analysis presented in Tables~\ref{table:CvsQ_OT_comparison_computation} and~\ref{table:CvsQ_OT_comparison_communication}. 
+
+Regarding the ALSZ13 protocol, for every $1\leq i\leq \kappa$, Bob computes two PRGs in step 4 and Alice computes one PRG in step 5. This accounts for $3\kappa$ PRG executions. For every $1\leq j\leq m$, Alice computes two hash functions in step 6 and Bob computes one hash function. This accounts for $3m$ hash functions. For every $1\leq i\leq \kappa$, Bob computes two $m-$bit XOR operations in step 4 and Alice computes one $m-$bit XOR operation. For every $1\leq j\leq m$, Alice computes two $l-$bit XOR operations in step 6 and Bob computes one $l-$bit XOR operation in step 7. Also, for every $1\leq j\leq m$, Alice computes one $\kappa-$bit XOR operation in step 6. This accounts for $3m\kappa + 3ml + m\kappa$ bitwise XOR operations. For every $1\leq i\leq \kappa$, Alice computes one $m-$bit AND operation in step 5. Finally, Alice has to perform a matrix inversion which accounts for around $m\log m$ bit operations. The communication complexity is given by the following elements: Bob sends an $m-$bit vector for every $1\leq i\leq \kappa$ and Alice sends two $l-$bit messages for every $1\leq j\leq m$. This accounts for $2ml + m\kappa$ bits sent.
+
+Regarding the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol, for every execution of the protocol, Alice computes two hash functions in step 6 and Bob computes one hash function in step 7. This accounts for $3m$ hash functions. Also, Alice computes two $l-$bit XOR operations in step 6 and Bob computes one $l-$bit XOR operation in step 7. This accounts for $3ml$ bitwise XOR operations. For every execution of the protocol, Alice performs $2\kappa$ bitwise comparisons in step 5. Also, Alice computes two $\kappa-$bit truncation in step 6 and Bob computes one $\kappa-$bit truncation in step 7. The communication complexity is given by the following elements: Bob sends a $\kappa-$bit vector and Alice sends two $l-$bit messages, for every execution of the protocol. This accounts for $2ml + m\kappa$ bits sent.
 
 \begin{table}[h!]
 \centering
@@ -317,11 +323,11 @@ Operation & ALSZ13 & $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ \\
 \midrule
 PRG (AES)     & $3\kappa$              & -\\ 
 Hash (SHA-1)    & $3m$              & $3m$ \\ 
-Bitwise XOR      & $3\kappa m + 3ml + \kappa m$             & $3ml$  \\ 
+Bitwise XOR      & $3 m \kappa + 3ml + m\kappa$             & $3ml$  \\ 
 Bitwise AND  & $\kappa m$              & -           \\
-Matrix Transposition & $m\log m$              & -           \\
-Bitwise comparison & -             & $2ml$           \\
-Bitwise truncation & -            & $3ml$           \\
+Matrix transposition & $m\log m$              & -           \\
+Bitwise comparison & -             & $2m\kappa$           \\
+Bitwise truncation & -            & $3m\kappa$           \\
 \bottomrule
 \end{tabular}
 \caption{Computational complexity comparison between ALSZ13 \cite{ALSZ13} OT extension protocol and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol from section~\ref{O-OT}.}
@@ -334,23 +340,21 @@ Bitwise truncation & -            & $3ml$           \\
 \toprule
  & ALSZ13 & $\Pi^{\textbf{BBCS}}_{\textbf{O}}$  \\
 \midrule
-\multicolumn{1}{l}{Bits sent }   & $2ml  + m\kappa$   & $2ml + ml $  \\
+\multicolumn{1}{l}{Bits sent }   & $2ml  + m\kappa$   & $2ml + m\kappa $  \\
 \bottomrule
 \end{tabular}
 \caption{Communication complexity comparison between ALSZ13 \cite{ALSZ13} OT extension protocol and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol from section~\ref{O-OT}.}
 \label{table:CvsQ_OT_comparison_communication}
 \end{table}
 
-In Table~\ref{table:CvsQ_OT_comparison_computation}, PRG stands for pseudorandom generator, $\kappa$ represents the number of base OTs executed in the OT extension precomputation phase, $m$ is the number of final OTs and $l$ is the length of the OT strings. Also, we consider that $l \sim \kappa$ have the same order of magnitude, meaning they represent the same cost of bits. This is so, because $\kappa = 128$ in \cite{ALSZ13} and the key length used in the garbled circuits are $l = 128, 192$ or $256$.
+We have that the communication complexity is exactly the same in both protocols: $\sim 3ml$. So, the OT extension does not have any advantage over $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ during the communication phase. Regarding their computational complexity, we have to compare binary operations executed betwen each protocol.
 
-We have that the communication complexity is exactly the same in both protocols: $\sim 3ml$. So, the OT extension does not have any advantage over $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ during the communication phase. Regarding their computational complexity, we have to compare the cost of $ml$ bit operations in $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ against $3\kappa$ AES and $\kappa + m\log m$ bit operations in ALZS13 OT extension. 
-
-Firstly, we can see that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is asymptotically more efficient than ALSZ13 OT extension transfer phase. The computational complexity of OT extension is not linear in the number of OT executions, $\mathcal{O}(m\log m)$, whereas it is linear in the case of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, $\mathcal{O}(m)$. Now, let us compare the binary operations between each protocol. Denote by $B_{\text{op}}^\text{ALSZ13}$ and $B_{\text{op}}^\text{BBCS}$ the number of binary operations executed by ALSZ13 and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$. As both protocols execute $3m$ hash functions,we do not take into account their execution. Also, assuming that $\kappa \sim l$, $B_{\text{op}}^\text{ALSZ13}$ is roughly given by,
+Firstly, we can see that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is asymptotically more efficient than ALSZ13 OT extension transfer phase. The computational complexity of OT extension is not linear in the number of OT executions, $\mathcal{O}(m\log m)$, whereas it is linear in the case of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, $\mathcal{O}(m)$. Now, let us compare the binary operations between each protocol. Denote by $B_{\text{op}}^\text{ALSZ13}$ and $B_{\text{op}}^\text{BBCS}$ the number of binary operations executed by ALSZ13 and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, respectively. As both protocols execute $3m$ hash functions,we do not take into account their execution. Also, assuming that $\kappa \sim l$, $B_{\text{op}}^\text{ALSZ13}$ is roughly given by,
 \begin{eqnarray*}
-    B_{\text{op}}^\text{ALSZ13} &=& 3\kappa + 3\kappa m + 3 m l + \kappa m + \kappa m + m \log m \\
+    B_{\text{op}}^\text{ALSZ13} &=& 3\kappa + 3m\kappa + 3 m l + m\kappa + m\kappa + m \log m \\
     &=& 8 m \kappa + 3 \kappa + m\log m \\
 \end{eqnarray*}
-and $B_{\text{op}}^\text{BBCS} = 8 m \kappa$. Therefore, ALSZ13 has more $B_{\text{op}}^\text{ALSZ13} - B_{\text{op}}^\text{BBCS}  \geq m\log m $ binary operations than the transfer phase of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol. 
+and $B_{\text{op}}^\text{BBCS} = 8 m \kappa$. Here we simplify and assume that $3\kappa$ PRGs executions consume only $3\kappa$ bit operations. Therefore, ALSZ13 has more $B_{\text{op}}^\text{ALSZ13} - B_{\text{op}}^\text{BBCS}  \geq m\log m $ binary operations than the transfer phase of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol. 
 
 %Firstly, we can see that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is asymptotically more efficient than ALSZ13 OT extension transfer phase. The computational complexity of OT extension is not linear in the number of OT executions, $\mathcal{O}(m\log m)$, whereas it is linear in the case of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, $\mathcal{O}(m)$. Thus, for a bounded value $l$, $m\log m > ml$ asymptotically. However, in practice, for $l \sim 128$, it would take around $m>10^{50}$ Oblivious Transfers to actually have $m\log m > ml$. Secondly, when comparing $ml$ bit operations with $3m$ SHA$-1$ computations, we conclude that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ uses less bit operations. Each execution of SHA$-1$ \cite{NISTSHA} requires 80 rounds of several bit operations. If we underestimate the cost of each round and we assume it only requires two bit operations, we get that ALSZ13 OT extension protocol requires at least $3 \times 80\times 2 m = 480 m > ml, \, \forall m$. 
 
@@ -363,10 +367,7 @@ and $B_{\text{op}}^\text{BBCS} = 8 m \kappa$. Therefore, ALSZ13 has more $B_{\te
 %\label{fig:CvsQ_OT_comparison}
 %\end{figure}
 
-ESTOU AQUI
-
-From this, we conclude that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase competes with the ALSZ13 corresponding phase and has the potential to be more efficient. It is important to stress that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ efficiency performance of the transfer phase comes along with a drastic increase in the security of the protocol: while ALSZ13 protocol relies on computational assumptions of the base OT, $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is proved to be secure against quantum computers; while ALSZ13 is a semi-honest protocol (assumes well-behaved parties that follow the protocol), $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is secure against any corrupted party. Indeed, in order to get a fair comparison, we should consider OT extension protocols that are secure against malicious parties. The work developed in \cite{IKNP03} presented for the first time a protocol in the malicious scenario, which was latter optimized by KOS15 \cite{KOS15} and ALSZ15 \cite{ALSZ15}. Both optimizations carry out one run of the semi-honest OT extension presented in ALSZ13 plus some consistency checks. The protocol presented in \cite{KOS15} adds to ALSZ13 a \textit{check correlation} phase after the transfer phase and the protocol presented in \cite{ALSZ15} adds a \textit{consistency check} phase during the transfer phase. This means that both malicious protocols' transfer phases have greater computational and communication complexity when compared with ALSZ13. Therefore, we can easily deduce that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase has less computational and communication complexity than its classical equivalents with respect to the adversary model used.
-
+From this, we conclude that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase competes with the ALSZ13 corresponding phase and has the potential to be more efficient. It is important to stress that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ efficiency performance of the transfer phase comes along with a drastic increase in the security of the protocol. While ALSZ13 protocol relies on the computational assumptions of the base OT, $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol is proved to be secure against quantum computers. Moreover, while ALSZ13 is a semi-honest protocol (assumes well-behaved parties that follow the protocol), $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol is secure against any corrupted party. Indeed, in order to get a fair comparison, we should consider OT extension protocols that are secure against malicious parties. The work developed in \cite{IKNP03} presented the first protocol in the malicious scenario, which was latter optimized by KOS15 \cite{KOS15} and ALSZ15 \cite{ALSZ15}. Both optimizations carry out one run of the semi-honest OT extension presented in ALSZ13 plus some consistency checks. The protocol presented in \cite{KOS15} adds to ALSZ13 a \textit{check correlation} phase after the transfer phase and the protocol presented in \cite{ALSZ15} adds a \textit{consistency check} phase during the transfer phase. This means that both malicious protocols' transfer phases have greater computational and communication complexity when compared with ALSZ13. Therefore, we can easily deduce that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase has less computational and communication complexity than its classical equivalents with respect to the adversary model used. Next, we compare the KOS15 protocol \cite{KOS15} and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol.
 
 \subsection{Oblivious Transfer comparison}
 
@@ -457,7 +458,7 @@ Operation & KOS15 & QOT \\
 Hash (SHA-1)    & $3m$              & $3m$ \\ 
 Bitwise XOR      & $3\kappa m + 3ml + \kappa$             & $3ml $  \\ 
 Bitwise AND  & $\kappa m$              & -           \\ 
-Matrix Transposition & $m\log m$              & -           \\ 
+Matrix transposition & $m\log m$              & -           \\ 
 Bitwise comparison & -             & $2ml$           \\ 
 Bitwise truncation & -            & $3ml$           \\ 
 $\kappa$-bit additon & $3(m + (\kappa + w))\kappa$ & - \\ 
@@ -485,29 +486,6 @@ and $B_{\text{op}}^\text{HQOT} = 8 m \kappa$. Therefore, KOS15 has more $B_{\tex
 For this estimation, note that we are considering the lower bound $2 m \kappa$ instead of $2 m \kappa^{1.58}$ and we are not taking into account the implementation of the random oracle $\mathcal{F}_{\text{Rand}}(\mathbb{F}^{m'}_{2^\kappa})$, which would add an extra cost linear in the number of OT executions.
 
 Regarding the communication complexity, the number of bits sent during both ALSZ15 and HQOT is the same. KOS15 only adds $\kappa$ bits to the communication in ALSZ15 during the check correlation phase. However, since this overhead is independent of $m$ (number of OT executed) its effect is amortized for big $m$.
-
-So, we have that the computational complexity of the transfer phase of the fastest malicious OT extension reported implementation \cite{K15} is higher than HQOT corresponding phase, while their communication complexity is essentially the same. Therefore, by using the HQOT protocol, in principle we do not have to sacrifice efficiency on behalf of security. However, in this comparison, we are not taking into account the infrastructure that is required in a real implementation to manage precomputed oblivious keys. As discussed further in section~\ref{perfEvaluation}, a solution assisted with HQOT causes a time overhead when compared to a classical-only implementation mainly due to the oblivious key management system.
-
-\begin{table*}[t]
-\centering
-\begin{tabular}{lccc}
-\toprule
-Parameter & Formula & Amount & Generation Time \\ 
-\midrule
-$L^j_{\text{ok}}$ & $4slM^2(n-1)$ & $3.3 \times 10^9$ bit & $5\text{m}30\text{s}$ \\ 
-$L^j_{\text{bok}}$ & $2\kappa lM^2(n-1)$ & $6.6 \times 10^6$ bit & $0.64\text{s}$ \\ 
-$L^j_{\text{QRNG}}$ & $8slM^2(n-1)$ & $6.6 \times 10^9$ bit & $28$s \\ 
-$L^{j}_{qkd}$ & $64(n-1)(M^2(n-2) + \binom{M}{2})$ & $18.6 \times 10^3$ bit & $1.9\times 10^{-3}$s \\
-$N^j_{\text{Yao}}$ & $M^2(n-1)$ & $200$ &  \\ 
-$N^j_{\text{OT}}$ & $2sM^2(n-1)$ & $12.8 \times 10^6$ &  \\ 
-$N^j_{\text{bOT}}$ & $\kappa M^2(n-1)$ & $25.6 \times 10^3$ &  \\
-$N^j_{\text{int}}$ & $\binom{M}{2}$ & $45$ &  \\ 
-\bottomrule
-\end{tabular}
-\caption{Complexity analysis where $n=3$, $M=10$, $s=32\,000$ and $l, \kappa=128$.}
-\label{table:complexity}
-\end{table*}
-
 
 %\bibliography{bibforthesis}
 %\bibliographystyle{unsrt}

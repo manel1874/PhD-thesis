@@ -43,5 +43,5 @@
 \contentsline {subsection}{\numberline {4.2.3}OT extension}{39}{subsection.4.2.3}%
 \contentsline {subsubsection}{ALSZ13 comparison}{39}{section*.34}%
 \contentsline {subsection}{\numberline {4.2.4}Oblivious Transfer comparison}{42}{subsection.4.2.4}%
-\contentsline {subsubsection}{KOS15 and HQOT comparison}{42}{section*.38}%
+\contentsline {subsubsection}{KOS15 and HQOT comparison}{43}{section*.38}%
 \contentsline {chapter}{Bibliography}{60}{chapter*.41}%
