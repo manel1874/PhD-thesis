@@ -7,62 +7,49 @@ A level-1 auxiliary file: Chapter_QuantumObliviousTransfer/Chapter_QuantumOblivi
 A level-1 auxiliary file: Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObliviousTransfer.aux
 The style file: unsrt.bst
 Database file #1: References/References.bib
-Warning--I didn't find a database entry for "K15"
-Warning--I didn't find a database entry for "MVV01"
-Warning--I didn't find a database entry for "G11"
-Warning--I didn't find a database entry for "B96"
-Warning--I didn't find a database entry for "IKNP03"
-Warning--I didn't find a database entry for "N07"
-Warning--I didn't find a database entry for "NNOB12"
-Warning--I didn't find a database entry for "ALSZ15"
-Warning--I didn't find a database entry for "PST19"
-Warning--I didn't find a database entry for "MR19"
-Warning--I didn't find a database entry for "CrystalKyber17"
-Warning--I didn't find a database entry for "NTRUOT1"
-Warning--I didn't find a database entry for "NTRUOT2"
-Warning--I didn't find a database entry for "NTRU"
-Warning--I didn't find a database entry for "NISTSHA"
-Warning--I didn't find a database entry for "Santos2021"
 Warning--can't use both author and editor fields in S99
-You've used 157 entries,
+Warning--empty booktitle in IKNP03
+Warning--empty journal in NNOB12
+Warning--empty booktitle in MR19
+You've used 170 entries,
             1791 wiz_defined-function locations,
-            1448 strings with 28561 characters,
-and the built_in function-call counts, 39659 in all, are:
-= -- 3521
-> -- 1876
-< -- 37
-+ -- 686
-- -- 529
-* -- 2780
-:= -- 6146
-add.period$ -- 508
-call.type$ -- 157
-change.case$ -- 155
+            1493 strings with 30494 characters,
+and the built_in function-call counts, 43345 in all, are:
+= -- 3851
+> -- 2062
+< -- 42
++ -- 752
+- -- 582
+* -- 3014
+:= -- 6707
+add.period$ -- 552
+call.type$ -- 170
+change.case$ -- 167
 chr.to.int$ -- 0
-cite$ -- 158
-duplicate$ -- 1810
-empty$ -- 3877
-format.name$ -- 529
-if$ -- 9015
+cite$ -- 174
+duplicate$ -- 1995
+empty$ -- 4210
+format.name$ -- 582
+if$ -- 9875
 int.to.chr$ -- 0
-int.to.str$ -- 157
-missing$ -- 137
-newline$ -- 773
-num.names$ -- 190
-pop$ -- 516
+int.to.str$ -- 170
+missing$ -- 151
+newline$ -- 838
+num.names$ -- 207
+pop$ -- 565
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 915
+skip$ -- 1024
 stack$ -- 0
-substring$ -- 2379
-swap$ -- 501
-text.length$ -- 37
+substring$ -- 2582
+swap$ -- 566
+text.length$ -- 42
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 368
-width$ -- 160
-write$ -- 1740
-(There were 17 warnings)
+warning$ -- 4
+while$ -- 399
+width$ -- 173
+write$ -- 1888
+(There were 4 warnings)

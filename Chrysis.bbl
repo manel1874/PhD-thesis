@@ -14,6 +14,13 @@ Gilad Asharov, Yehuda Lindell, Thomas Schneider, and Michael Zohner.
   Communications Security}, CCS '13, pages 535--548, New York, NY, USA, 2013.
   Association for Computing Machinery.
 
+\bibitem{KOS15}
+Marcel Keller, Emmanuela Orsini, and Peter Scholl.
+\newblock Actively secure ot extension with optimal overhead.
+\newblock In {\em Advances in Cryptology - CRYPTO 2015}, volume 9215 of {\em
+  Lecture Notes in Computer Science}, pages 724--741. Springer, August 2015.
+\newblock Date of Acceptance: 08/05/2015.
+
 \bibitem{Wang11}
 Jun Wang.
 \newblock Personal genomes: For one and for all.
@@ -189,13 +196,6 @@ Marcel Keller, Emmanuela Orsini, and Peter Scholl.
 \newblock {MASCOT}.
 \newblock In {\em Proceedings of the 2016 {ACM} {SIGSAC} Conference on Computer
   and Communications Security}. {ACM}, October 2016.
-
-\bibitem{KOS15}
-Marcel Keller, Emmanuela Orsini, and Peter Scholl.
-\newblock Actively secure ot extension with optimal overhead.
-\newblock In {\em Advances in Cryptology - CRYPTO 2015}, volume 9215 of {\em
-  Lecture Notes in Computer Science}, pages 724--741. Springer, August 2015.
-\newblock Date of Acceptance: 08/05/2015.
 
 \bibitem{BPT00}
 H.~Bechmann-Pasquinucci and W.~Tittel.
@@ -923,5 +923,85 @@ S.~Pirandola, U.~L. Andersen, L.~Banchi, M.~Berta, D.~Bunandar, R.~Colbeck,
   P.~Wallden.
 \newblock Advances in quantum cryptography.
 \newblock {\em Adv. Opt. Photon.}, 12(4):1012--1236, Dec 2020.
+
+\bibitem{MVV01}
+Alfred~J. Menezes, Paul~C. van Oorschot, and Scott~A. Vanstone.
+\newblock {\em Handbook of Applied Cryptography}.
+\newblock CRC Press, 2001.
+
+\bibitem{G11}
+Shay Gueron.
+\newblock Efficient software implementations of modular exponentiation.
+\newblock {\em IACR Cryptology ePrint Archive}, 2011:239, 01 2011.
+
+\bibitem{B96}
+Donald Beaver.
+\newblock Correlated pseudorandomness and the complexity of private
+  computations.
+\newblock In {\em Proceedings of the Twenty-Eighth Annual ACM Symposium on
+  Theory of Computing}, STOC '96, pages 479--488, New York, NY, USA, 1996.
+  Association for Computing Machinery.
+
+\bibitem{IKNP03}
+Yuval Ishai, Joe Kilian, Kobbi Nissim, and Erez Petrank.
+\newblock Extending oblivious transfers efficiently.
+\newblock 06 2003.
+
+\bibitem{N07}
+Jesper Nielsen.
+\newblock Extending oblivious transfers efficiently - how to get robustness
+  almost for free.
+\newblock {\em IACR Cryptology ePrint Archive}, 2007:215, 01 2007.
+
+\bibitem{NNOB12}
+Jesper Nielsen, Peter Nordholt, Claudio Orlandi, and Sai Burra.
+\newblock A new approach to practical active-secure two-party computation.
+\newblock 8, 02 2012.
+
+\bibitem{ALSZ15}
+Gilad Asharov, Yehuda Lindell, Thomas Schneider, and Michael Zohner.
+\newblock More efficient oblivious transfer extensions with security for
+  malicious adversaries.
+\newblock In Elisabeth Oswald and Marc Fischlin, editors, {\em Advances in
+  Cryptology -- EUROCRYPT 2015}, pages 673--701, Berlin, Heidelberg, 2015.
+  Springer Berlin Heidelberg.
+
+\bibitem{PST19}
+Christian Paquin, Douglas Stebila, and Goutam Tamvada.
+\newblock Benchmarking post-quantum cryptography in tls.
+\newblock In {\em International Conference on Post-Quantum Cryptography}, pages
+  72--91. Springer, 2020.
+
+\bibitem{MR19}
+Daniel Mansy and Peter Rindal.
+\newblock Endemic oblivious transfer.
+\newblock CCS '19, page 309–326, New York, NY, USA, 2019. Association for
+  Computing Machinery.
+
+\bibitem{CrystalKyber17}
+Roberto Avanzi, Joppe Bos, L{\'e}o Ducas, Eike Kiltz, Tancrede Lepoint, Vadim
+  Lyubashevsky, John~M Schanck, Peter Schwabe, Gregor Seiler, and Damien
+  Stehl{\'e}.
+\newblock Crystals-kyber.
+\newblock {\em NIST, Tech. Rep}, 2017.
+
+\bibitem{NTRUOT1}
+Bo~Mi, Darong Huang, Shaohua Wan, Libo Mi, and J.~Cao.
+\newblock Oblivious transfer based on ntruencrypt.
+\newblock {\em IEEE Access}, 6:35283--35291, 2018.
+
+\bibitem{NTRUOT2}
+Bo~Mi, Darong Huang, Shaohua Wan, Yu~Hu, and Kim-Kwang~Raymond Choo.
+\newblock A post-quantum light weight 1-out-n oblivious transfer protocol.
+\newblock {\em Computers \& Electrical Engineering}, 75:90--100, 2019.
+
+\bibitem{NTRU}
+Philip~S. Hirschhorn, Jeffrey Hoffstein, Nick Howgrave-Graham, and William
+  Whyte.
+\newblock Choosing ntruencrypt parameters in light of combined lattice
+  reduction and mitm approaches.
+\newblock In Michel Abdalla, David Pointcheval, Pierre-Alain Fouque, and Damien
+  Vergnaud, editors, {\em Applied Cryptography and Network Security}, pages
+  437--455, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
 
 \end{thebibliography}
