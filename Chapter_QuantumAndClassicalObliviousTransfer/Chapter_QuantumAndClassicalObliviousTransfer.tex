@@ -372,8 +372,9 @@ From this, we conclude that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase co
 
 \subsubsection{KOS15 comparison}\label{Mal-Ext-OT_comp}
 
-KOS15 protocol is very similar to ALSZ13 with the addition of a \textit{check correlation} phase. This phase ensures that the receiver is well behaved and does not cheat. The KOS15 protocol that generates $m$ $l$-bit string OT out of $\kappa$ base OT with computational security given by $\kappa$ and statistical security given by $w$ is shown in Figure~\ref{fig:K15Protocol}. Note that in Figure~\ref{fig:K15Protocol} we join all the subprotocols presented in the original paper: $\prod^{\kappa, m'}_{\textsc{COTe}}$, $\prod^{\kappa, m}_{\textsc{ROT}}$ and $\prod^{\kappa, m}_{\textsc{DeROT}}$. Also, they identify $\mathbb{Z}^\kappa_2$ with the finite field $\mathbb{Z}_{2^\kappa}$ and use $``\cdot"$ for multiplication in $\mathbb{Z}_{2^\kappa}$. For example, the element $\boldsymbol{t}_j$ in $\sum_{j=1}^{m'} \boldsymbol{t}_j \cdot \chi_j$ (Figure~\ref{fig:K15Protocol}, step $10$) should be considered in $\mathbb{Z}_{2^\kappa}$.
-\begin{figure}[h!]
+KOS15 protocol is very similar to ALSZ13 with the addition of a \textit{check correlation} phase. This phase ensures that the receiver is well behaved and does not cheat. The KOS15 protocol that generates $m$ $l$-bit string OT out of $\kappa$ base OT with computational security given by $\kappa$ and statistical security given by $w$ is shown in Figure~\ref{fig:K15Protocol}. Note that, in Figure~\ref{fig:K15Protocol}, we join all the subprotocols presented in the original paper: $\prod^{\kappa, m'}_{\textsc{COTe}}$, $\prod^{\kappa, m}_{\textsc{ROT}}$ and $\prod^{\kappa, m}_{\textsc{DeROT}}$. Also, they identify $\mathbb{Z}^\kappa_2$ with the finite field $\mathbb{Z}_{2^\kappa}$ and use $``\cdot"$ for multiplication in $\mathbb{Z}_{2^\kappa}$. For example, the element $\boldsymbol{t}_j$ in $\sum_{j=1}^{m'} \boldsymbol{t}_j \cdot \chi_j$ (Figure~\ref{fig:K15Protocol}, step $10$) should be considered in $\mathbb{Z}_{2^\kappa}$.
+
+\begin{figure}
     \centering
         \begin{tcolorbox}[enhanced, 
                         frame hidden,
@@ -391,9 +392,8 @@ KOS15 protocol is very similar to ALSZ13 with the addition of a \textit{check co
     
     \textit{Initial OT phase (Precomputation phase)}
     \begin{enumerate}
-         \item Alice randomly generates a string $\boldsymbol{s} = (s_1, ..., s_\kappa)$.
-         \item Bob randomly chooses $\kappa$ pairs of $\kappa$-bit strings $\{(\boldsymbol{k}^0_i, \boldsymbol{k}^1_i)\}^\kappa_{i=1}$.
-         \item Bob and Alice execute $\kappa$ base OTs, where Alice plays the role of the receiver with input $\boldsymbol{s}$ and Bob plays the role of the sender with messages $(\boldsymbol{k}^0_i, \boldsymbol{k}^1_i)\, \forall 1\leq i\leq \kappa$.
+         \item Alice randomly generates a string $\boldsymbol{s} = (s_1, ..., s_\kappa)$ and Bob randomly chooses $\kappa$ pairs of $\kappa$-bit strings $\{(\boldsymbol{k}^0_i, \boldsymbol{k}^1_i)\}^\kappa_{i=1}$.
+         \item Bob and Alice execute $\kappa$ base OTs. Alice plays the role of the receiver with input $\boldsymbol{s}$ and Bob plays the role of the sender with messages $(\boldsymbol{k}^0_i, \boldsymbol{k}^1_i),\, i\in[\kappa]$.
          \item Bob applies a pseudorandom number generator $G$ to $\boldsymbol{k}^0_i$ and $\boldsymbol{k}^1_i$: $\boldsymbol{t}^i = G(\boldsymbol{k}^0_i)$ and $\boldsymbol{t}^i_1 = G(\boldsymbol{k}^1_i)$. Also, set $\boldsymbol{T}^i = \boldsymbol{t}^i \oplus \boldsymbol{t}^i_1$.
          \item Alice applies $G$ to $\boldsymbol{k}^{s_i}_i$ and sets $\boldsymbol{g}^{s_i}_i = G(\boldsymbol{k}^{s_i}_i)$.
     \end{enumerate}
@@ -401,14 +401,14 @@ KOS15 protocol is very similar to ALSZ13 with the addition of a \textit{check co
     
     \textit{\hspace{0.25cm} Extend}
     \begin{enumerate}
-    \setcounter{enumi}{5}
+    \setcounter{enumi}{4}
         \item Bob generates random elements $r_j$, for $r\in [m+1, m']$ and resize $\boldsymbol{r} = (r_1, ..., r_m, r_{m+1}, ..., r_{m'})$, where $m' = m + (\kappa + w)$.
         \item Bob computes $\boldsymbol{u}^i = \boldsymbol{T}^i \oplus \boldsymbol{r}$ and sends $\boldsymbol{u}^i$ to Alice for every $1\leq i\leq \kappa$.
         \item Alice computes $\boldsymbol{q}^i = (s_i \times \boldsymbol{u}^i) \oplus \boldsymbol{g}^{s_i}_i$ for every $1\leq i\leq \kappa$.
     \end{enumerate}
     \textit{\hspace{0.25cm} Check correlation}
     \begin{enumerate}
-    \setcounter{enumi}{8}
+    \setcounter{enumi}{7}
         \item Sample $(\chi_1, ..., \chi_{m'})\leftarrow \mathcal{F}_{\text{Rand}}(\mathbb{F}^{m'}_{2^\kappa})$.
         \item Bob computes $x = \sum_{j=1}^{m'} r_j \cdot \chi_j$ and $t = \sum_{j=1}^{m'} \boldsymbol{t}_j \cdot \chi_j$, where $\boldsymbol{t}_j$ is the $j$-th row of the matrix $[ \boldsymbol{t}^1 | ...| \boldsymbol{t}^\kappa]$ and sends these to Alice.
         \item Alice computes $q = \sum_{j=1}^{m'} \boldsymbol{q}_j \cdot \chi_j$, where $\boldsymbol{q}_j$ is the $j$-th row of the matrix $Q = [ \boldsymbol{q}^1 | ...| \boldsymbol{q}^\kappa]$, and checks that $t = q + r\cdot \boldsymbol{s}$. If the check fails, output \textsc{Abort}, otherwise continue. %Alice outputs $\Delta$, $\{\boldsymbol{q}_j\}_{j\in[m]}$ and Bob outputs $\{\boldsymbol{t}_j, r_j\}_{j\in [m]}$.
@@ -431,32 +431,15 @@ KOS15 protocol is very similar to ALSZ13 with the addition of a \textit{check co
     \label{fig:K15Protocol}
 \end{figure}
 
-Similarly to $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, the KOS15 starts with a precomputation phase that can be carried out before the actual computation of the OT protocols. However, in the HQOT, the precomputation phase is based on quantum technologies while the transfer phase is solely based on classical methods. Since it is not clear how to compare quantum and classical protocols, we only focus our comparison on the transfer phase of both protocols. 
-
-Note that in the original KOS15 paper \cite{K15} the computation of pseudorandom generator $G$ is carried out in the OT extension phase. However, these $3\kappa$ $G$ computations can be executed during the precomputation phase because they do not depend on the input elements. As mentioned before, the additional steps that KOS15 added to the ALSZ13 protocol are steps $9-11$ (check correlation phase). Here, both parties start by calling a random oracle functionality $\mathcal{F}_{\text{Rand}}(\mathbb{F}^{m'}_{2^\kappa})$ that provides them with equal random values. The receiver has to compute twice $m'$ $\kappa$-bit sums, $m'$ $\kappa$-bit multiplication and sends $2\kappa$ bit ($x$ and $t$) to the sender. Finally, the sender has to compute $m'$ $\kappa$-bit sums and $m'$ $\kappa$-bit multiplication. We consider karatsuba method for multiplication with complexity $O(\kappa^{1.585})$ and schoolbook addition with complexity $O(\kappa)$. Therefore, we consider that the sum of two $\kappa$ takes $\kappa$ bit operations and the multiplication takes $\kappa^{1.585}$.
-
-%Parameters of OTe:
-
-%Dizer que juntamos todas as funcionalidades descritas no paper: dizer quais são (sem explicar)
-
-%Explicar a associaçao de $F^k_2$ e $F_2^k$ e referir operações.
-
-
-
-%Analisar a questão do F\_rand
-
-%Analisar por palavras. Justificar com paper do MIT. Apresentar tabela comparativa
-
-
-\begin{table}[h!]
+\begin{table}
 \centering
 \begin{tabular}{lcc}
 \toprule
-Operation & KOS15 & QOT \\
+Operation & KOS15 & $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ \\
 \midrule
 Hash (SHA-1)    & $3m$              & $3m$ \\ 
-Bitwise XOR      & $3\kappa m + 3ml + \kappa$             & $3ml $  \\ 
-Bitwise AND  & $\kappa m$              & -           \\ 
+Bitwise XOR      & $3 m\kappa + 3ml + m\kappa$             & $3ml $  \\ 
+Bitwise AND  & $m\kappa$              & -           \\ 
 Matrix transposition & $m\log m$              & -           \\ 
 Bitwise comparison & -             & $2ml$           \\ 
 Bitwise truncation & -            & $3ml$           \\ 
@@ -464,27 +447,29 @@ $\kappa$-bit additon & $3(m + (\kappa + w))\kappa$ & - \\
 $\kappa$-bit mult & $2(m + (\kappa + w))\kappa^{1.58}$ & - \\ 
 \bottomrule
 \end{tabular}
-\caption{Computation complexity comparison between KOS15 OT extension and HQOT.}
+\caption{Computation complexity comparison between KOS15 OT extension and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$.}
 \label{table:complexity}
 \end{table}
 
-Denote by $B_{\text{op}}^\text{KOS15}$ and $B_{\text{op}}^\text{HQOT}$ the number of binary operations executed by KOS15 and HQOT. Without taking into account the execution of $3 m$ hash functions and assuming that $\kappa \sim l$, $B_{\text{op}}^\text{KOS15}$ is roughly given by,
+Similarly to the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ and ALSZ13 protocols, KOS15 starts with a precomputation phase that can be carried out before the actual computation of the OT protocols. However, it is interesting to note that in the original KOS15 paper \cite{KOS15} the computation of the PRGs $G$ is carried out in the OT extension phase. In fact, these $3\kappa$ $G$ computations can be executed during the precomputation phase because they do not depend on the input elements. As mentioned before, the additional steps that KOS15 added to the ALSZ13 protocol are steps $9-11$ (check correlation phase). Here, both parties start by calling a random oracle functionality $\mathcal{F}_{\text{Rand}}(\mathbb{F}^{m'}_{2^\kappa})$ that provides them with equal random values. Bob has to compute twice $m'$ $\kappa$-bit sums, $m'$ $\kappa$-bit multiplication and sends $2\kappa$ bit ($x$ and $t$) to Alice. Finally, Alice has to compute $m'$ $\kappa$-bit sums and $m'$ $\kappa$-bit multiplications. We consider karatsuba method for multiplication with complexity $O(\kappa^{1.585})$ and schoolbook addition with complexity $O(\kappa)$. For simplicity, we consider that the sum of two $\kappa$ takes $\kappa$ bit operations and the multiplication takes $\kappa^{1.585}$. 
+
+Similarly to what with did with ALSZ13 protocol, let us compare the binary operations between each KOS15 and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$. Denote by $B_{\text{op}}^\text{KOS15}$ and $B_{\text{op}}^\text{BBCS}$ the number of binary operations executed by KOS15 and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, respectively. Again, without taking into account the execution of $3 m$ hash functions and assuming that $\kappa \sim l$, $B_{\text{op}}^\text{KOS15}$ is roughly given by,
 \begin{equation*}
 \begin{split}
-    B_{\text{op}}^\text{KOS15} &= 3\kappa m + 3ml + \kappa \\
-    &+ \kappa m + m \log m \\
+    B_{\text{op}}^\text{KOS15} &= 3m\kappa + 3ml + m\kappa \\
+    &+ m\kappa + m \log m \\
     &+ 3(m + (\kappa + w))\kappa \\
     &+ 2(m + (\kappa + w))\kappa^{1.58}\\
-    &= 10 m \kappa + \kappa + m\log m \\
-    &+ 3\kappa^2 + 3\kappa w \\
-    &+ 2 m \kappa^{1.58} + 2 \kappa^{2.58} + 2\kappa^{1.58}w
+    &= 11 m \kappa  + m\log m \\
+    &+ 3\kappa^2 + 3w\kappa  \\
+    &+ 2 m \kappa^{1.58} + 2 \kappa^{2.58} + 2w\kappa^{1.58}
 \end{split}
 \end{equation*}
-and $B_{\text{op}}^\text{HQOT} = 8 m \kappa$. Therefore, KOS15 has more $B_{\text{op}}^\text{KOS15} - B_{\text{op}}^\text{HQOT}  \geq 4 m\kappa$ binary operations than HQOT transfer phase. 
+and $B_{\text{op}}^\text{HQOT} = 8 m \kappa$. Therefore, KOS15 has more $B_{\text{op}}^\text{KOS15} - B_{\text{op}}^\text{HQOT}  \geq 5 m\kappa + m\log m$ binary operations than $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase. 
 %Now, since $m$ SHA-1 executions requires at least $480 m$ binary operations \cite{Santos2021, NISTSHA} and a common value for $\kappa$ is $\kappa = 128$ \cite{K15}, we have that $m$ SHA-1 executions requires at least $3 m \kappa$ binary operations. Adding $3 m \kappa$ to $4 m\kappa$, we have that KOS15 has at least $7 m\kappa$ more binary operations than HQOT transfer phase, which is almost twice as much binary operations as the quantum version ($\sim 88\%$). 
 For this estimation, note that we are considering the lower bound $2 m \kappa$ instead of $2 m \kappa^{1.58}$ and we are not taking into account the implementation of the random oracle $\mathcal{F}_{\text{Rand}}(\mathbb{F}^{m'}_{2^\kappa})$, which would add an extra cost linear in the number of OT executions.
 
-Regarding the communication complexity, the number of bits sent during both ALSZ15 and HQOT is the same. KOS15 only adds $\kappa$ bits to the communication in ALSZ15 during the check correlation phase. However, since this overhead is independent of $m$ (number of OT executed) its effect is amortized for big $m$.
+Regarding the communication complexity, the number of bits sent during both ALSZ15 and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is the same. KOS15 only adds $\kappa$ bits to the communication in ALSZ15 during the check correlation phase. However, since this overhead is independent of $m$ (number of OT executed) its effect is amortized for big $m$.
 
 %\bibliography{bibforthesis}
 %\bibliographystyle{unsrt}

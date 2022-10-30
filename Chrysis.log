@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  30 OCT 2022 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  30 OCT 2022 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1316,21 +1316,11 @@ Package natbib Warning: Citation `ALSZ15' on page 42 undefined on input line 37
 Package natbib Warning: Citation `ALSZ15' on page 42 undefined on input line 37
 0.
 
-
-LaTeX Warning: Float too large for page by 13.24571pt on input line 433.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[42]
-
-Package natbib Warning: Citation `K15' on page 43 undefined on input line 437.
-
-
+[42] [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43])
-[44] [45] (./Chrysis.bbl [46
+ [44])
+[45] (./Chrysis.bbl [46
 
 
 ]
@@ -1361,9 +1351,9 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 27549 strings out of 480608
- 541635 string characters out of 5903629
- 841103 words of memory out of 5000000
+ 27548 strings out of 480608
+ 541628 string characters out of 5903629
+ 844119 words of memory out of 5000000
  42442 multiletter control sequences out of 15000+600000
  558616 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1402,10 +1392,10 @@ st/fonts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist
 /fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/f
 onts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1728.pfb>
-Output written on Chrysis.pdf (78 pages, 760526 bytes).
+Output written on Chrysis.pdf (78 pages, 760373 bytes).
 PDF statistics:
  1443 PDF objects out of 1728 (max. 8388607)
  1270 compressed objects within 13 object streams
- 383 named destinations out of 1000 (max. 500000)
+ 382 named destinations out of 1000 (max. 500000)
  471 words of extra memory for PDF output out of 10000 (max. 10000000)
 
