@@ -6,4 +6,4 @@
 \contentsline {table}{\numberline {4.2}{\ignorespaces Number of modular exponentiation operations and communication rounds executed during the transfer phase of four other classical protocols.\relax }}{38}{table.caption.33}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Computational complexity comparison between ALSZ13 \cite {ALSZ13} OT extension protocol and $\Pi ^{\textbf {BBCS}}_{\textbf {O}}$ protocol from section\nobreakspace {}\ref {O-OT}.\relax }}{41}{table.caption.36}%
 \contentsline {table}{\numberline {4.4}{\ignorespaces Communication complexity comparison between ALSZ13 \cite {ALSZ13} OT extension protocol and $\Pi ^{\textbf {BBCS}}_{\textbf {O}}$ protocol from section\nobreakspace {}\ref {O-OT}.\relax }}{41}{table.caption.37}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Computation complexity comparison between KOS15 OT extension and HQOT.\relax }}{44}{table.caption.40}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Computation complexity comparison between KOS15 OT extension and HQOT.\relax }}{43}{table.caption.40}%

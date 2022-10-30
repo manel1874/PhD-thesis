@@ -278,23 +278,23 @@ Again, to compare OT extension protocols with $\Pi^{\textbf{BBCS}}_{\textbf{O}}$
 
 			\textbf{Alice's input:} $m$ pairs $(x^0_j, x^1_j),\, \forall 1\leq j\leq m$ of $l$-bit strings.
             
-			\textbf{Bob's input:} $m$ selection bits $\textbf{r} = (r_1, ..., r_m)$.
+			\textbf{Bob's input:} $m$ selection bits $\bm{r} = (r_1, ..., r_m)$.
 
 			\
 			
 			\textit{Initial OT phase (Precomputation phase)}
     \begin{enumerate}
-         \item Alice randomly generates a string $\textbf{s} = (s_1, ..., s_\kappa)$.
-         \item Bob randomly chooses $\kappa$ pairs of $\kappa$-bit strings $\{(\textbf{k}^0_i, \textbf{k}^1_i)\}^\kappa_{i=1}$.
-         \item Bob and Alice execute $\kappa$ base OTs, where Alice plays the role of the receiver with input $\textbf{s}$ and Bob plays the role of the sender with messages $(\textbf{k}^0_i, \textbf{k}^1_i)\, \forall 1\leq i\leq \kappa$.
+         \item Alice randomly generates a string $\bm{s} = (s_1, ..., s_\kappa)$.
+         \item Bob randomly chooses $\kappa$ pairs of $\kappa$-bit strings $\{(\bm{k}^0_i, \bm{k}^1_i)\}^\kappa_{i=1}$.
+         \item Bob and Alice execute $\kappa$ base OTs, where Alice plays the role of the receiver with input $\bm{k}$ and Bob plays the role of the sender with messages $(\bm{k}^0_i, \bm{k}^1_i)\, \forall 1\leq i\leq \kappa$.
     \end{enumerate}
     \textit{OT extension phase (Transfer phase)}
     \begin{enumerate}
     \setcounter{enumi}{3}
-        \item Bob applies a pseudorandom number generator $G$ to $\textbf{k}^0_i$, i.e. $\textbf{t}^i = G(\textbf{k}^0_i)$. Computes $\textbf{u}^i = \textbf{t}^i \oplus G(\textbf{k}^1_i) \oplus \textbf{r}$ and sends $\textbf{u}^i$ to Alice for every $1\leq i\leq \kappa$.
-        \item Alice computes $\textbf{q}^i = (s_i \cdot \textbf{u}^i) \oplus G(\textbf{k}^{s_i}_i)$.
-        \item Alice sends $(y^0_j, y^1_j)$ for every $1\leq j\leq m$, where $y^0_j = x^0_j\oplus H(j,\textbf{q}_j)$, $y^1_j = x^1_j\oplus H(j,\textbf{q}_j\oplus \textbf{s})$ and $\textbf{q}_j$ is the $j$-th row of the matrix $Q = [ \textbf{q}^1 | ...| \textbf{q}^\kappa]$. Note that, in practice, it is required to transpose $Q$ to access its $j$-th row.
-        \item Bob computes $x^{r_j}_j = y^{r_j}_j \oplus H(j, \textbf{t}_j)$.
+        \item Bob applies a pseudorandom number generator $G$ to $\bm{k}^0_i$, i.e. $\bm{t}^i = G(\bm{k}^0_i)$. Computes $\bm{u}^i = \bm{t}^i \oplus G(\bm{k}^1_i) \oplus \bm{r}$ and sends $\bm{u}^i$ to Alice for every $1\leq i\leq \kappa$.
+        \item Alice computes $\bm{q}^i = (s_i \cdot \bm{u}^i) \oplus G(\bm{k}^{s_i}_i)$.
+        \item Alice sends $(y^0_j, y^1_j)$ for every $1\leq j\leq m$, where $y^0_j = x^0_j\oplus H(j,\bm{q}_j)$, $y^1_j = x^1_j\oplus H(j,\bm{q}_j\oplus \bm{s})$ and $\bm{q}_j$ is the $j$-th row of the matrix $Q = [ \bm{q}^1 | ...| \bm{q}^\kappa]$. Note that, in practice, it is required to transpose $Q$ to access its $j$-th row.
+        \item Bob computes $x^{r_j}_j = y^{r_j}_j \oplus H(j, \bm{t}_j)$.
     \end{enumerate} 
     
 				\textbf{Alice's output:} $\bot$.
@@ -307,7 +307,7 @@ Again, to compare OT extension protocols with $\Pi^{\textbf{BBCS}}_{\textbf{O}}$
     \label{fig:ALSZ13Protocol}
 \end{figure}
 
-Let us consider the OT extension protocol proposed in \cite{ALSZ13} (ALSZ13) and shown in Figure~\ref{fig:ALSZ13Protocol}. At the time of writing, it reports the fastest implementation: 10 million OT in 2.68 seconds. This protocol is originally divided into two phases: initial OT phase and OT extension phase. Note that these two phases correspond exactly to our division of precomputation and transfer phases. Thus, for comparative purposes, we are only interested in the second phase.
+Let us consider the OT extension protocol (ALSZ13) proposed in \cite{ALSZ13}. It is shown in Figure~\ref{fig:ALSZ13Protocol}. At the time of writing, it reports the fastest implementation: 10 million OT in 2.68 seconds. This protocol is originally divided into two phases: initial OT phase and OT extension phase. Note that these two phases correspond exactly to our division of precomputation and transfer phases. Thus, for comparative purposes, we are only interested in the second phase.
 
 In Tables~\ref{table:CvsQ_OT_comparison_computation} and~\ref{table:CvsQ_OT_comparison_communication}, we show the computational and communication complexity of both protocols, respectively. In Table~\ref{table:CvsQ_OT_comparison_computation}, PRG stands for pseudorandom generator, $\kappa$ represents the number of base OTs executed in the OT extension precomputation phase, $m$ is the number of final OTs and $l$ is the length of the OT strings. We consider that $l \sim \kappa$ have the same order of magnitude, meaning they represent the same cost of bits. This is so, because $\kappa = 128$ in \cite{ALSZ13} and the key length used in the garbled circuits are $l = 128, 192$ or $256$. Now, we justify the analysis presented in Tables~\ref{table:CvsQ_OT_comparison_computation} and~\ref{table:CvsQ_OT_comparison_communication}. 
 
@@ -352,9 +352,9 @@ We have that the communication complexity is exactly the same in both protocols:
 Firstly, we can see that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is asymptotically more efficient than ALSZ13 OT extension transfer phase. The computational complexity of OT extension is not linear in the number of OT executions, $\mathcal{O}(m\log m)$, whereas it is linear in the case of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, $\mathcal{O}(m)$. Now, let us compare the binary operations between each protocol. Denote by $B_{\text{op}}^\text{ALSZ13}$ and $B_{\text{op}}^\text{BBCS}$ the number of binary operations executed by ALSZ13 and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, respectively. As both protocols execute $3m$ hash functions,we do not take into account their execution. Also, assuming that $\kappa \sim l$, $B_{\text{op}}^\text{ALSZ13}$ is roughly given by,
 \begin{eqnarray*}
     B_{\text{op}}^\text{ALSZ13} &=& 3\kappa + 3m\kappa + 3 m l + m\kappa + m\kappa + m \log m \\
-    &=& 8 m \kappa + 3 \kappa + m\log m \\
+    &=& 8 m \kappa + 3 \kappa + m\log m 
 \end{eqnarray*}
-and $B_{\text{op}}^\text{BBCS} = 8 m \kappa$. Here we simplify and assume that $3\kappa$ PRGs executions consume only $3\kappa$ bit operations. Therefore, ALSZ13 has more $B_{\text{op}}^\text{ALSZ13} - B_{\text{op}}^\text{BBCS}  \geq m\log m $ binary operations than the transfer phase of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol. 
+and $B_{\text{op}}^\text{BBCS} = 8 m \kappa$. Here, we simplify and assume that $3\kappa$ PRGs executions consume only $3\kappa$ bit operations. Therefore, ALSZ13 has more $B_{\text{op}}^\text{ALSZ13} - B_{\text{op}}^\text{BBCS}  \geq m\log m $ binary operations than the transfer phase of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol. 
 
 %Firstly, we can see that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is asymptotically more efficient than ALSZ13 OT extension transfer phase. The computational complexity of OT extension is not linear in the number of OT executions, $\mathcal{O}(m\log m)$, whereas it is linear in the case of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, $\mathcal{O}(m)$. Thus, for a bounded value $l$, $m\log m > ml$ asymptotically. However, in practice, for $l \sim 128$, it would take around $m>10^{50}$ Oblivious Transfers to actually have $m\log m > ml$. Secondly, when comparing $ml$ bit operations with $3m$ SHA$-1$ computations, we conclude that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ uses less bit operations. Each execution of SHA$-1$ \cite{NISTSHA} requires 80 rounds of several bit operations. If we underestimate the cost of each round and we assume it only requires two bit operations, we get that ALSZ13 OT extension protocol requires at least $3 \times 80\times 2 m = 480 m > ml, \, \forall m$. 
 
@@ -369,37 +369,23 @@ and $B_{\text{op}}^\text{BBCS} = 8 m \kappa$. Here we simplify and assume that $
 
 From this, we conclude that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase competes with the ALSZ13 corresponding phase and has the potential to be more efficient. It is important to stress that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ efficiency performance of the transfer phase comes along with a drastic increase in the security of the protocol. While ALSZ13 protocol relies on the computational assumptions of the base OT, $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol is proved to be secure against quantum computers. Moreover, while ALSZ13 is a semi-honest protocol (assumes well-behaved parties that follow the protocol), $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol is secure against any corrupted party. Indeed, in order to get a fair comparison, we should consider OT extension protocols that are secure against malicious parties. The work developed in \cite{IKNP03} presented the first protocol in the malicious scenario, which was latter optimized by KOS15 \cite{KOS15} and ALSZ15 \cite{ALSZ15}. Both optimizations carry out one run of the semi-honest OT extension presented in ALSZ13 plus some consistency checks. The protocol presented in \cite{KOS15} adds to ALSZ13 a \textit{check correlation} phase after the transfer phase and the protocol presented in \cite{ALSZ15} adds a \textit{consistency check} phase during the transfer phase. This means that both malicious protocols' transfer phases have greater computational and communication complexity when compared with ALSZ13. Therefore, we can easily deduce that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase has less computational and communication complexity than its classical equivalents with respect to the adversary model used. Next, we compare the KOS15 protocol \cite{KOS15} and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol.
 
-\subsection{Oblivious Transfer comparison}
 
-To implement practical SMC protocols, we need to be able to execute OT with a rate of the order of millions of OT per second. To reach this rate, classical solutions make use of extension algorithms: generate a small number $\kappa$ of base OT (precomputation phase as in HQOT) and extend them to $m$ ($\kappa << m$) real OT through symmetric cryptography \cite{IKNP03} (oblivious transfer phase). Currently, the most efficient OT extension protocols developed in the semi-honest model is reported by \cite{ALSZ13} (ALSZ13) and in the malicious model it is reported by \cite{K15} (KOS15). In \cite{Santos2021}, the authors showed that the overall complexity in the transfer phase of ALSZ13 is bigger than that of HQOT. Furthermore, they argued that KOS15 complexity is also bigger than HQOT but do not perform a complexity comparison between them. Here, we analyse the complexity of the KOS15 protocol which is implemented in the Libscapi library and we compare it with HQOT.
-
-\subsubsection{KOS15 and HQOT comparison}\label{Mal-Ext-OT_comp}
+\subsubsection{KOS15 comparison}\label{Mal-Ext-OT_comp}
 
 KOS15 protocol is very similar to ALSZ13 with the addition of a \textit{check correlation} phase. This phase ensures that the receiver is well behaved and does not cheat. The KOS15 protocol that generates $m$ $l$-bit string OT out of $\kappa$ base OT with computational security given by $\kappa$ and statistical security given by $w$ is shown in Figure~\ref{fig:K15Protocol}. Note that in Figure~\ref{fig:K15Protocol} we join all the subprotocols presented in the original paper: $\prod^{\kappa, m'}_{\textsc{COTe}}$, $\prod^{\kappa, m}_{\textsc{ROT}}$ and $\prod^{\kappa, m}_{\textsc{DeROT}}$. Also, they identify $\mathbb{Z}^\kappa_2$ with the finite field $\mathbb{Z}_{2^\kappa}$ and use $``\cdot"$ for multiplication in $\mathbb{Z}_{2^\kappa}$. For example, the element $\boldsymbol{t}_j$ in $\sum_{j=1}^{m'} \boldsymbol{t}_j \cdot \chi_j$ (Figure~\ref{fig:K15Protocol}, step $10$) should be considered in $\mathbb{Z}_{2^\kappa}$.
+\begin{figure}[h!]
+    \centering
+        \begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+                        
+			\centerline{KOS15 OT extensions protocol \citep{KOS15}}
+            
+			\ 
 
-Similarly to HQOT, the KOS15 starts with a precomputation phase that can be carried out before the actual computation of the OT protocols. However, in the HQOT, the precomputation phase is based on quantum technologies while the transfer phase is solely based on classical methods. Since it is not clear how to compare quantum and classical protocols, we only focus our comparison on the transfer phase of both protocols. 
-
-Note that in the original KOS15 paper \cite{K15} the computation of pseudorandom generator $G$ is carried out in the OT extension phase. However, these $3\kappa$ $G$ computations can be executed during the precomputation phase because they do not depend on the input elements. As mentioned before, the additional steps that KOS15 added to the ALSZ13 protocol are steps $9-11$ (check correlation phase). Here, both parties start by calling a random oracle functionality $\mathcal{F}_{\text{Rand}}(\mathbb{F}^{m'}_{2^\kappa})$ that provides them with equal random values. The receiver has to compute twice $m'$ $\kappa$-bit sums, $m'$ $\kappa$-bit multiplication and sends $2\kappa$ bit ($x$ and $t$) to the sender. Finally, the sender has to compute $m'$ $\kappa$-bit sums and $m'$ $\kappa$-bit multiplication. We consider karatsuba method for multiplication with complexity $O(\kappa^{1.585})$ and schoolbook addition with complexity $O(\kappa)$. Therefore, we consider that the sum of two $\kappa$ takes $\kappa$ bit operations and the multiplication takes $\kappa^{1.585}$.
-
-%Parameters of OTe:
-
-%Dizer que juntamos todas as funcionalidades descritas no paper: dizer quais são (sem explicar)
-
-%Explicar a associaçao de $F^k_2$ e $F_2^k$ e referir operações.
-
-\begin{figure}[!t]
-\centering
-\framebox[\linewidth][l]{%
-    \parbox{0.95\linewidth}{%
-    \begin{center}
-        \textbf{General OT extensions protocol \cite{K15}}
-    \end{center}
+    \textbf{Alice's input:} $m$ pairs $(x^0_j, x^1_j),\, \forall 1\leq j\leq m$ of $l$-bit strings.
     
-    \textbf{Sender input:} $m$ pairs $(x^0_j, x^1_j),\, \forall 1\leq j\leq m$ of $l$-bit strings.
-    
-    \textbf{Receiver input:} $m$ selection bits $\boldsymbol{r} = (r_1, ..., r_m)$.
-    
-    Let $m' = m + (\kappa + w)$.
+    \textbf{Bob's input:} $m$ selection bits $\boldsymbol{r} = (r_1, ..., r_m)$.
     
     \
     
@@ -416,7 +402,7 @@ Note that in the original KOS15 paper \cite{K15} the computation of pseudorandom
     \textit{\hspace{0.25cm} Extend}
     \begin{enumerate}
     \setcounter{enumi}{5}
-        \item Bob generates random elements $r_j$, for $r\in [m+1, m']$ and resize $\boldsymbol{r} = (r_1, ..., r_m, r_{m+1}, ..., r_{m'})$.
+        \item Bob generates random elements $r_j$, for $r\in [m+1, m']$ and resize $\boldsymbol{r} = (r_1, ..., r_m, r_{m+1}, ..., r_{m'})$, where $m' = m + (\kappa + w)$.
         \item Bob computes $\boldsymbol{u}^i = \boldsymbol{T}^i \oplus \boldsymbol{r}$ and sends $\boldsymbol{u}^i$ to Alice for every $1\leq i\leq \kappa$.
         \item Alice computes $\boldsymbol{q}^i = (s_i \times \boldsymbol{u}^i) \oplus \boldsymbol{g}^{s_i}_i$ for every $1\leq i\leq \kappa$.
     \end{enumerate}
@@ -435,21 +421,34 @@ Note that in the original KOS15 paper \cite{K15} the computation of pseudorandom
         \item Bob computes $x^{r_j}_j = y^{r_j}_j \oplus H(j, \boldsymbol{t}_j)$.
     \end{enumerate} 
     
-    \textbf{Sender output:} $\bot$.
+    \textbf{Alice's output:} $\bot$.
     
-    \textbf{Receiver output:} $(x^{r_1}_1, ..., x^{r_m}_m)$.
-    }%
-}
-\caption{Precomputation and transfer phases of OT extensions protocol presented in \cite{K15}.}
-\label{fig:K15Protocol}
+    \textbf{Bob's output:} $(x^{r_1}_1, ..., x^{r_m}_m)$.
+
+        
+        \end{tcolorbox}
+    \caption{Precomputation and transfer phases of OT extensions protocol presented in \cite{KOS15}.}
+    \label{fig:K15Protocol}
 \end{figure}
+
+Similarly to $\Pi^{\textbf{BBCS}}_{\textbf{O}}$, the KOS15 starts with a precomputation phase that can be carried out before the actual computation of the OT protocols. However, in the HQOT, the precomputation phase is based on quantum technologies while the transfer phase is solely based on classical methods. Since it is not clear how to compare quantum and classical protocols, we only focus our comparison on the transfer phase of both protocols. 
+
+Note that in the original KOS15 paper \cite{K15} the computation of pseudorandom generator $G$ is carried out in the OT extension phase. However, these $3\kappa$ $G$ computations can be executed during the precomputation phase because they do not depend on the input elements. As mentioned before, the additional steps that KOS15 added to the ALSZ13 protocol are steps $9-11$ (check correlation phase). Here, both parties start by calling a random oracle functionality $\mathcal{F}_{\text{Rand}}(\mathbb{F}^{m'}_{2^\kappa})$ that provides them with equal random values. The receiver has to compute twice $m'$ $\kappa$-bit sums, $m'$ $\kappa$-bit multiplication and sends $2\kappa$ bit ($x$ and $t$) to the sender. Finally, the sender has to compute $m'$ $\kappa$-bit sums and $m'$ $\kappa$-bit multiplication. We consider karatsuba method for multiplication with complexity $O(\kappa^{1.585})$ and schoolbook addition with complexity $O(\kappa)$. Therefore, we consider that the sum of two $\kappa$ takes $\kappa$ bit operations and the multiplication takes $\kappa^{1.585}$.
+
+%Parameters of OTe:
+
+%Dizer que juntamos todas as funcionalidades descritas no paper: dizer quais são (sem explicar)
+
+%Explicar a associaçao de $F^k_2$ e $F_2^k$ e referir operações.
+
+
 
 %Analisar a questão do F\_rand
 
 %Analisar por palavras. Justificar com paper do MIT. Apresentar tabela comparativa
 
 
-\begin{table}[t]
+\begin{table}[h!]
 \centering
 \begin{tabular}{lcc}
 \toprule
