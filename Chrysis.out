@@ -41,9 +41,9 @@
 \BOOKMARK [1][-]{section.6.1}{6.1 Phylogenetic trees}{chapter.6}% 41
 \BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Evolutionary distances}{section.6.1}% 42
 \BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Distance-based algorithms}{section.6.1}% 43
-\BOOKMARK [1][-]{section.6.2}{6.2 Security Definition}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.2}{6.2 Security definition}{chapter.6}% 44
 \BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 Distance matrix functionality}{section.6.2}% 45
-\BOOKMARK [1][-]{section.6.3}{6.3 Quantum Tools}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.3}{6.3 Quantum tools}{chapter.6}% 46
 \BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Quantum oblivious key distribution}{section.6.3}% 47
 \BOOKMARK [2][-]{subsection.6.3.2}{6.3.2 Quantum random number generator}{section.6.3}% 48
 \BOOKMARK [2][-]{subsection.6.3.3}{6.3.3 Quantum key distribution}{section.6.3}% 49
@@ -55,4 +55,20 @@
 \BOOKMARK [2][-]{subsection.6.5.1}{6.5.1 Functionality definition}{section.6.5}% 55
 \BOOKMARK [2][-]{subsection.6.5.2}{6.5.2 Private protocol}{section.6.5}% 56
 \BOOKMARK [2][-]{subsection.6.5.3}{6.5.3 Quantum private protocol}{section.6.5}% 57
-\BOOKMARK [0][-]{chapter*.52}{Bibliography}{}% 58
+\BOOKMARK [1][-]{section.6.6}{6.6 Quantum technologies integration}{chapter.6}% 58
+\BOOKMARK [2][-]{subsection.6.6.1}{6.6.1 Quantum oblivious transfer}{section.6.6}% 59
+\BOOKMARK [2][-]{subsection.6.6.2}{6.6.2 Quantum random number generation}{section.6.6}% 60
+\BOOKMARK [2][-]{subsection.6.6.3}{6.6.3 Quantum key distribution}{section.6.6}% 61
+\BOOKMARK [2][-]{subsection.6.6.4}{6.6.4 Quantum network integration}{section.6.6}% 62
+\BOOKMARK [1][-]{section.6.7}{6.7 System security}{chapter.6}% 63
+\BOOKMARK [2][-]{subsection.6.7.1}{6.7.1 Private computation of distances}{section.6.7}% 64
+\BOOKMARK [2][-]{subsection.6.7.2}{6.7.2 Private computation of phylogenetic trees}{section.6.7}% 65
+\BOOKMARK [1][-]{section.6.8}{6.8 Complexity analysis}{chapter.6}% 66
+\BOOKMARK [2][-]{subsection.6.8.1}{6.8.1 Protocol complexity analysis}{section.6.8}% 67
+\BOOKMARK [2][-]{subsection.6.8.2}{6.8.2 Use case}{section.6.8}% 68
+\BOOKMARK [1][-]{section.6.9}{6.9 Performance Evaluation}{chapter.6}% 69
+\BOOKMARK [2][-]{subsection.6.9.1}{6.9.1 Setup}{section.6.9}% 70
+\BOOKMARK [2][-]{subsection.6.9.2}{6.9.2 Circuit generation}{section.6.9}% 71
+\BOOKMARK [2][-]{subsection.6.9.3}{6.9.3 System execution time}{section.6.9}% 72
+\BOOKMARK [1][-]{section.6.10}{6.10 Conclusion}{chapter.6}% 73
+\BOOKMARK [0][-]{chapter*.70}{Bibliography}{}% 74

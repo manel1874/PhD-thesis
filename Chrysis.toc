@@ -1,9 +1,9 @@
 \contentsline {section}{Abstract}{iii}{chapter*.1}%
 \contentsline {section}{Resumo}{v}{chapter*.2}%
 \contentsline {section}{Acknowledgements}{vii}{chapter*.3}%
-\contentsline {section}{List of Figures}{xiii}{section*.6}%
-\contentsline {section}{List of Tables}{xv}{section*.8}%
-\contentsline {section}{List of Abbreviations}{xvii}{section*.10}%
+\contentsline {section}{List of Figures}{xv}{section*.6}%
+\contentsline {section}{List of Tables}{xvii}{section*.8}%
+\contentsline {section}{List of Abbreviations}{xix}{section*.10}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Technical overview}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}%
@@ -56,9 +56,9 @@
 \contentsline {subsubsection}{UPGMA}{54}{section*.46}%
 \contentsline {subsubsection}{Neighbour-Joining}{55}{section*.47}%
 \contentsline {subsubsection}{Fitch-Margoliash}{56}{section*.48}%
-\contentsline {section}{\numberline {6.2}Security Definition}{57}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Security definition}{57}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Distance matrix functionality}{59}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Quantum Tools}{59}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Quantum tools}{59}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Quantum oblivious key distribution}{60}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Quantum random number generator}{60}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Quantum key distribution}{62}{subsection.6.3.3}%
@@ -70,4 +70,33 @@
 \contentsline {subsection}{\numberline {6.5.1}Functionality definition}{64}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Private protocol}{65}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Quantum private protocol}{66}{subsection.6.5.3}%
-\contentsline {chapter}{Bibliography}{84}{chapter*.52}%
+\contentsline {section}{\numberline {6.6}Quantum technologies integration}{67}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Quantum oblivious transfer}{67}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Quantum random number generation}{68}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Quantum key distribution}{68}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Quantum network integration}{69}{subsection.6.6.4}%
+\contentsline {subsubsection}{Technological equipment}{69}{section*.53}%
+\contentsline {subsubsection}{Network topology}{69}{section*.54}%
+\contentsline {section}{\numberline {6.7}System security}{70}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Private computation of distances}{70}{subsection.6.7.1}%
+\contentsline {subsubsection}{Hamming distance}{70}{section*.55}%
+\contentsline {subsubsection}{Jukes-Cantor}{72}{section*.57}%
+\contentsline {subsubsection}{Kimura}{72}{section*.58}%
+\contentsline {subsubsection}{F84 and LogDet}{73}{section*.59}%
+\contentsline {subsection}{\numberline {6.7.2}Private computation of phylogenetic trees}{74}{subsection.6.7.2}%
+\contentsline {section}{\numberline {6.8}Complexity analysis}{75}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Protocol complexity analysis}{75}{subsection.6.8.1}%
+\contentsline {subsubsection}{Yao GC executions}{75}{section*.60}%
+\contentsline {subsubsection}{OT executions}{76}{section*.61}%
+\contentsline {subsubsection}{Oblivious keys}{76}{section*.62}%
+\contentsline {subsubsection}{QRNG}{77}{section*.63}%
+\contentsline {subsubsection}{Internal computation}{77}{section*.64}%
+\contentsline {subsubsection}{Encryption keys}{77}{section*.65}%
+\contentsline {subsection}{\numberline {6.8.2}Use case}{78}{subsection.6.8.2}%
+\contentsline {section}{\numberline {6.9}Performance Evaluation}{79}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Setup}{79}{subsection.6.9.1}%
+\contentsline {subsubsection}{Sequences preprocessing}{79}{section*.66}%
+\contentsline {subsection}{\numberline {6.9.2}Circuit generation}{80}{subsection.6.9.2}%
+\contentsline {subsection}{\numberline {6.9.3}System execution time}{80}{subsection.6.9.3}%
+\contentsline {section}{\numberline {6.10}Conclusion}{82}{section.6.10}%
+\contentsline {chapter}{Bibliography}{100}{chapter*.70}%
