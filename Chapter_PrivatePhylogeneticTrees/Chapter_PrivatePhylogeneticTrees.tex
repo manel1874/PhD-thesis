@@ -440,11 +440,11 @@ Next, we present the open-source tools used to implement the system presented in
 
 \subsection{CBMC-GC}
 
-The CBMC-GC compiler \cite{F14} is used in step $1)$ of Yao GC protocol to generate the boolean circuit representation of the desired function. It translates C-like code into boolean circuits based on a model checking tool called CBMC and it optimizes circuits for size and depth \cite{Bscher2017, Buescher2016}. HyCC \cite{Bscher2018} is also a potential candidate for this step as it builds upon CBMC-GC. However, it aims to build circuits for hybrid MPC protocols in which our system is not based.
+The CBMC-GC compiler \cite{F14} is used in step $1)$ of Yao protocol to generate the boolean circuit representation of the desired function. It translates C-like code into boolean circuits based on a model checking tool called CBMC and it optimizes circuits for size and depth \cite{Bscher2017, Buescher2016}. HyCC \cite{Bscher2018} is also a potential candidate for this step as it builds upon CBMC-GC. However, it aims to build circuits for hybrid MPC protocols in which our system is not based.
 
 \subsection{Libscapi}
 
-The Libscapi library \cite{Libscapi} implements several important cryptographic primitives for two-party and multi-party protocols. It is extensively used to implement steps $2-5$ of the Yao GC protocol in the repository MPC-Benchmark \cite{mpc_benchmark}. This implementation has integrated one of the most efficient OT extension protocols \cite{K15} along with the base OTs proposed by Chou and Orlandi \cite{C15}.
+The Libscapi library \cite{Libscapi} implements several important cryptographic primitives for two-party and multi-party protocols. It is extensively used to implement steps $2-5$ of the Yao protocol in the repository MPC-Benchmark \cite{mpc_benchmark}. This implementation has integrated one of the most efficient OT extension protocols \cite{K15} along with the base OTs proposed by Chou and Orlandi \cite{C15}.
 
 \subsection{PHYLIP}
 
@@ -495,7 +495,7 @@ As already mentioned in section \ref{phyloTree}, all distance-based methods are 
     
     Therefore, if we consider the equivalence relation, $\sim$, given by
     \begin{equation*}
-    (\text{subtree}_1:l_1,\, \text{subtree}_2:l_2)  \sim (\text{subtree}_2:l_2,\, \text{subtree}_1:l_1)
+    (\text{subtree}_1:l_1,\, \text{subtree}_2:l_2)  \sim (\text{subtree}_2:l_2,\, \text{subtree}_1:l_1),
     \end{equation*}
 	we have that the quotient set of the trees by $\sim$ satisfy the uniqueness property from an evolutionary point of view.
 
@@ -506,7 +506,7 @@ For simplicity, denote by $A_d^a$ the private protocol that implements sequentia
 
 \subsection{Private protocol}
 
-During the distance matrix computation phase ($\mathtt{DM}$) of the private $A_d^a$, each party has to compute the distance between his sequences and the other parties' sequences privately, i.e. without revealing his sequences to the other participating parties. Since this corresponds to several instances of a two-party secure computation, we make use of the Yao GC protocol described in \ref{yaoProtocol}. This means that each party has to generate the boolean circuit representation of the elected distance $d$, which is accomplished by the CBMC-GC software tool before the beginning of the protocol. In section \ref{privDistances}, we analyse how to generate these circuits.
+During the distance matrix computation phase ($\mathtt{DM}$) of the private $A_d^a$, each party has to compute the distance between his sequences and the other parties' sequences privately, i.e. without revealing his sequences to the other participating parties. Since this corresponds to several instances of a two-party secure computation, we make use of the Yao protocol described in \ref{yaoProtocol}. This means that each party has to generate the boolean circuit representation of the elected distance $d$, which is accomplished by the CBMC-GC software tool before the beginning of the protocol. In section \ref{privDistances}, we analyse how to generate these circuits.
 
 Now, since the Yao protocol is executed only between two different parties $P^i$ and $P^j$ for $i, j \in[n]$, the other participating parties $P^t$, $t\in[n]\setminus \{i,j\}$, do not have access to the distances computed between theses two parties' sequences. For this reason, $P^t$ has to receive the result of the Yao protocol execution from both $P^j$ and $P^i$. After this, each party outputs the distance matrix in the format required to be used as input in the PHYLIP programs \texttt{fitch}, \texttt{kitsch} and \texttt{neighbor}. 
 
@@ -531,7 +531,7 @@ Consider the case where $P_t$ has to compute the distance matrix entry correspon
 
 \begin{enumerate}
     \item If $i=j=t$ (i.e. both sequences are owned by $P_t$), $d_{(i,l),(j,k)}$ is computed internally by $P_t$ (blue arrow in Figure~\ref{fig:network});
-    \item If $i=t$ and $j\neq t$ (i.e. one of the sequences is owned by $P_t$), $d_{(i,l),(j,k)}$ is computed privately with Yao GC protocol assisted with QOKD system (red arrow in Figure \ref{fig:network});
+    \item If $i=t$ and $j\neq t$ (i.e. one of the sequences is owned by $P_t$), $d_{(i,l),(j,k)}$ is computed privately with Yao protocol assisted with QOKD system (red arrow in Figure \ref{fig:network});
     \item If $i\neq t$ and $j\neq t$ (i.e. none of the sequences is owned by $P_t$), both parties $P_i$ and $P_j$ (or just party $P_i$ in case $i=j$) must send to $P_t$ the distance $d_{(i,j),(k,l)}$ encrypted with the symmetric key generated through the QKD system (black arrow in Figure \ref{fig:network}).
 \end{enumerate}
 
@@ -598,21 +598,20 @@ We are interested in the boolean representation of the Hamming distance and, as 
 We use an adapted divide-and-conquer technique for the computation of $\text{popcount}(z)$ \cite{W12}. Originally, this divide-and-conquer technique starts by dividing the sequence into 2-bit blocks and then counts the number of $1$'s inside each 2-bit block. After that, it allocates the result of each block in a new 2-bit block. Then, we can sum the values inside these 2-bit blocks iteratively. %\ref{https://arxiv.org/pdf/1611.07612.pdf}. 
 
 We follow the approach described above but we have to tailor it for the computation of the Hamming distance between two four-based sequences $(A, C, G, T)$. Since we are using a boolean circuit representation, the nucleotide sequences must be represented in binary. So, by convention, we use the following 2-bit encoding: $A = 00$, $C=01$, $G=10$ and $T=11$. If we follow directly the approach described above, we would have that the Hamming distance between the single-valued sequences $``A"$ and $``C"$ is smaller than the single-valued sequence between $``A"$ and $``T"$:
-
 \begin{eqnarray*}
 h(A, C) &=& \text{popcount}(00 \oplus 01)\\
-&=& \text{popcount}(01) = 1
+&=& \text{popcount}(01) = 1,
 \end{eqnarray*}
 \begin{eqnarray*}
 h(A, T) &=& \text{popcount}(00 \oplus 11)\\
-&=& \text{popcount}(11) = 2
+&=& \text{popcount}(11) = 2.
 \end{eqnarray*}
 
 This issue comes from the fact that we are counting the number of $1$'s inside every 2-bit blocks. Instead, we are just interested in knowing if there is at least one element 1 inside each 2-bit block because it indicates that the bases at that site are different. Therefore, before counting the number of 1's in the \texttt{XOR}ed sequence, we apply an \texttt{OR} operation to the bits inside every 2-bit blocks. We call this operation $\text{popcount}^t(z)$. For simplicity, hereafter we denote by $h_{xy}$ the tailored Hamming distance between sequences $x$ and $y$. Now, we have that the tailored Hamming distance between $``A"$ and $``T"$ gives the desired result:
 \begin{eqnarray*}
 h(A, T) &=& \text{popcount}^t(00 \oplus 11)\\
 &=& \text{popcount}^t(11) \\
-&=& \text{popcount}\big(\texttt{OR}(1,1)\big) = 1
+&=& \text{popcount}\big(\texttt{OR}(1,1)\big) = 1.
 \end{eqnarray*} In Figure~\ref{fig:hamming_divide}, we show an example on how to compute the Hamming distance between two-valued sequences $``AG"$ and $``GC"$.
 
 \begin{figure}[h]
@@ -625,8 +624,7 @@ h(A, T) &=& \text{popcount}^t(00 \oplus 11)\\
 
 \subsubsection{Jukes-Cantor} 
 As described in section \ref{JK_model}, the Jukes-Cantor distance between two sequences is given by:
-
-$$d_{xy} = -\frac{3}{4} \ln \Big(1- \frac{4}{3}\frac{h_{xy}}{N}\Big)$$
+$$d_{xy} = -\frac{3}{4} \ln \Big(1- \frac{4}{3}\frac{h_{xy}}{N}\Big),$$
 where $h_{xy}$ is the hamming distance between sequence $x$ and sequence $y$.
 
 Now, note that the function $f(x) = -\frac{3}{4} \ln \Big(1- \frac{4}{3}\frac{x}{N}\Big)$ is one-to-one. This means that, from a privacy point of view, $f(x)$ carries the same amount of information than $x$. Therefore, we could simply proceed as follows:
@@ -641,14 +639,13 @@ This way, we just have to generate the boolean circuit for $h_{xy}$ rather than 
 
 \subsubsection{Kimura}
 In section~\ref{K2P_model}, we saw that the Kimura 2-parameter model leads to the following distance:
-
-$$d_{xy} = -\frac{1}{2}\ln\bigg( \big(1-2P-Q\big) \sqrt{1-2Q} \bigg)$$
+$$d_{xy} = -\frac{1}{2}\ln\bigg( \big(1-2P-Q\big) \sqrt{1-2Q} \bigg),$$
 where $P=\frac{n_1}{N}$, $Q=\frac{n_2}{N}$ and $n_1$ and $n_2$ are respectively the number of sites for which two sequences differ from each other with respect to type I ("transition" type) and type II ("transversion" type) substitutions.
 
 Similar to the case of Jukes-Cantor metric, note that $h(x) = -\frac{1}{2}\ln(\sqrt{\frac{x}{N^3}})$ is one-to-one and only defined for $x>0$. Thus, we can proceed as follows:
 
 \begin{enumerate}
-    \item Privately compute the expression $c = (N-2n_1-n_2)^2(N-2n_2)$ using the tailored Hamming distance method described above and the Yao GC protocol assisted with quantum oblivious keys;
+    \item Privately compute the expression $c = (N-2n_1-n_2)^2(N-2n_2)$ using the tailored Hamming distance method described above and the Yao protocol assisted with quantum oblivious keys;
     
     \item Internally computes $d_{xy} = h(c)$ (no need of quantum SMC).
 \end{enumerate}
@@ -656,36 +653,36 @@ Similar to the case of Jukes-Cantor metric, note that $h(x) = -\frac{1}{2}\ln(\s
 More precisely, the ANSI-C code that privately computes expression $c = (N-2n_1-n_2)^2(N-2n_2)$ proceeds as follows. It uses the function $\text{popcount}_t(z)$ described above to compute the quantities $n_1$ and $n_2$. Observe that a transition type ($A\leftrightarrow G$ or $C\leftrightarrow T$) renders the same XOR value:
 \begin{eqnarray*}
 A \oplus G = 00 \oplus 10 = 10  \\
-T \oplus C = 11 \oplus 01 = 10   
+T \oplus C = 11 \oplus 01 = 10 .  
 \end{eqnarray*}
 
 Therefore, using a four-sized sequence, the quantities $n_1$ and $n_2$ are given by:
 \begin{eqnarray*}
 n_1 &=& 4 - \text{popcount}_t(x\oplus y\oplus 10101010)\\
-n_2 &=& \text{popcount}_t(x\oplus y) - n_1
+n_2 &=& \text{popcount}_t(x\oplus y) - n_1.
 \end{eqnarray*}
 
-%Again, we use the Yao GC protocol assisted with QOK for an expression with basic operations.
+%Again, we use the Yao protocol assisted with QOK for an expression with basic operations.
 
 %Etc. Also comment on the limits. Ex: $32000^3$ needs 45 binary digits to be represented. Therefore the output should be a long int (64 bit) and not just int. Otherwise there will be overflow. 
 
 
 
 \subsubsection{F84 and LogDet}
-Recall from sections \ref{F84_model} and \ref{LD_model} that the F84 model and LogDet metrics are given, respectively, by:
-
+Recall from sections \ref{F84_model} and \ref{LD_model} that the F84 ($F_{xy} $) and LogDet ($L_{xy} $) distances are given, respectively, by:
 \begin{equation}
-    F_{xy} = -2 A\ln\bigg( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \bigg) + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg)
+    F_{xy} = -2 A\ln\bigg( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \bigg) + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg),
 \label{eq:F84_distance}
 \end{equation}
-
 \begin{equation}
-    L_{xy} = -\frac{1}{4}\ln\Bigg( \frac{\det F_{xy}}{\sqrt{\det \prod_x \prod_y}} \Bigg)
+    L_{xy} = -\frac{1}{4}\ln\Bigg( \frac{\det F_{xy}}{\sqrt{\det \prod_x \prod_y}} \Bigg),
 \label{eq:LogDet_distance}
 \end{equation}
 where $A = \frac{\pi_C \pi_T}{\pi_Y} + \frac{\pi_A \pi_G}{\pi_R}$, $B=\pi_C\pi_T + \pi_A\pi_G$ and $C=\pi_R\pi_Y$ for $\pi_Y = \pi_C + \pi_T$ and $\pi_R = \pi_A + \pi_G$, and $P$ and $Q$ are defined as in the Kimura 2-parameter mode above. Also, the divergence matrix $F_{xy}$ is a $4\times 4$ matrix such that the $ij-$th entry gives the proportion of sites in sequence $x$ and $y$ with nucleotide $i$ and $j$, respectively. Also, $\prod_x$ and $\prod_y$ are diagonal matrices where its $i-$th component correspond to the proportion of $i$ nucleotide in the sequence $x$ and $y$, respectively.
 
 As before, we want to split the private computation of both $F_{xy}$ and $L_{xy}$ in two steps. Note that, in this case, there is no clear way to define two bijective functions, $g()$ and $q()$, on some simple parameters, $d$ and $e$, such that $F_{xy} = g(d)$ and $L_{xy} = p(e)$. By simple parameters, we mean parameters that do not depend on complex operations such as logarithm or square root. Instead, one can use the CORDIC algorithm \cite{V59, Songhori2019} for square-roots and logarithm functions and translate an approximation of both $F_{xy}$ and $L_{xy}$ into boolean circuits.
+
+
 
 \subsection{Private computation of phylogenetic trees}
 
@@ -719,12 +716,12 @@ In a real execution, the corrupted parties will only receive the distances compu
 \end{proof}
 
 \begin{lemma}\label{secondlemma}
-Yao Garbled Circuits protocol with the OT primitive instantiated by HQOT protocol \ref{QOT} privately computes $\mathtt{D}_d$.
+Yao protocol with the OT primitive instantiated by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol (Figure~\ref{fig:BBCS_Transfer}) privately computes $\mathtt{D}_d$.
 \end{lemma}
 
 \begin{proof}
 
-In \cite{FS09} it was developed a framework that allows quantum protocols to be composed in a classical environment. They also mention that a general secure function evaluation remains secure when instantiating the OT primitive by a secure quantum version. In \cite{Damgrd2009}, it was proved that HQOT is secure according to the security definition given in \cite{FS09}. Therefore, we can compose the HQOT protocol with a Yao Garbled Circuit \cite{Lindell2008} while preserving the overall security. 
+In \cite{FS09} it was developed a framework that allows quantum protocols to be composed in a classical environment. They also mention that a general secure function evaluation remains secure when instantiating the OT primitive by a secure quantum version. In \cite{Damgrd2009}, it was proved that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol is secure according to the security definition given in \cite{FS09}. Therefore, we can compose the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol with a Yao protocol \cite{Lindell2008} while preserving the overall security. 
 
 \end{proof}
 
@@ -739,59 +736,53 @@ We have proved that our system is well designed and secure against quantum compu
 
 %\hl{ explicar melhor aqui que vamos primeiro fazer uma comparação da análise de complexidade entre os dois casos e depois vamos avaliar experimentalmente na secção seguinte.}
 
-In this section, we start by analysing the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, ..., P^n$, with $M_1, ..., M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotides, $s$. Then, we extend the analysis carried out in \cite{Santos2021} and compare the computation and communication complexity of the fastest reported malicious oblivious extension protocol used by Libscapi \cite{K15} and the optimized version of HQOT.
+In this section, we start by analysing the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, \ldots, P^n$, with $M_1, \ldots, M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotides, $s$.
 
-% In this section we start by comparing the computation and communication complexity of the fastest reported malicious oblivious extension protocol implemented in Libscapi library \cite{K15} and the optimized version of HQOT presented in \cite{Santos2021}. Then, we analyse the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, ..., P^n$, with $M_1, ..., M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotide, $s$. 
+% In this section we start by comparing the computation and communication complexity of the fastest reported malicious oblivious extension protocol implemented in Libscapi library \cite{K15} and the optimized version of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ presented in \cite{Santos2021}. Then, we analyse the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, ..., P^n$, with $M_1, ..., M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotide, $s$. 
 
 \subsection{Protocol complexity analysis}\label{compAnalysis}
 
 Now, let us analyse the complexity of the protocol presented in section \ref{privProtocol}. 
 
-\subsubsection{Yao GC executions}
-Regarding the number of Yao GC protocol executions, we have that each party $P^j$ owning $M_j$ sequences has to perform $N_{\text{Yao}}^j = M_j\sum_{i\neq j} M_i$ secure distance computations. So, the total number of Yao GC executions is given by
-
-$$N_{\text{Yao}} = \sum_j N_{\text{Yao}}^j = \sum_{j, i\neq j} M_j M_i$$
-If we assume the number of sequences per party to be the same, i.e. $M_j = M\, \forall j\in[n]$, then we can simplify the expression above and conclude that $N_{\text{Yao}} = M^2 n(n-1)$. This means that the number of Yao GC executions is quadratic in the number of sequences per party ($O(n^2)$) and also in the number of parties ($O(M^2)$). 
+\subsubsection{Yao protocol executions}
+Regarding the number of Yao protocol executions, we have that each party $P^j$ owning $M_j$ sequences has to perform $N_{\text{Yao}}^j = M_j\sum_{i\neq j} M_i$ secure distance computations. So, the total number of Yao protocol executions is given by
+$$N_{\text{Yao}} = \sum_j N_{\text{Yao}}^j = \sum_{j, i\neq j} M_j M_i.$$
+If we assume the number of sequences per party to be the same, i.e. $M_j = M\, \forall j\in[n]$, then we can simplify the expression above and conclude that $N_{\text{Yao}} = M^2 n(n-1)$. This means that the number of Yao protocol executions is quadratic in the number of sequences per party ($\mathcal{O}(n^2)$) and also in the number of parties ($\mathcal{O}(M^2)$). 
 
 \subsubsection{OT executions}
-From $N_{\text{Yao}}$ we can deduce the number of OT executions. In the Yao GC protocol, we need to execute one OT for each of the evaluator's input wires. For a sequence with $s$ nucleotides and using a two-bit representation of each nucleotide, the boolean circuit that computes the distance between two sequences will have $2s$ input wires for each party input. Therefore, each party executes the following number of OT executions ($\forall j$):
-
+From $N_{\text{Yao}}$ we can deduce the number of OT executions. In the Yao protocol, we need to execute one OT for each of the evaluator's input wires. For a sequence with $s$ nucleotides and using a two-bit representation of each nucleotide, the boolean circuit that computes the distance between two sequences will have $2s$ input wires for each party input. Therefore, each party executes the following number of OT executions ($\forall j$):
 \begin{eqnarray*}
 N_{\text{OT}}^j &=& N^j_\text{Yao} \cdot 2s \\
-&=& 2sM^2(n-1)
+&=& 2sM^2(n-1).
 \end{eqnarray*}
 
-It is important to note that $N_{\text{OT}}^j$ is independent of the size of the boolean circuit used, i.e. it is independent of the distance metric $d$ used in the protocol. This is a consequence of using the Yao GC protocol where the number of OT only depends on the input size. In case we were using GMW \cite{Goldreich87} protocol, the number of OT per party would depend on the size of the circuit.
+It is important to note that $N_{\text{OT}}^j$ is independent of the size of the boolean circuit used, i.e. it is independent of the distance metric $d$ used in the protocol. This is a consequence of using the Yao protocol where the number of OT only depends on the input size. In case we were using GMW \cite{Goldreich87} protocol, the number of OT per party would depend on the size of the circuit.
 
-As mentioned in section \ref{quantumTechIntegQOT}, in case the number of oblivious keys generated is scarce compared to the number of OT required, we can use the HQOT protocol to generate the base OT used in OT extension protocol. In this case, we just have to generate $\kappa$ HQOT protocols per Yao execution: $L^j_\text{bOT} = N^j_\text{Yao} \cdot \kappa = \kappa M^2(n-1)$
+As mentioned in section \ref{quantumTechIntegQOT}, in case the number of oblivious keys generated is scarce compared to the number of OT required, we can use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the base OT used within OT extension protocol. In this case, we just have to generate $\kappa$ $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocols per Yao execution: $L^j_\text{bOT} = N^j_\text{Yao} \cdot \kappa = \kappa M^2(n-1)$.
 
 \subsubsection{Oblivious keys}
 At this point, we can easily deduce the size of oblivious keys that each pair of parties have to generate when using messages of size $l$. 
 
-In case we use HQOT to generate the final Oblivious Transfer:
-
+In case we use $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the final OT:
 \begin{eqnarray*}
 L^j_{\text{ok}} &=& N_{\text{OT}}^j \cdot 2l \\
-&=& 4slM^2(n-1)
+&=& 4slM^2(n-1).
 \end{eqnarray*}
 
-Also, we can use the number of OT executions per party and the analysis from Table~\ref{table:complexity} and \cite{Santos2021} to compute the computational and communication complexity (in bits) of HQOT:
-
+Also, we can use the number of OT executions per party and the analysis from Table~\ref{table:complexity} and \cite{Santos2021} to compute the computational and communication complexity (in bits) of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$:
 \begin{eqnarray*}
 \mathcal{C}^j_{\text{comp}} &=&  N_{\text{OT}}^j \cdot 8l \\
-&=& 16 slM^2(n-1)
+&=& 16 slM^2(n-1),
 \end{eqnarray*}
-
 \begin{eqnarray*}
 \mathcal{C}^j_{\text{comm}} &=&  N_{\text{OT}}^j \cdot 3l \\
-&=& 6 slM^2(n-1)
+&=& 6 slM^2(n-1).
 \end{eqnarray*}
 
-In case we use HQOT to generate the base OT, the total size of oblivious key required is:
-
+In case we use $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the base OT, the total size of oblivious key required is:
 \begin{eqnarray*}
 L^j_{\text{bok}} &=& N_{\text{bOT}}^j \cdot 2l \\
-&=& 2\kappa lM^2(n-1)
+&=& 2\kappa lM^2(n-1).
 \end{eqnarray*}
 
 
@@ -800,16 +791,13 @@ The QRNG has to generate twice the total length of oblivious keys, i.e. $L_{\tex
 
 \subsubsection{Internal computation}
 Number of internal computations per party:
-
-$$N_\text{int}^j = \binom{M}{2} = \frac{M!}{2!(M-2)!}$$
+$$N_\text{int}^j = \binom{M}{2} = \frac{M!}{2!(M-2)!}.$$
 
 \subsubsection{Encryption keys}
 As discussed before, for every party $P^j$, $P^t$ ($t\neq j$) has to receive from $P^j$ the distances known by $P^j$ that $P^t$ does not have access. So, $P^j$ has to send $M^2(n-2) + N_\text{int}^j$ distance values to $P^t$. Consequently, the length of the QKD key used to send these distances to $P^t$ is:
-
-$$32(M^2(n-2) + N^j_\text{int})$$
+$$32(M^2(n-2) + N^j_\text{int}),$$
 for a $32-$bit number representation. Therefore, the total size of key shared between two parties $P^j$ and $P^t$ must be:
-
-$$L^{jt}_{qkd} = 64(M^2(n-2) + N_\text{int})$$
+$$L^{jt}_{qkd} = 64(M^2(n-2) + N_\text{int}).$$
 
 Also, each party must have an overall shared key of $L^{j}_{qkd} = \sum_{i\neq j} L^{i}_{qkd} = 64(n-1)(M^2(n-2) + N^j_\text{int})$.
 
@@ -820,31 +808,33 @@ Also, each party must have an overall shared key of $L^{j}_{qkd} = \sum_{i\neq j
 
 We now present the scenario used to test and compare both quantum-assisted and classical-only approaches. We start by exploring the complexity analysis and the OT comparison carried out in previous sections. We extend this analysis in the next section with a testbed implementation. 
 
-We consider a scenario where three parties $n=3$ have $M$ SARS-CoV-2 genome sequences (with length $s=32\,000$) and want to privately compute a phylogenetic tree from them. In the next section we consider a varying number of sequences, but, for now, we set $M=10$. Following a standard choice \cite{ALSZ13}, we consider garbled circuit keys with $l = 128$ bits, computational security parameter with $\kappa = 128$ bits and statistical security parameter with $w = 64$ bits. For these parameter values, we can instantiate the expressions deduced in the complexity analysis (section~\ref{compAnalysis}). This information is summarized in Table~ \ref{table:complexity}. As expected, the total size of oblivious keys ($L^j_{\text{ok}}$) required for a scenario where HQOT is the main OT protocol is three orders of magnitude higher than the case where HQOT serves as a base OT protocol in KOS15 ($L^j_{\text{bok}}$). Also, we note that the total size of symmetric keys required in the protocol ($L^j_{qkd}$) is much smaller than that of oblivious keys ($L^j_{\text{ok}}$ and $L^j_{\text{bok}}$), pointing to the fact that its management should be less expensive than the oblivious keys management system. This will be discussed further in the next section.
+ESTOU AQUI
 
-We can also estimate the time required to generate the keys based on their size. If we consider state-of-the-art rates of 10 Mbit/s for both QKD and QOKD systems \cite{YPT18} and a rate of 240 Mbit/s for QRNG (ID Quantique QRNG PCIe cards \cite{IDQ}), we would need around $5\text{ minutes}$ for $L^j_{\text{ok}}$, $0.64\text{s}$ for $L^j_{\text{bok}}$, $28$s for $L^j_{\text{QRNG}}$ and $1.9\times 10^{-3}$s for $L^{j}_{qkd}$. Note that we can significantly reduce the time of the precomputation phase in case we integrate HQOT with KOS15 OT extension protocol. 
+We consider a scenario where three parties $n=3$ have $M$ SARS-CoV-2 genome sequences (with length $s=32\,000$) and want to privately compute a phylogenetic tree from them. In the next section we consider a varying number of sequences, but, for now, we set $M=10$. Following a standard choice \cite{ALSZ13}, we consider garbled circuit keys with $l = 128$ bits, computational security parameter with $\kappa = 128$ bits and statistical security parameter with $w = 64$ bits. For these parameter values, we can instantiate the expressions deduced in the complexity analysis (section~\ref{compAnalysis}). This information is summarized in Table~ \ref{table:complexity}. As expected, the total size of oblivious keys ($L^j_{\text{ok}}$) required for a scenario where $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is the main OT protocol is three orders of magnitude higher than the case where $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ serves as a base OT protocol in KOS15 ($L^j_{\text{bok}}$). Also, we note that the total size of symmetric keys required in the protocol ($L^j_{qkd}$) is much smaller than that of oblivious keys ($L^j_{\text{ok}}$ and $L^j_{\text{bok}}$), pointing to the fact that its management should be less expensive than the oblivious keys management system. This will be discussed further in the next section.
 
-Finally, we compare the number of binary operations and bits sent by HQOT and the KOS15 OT extension. Considering the number of OT required for this use case to be $N^j_{\text{OT}} = 12.8\times 10^6$ (Table~\ref{table:complexity}), we get the results summarized in Table~\ref{table:Com_Comp_complexity}. Observe that KOS15 requires around four times (4.2) more binary operations than HQOT for this scenario. This points to the conclusion that HQOT has the potential to provide a faster transfer phase execution when compared to KOS15.
+We can also estimate the time required to generate the keys based on their size. If we consider state-of-the-art rates of 10 Mbit/s for both QKD and QOKD systems \cite{YPT18} and a rate of 240 Mbit/s for QRNG (ID Quantique QRNG PCIe cards \cite{IDQ}), we would need around $5\text{ minutes}$ for $L^j_{\text{ok}}$, $0.64\text{s}$ for $L^j_{\text{bok}}$, $28$s for $L^j_{\text{QRNG}}$ and $1.9\times 10^{-3}$s for $L^{j}_{qkd}$. Note that we can significantly reduce the time of the precomputation phase in case we integrate $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ with KOS15 OT extension protocol. 
 
-%\begin{table}[!h]
-%\centering
-%\begin{tabular}{lcc}
-%\toprule
-% & KOS15 & HQOT \\
-%\midrule
-%\multicolumn{1}{l}{Binary operations} & $76\times 10^9$ & $18\times 10^9$ \\
-%\multicolumn{1}{l}{Communication (bits)} & $4.9\times 10^9$ & $4.9\times 10^9$ \\
-%\bottomrule
-%\end{tabular}
-%\caption{Comparison between KOS15 OT extension and HQOT.}
-%\label{table:Com_Comp_complexity}
-%\end{table}
+Finally, we compare the number of binary operations and bits sent by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ and the KOS15 OT extension. Considering the number of OT required for this use case to be $N^j_{\text{OT}} = 12.8\times 10^6$ (Table~\ref{table:complexity}), we get the results summarized in Table~\ref{table:Com_Comp_complexity}. Observe that KOS15 requires around four times (4.2) more binary operations than $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ for this scenario. This points to the conclusion that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ has the potential to provide a faster transfer phase execution when compared to KOS15.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{lcc}
+\toprule
+ & KOS15 & $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ \\
+\midrule
+\multicolumn{1}{l}{Binary operations} & $76\times 10^9$ & $18\times 10^9$ \\
+\multicolumn{1}{l}{Communication (bits)} & $4.9\times 10^9$ & $4.9\times 10^9$ \\
+\bottomrule
+\end{tabular}
+\caption{Comparison between KOS15 OT extension and $\Pi^{\textbf{BBCS}}_{\textbf{O}}$.}
+\label{table:Com_Comp_complexity}
+\end{table}
 
 
 
 \section{Performance Evaluation}\label{perfEvaluation}
 
-In this section, we set out to explore and compare the performance of two implementations of the proposed secure phylogenetic tree computation ($A^a_d$): classical-only and quantum-assisted. The quantum-assisted system replaces Libscapi base OT (SimpleOT \cite{C15}) implementation with the HQOT presented before (Figure~\ref{fig:HQOT}). It also uses symmetric keys along with One-Time Pad to encrypt distance values as described in \ref{smcPhylo}. More specifically, we benchmark our implementation for the duration of its main components: circuit generation, communication, (internal) computation and SMC operation.
+In this section, we set out to explore and compare the performance of two implementations of the proposed secure phylogenetic tree computation ($A^a_d$): classical-only and quantum-assisted. The quantum-assisted system replaces Libscapi base OT (SimpleOT \cite{C15}) implementation with the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol presented before (Figure~\ref{fig:HQOT}). It also uses symmetric keys along with One-Time Pad to encrypt distance values as described in \ref{smcPhylo}. More specifically, we benchmark our implementation for the duration of its main components: circuit generation, communication, (internal) computation and SMC operation.
 
 In this work, we do not assess the generation performance of both symmetric keys and oblivious keys. We precompute these keys using a simulator that mimics the structure of the quantum generated keys and we do not include their generation time in the performance analysis. The reason for this is twofold: performance in quantum cryptography is an active field of research with no clear way on how to be compared with classical approaches; quantum generation of both keys (symmetric and oblivious) can be precomputed without depending on the parties' inputs and used later as a resource in the execution of the system.
 
@@ -931,27 +921,27 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
 %\label{table:quantum_benchmark}
 %\end{table}
 
-\begin{figure}[b]
+\begin{figure}
     \centering
-    \includegraphics[scale=0.57]{Chapter_PrivatePhylogeneticTrees/total_running.png}
+    \includegraphics[scale=0.8]{Chapter_PrivatePhylogeneticTrees/total_running.png}
     \caption{Total running time of both quantum-assisted and classical-only systems.}
     \label{fig:total_running_time}
 \end{figure}
 
-Figure~\ref{fig:total_running_time} present us with the average duration of both systems with standard deviation as error bars. Here we see that the quantum-assisted approach has a higher cost than the classical-only implementation. As discussed in section~\ref{quantumTechIntegQOT}, we can either use the HQOT protocol as the main OT in the Libscapi implementation or we can use it as a base OT in the KOS15 OT Extension used by Libscapi. Since we have implemented the latter, our HQOT is competing against the SimpleOT \cite{C15} base OT implementation. As analysed by the authors (section 4 \cite{Santos2021}), the HQOT transfer phase is expected to outperform base OT implementations and to have comparable performance to OT Extension protocols. However, these analyses only compared cryptographic and computational operations and did not take into account implementation constraints.
+Figure~\ref{fig:total_running_time} present us with the average duration of both systems with standard deviation as error bars. Here we see that the quantum-assisted approach has a higher cost than the classical-only implementation. As discussed in section~\ref{quantumTechIntegQOT}, we can either use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol as the main OT in the Libscapi implementation or we can use it as a base OT in the KOS15 OT Extension used by Libscapi. Since we have implemented the latter, our $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is competing against the SimpleOT \cite{C15} base OT implementation. As analysed by the authors (section 4 \cite{Santos2021}), the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is expected to outperform base OT implementations and to have comparable performance to OT Extension protocols. However, these analyses only compared cryptographic and computational operations and did not take into account implementation constraints.
 
 In the quantum-assisted implementation, we separate the precomputation phase (generation of symmetric and oblivious keys) from the secure computation phase of the proposed protocol, $A^a_d$. For this reason, it is necessary to develop a key management system to save and keep key synchronization between parties. Consequently, the key management system becomes the bottleneck as the number of sequences increases. In particular, the key management system of oblivious keys is responsible for most of the overhead (Figure~\ref{fig:okms}).
 
-\begin{figure}[t]
+\begin{figure}
     \centering
-    \includegraphics[scale=0.57]{Chapter_PrivatePhylogeneticTrees/c-qSMC.png}
+    \includegraphics[scale=0.8]{Chapter_PrivatePhylogeneticTrees/c-qSMC.png}
     \caption{Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.}
     \label{fig:okms}
 \end{figure}
 
-\begin{figure}[b!]
+\begin{figure}
     \centering
-    \includegraphics[scale=0.57]{Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png}
+    \includegraphics[scale=0.8]{Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png}
     \caption{Oblivious key management system proportion in the overhead of quantum-assisted system.}
     \label{fig:overhead}
 \end{figure}

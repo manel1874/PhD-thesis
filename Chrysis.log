@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  31 OCT 2022 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  31 OCT 2022 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1778,134 +1778,125 @@ File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
 <use Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-ta
-ilored.jpeg  used on input line 620.
+ilored.jpeg  used on input line 619.
 (pdftex.def)             Requested size: 216.07797pt x 176.57208pt.
+
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
  [71 <./Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>] [72
 ]
 
-Package natbib Warning: Citation `V59' on page 73 undefined on input line 691.
+Package natbib Warning: Citation `V59' on page 73 undefined on input line 683.
 
 
 Package natbib Warning: Citation `Songhori2019' on page 73 undefined on input l
-ine 691.
+ine 683.
 
-
-Underfull \vbox (badness 4441) has occurred while \output is active []
-
- [73]
-
-LaTeX Warning: Reference `QOT' on page 74 undefined on input line 725.
-
+[73]
 
 Package natbib Warning: Citation `Damgrd2009' on page 74 undefined on input lin
-e 730.
+e 724.
 
 
 Package natbib Warning: Citation `Lindell2008' on page 74 undefined on input li
-ne 730.
+ne 724.
 
 [74]
 
 Package natbib Warning: Citation `Evans2018' on page 75 undefined on input line
- 736.
-
-
-Package natbib Warning: Citation `Santos2021' on page 75 undefined on input lin
-e 745.
-
-
-Package natbib Warning: Citation `K15' on page 75 undefined on input line 745.
+ 730.
 
 [75]
 
 Package natbib Warning: Citation `Santos2021' on page 76 undefined on input lin
-e 781.
+e 772.
 
-[76] [77]
-Overfull \hbox (1.29976pt too wide) in paragraph at lines 824--825
+[76]
+Overfull \hbox (1.29976pt too wide) in paragraph at lines 809--810
 \OT1/cmr/m/n/12 We now present the sce-nario used to test and com-pare both qua
 ntum-assisted and classical-
  []
 
+[77]
 
-Package natbib Warning: Citation `YPT18' on page 78 undefined on input line 828
+Package natbib Warning: Citation `YPT18' on page 78 undefined on input line 813
 .
 
 
-Package natbib Warning: Citation `IDQ' on page 78 undefined on input line 828.
+Package natbib Warning: Citation `IDQ' on page 78 undefined on input line 813.
 
 
 LaTeX Warning: Reference `table:Com_Comp_complexity' on page 78 undefined on in
-put line 830.
+put line 815.
 
 
-Package natbib Warning: Citation `C15' on page 78 undefined on input line 850.
+Package natbib Warning: Citation `C15' on page 78 undefined on input line 835.
 
 
-LaTeX Warning: Reference `fig:HQOT' on page 78 undefined on input line 850.
+LaTeX Warning: Reference `fig:HQOT' on page 78 undefined on input line 835.
+
+[78]
+
+Package natbib Warning: Citation `GISAID' on page 79 undefined on input line 84
+9.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [78]
-
-Package natbib Warning: Citation `GISAID' on page 79 undefined on input line 86
-4.
-
-
-Package natbib Warning: Citation `MPL19' on page 79 undefined on input line 864
+Package natbib Warning: Citation `MPL19' on page 79 undefined on input line 849
 .
 
-[79]
 
-LaTeX Warning: Reference `table:Com_JK_bool_circ' on page 80 undefined on input
- line 869.
+LaTeX Warning: Reference `table:Com_JK_bool_circ' on page 79 undefined on input
+ line 854.
 
 
-LaTeX Warning: Reference `table:Com_JK_bool_circ' on page 80 undefined on input
- line 869.
+LaTeX Warning: Reference `table:Com_JK_bool_circ' on page 79 undefined on input
+ line 854.
 
+
+Underfull \vbox (badness 5022) has occurred while \output is active []
+
+ [79]
 
 LaTeX Warning: Reference `table:classical_benchmark' on page 80 undefined on in
-put line 900.
+put line 885.
 
 
 LaTeX Warning: Reference `table:quantum_benchmark' on page 80 undefined on inpu
-t line 900.
+t line 885.
 
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=1742, 395.3169pt x 271.
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=1745, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
 <use Chapter_PrivatePhylogeneticTrees/total_running.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
-ed on input line 939.
-(pdftex.def)             Requested size: 225.33296pt x 154.99365pt.
+ed on input line 924.
+(pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
 
-Package natbib Warning: Citation `C15' on page 80 undefined on input line 944.
+Package natbib Warning: Citation `C15' on page 80 undefined on input line 929.
 
 
 Package natbib Warning: Citation `Santos2021' on page 80 undefined on input lin
-e 944.
+e 929.
 
 [80]
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=1755, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=1759, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
-nput line 950.
-(pdftex.def)             Requested size: 225.33296pt x 152.72797pt.
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=1756, 395.3169
+nput line 935.
+(pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=1760, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
 <use Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/proportion_in_overhea
-d.png  used on input line 957.
-(pdftex.def)             Requested size: 225.33296pt x 164.1594pt.
+d.png  used on input line 942.
+(pdftex.def)             Requested size: 316.25394pt x 230.39706pt.
 
-Underfull \vbox (badness 4429) has occurred while \output is active []
+Underfull \vbox (badness 1281) has occurred while \output is active []
 
  [81 <./Chapter_PrivatePhylogeneticTrees/total_running.png>] [82 <./Chapter_Pri
 vatePhylogeneticTrees/c-qSMC.png> <./Chapter_PrivatePhylogeneticTrees/proportio
@@ -1933,9 +1924,15 @@ ation.aux)
 (./Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
-Package rerunfilecheck Info: File `Chrysis.out' has not changed.
-(rerunfilecheck)             Checksum: 9D4D04EE6C15A95FD73367C88648D56F;5541.
 
+
+Package rerunfilecheck Warning: File `Chrysis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Chrysis.out':
+(rerunfilecheck)             Before: 9D4D04EE6C15A95FD73367C88648D56F;5541
+(rerunfilecheck)             After:  069C234D76997A9DE585A9A43C2D3E47;5541.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -1949,53 +1946,60 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 27967 strings out of 480608
- 549673 string characters out of 5903629
+ 27977 strings out of 480608
+ 549804 string characters out of 5903629
  851023 words of memory out of 5000000
- 42650 multiletter control sequences out of 15000+600000
- 559240 words of font info for 116 fonts, out of 8000000 for 9000
+ 42654 multiletter control sequences out of 15000+600000
+ 561018 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,19n,105p,2177b,1096s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/cm-super/sfrb1440.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/cm-super/sfrb1728.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/
-type1/public/cm-super/sfrm1728.pfb>
-Output written on Chrysis.pdf (120 pages, 5403122 bytes).
+ 67i,15n,105p,2177b,1096s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.67} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.70} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
+/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/cm-super/sfrb1440.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/cm-super/sfrb1728.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm1728.pfb>
+Output written on Chrysis.pdf (120 pages, 5411540 bytes).
 PDF statistics:
- 2102 PDF objects out of 2487 (max. 8388607)
- 1862 compressed objects within 19 object streams
- 563 named destinations out of 1000 (max. 500000)
+ 2111 PDF objects out of 2487 (max. 8388607)
+ 1870 compressed objects within 19 object streams
+ 566 named destinations out of 1000 (max. 500000)
  794 words of extra memory for PDF output out of 10000 (max. 10000000)
 

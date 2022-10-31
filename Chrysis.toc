@@ -83,20 +83,20 @@
 \contentsline {subsubsection}{Jukes-Cantor}{72}{section*.57}%
 \contentsline {subsubsection}{Kimura}{72}{section*.58}%
 \contentsline {subsubsection}{F84 and LogDet}{73}{section*.59}%
-\contentsline {subsection}{\numberline {6.7.2}Private computation of phylogenetic trees}{74}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.2}Private computation of phylogenetic trees}{73}{subsection.6.7.2}%
 \contentsline {section}{\numberline {6.8}Complexity analysis}{75}{section.6.8}%
 \contentsline {subsection}{\numberline {6.8.1}Protocol complexity analysis}{75}{subsection.6.8.1}%
-\contentsline {subsubsection}{Yao GC executions}{75}{section*.60}%
+\contentsline {subsubsection}{Yao protocol executions}{75}{section*.60}%
 \contentsline {subsubsection}{OT executions}{76}{section*.61}%
 \contentsline {subsubsection}{Oblivious keys}{76}{section*.62}%
 \contentsline {subsubsection}{QRNG}{77}{section*.63}%
 \contentsline {subsubsection}{Internal computation}{77}{section*.64}%
 \contentsline {subsubsection}{Encryption keys}{77}{section*.65}%
-\contentsline {subsection}{\numberline {6.8.2}Use case}{78}{subsection.6.8.2}%
-\contentsline {section}{\numberline {6.9}Performance Evaluation}{79}{section.6.9}%
+\contentsline {subsection}{\numberline {6.8.2}Use case}{77}{subsection.6.8.2}%
+\contentsline {section}{\numberline {6.9}Performance Evaluation}{78}{section.6.9}%
 \contentsline {subsection}{\numberline {6.9.1}Setup}{79}{subsection.6.9.1}%
-\contentsline {subsubsection}{Sequences preprocessing}{79}{section*.66}%
+\contentsline {subsubsection}{Sequences preprocessing}{79}{section*.67}%
 \contentsline {subsection}{\numberline {6.9.2}Circuit generation}{80}{subsection.6.9.2}%
 \contentsline {subsection}{\numberline {6.9.3}System execution time}{80}{subsection.6.9.3}%
-\contentsline {section}{\numberline {6.10}Conclusion}{82}{section.6.10}%
-\contentsline {chapter}{Bibliography}{100}{chapter*.70}%
+\contentsline {section}{\numberline {6.10}Conclusion}{83}{section.6.10}%
+\contentsline {chapter}{Bibliography}{100}{chapter*.71}%
