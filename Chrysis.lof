@@ -22,6 +22,7 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of the $A^a_d$ network structure.\relax }}{66}{figure.caption.51}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Overview of the integration of the QOKD service and the CBMC-GC tool in the Yao protocol.\relax }}{68}{figure.caption.52}%
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of the tailored divide-and-conquer technique.\relax }}{71}{figure.caption.56}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{81}{figure.caption.68}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{82}{figure.caption.69}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{82}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{82}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{83}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{83}{figure.caption.72}%
+\addvspace {10\p@ }
