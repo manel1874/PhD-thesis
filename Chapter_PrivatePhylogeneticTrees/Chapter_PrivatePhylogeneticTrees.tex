@@ -6,18 +6,20 @@
 
 \chapter{Private phylogenetic trees}
 
-Several privacy-enhancing technologies (PET) (differential privacy \cite{Li2016}, homomorphic encryption \cite{Armknecht2015} and secure multiparty computation) have already been applied to biomedical data analysis \cite{Verhaert2018, Scardapane2017, Maulany2018, Kikuchi2018, Tawfik2018}. In particular, these classical techniques have been used in the context of genomic private data analysis. As a way to push research and innovation forward, there have been several competitions \cite{Wang2017} focused on developing faster and more secure solutions in the field of genomic analysis. Also, in recent surveys \cite{MY19, Naveed2015}, the authors describe the role of PETs in four different computational domains of the genomic's field (genomic aggregation, GWASs and statistical analysis, sequence comparison and genetic testing). However, they do not provide any reference covering privacy-preserving methods applied to phylogeny inference. 
+INCLUIR EM ANEXO O PROGRAMA
 
-In contrast to classical technologies, the usage of quantum cryptographic technologies in private computation has not been widely reported. Chan et al. \cite{Chan2014} developed real-world private database queries assisted with quantum technologies and in \cite{Ito2017} the authors simply suggest that their implementation of quantum oblivious transfer is suitable to be applied in an SMC environment. %In \cite{Pinto2020}, it is presented a system assisted with quantum technologies for the private recognition of composite signals in genome and proteins and in \cite{SGPM21} the authors give a brief description of a private UPGMA (Unweighted Pair Group Method with Arithmetic mean) protocol assisted with quantum technologies. 
-Despite its little integration with PETs, quantum cryptographic technologies have already reached a maturity level that enables this integration. Quantum key distribution (QKD) and quantum random number generators (QRNG) are currently being commercialized and applied to critical use cases (e.g. Governmental data storage and communications, Data centres \cite{AM19}) with in-field deployment (e.g. OpenQKD, https://openqkd.eu/). Quantum Oblivious Key Distribution (QOKD) protocol is based on the same technology as QKD and QRNG, benefiting from its development and allowing to generate the necessary resource used to execute OT \cite{Lemus20, JSGBBWZ11, KWW12}. 
+Several privacy-enhancing technologies (PET) (differential privacy \cite{Li2016}, homomorphic encryption \cite{Armknecht2015} and secure multiparty computation) have already been applied to biomedical data analysis \cite{Verhaert2018, Scardapane2017, Maulany2018, Kikuchi2018, Tawfik2018}. In particular, these classical techniques have been used in the context of genomic private data analysis. As a way to push research and innovation forward, there have been several competitions \cite{Wang2017} focused on developing faster and more secure solutions in the field of genomic analysis. Also, in recent surveys \cite{MY19, Naveed2015}, the authors describe the role of PETs in four different computational domains of the genomic's field (genomic aggregation, GWASs and statistical analysis, sequence comparison and genetic testing). However, these surveys do not provide any reference covering privacy-preserving methods applied to phylogeny inference. 
+
+In contrast to classical technologies, the usage of quantum cryptographic technologies in private computation has not been widely reported. Chan et al. \cite{Chan2014} developed real-world private database queries assisted with quantum technologies and in \cite{Ito2017} the authors simply suggest that their implementation of quantum OT is suitable to be applied in an SMC environment. %In \cite{Pinto2020}, it is presented a system assisted with quantum technologies for the private recognition of composite signals in genome and proteins and in \cite{SGPM21} the authors give a brief description of a private UPGMA (Unweighted Pair Group Method with Arithmetic mean) protocol assisted with quantum technologies. 
+Despite its little integration with PETs, quantum cryptographic technologies have already reached a maturity level that enables this integration. Quantum key distribution (QKD) and quantum random number generators (QRNG) are currently being commercialized and applied to critical use cases (e.g. Governmental data storage and communications, Data centres \cite{AM19}) with in-field deployment (e.g. OpenQKD, https://openqkd.eu/). The quantum oblivious key distribution (QOKD) protocol is based on the same technology as QKD and QRNG, benefiting from its development and allowing to generate the necessary resources to execute OT \cite{Lemus20, JSGBBWZ11, KWW12}. 
 
 %Furthermore, only SMC classical frameworks have been applied to the private analysis of genomic data. In a recent survey \cite{MY19}, the authors describe the role of privacy enhancing techniques (Differential Privacy, Homomorphic Encryption and SMC) in four different computational domains (genomic aggregation, GWASs and statistical analysis, sequence comparison and genetic testing). However, to the best of our knowledge, there is no tailored protocol to the computation of phylogentic trees. 
 
 %Here we propose and demonstrate the feasibility of aSecure  Multiparty  Computation  (SMC)  system  assisted  with  quantum  communication  technologies  thatis  designed  to  compute  a  phylogenetic  tree  for  a  set  of  genome  sequences.  This  system  significantlyimproves  the  privacy  and  security  of  the  computation  thanks  to  three  quantum  cryptographic  protocolsthat  provide  security  against  quantum  computer  attacks.  Also,  it  decreases  the  complexity  of  the  actual computation when compared to a purely classical system. 
 
-In this chapter, we present a feasible modular private phylogenetic tree protocol that provides enhanced security against quantum computer attacks and decreases the complexity of the computation phase when compared to state-of-the-art classical systems. 
+In this chapter, we present a feasible modular private phylogenetic tree protocol that leverages quantum communications. It provides enhanced security against quantum computer attacks and decreases the complexity of the computation phase when compared to a state-of-the-art classical-only system. 
 %We present a feasible modular protocol for privately computing phylogenetic trees that is secure against Quantum Computer attacks and do not add any efficiency overhead during the execution phase. 
-The system is built on top of Libscapi \cite{Libscapi} implementation of Yao protocol and PHYLIP phylogeny package \cite{PH78} and it integrates three crucial quantum primitives: quantum oblivious transfer, quantum key distribution and quantum random number generator.
+The system is built on top of Libscapi \cite{Libscapi} implementation of Yao protocol and PHYLIP phylogeny package \cite{PH78}. It integrates three crucial quantum primitives: quantum oblivious transfer, quantum key distribution and quantum random number generator.
 
 This chapter follows a top-down approach. In section \ref{phyloTree}, we start by explaining the concept of phylogenetic trees and the distance-based algorithms used to generate these trees. In section \ref{secDefition}, we set down the security definitions that will be used to analyse and prove the system's security. %In section \ref{cryptoTools}, we explain the cryptographic tools used in the system. 
 In sections \ref{quantumTools} and \ref{softTools}, we describe the quantum cryptographic tools and the software tools that are integrated into the protocol, respectively. In section \ref{smcPhylo}, we describe the proposed SMC system for phylogenetic trees. In section \ref{quantumTechIntegration} we explain how the quantum cryptographic tools are integrated into the system. Section \ref{systemSecurity} is devoted to the theoretical security analysis of the protocol and in section \ref{CompleAnalysis} we perform a complexity analysis. In the last section we present a performance comparison of the system between a classical-only and a quantum-assisted implementation.
@@ -29,20 +31,20 @@ In sections \ref{quantumTools} and \ref{softTools}, we describe the quantum cryp
 %Phylogenetic trees are commonly compared with family trees in the following sense. The same way as family trees represent the historical ties of blood, phylogenetic trees represent the historical ties of genes. Thus, p
 Phylogenetic trees are diagrams that depict the evolutionary ties between groups of organisms \cite{M10} and are composed of several nodes and branches. The nodes represent genome sequences and each branch connects two nodes. It is important to note that the terminal nodes (also called leaves) represent known data sequences, whether internal nodes are ancestral sequences inferred from the known sequences \cite{Z06, Felsenstein2003}. The length of the branches connecting two nodes represents the number of substitutions that have occurred between them. However, this quantity must be estimated because it cannot be computed directly using the sequences. In fact, by simply counting the number of sites where two nodes have different base elements (Hamming distance), we underestimate the number of substitutions that have occurred between them. 
 
-The best way to compute a correct phylogenetic tree depends on the type of species and sequences under analysis and the assumptions we make on the substitution model of the sequences. By a correct tree, we mean a tree that depicts as approximate as possible the real phylogeny of the sequences, i.e. the real ties between known sequences and inferred ancestors. These assumptions lead to different algorithms which can be divided into two categories:
+The best way to compute a correct phylogenetic tree depends on the type of species and sequences under analysis and the assumptions made by the sequences substitution model. By a correct tree, we mean a tree that depicts as approximate as possible the real phylogeny of the sequences, i.e. the real ties between known sequences and inferred ancestors. These assumptions lead to different algorithms which can be divided into two categories:
 
 \begin{enumerate}
     \item Distance-based methods: they base their analysis on the evolutionary distance matrix which contains the evolutionary distances between every pair of sequences. The evolutionary distance used also depends on the substitution model considered. These methods are computationally less expensive when compared to character-based methods.
     \item Character-based methods: they base their analysis on comparing every site (character) of the known data sequences and do not reduce the comparison of sequences to a single value (evolutionary distance). 
 \end{enumerate}
 
-In this work, we will only consider the distance-based algorithms that are part of the PHYLIP \cite{F89} distance matrix models, namely: Fitch-Margoliash (\texttt{fitch} and \texttt{kitsch}), Neighbour Joining  (\texttt{neighbor}) and UPGMA (\texttt{neighbor}). Also, we will only consider the evolutionary distances developed in PHYLIP \texttt{dnadist} program:  Jukes-Cantor (JC) \cite{JC69}, Kimura 2-parameter (K2P) \cite{K80}, F84 \cite{F84} and LogDet \cite{L94}. We refer interested readers on this topic to some textbooks about phylogenetic analysis \cite{Z06, Felsenstein2003}. %[Yang, Z. (2006).	Computational molecular evolution. Oxford University Pres, Felsenstein,	J.	(2004). Inferring phylogenies and Phylogenetic Inference, chpt 11 Swofford].
+We only consider the distance-based algorithms that are part of the PHYLIP \cite{F89} distance matrix models, namely: Fitch-Margoliash (\texttt{fitch} and \texttt{kitsch}), Neighbour Joining  (\texttt{neighbor}) and UPGMA (\texttt{neighbor}). Also, we only consider the evolutionary distances developed in PHYLIP \texttt{dnadist} program:  Jukes-Cantor (JC) \cite{JC69}, Kimura 2-parameter (K2P) \cite{K80}, F84 \cite{F84} and LogDet \cite{L94}. We refer interested readers on this topic to some textbooks about phylogenetic analysis \cite{Z06, Felsenstein2003}. %[Yang, Z. (2006).	Computational molecular evolution. Oxford University Pres, Felsenstein,	J.	(2004). Inferring phylogenies and Phylogenetic Inference, chpt 11 Swofford].
 
-In the next two sections, we give an overview of these distance-based methods to build some intuition on how to tailor them to a private setting. We start by looking at the different evolutionary distances and then at the distance-based algorithms.
+Next, we give an overview of these distance-based methods to build some intuition on how to tailor them to a private setting. We start by looking at the different evolutionary distances and then at the distance-based algorithms.
 
 \subsection{Evolutionary distances} \label{evolDist}
 
-The evolutionary distance depends on the number of substitutions estimated between two sequences, which is governed by the substitution model used. So, before defining a suitable distance, it is important to have a model that describes the substitution probability of each nucleotide across the sequences at a given time. 
+The evolutionary distance depends on the number of estimated substitutions between two sequences, which is governed by the substitution model used. So, before defining a suitable distance, it is important to have a model that describes the substitution probability of each nucleotide across the sequence at a given time. 
 
 The distances considered in this work can be divided into two groups by their assumptions. JC, K2P and F84 assume that the substitution probabilities remain constant throughout the tree, (i.e. stationary probabilities), whether the LogDet distance assumes that the probabilities are not stationary.  
 
@@ -136,10 +138,7 @@ where $P=\frac{n_1}{n}$, $Q=\frac{n_2}{n}$ and $n_1$ and $n_2$ are respectively 
 This model \cite{F84} also distinguishes different nucleotide transitions but do not assume the nucleotide frequencies to be the same. This leads to a more general distance which can be estimated in closed form:
 
 \begin{equation}
-\begin{split}
-    d_{xy} = -2 A\ln\bigg( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \bigg) \\
-    + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg)
-\end{split}
+    d_{xy} = -2 A\ln\left( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \right) + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg)
 \label{eq:F84_distance}
 \end{equation}
 where $A = \frac{\pi_C \pi_T}{\pi_Y} + \frac{\pi_A \pi_G}{\pi_R}$, $B=\pi_C\pi_T + \pi_A\pi_G$ and $C=\pi_R\pi_Y$ for $\pi_Y = \pi_C + \pi_T$ and $\pi_R = \pi_A + \pi_G$, and $P$ and $Q$ are defined as in the Kimura 2-parameter model above.
@@ -154,11 +153,11 @@ As mentioned before, the models based on matrix $\mathbf{Q}$ assume that the pro
     d_{xy} = -\frac{1}{4}\ln\Bigg( \frac{\det F_{xy}}{\sqrt{\det \prod_x \prod_y}} \Bigg)
 \label{eq:LogDet_distance}
 \end{equation}
-where the divergence matrix $F_{xy}$ is a $4\times 4$ matrix such that the $ij-$th entry gives the proportion of sites in sequence $x$ and $y$ with nucleotide $i$ and $j$, respectively. Also, $\prod_x$ and $\prod_y$ are diagonal matrices where its $i-$th component correspond to the proportion of $i$ nucleotide in the sequence $x$ and $y$, respectively.
+where the divergence matrix $F_{xy}$ is a $4\times 4$ matrix such that the $ij-$th entry gives the proportion of sites with nucleotide $i$ in sequence $x$ and $j$ in sequence $y$. Also, $\prod_x$ and $\prod_y$ are diagonal matrices where its $i-$th component correspond to the proportion of $i$ nucleotide in the sequence $x$ and $y$, respectively.
 
 \subsection{Distance-based algorithms}
 
-All distance-based methods reduce the comparison between sequences to their evolutionary distance. Although it may lead to less accurate phylogenetic trees, these methods are highly popular among researchers who have to handle large number of sequences. It is common to all of them to assume the following:
+All distance-based methods make use of evolutionary distances to compare different genomic sequences. Although it may lead to less accurate phylogenetic trees, these methods are highly popular among researchers who have to handle large number of sequences. All methods assume the following:
 
 \begin{enumerate}
     \item The evolutionary distance computed between each pair is independent of all other sequences;
@@ -209,19 +208,19 @@ As opposed to the UPGMA algorithm, this method produces an unrooted tree and it 
 \begin{enumerate}
     \item Consider every sequence as a single-valued cluster and connect it to a central point;
     \item Compute a matrix $\mathcal{Q}$ where its entries are given by the quantity above, i.e. $\mathcal{Q}_{ij} = q(C_i,C_j)$;
-    \item Identify clusters $C_i$ and $C_j$ with the smallest value in the matrix $\mathcal{Q}$. Create a new node $C_{i,j}$ and join both clusters $C_i$ and $C_j$ to it. 
+    \item Identify clusters $C_i$ and $C_j$ with the smallest value in the matrix $\mathcal{Q}$. Create a new node $C_{i,j}$ and join both clusters $C_i$ and $C_j$ to it;
     \item Assign to the branch $C_i C_{i/j}$ a distance given by:
     
     $$\frac{1}{2}d(C_i, C_j) - \frac{1}{2}\frac{(u_i - u_j)}{r-2}$$
     
     and to the branch $C_j C_{i/j}$ a distance given by:
     
-    $$\frac{1}{2}d(C_i, C_j) - \frac{1}{2}\frac{(u_j - u_i)}{r-2}$$
+    $$\frac{1}{2}d(C_i, C_j) - \frac{1}{2}\frac{(u_j - u_i)}{r-2};$$
     
     \item Eliminate clusters $C_i$ and $C_j$ from the distance matrix and add cluster $C_{i/j}$ with the distances to the other clusters computed as follows:
     
     $$d(C_l, C_{i/j}) = \frac{1}{2}(d(C_l, C_i) + d(C_l, C_j) - d(C_i, C_j))$$
-    for all other nodes $C_l$.
+    for all other nodes $C_l$;
     
     \item Repeat steps $2-5$ until there is only one cluster left.
 \end{enumerate}
@@ -258,7 +257,7 @@ Thus, we can estimate the distances from the known clusters to the new internal 
     \item Using expressions (\ref{eq:node_distance}), we compute the distances from the three clusters and the central node;
     \item  Merge clusters, $C_i$ and $C_j$, into a new one $C_{i/j}$ and recompute the distance matrix between $C_{i/j}$ and all the other clusters $c\in C_l$ by a simple average expression:
     
-    $$d(c, C_{i/j}) = \frac{d(c, C_i) + d(c, C_j)}{2}$$
+    $$d(c, C_{i/j}) = \frac{d(c, C_i) + d(c, C_j)}{2};$$
     
     \item Repeat steps $2-4$ until there is only one cluster left.
 \end{enumerate}
@@ -277,6 +276,274 @@ All these methods output a tree with some topology, $\mathcal{T}$ along with the
 
 % Fitch-margoliash: 1. original paper: https://sci-hub.se/https://science.sciencemag.org/content/155/3760/279/tab-pdf ; 2. Text book: file:///Users/manuelsantos/Desktop/Baum,%20Jeremy%20O._%20Zvelebil,%20Marketa%20-%20Understanding%20Bioinformatics%20(2008,%20Garland%20Science_Taylor)%20-%20libgen.lc.pdf
 
+
+\section{Security Definition} \label{secDefition}
+
+In this chapter, we consider a multiparty computation scenario that is secure against \textit{semi-honest} parties. This means that all the parties strictly follow the protocol but can use their inputs, received messages and outputs to deduce any additional information. As such, these are also commonly called \textit{honest-but-curious} parties. Nevertheless, we can extend the protocol to the malicious setting, by simply implementing a two-party secure computation protocol that is secure against malicious adversaries \cite{Evans2018}. Our security will follow the simulation paradigm and we start with the definition of security in a multi-party setting. The formal definition is taken from \cite{Evans2018}.
+
+\textit{Notation}. 
+
+\begin{itemize}
+    \item $\mathcal{F}$ denotes the ideal functionality to be computed in the SMC session, i.e. $\mathcal{F}: \mathcal{X}^n \rightarrow \mathcal{Y}^n$ where $n$ is the number of parties participating in the SMC and $\mathcal{X}$ and $\mathcal{Y}$ are the input and output space of each party, respectively. $X^i\in \mathcal{X}$ and $Y^i\in \mathcal{Y}$ denote the sets of input and output of party $P^i$, respectively. Also, for short, $X = (X^1, ..., X^n)$ and $Y = (Y^1, ..., Y^n)$;
+    \item $\pi$ denotes the protocol that implements the ideal functionality $\mathcal{F}$;
+    \item $C$ is the set of corrupted parties;
+    \item $\mathtt{view}^i_\pi(X) := (X^i, r^i; m_1^i,...,m_t^i)$. This tuple is called the view of party $P^i$ and it contains its inputs ($X^i$), its random-tape value ($r^i$) and the messages $m_j^i$ received during the SMC execution;
+    \item $\mathtt{output}_\pi(X) = (\mathtt{output}^1_\pi(X), ..., \mathtt{output}^n_\pi(X))$, where $\mathtt{output}^i_\pi(X)$ is the output of party $i$ computed from its view $\mathtt{view}^i_\pi(X)$;
+    \item $Sim$ is a probabilistic polynomial-time simulator in the ideal-world;
+    \item The distribution on inputs $X$ given by a real-world execution of the protocol $\pi$:
+    
+    \begin{equation*}
+    \mathtt{Real}_\pi(C; X):=\big\{\{ \mathtt{view}^i_\pi(X) : i\in C \}, \mathtt{output}_\pi(X) \big\}_{X}
+    \end{equation*}
+    
+    \item The distribution on inputs $X$ given by the ideal-world simulation of the parties' view: 
+    
+    \begin{equation*}
+    \mathtt{Ideal}_{Sim,\mathcal{F}}(C; X):=\big\{ Sim\big(\{(X^i, \mathcal{F}(X^i)) : i\in C \}\big), \mathcal{F}(X) \big\}_X
+    \end{equation*}
+\end{itemize}
+
+\begin{definition}[Semi-honest security]\label{def:security}
+A protocol securely realizes $\mathcal{F}$ in the presence of semi-honest adversaries if there exists a simulator $Sim$ such that, for every subset of corrupted parties $C$ and all inputs $X$, we have
+
+\begin{equation}
+    \mathtt{Real}_\pi(C; X) \stackrel{c}{\equiv} \mathtt{Ideal}_{Sim, \mathcal{F}}(C; X)
+    \label{eq:SH_security}
+\end{equation}
+where $\stackrel{c}{\equiv}$ denotes computational indistinguishability.
+
+\end{definition}
+
+This definition conveys the notion that whatever can be computed by a party during the execution of the protocol is only based on his inputs and outputs, i.e. the execution of the protocol do not provide any further information. This is equivalent to expression (\ref{eq:SH_security}), which states that the distribution of the view and outputs in a real-world execution is computationally indistinguishable from the distribution generated by a simulator and the functionality output. It is also worth noting that, as it is proved in \cite{Lindell2017}, for deterministic $\mathcal{F}$ we have that definition III.1 is equivalent to the simpler case where the $\mathtt{Real}$ and $\mathtt{Ideal}$ distributions do not take into account the output of the real protocol execution and the output of the functionality, respectively, i.e.
+
+$$\mathtt{Real}_\pi(C; X) = \{ \mathtt{view}^i_\pi(X) : i\in C \}_X$$
+
+and
+
+$$\mathtt{Ideal}_{Sim, \mathcal{F}}(C; X) = \big\{ Sim\big(\{(X^i, \mathcal{F}(X^i)) : i\in C \}\big) \big\}_{X}.$$
+
+Therefore, we just need to build a simulator that satisfies expression (\ref{eq:SH_security}) for the $\mathtt{Real}_\pi(C; X)$ and $\mathtt{Ideal}_{Sim, \mathcal{F}}(C; X)$ given as above in order to prove security.
+
+\subsection{Distance matrix functionality}
+
+For our private phylogenetic tree problem, the ideal functionality $\mathcal{F}$ outputs the distance matrix according to the selected evolution model (Jukes-Cantor, Kimura 2-parameter, F84 or LogDet). We denote by $\mathtt{DM}_{d},\, d\in\{\text{JC}, \text{K2P}, \text{F84}, \text{LD}\}$ such a functionality. Note that this functionality is deterministic and, as we pointed before, we just have to prove expression (\ref{eq:SH_security}) to hold for the simpler definition of $\mathtt{Real}$ and $\mathtt{Ideal}$.
+
+The protocol that privately computes the distance matrix $\mathtt{DM}_{d}$ is built up by many invocations of a two-party distance functionality, denoted by $\mathtt{D}_d$ for $d\in\{\text{JC}, \text{K2P}, \text{F84}, \text{LD}\}$. Consequently, we can reduce the the security of $\mathtt{DM}_{d}$ to that of $\mathtt{D}_d$ and use the composition theorem proved in \cite{Goldreich98} %\cite{http://www.wisdom.weizmann.ac.il/~/oded/PSX/prot.pdf pag24} 
+to prove $\mathtt{DM}_{d}$ security. 
+
+Before presenting the composition theorem, we provide some informal definitions. We have that an \textit{oracle-aided} protocol using the \textit{oracle-functionality} $f$ is a protocol where the parties can interact with an oracle which outputs to each party according to $f$. Also, when an oracle-aided protocol privately computes some $g$ in the sense of (\ref{eq:SH_security}) using the oracle-functionality $f$, we say that it \textit{privately reduces} $g$ to $f$. For a more detailed discussion on this topic, we refer the interested reader to \cite{Goldreich98}. The composition theorem for the semi-honest model can therefore be stated as follows:
+
+\begin{theorem}(Composition theorem)\label{compositionthm}
+Suppose that $g$ is privately reducible to $f$ and that there exists a protocol for privately computing $f$. Then, there exists a protocol for privately computing $g$.
+\end{theorem}
+
+In other words, there exists a private protocol of $g$ when the oracle-functionality $f$ is substituted by its real private protocol in the corresponding oracle-aided protocol $g$.
+
+
+
+\section{Quantum Tools} \label{quantumTools}
+
+In this section, we present three quantum primitives used in the private computation of phylogenetic trees, rendering a full quantum-proof solution.
+
+
+\subsection{Quantum oblivious key distribution}
+
+We explored the concept of oblivious keys in chapter~\ref{chapter_QOT}. To generate these oblivious keys, we saw that we can follow the prepare-and-measure quantum approach developed by Bennet \cite{BBCS91} along with some commitment functionality. As an example, Lemus et al. \cite{Lemus20} proposed to use the Halevi and Micali classical bit commitments based on universal and cryptographic hashing \cite{HM96}. Thus, its security is based on the laws of physics and on the fact that there is no significant quantum speed-up in finding collisions on the hash-based bit commitments \cite{Shi02, ABLST17, Lemus20}. Also, as discussed in \cite{Lemus20, Santos2021}, this protocol has an important security feature: it is resistant against \textit{intercept now - decipher later} attacks. It this chapter, we call quantum oblivious key distribution (QOKD) the subprotocol of BBCS-based QOT protocols that comprises all the phases excluding the transfer phase. For illustration, the QOKD protocol in the bounded-quantum-storage model, $\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$, is summarized in Figure~\ref{fig:QOKD_prot}.
+
+\begin{figure}[h!]
+    \centering
+        \begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+            
+            \centerline{$\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$ \textbf{protocol}}
+            
+            \
+            
+            \textbf{Parameters:} $n$, security parameter.
+            
+            \textbf{Alice's input:} $(m_0, m_1)\in\{0,1\}^l$ (two messages). 
+            
+            \textbf{Bob's input:} $b\in\{0,1\}$ (bit choice).
+            
+            \
+            
+                        \textit{BB84 phase}:
+            \begin{enumerate}
+                \item Alice generates random bits $\bm{x}^{\mathsf{A}}\leftarrow_{\$}\{0,1\}^n$ and random bases $\bm{\theta}^{\mathsf{A}}\leftarrow_{\$}$~$\{+,\times\}^n$. Sends the state $\ket{\bm{x}^{\mathsf{A}}}_{\bm{\theta}^{\mathsf{A}}}$ to Bob.
+                \item Bob randomly chooses bases $\bm{\theta}^{\mathsf{B}}\leftarrow_{\$}$~$\{+,\times\}^n$ to measure the received qubits. We denote by $\bm{x}^{\mathsf{B}}$ his output bits.
+            \end{enumerate}
+            
+            \
+            
+			\textit{Waiting time phase}:
+            \begin{enumerate}
+            \setcounter{enumi}{2}
+                \item Both parties wait time $\Delta t$.
+            \end{enumerate}            
+            
+            \
+            
+            \textit{Oblivious key phase}:
+            \begin{enumerate}
+            \setcounter{enumi}{3}
+                \item Alice reveals to Bob the bases $\bm{\theta}^{\mathsf{A}}$ used during the \textit{BB84 phase} and sets his oblivious key to $\mathsf{ok}^{\mathsf{A}}:=\bm{x}^{\mathsf{A}}$.
+                \item Bob computes $\mathsf{e}^\mathsf{B} = \bm{\theta}^{\mathsf{B}} \oplus \bm{\theta}^{\mathsf{A}}$ and sets $\mathsf{ok}^{\mathsf{B}}:=\bm{x}^{\mathsf{B}}$.
+            \end{enumerate}
+            
+            
+            \
+            
+        \textbf{Alice's output:} $\mathsf{ok}^{\mathsf{A}}$.
+        
+        \textbf{Bob's output:} $(\mathsf{ok}^{\mathsf{B}}, \mathsf{e}^\mathsf{B})$.
+        
+        \end{tcolorbox}
+    \caption{QOKD protocol in the bounded-quantum-storage model.}
+    \label{fig:QOKD_prot}
+\end{figure}
+
+
+\subsection{Quantum random number generator}
+
+A random number generator (RNG) is another very important tool in the realm of secure multiparty computation. The SMC security can be compromised and the parties' privacy can be broken if the RNG used is predictable. An attack of this kind was reported in \cite{ALSZ13} where the authors exploited the Java weak random number generator used in v0.1.1 FastGC \cite{YE11}. This attack allowed them to disclose the inputs of both parties in an SMC scenario. It also highlights the fact that it is not possible to use any kind of RNG for cryptographic purposes.
+
+In the case of cryptographically secure pseudorandom number generators (CSRNG), it is crucial that it provides both forward and backward security. The former means that an attacker should not be able to predict the next generated number even when he knows all the generated sequence. The latter means that an attacker should not be able to predict all the generated sequence from a small set of generated elements. These two properties are not present in common RNGs. For example, linear congruential generators do not fit for cryptographic tasks since they can be easily predicted as reported in \cite{HS85}. Also, Krawczk found that a large class of general congruential generators do not provide forward security even for obscured parameters \cite{K92}. So, in order to produce some CSRNG, instead of using linear operations, the research community decided to rely on the computational intractability of computing the discrete logarithm. Both \cite{BM84} and \cite{BBS86} use modular exponentiation as an intermediate step in order to generate some pseudorandom bit. As mentioned above, all the cryptographic protocols with their security based on the discrete logarithm problem are threatened by quantum computers and these CSRNG protocols are not an exception. Besides this technique, one could use either AES or DES as cryptographically random generator.
+
+Although these techniques are used to provide unpredictability and backward secrecy, all the randomness relies on some initial seed. This seed is used because all the process is based on deterministic algorithms. So, a pseudo RNG can be viewed as a randomness extractor from some initial random value. For this reason, it is crucial to use an initial random value that is as close as possible to a truly random value. This can be generated from different sources and usually, the best randomness comes from physical devices (e.g. atomic decay \cite{Alkassar2005} or thermal noise \cite{GaviriaRojas2017}). So, a potentially good source of true RNG comes from natural phenomena where some part of the system is used as the source of entropy. In the case of classical natural phenomena, the entropy is frequently taken from some unknown or chaotic subsystem which can ultimately be described by a deterministic theory. In this case, the unpredictability drawn from the system’s entropy comes from our lack of knowledge and inability to fully grasp the underlying complex natural mechanisms. Also, some classical phenomena (e.g. mouse pointers) may not have enough entropy to generate good quality random numbers. However, quantum natural phenomena have their roots in quantum mechanics which is intrinsically related to probability theory. For this reason, quantum systems can be potential sources of entropy even assuming complete knowledge of the system. This comes from the fact that, in quantum mechanics, we only have access to the probability distribution of the system's state and we can only know it after measuring it \cite{HerreroCollantes2017}.
+
+
+% Furthermore, QRNG are naturally private due to its quantum nature. In the case of classical true number generators, the phenomena from which entropy is extracted (e.g. atmospheric noise) can be measured by more than one observer. In some classical cases (e.g. temperature noise of the system) an adversary party can influence the phenomena and introduce a strong bias on the extracted entropy \cite{Markettos2009, Bayon2013}. However, for QRNG the laws of Quantum Mechanics forbids an attacker to clone a quantum state and perform a measurement without disturbing the system. Thus, QRNG naturally preserves the privacy of the number generated.
+
+Within the scope of SMC, the generation of the circuit's wire keys must be guaranteed to be unpredictable and efficient. All these features can be achieved with a quantum RNG (QRNG) \cite{Ferreira2021}.
+
+\subsection{Quantum key distribution}
+
+As we will explain in the last section, part of the communication between the parties should be kept encrypted. Message encryption is commonly achieved with symmetric cryptographic tools, such as AES (Advanced Encryption Scheme) or the perfect cypher One-Time pad. These symmetric tools are used to encrypt the communication content through a common key assumed to be only known by both communicating parties. However, the techniques used to distribute a common key cannot be realized using just symmetric cryptography and one needs asymmetric cryptography. Unfortunately, most of the commonly used techniques in asymmetric cryptography (RSA, Elliptic Curves or Diffie-Hellman) rely on computational assumptions that can be broken by a quantum computer through the already mentioned Shor's algorithm \cite{Shor1995}.
+
+So, to render a quantum-resistant privacy-preserving solution, we make use of quantum key distribution (QKD) protocol to share symmetric keys to be used along with symmetric cryptography \cite{Pirandola2020, Almeida2020, Silva2019, Almeida2021}. Its security relies on the laws of quantum physics and it is proven to be resistant against computationally unbounded adversaries \cite{Renner05, Tomamichel2017}. This level of security comes from one very important quantum property known as the No-Cloning theorem. This property ensures that it is not possible to measure a quantum state without introducing a measurable perturbation in the system. Thus, both parties enrolling in the QKD protocol will be able to detect a potential eavesdropper in case some adversary tries to intercept and read the quantum signals.
+
+
+%Although theoretically QKD provides perfect security, its infield implementation comes with some challenges:
+%
+%\begin{itemize}
+%    \item The classical channel used for post-processing protocols need to be authenticated, meaning that both entities already need to share some key. 
+%    \item The maximum distance between parties is limited due to signal losses in the quantum channel and the impossibility to amplify the signal. Currently the maximum achieved distance is around 500 km with the Twin-Field approach [CZLJZH20].
+%    \item QKD physical implementations are still prone to attacks due to hardware imperfections [Attacks on practical quantum key distribution systems (and how to prevent them)]. Even for measurement-device-independent (MDI) QKD systems which strives to eliminate detection side loopholes, the work presented in  [PYZDLGJ20] claims to be able to hack it with $60\%$ success rate of raw keys.
+%    \item The price QKD system is still very high for household.
+%\end{itemize}
+
+
+
+\section{Software tools} \label{softTools}
+
+%It is crucial to have a well coordinated software layer in order to coordinate the above elements and compute a privacy-preserving phylogenetic tree algorithm assisted with quantum technologies. 
+
+Next, we present the open-source tools used to implement the system presented in the subsequent sections.
+
+\subsection{CBMC-GC}
+
+The CBMC-GC compiler \cite{F14} is used in step $1)$ of Yao GC protocol to generate the boolean circuit representation of the desired function. It translates C-like code into boolean circuits based on a model checking tool called CBMC and it optimizes circuits for size and depth \cite{Bscher2017, Buescher2016}. HyCC \cite{Bscher2018} is also a potential candidate for this step as it builds upon CBMC-GC. However, it aims to build circuits for hybrid MPC protocols in which our system is not based.
+
+\subsection{Libscapi}
+
+The Libscapi library \cite{Libscapi} implements several important cryptographic primitives for two-party and multi-party protocols. It is extensively used to implement steps $2-5$ of the Yao GC protocol in the repository MPC-Benchmark \cite{mpc_benchmark}. This implementation has integrated one of the most efficient OT extension protocols \cite{K15} along with the base OTs proposed by Chou and Orlandi \cite{C15}.
+
+\subsection{PHYLIP}
+
+The PHYLIP package \cite{F89} is a C++ open-source project that provides a set of programs to infer phylogenies. Among other programs, it implements distance-based methods (UPGMA, Neighbour-Joining, Fitch-Margoliash) and computes the evolutionary distances described previously in section \ref{evolDist} (JK, K2P, F84, LD). Due to its modularity, we integrate PHYLIP distance methods with Yao protocol for evolutionary distances assisted with quantum technologies.
+
+
+
+
+\section{Secure multiparty computation of phylogenetic trees} \label{smcPhylo}
+
+The proposed system allows to securely compute a suite of algorithms that perform phylogeny analysis through the computation of phylogenetic trees. Based on the modular nature of distance-based algorithms, the system combines different evolution models with different phylogenetic algorithms. In this section, we describe how to integrate the tools presented in previews sections \ref{cryptoTools}-\ref{softTools} to develop this modular private system. 
+
+%For exposition purposes, we explore the scenario depicted in Figure 1 where $n=3$ parties (Alice, Bob and Charlie) possess three, two and one sequences, respectively ($m=6$), and that they want to jointly compute a phylogenetic tree on their input sequences privately.
+
+%- Describe the integration the tools
+%- Use case to explain three parties, 
+%- covid sequences use case. 
+%- Number of OTs for case and compare number of bit operations (computation and complexity based on the work developed in \cite{}. Formula for the number of SMC executions.
+
+\subsection{Functionality definition}\label{Functionality}
+
+As already mentioned in section \ref{phyloTree}, all distance-based methods are divided into two phases: distance matrix computation and distance matrix processing. Apart from the metric used, the first phase is similar among all methods whereas the second phase is specific to each one while depending only on the distance matrix. Therefore, each phase corresponds to a particular functionality that can be formalized as follows: 
+
+\begin{itemize}
+    \item $\mathtt{DM}$ functionality: receives some distance metric $d\in\{\text{JC}, \text{K2P}, \text{F84}, \text{LD}\}$ and all input sequences, and outputs a matrix with the pairwise distances between every sequence, i.e. 
+    
+    \begin{equation*}
+        \mathtt{DM}(d; s_1, ..., s_m) = \begin{pmatrix}
+                        0 & d_{1,2} & \cdots  & d_{1, m}\\
+                        d_{2,1} & 0 &        &  d_{2, m} \\
+                        \vdots &  \vdots  & \ddots &  \vdots \\
+                        d_{m,1} & d_{m,2} &   \cdots   &  0
+                        \end{pmatrix}
+    \end{equation*}
+    where $d_{i,j} = d(s_i, s_j)$ for short.
+    
+    \item $\mathtt{A}$ functionality: receives a distance matrix $M$ and an algorithm type $a \in \{\text{UPGMA}, \text{NJ}, \text{FM}\}$, and outputs the structure of the tree in newick tree format, i.e.
+    
+    $$\mathtt{A}(M, a) = (\text{subtree}_1:l_1,\, \text{subtree}_2:l_2)$$
+    where each $l_1$ and $l_2$ denotes the distance to its parent node, $\text{subtree}$ is built up by other subtrees and the leaves are given by $(\text{subtree}_{k-1}:l_{k-1},\, s_{i_k}:l_k)$. For consistency, leaves are also considered as a subtrees. Note that this representation is not unique, e.g. $(s_1:0.7, (s_2:0.3, s_3:0.5):0.5)$ and $((s_3:0.5, s_2:0.3):0.5, s_1:0.7)$ represent the same rooted tree depicted in Figure~\ref{fig:tree}. 
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.4]{Chapter_PrivatePhylogeneticTrees/tree.png}
+        \caption{Example of rooted phylogenetic tree.}
+        \label{fig:tree}
+    \end{figure}
+    
+    Therefore, if we consider the equivalence relation $\sim$,
+    
+    \begin{equation*}
+    \begin{split}
+    (\text{subtree}_1:l_1,\, &\text{subtree}_2:l_2)\\
+    &\sim \\
+    (&\text{subtree}_2:l_2,\, \text{subtree}_1:l_1)
+    \end{split}
+    \end{equation*}
+    
+
+    we have that the quotient set of the trees by $\sim$ satisfy their uniqueness from an evolutionary point of view.
+
+   
+\end{itemize}
+
+For simplicity, denote by $A_d^a$ the private protocol that implements sequentially both functionalities described above, i.e. $A_d^a(s_1, ... , s_m) = \mathtt{A}( \mathtt{DM}(d; s_1, ..., s_m), a)$. This leads to twelve possible combinations of algorithms $A_d^a$ for $d\in\{\text{JC}, \text{K2P}, \text{F84}, \text{LD}\}$ and $a \in \{\text{UPGMA}, \text{NJ}, \text{FM}\}$.
+
+\subsection{Private protocol}
+
+During the distance matrix computation phase ($\mathtt{DM}$) of the private $A_d^a$, each party has to compute the distance between his sequences and the other parties' sequences privately, i.e. without revealing his sequences to the other participating parties. Since this corresponds to several instances of a two-party secure computation, we make use of the Yao GC protocol described in \ref{yaoProtocol}. This means that each party has to generate the boolean circuit representation of the elected distance $d$, which is accomplished by the CBMC-GC software tool before the beginning of the protocol. In section \ref{privDistances}, we analyse how to generate these circuits.
+
+Now, since the Yao protocol is executed only between two different parties $P^i$ and $P^j$ for $i, j \in[n]$, the other participating parties $P^t$, $t\in[n]\setminus \{i,j\}$, do not have access to the distances computed between theses two parties' sequences. For this reason, $P^t$ has to receive the result of the Yao protocol execution from both $P^j$ and $P^i$. After this, each party outputs the distance matrix in the format required to be used as input in the PHYLIP programs \texttt{fitch}, \texttt{kitsch} and \texttt{neighbor}. 
+
+In the second phase of the protocol ($\mathtt{A}$), the parties do not need to communicate as this phase only depends on the quantities computed during the first phase. For this reason, this phase is executed internally by each party, who then compute the phylogenetic tree. This phase is carried out by the PHYLIP programs mentioned in the previous paragraph.
+
+These two phases are shown in Figure~\ref{fig:network} and we give more details about the protocol assisted with quantum technologies in the next section. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[scale=0.8]{Chapter_PrivatePhylogeneticTrees/PPT.png}
+    \caption{Overview of the $A^a_d$ network structure.}
+    \label{fig:network}
+\end{figure}
+
+\subsection{Quantum private protocol}\label{privProtocol}
+
+Let us specify the private $A_d^a$ protocol with the quantum cryptographic tools. Following the scenario depicted in Figure~\ref{fig:network}, we define $S_i = \{s_{i,1}, ..., s_{i,l}\}$ to be the set of sequences owned by party $P^i$. Also, we denote by $d_{(i,l), (j, k)}$ the distance between the $l$-th sequence of party $P^i$ and the $k$-th sequence of party $P^j$, i.e. $d_{(i,l), (j, k)} = d(s_{i,l}, s_{j,k})$.
+
+As briefly described before, the private $A_d^a$ protocol has two phases. The first phase requires different types of interactions between the parties to compute the desired distance matrix and the second phase is computed internally. Since the second phase is carried out internally, there is no need for communication between the parties. Therefore, the quantum cryptographic tools will only be used during the first private phase. In summary, each pair of parties require two quantum channels as depicted in Figure~\ref{fig:network}: one to generate oblivious keys for oblivious transfer and the other to generate symmetric keys for encryption.
+
+Consider the case where $P_t$ has to compute the distance matrix entry corresponding to distance $d_{(i,l), (j, k)}$. Depending on whether $P_t$ owns both sequences, one of the sequences or none of the sequences $(s_{(i,l)}, s_{(j,k)})$, $P_t$ proceed as follows:
+
+\begin{enumerate}
+    \item If $i=j=t$ (i.e. both sequences are owned by $P_t$), $d_{(i,l),(j,k)}$ is computed internally by $P_t$ (blue arrow in Figure~\ref{fig:network});
+    \item If $i=t$ and $j\neq t$ (i.e. one of the sequences is owned by $P_t$), $d_{(i,l),(j,k)}$ is computed privately with Yao GC protocol assisted with Quantum Oblivious Key Distribution system (red arrow in Figure \ref{fig:network});
+    \item If $i\neq t$ and $j\neq t$ (i.e. none of the sequences is owned by $P_t$), both parties $P_i$ and $P_j$ (or just party $P_i$ in case $i=j$) must send to $P_t$ the distance $d_{(i,j),(k,l)}$ encrypted with the symmetric key generated through the Quantum Key Distribution system (black arrow in Figure \ref{fig:network}).
+\end{enumerate}
 
 
 %\bibliography{bibforthesis}

@@ -5,7 +5,7 @@
 \contentsline {section}{List of Tables}{xv}{section*.8}%
 \contentsline {section}{List of Abbreviations}{xvii}{section*.10}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Technical Overview}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Technical overview}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Secure Multiparty Computation}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Boolean approach}{7}{subsection.2.2.1}%
@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {2.3.4}Mutually Unbiased Basis}{8}{subsection.2.3.4}%
 \contentsline {section}{\numberline {2.4}Universal Composability}{8}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Functionality definitions}{8}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Quantum Oblivious Transfer}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Quantum oblivious transfer}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Impossibility results}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}BBCS-based protocols}{11}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}BBCS protocol}{12}{subsection.3.2.1}%
@@ -56,4 +56,18 @@
 \contentsline {subsubsection}{UPGMA}{54}{section*.46}%
 \contentsline {subsubsection}{Neighbour-Joining}{55}{section*.47}%
 \contentsline {subsubsection}{Fitch-Margoliash}{56}{section*.48}%
-\contentsline {chapter}{Bibliography}{74}{chapter*.49}%
+\contentsline {section}{\numberline {6.2}Security Definition}{57}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Distance matrix functionality}{59}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Quantum Tools}{59}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Quantum oblivious key distribution}{60}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Quantum random number generator}{60}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Quantum key distribution}{62}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Software tools}{63}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}CBMC-GC}{63}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Libscapi}{63}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}PHYLIP}{63}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Secure multiparty computation of phylogenetic trees}{63}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Functionality definition}{64}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Private protocol}{65}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Quantum private protocol}{66}{subsection.6.5.3}%
+\contentsline {chapter}{Bibliography}{84}{chapter*.52}%
