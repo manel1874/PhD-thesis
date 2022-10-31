@@ -1,0 +1,284 @@
+%\documentclass[11pt]{report}
+
+
+
+%\begin{document}
+
+\chapter{Private phylogenetic trees}
+
+Several privacy-enhancing technologies (PET) (differential privacy \cite{Li2016}, homomorphic encryption \cite{Armknecht2015} and secure multiparty computation) have already been applied to biomedical data analysis \cite{Verhaert2018, Scardapane2017, Maulany2018, Kikuchi2018, Tawfik2018}. In particular, these classical techniques have been used in the context of genomic private data analysis. As a way to push research and innovation forward, there have been several competitions \cite{Wang2017} focused on developing faster and more secure solutions in the field of genomic analysis. Also, in recent surveys \cite{MY19, Naveed2015}, the authors describe the role of PETs in four different computational domains of the genomic's field (genomic aggregation, GWASs and statistical analysis, sequence comparison and genetic testing). However, they do not provide any reference covering privacy-preserving methods applied to phylogeny inference. 
+
+In contrast to classical technologies, the usage of quantum cryptographic technologies in private computation has not been widely reported. Chan et al. \cite{Chan2014} developed real-world private database queries assisted with quantum technologies and in \cite{Ito2017} the authors simply suggest that their implementation of quantum oblivious transfer is suitable to be applied in an SMC environment. %In \cite{Pinto2020}, it is presented a system assisted with quantum technologies for the private recognition of composite signals in genome and proteins and in \cite{SGPM21} the authors give a brief description of a private UPGMA (Unweighted Pair Group Method with Arithmetic mean) protocol assisted with quantum technologies. 
+Despite its little integration with PETs, quantum cryptographic technologies have already reached a maturity level that enables this integration. Quantum key distribution (QKD) and quantum random number generators (QRNG) are currently being commercialized and applied to critical use cases (e.g. Governmental data storage and communications, Data centres \cite{AM19}) with in-field deployment (e.g. OpenQKD, https://openqkd.eu/). Quantum Oblivious Key Distribution (QOKD) protocol is based on the same technology as QKD and QRNG, benefiting from its development and allowing to generate the necessary resource used to execute OT \cite{Lemus20, JSGBBWZ11, KWW12}. 
+
+%Furthermore, only SMC classical frameworks have been applied to the private analysis of genomic data. In a recent survey \cite{MY19}, the authors describe the role of privacy enhancing techniques (Differential Privacy, Homomorphic Encryption and SMC) in four different computational domains (genomic aggregation, GWASs and statistical analysis, sequence comparison and genetic testing). However, to the best of our knowledge, there is no tailored protocol to the computation of phylogentic trees. 
+
+%Here we propose and demonstrate the feasibility of aSecure  Multiparty  Computation  (SMC)  system  assisted  with  quantum  communication  technologies  thatis  designed  to  compute  a  phylogenetic  tree  for  a  set  of  genome  sequences.  This  system  significantlyimproves  the  privacy  and  security  of  the  computation  thanks  to  three  quantum  cryptographic  protocolsthat  provide  security  against  quantum  computer  attacks.  Also,  it  decreases  the  complexity  of  the  actual computation when compared to a purely classical system. 
+
+In this chapter, we present a feasible modular private phylogenetic tree protocol that provides enhanced security against quantum computer attacks and decreases the complexity of the computation phase when compared to state-of-the-art classical systems. 
+%We present a feasible modular protocol for privately computing phylogenetic trees that is secure against Quantum Computer attacks and do not add any efficiency overhead during the execution phase. 
+The system is built on top of Libscapi \cite{Libscapi} implementation of Yao protocol and PHYLIP phylogeny package \cite{PH78} and it integrates three crucial quantum primitives: quantum oblivious transfer, quantum key distribution and quantum random number generator.
+
+This chapter follows a top-down approach. In section \ref{phyloTree}, we start by explaining the concept of phylogenetic trees and the distance-based algorithms used to generate these trees. In section \ref{secDefition}, we set down the security definitions that will be used to analyse and prove the system's security. %In section \ref{cryptoTools}, we explain the cryptographic tools used in the system. 
+In sections \ref{quantumTools} and \ref{softTools}, we describe the quantum cryptographic tools and the software tools that are integrated into the protocol, respectively. In section \ref{smcPhylo}, we describe the proposed SMC system for phylogenetic trees. In section \ref{quantumTechIntegration} we explain how the quantum cryptographic tools are integrated into the system. Section \ref{systemSecurity} is devoted to the theoretical security analysis of the protocol and in section \ref{CompleAnalysis} we perform a complexity analysis. In the last section we present a performance comparison of the system between a classical-only and a quantum-assisted implementation.
+
+
+
+\section{Phylogenetic trees} \label{phyloTree}
+
+%Phylogenetic trees are commonly compared with family trees in the following sense. The same way as family trees represent the historical ties of blood, phylogenetic trees represent the historical ties of genes. Thus, p
+Phylogenetic trees are diagrams that depict the evolutionary ties between groups of organisms \cite{M10} and are composed of several nodes and branches. The nodes represent genome sequences and each branch connects two nodes. It is important to note that the terminal nodes (also called leaves) represent known data sequences, whether internal nodes are ancestral sequences inferred from the known sequences \cite{Z06, Felsenstein2003}. The length of the branches connecting two nodes represents the number of substitutions that have occurred between them. However, this quantity must be estimated because it cannot be computed directly using the sequences. In fact, by simply counting the number of sites where two nodes have different base elements (Hamming distance), we underestimate the number of substitutions that have occurred between them. 
+
+The best way to compute a correct phylogenetic tree depends on the type of species and sequences under analysis and the assumptions we make on the substitution model of the sequences. By a correct tree, we mean a tree that depicts as approximate as possible the real phylogeny of the sequences, i.e. the real ties between known sequences and inferred ancestors. These assumptions lead to different algorithms which can be divided into two categories:
+
+\begin{enumerate}
+    \item Distance-based methods: they base their analysis on the evolutionary distance matrix which contains the evolutionary distances between every pair of sequences. The evolutionary distance used also depends on the substitution model considered. These methods are computationally less expensive when compared to character-based methods.
+    \item Character-based methods: they base their analysis on comparing every site (character) of the known data sequences and do not reduce the comparison of sequences to a single value (evolutionary distance). 
+\end{enumerate}
+
+In this work, we will only consider the distance-based algorithms that are part of the PHYLIP \cite{F89} distance matrix models, namely: Fitch-Margoliash (\texttt{fitch} and \texttt{kitsch}), Neighbour Joining  (\texttt{neighbor}) and UPGMA (\texttt{neighbor}). Also, we will only consider the evolutionary distances developed in PHYLIP \texttt{dnadist} program:  Jukes-Cantor (JC) \cite{JC69}, Kimura 2-parameter (K2P) \cite{K80}, F84 \cite{F84} and LogDet \cite{L94}. We refer interested readers on this topic to some textbooks about phylogenetic analysis \cite{Z06, Felsenstein2003}. %[Yang, Z. (2006).	Computational molecular evolution. Oxford University Pres, Felsenstein,	J.	(2004). Inferring phylogenies and Phylogenetic Inference, chpt 11 Swofford].
+
+In the next two sections, we give an overview of these distance-based methods to build some intuition on how to tailor them to a private setting. We start by looking at the different evolutionary distances and then at the distance-based algorithms.
+
+\subsection{Evolutionary distances} \label{evolDist}
+
+The evolutionary distance depends on the number of substitutions estimated between two sequences, which is governed by the substitution model used. So, before defining a suitable distance, it is important to have a model that describes the substitution probability of each nucleotide across the sequences at a given time. 
+
+The distances considered in this work can be divided into two groups by their assumptions. JC, K2P and F84 assume that the substitution probabilities remain constant throughout the tree, (i.e. stationary probabilities), whether the LogDet distance assumes that the probabilities are not stationary.  
+
+%"Since the genetic distance cannot be observed directly, statistical techniques are necessary to infer this quantity from the data".
+
+
+%These must be additive in the sense that the distance between sequence $x$ and sequence $z$ with intermediate sequence $y$ must be given by the additive formula below:
+
+%$$d_{xz} = d_{xy} + d_{yz}$$
+
+%So, before computing phylogenetic trees with this property, we have to estimate the evolutionary distance first. In order to do so, it is important to have a model that describes the substitution probability of each nucleotide across the sequences at a given time. The four distances considered in this work falls into two types of assumptions: LogDet distance assumes that the substitution probabilities may not remain constant throughout the tree and the other three distances (JC, K2P and F84) assume stationary probabilities.
+
+Also, the first three evolutionary distances (JC, K2P and F84) assume an evolutionary model that can be described by a \textit{time-homogeneous stationary Markov} process. %This reflects the fact that these models have the following assumptions: %\begin{enumerate}
+%    \item All the nucleotide replacements are random and independent of each other;
+%    \item The nucleotide frequencies present in the data do not change over time and from sequence to sequence.
+%\end{enumerate} 
+This Markov process is based on a probability matrix $\mathbf{P}(t)$ that defines the transition probabilities from one state to the other after a certain time period $t$. It can be shown \cite{PM09} %check references [https://www2.ib.unicamp.br/profs/sfreis/SistematicaMolecular/Aula06SelecaoModelosSubstituicaoI/Leituras/The%20Phylogenetic%20Handbook%20-%20Chapter%204.pdf]
+that this probability is given by 
+
+\begin{equation}
+\mathbf{P}(t) = e^{\mathbf{Q}t}
+\label{eq:probability}
+\end{equation}
+where the rate matrix $\mathbf{Q}$ is of the form given by (\ref{eq:Qmatrix}).
+
+%\begin{figure*}[h!]
+% ensure that we have normalsize text
+%\normalsize
+%\begin{equation}
+%    \mathbf{Q} = \begin{pmatrix}
+%-\mu(a\pi_C+b\pi_G + c\pi_T) & a\mu\pi_C & b\mu\pi_G & c\mu\pi_T\\
+%g\mu\pi_A&-\mu(g\pi_A+d\pi_G + c\pi_T) & d\mu\pi_G & e\mu\pi_T\\
+%h\mu\pi_A & i\mu\pi_C & -\mu(h\pi_A+j\pi_C + f\pi_T) & f\mu\pi_T\\
+%j\mu\pi_A & k\mu\pi_C & l\mu\pi_G & -\mu(i\pi_A+k\pi_C + l\pi_G)
+%\end{pmatrix}
+%\label{eq:Qmatrix}
+%\end{equation}
+% The spacer can be tweaked to stop underfull vboxes.
+%\vspace*{4pt}
+%\end{figure*}
+
+\begin{footnotesize}
+\begin{equation}
+\mathbf{Q} = \begin{pmatrix}
+-\mu(a\pi_C+b\pi_G + c\pi_T) & a\mu\pi_C & b\mu\pi_G & c\mu\pi_T\\
+g\mu\pi_A&-\mu(g\pi_A+d\pi_G + c\pi_T) & d\mu\pi_G & e\mu\pi_T\\
+h\mu\pi_A & i\mu\pi_C & -\mu(h\pi_A+j\pi_C + f\pi_T) & f\mu\pi_T\\
+j\mu\pi_A & k\mu\pi_C & l\mu\pi_G & -\mu(i\pi_A+k\pi_C + l\pi_G)
+\end{pmatrix}
+\label{eq:Qmatrix}
+\end{equation}
+\end{footnotesize}
+
+
+In $\mathbf{Q}$, each entry $\mathbf{Q}_{ij}$ represents the substitution rate from nucleotide i to j and both its columns and rows follow the order $A$, $C$, $G$, $T$. $\mu$ is the total number of substitutions per unit time and we can define the evolutionary distance, $d$, to be given by $d = \mu t$. The parameters $a, b, c, ..., l$ represent the relative rate of each nucleotide substitution to any other. Finally, $\pi_A, \pi_C, \pi_G, \pi_T$ describe the frequency of each nucleotide in the sequences. 
+
+From expression (\ref{eq:probability}), it is possible to define a likelihood function on the distance $d$ and use the maximum likelihood approach to get an estimation of the evolutionary distance. The likelihood function defines the probability of observing two particular sequences, $x$ and $y$, given the distance $d$:
+
+$$L(d) = \prod_{i=1}^n \pi_{x_i}P_{x_i, y_i}\Big(\frac{d}{\mu}\Big)$$
+
+The parameters of $\mathbf{Q}$ are defined differently depending on the evolutionary model used and the maximum likelihood solution leads to different evolutionary distances. 
+
+\subsubsection{Jukes-Cantor}\label{JK_model}
+
+The Jukes-Cantor model \cite{JC69} is the simplest possible model based on $\mathbf{Q}$ as given in (\ref{eq:Qmatrix}). It assumes the frequencies of the nucleotide to be the same, i.e. $\pi_A = \pi_C = \pi_G = \pi_T = \frac{1}{4}$ and sets the relative rates $a=b= ... = l = 1$. This model renders an evolutionary distance between two sequences $x$ and $y$ given by:
+
+\begin{equation}
+d_{xy} = -\frac{3}{4}\ln \bigg(1- \frac{4}{3}\frac{h_{xy}}{n}\bigg)
+\label{eq:JC_distance}
+\end{equation}
+where $h_{xy}$ is the uncorrected hamming distance and $n$ the length of the sequences.
+
+\subsubsection{Kimura 2-parameter}\label{K2P_model}
+
+This model \cite{K80} distinguishes between two different nucleotide mutations:
+
+\begin{enumerate}
+    \item Type I (transition): $A\leftrightarrow G$, i.e. from purine to purine, or $C\leftrightarrow T$, i.e. from pyrimidine to pyrimidine.
+    \item Type II (transversion): from purine to pyrimidine or vice versa.
+\end{enumerate}
+
+These two different types of transformation lead to different probability distributions denoted by $P$ and $Q$, where P is the probability of homologous sites showing a type I difference, while Q is that of these sites showing a type II difference. So, the Kimura \cite{K80} metric between $x$ and $y$ is given by the following:
+
+\begin{equation}
+d_{xy} = -\frac{1}{2}\ln\bigg( \big(1-2P-Q\big) \sqrt{1-2Q} \bigg)
+\end{equation}
+where $P=\frac{n_1}{n}$, $Q=\frac{n_2}{n}$ and $n_1$ and $n_2$ are respectively the number of sites for which two sequences differ from each other with respect to type I ("transition" type) and type II ("transversion" type) substitutions.
+
+\subsubsection{F84}\label{F84_model}
+
+This model \cite{F84} also distinguishes different nucleotide transitions but do not assume the nucleotide frequencies to be the same. This leads to a more general distance which can be estimated in closed form:
+
+\begin{equation}
+\begin{split}
+    d_{xy} = -2 A\ln\bigg( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \bigg) \\
+    + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg)
+\end{split}
+\label{eq:F84_distance}
+\end{equation}
+where $A = \frac{\pi_C \pi_T}{\pi_Y} + \frac{\pi_A \pi_G}{\pi_R}$, $B=\pi_C\pi_T + \pi_A\pi_G$ and $C=\pi_R\pi_Y$ for $\pi_Y = \pi_C + \pi_T$ and $\pi_R = \pi_A + \pi_G$, and $P$ and $Q$ are defined as in the Kimura 2-parameter model above.
+
+Although more complex models can be considered with different combinations of parameters in $\mathbf{Q}$, not all of them produce a distance function that can be estimated in closed form. 
+
+\subsubsection{LogDet}\label{LD_model}
+
+As mentioned before, the models based on matrix $\mathbf{Q}$ assume that the probability matrix $\mathbf{P}(t)$ is stationary, i.e. remains constant throughout the tree. However, there are evolutionary scenarios where this assumption does not give a correct description of reality. The LogDet evolutionary distance \cite{L94} suits a wider set of models and considers the case where $\mathbf{P}(t)$ is different at each branch in the tree. This is given by
+
+\begin{equation}
+    d_{xy} = -\frac{1}{4}\ln\Bigg( \frac{\det F_{xy}}{\sqrt{\det \prod_x \prod_y}} \Bigg)
+\label{eq:LogDet_distance}
+\end{equation}
+where the divergence matrix $F_{xy}$ is a $4\times 4$ matrix such that the $ij-$th entry gives the proportion of sites in sequence $x$ and $y$ with nucleotide $i$ and $j$, respectively. Also, $\prod_x$ and $\prod_y$ are diagonal matrices where its $i-$th component correspond to the proportion of $i$ nucleotide in the sequence $x$ and $y$, respectively.
+
+\subsection{Distance-based algorithms}
+
+All distance-based methods reduce the comparison between sequences to their evolutionary distance. Although it may lead to less accurate phylogenetic trees, these methods are highly popular among researchers who have to handle large number of sequences. It is common to all of them to assume the following:
+
+\begin{enumerate}
+    \item The evolutionary distance computed between each pair is independent of all other sequences;
+    \item The estimated distance between each pair of sequences is given by the sum of the size of the branches that connect both of them.
+\end{enumerate}
+
+These algorithms are thus divided into two phase: 
+
+\begin{enumerate}
+    \item Distance computation phase: all the pairwise evolutionary distances are computed according to the selected model. This step is common to all distance-based methods;
+    \item Iterative clustering: aggregate the sequences in clusters iteratively. This step is specific to each method.
+\end{enumerate}
+
+Let us briefly describe three of the most common distance-based methods \cite{Z06}.
+
+\subsubsection{UPGMA}
+
+The Unweighted Pair Group Method with Arithmetic mean (UPGMA) method produces a rooted phylogenetic tree and assumes the data to be ultrametric, i.e. assumes that
+
+$$d_{xy} \leq \max(d_{xz}, d_{yz})$$
+for sequences $x$, $y$ and $z$. These two assumptions imply that all the sequences are equidistant to the inferred root sequence. 
+
+It starts by considering every sequence as a single-valued cluster. Then, it goes on merging the clusters according to the smallest difference between them and recomputes the distance matrix through a simple average of distances. In summary, we have the following steps:
+
+
+\begin{enumerate}
+    \item Merge clusters, $C_i = \{ c_i \}$ and $C_j = \{ c_j \}$ for sets $c_i$ and $c_j$, with the smallest distance present in the distance matrix, i.e. $d_{i,j}\leq d_{k,l}\, \forall k, l$. Create a new cluster $C_{i/j} = \{ \{ c_i, c_j \} \}$. This new cluster represents a branch between clusters $C_i$ and $C_j$;
+    \item Recompute the distance matrix according to the following formula:
+    
+    $$d_{i/j, l} = \frac{d_{i, l} + d_{j, l}}{2}$$
+    
+    for all other clusters $l$;
+    \item Eliminate clusters $C_i$ and $C_j$ from the distance matrix and add cluster $C_{i/j}$ with the distances computed as in the previous step;
+    \item Repeat steps $1-3$ until there is only one cluster left.
+\end{enumerate}
+
+%For further discussion about the UPGMA algorithm, we refer to \cite{upgma}
+
+\subsubsection{Neighbour-Joining}
+
+As we have seen, the UPGMA joins the clusters with the minimum distance between them. Now, the Neighbour-Joining method considers not only how close two clusters are, but it also considers how far these two clusters are from the others. Thus, the clusters to be merged should minimize the following quantity:
+
+$$q(C_i,C_j) = (r-2) d(C_i, C_j) - u(C_i) - u(C_j)$$
+where $r$ is the number of clusters in the current iteration and $u(C_i) = \sum_j d(C_i, C_j)$. 
+
+As opposed to the UPGMA algorithm, this method produces an unrooted tree and it can be summarized in the following steps:
+
+\begin{enumerate}
+    \item Consider every sequence as a single-valued cluster and connect it to a central point;
+    \item Compute a matrix $\mathcal{Q}$ where its entries are given by the quantity above, i.e. $\mathcal{Q}_{ij} = q(C_i,C_j)$;
+    \item Identify clusters $C_i$ and $C_j$ with the smallest value in the matrix $\mathcal{Q}$. Create a new node $C_{i,j}$ and join both clusters $C_i$ and $C_j$ to it. 
+    \item Assign to the branch $C_i C_{i/j}$ a distance given by:
+    
+    $$\frac{1}{2}d(C_i, C_j) - \frac{1}{2}\frac{(u_i - u_j)}{r-2}$$
+    
+    and to the branch $C_j C_{i/j}$ a distance given by:
+    
+    $$\frac{1}{2}d(C_i, C_j) - \frac{1}{2}\frac{(u_j - u_i)}{r-2}$$
+    
+    \item Eliminate clusters $C_i$ and $C_j$ from the distance matrix and add cluster $C_{i/j}$ with the distances to the other clusters computed as follows:
+    
+    $$d(C_l, C_{i/j}) = \frac{1}{2}(d(C_l, C_i) + d(C_l, C_j) - d(C_i, C_j))$$
+    for all other nodes $C_l$.
+    
+    \item Repeat steps $2-5$ until there is only one cluster left.
+\end{enumerate}
+
+%For further discussion about the Neighour-Joining algorithm, we refer to the original article \cite{cite}.
+
+\subsubsection{Fitch-Margoliash}
+
+This method renders an unrooted tree and also assumes that the distances are additive. It analyses iteratively three-leaf trees and computes the distance between three known nodes and one created internal node. This is based on the following observation. Given three clusters $C_i$, $C_j$ and $C_l$, and one internal node $a$ that is connected to all these three clusters, the distances between the clusters are given by:
+
+\begin{eqnarray}
+d(C_i, C_j) &= d(C_i, a) + d(a, C_j) \nonumber \\
+d(C_i, C_l) &= d(C_i, a) + d(a, C_l) \nonumber\\
+d(C_l, C_j) &= d(C_l, a) + d(a, C_j) \nonumber
+\end{eqnarray}
+
+from which we can easily see that 
+
+\begin{eqnarray}
+d(a, C_i) &= \frac{1}{2}\bigg(d(C_i, C_j) + d(C_i, C_l) - d(C_l, C_j)\bigg)\nonumber \\
+d(a, C_j) &= \frac{1}{2}\bigg(d(C_i, C_j) + d(C_l, C_j) - d(C_i, C_l)\bigg)\label{eq:node_distance}\\
+d(a, C_l) &= \frac{1}{2}\bigg(d(C_i, C_l) + d(C_l, C_j) - d(C_i, C_j)\bigg)\nonumber 
+\end{eqnarray}
+
+Thus, we can estimate the distances from the known clusters to the new internal node using the distances between the clusters as given in (\ref{eq:node_distance}). Based on this, the Fitch-Margoliash algorithm goes as follows:
+
+\begin{enumerate}
+    \item Consider every sequence as a single-valued cluster;
+    \item Identify the two clusters, $C_i$ and $C_j$, with the smallest distance in the distance matrix;
+    \item Consider all the other clusters as a single cluster $C_l$ and recompute the distance matrix with just three clusters. The distances between the identified clusters and the new cluster is given by an average value of the distances between the identified clusters and the elements inside the cluster $C_l$, i.e.
+    
+    $$d(C_i, C_l) = \frac{1}{|C_l|} \sum_{c\in C_l} d(C_i, c)$$
+    and similarly for $C_j$;
+    \item Using expressions (\ref{eq:node_distance}), we compute the distances from the three clusters and the central node;
+    \item  Merge clusters, $C_i$ and $C_j$, into a new one $C_{i/j}$ and recompute the distance matrix between $C_{i/j}$ and all the other clusters $c\in C_l$ by a simple average expression:
+    
+    $$d(c, C_{i/j}) = \frac{d(c, C_i) + d(c, C_j)}{2}$$
+    
+    \item Repeat steps $2-4$ until there is only one cluster left.
+\end{enumerate}
+
+
+\
+
+All these methods output a tree with some topology, $\mathcal{T}$ along with the distances between the branches. 
+
+
+% Distances: phylo_chap from downloads ;  log-det add https://core.ac.uk/reader/82420740 ; 
+
+% phylogenetic evolution: file:///Users/manuelsantos/Desktop/Roderick%20D.M.%20Page,%20Edward%20C.%20Holmes%20-%20Molecular%20Evolution_%20A%20Phylogenetic%20Approach%20(1998,%20Wiley-Blackwell)%20-%20libgen.lc.pdf
+
+% Dedução apresentada nas distâncias : The Phylogenetic Handbook (downloads)
+
+% Fitch-margoliash: 1. original paper: https://sci-hub.se/https://science.sciencemag.org/content/155/3760/279/tab-pdf ; 2. Text book: file:///Users/manuelsantos/Desktop/Baum,%20Jeremy%20O._%20Zvelebil,%20Marketa%20-%20Understanding%20Bioinformatics%20(2008,%20Garland%20Science_Taylor)%20-%20libgen.lc.pdf
+
+
+
+%\bibliography{bibforthesis}
+%\bibliographystyle{unsrt}
+%\end{document}

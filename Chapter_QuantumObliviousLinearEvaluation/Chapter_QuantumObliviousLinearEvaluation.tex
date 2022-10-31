@@ -1,0 +1,20 @@
+%\documentclass[11pt]{report}
+
+
+
+%\begin{document}
+
+\chapter{Quantum oblivious linear evaluation}
+
+Oblivious Linear Evaluation (OLE) is a cryptographic task that permits two distrustful parties, say Alice and Bob, to jointly compute the output of a linear function $f(x)=ax+b$ in some finite field, $\mathbb{F}$. Alice provides inputs $a, b\in\mathbb{F}$ and Bob provides $x\in\mathbb{F}$, while the output, $f(x)$, becomes available only to Bob. As the parties are distrustful, a secure OLE protocol should not permit Alice to learn anything about Bob's input, while also Alice's inputs should remain unknown to Bob.  OLE can be seen as a generalization of Oblivious Transfer (OT) \cite{Rabin81}, a basic primitive for secure two-party computation, which is a special case of secure multi-party computation \cite{Goldreichbook04,CCD88,Canetti00MPC}. OT has been shown to be complete  for secure multi-party computation \cite{Kilian}, i.e., any such task, including OLE, can be achieved given an OT implementation. 
+A compelling reason to study OLE protocols is that they can serve as building blocks for the secure evaluation of arithmetic circuits \cite{AIK11,DKMQ12,GNN17,DGNBNT17}, just like OT allows the secure evaluation of boolean circuits \cite{GMW87}. Specifically, OLE can be used to generate multiplication triples which are the basic tool for securely computing multiplication gates \cite{DGNBNT17}. Besides that, OLE has applications in more tasks for two-party secure computation  \cite{IPS09,ADINZ17,BCGI18,HIMV19,CDIKLOV19} and  Private Set Intersection \cite{GN19}.
+ 
+Impagliazzo and Rudich  proved that OT protocols require public-key cryptography and cannot just rely on symmetric cryptography \cite{IR89}. Consequently, OLE cannot rely on symmetric cryptography either, and we need to resort to public-key cryptography.  However, Shor's  quantum algorithm \cite{Shor94}  poses a threat to the currently deployed public-key systems, motivating the search for protocols secure against quantum attacks. Bennet et al. \cite{BBCS92} and Cr{\'e}peau \cite{C94} proposed the first protocols for Quantum OT (QOT). The no-go theorems by Lo and Chau \cite{LC97,LC98} and, independently, by Mayer \cite{Mayer97}, implied that an unconditionally secure QOT without any additional assumption is impossible. 
+A decade later, Damg\r{a}rd et al. proved the security of QOT in the stand-alone model under additional assumptions \cite{DFLSS09}, and Unruh \cite{Unruh10} showed that it is statistically secure and universally composable  with access only to ideal commitments.
+As far as quantum OLE (QOLE) is concerned, to the best of our knowledge, no protocol has been proposed as of now.
+Analogously to the classical case it is expected that one can implement QOLE based on QOT protocols. That said, in this work we propose a protocol for QOLE that, additionally, does not rely on any QOT implementation.
+
+OLE is commonly generalized to Vector OLE (VOLE). In this setting, Alice defines a set of $k$ linear functions $(\bm{a}, \bm{b})\in\mathbb{F}^k\times\mathbb{F}^k$ and Bob receives the evaluation of all these functions on a specified element $x\in\mathbb{F}$, i.e. $\bm{f}:=\bm{a} x+ \bm{b}$. One can think of VOLE as the arithmetic analog of string OT and show how it can be used  in certain Secure Arithmetic Computation and Non-Interactive Zero Knowledge proofs \cite{BCGI18}. Ghosh et. al  put further in evidence the usefulness of VOLE by showing that it serves as the building block of Oblivious Polynomial Evaluation \cite{GNN17}, a primitive which allows more sophisticated applications, such as password authentication, secure  list intersection,  anonymous complaint boxes \cite{NP06}, anonymous initialization for secure metering of client visits in servers \cite{NP99},  secure Taylor approximation of relevant functions (e.g. logarithm) \cite{LP02}, secure set intersection \cite{H18} and distributed generation of RSA keys \cite{G99}.  We also show how our QOLE protocol can be adapted to achieve secure VOLE.
+%\bibliography{bibforthesis}
+%\bibliographystyle{unsrt}
+%\end{document}

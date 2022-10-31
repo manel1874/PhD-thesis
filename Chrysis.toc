@@ -44,4 +44,16 @@
 \contentsline {subsubsection}{ALSZ13 comparison}{39}{section*.34}%
 \contentsline {subsubsection}{KOS15 comparison}{42}{section*.38}%
 \contentsline {section}{\numberline {4.3}Conclusion}{45}{section.4.3}%
-\contentsline {chapter}{Bibliography}{62}{chapter*.42}%
+\contentsline {chapter}{\numberline {5}Quantum oblivious linear evaluation}{47}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Private phylogenetic trees}{49}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Phylogenetic trees}{50}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Evolutionary distances}{51}{subsection.6.1.1}%
+\contentsline {subsubsection}{Jukes-Cantor}{52}{section*.42}%
+\contentsline {subsubsection}{Kimura 2-parameter}{52}{section*.43}%
+\contentsline {subsubsection}{F84}{53}{section*.44}%
+\contentsline {subsubsection}{LogDet}{53}{section*.45}%
+\contentsline {subsection}{\numberline {6.1.2}Distance-based algorithms}{54}{subsection.6.1.2}%
+\contentsline {subsubsection}{UPGMA}{54}{section*.46}%
+\contentsline {subsubsection}{Neighbour-Joining}{55}{section*.47}%
+\contentsline {subsubsection}{Fitch-Margoliash}{56}{section*.48}%
+\contentsline {chapter}{Bibliography}{74}{chapter*.49}%
