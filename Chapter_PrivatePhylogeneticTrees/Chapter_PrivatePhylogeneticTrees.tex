@@ -906,11 +906,12 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
 
 
 \begin{table}[t]
-    \centering
+    \begin{center}
     \begin{tabular}{c|ccccc}
         \toprule
-        \multicolumn{1-6}{c}{Classical} \\
-        \cmidrule%{1-6}
+        %\multicolumn{6}{c}{Classical} \\
+        %\cline{1-6}
+        %\midrule
         Nº of Seq. & 2 & 4 & 6 & 8 & 10 \\
         \midrule
         Comm. & 3,95\% & 0,98\% & 0,44\% & 0,25\% & 0,16\% \\
@@ -918,16 +919,18 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
         Comp. & 0,10\% & 0,08\% & 0,07\% & 0,07\% & 0,07\% \\
         \bottomrule
     \end{tabular}
-\caption{Percentage weight of each component in the classical-only system.}
+    \end{center}
 \label{table:classical_benchmark}
+\caption{Percentage weight of each component in the classical-only system.}
 \end{table}
 
 \begin{table}[t]
-    \centering
+    \begin{center}
     \begin{tabular}{c|ccccc}
         \toprule
-        %\multicolumn{6}{c}{Quantum} \\
-        %\cmidrule{1-6}
+        %\multicolumn{5}{c}{Quantum} \\
+        %\cline{1-6}
+        %\midrule
         Nº of Seq. & 2 & 4 & 6  & 8 & 10 \\
         \midrule
         Comm. & 3,75\% & 0,93\% & 0,39\% & 0,22\% & 0,14\% \\
@@ -935,8 +938,9 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
         Comp. & 0,10\% & 0,07\% & 0,06\% & 0,06\% & 0,05\% \\
         \bottomrule
     \end{tabular}
-\caption{Percentage weight of each component in the quantum-assisted system.}
+    \end{center}
 \label{table:quantum_benchmark}
+\caption{Percentage weight of each component in the quantum-assisted system.}
 \end{table}
 
 \begin{figure}
@@ -976,7 +980,7 @@ Future work is required to develop more efficient oblivious key management syste
 
 \section{Conclusion}
 
-In this work, we presented a Secure Multiparty Computation protocol assisted with quantum technologies tailored to distance-based algorithms of phylogenetic trees. It is a modular protocol that uses one distance metric taken from four possible evolutionary models (Jukes-Cantor, Kimura 2-parameter, F84 and LogDet) and three different protocols (UPGMA, Neighbour-Joining and Fitch-Margoliash). In total, we can implement twelve different combinations of protocols.
+In this work, we presented an SMC protocol assisted with quantum technologies tailored for distance-based algorithms of phylogenetic trees. It is a modular protocol that uses one distance metric taken from four possible evolutionary models (Jukes-Cantor, Kimura 2-parameter, F84 and LogDet) and three different protocols (UPGMA, Neighbour-Joining and Fitch-Margoliash). In total, we can implement twelve different combinations of protocols.
 
 The proposed system is based on ready to use libraries (CBMC-GC, Libscapi and PHYLIP) that are integrated with quantum technologies to provide a full quantum-proof solution. We use the quantum version of primitives that play a central role in the security of the system: oblivious transfer, encryption and random number generation.
 
