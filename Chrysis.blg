@@ -5,51 +5,81 @@ A level-1 auxiliary file: Introduction/Introduction.aux
 A level-1 auxiliary file: Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux
 A level-1 auxiliary file: Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux
 A level-1 auxiliary file: Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObliviousTransfer.aux
+A level-1 auxiliary file: Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousLinearEvaluation.aux
+A level-1 auxiliary file: Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.aux
+A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
+A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
+Reallocated field_info (elt_size=4) to 10888 items from 5000.
 Database file #1: References/References.bib
+Warning--I didn't find a database entry for "Goldreichbook04"
+Warning--I didn't find a database entry for "CCD88"
+Warning--I didn't find a database entry for "Canetti00MPC"
+Warning--I didn't find a database entry for "Kilian"
+Warning--I didn't find a database entry for "AIK11"
+Warning--I didn't find a database entry for "DKMQ12"
+Warning--I didn't find a database entry for "GNN17"
+Warning--I didn't find a database entry for "DGNBNT17"
+Warning--I didn't find a database entry for "IPS09"
+Warning--I didn't find a database entry for "ADINZ17"
+Warning--I didn't find a database entry for "BCGI18"
+Warning--I didn't find a database entry for "HIMV19"
+Warning--I didn't find a database entry for "CDIKLOV19"
+Warning--I didn't find a database entry for "GN19"
+Warning--I didn't find a database entry for "Shor94"
+Warning--I didn't find a database entry for "C94"
+Warning--I didn't find a database entry for "LC98"
+Warning--I didn't find a database entry for "Mayer97"
+Warning--I didn't find a database entry for "Unruh10"
+Warning--I didn't find a database entry for "NP06"
+Warning--I didn't find a database entry for "NP99"
+Warning--I didn't find a database entry for "LP02"
+Warning--I didn't find a database entry for "H18"
+Warning--I didn't find a database entry for "G99"
+Warning--I didn't find a database entry for "Damgrd2009"
 Warning--can't use both author and editor fields in S99
 Warning--empty booktitle in IKNP03
 Warning--empty journal in NNOB12
 Warning--empty booktitle in MR19
-You've used 170 entries,
+You've used 231 entries,
             1791 wiz_defined-function locations,
-            1493 strings with 30494 characters,
-and the built_in function-call counts, 43345 in all, are:
-= -- 3851
-> -- 2062
-< -- 42
-+ -- 752
-- -- 582
-* -- 3014
-:= -- 6707
-add.period$ -- 552
-call.type$ -- 170
-change.case$ -- 167
+            1892 strings with 42043 characters,
+and the built_in function-call counts, 59386 in all, are:
+= -- 5261
+> -- 2879
+< -- 59
++ -- 1049
+- -- 818
+* -- 4118
+:= -- 9146
+add.period$ -- 751
+call.type$ -- 231
+change.case$ -- 226
 chr.to.int$ -- 0
-cite$ -- 174
-duplicate$ -- 1995
-empty$ -- 4210
-format.name$ -- 582
-if$ -- 9875
+cite$ -- 235
+duplicate$ -- 2771
+empty$ -- 5723
+format.name$ -- 818
+if$ -- 13579
 int.to.chr$ -- 0
-int.to.str$ -- 170
-missing$ -- 151
-newline$ -- 838
-num.names$ -- 207
-pop$ -- 565
+int.to.str$ -- 231
+missing$ -- 209
+newline$ -- 1138
+num.names$ -- 267
+pop$ -- 780
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1024
+skip$ -- 1453
 stack$ -- 0
-substring$ -- 2582
-swap$ -- 566
-text.length$ -- 42
+substring$ -- 3444
+swap$ -- 817
+text.length$ -- 59
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 399
-width$ -- 173
-write$ -- 1888
-(There were 4 warnings)
+while$ -- 523
+width$ -- 234
+write$ -- 2562
+(There were 29 warnings)

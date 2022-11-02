@@ -6,8 +6,6 @@
 
 \chapter{Private phylogenetic trees}
 
-INCLUIR EM ANEXO O PROGRAMA
-
 Several privacy-enhancing technologies (PET) (differential privacy \cite{Li2016}, homomorphic encryption \cite{Armknecht2015} and secure multiparty computation) have already been applied to biomedical data analysis \cite{Verhaert2018, Scardapane2017, Maulany2018, Kikuchi2018, Tawfik2018}. In particular, these classical techniques have been used in the context of genomic private data analysis. As a way to push research and innovation forward, there have been several competitions \cite{Wang2017} focused on developing faster and more secure solutions in the field of genomic analysis. Also, in recent surveys \cite{MY19, Naveed2015}, the authors describe the role of PETs in four different computational domains of the genomic's field (genomic aggregation, GWASs and statistical analysis, sequence comparison and genetic testing). However, these surveys do not provide any reference covering privacy-preserving methods applied to phylogeny inference. 
 
 In contrast to classical technologies, the usage of quantum cryptographic technologies in private computation has not been widely reported. Chan et al. \cite{Chan2014} developed real-world private database queries assisted with quantum technologies and in \cite{Ito2017} the authors simply suggest that their implementation of quantum OT is suitable to be applied in an SMC environment. %In \cite{Pinto2020}, it is presented a system assisted with quantum technologies for the private recognition of composite signals in genome and proteins and in \cite{SGPM21} the authors give a brief description of a private UPGMA (Unweighted Pair Group Method with Arithmetic mean) protocol assisted with quantum technologies. 
@@ -19,7 +17,7 @@ Despite its little integration with PETs, quantum cryptographic technologies hav
 
 In this chapter, we present a feasible modular private phylogenetic tree protocol that leverages quantum communications. It provides enhanced security against quantum computer attacks and decreases the complexity of the computation phase when compared to a state-of-the-art classical-only system. 
 %We present a feasible modular protocol for privately computing phylogenetic trees that is secure against Quantum Computer attacks and do not add any efficiency overhead during the execution phase. 
-The system is built on top of Libscapi \cite{Libscapi} implementation of Yao protocol and PHYLIP phylogeny package \cite{PH78}. It integrates three crucial quantum primitives: quantum oblivious transfer, quantum key distribution and quantum random number generator.
+The system is built on top of Libscapi \cite{libscapi} implementation of Yao protocol and PHYLIP phylogeny package \cite{PH78}. It integrates three crucial quantum primitives: quantum oblivious transfer, quantum key distribution and quantum random number generator.
 
 This chapter follows a top-down approach. In section \ref{phyloTree}, we start by explaining the concept of phylogenetic trees and the distance-based algorithms used to generate these trees. In section \ref{secDefition}, we set down the security definitions that will be used to analyse and prove the system's security. %In section \ref{cryptoTools}, we explain the cryptographic tools used in the system. 
 In sections \ref{quantumTools} and \ref{softTools}, we describe the quantum cryptographic tools and the software tools that are integrated into the protocol, respectively. In section \ref{smcPhylo}, we describe the proposed SMC system for phylogenetic trees. In section \ref{quantumTechIntegration} we explain how the quantum cryptographic tools are integrated into the system. Section \ref{systemSecurity} is devoted to the theoretical security analysis of the protocol and in section \ref{CompleAnalysis} we perform a complexity analysis. In the last section we present a performance comparison of the system between a classical-only and a quantum-assisted implementation.
@@ -347,7 +345,7 @@ In this section, we present three quantum primitives used in the private computa
 
 \subsection{Quantum oblivious key distribution}
 
-We explored the concept of oblivious keys in chapter~\ref{chapter_QOT}. To generate these oblivious keys, we saw that we can follow the prepare-and-measure quantum approach developed by Bennet \cite{BBCS91} along with some commitment functionality. As an example, Lemus et al. \cite{Lemus20} proposed to use the Halevi and Micali classical bit commitments based on universal and cryptographic hashing \cite{HM96}. Thus, its security is based on the laws of physics and on the fact that there is no significant quantum speed-up in finding collisions on the hash-based bit commitments \cite{Shi02, ABLST17, Lemus20}. Also, as discussed in \cite{Lemus20, Santos2021}, this protocol has an important security feature: it is resistant against \textit{intercept now - decipher later} attacks. It this chapter, we call quantum oblivious key distribution (QOKD) the subprotocol of BBCS-based QOT protocols that comprises all the phases excluding the transfer phase. For illustration, the QOKD protocol in the bounded-quantum-storage model, $\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$, is summarized in Figure~\ref{fig:QOKD_prot}.
+We explored the concept of oblivious keys in chapter~\ref{chapter_QOT}. To generate these oblivious keys, we saw that we can follow the prepare-and-measure quantum approach developed by Bennet \cite{BBCS92} along with some commitment functionality. As an example, Lemus et al. \cite{Lemus20} proposed to use the Halevi and Micali classical bit commitments based on universal and cryptographic hashing \cite{HM96}. Thus, its security is based on the laws of physics and on the fact that there is no significant quantum speed-up in finding collisions on the hash-based bit commitments \cite{Shi02, ABLST17, Lemus20}. Also, as discussed in \cite{Lemus20, SPM21}, this protocol has an important security feature: it is resistant against \textit{intercept now - decipher later} attacks. It this chapter, we call quantum oblivious key distribution (QOKD) the subprotocol of BBCS-based QOT protocols that comprises all the phases excluding the transfer phase. For illustration, the QOKD protocol in the bounded-quantum-storage model, $\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$, is summarized in Figure~\ref{fig:QOKD_prot}.
 
 \begin{figure}[h!]
     \centering
@@ -416,9 +414,9 @@ Within the scope of SMC, the generation of the circuit's wire keys must be guara
 
 \subsection{Quantum key distribution}
 
-As we will explain in the last section, part of the communication between the parties should be kept encrypted. Message encryption is commonly achieved with symmetric cryptographic tools, such as AES (Advanced Encryption Scheme) or the perfect cypher one-time pad. These symmetric tools are used to encrypt the communication content through a common key assumed to be only known by both communicating parties. However, the techniques used to distribute a common key cannot be realized using just symmetric cryptography and one needs asymmetric cryptography. Unfortunately, most of the commonly used techniques in asymmetric cryptography (RSA, Elliptic Curves or Diffie-Hellman) rely on computational assumptions that can be broken by a quantum computer through the already mentioned Shor's algorithm \cite{Shor1995}.
+As we will explain in the last section, part of the communication between the parties should be kept encrypted. Message encryption is commonly achieved with symmetric cryptographic tools, such as AES (Advanced Encryption Scheme) or the perfect cypher one-time pad. These symmetric tools are used to encrypt the communication content through a common key assumed to be only known by both communicating parties. However, the techniques used to distribute a common key cannot be realized using just symmetric cryptography and one needs asymmetric cryptography. Unfortunately, most of the commonly used techniques in asymmetric cryptography (RSA, Elliptic Curves or Diffie-Hellman) rely on computational assumptions that can be broken by a quantum computer through the already mentioned Shor's algorithm \cite{Sho95}.
 
-So, to render a quantum-resistant privacy-preserving solution, we make use of quantum key distribution (QKD) protocol to share symmetric keys to be used along with symmetric cryptography \cite{Pirandola2020, Almeida2020, Silva2019, Almeida2021}. Its security relies on the laws of quantum physics and it is proven to be resistant against computationally unbounded adversaries \cite{Renner05, Tomamichel2017}. This level of security comes from one very important quantum property known as the No-Cloning theorem. This property ensures that it is not possible to measure a quantum state without introducing a measurable perturbation in the system. Thus, both parties enrolling in the QKD protocol will be able to detect a potential eavesdropper in case some adversary tries to intercept and read the quantum signals.
+So, to render a quantum-resistant privacy-preserving solution, we make use of quantum key distribution (QKD) protocol to share symmetric keys to be used along with symmetric cryptography \cite{Pirandola2020, Almeida2020, Silva2019, Almeida2021}. Its security relies on the laws of quantum physics and it is proven to be resistant against computationally unbounded adversaries \cite{R06, Tomamichel2017}. This level of security comes from one very important quantum property known as the No-Cloning theorem. This property ensures that it is not possible to measure a quantum state without introducing a measurable perturbation in the system. Thus, both parties enrolling in the QKD protocol will be able to detect a potential eavesdropper in case some adversary tries to intercept and read the quantum signals.
 
 
 %Although theoretically QKD provides perfect security, its infield implementation comes with some challenges:
@@ -444,7 +442,7 @@ The CBMC-GC compiler \cite{F14} is used in step $1)$ of Yao protocol to generate
 
 \subsection{Libscapi}
 
-The Libscapi library \cite{Libscapi} implements several important cryptographic primitives for two-party and multi-party protocols. It is extensively used to implement steps $2-5$ of the Yao protocol in the repository MPC-Benchmark \cite{mpc_benchmark}. This implementation has integrated one of the most efficient OT extension protocols \cite{K15} along with the base OTs proposed by Chou and Orlandi \cite{C15}.
+The Libscapi library \cite{libscapi} implements several important cryptographic primitives for two-party and multi-party protocols. It is extensively used to implement steps $2-5$ of the Yao protocol in the repository MPC-Benchmark \cite{mpc_benchmark}. This implementation has integrated one of the most efficient OT extension protocols \cite{K15} along with the base OTs proposed by Chou and Orlandi \cite{C15}.
 
 \subsection{PHYLIP}
 
@@ -455,7 +453,7 @@ The PHYLIP package \cite{F89} is a C++ open-source project that provides a set o
 
 \section{Secure multiparty computation of phylogenetic trees} \label{smcPhylo}
 
-The proposed system allows to securely compute a suite of algorithms that perform phylogeny analysis through the computation of phylogenetic trees. Based on the modular nature of distance-based algorithms, the system combines different evolution models with different phylogenetic algorithms. In this section, we describe how to integrate the tools presented in previews sections \ref{cryptoTools}-\ref{softTools} to develop this modular private system. 
+The proposed system allows to securely compute a suite of algorithms that perform phylogeny analysis through the computation of phylogenetic trees. Based on the modular nature of distance-based algorithms, the system combines different evolution models with different phylogenetic algorithms. In this section, we describe how to integrate the tools presented in previews sections \ref{quantumTools}-\ref{softTools} to develop this modular private system. 
 
 %For exposition purposes, we explore the scenario depicted in Figure 1 where $n=3$ parties (Alice, Bob and Charlie) possess three, two and one sequences, respectively ($m=6$), and that they want to jointly compute a phylogenetic tree on their input sequences privately.
 
@@ -508,15 +506,15 @@ For simplicity, denote by $A_d^a$ the private protocol that implements sequentia
 
 During the distance matrix computation phase ($\mathtt{DM}$) of the private $A_d^a$, each party has to compute the distance between his sequences and the other parties' sequences privately, i.e. without revealing his sequences to the other participating parties. Since this corresponds to several instances of a two-party secure computation, we make use of the Yao protocol described in section~\ref{yaoProtocol}. This means that each party has to generate the boolean circuit representation of the elected distance $d$, which is accomplished by the CBMC-GC software tool before the beginning of the protocol. In section \ref{privDistances}, we analyse how to generate these circuits.
 
-Now, since the Yao protocol is executed only between two different parties $P^i$ and $P^j$ for $i, j \in[n]$, the other participating parties $P^t$, $t\in[n]\setminus \{i,j\}$, do not have access to the distances computed between theses two parties' sequences. For this reason, $P^t$ has to receive the result of the Yao protocol execution from both $P^j$ and $P^i$. After this, each party outputs the distance matrix in the format required to be used as input in the PHYLIP programs \texttt{fitch}, \texttt{kitsch} and \texttt{neighbor}. 
+Now, since the Yao protocol is executed only between two different parties $P^i$ and $P^j$ for $i, j \in[n]$, the other participating parties $P^t$, $t\in[n]\setminus \{i,j\}$, do not have access to the distances computed between theses two parties. For this reason, $P^t$ has to receive the result of the Yao protocol execution from both $P^j$ and $P^i$. After this, each party outputs the distance matrix that is used as the input of PHYLIP programs: \texttt{fitch}, \texttt{kitsch} or \texttt{neighbor}. 
 
-In the second phase of the protocol ($\mathtt{A}$), the parties do not need to communicate as this phase only depends on the quantities computed during the first phase. For this reason, this phase is executed internally by each party, who then compute the phylogenetic tree. This phase is carried out by the PHYLIP programs mentioned in the previous paragraph.
+In the second phase of the protocol ($\mathtt{A}$), the parties do not need to communicate because this phase only depends on the quantities computed during the first phase. For this reason, this phase is executed internally by each party, who then compute the phylogenetic tree. This phase is carried out by the PHYLIP programs mentioned in the previous paragraph.
 
 These two phases are shown in Figure~\ref{fig:network} and we give more details about the protocol assisted with quantum technologies in the next section. 
 
 \begin{figure}[t]
     \centering
-    \includegraphics[scale=0.8]{Chapter_PrivatePhylogeneticTrees/PPT.png}
+    \includegraphics[scale=0.75]{Chapter_PrivatePhylogeneticTrees/PPT.png}
     \caption{Overview of the $A^a_d$ network structure.}
     \label{fig:network}
 \end{figure}
@@ -542,7 +540,7 @@ Now, let us see the role of quantum technologies in this private system and its 
 
 \subsection{Quantum oblivious transfer} \label{quantumTechIntegQOT}
 
-Libscapi implementation of Yao protocol combines a very efficient base OT protocol with one of the fastest OT extension protocols. It uses the base OT (SimpleOT) proposed by Chou and Orlandi \cite{C15} integrated with the OT Extension (KOS15 \cite{KOS15}) presented in chapter~\ref{classical-and-quantum-OT}. In this setting, the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol can be implemented in two different ways depending on the number of oblivious keys generated between the two parties: as a base OT protocol integrated within OT extension protocol or as a stand-alone method substituting all Libscapi OT implementation. If the number of oblivious keys generated is scarce compared to the number of OT required, then one should integrate  $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ withit OT extension. Otherwise, one could directly use the  $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol. A scheme of the integration of the quantum oblivious key distribution (QOKD) system is depicted in Figure~\ref{fig:QOKD}.
+Libscapi implementation of Yao protocol combines a very efficient base OT protocol with one of the fastest OT extension protocols. It uses the base OT (SimpleOT) proposed by Chou and Orlandi \cite{CO15} integrated with the OT Extension (KOS15 \cite{KOS15}) presented in chapter~\ref{classical-and-quantum-OT}. In this setting, the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol can be implemented in two different ways depending on the number of oblivious keys generated between the two parties: as a base OT protocol integrated within OT extension protocol or as a stand-alone method substituting all Libscapi OT implementation. If the number of oblivious keys generated is scarce compared to the number of OT required, then one should integrate  $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ in the OT extension. Otherwise, one could directly use the  $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol. A scheme of the integration of the quantum oblivious key distribution (QOKD) system is depicted in Figure~\ref{fig:QOKD}.
 
 \begin{figure}[h]
     \centering
@@ -572,7 +570,7 @@ Both QKD and QOKD protocols rely on the same physical processes. They can both b
 
 \subsubsection{Network topology}
 
-The quantum private protocol explained above in section~\ref{privProtocol} assumes that every two parties have a direct quantum channel between them that is used to generate oblivious keys and symmetric keys, i.e. a fully connected quantum network. This approach follows from the fact that the first QKD and quantum OT (QOT) protocols were based on prepare-and-measure techniques \cite{BB84, BBCS91}. However, as discussed in chapter~\ref{chapter_QOT}, there are also protocols that implement device-independent QOT (DI-QOT) \cite{KW16, RW20} (under some constraints) and DI-QKD \cite{Pirandola2020}. In addition to the advantages from a security point of view, these DI protocols can also be implemented within a star-structured quantum network having an untrusted party as the middle point. This increases the implementation flexibility of the proposed quantum private protocol of phylogenetic trees (section~\ref{privProtocol}).
+The quantum private protocol explained above in section~\ref{privProtocol} assumes that every two parties have a direct quantum channel between them that is used to generate oblivious keys and symmetric keys, i.e. a fully connected quantum network. This approach follows from the fact that the first QKD and quantum OT (QOT) protocols were based on prepare-and-measure techniques \cite{BB84, BBCS92}. However, as discussed in chapter~\ref{chapter_QOT}, there are also protocols that implement device-independent QOT (DI-QOT) \cite{KW16, RW20} (under some constraints) and DI-QKD \cite{Pirandola2020}. In addition to the advantages from a security point of view, these DI protocols can also be implemented within a star-structured quantum network having an untrusted party as the middle point. This increases the implementation flexibility of the proposed quantum private protocol of phylogenetic trees (section~\ref{privProtocol}).
 
 As analysed by Joshi et al. \cite{JAW20}, existing networks fall into three possible types: trusted node networks, actively switched and fully connected quantum networks based on entanglement sharing and wavelength multiplexing. Using the two types of protocols just mentioned (prepare-and-measure and device-independent), it is possible to implement our proposed system in all three existing quantum network implementation types.
 
@@ -587,7 +585,7 @@ In this section, we analyse the security of the proposed system. We start by des
 
 \subsection{Private computation of distances} \label{privDistances}
 
-The private computation of distances between sequences is an important building block in the security of the system. We have that the privacy of the sequences directly relies on this step. Here, we go through the methods used to compute the distances used by the PHYLIP program: Jukes-Cantor, Kimura 2-parameter, F84 and LogDet.
+The private computation of the distance between sequences is an important building block in the security of the system. We have that the privacy of the sequences directly relies on this step. Here, we go through the methods used to compute the distances used by the PHYLIP program: Jukes-Cantor, Kimura 2-parameter, F84 and LogDet.
 
 A common building block to all these four distance metrics is the computation of the Hamming distance between two sequences $x$ and $y$, $h_{xy}$. We start by looking at an adapted divide-and-conquer way to compute the Hamming distance between two sequences and then we see how to apply it to the private computation of distance metrics.
 
@@ -617,7 +615,7 @@ h(A, T) &=& \text{popcount}^t(00 \oplus 11)\\
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.12]{Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg}
-    \caption{Overview of the tailored divide-and-conquer technique.}
+    \caption{Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt{12-19} in Figure~\ref{fig:jc_cbmc-gc} in Appendix~\ref{appendix:appendixA}.}
     \label{fig:hamming_divide}
 \end{figure}
 
@@ -669,7 +667,7 @@ n_2 &=& \text{popcount}_t(x\oplus y) - n_1.
 
 
 \subsubsection{F84 and LogDet}
-Recall from sections \ref{F84_model} and \ref{LD_model} that the F84 ($F_{xy} $) and LogDet ($L_{xy} $) distances are given, respectively, by:
+Recall from section \ref{evolDist}, that the F84 ($F_{xy} $) and LogDet ($L_{xy} $) distances are given, respectively, by:
 \begin{equation}
     F_{xy} = -2 A\ln\bigg( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \bigg) + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg),
 \label{eq:F84_distance}
@@ -721,7 +719,7 @@ Yao protocol with the OT primitive instantiated by $\Pi^{\textbf{BBCS}}_{\textbf
 
 \begin{proof}
 
-In \cite{FS09} it was developed a framework that allows quantum protocols to be composed in a classical environment. They also mention that a general secure function evaluation remains secure when instantiating the OT primitive by a secure quantum version. In \cite{Damgrd2009}, it was proved that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol is secure according to the security definition given in \cite{FS09}. Therefore, we can compose the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol with a Yao protocol \cite{Lindell2008} while preserving the overall security. 
+In \cite{FS09} it was developed a framework that allows quantum protocols to be composed in a classical environment. They also mention that a general secure function evaluation remains secure when instantiating the OT primitive by a secure quantum version. In \cite{DFL+09}, it was proved that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol is secure according to the security definition given in \cite{FS09}. Therefore, we can compose the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol with a Yao protocol \cite{Lindell2008} while preserving the overall security. 
 
 \end{proof}
 
@@ -738,7 +736,7 @@ We have proved that our system is well designed and secure against quantum compu
 
 In this section, we start by analysing the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, \ldots, P^n$, with $M_1, \ldots, M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotides, $s$.
 
-% In this section we start by comparing the computation and communication complexity of the fastest reported malicious oblivious extension protocol implemented in Libscapi library \cite{K15} and the optimized version of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ presented in \cite{Santos2021}. Then, we analyse the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, ..., P^n$, with $M_1, ..., M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotide, $s$. 
+% In this section we start by comparing the computation and communication complexity of the fastest reported malicious oblivious extension protocol implemented in Libscapi library \cite{K15} and the optimized version of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ presented in \cite{SPM21}. Then, we analyse the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, ..., P^n$, with $M_1, ..., M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotide, $s$. 
 
 \subsection{Protocol complexity analysis}\label{compAnalysis}
 
@@ -769,7 +767,7 @@ L^j_{\text{ok}} &=& N_{\text{OT}}^j \cdot 2l \\
 &=& 4slM^2(n-1).
 \end{eqnarray*}
 
-Also, we can use the number of OT executions per party and the analysis from Table~\ref{table:complexity} and \cite{Santos2021} to compute the computational and communication complexity (in bits) of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$:
+Also, we can use the number of OT executions per party and the analysis from Table~\ref{table:complexity} and \cite{SPM21} to compute the computational and communication complexity (in bits) of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$:
 \begin{eqnarray*}
 \mathcal{C}^j_{\text{comp}} &=&  N_{\text{OT}}^j \cdot 8l \\
 &=& 16 slM^2(n-1),
@@ -862,7 +860,7 @@ We leverage a testbed on a virtual environment composed of three Ubuntu (64-bit)
 
 The performance of the implementation was measured on the VMs with the clock type \texttt{CLOCK\_REALTIME} from the C$++$ library \texttt{time}. Although the values might differ for different host machines, this method is certainly adequate to use as a comparison between a classical-only and a quantum-assisted system.
 
-We follow the scenario presented in section~\ref{useCase}, where we have three parties ($n=3$) owning at most ten sequences ($M\leq10$) with $32\,000$ nucleotides. For the sake comparison, we use the Jukes-Cantor phylogenetic distance along with PHYLIP implementation of UPGMA algorithm, i.e. $(d, a) = (\text{JC}, \text{UPGMA})$.
+We follow the scenario presented in section~\ref{useCase}, where we have three parties ($n=3$) owning at most ten sequences ($M\leq10$) with $32\,000$ nucleotides. For the sake of comparison, we use the Jukes-Cantor phylogenetic distance along with PHYLIP implementation of UPGMA algorithm, i.e. $(d, a) = (\text{JC}, \text{UPGMA})$.
 
 \subsubsection{Sequences preprocessing}
 
@@ -871,7 +869,7 @@ The $30$ sequences used in this testbed were taken from GISAID database \cite{GI
 
 \subsection{Circuit generation}
 
-As mentioned above, the CBMC-GC tool can generate a boolean circuit description of the phylogenetic distance from its corresponding ANSI-C code. In Table~\ref{table:Com_JK_bool_circ} we present the generation time of the Jukes-Cantor boolean circuit description for three different minimization time values (CBMG-GC parameter). We note that the generation of the circuit only has to be carried out once. From Table~\ref{table:Com_JK_bool_circ} we can see that the minimization time for values above $100s$ does not have a great impact on the minimization of both the number of gates and circuit depth. The C$++$ code describing the Jukes-Cantor distance is shown in Appendix~\ref{appendix:appendixA}.
+As mentioned above, the CBMC-GC tool can generate a boolean circuit description of the phylogenetic distance from its corresponding ANSI-C code. In Table~\ref{table:Com_JK_bool_circ}, we present the generation time of the Jukes-Cantor boolean circuit for three different minimization time values (CBMG-GC parameter). The minimization time is a parameter of the CBMC-GC tool that regulates the time spent to minimize the size of the boolean circuit. We note that the generation of the circuit only has to be carried out once. From Table~\ref{table:Com_JK_bool_circ}, we can see that the minimization time for values above $100s$ does not have a great impact on the minimization of both the number of gates and circuit depth. The C code describing the Jukes-Cantor distance is shown in Appendix~\ref{appendix:appendixA}.
 
 \begin{table}[t]
 \centering
@@ -902,12 +900,12 @@ We start by recalling that the proposed secure algorithm is divided into the fol
     \item Phylogenetic computation, \texttt{A}.
 \end{enumerate}
 
-We join the internal computation of sequences and PHYLIP phylogenetic computation into the same category and assess three different components for both classical and quantum runs: Communication (\texttt{Com}), SMC (\texttt{SMC}) and Computation (\texttt{IC}, \texttt{A}). In Tables~\ref{table:classical_benchmark} and ~\ref{table:quantum_benchmark} we show the proportion of each component. As expected, in both systems the pairwise SMC computation of distances represents the greatest portion, accounting for more than $95\%$ of the time for all different numbers of sequences. However, the weight of SMC in the quantum-assisted system is consistently higher than the classical-only system for all cases. This can be explained by the fact that the quantum-assisted SMC takes longer than the classical-only SMC.
+We join the internal computation of sequences and PHYLIP phylogenetic computation into the same category and assess three different components for both classical and quantum runs: Communication (\texttt{Com}), SMC (\texttt{SMC}) and Computation (\texttt{IC}, \texttt{A}). In Tables~\ref{table:classical_benchmark} and ~\ref{table:quantum_benchmark}, we show the proportion of each component. As expected, in both systems the pairwise SMC computation of distances represents the greatest portion, accounting for more than $95\%$ of the time for all different numbers of sequences. However, the weight of SMC in the quantum-assisted system is consistently higher than the classical-only system for all cases. This can be explained by the fact that the quantum-assisted SMC takes longer than the classical-only SMC.
 
 
-\begin{table}[t]
-    \begin{center}
-    \begin{tabular}{c|ccccc}
+\begin{table}[]
+\centering
+    \begin{tabular}{lccccc}
         \toprule
         %\multicolumn{6}{c}{Classical} \\
         %\cline{1-6}
@@ -919,14 +917,13 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
         Comp. & 0,10\% & 0,08\% & 0,07\% & 0,07\% & 0,07\% \\
         \bottomrule
     \end{tabular}
-    \end{center}
-\label{table:classical_benchmark}
 \caption{Percentage weight of each component in the classical-only system.}
+\label{table:classical_benchmark}
 \end{table}
 
-\begin{table}[t]
-    \begin{center}
-    \begin{tabular}{c|ccccc}
+\begin{table}[]
+\centering
+    \begin{tabular}{lccccc}
         \toprule
         %\multicolumn{5}{c}{Quantum} \\
         %\cline{1-6}
@@ -938,9 +935,8 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
         Comp. & 0,10\% & 0,07\% & 0,06\% & 0,06\% & 0,05\% \\
         \bottomrule
     \end{tabular}
-    \end{center}
-\label{table:quantum_benchmark}
 \caption{Percentage weight of each component in the quantum-assisted system.}
+\label{table:quantum_benchmark}
 \end{table}
 
 \begin{figure}
@@ -950,7 +946,7 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
     \label{fig:total_running_time}
 \end{figure}
 
-Figure~\ref{fig:total_running_time} present us with the average duration of both systems with standard deviation as error bars. Here we see that the quantum-assisted approach has a higher cost than the classical-only implementation. As discussed in section~\ref{quantumTechIntegQOT}, we can either use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol as the main OT in the Libscapi implementation or we can use it as a base OT in the KOS15 OT Extension used by Libscapi. Since we have implemented the latter, our $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is competing against the SimpleOT \cite{C15} base OT implementation. As analysed by the authors (section 4 \cite{Santos2021}), the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is expected to outperform base OT implementations and to have comparable performance to OT Extension protocols. However, these analyses only compared cryptographic and computational operations and did not take into account implementation constraints.
+Figure~\ref{fig:total_running_time} present us with the average duration of both systems with standard deviation as error bars. Here, we see that the quantum-assisted approach has a higher cost than the classical-only implementation. As discussed in section~\ref{quantumTechIntegQOT}, we can either use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol as the main OT in the Libscapi implementation or we can use it as a base OT in the KOS15 OT Extension used by Libscapi. Since we have implemented the latter, our $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is competing against the SimpleOT \cite{C15} base OT implementation. As analysed by the authors (section 4 \cite{SPM21}), the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is expected to outperform base OT implementations and to have comparable performance to OT Extension protocols. However, these analyses only compared cryptographic and computational operations and did not take into account implementation constraints and memory complexity.
 
 In the quantum-assisted implementation, we separate the precomputation phase (generation of symmetric and oblivious keys) from the secure computation phase of the proposed protocol, $A^a_d$. For this reason, it is necessary to develop a key management system to save and keep key synchronization between parties. Consequently, the key management system becomes the bottleneck as the number of sequences increases. In particular, the key management system of oblivious keys is responsible for most of the overhead (Figure~\ref{fig:okms}).
 
@@ -980,7 +976,7 @@ Future work is required to develop more efficient oblivious key management syste
 
 \section{Conclusion}
 
-In this work, we presented an SMC protocol assisted with quantum technologies tailored for distance-based algorithms of phylogenetic trees. It is a modular protocol that uses one distance metric taken from four possible evolutionary models (Jukes-Cantor, Kimura 2-parameter, F84 and LogDet) and three different protocols (UPGMA, Neighbour-Joining and Fitch-Margoliash). In total, we can implement twelve different combinations of protocols.
+In this chapter, we presented an SMC protocol assisted with quantum technologies tailored for distance-based algorithms of phylogenetic trees. It is a modular protocol that uses one distance metric taken from four possible evolutionary models (Jukes-Cantor, Kimura 2-parameter, F84 and LogDet) and three different protocols (UPGMA, Neighbour-Joining and Fitch-Margoliash). In total, we can implement twelve different combinations of protocols.
 
 The proposed system is based on ready to use libraries (CBMC-GC, Libscapi and PHYLIP) that are integrated with quantum technologies to provide a full quantum-proof solution. We use the quantum version of primitives that play a central role in the security of the system: oblivious transfer, encryption and random number generation.
 

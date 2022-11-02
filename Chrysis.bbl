@@ -1004,4 +1004,386 @@ Philip~S. Hirschhorn, Jeffrey Hoffstein, Nick Howgrave-Graham, and William
   Vergnaud, editors, {\em Applied Cryptography and Network Security}, pages
   437--455, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
 
+\bibitem{GMW87}
+O.~Goldreich, S.~Micali, and A.~Wigderson.
+\newblock How to play any mental game.
+\newblock In {\em Proceedings of the Nineteenth Annual ACM Symposium on Theory
+  of Computing}, STOC '87, page 218–229, New York, NY, USA, 1987. Association
+  for Computing Machinery.
+
+\bibitem{Verhaert2018}
+Danilo Verhaert, Majid Nateghizad, and Zekeriya Erkin.
+\newblock An efficient privacy-preserving recommender system for e-healthcare
+  systems.
+\newblock In {\em Proceedings of the 15th International Joint Conference on
+  e-Business and Telecommunications}. {SCITEPRESS} - Science and Technology
+  Publications, 2018.
+
+\bibitem{Scardapane2017}
+Simone Scardapane, Rosa Altilio, Valentina Ciccarelli, Aurelio Uncini, and
+  Massimo Panella.
+\newblock Privacy-preserving data mining for distributed medical scenarios.
+\newblock In {\em Multidisciplinary Approaches to Neural Computing}, pages
+  119--128. Springer International Publishing, August 2017.
+
+\bibitem{Maulany2018}
+Christian Maulany, Majid Nateghizad, Bart Mennink, and Zekeriya Erkin.
+\newblock Privacy-preserving distributed access control for medical data.
+\newblock In {\em Proceedings of the 15th International Joint Conference on
+  e-Business and Telecommunications}. {SCITEPRESS} - Science and Technology
+  Publications, 2018.
+
+\bibitem{Kikuchi2018}
+Hiroaki Kikuchi, Xuping Huang, Shigeta Ikuji, and Manami Inoue.
+\newblock Privacy-preserving hypothesis testing for reduced cancer risk on
+  daily physical activity.
+\newblock {\em Journal of Medical Systems}, 42(5), April 2018.
+
+\bibitem{Tawfik2018}
+Ahmed~M. Tawfik, Sahar~F. Sabbeh, and Tarek EL-Shishtawy.
+\newblock Privacy-preserving secure multiparty computation on electronic
+  medical records for star exchange topology.
+\newblock {\em Arabian Journal for Science and Engineering}, 43(12):7747--7756,
+  March 2018.
+
+\bibitem{Wang2017}
+Shuang Wang, Xiaoqian Jiang, Haixu Tang, Xiaofeng Wang, Diyue Bu, Knox Carey,
+  Stephanie~OM Dyke, Dov Fox, Chao Jiang, Kristin Lauter, Bradley Malin, Heidi
+  Sofia, Amalio Telenti, Lei Wang, Wenhao Wang, and Lucila Ohno-Machado.
+\newblock A community effort to protect genomic data sharing, collaboration and
+  outsourcing.
+\newblock {\em npj Genomic Medicine}, 2(1), October 2017.
+
+\bibitem{MY19}
+Abukari~Mohammed Yakubu and Yi-Ping~Phoebe Chen.
+\newblock Ensuring privacy and security of genomic data and functionalities.
+\newblock {\em Briefings in Bioinformatics}, 21(2):511--526, February 2019.
+
+\bibitem{Naveed2015}
+Muhammad Naveed, Erman Ayday, Ellen~W. Clayton, Jacques Fellay, Carl~A. Gunter,
+  Jean-Pierre Hubaux, Bradley~A. Malin, and Xiaofeng Wang.
+\newblock Privacy in the genomic era.
+\newblock {\em {ACM} Computing Surveys}, 48(1):1--44, September 2015.
+
+\bibitem{Chan2014}
+Philip Chan, Itzel Lucio-Martinez, Xiaofan Mo, Christoph Simon, and Wolfgang
+  Tittel.
+\newblock Performing private database queries in a real-world environment using
+  a quantum protocol.
+\newblock {\em Scientific Reports}, 4(1), June 2014.
+
+\bibitem{Ito2017}
+Tomohiro Ito, Hayato Koizumi, Nobumitsu Suzuki, Izumi Kakesu, Kento Iwakawa,
+  Atsushi Uchida, Takeshi Koshiba, Jun Muramatsu, Kazuyuki Yoshimura, Masanobu
+  Inubushi, and Peter Davis.
+\newblock Physical implementation of oblivious transfer using optical
+  correlated randomness.
+\newblock {\em Scientific Reports}, 7(1), August 2017.
+
+\bibitem{AM19}
+Adam~M. Lewis and Martino Travagnin.
+\newblock A secure quantum communications infrastructure for europe.
+\newblock {\em JRC116937}, 2019.
+
+\bibitem{libscapi}
+libscapi.
+\newblock \url{https://github.com/cryptobiu/libscapi/tree/master}, 2021.
+
+\bibitem{M10}
+Deborah~A. McLennan.
+\newblock {How to Read a Phylogenetic Tree.}
+\newblock {\em Evolution: Education and Outreach}, 3(4):506--519, 2010.
+
+\bibitem{Z06}
+Ziheng Yang.
+\newblock Computational molecular evolution.
+\newblock {\em Oxford University Press}, 2006.
+
+\bibitem{Felsenstein2003}
+J.~Felsenstein.
+\newblock {\em Inferring phylogenies}.
+\newblock Sinauer Associates, 2003.
+
+\bibitem{F89}
+J.~Felsenstein.
+\newblock Phylip - phylogeny inference package (version 3.2).
+\newblock {\em Cladistics}, 5:164--166, 1989.
+
+\bibitem{JC69}
+Thomas~Hughes Jukes and Charles~R Cantor.
+\newblock Mammalian protein metabolism.
+\newblock {\em Academic Press, New York}, pages 21--132, 1969.
+
+\bibitem{K80}
+Motoo Kimura.
+\newblock A simple method for estimating evolutionary rates of base
+  substitutions through comparative studies of nucleotide sequences.
+\newblock {\em Journal of molecular evolution}, 16(2):111--120, 1980.
+
+\bibitem{F84}
+J~Felsenstein and G~A Churchill.
+\newblock {A Hidden Markov Model approach to variation among sites in rate of
+  evolution.}
+\newblock {\em Molecular Biology and Evolution}, 13(1):93--104, 01 1996.
+
+\bibitem{L94}
+P~J Lockhart, M~A Steel, M~D Hendy, and D~Penny.
+\newblock {Recovering evolutionary trees under a more realistic model of
+  sequence evolution.}
+\newblock {\em Molecular Biology and Evolution}, 11(4):605--612, 07 1994.
+
+\bibitem{PM09}
+Philippe Lemey, Marco Salemi, and Anne-Mieke Vandamme, editors.
+\newblock {\em The Phylogenetic Handbook}.
+\newblock Cambridge University Press, 2009.
+
+\bibitem{Evans2018}
+David Evans, Vladimir Kolesnikov, and Mike Rosulek.
+\newblock A pragmatic introduction to secure multi-party computation.
+\newblock {\em Foundations and Trends{\textregistered} in Privacy and
+  Security}, 2(2-3):70--246, 2018.
+
+\bibitem{Lindell2017}
+Yehuda Lindell.
+\newblock How to simulate it {\textendash} a tutorial on the simulation proof
+  technique.
+\newblock In {\em Tutorials on the Foundations of Cryptography}, pages
+  277--346. Springer International Publishing, 2017.
+
+\bibitem{Goldreich98}
+Oded Goldreich.
+\newblock Secure multi-party computation, 1998.
+
+\bibitem{HM96}
+Shai Halevi and Silvio Micali.
+\newblock Practical and provably-secure commitment schemes from collision-free
+  hashing.
+\newblock In {\em Proceedings of the 16th Annual International Cryptology
+  Conference on Advances in Cryptology}, CRYPTO '96, page 201–215, Berlin,
+  Heidelberg, 1996. Springer-Verlag.
+
+\bibitem{Shi02}
+{Yaoyun Shi}.
+\newblock Quantum lower bounds for the collision and the element distinctness
+  problems.
+\newblock In {\em The 43rd Annual IEEE Symposium on Foundations of Computer
+  Science, 2002. Proceedings.}, pages 513--519, 2002.
+
+\bibitem{ABLST17}
+Divesh {Aggarwal}, Gavin~K. {Brennen}, Troy {Lee}, Miklos {Santha}, and Marco
+  {Tomamichel}.
+\newblock {Quantum attacks on Bitcoin, and how to protect against them}.
+\newblock {\em arXiv e-prints}, page arXiv:1710.10377, October 2017.
+
+\bibitem{YE11}
+Yan Huang, David Evans, Jonathan Katz, and Lior Malka.
+\newblock Faster secure two-party computation using garbled circuits.
+\newblock In {\em Proceedings of the 20th USENIX Conference on Security},
+  SEC'11, page~35, USA, 2011. USENIX Association.
+
+\bibitem{HS85}
+J~Hastad and A~Shamir.
+\newblock The cryptographic security of truncated linearly related variables.
+\newblock In {\em Proceedings of the Seventeenth Annual ACM Symposium on Theory
+  of Computing}, STOC '85, pages 356--362, New York, NY, USA, 1985. Association
+  for Computing Machinery.
+
+\bibitem{K92}
+Hugo Krawczyk.
+\newblock How to predict congruential generators.
+\newblock {\em Journal of Algorithms}, 13(4):527 -- 545, 1992.
+
+\bibitem{BM84}
+Manuel Blum and Silvio Micali.
+\newblock How to generate cryptographically strong sequences of pseudo-random
+  bits.
+\newblock {\em SIAM J. Comput.}, 13(4):850--864, November 1984.
+
+\bibitem{BBS86}
+L~Blum, M~Blum, and M~Shub.
+\newblock A simple unpredictable pseudo random number generator.
+\newblock {\em SIAM J. Comput.}, 15(2):364--383, May 1986.
+
+\bibitem{Alkassar2005}
+Ammar Alkassar, Thomas Nicolay, and Markus Rohe.
+\newblock Obtaining true-random binary numbers from a weak radioactive source.
+\newblock In {\em Computational Science and Its Applications {\textendash}
+  {ICCSA} 2005}, pages 634--646. Springer Berlin Heidelberg, 2005.
+
+\bibitem{GaviriaRojas2017}
+William A.~Gaviria Rojas, Julian~J. McMorrow, Michael~L. Geier, Qianying Tang,
+  Chris~H. Kim, Tobin~J. Marks, and Mark~C. Hersam.
+\newblock Solution-processed carbon nanotube true random number generator.
+\newblock {\em Nano Letters}, 17(8):4976--4981, July 2017.
+
+\bibitem{HerreroCollantes2017}
+Miguel Herrero-Collantes and Juan~Carlos Garcia-Escartin.
+\newblock Quantum random number generators.
+\newblock {\em Reviews of Modern Physics}, 89(1), February 2017.
+
+\bibitem{Ferreira2021}
+Mauricio~J. Ferreira, Nuno~A. Silva, Armando~N. Pinto, and Nelson~J. Muga.
+\newblock Homodyne noise characterization in quantum random number generators.
+\newblock In {\em 2021 Telecoms Conference ({ConfTELE})}. {IEEE}, February
+  2021.
+
+\bibitem{Almeida2020}
+Margarida Almeida, Daniel Pereira, Margarida Fac{\~{a}}o, Armando~N. Pinto, and
+  Nuno~A. Silva.
+\newblock Impact of imperfect homodyne detection on measurements of vacuum
+  states shot noise.
+\newblock {\em Optical and Quantum Electronics}, 52(11), November 2020.
+
+\bibitem{Silva2019}
+Nuno~A. Silva, Margarida Almeida, Daniel Pereira, Margarida Facao, Nelson~J.
+  Muga, and Armando~N. Pinto.
+\newblock Role of device imperfections on the practical performance of
+  continuous-variable quantum key distribution systems.
+\newblock In {\em 2019 21st International Conference on Transparent Optical
+  Networks ({ICTON})}. {IEEE}, July 2019.
+
+\bibitem{Almeida2021}
+Margarida Almeida, Margarida Facao, Nelson~J. Muga, Armando~N. Pinto, and
+  Nuno~A. Silva.
+\newblock Secret key extraction in direct reconciliation {CV}-{QKD} systems.
+\newblock In {\em 2021 Telecoms Conference ({ConfTELE})}. {IEEE}, February
+  2021.
+
+\bibitem{Tomamichel2017}
+Marco Tomamichel and Anthony Leverrier.
+\newblock A largely self-contained and complete security proof for quantum key
+  distribution.
+\newblock {\em Quantum}, 1:14, July 2017.
+
+\bibitem{F14}
+Martin Franz, Andreas Holzer, Stefan Katzenbeisser, Christian Schallhart, and
+  Helmut Veith.
+\newblock {CBMC-GC: An ANSI C Compiler for Secure Two-Party Computations}.
+\newblock In Albert Cohen, editor, {\em Compiler Construction - 23rd
+  International Conference, CC 2014, Held as Part of the European Joint
+  Conferences on Theory and Practice of Software, ETAPS 2014, Grenoble, France,
+  April 5-13, 2014. Proceedings}, volume 8409 of {\em Lecture Notes in Computer
+  Science}, pages 244--249. Springer, 2014.
+
+\bibitem{Bscher2017}
+Niklas B\"{u}scher, Martin Franz, Andreas Holzer, Helmut Veith, and Stefan
+  Katzenbeisser.
+\newblock On compiling boolean circuits optimized for secure multi-party
+  computation.
+\newblock {\em Formal Methods in System Design}, 51(2):308--331, September
+  2017.
+
+\bibitem{Buescher2016}
+Niklas Buescher, Andreas Holzer, Alina Weber, and Stefan Katzenbeisser.
+\newblock Compiling low depth circuits for practical secure computation.
+\newblock In {\em Computer Security {\textendash} {ESORICS} 2016}, pages
+  80--98. Springer International Publishing, 2016.
+
+\bibitem{Bscher2018}
+Niklas B\"{u}scher, Daniel Demmler, Stefan Katzenbeisser, David Kretzmer, and
+  Thomas Schneider.
+\newblock {HyCC}.
+\newblock In {\em Proceedings of the 2018 {ACM} {SIGSAC} Conference on Computer
+  and Communications Security}. {ACM}, January 2018.
+
+\bibitem{mpc_benchmark}
+Mpc-benchmark.
+\newblock \url{https://github.com/cryptobiu/MPC-Benchmark}, 2021.
+
+\bibitem{K15}
+Marcel Keller, Emmanuela Orsini, and Peter Scholl.
+\newblock Actively secure {OT} extension with optimal overhead.
+\newblock In {\em Lecture Notes in Computer Science}, pages 724--741. Springer
+  Berlin Heidelberg, 2015.
+
+\bibitem{C15}
+Tung Chou and Claudio Orlandi.
+\newblock The simplest protocol for oblivious transfer.
+\newblock In {\em Progress in Cryptology -- {LATINCRYPT} 2015}, pages 40--58.
+  Springer International Publishing, 2015.
+
+\bibitem{Wolf2006}
+Stefan Wolf and J\"{u}rg Wullschleger.
+\newblock Oblivious transfer is symmetric.
+\newblock In {\em Advances in Cryptology - {EUROCRYPT} 2006}, pages 222--232.
+  Springer Berlin Heidelberg, 2006.
+
+\bibitem{FGSPSW18}
+Fabian Furrer, Tobias Gehring, Christian Schaffner, Christoph Pacher, Roman
+  Schnabel, and Stephanie Wehner.
+\newblock Continuous-variable protocol for oblivious transfer in the
+  noisy-storage model.
+\newblock {\em Nature Communications}, 9(1), April 2018.
+
+\bibitem{Pinto2020}
+Armando~N. Pinto, Laura Ortiz, Manuel Santos, Ana~C. Gomes, Juan~P. Brito,
+  Nelson~J. Muga, Nuno~A. Silva, Paulo Mateus, and Vicente Martin.
+\newblock Quantum enabled private recognition of composite signals in genome
+  and proteins.
+\newblock In {\em 2020 22nd International Conference on Transparent Optical
+  Networks ({ICTON})}. {IEEE}, July 2020.
+
+\bibitem{JAW20}
+Siddarth~Koduru Joshi, Djeylan Aktas, S\"{o}ren Wengerowsky, Martin
+  Lon{\v{c}}ari{\'{c}}, Sebastian~Philipp Neumann, Bo~Liu, Thomas Scheidl,
+  Guillermo~Curr{\'{a}}s Lorenzo, {\v{Z}}eljko Samec, Laurent Kling, Alex Qiu,
+  Mohsen Razavi, Mario Stip{\v{c}}evi{\'{c}}, John~G. Rarity, and Rupert Ursin.
+\newblock A trusted node{\textendash}free eight-user metropolitan quantum
+  communication network.
+\newblock {\em Science Advances}, 6(36), September 2020.
+
+\bibitem{KRS16}
+Ranjit Kumaresan, Srinivasan Raghuraman, and Adam Sealfon.
+\newblock Network oblivious transfer.
+\newblock In {\em Advances in Cryptology {\textendash} {CRYPTO} 2016}, pages
+  366--396. Springer Berlin Heidelberg, 2016.
+
+\bibitem{W12}
+Henry~S. Warren.
+\newblock {\em Hacker's Delight}.
+\newblock Addison-Wesley Professional, 2nd edition, 2012.
+
+\bibitem{V59}
+Jack~E. Volder.
+\newblock The cordic trigonometric computing technique.
+\newblock {\em IRE Transactions on Electronic Computers}, EC-8(3):330--334,
+  1959.
+
+\bibitem{Songhori2019}
+Ebrahim~M. Songhori, M.~Sadegh Riazi, Siam~U. Hussain, Ahmad-Reza Sadeghi, and
+  Farinaz Koushanfar.
+\newblock {ARM}2gc.
+\newblock In {\em Proceedings of the 56th Annual Design Automation Conference
+  2019}. {ACM}, June 2019.
+
+\bibitem{Lindell2008}
+Yehuda Lindell and Benny Pinkas.
+\newblock A proof of security of yao's protocol for two-party computation.
+\newblock {\em Journal of Cryptology}, 22(2):161--188, December 2008.
+
+\bibitem{YPT18}
+Zhiliang Yuan, Alan Plews, Ririka Takahashi, Kazuaki Doi, Winci Tam, Andrew
+  Sharpe, Alexander Dixon, Evan Lavelle, James Dynes, Akira Murakami, Mamko
+  Kujiraoka, Marco Lucamarini, Yoshimichi Tanizawa, Hideaki Sato, and Andrew~J.
+  Shields.
+\newblock 10-mb/s quantum key distribution.
+\newblock {\em J. Lightwave Technol.}, 36(16):3427--3433, Aug 2018.
+
+\bibitem{IDQ}
+Id quantique website.
+\newblock
+  \url{https://www.idquantique.com/random-number-generation/products/quantis-qrng-pcie/},
+  2021.
+
+\bibitem{GISAID}
+Gisaid database.
+\newblock \url{https://www.gisaid.org/}, 2021.
+
+\bibitem{MPL19}
+Fábio Madeira, Young~Mi Park, Joon Lee, Nicola Buso, Tamer Gur, Nandana
+  Madhusoodanan, Prasad Basutkar, Adrian R~N Tivey, Simon~C Potter, Robert~D
+  Finn, and Rodrigo Lopez.
+\newblock The embl-ebi search and sequence analysis tools apis in 2019.
+\newblock {\em Nucleic acids research}, 47(W1):W636--W641, July 2019.
+
 \end{thebibliography}
