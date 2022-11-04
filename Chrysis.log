@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  3 NOV 2022 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  4 NOV 2022 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1095,7 +1095,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] (./Chrysis.lof
 
 Package natbib Warning: Citation `Kolesnikov2009' on page xv undefined on input
- line 3.
+ line 4.
 
 [15
 
@@ -1161,68 +1161,77 @@ Chapter 2.
 
 ] [8]
 
-Package natbib Warning: Citation `BGW88' on page 9 undefined on input line 87.
+Package natbib Warning: Citation `BGW88' on page 9 undefined on input line 88.
 
 
-Package natbib Warning: Citation `CCD88' on page 9 undefined on input line 87.
+Package natbib Warning: Citation `CCD88' on page 9 undefined on input line 88.
 
 
-Package natbib Warning: Citation `BMR90' on page 9 undefined on input line 87.
+Package natbib Warning: Citation `BMR90' on page 9 undefined on input line 88.
 
 
-Package natbib Warning: Citation `BMR90' on page 9 undefined on input line 87.
+Package natbib Warning: Citation `BMR90' on page 9 undefined on input line 88.
 
 
-Package natbib Warning: Citation `NPS99' on page 9 undefined on input line 87.
+Package natbib Warning: Citation `NPS99' on page 9 undefined on input line 88.
 
 
 Package natbib Warning: Citation `Pinkas2009' on page 9 undefined on input line
- 87.
+ 88.
 
 
 Package natbib Warning: Citation `Kolesnikov2005' on page 9 undefined on input 
-line 87.
+line 88.
 
 
 Package natbib Warning: Citation `Zahur2015' on page 9 undefined on input line 
-87.
+88.
 
 [9]
-<Chapter_TechnicalOverview/booleanCircuit.png, id=828, 884.30376pt x 520.94624p
+<Chapter_TechnicalOverview/booleanCircuit.png, id=832, 884.30376pt x 520.94624p
 t>
 File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
 <use Chapter_TechnicalOverview/booleanCircuit.png>
 Package pdftex.def Info: Chapter_TechnicalOverview/booleanCircuit.png  used on 
-input line 107.
+input line 108.
 (pdftex.def)             Requested size: 353.71524pt x 208.3748pt.
 
 
 Package natbib Warning: Citation `Kolesnikov2009' on page 10 undefined on input
- line 109.
+ line 110.
 
 
 Package natbib Warning: Citation `Kolesnikov2009' on page 10 undefined on input
- line 109.
+ line 110.
 
-[10 <./Chapter_TechnicalOverview/booleanCircuit.png>] [11])
-Underfull \vbox (badness 4144) has occurred while \output is active []
+[10 <./Chapter_TechnicalOverview/booleanCircuit.png>] [11]
 
- [12]
-[13]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `fig:OLE_functionality' on page 12 undefined on input 
+line 206.
+
+[12]
+
+LaTeX Warning: Reference `fig:VOLE_functionality' on page 13 undefined on input
+ line 213.
+
+) [13] [14]
 \openout2 = `Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.
 aux'.
 
- (./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.tex
-[14
 
-
-
-]
+(./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.tex
 Chapter 3.
 
 Underfull \vbox (badness 3179) has occurred while \output is active []
 
- [15]
+ [15
+
+
+
+]
 [16] [17] [18] [19]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1304,7 +1313,7 @@ Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [36]
 [37] [38]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1342, 462.5
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1352, 462.5
 28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
@@ -1629,7 +1638,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
 [75]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=1857, 601.24625pt x 339.2675pt>
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=1869, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1640,7 +1649,7 @@ ut line 489.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [76]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=1865, 589.0005pt x 349.96747pt>
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=1877, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
@@ -1648,7 +1657,7 @@ t line 517.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
  [77 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [78 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=1888, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=1900, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1665,7 +1674,7 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [80 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [81] [82]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=1941, 18
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=1954, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -1694,7 +1703,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [90]
 [91] [92]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2066, 395.3169pt x 271.
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2079, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
@@ -1702,7 +1711,7 @@ File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 944.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2072, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2085, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
@@ -1710,7 +1719,7 @@ Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 955.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
  [93]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2078, 395.3169
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2092, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
@@ -1791,8 +1800,8 @@ Package rerunfilecheck Warning: File `Chrysis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Chrysis.out':
-(rerunfilecheck)             Before: 1FB81E3C78BE572C456084F3027A8B0D;6009
-(rerunfilecheck)             After:  EA63596E5800C9BD0008BDA0B12D6CCC;6009.
+(rerunfilecheck)             Before: EA63596E5800C9BD0008BDA0B12D6CCC;6009
+(rerunfilecheck)             After:  D68DD058D9E68AEF1C9BC2045F24A6FE;6009.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -1806,71 +1815,80 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 28938 strings out of 480608
- 562559 string characters out of 5903629
- 1164432 words of memory out of 5000000
- 43405 multiletter control sequences out of 15000+600000
+ 28949 strings out of 480608
+ 562765 string characters out of 5903629
+ 1164482 words of memory out of 5000000
+ 43411 multiletter control sequences out of 15000+600000
  562979 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,15n,105p,2177b,1359s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.44} has been referenced but does not exi
+pdfTeX warning (dest): name{section*.46} has been referenced but does not exi
 st, replaced by a fixed one
 
-pdfTeX warning (dest): name{section*.16} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.45} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{section*.39} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.40} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{table.caption.69} has been referenced but does not 
+pdfTeX warning (dest): name{table.caption.71} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{table.caption.41} has been referenced but does not 
+pdfTeX warning (dest): name{table.caption.70} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{table.caption.37} has been referenced but does not 
+pdfTeX warning (dest): name{table.caption.43} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{table.caption.34} has been referenced but does not 
+pdfTeX warning (dest): name{table.caption.42} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{table.caption.30} has been referenced but does not 
+pdfTeX warning (dest): name{table.caption.39} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.72} has been referenced but does not
+pdfTeX warning (dest): name{table.caption.38} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.35} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.31} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.74} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.58} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.73} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.51} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.59} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.43} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.53} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.40} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.52} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.36} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.44} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.31} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.41} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.29} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.37} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.25} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.33} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.20} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.27} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.17} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.22} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{appendix*.76} has been referenced but does not exis
+pdfTeX warning (dest): name{appendix*.77} has been referenced but does not exis
 t, replaced by a fixed one
 
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
@@ -1913,10 +1931,10 @@ nts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
 pe1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (144 pages, 5559084 bytes).
+Output written on Chrysis.pdf (144 pages, 5563269 bytes).
 PDF statistics:
- 2576 PDF objects out of 2984 (max. 8388607)
- 2300 compressed objects within 23 object streams
- 742 named destinations out of 1000 (max. 500000)
+ 2593 PDF objects out of 2984 (max. 8388607)
+ 2316 compressed objects within 24 object streams
+ 747 named destinations out of 1000 (max. 500000)
  855 words of extra memory for PDF output out of 10000 (max. 10000000)
 

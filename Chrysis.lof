@@ -2,32 +2,34 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces OT functionality.\relax }}{9}{figure.caption.16}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Boolean circuit of the Millionaires' Problem. Optimized circuit according to the construction in \cite {Kolesnikov2009}.\relax }}{10}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces OLE functionality.\relax }}{13}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces VOLE functionality.\relax }}{13}{figure.caption.21}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces BBCS OT protocol.\relax }}{19}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces BBCS OT protocol in the $\mathcal {F}_{\textbf {COM}}-$hybrid model.\relax }}{21}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces BBCS OT protocol in the bounded-quantum-storage model.\relax }}{25}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces BBCS OT protocol in the noisy-quantum-storage model.\relax }}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Alice faked-state attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{31}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Alice trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{32}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Bob trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{32}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces BBCS OT protocol.\relax }}{19}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces BBCS OT protocol in the $\mathcal {F}_{\textbf {COM}}-$hybrid model.\relax }}{21}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces BBCS OT protocol in the bounded-quantum-storage model.\relax }}{25}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces BBCS OT protocol in the noisy-quantum-storage model.\relax }}{29}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Alice faked-state attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{31}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Alice trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{32}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Bob trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{32}{figure.caption.30}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Bellare-Micali classical OT protocol divided into two phases \cite {BM89}.\relax }}{36}{figure.caption.30}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Plot of expression (\ref {eq:nOTs}) on the overestimation of OT rate against the number of modular exponentiation operations required per OT.\relax }}{40}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Transfer phase of BBCS-based QOT protocols in the $\mathcal {F}_{\mathbf {COM}}-$hybrid model and bounded-quantum-storage model.\relax }}{42}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Transfer phase of BBCS-based QOT protocols in the $\mathcal {F}_{\mathbf {COM}}-$hybrid model and bounded-quantum-storage model.\relax }}{43}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {ALSZ13}.\relax }}{46}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {KOS15}.\relax }}{49}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Bellare-Micali classical OT protocol divided into two phases \cite {BM89}.\relax }}{36}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Plot of expression (\ref {eq:nOTs}) on the overestimation of OT rate against the number of modular exponentiation operations required per OT.\relax }}{40}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Transfer phase of BBCS-based QOT protocols in the $\mathcal {F}_{\mathbf {COM}}-$hybrid model and bounded-quantum-storage model.\relax }}{42}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Transfer phase of BBCS-based QOT protocols in the $\mathcal {F}_{\mathbf {COM}}-$hybrid model and bounded-quantum-storage model.\relax }}{43}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {ALSZ13}.\relax }}{46}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {KOS15}.\relax }}{49}{figure.caption.43}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Semi-honest QOLE protocol.\relax }}{58}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Semi-honest QOLE protocol.\relax }}{58}{figure.caption.46}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces QOKD protocol in the bounded-quantum-storage model.\relax }}{73}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Example of rooted phylogenetic tree.\relax }}{77}{figure.caption.53}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of the $A^a_d$ network structure.\relax }}{78}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Overview of the integration of the QOKD service and the CBMC-GC tool in the Yao protocol.\relax }}{80}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt {12-19} in Figure\nobreakspace {}\ref {fig:jc_cbmc-gc} in Appendix\nobreakspace {}\ref {appendix:appendixA}.\relax }}{84}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{94}{figure.caption.73}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{95}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{95}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces QOKD protocol in the bounded-quantum-storage model.\relax }}{73}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Example of rooted phylogenetic tree.\relax }}{77}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of the $A^a_d$ network structure.\relax }}{78}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Overview of the integration of the QOKD service and the CBMC-GC tool in the Yao protocol.\relax }}{80}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt {12-19} in Figure\nobreakspace {}\ref {fig:jc_cbmc-gc} in Appendix\nobreakspace {}\ref {appendix:appendixA}.\relax }}{84}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{94}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{95}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{95}{figure.caption.77}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Jukes-Cantor distance C code for CBMC-GC boolean circuit generation.\relax }}{101}{figure.caption.76}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Jukes-Cantor distance C code for CBMC-GC boolean circuit generation.\relax }}{101}{figure.caption.78}%

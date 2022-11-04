@@ -23,7 +23,7 @@ We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{
 
 Let us consider a scenario with $n$ parties, $P_i$, each with input $x_i$, $i\in \{ 1, ..., n\}$. Simply put, secure multiparty computation (SMC) allows these $n$ parties to jointly compute some function, $f( x_1, ..., x_n ) = (y_1, ..., y_n)$, without revealing about their inputs more than what can be infered by the input-output behaviour. This functionality is designed to be equivalent to a scenario where every party, $P_i$, sends his inputs, $x_i$, to some independent and trusted third party, $P_{\mathsf{TTP}}$, who computes $f( x_1, ..., x_n )$ and sends back to each party their corresponding output, $y_i$.
 
-We stress that in SMC it is not possible to fully hide the inputs from the other parties, even with a perfectly maliciously secure protocol. This comes from the security guarantees covered by the ideal scenario. Indeed, there could be the case where a perfectly legitimate SMC protocol (e.g. using a trusted third party) leaks the inputs of the parties. This happens when one of the parties can use the output and his inputs to invert the function $f()$. As an example, imagine that two people want to compute the average of the weight of each other. It is straightforward to see that both parties can use their weight and the average value to compute the other party's weight. This always happens whenever $f()$ is bijective with the adversaries' inputs fixed. In this scenario, SMC does not improve the privacy of the computation. 
+We stress that in SMC it may not be possible to fully hide the inputs from the other parties, even with a perfectly maliciously secure protocol. This comes from the security guarantees covered by the ideal scenario. Indeed, there could be the case where a perfectly legitimate SMC protocol (e.g. using a trusted third party) leaks the inputs of the parties. This happens when one of the parties can use the output and his inputs to invert the function $f()$. As an example, imagine that two people want to compute the average of the weight of each other. It is straightforward to see that both parties can use their weight and the average value to compute the other party's weight. This always happens whenever $f()$ is bijective with the adversaries' inputs fixed. In this scenario, SMC does not improve the privacy of the computation. 
 %Estrutura da introdução:
 %
 %- Cometar que não sabemos mais do que o output da computação. Dar o exemplo da média de pesos. 2 pessoas sabemos o resultado. 3 já não. Ainda assim, pode revelar alguma coisa a mais. Note that, pratically, we can put together other PET such as Differential Privacy in oder to do this.
@@ -31,7 +31,7 @@ We stress that in SMC it is not possible to fully hide the inputs from the other
 The following are some properties of SMC which we informally describe:
 
 \begin{enumerate}
-\item Correctness: if all the parties do not deviate from the protocol, the protocol evaluates the correct output according to $f()$ and the parties inputs $x_1, \ldots, x_n$;
+\item Correctness: if all the parties do not deviate from the protocol, the protocol evaluates the correct output according to $f()$ and the parties' inputs $x_1, \ldots, x_n$;
 
 \item Passive security: even if the adversaries do not deviate from the protocol, they do not learn the inputs of the honest parties. Throughout this thesis, we refer to adversaries who do not deviate from the protocol as semi-honest parties. In the literature, these are also called honest-but-curious adversaries.
 
@@ -49,9 +49,9 @@ Also, it is interesting to note that there is a fundamental difference between t
 Boolean approach is based on the Yao protocol. In order to do it we need OT. We start by presenting OT and then we describe the Yao protocol.
 
 
-\subsubsection{Oblivious Transfer}
+\subsubsection{Oblivious transfer}
 
-The study of oblivious transfer (OT) has been very active since its first proposal in 1981 by Rabin \cite{Rabin81}. The importance of OT comes from its wide number of applications. More specifically, one can prove that OT is equivalent to the secure two-party computation of general functions \cite{Y86, K88}, i.e. one can implement a secure two-party computation using OT as its building block. Additionally, this primitive can also be used for secure multi-party computation (SMC) \cite{KOS16}, private information retrieval \cite{Che04}, private set intersection \cite{MEP17}, and privacy-preserving location-based services \cite{BHM+19}. 
+The study of oblivious transfer (OT) has been very active since its first proposal in 1981 by Rabin \cite{Rabin81}. The importance of OT comes from its wide number of applications. More specifically, one can prove that OT is equivalent to the secure two-party computation of general functions \cite{Y86, K88}, i.e. one can implement a secure two-party computation using OT as its building block. Additionally, this primitive can also be used for secure multi-party computation (SMC) \cite{KOS16}, private information retrieval \cite{Che04}, private set intersection \cite{MEP17}, and privacy-preserving location-based services \cite{BHM+19}.
 
 
 \begin{figure}[h!]
@@ -74,13 +74,14 @@ The study of oblivious transfer (OT) has been very active since its first propos
     \label{fig:OT_functionality}
 \end{figure}
 
-Definition:
+The OT functionality specification is presented in Figure~\ref{fig:OT_functionality}. Consequently, we have that OT must satisfy the following security requirements:
 
-use the concealing property and the obliviousness property (used in chapter 4)
+\begin{itemize}
+	\item Concealing: Alices knows nothing about Bob's bit choice $b$.
+	\item Obliviousness: Bob knows nothing about the message $m_{b\oplus 1}$.
+\end{itemize}
 
-Small classical review 
-
-Base OT vs Extended OT
+The above OT functionality (Figure~\ref{fig:OT_functionality}) is commonly called $1$-out-of-$2$ OT. Thus, it can be generalized to the case of $k$-out-of-$N$ OT, where Alice owns $N$ messages, and Bob can choose $k$ of them. For $k=1$, this is commonly called private database query (PDQ). 
 
 \subsubsection{Yao protocol}\label{yaoProtocol}
 
@@ -175,7 +176,62 @@ The Yao protocol has its security based on two main building blocks: garbled cir
 
 \subsection{Arithmetic approach}
 
-\subsubsection{Oblivious Linear Evaluation}
+
+
+\subsubsection{Oblivious linear evaluation}
+
+The study of oblivious transfer (OT) has been very active since its first proposal in 1981 by Rabin \cite{Rabin81}. The importance of OT comes from its wide number of applications. More specifically, one can prove that OT is equivalent to the secure two-party computation of general functions \cite{Y86, K88}, i.e. one can implement a secure two-party computation using OT as its building block. Additionally, this primitive can also be used for secure multi-party computation (SMC) \cite{KOS16}, private information retrieval \cite{Che04}, private set intersection \cite{MEP17}, and privacy-preserving location-based services \cite{BHM+19}.
+
+
+\begin{figure}[h!]
+\centering
+\begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+                        
+    \centerline{$\mathcal{F}_{\textbf{OLE}}$ \textbf{functionality}}
+            
+    \
+    
+    \begin{itemize}
+    		\item \textbf{Input phase:} Alice sends $(a,b)\in\mathbb{Z}_d^2$ (two field elements) to $\mathcal{F}_{\textbf{OLE}}$ and Bob sends $x\in\mathbb{Z}_d$ to $\mathcal{F}_{\textbf{OLE}}$.
+    		\item \textbf{Output phase:} Alice receives nothing $\bot$ from the functionality and Bob receives $f(x):= ax + b$.
+    \end{itemize}
+    
+\end{tcolorbox} 
+    \caption{OLE functionality.}
+    \label{fig:OLE_functionality}
+\end{figure}
+
+The OLE functionality specification is presented in Figure~\ref{fig:OLE_functionality}. Similarly, we have that OLE must satisfy the following security requirements:
+
+\begin{itemize}
+	\item Concealing: Alices knows nothing about Bob's field element $x$.
+	\item Obliviousness: Bob knows nothing about the function $f()$ other than its evaluation at $x$, i.e. $f(x)$.
+\end{itemize}
+
+We can also generalize to the OLE functionality to a vectorized version. The vector OLE functionality is presented in Figure~\ref{fig:VOLE_functionality}. Note that Bob only inputs one field element $x$ and Alice inputs two vectors. 
+
+
+\begin{figure}[h!]
+\centering
+\begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+                        
+    \centerline{$\mathcal{F}_{\textbf{VOLE}}$ \textbf{functionality}}
+            
+    \
+    
+    \begin{itemize}
+    		\item \textbf{Input phase:} Alice sends $(\bm{a},\bm{b})\in\mathbb{Z}_d^{2n}$ (two vectors of field elements) to $\mathcal{F}_{\textbf{VOLE}}$ and Bob sends only $x\in\mathbb{Z}_d$ to $\mathcal{F}_{\textbf{VOLE}}$.
+    		\item \textbf{Output phase:} Alice receives nothing $\bot$ from the functionality and Bob receives $\bm{f}(x):= \bm{a}x + \bm{b}$.
+    \end{itemize}
+    
+\end{tcolorbox} 
+    \caption{VOLE functionality.}
+    \label{fig:VOLE_functionality}
+\end{figure}
 
 \subsubsection{SPDZ}
 
