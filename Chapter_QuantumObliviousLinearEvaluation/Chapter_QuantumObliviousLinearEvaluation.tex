@@ -6,6 +6,8 @@
 
 \chapter{Quantum oblivious linear evaluation}
 
+{\cv This introduction has already been used in the introduction of the thesis.}
+
 Oblivious Linear Evaluation (OLE) is a cryptographic task that permits two distrustful parties, say Alice and Bob, to jointly compute the output of a linear function $f(x)=ax+b$ in some finite field, $\mathbb{F}$. Alice provides inputs $a, b\in\mathbb{F}$ and Bob provides $x\in\mathbb{F}$, while the output, $f(x)$, becomes available only to Bob. As the parties are distrustful, a secure OLE protocol should not permit Alice to learn anything about Bob's input, while also Alice's inputs should remain unknown to Bob.  OLE can be seen as a generalization of Oblivious Transfer (OT) \cite{Rabin81}, a basic primitive for secure two-party computation, which is a special case of secure multi-party computation \cite{Goldreichbook04,CCD88,Canetti00MPC}. OT has been shown to be complete  for secure multi-party computation \cite{Kilian}, i.e., any such task, including OLE, can be achieved given an OT implementation. 
 A compelling reason to study OLE protocols is that they can serve as building blocks for the secure evaluation of arithmetic circuits \cite{AIK11,DKMQ12,GNN17,DGNBNT17}, just like OT allows the secure evaluation of boolean circuits \cite{GMW87}. Specifically, OLE can be used to generate multiplication triples which are the basic tool for securely computing multiplication gates \cite{DGNBNT17}. Besides that, OLE has applications in more tasks for two-party secure computation  \cite{IPS09,ADINZ17,BCGI18,HIMV19,CDIKLOV19} and private set intersection \cite{GN19}.
  

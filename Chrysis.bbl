@@ -1,5 +1,12 @@
 \begin{thebibliography}{100}
 
+\bibitem{Kolesnikov2009}
+Vladimir Kolesnikov, Ahmad-Reza Sadeghi, and Thomas Schneider.
+\newblock Improved garbled circuit building blocks and applications to auctions
+  and computing minima.
+\newblock In {\em Cryptology and Network Security}, pages 1--20. Springer
+  Berlin Heidelberg, 2009.
+
 \bibitem{BM89}
 Mihir Bellare and Silvio Micali.
 \newblock Non-interactive oblivious transfer and applications.
@@ -266,6 +273,29 @@ Armando~N. Pinto, Laura Ortiz, Manuel Santos, Ana~C. Gomes, Juan~P. Brito,
 \newblock In {\em 2020 22nd International Conference on Transparent Optical
   Networks ({ICTON})}. {IEEE}, July 2020.
 
+\bibitem{BGW88}
+Michael Ben-Or, Shafi Goldwasser, and Avi Wigderson.
+\newblock Completeness theorems for non-cryptographic fault-tolerant
+  distributed computation.
+\newblock In {\em Proceedings of the Twentieth Annual ACM Symposium on Theory
+  of Computing}, STOC '88, page 1–10, New York, NY, USA, 1988. Association
+  for Computing Machinery.
+
+\bibitem{CCD88}
+David Chaum, Claude Cr\'{e}peau, and Ivan Damgard.
+\newblock Multiparty unconditionally secure protocols.
+\newblock In {\em Proceedings of the Twentieth Annual ACM Symposium on Theory
+  of Computing}, STOC '88, page 11–19, New York, NY, USA, 1988. Association
+  for Computing Machinery.
+
+\bibitem{PWM+20}
+Rushi Patel, Pierre-Francois Wolfe, Robert Munafo, Mayank Varia, and Martin
+  Herbordt.
+\newblock Arithmetic and boolean secret sharing {MPC} on {FPGAs} in the data
+  center.
+\newblock In {\em 2020 {IEEE} High Performance Extreme Computing Conference
+  ({HPEC})}. {IEEE}, September 2020.
+
 \bibitem{Rabin81}
 Michael~O. Rabin.
 \newblock How to exchange secrets with oblivious transfer.
@@ -293,10 +323,38 @@ Bo~Bi, Darong Huang, Bo~Mi, Zhenping Deng, and Hongyang Pan.
   transfer.
 \newblock {\em Wireless Personal Communications}, 108(4):2663--2674, May 2019.
 
-\bibitem{YAVV22}
-Vijay~Kumar Yadav, Nitish Andola, Shekhar Verma, and S~Venkatesan.
-\newblock A survey of oblivious transfer protocol.
-\newblock {\em {ACM} Computing Surveys}, January 2022.
+\bibitem{BMR90}
+D.~Beaver, S.~Micali, and P.~Rogaway.
+\newblock The round complexity of secure protocols.
+\newblock In {\em Proceedings of the Twenty-Second Annual ACM Symposium on
+  Theory of Computing}, STOC '90, page 503–513, New York, NY, USA, 1990.
+  Association for Computing Machinery.
+
+\bibitem{NPS99}
+Moni Naor, Benny Pinkas, and Reuban Sumner.
+\newblock Privacy preserving auctions and mechanism design.
+\newblock In {\em Proceedings of the 1st ACM Conference on Electronic
+  Commerce}, EC '99, page 129–139, New York, NY, USA, 1999. Association for
+  Computing Machinery.
+
+\bibitem{Pinkas2009}
+Benny Pinkas, Thomas Schneider, Nigel~P. Smart, and Stephen~C. Williams.
+\newblock Secure two-party computation is practical.
+\newblock In {\em Advances in Cryptology {\textendash} {ASIACRYPT} 2009}, pages
+  250--267. Springer Berlin Heidelberg, 2009.
+
+\bibitem{Kolesnikov2005}
+Vladimir Kolesnikov.
+\newblock Gate evaluation secret sharing and secure one-round two-party
+  computation.
+\newblock In {\em Lecture Notes in Computer Science}, pages 136--155. Springer
+  Berlin Heidelberg, 2005.
+
+\bibitem{Zahur2015}
+Samee Zahur, Mike Rosulek, and David Evans.
+\newblock Two halves make a whole.
+\newblock In {\em Advances in Cryptology - {EUROCRYPT} 2015}, pages 220--250.
+  Springer Berlin Heidelberg, 2015.
 
 \bibitem{IR89}
 Russel Impagliazzo and Steven Rudich.
@@ -304,6 +362,95 @@ Russel Impagliazzo and Steven Rudich.
 \newblock In {\em Proceedings of the Twenty-First Annual ACM Symposium on
   Theory of Computing}, STOC '89, page 44–61, New York, NY, USA, 1989.
   Association for Computing Machinery.
+
+\bibitem{AIK11}
+Benny Applebaum, Yuval Ishai, and Eyal Kushilevitz.
+\newblock How to garble arithmetic circuits.
+\newblock In {\em 2011 IEEE 52nd Annual Symposium on Foundations of Computer
+  Science}, pages 120--129, 2011.
+
+\bibitem{DKMQ12}
+Nico Döttling, Daniel Kraschewski, and Jörn Müller-Quade.
+\newblock David and goliath oblivious affine function evaluation -
+  asymptotically optimal building blocks for universally composable two-party
+  computation from a single untrusted stateful tamper-proof hardware token.
+\newblock Cryptology ePrint Archive, Report 2012/135, 2012.
+\newblock \url{https://ia.cr/2012/135}.
+
+\bibitem{GNN17}
+Satrajit Ghosh, Jesper~Buus Nielsen, and Tobias Nilges.
+\newblock Maliciously secure oblivious linear function evaluation with constant
+  overhead.
+\newblock In Tsuyoshi Takagi and Thomas Peyrin, editors, {\em Advances in
+  Cryptology -- ASIACRYPT 2017}, pages 629--659, Cham, 2017. Springer
+  International Publishing.
+
+\bibitem{DGNBNT17}
+Nico D\"{o}ttling, Satrajit Ghosh, Jesper~Buus Nielsen, Tobias Nilges, and
+  Roberto Trifiletti.
+\newblock Tinyole: Efficient actively secure two-party computation from
+  oblivious linear function evaluation.
+\newblock In {\em Proceedings of the 2017 ACM SIGSAC Conference on Computer and
+  Communications Security}, CCS '17, page 2263–2276, New York, NY, USA, 2017.
+  Association for Computing Machinery.
+
+\bibitem{GMW87}
+O.~Goldreich, S.~Micali, and A.~Wigderson.
+\newblock How to play any mental game.
+\newblock In {\em Proceedings of the Nineteenth Annual ACM Symposium on Theory
+  of Computing}, STOC '87, page 218–229, New York, NY, USA, 1987. Association
+  for Computing Machinery.
+
+\bibitem{IPS09}
+Yuval Ishai, Manoj Prabhakaran, and Amit Sahai.
+\newblock Secure arithmetic computation with no honest majority.
+\newblock In Omer Reingold, editor, {\em Theory of Cryptography}, pages
+  294--314, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
+
+\bibitem{ADINZ17}
+Benny Applebaum, Ivan Damg{\aa}rd, Yuval Ishai, Michael Nielsen, and Lior
+  Zichron.
+\newblock Secure arithmetic computation with constant computational overhead.
+\newblock In Jonathan Katz and Hovav Shacham, editors, {\em Advances in
+  Cryptology -- CRYPTO 2017}, pages 223--254, Cham, 2017. Springer
+  International Publishing.
+
+\bibitem{BCGI18}
+Elette Boyle, Geoffroy Couteau, Niv Gilboa, and Yuval Ishai.
+\newblock Compressing vector {OLE}.
+\newblock In {\em Proceedings of the 2018 {ACM} {SIGSAC} Conference on Computer
+  and Communications Security}. {ACM}, January 2018.
+
+\bibitem{HIMV19}
+Carmit Hazay, Yuval Ishai, Antonio Marcedone, and Muthuramakrishnan
+  Venkitasubramaniam.
+\newblock Leviosa: Lightweight secure arithmetic computation.
+\newblock CCS '19, page 327–344, New York, NY, USA, 2019. Association for
+  Computing Machinery.
+
+\bibitem{CDIKLOV19}
+Melissa Chase, Yevgeniy Dodis, Yuval Ishai, Daniel Kraschewski, Tianren Liu,
+  Rafail Ostrovsky, and Vinod Vaikuntanathan.
+\newblock Reusable non-interactive secure computation.
+\newblock 11694:462--488, 2019.
+
+\bibitem{GN19}
+Satrajit Ghosh and Tobias Nilges.
+\newblock An algebraic approach to maliciously secure private set intersection.
+\newblock In Yuval Ishai and Vincent Rijmen, editors, {\em Advances in
+  Cryptology -- EUROCRYPT 2019}, pages 154--185, Cham, 2019. Springer
+  International Publishing.
+
+\bibitem{Evans2018}
+David Evans, Vladimir Kolesnikov, and Mike Rosulek.
+\newblock A pragmatic introduction to secure multi-party computation.
+\newblock {\em Foundations and Trends{\textregistered} in Privacy and
+  Security}, 2(2-3):70--246, 2018.
+
+\bibitem{YAVV22}
+Vijay~Kumar Yadav, Nitish Andola, Shekhar Verma, and S~Venkatesan.
+\newblock A survey of oblivious transfer protocol.
+\newblock {\em {ACM} Computing Surveys}, January 2022.
 
 \bibitem{GKMRV00}
 Y.~Gertner, S.~Kannan, T.~Malkin, O.~Reingold, and M.~Viswanathan.
@@ -1004,13 +1151,6 @@ Philip~S. Hirschhorn, Jeffrey Hoffstein, Nick Howgrave-Graham, and William
   Vergnaud, editors, {\em Applied Cryptography and Network Security}, pages
   437--455, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
 
-\bibitem{GMW87}
-O.~Goldreich, S.~Micali, and A.~Wigderson.
-\newblock How to play any mental game.
-\newblock In {\em Proceedings of the Nineteenth Annual ACM Symposium on Theory
-  of Computing}, STOC '87, page 218–229, New York, NY, USA, 1987. Association
-  for Computing Machinery.
-
 \bibitem{Verhaert2018}
 Danilo Verhaert, Majid Nateghizad, and Zekeriya Erkin.
 \newblock An efficient privacy-preserving recommender system for e-healthcare
@@ -1136,12 +1276,6 @@ P~J Lockhart, M~A Steel, M~D Hendy, and D~Penny.
 Philippe Lemey, Marco Salemi, and Anne-Mieke Vandamme, editors.
 \newblock {\em The Phylogenetic Handbook}.
 \newblock Cambridge University Press, 2009.
-
-\bibitem{Evans2018}
-David Evans, Vladimir Kolesnikov, and Mike Rosulek.
-\newblock A pragmatic introduction to secure multi-party computation.
-\newblock {\em Foundations and Trends{\textregistered} in Privacy and
-  Security}, 2(2-3):70--246, 2018.
 
 \bibitem{Lindell2017}
 Yehuda Lindell.
@@ -1355,6 +1489,13 @@ Ebrahim~M. Songhori, M.~Sadegh Riazi, Siam~U. Hussain, Ahmad-Reza Sadeghi, and
 \newblock {ARM}2gc.
 \newblock In {\em Proceedings of the 56th Annual Design Automation Conference
   2019}. {ACM}, June 2019.
+
+\bibitem{DFL+09}
+Ivan Damg{\aa}rd, Serge Fehr, Carolin Lunemann, Louis Salvail, and Christian
+  Schaffner.
+\newblock Improving the security of quantum protocols via commit-and-open.
+\newblock In {\em Advances in Cryptology - {CRYPTO} 2009}, pages 408--427.
+  Springer Berlin Heidelberg, 2009.
 
 \bibitem{Lindell2008}
 Yehuda Lindell and Benny Pinkas.

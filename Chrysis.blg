@@ -10,76 +10,73 @@ A level-1 auxiliary file: Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylog
 A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
 A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
-Reallocated field_info (elt_size=4) to 10888 items from 5000.
+Reallocated field_info (elt_size=4) to 11233 items from 5000.
 Database file #1: References/References.bib
-Warning--I didn't find a database entry for "Goldreichbook04"
-Warning--I didn't find a database entry for "CCD88"
-Warning--I didn't find a database entry for "Canetti00MPC"
 Warning--I didn't find a database entry for "Kilian"
-Warning--I didn't find a database entry for "AIK11"
-Warning--I didn't find a database entry for "DKMQ12"
-Warning--I didn't find a database entry for "GNN17"
-Warning--I didn't find a database entry for "DGNBNT17"
-Warning--I didn't find a database entry for "IPS09"
-Warning--I didn't find a database entry for "ADINZ17"
-Warning--I didn't find a database entry for "BCGI18"
-Warning--I didn't find a database entry for "HIMV19"
-Warning--I didn't find a database entry for "CDIKLOV19"
-Warning--I didn't find a database entry for "GN19"
+Warning--I didn't find a database entry for "Goldreichbook04"
+Warning--I didn't find a database entry for "Canetti00MPC"
 Warning--I didn't find a database entry for "Shor94"
 Warning--I didn't find a database entry for "C94"
-Warning--I didn't find a database entry for "LC98"
-Warning--I didn't find a database entry for "Mayer97"
-Warning--I didn't find a database entry for "Unruh10"
 Warning--I didn't find a database entry for "NP06"
 Warning--I didn't find a database entry for "NP99"
 Warning--I didn't find a database entry for "LP02"
 Warning--I didn't find a database entry for "H18"
 Warning--I didn't find a database entry for "G99"
-Warning--I didn't find a database entry for "Damgrd2009"
+Warning--I didn't find a database entry for "CBKG02"
+Warning--I didn't find a database entry for "AGS03"
+Warning--I didn't find a database entry for "AKBH07"
+Warning--I didn't find a database entry for "SS10"
+Warning--I didn't find a database entry for "Sitetal17"
+Warning--I didn't find a database entry for "Bouchardetal18"
+Warning--I didn't find a database entry for "Unruh10"
+Warning--I didn't find a database entry for "DHNO19"
+Warning--I didn't find a database entry for "HK97"
+Warning--I didn't find a database entry for "Dupuis2015"
+Warning--empty booktitle in HIMV19
+Warning--empty journal in CDIKLOV19
 Warning--can't use both author and editor fields in S99
 Warning--empty booktitle in IKNP03
 Warning--empty journal in NNOB12
 Warning--empty booktitle in MR19
-You've used 231 entries,
+You've used 251 entries,
             1791 wiz_defined-function locations,
-            1892 strings with 42043 characters,
-and the built_in function-call counts, 59386 in all, are:
-= -- 5261
-> -- 2879
-< -- 59
-+ -- 1049
-- -- 818
-* -- 4118
-:= -- 9146
-add.period$ -- 751
-call.type$ -- 231
-change.case$ -- 226
+            2002 strings with 45923 characters,
+and the built_in function-call counts, 66655 in all, are:
+= -- 6000
+> -- 3162
+< -- 75
++ -- 1148
+- -- 897
+* -- 4504
+:= -- 10119
+add.period$ -- 829
+call.type$ -- 251
+change.case$ -- 246
 chr.to.int$ -- 0
-cite$ -- 235
-duplicate$ -- 2771
-empty$ -- 5723
-format.name$ -- 818
-if$ -- 13579
+cite$ -- 257
+duplicate$ -- 3199
+empty$ -- 6378
+format.name$ -- 897
+if$ -- 15398
 int.to.chr$ -- 0
-int.to.str$ -- 231
-missing$ -- 209
-newline$ -- 1138
-num.names$ -- 267
-pop$ -- 780
+int.to.str$ -- 251
+missing$ -- 228
+newline$ -- 1239
+num.names$ -- 295
+pop$ -- 882
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1453
+skip$ -- 1767
 stack$ -- 0
-substring$ -- 3444
-swap$ -- 817
-text.length$ -- 59
+substring$ -- 3870
+swap$ -- 1032
+text.length$ -- 75
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 523
-width$ -- 234
-write$ -- 2562
-(There were 29 warnings)
+warning$ -- 6
+while$ -- 583
+width$ -- 254
+write$ -- 2812
+(There were 26 warnings)

@@ -8,102 +8,102 @@
 \contentsline {chapter}{\numberline {2}Technical overview}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Secure multiparty computation}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Boolean approach}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Garbled circuit approach}{9}{subsection.2.2.1}%
 \contentsline {subsubsection}{Oblivious transfer}{9}{section*.15}%
-\contentsline {subsubsection}{Yao protocol}{9}{section*.17}%
-\contentsline {subsection}{\numberline {2.2.2}Arithmetic approach}{12}{subsection.2.2.2}%
-\contentsline {subsubsection}{Oblivious linear evaluation}{12}{section*.19}%
-\contentsline {subsubsection}{SPDZ}{13}{section*.22}%
-\contentsline {section}{\numberline {2.3}Quantum Information}{13}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Quantum states representation}{14}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Entropy}{14}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Two-universal functions}{14}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Mutually Unbiased Basis}{14}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Universal Composability}{14}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Functionality definitions}{14}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Quantum oblivious transfer}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Impossibility results}{16}{section.3.1}%
-\contentsline {section}{\numberline {3.2}BBCS-based protocols}{17}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}BBCS protocol}{18}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}BBCS in the $\mathcal {F}_{\textbf {COM}}-$hybrid model}{21}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}BBCS in the limited-quantum-storage model}{24}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Bounded-quantum-storage model}{25}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{26}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Experimental attacks}{28}{subsection.3.2.6}%
-\contentsline {subsubsection}{QOT attacks}{30}{section*.27}%
-\contentsline {subsubsection}{Countermeasures}{32}{section*.31}%
-\contentsline {chapter}{\numberline {4}Classical and quantum oblivious transfer}{35}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Classical oblivious transfer}{36}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Security issues}{37}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Efficiency issues}{39}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}OT extension protocols}{41}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Oblivious transfer complexity analysis}{41}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Optimization}{41}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Classical OT}{44}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}OT extension}{45}{subsection.4.2.3}%
-\contentsline {subsubsection}{ALSZ13 comparison}{45}{section*.38}%
-\contentsline {subsubsection}{KOS15 comparison}{48}{section*.42}%
-\contentsline {section}{\numberline {4.3}Conclusion}{51}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Quantum oblivious linear evaluation}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Contributions overview}{54}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Organization}{57}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Semi-honest QOLE protocol}{57}{section.5.2}%
-\contentsline {section}{\numberline {5.3}QOLE protocol}{59}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Private phylogenetic trees}{61}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Phylogenetic trees}{62}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Evolutionary distances}{63}{subsection.6.1.1}%
-\contentsline {subsubsection}{Jukes-Cantor}{64}{section*.47}%
-\contentsline {subsubsection}{Kimura 2-parameter}{64}{section*.48}%
-\contentsline {subsubsection}{F84}{65}{section*.49}%
-\contentsline {subsubsection}{LogDet}{65}{section*.50}%
-\contentsline {subsection}{\numberline {6.1.2}Distance-based algorithms}{66}{subsection.6.1.2}%
-\contentsline {subsubsection}{UPGMA}{66}{section*.51}%
-\contentsline {subsubsection}{Neighbour-Joining}{67}{section*.52}%
-\contentsline {subsubsection}{Fitch-Margoliash}{68}{section*.53}%
-\contentsline {section}{\numberline {6.2}Security definition}{69}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Distance matrix functionality}{71}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Quantum tools}{71}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Quantum oblivious key distribution}{72}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Quantum random number generator}{72}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Quantum key distribution}{74}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Software tools}{75}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}CBMC-GC}{75}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Libscapi}{75}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}PHYLIP}{75}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Secure multiparty computation of phylogenetic trees}{75}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Functionality definition}{76}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Private protocol}{77}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Quantum private protocol}{78}{subsection.6.5.3}%
-\contentsline {section}{\numberline {6.6}Quantum technologies integration}{79}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Quantum oblivious transfer}{79}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Quantum random number generation}{80}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Quantum key distribution}{80}{subsection.6.6.3}%
-\contentsline {subsection}{\numberline {6.6.4}Quantum network integration}{81}{subsection.6.6.4}%
-\contentsline {subsubsection}{Technological equipment}{81}{section*.58}%
-\contentsline {subsubsection}{Network topology}{81}{section*.59}%
-\contentsline {section}{\numberline {6.7}System security}{82}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Private computation of distances}{82}{subsection.6.7.1}%
-\contentsline {subsubsection}{Hamming distance}{82}{section*.60}%
-\contentsline {subsubsection}{Jukes-Cantor}{83}{section*.62}%
-\contentsline {subsubsection}{Kimura}{84}{section*.63}%
-\contentsline {subsubsection}{F84 and LogDet}{85}{section*.64}%
-\contentsline {subsection}{\numberline {6.7.2}Private computation of phylogenetic trees}{85}{subsection.6.7.2}%
-\contentsline {section}{\numberline {6.8}Complexity analysis}{87}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Protocol complexity analysis}{87}{subsection.6.8.1}%
-\contentsline {subsubsection}{Yao protocol executions}{87}{section*.65}%
-\contentsline {subsubsection}{OT executions}{88}{section*.66}%
-\contentsline {subsubsection}{Oblivious keys}{88}{section*.67}%
-\contentsline {subsubsection}{QRNG}{89}{section*.68}%
-\contentsline {subsubsection}{Internal computation}{89}{section*.69}%
-\contentsline {subsubsection}{Encryption keys}{89}{section*.70}%
-\contentsline {subsection}{\numberline {6.8.2}Use case}{89}{subsection.6.8.2}%
-\contentsline {section}{\numberline {6.9}Performance evaluation}{91}{section.6.9}%
-\contentsline {subsection}{\numberline {6.9.1}Setup}{91}{subsection.6.9.1}%
-\contentsline {subsubsection}{Sequences preprocessing}{91}{section*.71}%
-\contentsline {subsection}{\numberline {6.9.2}Circuit generation}{92}{subsection.6.9.2}%
-\contentsline {subsection}{\numberline {6.9.3}System execution time}{92}{subsection.6.9.3}%
-\contentsline {section}{\numberline {6.10}Conclusion}{94}{section.6.10}%
-\contentsline {chapter}{\numberline {7}Conclusion}{97}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Future work}{97}{section.7.1}%
-\contentsline {chapter}{\numberline {A}Jukes-Cantor distance for CBMC-GC}{99}{appendix.A}%
-\contentsline {chapter}{Bibliography}{123}{appendix*.79}%
+\contentsline {subsubsection}{Yao protocol}{10}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.2}Secret sharing approach}{12}{subsection.2.2.2}%
+\contentsline {subsubsection}{Oblivious linear evaluation}{13}{section*.19}%
+\contentsline {subsubsection}{Basic operations}{14}{section*.22}%
+\contentsline {section}{\numberline {2.3}Quantum Information}{15}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Quantum states representation}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Entropy}{15}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Two-universal functions}{15}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Mutually Unbiased Basis}{15}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Universal Composability}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Functionality definitions}{15}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Quantum oblivious transfer}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Impossibility results}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.2}BBCS-based protocols}{19}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}BBCS protocol}{20}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}BBCS in the $\mathcal {F}_{\textbf {COM}}-$hybrid model}{23}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}BBCS in the limited-quantum-storage model}{26}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Bounded-quantum-storage model}{27}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{28}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Experimental attacks}{30}{subsection.3.2.6}%
+\contentsline {subsubsection}{QOT attacks}{32}{section*.27}%
+\contentsline {subsubsection}{Countermeasures}{34}{section*.31}%
+\contentsline {chapter}{\numberline {4}Classical and quantum oblivious transfer}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Classical oblivious transfer}{38}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Security issues}{39}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Efficiency issues}{41}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}OT extension protocols}{43}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Oblivious transfer complexity analysis}{43}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Optimization}{43}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Classical OT}{46}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}OT extension}{47}{subsection.4.2.3}%
+\contentsline {subsubsection}{ALSZ13 comparison}{47}{section*.38}%
+\contentsline {subsubsection}{KOS15 comparison}{50}{section*.42}%
+\contentsline {section}{\numberline {4.3}Conclusion}{53}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Quantum oblivious linear evaluation}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Contributions overview}{56}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Organization}{59}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Semi-honest QOLE protocol}{59}{section.5.2}%
+\contentsline {section}{\numberline {5.3}QOLE protocol}{61}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Private phylogenetic trees}{63}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Phylogenetic trees}{64}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Evolutionary distances}{65}{subsection.6.1.1}%
+\contentsline {subsubsection}{Jukes-Cantor}{66}{section*.47}%
+\contentsline {subsubsection}{Kimura 2-parameter}{66}{section*.48}%
+\contentsline {subsubsection}{F84}{67}{section*.49}%
+\contentsline {subsubsection}{LogDet}{67}{section*.50}%
+\contentsline {subsection}{\numberline {6.1.2}Distance-based algorithms}{68}{subsection.6.1.2}%
+\contentsline {subsubsection}{UPGMA}{68}{section*.51}%
+\contentsline {subsubsection}{Neighbour-Joining}{69}{section*.52}%
+\contentsline {subsubsection}{Fitch-Margoliash}{70}{section*.53}%
+\contentsline {section}{\numberline {6.2}Security definition}{71}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Distance matrix functionality}{73}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Quantum tools}{73}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Quantum oblivious key distribution}{74}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Quantum random number generator}{74}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Quantum key distribution}{76}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Software tools}{77}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}CBMC-GC}{77}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Libscapi}{77}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}PHYLIP}{77}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Secure multiparty computation of phylogenetic trees}{77}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Functionality definition}{78}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Private protocol}{79}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Quantum private protocol}{80}{subsection.6.5.3}%
+\contentsline {section}{\numberline {6.6}Quantum technologies integration}{81}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Quantum oblivious transfer}{81}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Quantum random number generation}{82}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Quantum key distribution}{82}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Quantum network integration}{83}{subsection.6.6.4}%
+\contentsline {subsubsection}{Technological equipment}{83}{section*.58}%
+\contentsline {subsubsection}{Network topology}{83}{section*.59}%
+\contentsline {section}{\numberline {6.7}System security}{84}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Private computation of distances}{84}{subsection.6.7.1}%
+\contentsline {subsubsection}{Hamming distance}{84}{section*.60}%
+\contentsline {subsubsection}{Jukes-Cantor}{85}{section*.62}%
+\contentsline {subsubsection}{Kimura}{86}{section*.63}%
+\contentsline {subsubsection}{F84 and LogDet}{87}{section*.64}%
+\contentsline {subsection}{\numberline {6.7.2}Private computation of phylogenetic trees}{87}{subsection.6.7.2}%
+\contentsline {section}{\numberline {6.8}Complexity analysis}{89}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Protocol complexity analysis}{89}{subsection.6.8.1}%
+\contentsline {subsubsection}{Yao protocol executions}{89}{section*.65}%
+\contentsline {subsubsection}{OT executions}{89}{section*.66}%
+\contentsline {subsubsection}{Oblivious keys}{90}{section*.67}%
+\contentsline {subsubsection}{QRNG}{91}{section*.68}%
+\contentsline {subsubsection}{Internal computation}{91}{section*.69}%
+\contentsline {subsubsection}{Encryption keys}{91}{section*.70}%
+\contentsline {subsection}{\numberline {6.8.2}Use case}{91}{subsection.6.8.2}%
+\contentsline {section}{\numberline {6.9}Performance evaluation}{93}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Setup}{93}{subsection.6.9.1}%
+\contentsline {subsubsection}{Sequences preprocessing}{93}{section*.71}%
+\contentsline {subsection}{\numberline {6.9.2}Circuit generation}{94}{subsection.6.9.2}%
+\contentsline {subsection}{\numberline {6.9.3}System execution time}{94}{subsection.6.9.3}%
+\contentsline {section}{\numberline {6.10}Conclusion}{96}{section.6.10}%
+\contentsline {chapter}{\numberline {7}Conclusion}{99}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Future work}{99}{section.7.1}%
+\contentsline {chapter}{\numberline {A}Jukes-Cantor distance for CBMC-GC}{101}{appendix.A}%
+\contentsline {chapter}{Bibliography}{127}{appendix*.79}%

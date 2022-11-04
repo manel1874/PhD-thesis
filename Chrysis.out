@@ -8,8 +8,8 @@
 \BOOKMARK [0][-]{chapter.2}{2 Technical overview}{}% 8
 \BOOKMARK [1][-]{section.2.1}{2.1 Mathematical preliminaries}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.2}{2.2 Secure multiparty computation}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Boolean approach}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Arithmetic approach}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Garbled circuit approach}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Secret sharing approach}{section.2.2}% 12
 \BOOKMARK [1][-]{section.2.3}{2.3 Quantum Information}{chapter.2}% 13
 \BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Quantum states representation}{section.2.3}% 14
 \BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Entropy}{section.2.3}% 15

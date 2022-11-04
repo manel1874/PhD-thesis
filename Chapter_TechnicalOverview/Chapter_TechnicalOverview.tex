@@ -14,8 +14,9 @@ Throughout this thesis, Alice plays the role of the sender and Bob plays the rol
 
 We denote by $\gcd (a,b), a,b\in\mathbb{Z}$ the greatest common divisor between integers $a$ and $b$. $\mathbb{Z}_q$ denotes the set of integers $a \mod q$. $\mathbb{Z}^*_q$ is the set of integers $a\in\mathbb{Z}_q$ that are coprime with $q$, i.e. $\gcd (a,q) = 1$. For $q$ prime, $\mathbb{Z}^*_q$ forms a multiplicative group of order $q-1$ and $\mathbb{Z}_q$ a finite field of order $q$. A generator $g$ of some multiplicative group $\mathbb{G}$ is an element in $\mathbb{G}$ such that $\forall\,a\in\mathbb{G}, \exists r\, :\, g^r = a$. The discrete logarithm base $g$ of some element $a\in\mathbb{G}$, denoted by $\log_g a$, is the power $r$ of $g$ such that $g^r = a$. 
 
-We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{\$}I$ to describe a situation where an element $s$ is drawn uniformly at random from the set $I$. For some set $J$, $\bm{v}_J$ denotes the subvector of $\bm{v}$ restricted to the indexes of set $J$. Let $\mathbb{Z}_q$ denote the finite field with order $q$. Then, for $m\in \mathbb{Z}_q$, $[m]$ is the ordered set $\{1, 2, \ldots, m\}$. Also, for $m, n\in \mathbb{Z}_q$ such that $m<n$, $[m, n] = \{m, m+1, \dots, n-1, n\}$. Also, we use the big-$\mathcal{O}$ notation to denote the fastest-growing term of the number of operations with respect to some security parameter $n$.
+We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{\$}I$ to describe a situation where an element $s$ is drawn uniformly at random from the set $I$. Vectors $\bm{v}= (v_1, \ldots , v_n)$  are denoted in bold. Given a set $J$, $\bm{v}_J$ denotes the subvector of $\bm{v}$ restricted to the indices $i \in J$. Let $\mathbb{Z}_q$ denote the finite field with order $q$. Then, for $m\in \mathbb{Z}_q$, $[m]$ is the ordered set $\{1, 2, \ldots, m\}$. Also, for $m, n\in \mathbb{Z}_q$ such that $m<n$, $[m, n] = \{m, m+1, \dots, n-1, n\}$. Also, we use the big-$\mathcal{O}$ notation to denote the fastest-growing term of the number of operations with respect to some security parameter $n$.
 
+A negligible function $\mu(n)$ is a function such that $\mu(n) < 1/p(n)$ for some polynomial $p(n)$ and sufficiently large $n$. We denote by $\mathds{1}$ the identity operator. 
 
 
 %********************************** %First Section  **************************************
@@ -38,21 +39,19 @@ The following are some properties of SMC which we informally describe:
 \item Active security: even if the adversaries deviate arbitrarily from the protocol, they do not learn the inputs of the honest parties. In active security there are two types of protocols that react differently with respect to the adversarial behaviour. They can be robust against the advarsaries, meaning the honest parties will still receive the correct answer. Or honest parties abort the protocol when there exists some malicious activity.
 \end{enumerate}
 
-Regarding the corruption strategy of the adversaries, they can be of two types: static or adaptive. Static security guarantees that the protocol is secure against an adversary who only corrupts parties before the execution of the protocol. Adaptive security is an harder property to attain as it assumes that the adversary can choose throughout the protocol the party to be corrupted.
+Regarding the corruption strategy of the adversaries, they can be of two types: static or adaptive. Static security guarantees that the protocol is secure against an adversary who only corrupts parties before the execution of the protocol. Adaptive security is an harder property to attain as it assumes that the adversary can choose throughout the protocol the party to be corrupted. Also, it is interesting to note that there is a fundamental difference between the adversarial structure of encryption methods and SMC methods. In encryption methods, the adversary is not part of the protocol. It is considered as an external party (usually called Eve) that interfeers with the communication between the protocol parties. In the case of SMC methods, the adversaries are a subset of the protocol parties.
 
-Also, it is interesting to note that there is a fundamental difference between the adversarial structure of encryption methods and SMC methods. In encryption methods, the adversary is not part of the protocol. It is considered as an external party (usually called Eve) that interfeers with the communication between the protocol parties. In the case of SMC methods, the adversaries are a subset of the protocol parties.
+Next, we present two common approaches used for SMC protocols: garbled circuit and secret sharing approaches. The garbled circuit approach is based on boolean circuits and follows from the techniques developed by Yao \cite{Yao82}. The secret sharing approach is commonly based on arithmetic circuits (although it can also be used with boolean circuits) and follows from the properties of secret sharing \cite{BGW88, CCD88}.
 
-%Talk about two approaches: boolean and arithmetic. Discuss the advantages and disadvantages of each.
+\subsection{Garbled circuit approach}
 
-\subsection{Boolean approach}
+The garbled circuit approach is based on Yao's seminal work \cite{Yao82}, who proposed a technique to ``encrypt" boolean circuits in such a way that preserves the security requirements of both parties. This ``encrypted" version is called garbled circuit and we present it in this section along with the Yao protocol description. Usually, this approach suits best scenarios with higher latency. This comes from the fact that it typically requires a fixed number communication rounds, independently from the complexity of the function to be evaluated. On the other hand, for large circuits one needs high bandwidth \cite{PWM+20}.
 
-Boolean approach is based on the Yao protocol. In order to do it we need OT. We start by presenting OT and then we describe the Yao protocol.
-
+Before looking at the Yao protocol, there is one crucial primitive that has to be presented: oblivious transfer.
 
 \subsubsection{Oblivious transfer}
 
 The study of oblivious transfer (OT) has been very active since its first proposal in 1981 by Rabin \cite{Rabin81}. The importance of OT comes from its wide number of applications. More specifically, one can prove that OT is equivalent to the secure two-party computation of general functions \cite{Y86, K88}, i.e. one can implement a secure two-party computation using OT as its building block. Additionally, this primitive can also be used for secure multi-party computation (SMC) \cite{KOS16}, private information retrieval \cite{Che04}, private set intersection \cite{MEP17}, and privacy-preserving location-based services \cite{BHM+19}.
-
 
 \begin{figure}[h!]
 \centering
@@ -74,18 +73,19 @@ The study of oblivious transfer (OT) has been very active since its first propos
     \label{fig:OT_functionality}
 \end{figure}
 
-The OT functionality specification is presented in Figure~\ref{fig:OT_functionality}. Consequently, we have that OT must satisfy the following security requirements:
+The OT functionality can be presented in many flavours. In this thesis, when we refer to OT, we mean the $1$-out-of-$2$ OT that is specified in Figure~\ref{fig:OT_functionality}. Consequently, we have that OT must satisfy the following security requirements:
 
 \begin{itemize}
 	\item Concealing: Alices knows nothing about Bob's bit choice $b$.
 	\item Obliviousness: Bob knows nothing about the message $m_{b\oplus 1}$.
 \end{itemize}
 
-The above OT functionality (Figure~\ref{fig:OT_functionality}) is commonly called $1$-out-of-$2$ OT. Thus, it can be generalized to the case of $k$-out-of-$N$ OT, where Alice owns $N$ messages, and Bob can choose $k$ of them. For $k=1$, this is commonly called private database query (PDQ). 
+OT can be generalized to the case of $k$-out-of-$N$ OT, where Alice owns $N$ messages, and Bob can choose $k$ of them. For $k=1$, this is commonly called private database query (PDQ). Also, we refer to random OT when both parties' inputs are random.
+
 
 \subsubsection{Yao protocol}\label{yaoProtocol}
 
-A solution to SMC was given for the first time by Yao \cite{Yao82} and its main idea resides on the fact that every function has a boolean circuit representation. From this, Yao developed the concept of garbled circuits which is one of the key elements for secure computation. The Yao's garbled circuit protocol is constrained to only two parties but its generalization was achieved by GMW \cite{Goldreich87}, BGW \cite{BGW88, CCD88} and BMR \cite{BMR90}. Also, some implementation optimizations on Yao protocol were later developed in order to improve its performance: point-and-permute \cite{BMR90}, row reduction \cite{NPS99, Pinkas2009}, FreeXOR \cite{Kolesnikov2005} and half gates \cite{Zahur2015}. 
+A solution to SMC was given for the first time by Yao \cite{Yao82} and its main idea resides on the fact that every function has a boolean circuit representation. From this, Yao developed the concept of garbled circuits which is one of the key elements for secure computation. The Yao's garbled circuit protocol is constrained to only two parties but its generalization was achieved by GMW \cite{Goldreich87} and BMR \cite{BMR90}. Also, some implementation optimizations on Yao protocol were later developed in order to improve its performance: point-and-permute \cite{BMR90}, row reduction \cite{NPS99, Pinkas2009}, FreeXOR \cite{Kolesnikov2005} and half gates \cite{Zahur2015}. 
 
 As we said before, the main idea of Yao protocol is to represent the desired function $f()$ as a boolean circuit $C$, i.e. by a sequence of logical gates interconnected with wires. After the generation of the circuit $C$, each party will have two very different roles. Generally speaking, one of the parties Alice (usually called garbler) randomly generates keys to each input bit, encrypts each circuit's gate and sends both elements to Bob (called evaluator). This procedure masks Alice's inputs from Bob. Then, through the OT functionality, Bob receives the keys corresponding to his input bits. So, OT allows to mask Bob's inputs from Alice. Finally, since the evaluator has all the input keys, he can decrypt every gate, i.e. evaluate the circuit. Let us see in more detail how the protocol works using a four input boolean circuit description of the Millionaires' problem. This problem can be described by the following expression:
 
@@ -105,7 +105,7 @@ The protocol goes as follows:
     
     \begin{figure}[h]
         \centering
-        \includegraphics[scale=0.4]{Chapter_TechnicalOverview/booleanCircuit.png}
+        \includegraphics[scale=0.3]{Chapter_TechnicalOverview/booleanCircuit.png}
 
         \caption{Boolean circuit of the Millionaires' Problem. Optimized circuit according to the construction in \cite{Kolesnikov2009}.}
         \label{fig:boolean}
@@ -116,8 +116,6 @@ The protocol goes as follows:
     \item \textit{Wire encryption:} Alice uses a random number generator to generate two keys $k^0_i$ and $k^1_i$ for each wire $w_i$, $i\in\{1, ..., 10\}$. These keys correspond to the possible values ($0$ or $1$) on the wire. Note that this is done to prevent Bob from knowing the true value of the wires during the evaluation process.
     
     \item \textit{Gate encryption:} For every gate $g_l$ in the circuit with corresponding input wires $w_i$ and $w_j$ and output wire $w_s$, Alice creates the following table:
-    
-    \
 
     \begin{center}
         \begin{tabular}{ |c| } 
@@ -135,14 +133,9 @@ The protocol goes as follows:
     
     where $g_l(t,r)$ is the output of gate $g_l$ for inputs $t, r\in \{0, 1\}$. So, we could think of each row as a locked box that requires two keys to be opened. If the two correct keys are used, it outputs the key corresponding to the desired output value given by $g_l$. After encrypting each gate, Alice permutes the rows of the corresponding table, otherwise, it would be easy to know the real value of the input keys. Then, she sends to Bob the garbled tables along with Alice's input keys.
     
-    \
-    
     As an example, we can easily see that if we use input keys $k_i^0$ and $k_j^1$ (corresponding to real values $0$ and $1$), we would only be able to decipher the second row of the table, $\mathsf{Enc}_{k_i^0}(\mathsf{Enc}_{k_j^1}(k_s^{g_l(0,1)}))$, and get $k_s^{g_l(0,1)}$.
     
-    
     \item \textit{Oblivious Transfer:} At this stage of the protocol, the evaluator Bob knows the garbled circuit and Alice's input keys but he does not know the keys corresponding to his real inputs. However, since Bob wants to keep his input value private he cannot directly ask for those keys. At this point, the OT functionality enables the evaluator to receive his input keys without compromising neither the evaluator's nor garbler's security. In fact, for every input wire, both parties perform an OT where Alice plays the role of sender and Bob plays the role of receiver. 
-    
-    \
     
     Let us assume Alice's input keys to be $k_1^0$ and $k_2^1$ (corresponding to the real value  $01$) and Bob's input bits to be $11$. This means that Bob must use the respective input keys ($k_3^1$ and $k_4^1$) in order to correctly evaluate the circuit. So, they will execute two OT protocols where:
     
@@ -152,8 +145,6 @@ The protocol goes as follows:
     \end{itemize}
     
     \item \textit{Evaluation:} Once the evaluator has all the necessary elements, he can proceed with the circuit evaluation. In this step, he simply has to decipher the correct rows of the garbled tables sent by Alice with the corresponding keys. Since the rows of the tables are shuffled, the evaluator does not know which row is the correct one. This small issue can be solved by simple techniques (Point-and-Permute or encryption with a certain number of $0$ padded) which, for the sake of brevity, we will not explore here. At the end of the evaluation, the evaluator receives the key that corresponds to the result. Finally, the evaluator sends the resulting key to the garbler and the garbler tells him the final bit.
-    
-    \
     
     According to our Millionaires' problem, the evaluation yields the following results for $a = 01$ and $b = 11$: $g_1(k_4^1) = k_5^0$, $g_2(k_5^0, k_2^1) = k_6^0$, $g_3(k_6^0, k_3^1) = k_7^0$, $g_4(k_6^0, k_1^0) = k_8^1$, $g_5(k_7^0, k_8^1) = k_9^0$, $g_6(k_6^0, k_9^0) = k_{10}^0$. Actually, the desired result is $0$.
     
@@ -174,13 +165,13 @@ The Yao protocol has its security based on two main building blocks: garbled cir
 %
 %Generalizations of Yao: GMW, BMR
 
-\subsection{Arithmetic approach}
+\subsection{Secret sharing approach}
 
-
+The secret sharing approach was initiated by two concurrent works, known as BGW \cite{BGW88} and CCD \cite{CCD88}. This approach does not generate an ``encrypted" version of the circuit. Instead, the parties use some secret sharing scheme in order to evaluate the circuit. In this approach we use simple operations (addition and multiplication) but the communication rounds will depend on the size of circuit being evaluated. We start by defining an important primitive for secret sharing based protocols: oblivious linear evaluation.
 
 \subsubsection{Oblivious linear evaluation}
 
-The study of oblivious transfer (OT) has been very active since its first proposal in 1981 by Rabin \cite{Rabin81}. The importance of OT comes from its wide number of applications. More specifically, one can prove that OT is equivalent to the secure two-party computation of general functions \cite{Y86, K88}, i.e. one can implement a secure two-party computation using OT as its building block. Additionally, this primitive can also be used for secure multi-party computation (SMC) \cite{KOS16}, private information retrieval \cite{Che04}, private set intersection \cite{MEP17}, and privacy-preserving location-based services \cite{BHM+19}.
+Oblivious linear evaluation (OLE) can be seen as a generalization of oblivious transfer (OT) \cite{Rabin81}. OT has been shown to be complete for secure multi-party computation \cite{K88}, i.e., any such task, including OLE, can be achieved given an OT implementation. A compelling reason to study OLE protocols is that they can serve as building blocks for the secure evaluation of arithmetic circuits \cite{AIK11,DKMQ12,GNN17,DGNBNT17}, just like OT allows the secure evaluation of boolean circuits \cite{GMW87}. Specifically, OLE can be used to generate multiplication triples which are the basic tool for securely computing multiplication gates \cite{DGNBNT17}. Besides that, OLE has applications in more tasks for two-party secure computation  \cite{IPS09,ADINZ17,BCGI18,HIMV19,CDIKLOV19} and private set intersection \cite{GN19}.
 
 
 \begin{figure}[h!]
@@ -233,14 +224,37 @@ We can also generalize to the OLE functionality to a vectorized version. The vec
     \label{fig:VOLE_functionality}
 \end{figure}
 
-\subsubsection{SPDZ}
 
+\subsubsection{Basic operations}
 
+To highlight the importance of OLE in secret sharing based SMC protocols, we go through a passively secure protocol \cite{Evans2018}. We consider the two party case (Alice and Bob) where the parties own additive shares of the secret. So, for some secret value $x$, Alice owns $x_A$, Bob owns $x_B$ and $x = x_A + x_B$. The operations used in the protocol according to the circuit are as follows:
+
+\begin{itemize}
+	\item \textbf{Input}. For Alice to secret share her input value $x$, she randomly chooses $x_B$ and sends it to Bob. Alice defines $x_A$ as $x_A = x - x_B$;
+	\item \textbf{Addition}. There are two scenarios to consider:
+	\begin{itemize}
+		\item \textbf{Scalar}. For Alice and Bob to add a scalar to a secret $x$ ($z = a + x$), Alice computes $z_A = a + x_A$ and Bob sets $z_B = x_B$.
+		\item \textbf{Shares}. For Alice and Bob to add secrets $x$ and $y$ ($z = x+y$), they individually add their corresponding shares, i.e. $z_A = x_A + y_A$ and $z_B = x_B + y_B$.
+	\end{itemize}
+	\item \textbf{Multiplication}. There are two scenarios to consider:
+		\begin{itemize}
+		\item \textbf{Scalar}. For Alice and Bob to multiply a secret by a scalar $x$ ($z = a \cdot x$), Alice computes $z_A = a \cdot x_A$ and Bob computes $z_B = a \cdot x_B$.
+		\item \textbf{Shares}. Observe that, for Alice and Bob to multiply secrets $x$ and $y$ ($z = x\cdot y$), they require some sort of communication to compute cross terms:
+		
+		\begin{eqnarray}
+		x\cdot y &=& (x_A + x_B)\cdot (y_A + y_B)\\
+		&=& x_A\cdot y_A + x_A\cdot y_B + x_B \cdot y_A + x_B\cdot y_B
+		\end{eqnarray}
+		
+		At this point, Alice and Bob can perform two OLE to secret share the cross terms $x_A\cdot y_B$ and $x_B \cdot y_A$. Indeed, if Alice inputs $(x_A, - s_A)$ and $(y_A, - s'_A)$ for random values $s_A, s'_A$ and Bob inputs $y_B$ and $x_B$, Bob will output $s_B = x_A \cdot y_B - s_A$ and $s'_B = y_A \cdot x_B - s'_A$. Thus, we have that $s_A + s_B = x_A \cdot y_B$ and $s'_A + s'_B = y_A \cdot x_B$. So, Alice share is $z_A = x_A\cdot y_A + s_A + s'_A$ and Bob share is $z_B =  s_B + s'_B + x_B\cdot y_B$.  
+	\end{itemize}
+	\item \textbf{Output}. For Alice to receive the output value $x$ of some output wire, Bob simply sends $x_B$ to Alice. Alice outputs $x = x_A + x_B$.
+\end{itemize}
 
 
 
 %********************************** %Second Section  **************************************
-\section{Quantum Information}
+\section{Quantum information}
 
 $\mathcal{B}(\mathcal{H})$ is the set of positive semi-definite operators with unitary trace acting on an Hilbert space $\mathcal{H}$. {\cv It is used in chapter 3.2.5 Noisy-quantum-storage model}
 
@@ -250,7 +264,7 @@ $\mathcal{B}(\mathcal{H})$ is the set of positive semi-definite operators with u
 
 \subsection{Two-universal functions}
 
-\subsection{Mutually Unbiased Basis}
+\subsection{Mutually unbiased basis}
 
 
 
