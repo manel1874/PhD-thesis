@@ -17,7 +17,7 @@ We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{
 
 A negligible function $\mu(n)$ is a function such that $\mu(n) < 1/p(n)$ for some polynomial $p(n)$ and sufficiently large $n$.
 
-
+{\cv Define Hamming distance and relative Hamming distance.}
 
 
 %********************************** %Second Section  **************************************
@@ -32,6 +32,8 @@ A mixed state is classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in
 
 {\cv introduce classical quantum state (cq-state)}
 
+{\cv Introduce POVMs}
+
 
 \subsection{Trace distance}
 
@@ -44,7 +46,7 @@ where $||\cdot||_1$ is the $1-$Schatten norm in the space of bounded operators a
     ||\rho-\sigma||_1=\Tr\left\{\sqrt{(\rho-\sigma)^\dagger(\rho-\sigma)}\right\}.
 \end{equation*}
 
-In this work, we will be working with completely positive trace preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being trace preserving) and it maps positive operators to positive operators (hence being completely positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in chapter~\ref{QOLE_chapter} (QOLE protocol). 
+In this work, we will be working with completely positive trace preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being trace preserving) and it maps positive operators to positive operators (hence being completely positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in chapter~\ref{QOLE_chapter} (quantum oblivious linear evaluation protocol). 
 
 It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarized in Lemma~\ref{lemma:trace_distance}.
 
@@ -73,53 +75,54 @@ It can be shown that CPTP maps cannot be used to improve the distinguishability 
 
 {\cv Start classically}
 
-How unpredictable is some random variable? How much information do we gain when we observe some system? To answer these questions, several measures under the name of entropy were developed. The most simple entropy measure .
+How unpredictable is some random variable? How much information do we gain when we observe some system? To answer these questions, several measures under the name of entropy were developed. The most simple classical entropy measure was developed by Shannon \cite{this}. Shannon found a way to express the amount of information a random variable has. Intuitivelly, this should express the following behaviour: when some event is more predictable, it conveys less information. Indeed, the more scandalous and unpreditable the news are, the more informative they are. Shannon started by proposing the following function to describe the amount of information an event $A$ has:
 
-In a classical setting, Shannon proposed the following function to express the amount of information a random variable has. Intuitivelly, we have that something has more information when is less predictable. Indeed, news scandalous or unpredictable contain much more information, than news saying the day of the week (which for common people, that is no big news).
+$$I(A) = - \log \left( P(A) \right),$$
+where $P(A)$ is the probability of the event $A$. From this, he defined the entropy to be the average information value of all the possible events. More formally, for a descrite random variable $X$
 
-Entropy is a measure of uncert
+$$H(X) = \mathbb{E}\left[ I(X) \right].$$
 
-Throughout our analysis we will also use several times the so-called $d-$~\textit{ary entropy function}, the generalization of the standard binary entropy function:
+In the special case where we consider a distribution $P(X)$ over $\left\{0,1\right\}$ that selects $1$ with probability $p$ and $0$ with probability $1-p$, we have the binary entropy given as
+
+$$H(X) = -p \log_2 p - (1-p)\log_2(1-p).$$
+
+Throughout our analysis, we will also use several times the so-called $d-$~\textit{ary entropy function}, a generalization of the standard binary entropy function. However, this entropy measure does not have such an operational meaning such as the binary entropy.
 \begin{definition}
-
 For $d\geq 2$, the \textit{d-ary entropy function} $h_d : [0,1]\rightarrow\mathbb{R}$ is given by
 \begin{equation*}
     h_d(x) = x \log_d(d-1) - x \log_d x - (1-x) \log_d (1-x).
 \end{equation*}
 \label{def:q-ary}
-
 \end{definition}
+The $d-$ary entropy is specially important in order to bound the size of an important object in coding theory, the Hamming ball. The Hamming ball with radius $\mu$ centered at some point $\bm{r}$ is defined to be the set of vectors $\bm{z}$ at a distance $\mu$ from $\bm{r}$, when the distance is given by the Hamming distance $d_H$. So, we have the following important Lemma.
 
 \begin{lemma}[Lemma 5, \cite{V10}]
 \label{lemma:hammingBall}
 For an integer $d\geq 2$ and $\mu \in [0, 1-\frac{1}{d}]$,
 \begin{equation*}
-    |\{ \boldsymbol{z}\in \mathbb{Z}_d^{n}: d_H(\boldsymbol{z}, \boldsymbol{r}_{|\bar{T}})\leq \mu n \}| \leq d^{h_d(\mu)n}.
+    |\{ \boldsymbol{z}\in \mathbb{Z}_d^{n}: d_H(\boldsymbol{z}, \boldsymbol{r})\leq \mu n \}| \leq d^{h_d(\mu)n}.
 \end{equation*}
 \end{lemma} 
 
-
-{\cv Go quantum}
-
-In the first (quantum) part of the OLE protocol, Alice and Bob generate several random OLE instances based on expression~\eqref{eq:main_relation} and use them as a resource to generate one final OLE. However, by using entanglement, Bob is allowed to have some limited amount of information on Alice's outputs, i.e. on Alice functions $(a_i, b_i)_{i\in [n]}$. To understand the impact this have on the security of the protocol, we use the concept of \textit{min-entropy}. This quantifies the amount of information Bob has about Alice system $A$ given some (possibly quantum) side information $B'$. This measure of uncertainty has an important operational meaning when Alice's system is classical. We have that $H_{\text{min}}(A|B') = - \log P_{\text{guess}}(A|B')$, where $P_{\text{guess}}(A|B')$ is the probability that of Bob guessing Alice's classical state $A$ maximized over any possible measurement on his state $B'$. Throughout this work, $A$ will encode Alice's functions with space denoted by $\mathcal{G}^n$. We present the formal definition of min-entropy below.
+To prove the security of protocols is more important to understand the worst-case scenario instead of the average behaviour. Therefore, standard binary entropy style definitions are not enough for securing protocols and we need a new one. This is achieved with min-entropy. Classically, for a finite random variable $X$, where $P(X=x) = p_x$, the min-entropy is given by the following expression:
+$$H_{\min}(X) = -\log \max p_x.$$
+Operationally, this gives the probability of guessing the element drawn from $X$ when choosing the element $x$ with maximum probability,, i.e. $P_{\text{guess}} = \max p_x$. We can extend this definition to cq-states $\rho_{XB}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B)$ as given in definition~\ref{def:cqentropy}.
 
 \begin{definition}
-Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B')$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_B')$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
-
-$$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \}$$
-and 
-
-$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
+\label{def:cqentropy}
+Let $\rho_{X B}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B})$ be a cq-state. The conditional min-entropy is given by
+$$H_{\min}(X|B)_{\rho} = -\log P_{\text{guess}}(X|B),$$
+where $P_{\text{guess}}(X|B)$ is given by
+$$P_{\text{guess}}(X|B) = \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{x}^B\right],$$
+where the maximization is taken over all POVMS $\left\{ M_x \geq 0 : \sum_x M_x = \mathds{1} \right\}$.
 \end{definition}
 
-
-
-
+In definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ has the operational meaning of being the probability of guessing $x$ having access to system $B$. Next, we present lemma~\ref{lemma:bijectivefunction} that states the effect on min-entropy of applying a fixed bijective function to the classical subsystem of a cq-state. This lemma will be important to prove the security of the quantum oblivious linear evaluation protocol presented in chapter~\ref{QOLE_chapter}.
 
 \begin{lemma}
 Let $\rho_{XB} \in \mathcal{P}(\mathcal{H}_{X}\otimes \mathcal{H}_B)$ be a cq-state and let $f:\mathcal{X} \rightarrow \mathcal{X} $ be a fixed bijective function. Then,
 
-$$H_{\min}(X|E)_{\rho} \leq H_{\min}(f(X)|B)_{\rho}.$$
+$$H_{\min}(X|B)_{\rho} \leq H_{\min}(f(X)|B)_{\rho}.$$
 \label{lemma:bijectivefunction}
 \end{lemma}
 \begin{proof}
@@ -156,6 +159,25 @@ H_{\min}(f(X)|B) \geq -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho_{x}^B
 
 
 
+In the first (quantum) part of the OLE protocol, Alice and Bob generate several random OLE instances based on expression~\eqref{eq:main_relation} and use them as a resource to generate one final OLE. However, by using entanglement, Bob is allowed to have some limited amount of information on Alice's outputs, i.e. on Alice functions $(a_i, b_i)_{i\in [n]}$. To understand the impact this have on the security of the protocol, we use the concept of \textit{min-entropy}. This quantifies the amount of information Bob has about Alice system $A$ given some (possibly quantum) side information $B'$. This measure of uncertainty has an important operational meaning when Alice's system is classical. We have that $H_{\text{min}}(A|B') = - \log P_{\text{guess}}(A|B')$, where $P_{\text{guess}}(A|B')$ is the probability that of Bob guessing Alice's classical state $A$ maximized over any possible measurement on his state $B'$. Throughout this work, $A$ will encode Alice's functions with space denoted by $\mathcal{G}^n$. We present the formal definition of min-entropy below.
+
+\begin{definition}
+Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B')$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_B')$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
+
+$$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \}$$
+and 
+
+$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
+\end{definition}
+
+
+
+
+
+
+
+
+
 
 We want to know how min-entropy changes when a CP map is applied. There is a result for collision entropy. Introduce collision entropy and its operational meaning. Note that we rewrote the theorem to take into account the notation presented in chapter~\ref{QOLE_chapter}.
 
@@ -183,12 +205,12 @@ Introduce and explain when the map $\mathcal{M}$ is trace preserving.
 Now, we need a way to relate min-entropy and collision entropy. This is done through the following two Lemmas.
 
 \begin{lemma}
-Let $\rho_{A|B'}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B'})$ and $d_A = \dim\mathcal{H}_A$. Then
+Let $\rho_{A B'}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B'})$ and $d_A = \dim\mathcal{H}_A$. Then
 $$H_{\min}(A|B')_{\rho} \leq H_2(A|B')_{\rho} \leq 2 H_{\min}(A|B')_{\rho} + \log d_A.$$
 \end{lemma}
 
 \begin{lemma}
-Let $\rho_{X|B'}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B'})$ be a cq-state. Then
+Let $\rho_{X B'}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B'})$ be a cq-state. Then
 $$H_{\min}(X|B')_{\rho} \leq H_2(X|B')_{\rho} \leq 2 H_{\min}(X|B')_{\rho}.$$
 \end{lemma}
 
