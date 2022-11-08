@@ -13,9 +13,9 @@ In this chapter, the basic mathematical and information-theoretical concepts use
 
 We denote by $\gcd (a,b), a,b\in\mathbb{Z}$ the greatest common divisor between integers $a$ and $b$. $\mathbb{Z}_q$ denotes the set of integers $a \mod q$. $\mathbb{Z}^*_q$ is the set of integers $a\in\mathbb{Z}_q$ that are coprime with $q$, i.e. $\gcd (a,q) = 1$. For $q$ prime, $\mathbb{Z}^*_q$ forms a multiplicative group of order $q-1$ and $\mathbb{Z}_q$ a finite field of order $q$. A generator $g$ of some multiplicative group $\mathbb{G}$ is an element in $\mathbb{G}$ such that $\forall\,a\in\mathbb{G}, \exists r\, :\, g^r = a$. The discrete logarithm base $g$ of some element $a\in\mathbb{G}$, denoted by $\log_g a$, is the power $r$ of $g$ such that $g^r = a$. 
 
-We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{\$}I$ to describe a situation where an element $s$ is drawn uniformly at random from the set $I$. Vectors $\bm{v}= (v_1, \ldots , v_n)$  are denoted in bold. Given a set $J$, $\bm{v}_J$ denotes the subvector of $\bm{v}$ restricted to the indices $i \in J$. Let $\mathbb{Z}_q$ denote the finite field with order $q$. Then, for $m\in \mathbb{Z}_q$, $[m]$ is the ordered set $\{1, 2, \ldots, m\}$. Also, for $m, n\in \mathbb{Z}_q$ such that $m<n$, $[m, n] = \{m, m+1, \dots, n-1, n\}$. Also, we use the big-$\mathcal{O}$ notation to denote the fastest-growing term of the number of operations with respect to some security parameter $n$.
+We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{\$}I$ to describe a situation where an element $s$ is drawn uniformly at random from the set $I$. Vectors $\bm{v}= (v_1, \ldots , v_n)$  are denoted in bold. Given a set $J$, $\bm{v}_J$ denotes the subvector of $\bm{v}$ restricted to the indices $i \in J$. Let $\mathbb{Z}_q$ denote the finite field with order $q$. Then, for $m\in \mathbb{Z}_q$, $[m]$ is the ordered set $\{1, 2, \ldots, m\}$. Also, for $m, n\in \mathbb{Z}_q$ such that $m<n$, $[m, n] = \{m, m+1, \dots, n-1, n\}$. We use the big-$\mathcal{O}$ notation to denote the fastest-growing term of the number of operations with respect to some security parameter $n$.
 
-A negligible function $\mu(n)$ is a function such that $\mu(n) < 1/p(n)$ for some polynomial $p(n)$ and sufficiently large $n$. We denote by $\mathds{1}$ the identity operator. 
+A negligible function $\mu(n)$ is a function such that $\mu(n) < 1/p(n)$ for some polynomial $p(n)$ and sufficiently large $n$.
 
 
 
@@ -28,7 +28,9 @@ Quantum information theory studies the implications of using quantum systems as 
 As common practice in quantum information theory, a quantum system $A$ is described by some Hilbert space $\mathcal{H}_A$. In this thesis, we will only consider finite-dimensional Hilbert spaces, i.e. $\dim \mathcal{H}_A = d < \inf$. So, we can identify $\mathcal{H}_A \cong \mathbb{C}^d \cong \mathcal{H}^{*}_A$, where $\mathcal{H}^{*}_A$ is the corresponding dual space. We use the Dirac bra-ket notation to describe the states in a physical quantum system $A$. So, a quantum (pure) state is described by a normalized vector $\ket{\psi}_A\in\mathcal{H}_A$ and its dual vector as $\bra{\psi}_A\in\mathcal{H}^{*}_A$. In case it is clear from context, we may omit to which Hilbert space the state belongs to. Since we have the isomorphism $\mathcal{H}_A \cong \mathbb{C}^d$, we can identify the standard basis of $\mathbb{C}^d$ to the standard basis (also known as computational basis) of $\mathcal{H}$, i.e. $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. Also, given different subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$, the joint system can be described by their tensor product, i.e. $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are described as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
 
 We can generate quantum pure states $\ket{\psi_i}\in \mathcal{H}$ according to some probability distribution $\{p_i\}$. This situation is described by a density operator given by $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly called a mixed state. The density operators are positive semi-definite Hermitian operators with unitary trace, i.e. $\rho \geq 0$ and $\tr \rho = 1$. We denote by $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$  and $\mathcal{P}(\mathcal{H})$ the sets of Hermitian, positive-semi definite and density operators on $\mathcal{H}$, respectively.
-A mixed state is classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in\mathcal{X}} P_X(x)\ketbra{x}$, where $\mathcal{X}$ is some finite set and $P_X$ is a probability distribution over $\mathcal{X}$. In particular, we denote the uniform distribution over $\mathcal{X}$ as $\tau_{\mathcal{X}} = \frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$, where $|\mathcal{X}|$ is the size of $\mathcal{X}$.
+A mixed state is classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in\mathcal{X}} P_X(x)\ketbra{x}$, where $\mathcal{X}$ is some finite set and $P_X$ is a probability distribution over $\mathcal{X}$. In particular, we denote the uniform distribution over $\mathcal{X}$ as $\tau_{\mathcal{X}} = \frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$, where $|\mathcal{X}|$ is the size of $\mathcal{X}$. The identity operator is denoted by $\mathds{1}$. 
+
+{\cv introduce classical quantum state (cq-state)}
 
 
 \subsection{Trace distance}
@@ -42,7 +44,9 @@ where $||\cdot||_1$ is the $1-$Schatten norm in the space of bounded operators a
     ||\rho-\sigma||_1=\Tr\left\{\sqrt{(\rho-\sigma)^\dagger(\rho-\sigma)}\right\}.
 \end{equation*}
 
-In this work, we will be working with Completely Positive Trace Preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being Trace Preserving) and it maps positive operators to positive operators (hence being Completely Positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in our QOLE protocol. It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarized in Lemma~\ref{lemma:trace_distance}.
+In this work, we will be working with completely positive trace preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being trace preserving) and it maps positive operators to positive operators (hence being completely positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in chapter~\ref{QOLE_chapter} (QOLE protocol). 
+
+It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarized in Lemma~\ref{lemma:trace_distance}.
 
 
 
@@ -68,6 +72,12 @@ In this work, we will be working with Completely Positive Trace Preserving (CPTP
 \subsection{Entropy}
 
 {\cv Start classically}
+
+How unpredictable is some random variable? How much information do we gain when we observe some system? To answer these questions, several measures under the name of entropy were developed. The most simple entropy measure .
+
+In a classical setting, Shannon proposed the following function to express the amount of information a random variable has. Intuitivelly, we have that something has more information when is less predictable. Indeed, news scandalous or unpredictable contain much more information, than news saying the day of the week (which for common people, that is no big news).
+
+Entropy is a measure of uncert
 
 Throughout our analysis we will also use several times the so-called $d-$~\textit{ary entropy function}, the generalization of the standard binary entropy function:
 \begin{definition}
@@ -147,6 +157,9 @@ H_{\min}(f(X)|B) \geq -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho_{x}^B
 
 
 
+We want to know how min-entropy changes when a CP map is applied. There is a result for collision entropy. Introduce collision entropy and its operational meaning. Note that we rewrote the theorem to take into account the notation presented in chapter~\ref{QOLE_chapter}.
+
+
 
 \begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
 \label{thm:entaglementSamplingResult}
@@ -164,6 +177,21 @@ If we further condition on a general quantum state $\sigma_B\in\mathcal{P}(\math
     \text{H}_2(A|B)_{\rho_{AB}|\sigma_B}=-\log \left(\Tr{\left(\sigma_{B}^{-1/4}\rho_{AB}\sigma_B^{-1/4}\right)^2}\right).
 \end{equation*}
 \end{lemma}
+
+Introduce and explain when the map $\mathcal{M}$ is trace preserving.
+
+Now, we need a way to relate min-entropy and collision entropy. This is done through the following two Lemmas.
+
+\begin{lemma}
+Let $\rho_{A|B'}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B'})$ and $d_A = \dim\mathcal{H}_A$. Then
+$$H_{\min}(A|B')_{\rho} \leq H_2(A|B')_{\rho} \leq 2 H_{\min}(A|B')_{\rho} + \log d_A.$$
+\end{lemma}
+
+\begin{lemma}
+Let $\rho_{X|B'}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B'})$ be a cq-state. Then
+$$H_{\min}(X|B')_{\rho} \leq H_2(X|B')_{\rho} \leq 2 H_{\min}(X|B')_{\rho}.$$
+\end{lemma}
+
 
 
 \subsection{Two-universal functions}

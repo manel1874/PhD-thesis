@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  7 NOV 2022 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  8 NOV 2022 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1157,11 +1157,7 @@ Overfull \hbox (1.88725pt too wide) in paragraph at lines 10--11
 heoretical con-cepts used through-
  []
 
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
-8.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
+
 Underfull \vbox (badness 4913) has occurred while \output is active []
 
  [7
@@ -1169,118 +1165,124 @@ Underfull \vbox (badness 4913) has occurred while \output is active []
 
 
 ]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
+1.
 
-Package natbib Warning: Citation `U17' on page 8 undefined on input line 36.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+
+Package natbib Warning: Citation `U17' on page 8 undefined on input line 38.
+
+[8]
+
+LaTeX Warning: Reference `QOLE_chapter' on page 9 undefined on input line 47.
 
 
-Underfull \vbox (badness 5519) has occurred while \output is active []
-
- [8]
-
-Package natbib Warning: Citation `U17' on page 9 undefined on input line 51.
+Package natbib Warning: Citation `U17' on page 9 undefined on input line 55.
 
 
-Package natbib Warning: Citation `V10' on page 9 undefined on input line 83.
+Package natbib Warning: Citation `V10' on page 9 undefined on input line 87.
+
+[9]
+
+LaTeX Warning: Reference `eq:main_relation' on page 10 undefined on input line 
+98.
+
+[10]
+
+LaTeX Warning: Reference `QOLE_chapter' on page 11 undefined on input line 154.
 
 
-LaTeX Warning: Reference `eq:main_relation' on page 9 undefined on input line 9
-4.
-
-[9] [10]
 
 Package natbib Warning: Citation `Dupuis2015' on page 11 undefined on input lin
-e 151.
+e 158.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 153
+LaTeX Font Info:    Trying to load font information for U+euf on input line 160
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+) [11]
 
- [11]
-
-Package natbib Warning: Citation `HK97' on page 12 undefined on input line 178.
+Package natbib Warning: Citation `HK97' on page 12 undefined on input line 200.
 
 
 
-Package natbib Warning: Citation `HK97' on page 12 undefined on input line 179.
+Package natbib Warning: Citation `HK97' on page 12 undefined on input line 201.
 
 
 
-Package natbib Warning: Citation `HK97' on page 12 undefined on input line 191.
+Package natbib Warning: Citation `HK97' on page 12 undefined on input line 213.
 
 
 
-Package natbib Warning: Citation `HK97' on page 12 undefined on input line 194.
+Package natbib Warning: Citation `HK97' on page 12 undefined on input line 216.
 
-
-
-Package natbib Warning: Citation `TSSR11' on page 12 undefined on input line 19
-6.
 
 [12]
 
-Package natbib Warning: Citation `TSSR11' on page 13 undefined on input line 20
-4.
+Package natbib Warning: Citation `TSSR11' on page 13 undefined on input line 21
+8.
+
+
+Package natbib Warning: Citation `TSSR11' on page 13 undefined on input line 22
+6.
 
 
 Package natbib Warning: Citation `Unruh04' on page 13 undefined on input line 2
-11.
+33.
 
 
 Package natbib Warning: Citation `BenOrMay04' on page 13 undefined on input lin
-e 211.
+e 233.
 
 
 Package natbib Warning: Citation `Unruh10' on page 13 undefined on input line 2
-11.
+33.
 
 [13]
 
 Package natbib Warning: Citation `Unruh10' on page 14 undefined on input line 2
-19.
+41.
 
 [14]
 
-Package natbib Warning: Citation `C01' on page 15 undefined on input line 265.
+Package natbib Warning: Citation `C01' on page 15 undefined on input line 287.
 
 
 Package natbib Warning: Citation `CBGLM21' on page 15 undefined on input line 2
-65.
+87.
 
-[15] [16] [17]
-<Chapter_TechnicalOverview/booleanCircuit.png, id=915, 884.30376pt x 520.94624p
+[15] [16]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18]
+<Chapter_TechnicalOverview/booleanCircuit.png, id=928, 884.30376pt x 520.94624p
 t>
 File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
 <use Chapter_TechnicalOverview/booleanCircuit.png>
 Package pdftex.def Info: Chapter_TechnicalOverview/booleanCircuit.png  used on 
-input line 377.
+input line 399.
 (pdftex.def)             Requested size: 265.29317pt x 156.28508pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[18] [19 <./Chapter_TechnicalOverview/booleanCircuit.png>] [20]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[21]) [22]
+ [19 <./Chapter_TechnicalOverview/booleanCircuit.png>] [20] [21]
+[22]) [23]
 \openout2 = `Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.
 aux'.
 
 
 (./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.tex
-Chapter 3.
-
-Underfull \vbox (badness 3179) has occurred while \output is active []
-
- [23
+[24
 
 
 
 ]
-[24] [25] [26] [27]
+Chapter 3.
+
+Underfull \vbox (badness 3179) has occurred while \output is active []
+
+ [25]
+[26] [27] [28] [29]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1293,7 +1295,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [28]
+ [30]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 142.
@@ -1306,21 +1308,21 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 142.
 
-[29] [30] [31] [32] [33] [34]
+[31] [32] [33] [34] [35] [36]
 Underfull \vbox (badness 1442) has occurred while \output is active []
-
- [35]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[36]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[40]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1330,12 +1332,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
-[40]
+ [41]
+[42]
 Underfull \vbox (badness 1412) has occurred while \output is active []
 
- [41])
-[42]
+ [43])
+[44]
 \openout2 = `Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndCla
 ssicalObliviousTransfer.aux'.
 
@@ -1346,16 +1348,16 @@ Chapter 4.
 
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
- [43
+ [45
 
 
 
 ]
 Underfull \vbox (badness 4084) has occurred while \output is active []
 
- [44]
-[45] [46]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1443, 462.5
+ [46]
+[47] [48]
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1454, 462.5
 28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
@@ -1363,32 +1365,32 @@ le (type png)
 Package pdftex.def Info: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSec
 cond.png  used on input line 122.
 (pdftex.def)             Requested size: 455.24411pt x 341.44843pt.
- [47]
+ [49]
 Underfull \vbox (badness 1609) has occurred while \output is active []
 
- [48 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>] [49]
+ [50 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>] [51]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Underfull \vbox (badness 1533) has occurred while \output is active []
 
- [50]
+ [52]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [53]
 Underfull \vbox (badness 1259) has occurred while \output is active []
-
- [52]
-[53]
-Underfull \vbox (badness 1024) has occurred while \output is active []
 
  [54]
 [55]
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [56]
+[57]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56] [57]
+[58] [59]
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 479.
@@ -1396,8 +1398,8 @@ Package amsmath Warning: Cannot use `split' here;
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
-[59]) [60]
+ [60]
+[61]) [62]
 \openout2 = `Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousL
 inearEvaluation.aux'.
 
@@ -1406,159 +1408,159 @@ inearEvaluation.aux'.
 ation.tex
 Chapter 5.
 
-Package natbib Warning: Citation `Goldreichbook04' on page 61 undefined on inpu
+Package natbib Warning: Citation `Goldreichbook04' on page 63 undefined on inpu
 t line 13.
 
 
-Package natbib Warning: Citation `Canetti00MPC' on page 61 undefined on input l
+Package natbib Warning: Citation `Canetti00MPC' on page 63 undefined on input l
 ine 13.
 
 
-Package natbib Warning: Citation `Kilian' on page 61 undefined on input line 13
+Package natbib Warning: Citation `Kilian' on page 63 undefined on input line 13
 .
 
 
-Package natbib Warning: Citation `Shor94' on page 61 undefined on input line 16
+Package natbib Warning: Citation `Shor94' on page 63 undefined on input line 16
 .
 
 
-Package natbib Warning: Citation `C94' on page 61 undefined on input line 16.
+Package natbib Warning: Citation `C94' on page 63 undefined on input line 16.
 
-[61
+[63
 
 
 
 ]
 
-Package natbib Warning: Citation `NP06' on page 62 undefined on input line 19.
+Package natbib Warning: Citation `NP06' on page 64 undefined on input line 19.
 
 
-Package natbib Warning: Citation `NP99' on page 62 undefined on input line 19.
+Package natbib Warning: Citation `NP99' on page 64 undefined on input line 19.
 
 
-Package natbib Warning: Citation `LP02' on page 62 undefined on input line 19.
+Package natbib Warning: Citation `LP02' on page 64 undefined on input line 19.
 
 
-Package natbib Warning: Citation `H18' on page 62 undefined on input line 19.
+Package natbib Warning: Citation `H18' on page 64 undefined on input line 19.
 
 
-Package natbib Warning: Citation `G99' on page 62 undefined on input line 19.
+Package natbib Warning: Citation `G99' on page 64 undefined on input line 19.
 
 
-Package natbib Warning: Citation `CBKG02' on page 62 undefined on input line 23
+Package natbib Warning: Citation `CBKG02' on page 64 undefined on input line 23
 .
 
 
-Package natbib Warning: Citation `AGS03' on page 62 undefined on input line 23.
+Package natbib Warning: Citation `AGS03' on page 64 undefined on input line 23.
 
 
 
-Package natbib Warning: Citation `AKBH07' on page 62 undefined on input line 23
+Package natbib Warning: Citation `AKBH07' on page 64 undefined on input line 23
 .
 
 
-Package natbib Warning: Citation `SS10' on page 62 undefined on input line 23.
+Package natbib Warning: Citation `SS10' on page 64 undefined on input line 23.
 
 
-Package natbib Warning: Citation `Sitetal17' on page 62 undefined on input line
+Package natbib Warning: Citation `Sitetal17' on page 64 undefined on input line
  23.
 
 
-Package natbib Warning: Citation `Bouchardetal18' on page 62 undefined on input
+Package natbib Warning: Citation `Bouchardetal18' on page 64 undefined on input
  line 23.
 
 
-LaTeX Warning: Reference `Prelim_QUC' on page 62 undefined on input line 23.
+LaTeX Warning: Reference `Prelim_QUC' on page 64 undefined on input line 23.
 
 
-LaTeX Warning: Reference `fig:fullprotocol' on page 62 undefined on input line 
+LaTeX Warning: Reference `fig:fullprotocol' on page 64 undefined on input line 
 27.
 
 
 Underfull \vbox (badness 1735) has occurred while \output is active []
 
- [62]
+ [64]
 
-LaTeX Warning: Reference `fig:fullprotocol' on page 63 undefined on input line 
+LaTeX Warning: Reference `fig:fullprotocol' on page 65 undefined on input line 
 37.
 
 
-Package natbib Warning: Citation `Unruh10' on page 63 undefined on input line 3
+Package natbib Warning: Citation `Unruh10' on page 65 undefined on input line 3
 9.
 
 
-LaTeX Warning: Reference `fig:nOLE' on page 63 undefined on input line 42.
+LaTeX Warning: Reference `fig:nOLE' on page 65 undefined on input line 42.
 
 
-LaTeX Warning: Reference `fig:privacy_amplification' on page 63 undefined on in
+LaTeX Warning: Reference `fig:privacy_amplification' on page 65 undefined on in
 put line 42.
 
 
-Package natbib Warning: Citation `DHNO19' on page 63 undefined on input line 42
+Package natbib Warning: Citation `DHNO19' on page 65 undefined on input line 42
 .
 
 
-Package natbib Warning: Citation `HK97' on page 63 undefined on input line 42.
+Package natbib Warning: Citation `HK97' on page 65 undefined on input line 42.
 
-[63]
+[65]
 
-LaTeX Warning: Reference `def:Hmin' on page 64 undefined on input line 52.
+LaTeX Warning: Reference `def:Hmin' on page 66 undefined on input line 52.
 
 
-Package natbib Warning: Citation `Dupuis2015' on page 64 undefined on input lin
+Package natbib Warning: Citation `Dupuis2015' on page 66 undefined on input lin
 e 52.
 
 
-LaTeX Warning: Reference `fig:func_ole' on page 64 undefined on input line 54.
+LaTeX Warning: Reference `fig:func_ole' on page 66 undefined on input line 54.
 
 
-Package natbib Warning: Citation `Unruh10' on page 64 undefined on input line 5
+Package natbib Warning: Citation `Unruh10' on page 66 undefined on input line 5
 4.
 
 
 Underfull \vbox (badness 1661) has occurred while \output is active []
 
- [64]
+ [66]
 
-LaTeX Warning: Reference `Prelim' on page 65 undefined on input line 64.
-
-
-LaTeX Warning: Reference `qole_protocol' on page 65 undefined on input line 64.
+LaTeX Warning: Reference `Prelim' on page 67 undefined on input line 64.
 
 
+LaTeX Warning: Reference `qole_protocol' on page 67 undefined on input line 64.
 
-LaTeX Warning: Reference `secureQROLE_protocol' on page 65 undefined on input l
-ine 64.
-
-
-LaTeX Warning: Reference `sec:protgeneral' on page 65 undefined on input line 6
-4.
-
-
-LaTeX Warning: Reference `Prelim_MUB' on page 65 undefined on input line 70.
-
-
-LaTeX Warning: Reference `eq:main_relation' on page 65 undefined on input line 
-70.
-
-[65]
-
-LaTeX Warning: Reference `Prelim_MUB' on page 66 undefined on input line 146.
-
-
-LaTeX Warning: Reference `eq:bob_attack' on page 66 undefined on input line 146
-.
-
-[66]
-
-LaTeX Warning: Reference `fig:fullprotocol' on page 67 undefined on input line 
-158.
 
 
 LaTeX Warning: Reference `secureQROLE_protocol' on page 67 undefined on input l
+ine 64.
+
+
+LaTeX Warning: Reference `sec:protgeneral' on page 67 undefined on input line 6
+4.
+
+
+LaTeX Warning: Reference `Prelim_MUB' on page 67 undefined on input line 70.
+
+
+LaTeX Warning: Reference `eq:main_relation' on page 67 undefined on input line 
+70.
+
+[67]
+
+LaTeX Warning: Reference `Prelim_MUB' on page 68 undefined on input line 146.
+
+
+LaTeX Warning: Reference `eq:bob_attack' on page 68 undefined on input line 146
+.
+
+[68]
+
+LaTeX Warning: Reference `fig:fullprotocol' on page 69 undefined on input line 
+158.
+
+
+LaTeX Warning: Reference `secureQROLE_protocol' on page 69 undefined on input l
 ine 160.
 
-[67]) [68]
+[69]) [70]
 \openout2 = `Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.
 aux'.
 
@@ -1568,12 +1570,12 @@ Chapter 6.
 
 Underfull \vbox (badness 1629) has occurred while \output is active []
 
- [69
+ [71
 
 
 
 ]
-[70]
+[72]
 Overfull \hbox (2.66615pt too wide) detected at line 96
 []\OT1/cmr/bx/n/10 Q \OT1/cmr/m/n/10 = []
  []
@@ -1581,33 +1583,33 @@ Overfull \hbox (2.66615pt too wide) detected at line 96
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
-[72] [73] [74] [75] [76pdfTeX warning (ext4): destination with the same identif
+ [73]
+[74] [75] [76] [77] [78pdfTeX warning (ext4): destination with the same identif
 ier (name{equation.6.1.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.252 
-      ] [77] [78]
+      ] [79] [80]
 Overfull \hbox (13.62045pt too wide) in paragraph at lines 321--323
 \OT1/cmr/m/n/12 Therefore, we just need to build a sim-u-la-tor that sat-is-fie
 s ex-pres-sion ([][]6.8[][]) for the $[][](\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ; 
 \OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$
  []
 
-[79]
+[81]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[80]
+[82]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81]
+ [83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82]
-[83]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=1960, 601.24625pt x 339.2675pt>
+ [84]
+[85]
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=1970, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1617,16 +1619,16 @@ ut line 489.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[84]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=1968, 589.0005pt x 349.96747pt>
+[86]
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=1978, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
 t line 517.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
- [85 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [86 <./Chapter_PrivatePhylo
+ [87 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [88 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=1989, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=1999, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1639,11 +1641,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 1983) has occurred while \output is active []
 
- [87]
+ [89]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [88 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [89] [90]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2042, 18
+ [90 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [91] [92]
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2052, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -1655,22 +1657,22 @@ ilored.jpeg  used on input line 617.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[91] [92 <./Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>]
-[93] [94] [95]
+[93] [94 <./Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>]
+[95] [96] [97]
 Underfull \vbox (badness 2644) has occurred while \output is active []
 
- [96]
+ [98]
 Overfull \hbox (1.29976pt too wide) in paragraph at lines 807--808
 \OT1/cmr/m/n/12 We now present the sce-nario used to test and com-pare both qua
 ntum-assisted and classical-
  []
 
-[97]
+[99]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [98]
-[99] [100]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2165, 395.3169pt x 271.
+ [100]
+[101] [102]
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2176, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
@@ -1678,15 +1680,15 @@ File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 944.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2171, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2182, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 955.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
- [101]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2177, 395.3169
+ [103]
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2188, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
@@ -1694,22 +1696,22 @@ File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/proportion_in_overhea
 d.png  used on input line 962.
 (pdftex.def)             Requested size: 316.25394pt x 230.39706pt.
- [102 <./Chapter_PrivatePhylogeneticTrees/total_running.png>]
-[103 <./Chapter_PrivatePhylogeneticTrees/c-qSMC.png> <./Chapter_PrivatePhylogen
-eticTrees/proportion_in_overhead.png>]) [104]
+ [104 <./Chapter_PrivatePhylogeneticTrees/total_running.png>]
+[105 <./Chapter_PrivatePhylogeneticTrees/c-qSMC.png> <./Chapter_PrivatePhylogen
+eticTrees/proportion_in_overhead.png>]) [106]
 \openout2 = `Chapter_Conclusion/Chapter_Conclusion.aux'.
 
 
 (./Chapter_Conclusion/Chapter_Conclusion.tex
 Chapter 7.
-) [105
+) [107
 
 
 
 ]
 \openout2 = `Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux'.
 
- (./Appendix/Appendix_PrivatePhylogenetirTrees_Code.tex [106
+ (./Appendix/Appendix_PrivatePhylogenetirTrees_Code.tex [108
 
 
 
@@ -1718,29 +1720,29 @@ Appendix A.
 
 Underfull \vbox (badness 1178) has occurred while \output is active []
 
- [107]
+ [109]
 (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)) [108]
-[109] (./Chrysis.bbl [110
+)) [110]
+[111] (./Chrysis.bbl [112
 
 
-] [111]
+] [113]
 Underfull \hbox (badness 10000) in paragraph at lines 62--64
 []\OT1/cmr/m/n/12 2016 re-form of eu data pro-tec-tion rules.  https://eur-
  []
 
-[112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123]
-[124] [125] [126] [127] [128] [129] [130] [131] [132]
+[114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
+[126] [127] [128] [129] [130] [131] [132] [133] [134]
 Underfull \hbox (badness 10000) in paragraph at lines 1514--1518
 []\OT1/cmr/m/n/12 Id quan-tique web-site.  [][]$\OT1/cmtt/m/n/12 https : / / ww
 w . idquantique . com /
  []
 
-) [133] [134
+) [135] [136
 
 ]
 
@@ -1776,10 +1778,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 29037 strings out of 480608
- 563860 string characters out of 5903629
- 1165441 words of memory out of 5000000
- 43475 multiletter control sequences out of 15000+600000
+ 29043 strings out of 480608
+ 563927 string characters out of 5903629
+ 1165502 words of memory out of 5000000
+ 43477 multiletter control sequences out of 15000+600000
  563311 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,15n,105p,2177b,1392s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1825,10 +1827,10 @@ s/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (154 pages, 5631296 bytes).
+Output written on Chrysis.pdf (156 pages, 5633048 bytes).
 PDF statistics:
- 2700 PDF objects out of 2984 (max. 8388607)
- 2409 compressed objects within 25 object streams
- 771 named destinations out of 1000 (max. 500000)
+ 2711 PDF objects out of 2984 (max. 8388607)
+ 2418 compressed objects within 25 object streams
+ 775 named destinations out of 1000 (max. 500000)
  839 words of extra memory for PDF output out of 10000 (max. 10000000)
 
