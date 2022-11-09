@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  8 NOV 2022 16:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  9 NOV 2022 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,21 +917,7 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@ppsaveapp=\count341
 ))
 (./Chrysis.aux (./Introduction/Introduction.aux)
-(./Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux)
-(./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux)
-(./Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObli
-viousTransfer.aux)
-(./Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousLinearEvalu
-ation.aux)
-(./Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.aux
-
-LaTeX Warning: Label `eq:F84_distance' multiply defined.
-
-
-LaTeX Warning: Label `eq:LogDet_distance' multiply defined.
-
-) (./Chapter_Conclusion/Chapter_Conclusion.aux)
-(./Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux))
+(./Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux))
 \openout1 = `Chrysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -1036,7 +1022,7 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@posthook=\toks50
 )
 (./Thesis_FrontCover.tex
-<IST_A_CMYK_POS.pdf, id=360, 845.0471pt x 597.51233pt>
+<IST_A_CMYK_POS.pdf, id=91, 845.0471pt x 597.51233pt>
 File: IST_A_CMYK_POS.pdf Graphic file (type pdf)
 <use IST_A_CMYK_POS.pdf>
 Package pdftex.def Info: IST_A_CMYK_POS.pdf  used on input line 5.
@@ -1071,44 +1057,30 @@ _CMYK_POS.pdf>] [2
 ]) [9] [10
 
 ]
-(./Chrysis.toc
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
-
- (/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [11] [12])
+(./Chrysis.toc)
 \tf@toc=\write7
 \openout7 = `Chrysis.toc'.
 
+ [11] [12
 
-[13] [14
-
-] (./Chrysis.lof [15
-
-])
+] (./Chrysis.lof)
 \tf@lof=\write8
 \openout8 = `Chrysis.lof'.
 
- [16] (./Chrysis.lot)
+ [13
+
+] [14
+
+] (./Chrysis.lot)
 \tf@lot=\write9
 \openout9 = `Chrysis.lot'.
 
- [17
-
-
-] [18
+ [15
 
 ]
-(./List_of_Abbreviations.tex)
+[16
+
+] (./List_of_Abbreviations.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 3--78
 
  []
@@ -1116,37 +1088,232 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--78
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19
+ [17
 
 ]
-[20]
+[18]
 \openout2 = `Introduction/Introduction.aux'.
 
  (./Introduction/Introduction.tex
 Chapter 1.
+
+Package natbib Warning: Citation `Wang11' on page 1 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `NS08' on page 1 undefined on input line 10.
+
+
+Package natbib Warning: Citation `L02' on page 1 undefined on input line 10.
+
+
+Package natbib Warning: Citation `Homer08' on page 1 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `Gymrek13' on page 1 undefined on input line 1
+0.
+
+
+Package natbib Warning: Citation `EUdataregulations2016' on page 1 undefined on
+ input line 10.
+
+
+Package natbib Warning: Citation `Li2016' on page 1 undefined on input line 16.
+
+
+
+Package natbib Warning: Citation `Armknecht2015' on page 1 undefined on input l
+ine 16.
+
+
+Package natbib Warning: Citation `Yao82' on page 1 undefined on input line 16.
+
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
+.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+Package natbib Warning: Citation `Y86' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `Goldreich87' on page 1 undefined on input lin
+e 18.
+
+
+Package natbib Warning: Citation `Bendlin11' on page 1 undefined on input line 
+18.
+
+
+Package natbib Warning: Citation `D12' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `K88' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `DPSZ12' on page 1 undefined on input line 18.
+
+
+
+Package natbib Warning: Citation `IR99' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `Sho95' on page 1 undefined on input line 18.
+
 [1
 
 
 
 ]
+
+Package natbib Warning: Citation `B15' on page 2 undefined on input line 24.
+
+
+Package natbib Warning: Citation `PSAN13' on page 2 undefined on input line 24.
+
+
+
 Overfull \hbox (22.05788pt too wide) in paragraph at lines 27--28
 []\OT1/cmr/m/n/12 Improve the se-cu-rity re-quire-ments, ren-der-ing pro-to-col
 s that are information-theoretically
  []
 
+
+Package natbib Warning: Citation `CK11' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `CK09' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `BFK09' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `Unr14' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `DFSS14' on page 2 undefined on input line 30.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 2 undefined on input line 30
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 2 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `GLSV21' on page 2 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `BCKM21' on page 2 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `KOS16' on page 2 undefined on input line 32.
+
 [2] [3]
+
+Package natbib Warning: Citation `ALSZ13' on page 4 undefined on input line 49.
+
+
+
+Package natbib Warning: Citation `KOS15' on page 4 undefined on input line 49.
+
+
+Package natbib Warning: Citation `BPT00' on page 4 undefined on input line 55.
+
+
+Package natbib Warning: Citation `DEBZ10' on page 4 undefined on input line 55.
+
+
+
+Package natbib Warning: Citation `Zhongetal2015' on page 4 undefined on input l
+ine 55.
+
+
+Package natbib Warning: Citation `BHVBFHM18' on page 4 undefined on input line 
+55.
+
+
+Package natbib Warning: Citation `DHMPPV21' on page 4 undefined on input line 5
+5.
+
+
 Overfull \hbox (2.1999pt too wide) in paragraph at lines 64--65
 []\OT1/cmr/m/n/12 We the-o-ret-i-cally eval-u-ate the per-for-mance and pri-vac
 y guar-an-tees of the sys-tem through
  []
 
 [4]
-Overfull \hbox (1.25304pt too wide) in paragraph at lines 84--86
-\OT1/cmr/m/n/12 Com-pos-able Obliv-i-ous Lin-ear Eval-u-a-tion. 2022. DOI: 10.4
-8550/ARXIV.2204.14171.
+
+Package natbib Warning: Citation `SMP22' on page 5 undefined on input line 78.
+
+
+Package natbib Warning: Citation `SPM21' on page 5 undefined on input line 81.
+
+
+Package natbib Warning: Citation `SMV22' on page 5 undefined on input line 84.
+
+
+Overfull \hbox (27.10277pt too wide) in paragraph at lines 84--86
+\OT1/cmr/m/n/12 sally Com-pos-able Obliv-i-ous Lin-ear Eval-u-a-tion. 2022. DOI
+: 10.48550/ARXIV.2204.14171.
  []
 
-[5]) [6]
+
+Package natbib Warning: Citation `SGPM22' on page 5 undefined on input line 87.
+
+
+
+Package natbib Warning: Citation `SGPM21' on page 5 undefined on input line 90.
+
+
+
+Package natbib Warning: Citation `POS+20' on page 5 undefined on input line 92.
+
+
+[5]
+
+Package natbib Warning: Citation `SMP22' on page 6 undefined on input line 98.
+
+
+Package natbib Warning: Citation `SPM21' on page 6 undefined on input line 98.
+
+
+Package natbib Warning: Citation `SGPM22' on page 6 undefined on input line 98.
+
+
+
+Package natbib Warning: Citation `SMV22' on page 6 undefined on input line 98.
+
+
+Package natbib Warning: Citation `SGPM22' on page 6 undefined on input line 98.
+
+
+
+Package natbib Warning: Citation `SGPM21' on page 6 undefined on input line 98.
+
+
+
+Package natbib Warning: Citation `POS+20' on page 6 undefined on input line 98.
+
+
+) [6]
 \openout2 = `Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux'.
 
  (./Chapter_TechnicalOverview/Chapter_TechnicalOverview.tex
@@ -1178,111 +1345,357 @@ LaTeX Warning: Reference `QOLE_chapter' on page 9 undefined on input line 49.
 Package natbib Warning: Citation `U17' on page 9 undefined on input line 57.
 
 
-Package natbib Warning: Citation `this' on page 9 undefined on input line 78.
+Package natbib Warning: Citation `this' on page 9 undefined on input line 76.
 
 [9]
 
-Package natbib Warning: Citation `V10' on page 10 undefined on input line 99.
+Package natbib Warning: Citation `V10' on page 10 undefined on input line 93.
 
 [10]
 
-LaTeX Warning: Reference `QOLE_chapter' on page 11 undefined on input line 120.
+LaTeX Warning: Reference `QOLE_chapter' on page 11 undefined on input line 114.
 
 
 [11]
 
-LaTeX Warning: Reference `eq:main_relation' on page 12 undefined on input line 
-162.
+LaTeX Warning: Reference `QOLE_chapter' on page 12 undefined on input line 168.
 
 
-LaTeX Warning: Reference `QOLE_chapter' on page 12 undefined on input line 182.
+
+LaTeX Warning: Reference `lemma:quantumrelation' on page 12 undefined on input 
+line 168.
+
+
+LaTeX Warning: Reference `lemma:classicalquantumrelation' on page 12 undefined 
+on input line 168.
+
+
+LaTeX Warning: Reference `QOLE_chapter' on page 12 undefined on input line 168.
 
 
 
 Package natbib Warning: Citation `Dupuis2015' on page 12 undefined on input lin
-e 186.
+e 170.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 188
+LaTeX Font Info:    Trying to load font information for U+euf on input line 172
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [12]
+)
 
-Package natbib Warning: Citation `HK97' on page 13 undefined on input line 228.
+Package natbib Warning: Citation `R06' on page 12 undefined on input line 177.
+
+[12]
+
+Package natbib Warning: Citation `this' on page 13 undefined on input line 194.
+
+
+
+Package natbib Warning: Citation `this' on page 13 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `HK97' on page 13 undefined on input line 217.
+
+
+
+Package natbib Warning: Citation `HK97' on page 13 undefined on input line 218.
 
 
 [13]
 
-Package natbib Warning: Citation `HK97' on page 14 undefined on input line 229.
+Package natbib Warning: Citation `HK97' on page 14 undefined on input line 230.
 
 
 
-Package natbib Warning: Citation `HK97' on page 14 undefined on input line 241.
+Package natbib Warning: Citation `HK97' on page 14 undefined on input line 233.
 
 
 
-Package natbib Warning: Citation `HK97' on page 14 undefined on input line 244.
-
+Package natbib Warning: Citation `TSSR11' on page 14 undefined on input line 23
+5.
 
 
 Package natbib Warning: Citation `TSSR11' on page 14 undefined on input line 24
-6.
+3.
 
 
-Package natbib Warning: Citation `TSSR11' on page 14 undefined on input line 25
-4.
+Package natbib Warning: Citation `C20' on page 14 undefined on input line 250.
 
 
 Package natbib Warning: Citation `Unruh04' on page 14 undefined on input line 2
-61.
+50.
 
 
 Package natbib Warning: Citation `BenOrMay04' on page 14 undefined on input lin
-e 261.
+e 250.
 
 
 Package natbib Warning: Citation `Unruh10' on page 14 undefined on input line 2
-61.
+50.
+
+
+Package natbib Warning: Citation `FS09' on page 14 undefined on input line 250.
+
 
 [14]
 
 Package natbib Warning: Citation `Unruh10' on page 15 undefined on input line 2
-69.
+58.
 
 [15]
 
-Package natbib Warning: Citation `C01' on page 16 undefined on input line 315.
+LaTeX Warning: Reference `fig:func_com' on page 16 undefined on input line 302.
+
+
+
+Package natbib Warning: Citation `C01' on page 16 undefined on input line 304.
 
 
 Package natbib Warning: Citation `CBGLM21' on page 16 undefined on input line 3
-15.
+04.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[16] [17]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package natbib Warning: Citation `Yao82' on page 18 undefined on input line 352
+.
 
- [16]
-[17] [18] [19]
-<Chapter_TechnicalOverview/booleanCircuit.png, id=935, 884.30376pt x 520.94624p
+
+Package natbib Warning: Citation `BGW88' on page 18 undefined on input line 352
+.
+
+
+Package natbib Warning: Citation `CCD88' on page 18 undefined on input line 352
+.
+
+
+Package natbib Warning: Citation `Yao82' on page 18 undefined on input line 356
+.
+
+
+Package natbib Warning: Citation `PWM+20' on page 18 undefined on input line 35
+6.
+
+
+Package natbib Warning: Citation `Rabin81' on page 18 undefined on input line 3
+62.
+
+
+Package natbib Warning: Citation `Y86' on page 18 undefined on input line 362.
+
+
+Package natbib Warning: Citation `K88' on page 18 undefined on input line 362.
+
+
+Package natbib Warning: Citation `KOS16' on page 18 undefined on input line 362
+.
+
+
+Package natbib Warning: Citation `Che04' on page 18 undefined on input line 362
+.
+
+
+Package natbib Warning: Citation `MEP17' on page 18 undefined on input line 362
+.
+
+
+Package natbib Warning: Citation `BHM+19' on page 18 undefined on input line 36
+2.
+
+[18]
+
+LaTeX Warning: Reference `fig:OT_functionality' on page 19 undefined on input l
+ine 384.
+
+
+Package natbib Warning: Citation `Yao82' on page 19 undefined on input line 396
+.
+
+
+Package natbib Warning: Citation `Goldreich87' on page 19 undefined on input li
+ne 396.
+
+
+Package natbib Warning: Citation `BMR90' on page 19 undefined on input line 396
+.
+
+
+Package natbib Warning: Citation `BMR90' on page 19 undefined on input line 396
+.
+
+
+Package natbib Warning: Citation `NPS99' on page 19 undefined on input line 396
+.
+
+
+Package natbib Warning: Citation `Pinkas2009' on page 19 undefined on input lin
+e 396.
+
+
+Package natbib Warning: Citation `Kolesnikov2005' on page 19 undefined on input
+ line 396.
+
+
+Package natbib Warning: Citation `Zahur2015' on page 19 undefined on input line
+ 396.
+
+[19]
+
+LaTeX Warning: Reference `eq:MPeq' on page 20 undefined on input line 412.
+
+<Chapter_TechnicalOverview/booleanCircuit.png, id=352, 884.30376pt x 520.94624p
 t>
 File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
 <use Chapter_TechnicalOverview/booleanCircuit.png>
 Package pdftex.def Info: Chapter_TechnicalOverview/booleanCircuit.png  used on 
-input line 427.
+input line 416.
 (pdftex.def)             Requested size: 265.29317pt x 156.28508pt.
+
+Package natbib Warning: Citation `Kolesnikov2009' on page 20 undefined on input
+ line 418.
+
+
+Package natbib Warning: Citation `Kolesnikov2009' on page 20 undefined on input
+ line 418.
+
+
+Underfull \vbox (badness 1178) has occurred while \output is active []
+
  [20 <./Chapter_TechnicalOverview/booleanCircuit.png>] [21]
+
+Package natbib Warning: Citation `IR89' on page 22 undefined on input line 462.
+
+
+
+Package natbib Warning: Citation `BGW88' on page 22 undefined on input line 478
+.
+
+
+Package natbib Warning: Citation `CCD88' on page 22 undefined on input line 478
+.
+
+
+Package natbib Warning: Citation `Rabin81' on page 22 undefined on input line 4
+82.
+
+
+Package natbib Warning: Citation `K88' on page 22 undefined on input line 482.
+
+
+Package natbib Warning: Citation `AIK11' on page 22 undefined on input line 482
+.
+
+
+Package natbib Warning: Citation `DKMQ12' on page 22 undefined on input line 48
+2.
+
+
+Package natbib Warning: Citation `GNN17' on page 22 undefined on input line 482
+.
+
+
+Package natbib Warning: Citation `DGNBNT17' on page 22 undefined on input line 
+482.
+
+
+Package natbib Warning: Citation `GMW87' on page 22 undefined on input line 482
+.
+
+
+Package natbib Warning: Citation `DGNBNT17' on page 22 undefined on input line 
+482.
+
+
+Package natbib Warning: Citation `IPS09' on page 22 undefined on input line 482
+.
+
+
+Package natbib Warning: Citation `ADINZ17' on page 22 undefined on input line 4
+82.
+
+
+Package natbib Warning: Citation `BCGI18' on page 22 undefined on input line 48
+2.
+
+
+Package natbib Warning: Citation `HIMV19' on page 22 undefined on input line 48
+2.
+
+
+Package natbib Warning: Citation `CDIKLOV19' on page 22 undefined on input line
+ 482.
+
+
+Package natbib Warning: Citation `GN19' on page 22 undefined on input line 482.
+
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22] [23]) [24]
+
+LaTeX Warning: Reference `fig:OLE_functionality' on page 22 undefined on input 
+line 505.
+
+[22]
+
+LaTeX Warning: Reference `fig:VOLE_functionality' on page 23 undefined on input
+ line 512.
+
+
+Package natbib Warning: Citation `Evans2018' on page 23 undefined on input line
+ 538.
+
+[23]) [24]
 \openout2 = `Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.
 aux'.
 
 
 (./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.tex
 Chapter 3.
+
+Package natbib Warning: Citation `YAVV22' on page 25 undefined on input line 11
+.
+
+
+Package natbib Warning: Citation `IR89' on page 25 undefined on input line 11.
+
+
+Package natbib Warning: Citation `GKMRV00' on page 25 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `EGL85' on page 25 undefined on input line 11.
+
+
+
+Package natbib Warning: Citation `NP01' on page 25 undefined on input line 11.
+
+
+Package natbib Warning: Citation `CO15' on page 25 undefined on input line 11.
+
+
+Package natbib Warning: Citation `Sho95' on page 25 undefined on input line 11.
+
+
+
+Package natbib Warning: Citation `Rabin81' on page 25 undefined on input line 1
+3.
+
+
+Package natbib Warning: Citation `BBCS92' on page 25 undefined on input line 13
+.
+
+
+Package natbib Warning: Citation `GLSV21' on page 25 undefined on input line 13
+.
+
+
+Package natbib Warning: Citation `BCKM21' on page 25 undefined on input line 13
+.
+
 
 Underfull \vbox (badness 3179) has occurred while \output is active []
 
@@ -1291,7 +1704,244 @@ Underfull \vbox (badness 3179) has occurred while \output is active []
 
 
 ]
-[26] [27] [28] [29]
+
+Package natbib Warning: Citation `BC96' on page 26 undefined on input line 15.
+
+
+Package natbib Warning: Citation `B05' on page 26 undefined on input line 15.
+
+
+Package natbib Warning: Citation `M06' on page 26 undefined on input line 15.
+
+
+Package natbib Warning: Citation `F10' on page 26 undefined on input line 15.
+
+
+Package natbib Warning: Citation `B15' on page 26 undefined on input line 15.
+
+
+Package natbib Warning: Citation `PAB+20' on page 26 undefined on input line 15
+.
+
+
+Package natbib Warning: Citation `PR21' on page 26 undefined on input line 15.
+
+
+Package natbib Warning: Citation `SH22' on page 26 undefined on input line 15.
+
+
+Package natbib Warning: Citation `BBCS92' on page 26 undefined on input line 22
+.
+
+
+Package natbib Warning: Citation `K88' on page 26 undefined on input line 22.
+
+
+Package natbib Warning: Citation `S99' on page 26 undefined on input line 22.
+
+
+Package natbib Warning: Citation `Y95' on page 26 undefined on input line 22.
+
+
+Package natbib Warning: Citation `BBCS92' on page 26 undefined on input line 22
+.
+
+
+Package natbib Warning: Citation `BCJL93' on page 26 undefined on input line 24
+.
+
+
+Package natbib Warning: Citation `M96' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `LC97' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `M97' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `BC96' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `LC97' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `M97' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `L97' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `C07' on page 26 undefined on input line 24.
+
+
+Package natbib Warning: Citation `BCS12' on page 26 undefined on input line 24.
+
+
+
+Package natbib Warning: Citation `SSS14' on page 26 undefined on input line 24.
+
+
+
+Package natbib Warning: Citation `SJFHV13' on page 26 undefined on input line 2
+4.
+
+
+Package natbib Warning: Citation `BCMS97' on page 26 undefined on input line 24
+.
+
+
+Package natbib Warning: Citation `S99' on page 26 undefined on input line 24.
+
+[26]
+
+Package natbib Warning: Citation `Y00' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `Y02' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `Y04' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `C03' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `Y00' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `B01' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `C05' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `Che07' on page 27 undefined on input line 26.
+
+
+
+Package natbib Warning: Citation `A07' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `A07' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `CAP10' on page 27 undefined on input line 26.
+
+
+
+Package natbib Warning: Citation `CAPSW13' on page 27 undefined on input line 2
+6.
+
+
+Package natbib Warning: Citation `H13' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `K12' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `SHW20' on page 27 undefined on input line 26.
+
+
+
+Package natbib Warning: Citation `BK22' on page 27 undefined on input line 26.
+
+
+Package natbib Warning: Citation `LC97' on page 27 undefined on input line 41.
+
+
+Package natbib Warning: Citation `M97' on page 27 undefined on input line 41.
+
+
+Package natbib Warning: Citation `BCKM21' on page 27 undefined on input line 41
+.
+
+
+Package natbib Warning: Citation `GLSV21' on page 27 undefined on input line 41
+.
+
+
+Package natbib Warning: Citation `A02' on page 27 undefined on input line 41.
+
+
+Package natbib Warning: Citation `DFSS05' on page 27 undefined on input line 41
+.
+
+
+Package natbib Warning: Citation `WST08' on page 27 undefined on input line 41.
+
+
+
+Package natbib Warning: Citation `KWW12' on page 27 undefined on input line 41.
+
+
+
+Package natbib Warning: Citation `L14' on page 27 undefined on input line 41.
+
+
+Package natbib Warning: Citation `Pit16' on page 27 undefined on input line 41.
+
+
+
+Package natbib Warning: Citation `Ken11' on page 27 undefined on input line 41.
+
+
+
+Package natbib Warning: Citation `U18' on page 27 undefined on input line 41.
+
+[27]
+
+Package natbib Warning: Citation `W83' on page 28 undefined on input line 49.
+
+
+Package natbib Warning: Citation `BB84' on page 28 undefined on input line 49.
+
+
+Package natbib Warning: Citation `BBBW83' on page 28 undefined on input line 49
+.
+
+
+Package natbib Warning: Citation `DFSS14' on page 28 undefined on input line 49
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 28 undefined on input line 49
+.
+
+
+Package natbib Warning: Citation `BBBW83' on page 28 undefined on input line 49
+.
+
+
+Package natbib Warning: Citation `BBB14' on page 28 undefined on input line 49.
+
+
+
+Package natbib Warning: Citation `S99' on page 28 undefined on input line 49.
+
+
+Package natbib Warning: Citation `BBCS92' on page 28 undefined on input line 60
+.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 28 undefined on input line 60.
+
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+
+Package natbib Warning: Citation `FS09' on page 30 undefined on input line 118.
+
+
+
+Package natbib Warning: Citation `JSGBBWZ11' on page 30 undefined on input line
+ 118.
+
+
+Package natbib Warning: Citation `Lemus20' on page 30 undefined on input line 1
+18.
+
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1304,7 +1954,15 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [30]
+
+Package natbib Warning: Citation `KWW12' on page 30 undefined on input line 135
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 30 undefined on input line 13
+9.
+
+[30]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 142.
@@ -1317,36 +1975,584 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 142.
 
-[31] [32] [33] [34] [35] [36]
-Underfull \vbox (badness 1442) has occurred while \output is active []
 
- [37]
+Package natbib Warning: Citation `BBCS92' on page 31 undefined on input line 14
+4.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 31 undefined on input line 164.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 31 undefined on input line 179.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 31 undefined on input line 183.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `fig:BBCS_COM' on page 31 undefined on input line 196.
+
+
+
+Package natbib Warning: Citation `CK88' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `BBCS92' on page 31 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `MS94' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `Y95' on page 31 undefined on input line 200.
+
+
+Package natbib Warning: Citation `M96b' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `CDMS04' on page 31 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `FS09' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 31 undefined on input line 2
+00.
+
+
+Package natbib Warning: Citation `U10' on page 31 undefined on input line 200.
+
+
+Package natbib Warning: Citation `BF10' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `GLSV21' on page 31 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `BCKM21' on page 31 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `MS94' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `Y95' on page 31 undefined on input line 200.
+
+
+Package natbib Warning: Citation `MS94' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `Y95' on page 31 undefined on input line 200.
+
+
+Package natbib Warning: Citation `M96b' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `FS09' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `U10' on page 31 undefined on input line 200.
+
+
+Package natbib Warning: Citation `FS09' on page 31 undefined on input line 200.
+
+
+
+Package natbib Warning: Citation `U10' on page 31 undefined on input line 200.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 31 undefined on input line 2
+00.
+
+
+Package natbib Warning: Citation `KWW12' on page 31 undefined on input line 200
+.
+
+
+Package natbib Warning: Citation `BCC+10' on page 31 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `TR11' on page 31 undefined on input line 200.
+
+
+[31]
+
+Package natbib Warning: Citation `R06' on page 32 undefined on input line 202.
+
+
+Package natbib Warning: Citation `DFRSS07' on page 32 undefined on input line 2
+02.
+
+
+Package natbib Warning: Citation `BCC+10' on page 32 undefined on input line 20
+2.
+
+
+Package natbib Warning: Citation `TR11' on page 32 undefined on input line 202.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 32 undefined on input line 2
+05.
+
+
+Package natbib Warning: Citation `FS09' on page 32 undefined on input line 205.
+
+
+
+Package natbib Warning: Citation `DFRSS07' on page 32 undefined on input line 2
+05.
+
+
+Package natbib Warning: Citation `RK05' on page 32 undefined on input line 205.
+
+
+
+Package natbib Warning: Citation `R05' on page 32 undefined on input line 205.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 32 undefined on input line 2
+05.
+
+
+Package natbib Warning: Citation `U10' on page 32 undefined on input line 205.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+
+Package natbib Warning: Citation `A02' on page 33 undefined on input line 213.
+
+
+Package natbib Warning: Citation `N91' on page 33 undefined on input line 213.
+
+
+Package natbib Warning: Citation `HILL99' on page 33 undefined on input line 21
+3.
+
+
+Package natbib Warning: Citation `HR07' on page 33 undefined on input line 213.
+
+
+
+Package natbib Warning: Citation `GLSV21' on page 33 undefined on input line 21
+3.
+
+
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+ [33]
+
+Package natbib Warning: Citation `BCKM21' on page 34 undefined on input line 21
+8.
+
+
+Package natbib Warning: Citation `GLSV21' on page 34 undefined on input line 21
+8.
+
+
+Package natbib Warning: Citation `U10' on page 34 undefined on input line 219.
+
+
+Package natbib Warning: Citation `CF01' on page 34 undefined on input line 219.
+
+
+
+Package natbib Warning: Citation `U11' on page 34 undefined on input line 220.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 34 undefined on input line 2
+21.
+
+
+Package natbib Warning: Citation `Y86' on page 34 undefined on input line 226.
+
+
+Package natbib Warning: Citation `MR09' on page 34 undefined on input line 226.
+
+
+
+Package natbib Warning: Citation `MR09' on page 34 undefined on input line 228.
+
+
+
+Package natbib Warning: Citation `FS09' on page 34 undefined on input line 228.
+
+
+
+Package natbib Warning: Citation `BM04' on page 34 undefined on input line 228.
+
+
+
+Package natbib Warning: Citation `U04' on page 34 undefined on input line 228.
+
+
+Package natbib Warning: Citation `U10' on page 34 undefined on input line 228.
+
+
+Package natbib Warning: Citation `C20' on page 34 undefined on input line 228.
+
+
+Package natbib Warning: Citation `MR11' on page 34 undefined on input line 228.
+
+
+
+Package natbib Warning: Citation `BK22' on page 34 undefined on input line 228.
+
+
+
+Package natbib Warning: Citation `FS09' on page 34 undefined on input line 228.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 34 undefined on input line 2
+28.
+
+
+Package natbib Warning: Citation `U10' on page 34 undefined on input line 228.
+
+
+Package natbib Warning: Citation `DFSS05' on page 34 undefined on input line 23
+4.
+
+
+Package natbib Warning: Citation `WST08' on page 34 undefined on input line 234
+.
+
+[34]
+
+LaTeX Warning: Reference `fig:BBCS' on page 35 undefined on input line 242.
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 35 undefined on input line 
+242.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 35 undefined on input line 262.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 35 undefined on input line 275.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 35 undefined on input line 279.
+
+
+LaTeX Warning: Reference `sec:BBCS' on page 35 undefined on input line 294.
+
+[35]
+
+Package natbib Warning: Citation `DFRSS07' on page 36 undefined on input line 2
+98.
+
+
+Package natbib Warning: Citation `F10' on page 36 undefined on input line 298.
+
+
+Package natbib Warning: Citation `KWW12' on page 36 undefined on input line 304
+.
+
+
+Package natbib Warning: Citation `MW11' on page 36 undefined on input line 304.
+
+
+
+Package natbib Warning: Citation `DFSS05' on page 36 undefined on input line 30
+8.
+
+
+Package natbib Warning: Citation `DFRSS07' on page 36 undefined on input line 3
+08.
+
+
+Package natbib Warning: Citation `WW08' on page 36 undefined on input line 308.
+
+
+
+Package natbib Warning: Citation `WW08' on page 36 undefined on input line 308.
+
+
+
+Package natbib Warning: Citation `U11' on page 36 undefined on input line 310.
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 36 undefined on input line 
+310.
+
+
+LaTeX Warning: Reference `fig:BBCS_COM' on page 36 undefined on input line 310.
+
+
+
+Package natbib Warning: Citation `KWW12' on page 36 undefined on input line 316
+.
+
+
+Underfull \vbox (badness 3354) has occurred while \output is active []
+
+ [36]
+
+Package natbib Warning: Citation `S10' on page 37 undefined on input line 320.
+
+
+Package natbib Warning: Citation `KWW12' on page 37 undefined on input line 320
+.
+
+
+Package natbib Warning: Citation `WST08' on page 37 undefined on input line 320
+.
+
+
+Package natbib Warning: Citation `S10' on page 37 undefined on input line 331.
+
+
+Package natbib Warning: Citation `KWW12' on page 37 undefined on input line 331
+.
+
+
+Package natbib Warning: Citation `CCM98' on page 37 undefined on input line 331
+.
+
+
+Package natbib Warning: Citation `DHRS04' on page 37 undefined on input line 33
+1.
+
+
+Package natbib Warning: Citation `S07' on page 37 undefined on input line 331.
+
+
+Package natbib Warning: Citation `CCM98' on page 37 undefined on input line 331
+.
+
+
+Package natbib Warning: Citation `DHRS04' on page 37 undefined on input line 33
+1.
+
+
+Package natbib Warning: Citation `S07' on page 37 undefined on input line 331.
+
+
+Package natbib Warning: Citation `KWW12' on page 37 undefined on input line 331
+.
+
+
+Package natbib Warning: Citation `KWW12' on page 37 undefined on input line 340
+.
+
+
+LaTeX Warning: Reference `fig:BBCS_Noisy' on page 37 undefined on input line 34
+0.
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 37 undefined on input line 
+340.
+
+
+Package natbib Warning: Citation `DHRS04' on page 37 undefined on input line 34
+0.
+
+
+Package natbib Warning: Citation `S07' on page 37 undefined on input line 340.
+
+[37]
+
+LaTeX Warning: Reference `fig:BBCS' on page 38 undefined on input line 360.
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 38 undefined on input line 
+365.
+
+
+LaTeX Warning: Reference `fig:BBCS' on page 38 undefined on input line 369.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 38 undefined on input line 
+414.
+
+
+Package natbib Warning: Citation `WST08' on page 38 undefined on input line 414
+.
+
+
+Package natbib Warning: Citation `STW09' on page 38 undefined on input line 414
+.
+
+
+Package natbib Warning: Citation `S10' on page 38 undefined on input line 414.
+
+
+Package natbib Warning: Citation `KWW12' on page 38 undefined on input line 414
+.
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 38 undefined on input line 
+416.
+
+
+LaTeX Warning: Reference `fig:BBCS_Noisy' on page 38 undefined on input line 41
+6.
+
+
+Package natbib Warning: Citation `KWW12' on page 38 undefined on input line 416
+.
+
+
+Package natbib Warning: Citation `KWW12' on page 38 undefined on input line 428
+.
+
+
+Package natbib Warning: Citation `LCT14' on page 38 undefined on input line 438
+.
+
+
+Package natbib Warning: Citation `Pirandola2020' on page 38 undefined on input 
+line 438.
 
 [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39]
 
+Package natbib Warning: Citation `MH05' on page 40 undefined on input line 444.
+
+
+
+Package natbib Warning: Citation `GFKZR06' on page 40 undefined on input line 4
+44.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `JSKEML16' on page 40 undefined on input line 
+485.
 
 [40]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `fig:A_FSA' on page 41 undefined on input line 487.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `fig:A_THA' on page 41 undefined on input line 526.
 
- [41]
+
+LaTeX Warning: Reference `fig:B_THA' on page 41 undefined on input line 529.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[41]
+
+Package natbib Warning: Citation `JSKEML16' on page 42 undefined on input line 
+577.
+
 [42]
+
+Package natbib Warning: Citation `JBI+16' on page 43 undefined on input line 57
+9.
+
+
+Package natbib Warning: Citation `MY04' on page 43 undefined on input line 579.
+
+
+
+Package natbib Warning: Citation `E91' on page 43 undefined on input line 579.
+
+
+Package natbib Warning: Citation `KW16' on page 43 undefined on input line 583.
+
+
+
+Package natbib Warning: Citation `KW16' on page 43 undefined on input line 583.
+
+
+
+Package natbib Warning: Citation `RTK+18' on page 43 undefined on input line 58
+3.
+
+
+Package natbib Warning: Citation `KWW12' on page 43 undefined on input line 585
+.
+
+
+Package natbib Warning: Citation `AGM06' on page 43 undefined on input line 587
+.
+
+
+Package natbib Warning: Citation `CHSH69' on page 43 undefined on input line 58
+7.
+
+
 Underfull \vbox (badness 1412) has occurred while \output is active []
 
- [43])
-[44]
+ [43]
+
+Package natbib Warning: Citation `BY21' on page 44 undefined on input line 592.
+
+
+
+Package natbib Warning: Citation `BY21' on page 44 undefined on input line 592.
+
+
+
+Package natbib Warning: Citation `MDC+21' on page 44 undefined on input line 59
+2.
+
+
+Package natbib Warning: Citation `MV21' on page 44 undefined on input line 592.
+
+
+
+Package natbib Warning: Citation `P15' on page 44 undefined on input line 592.
+
+
+Package natbib Warning: Citation `RW20' on page 44 undefined on input line 596.
+
+
+
+Package natbib Warning: Citation `RW20' on page 44 undefined on input line 596.
+
+
+
+Package natbib Warning: Citation `LCQ12' on page 44 undefined on input line 596
+.
+
+
+Package natbib Warning: Citation `MDR+19' on page 44 undefined on input line 59
+6.
+
+
+Package natbib Warning: Citation `SRK+15' on page 44 undefined on input line 59
+6.
+
+
+Package natbib Warning: Citation `KWW12' on page 44 undefined on input line 596
+.
+
+
+Package natbib Warning: Citation `ZGG+20' on page 44 undefined on input line 59
+8.
+
+) [44]
 \openout2 = `Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndCla
 ssicalObliviousTransfer.aux'.
 
@@ -1355,6 +2561,22 @@ ssicalObliviousTransfer.aux'.
 viousTransfer.tex
 Chapter 4.
 
+LaTeX Warning: Reference `chapter_QOT' on page 45 undefined on input line 11.
+
+
+Package natbib Warning: Citation `BM89' on page 45 undefined on input line 17.
+
+
+Package natbib Warning: Citation `EGL85' on page 45 undefined on input line 17.
+
+
+
+Package natbib Warning: Citation `NP01' on page 45 undefined on input line 17.
+
+
+Package natbib Warning: Citation `CO15' on page 45 undefined on input line 17.
+
+
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [45
@@ -1362,52 +2584,480 @@ Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 ]
+
+LaTeX Warning: Reference `chapter_QOT' on page 46 undefined on input line 19.
+
+
+LaTeX Warning: Reference `fig:BMOTProtocol' on page 46 undefined on input line 
+19.
+
+
+Package natbib Warning: Citation `BM89' on page 46 undefined on input line 58.
+
+
+Package natbib Warning: Citation `BM89' on page 46 undefined on input line 58.
+
+
 Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [46]
-[47] [48]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1458, 462.5
-28pt x 346.896pt>
+
+Package natbib Warning: Citation `PH78' on page 47 undefined on input line 68.
+
+
+Package natbib Warning: Citation `S71' on page 47 undefined on input line 68.
+
+
+Package natbib Warning: Citation `P78' on page 47 undefined on input line 68.
+
+
+Package natbib Warning: Citation `P78' on page 47 undefined on input line 68.
+
+
+Package natbib Warning: Citation `ABDGGHHSTVVWZZ15' on page 47 undefined on inp
+ut line 68.
+
+
+Package natbib Warning: Citation `Yao82' on page 47 undefined on input line 68.
+
+
+
+Package natbib Warning: Citation `Sho95' on page 47 undefined on input line 70.
+
+
+[47]
+
+Package natbib Warning: Citation `Bernstein2017' on page 48 undefined on input 
+line 87.
+
+
+Package natbib Warning: Citation `Pirandola20' on page 48 undefined on input li
+ne 87.
+
+[48]
+
+LaTeX Warning: Reference `table:BMOT_mexp' on page 49 undefined on input line 9
+4.
+
+
+Package natbib Warning: Citation `MVV01' on page 49 undefined on input line 111
+.
+
+
+Package natbib Warning: Citation `G11' on page 49 undefined on input line 119.
+
+
+LaTeX Warning: Reference `fig:nOTsplot' on page 49 undefined on input line 119.
+
+
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=559, 462.52
+8pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
 <use Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>
 Package pdftex.def Info: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSec
 cond.png  used on input line 122.
 (pdftex.def)             Requested size: 455.24411pt x 341.44843pt.
- [49]
+
+LaTeX Warning: Reference `eq:nOTs' on page 49 undefined on input line 123.
+
+
+LaTeX Warning: Reference `eq:nOTs' on page 49 undefined on input line 123.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 49 undefined on input line 12
+6.
+
+
+Package natbib Warning: Citation `NP01' on page 49 undefined on input line 126.
+
+
+[49]
+
+Package natbib Warning: Citation `Yao82' on page 50 undefined on input line 128
+.
+
+
+Package natbib Warning: Citation `Bernstein2017' on page 50 undefined on input 
+line 132.
+
+
+LaTeX Warning: Reference `chapter_QOT' on page 50 undefined on input line 132.
+
+
+Package natbib Warning: Citation `IR99' on page 50 undefined on input line 132.
+
+
+
 Underfull \vbox (badness 1609) has occurred while \output is active []
 
- [50 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>] [51]
+ [50 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>]
+
+Package natbib Warning: Citation `B96' on page 51 undefined on input line 134.
+
+
+Package natbib Warning: Citation `IKNP03' on page 51 undefined on input line 13
+4.
+
+
+Package natbib Warning: Citation `N07' on page 51 undefined on input line 134.
+
+
+Package natbib Warning: Citation `NNOB12' on page 51 undefined on input line 13
+4.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 51 undefined on input line 13
+4.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 51 undefined on input line 13
+4.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 51 undefined on input line 13
+4.
+
+
+LaTeX Warning: Reference `Ext-OT_comp' on page 51 undefined on input line 134.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 51 undefined on input line 13
+4.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 51 undefined on input line 13
+4.
+
+
+Package natbib Warning: Citation `KOS15' on page 51 undefined on input line 134
+.
+
+
+LaTeX Warning: Reference `Mal-Ext-OT_comp' on page 51 undefined on input line 1
+34.
+
+
+LaTeX Warning: Reference `fig:BBCS_Transfer' on page 51 undefined on input line
+ 144.
+
+[51]
+
+LaTeX Warning: Reference `fig:BBCS_COM' on page 52 undefined on input line 164.
+
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 52 undefined on input line 
+164.
+
+
+LaTeX Warning: Reference `fig:BBCS_Transfer' on page 52 undefined on input line
+ 187.
+
+
+LaTeX Warning: Reference `fig:BBCS_Transfer-optimized' on page 52 undefined on 
+input line 187.
+
+
+LaTeX Warning: Reference `fig:BBCS_COM' on page 52 undefined on input line 207.
+
+
+
+LaTeX Warning: Reference `fig:BBCS_Bounded' on page 52 undefined on input line 
+207.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 1533) has occurred while \output is active []
+Package natbib Warning: Citation `Lemus20' on page 52 undefined on input line 2
+32.
+
+
+Underfull \vbox (badness 3000) has occurred while \output is active []
 
  [52]
+
+LaTeX Warning: Reference `Classical-OT' on page 53 undefined on input line 236.
+
+
+
+LaTeX Warning: Reference `table:ClassicalOT_comparison' on page 53 undefined on
+ input line 236.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53]
+
+Package natbib Warning: Citation `EGL85' on page 54 undefined on input line 244
+.
+
+
+Package natbib Warning: Citation `BM89' on page 54 undefined on input line 245.
+
+
+
+Package natbib Warning: Citation `NP01' on page 54 undefined on input line 246.
+
+
+
+Package natbib Warning: Citation `CO15' on page 54 undefined on input line 247.
+
+
+
+LaTeX Warning: Reference `table:ClassicalOT_comparison' on page 54 undefined on
+ input line 254.
+
+
+Package natbib Warning: Citation `CO15' on page 54 undefined on input line 254.
+
+
+
+LaTeX Warning: Reference `eq:nOTs' on page 54 undefined on input line 254.
+
+
+Package natbib Warning: Citation `PST19' on page 54 undefined on input line 258
+.
+
+
+Package natbib Warning: Citation `MR19' on page 54 undefined on input line 258.
+
+
+
+Package natbib Warning: Citation `CrystalKyber17' on page 54 undefined on input
+ line 258.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 54 undefined on input line 25
+8.
+
+
+Package natbib Warning: Citation `NP01' on page 54 undefined on input line 258.
+
+
+
+Package natbib Warning: Citation `NTRUOT1' on page 54 undefined on input line 2
+58.
+
+
+Package natbib Warning: Citation `NTRUOT2' on page 54 undefined on input line 2
+58.
+
+
+Package natbib Warning: Citation `NTRU' on page 54 undefined on input line 258.
+
+
+
+Package natbib Warning: Citation `CO15' on page 54 undefined on input line 258.
+
+
+
 Underfull \vbox (badness 1259) has occurred while \output is active []
 
  [54]
+
+LaTeX Warning: Reference `Ext-OT' on page 55 undefined on input line 263.
+
+
+Overfull \hbox (4.38875pt too wide) in paragraph at lines 263--264
+\OT1/cmr/m/n/12 As we ex-plained in sec-tion [], sev-eral tech-niques based on 
+an hy-brid symmetric-asymmetric
+ []
+
+
+Package natbib Warning: Citation `ALSZ13' on page 55 undefined on input line 27
+5.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 55 undefined on input line 30
+6.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 55 undefined on input line 30
+6.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 55 undefined on input line 31
+0.
+
+
+LaTeX Warning: Reference `fig:ALSZ13Protocol' on page 55 undefined on input lin
+e 310.
+
+
+LaTeX Warning: Reference `table:CvsQ_OT_comparison_computation' on page 55 unde
+fined on input line 312.
+
+
+LaTeX Warning: Reference `table:CvsQ_OT_comparison_communication' on page 55 un
+defined on input line 312.
+
+
+LaTeX Warning: Reference `table:CvsQ_OT_comparison_computation' on page 55 unde
+fined on input line 312.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 55 undefined on input line 31
+2.
+
+
+LaTeX Warning: Reference `table:CvsQ_OT_comparison_computation' on page 55 unde
+fined on input line 312.
+
+
+LaTeX Warning: Reference `table:CvsQ_OT_comparison_communication' on page 55 un
+defined on input line 312.
+
 [55]
 Underfull \vbox (badness 1024) has occurred while \output is active []
 
  [56]
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 33
+3.
+
+
+LaTeX Warning: Reference `O-OT' on page 57 undefined on input line 333.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 33
+3.
+
+
+LaTeX Warning: Reference `O-OT' on page 57 undefined on input line 333.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 34
+6.
+
+
+LaTeX Warning: Reference `O-OT' on page 57 undefined on input line 346.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 34
+6.
+
+
+LaTeX Warning: Reference `O-OT' on page 57 undefined on input line 346.
+
 [57]
 
+Package natbib Warning: Citation `IKNP03' on page 58 undefined on input line 37
+0.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 370
+.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 58 undefined on input line 37
+0.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 370
+.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 58 undefined on input line 37
+0.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 370
+.
+
+
+LaTeX Warning: Reference `fig:K15Protocol' on page 58 undefined on input line 3
+75.
+
+
+LaTeX Warning: Reference `fig:K15Protocol' on page 58 undefined on input line 3
+75.
+
+
+LaTeX Warning: Reference `fig:K15Protocol' on page 58 undefined on input line 3
+75.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 383
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 430
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 430
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 450
+.
+
+
+LaTeX Warning: Reference `O-OT' on page 58 undefined on input line 450.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 450
+.
+
+
+LaTeX Warning: Reference `O-OT' on page 58 undefined on input line 450.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 463
+.
+
+
+LaTeX Warning: Reference `O-OT' on page 58 undefined on input line 463.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 463
+.
+
+
+LaTeX Warning: Reference `O-OT' on page 58 undefined on input line 463.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `KOS15' on page 58 undefined on input line 467
+.
 
 [58] [59]
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 479.
 
+[60]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package natbib Warning: Citation `Lemus20' on page 61 undefined on input line 4
+89.
 
- [60]
+
+Package natbib Warning: Citation `BCKM21' on page 61 undefined on input line 48
+9.
+
+
+Package natbib Warning: Citation `GLSV21' on page 61 undefined on input line 48
+9.
+
+
+Package natbib Warning: Citation `U10' on page 61 undefined on input line 489.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 61 undefined on input line 49
+1.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 61 undefined on input line 49
+1.
+
+
+Package natbib Warning: Citation `KOS15' on page 61 undefined on input line 491
+.
+
 [61]) [62]
 \openout2 = `Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousL
 inearEvaluation.aux'.
@@ -1417,8 +3067,16 @@ inearEvaluation.aux'.
 ation.tex
 Chapter 5.
 
+Package natbib Warning: Citation `Rabin81' on page 63 undefined on input line 1
+3.
+
+
 Package natbib Warning: Citation `Goldreichbook04' on page 63 undefined on inpu
 t line 13.
+
+
+Package natbib Warning: Citation `CCD88' on page 63 undefined on input line 13.
+
 
 
 Package natbib Warning: Citation `Canetti00MPC' on page 63 undefined on input l
@@ -1429,7 +3087,61 @@ Package natbib Warning: Citation `Kilian' on page 63 undefined on input line 13
 .
 
 
+Package natbib Warning: Citation `AIK11' on page 63 undefined on input line 14.
+
+
+
+Package natbib Warning: Citation `DKMQ12' on page 63 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `GNN17' on page 63 undefined on input line 14.
+
+
+
+Package natbib Warning: Citation `DGNBNT17' on page 63 undefined on input line 
+14.
+
+
+Package natbib Warning: Citation `GMW87' on page 63 undefined on input line 14.
+
+
+
+Package natbib Warning: Citation `DGNBNT17' on page 63 undefined on input line 
+14.
+
+
+Package natbib Warning: Citation `IPS09' on page 63 undefined on input line 14.
+
+
+
+Package natbib Warning: Citation `ADINZ17' on page 63 undefined on input line 1
+4.
+
+
+Package natbib Warning: Citation `BCGI18' on page 63 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `HIMV19' on page 63 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `CDIKLOV19' on page 63 undefined on input line
+ 14.
+
+
+Package natbib Warning: Citation `GN19' on page 63 undefined on input line 14.
+
+
+Package natbib Warning: Citation `IR89' on page 63 undefined on input line 16.
+
+
 Package natbib Warning: Citation `Shor94' on page 63 undefined on input line 16
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 63 undefined on input line 16
 .
 
 
@@ -1440,6 +3152,14 @@ Package natbib Warning: Citation `C94' on page 63 undefined on input line 16.
 
 
 ]
+
+Package natbib Warning: Citation `BCGI18' on page 64 undefined on input line 19
+.
+
+
+Package natbib Warning: Citation `GNN17' on page 64 undefined on input line 19.
+
+
 
 Package natbib Warning: Citation `NP06' on page 64 undefined on input line 19.
 
@@ -1454,6 +3174,17 @@ Package natbib Warning: Citation `H18' on page 64 undefined on input line 19.
 
 
 Package natbib Warning: Citation `G99' on page 64 undefined on input line 19.
+
+
+LaTeX Warning: Reference `def:statisticalquc' on page 64 undefined on input lin
+e 23.
+
+
+LaTeX Warning: Reference `fig:func_com' on page 64 undefined on input line 23.
+
+
+Package natbib Warning: Citation `BPT00' on page 64 undefined on input line 23.
+
 
 
 Package natbib Warning: Citation `CBKG02' on page 64 undefined on input line 23
@@ -1471,12 +3202,28 @@ Package natbib Warning: Citation `AKBH07' on page 64 undefined on input line 23
 Package natbib Warning: Citation `SS10' on page 64 undefined on input line 23.
 
 
+Package natbib Warning: Citation `DEBZ10' on page 64 undefined on input line 23
+.
+
+
+Package natbib Warning: Citation `Zhongetal2015' on page 64 undefined on input 
+line 23.
+
+
 Package natbib Warning: Citation `Sitetal17' on page 64 undefined on input line
  23.
 
 
 Package natbib Warning: Citation `Bouchardetal18' on page 64 undefined on input
  line 23.
+
+
+Package natbib Warning: Citation `BHVBFHM18' on page 64 undefined on input line
+ 23.
+
+
+Package natbib Warning: Citation `DHMPPV21' on page 64 undefined on input line 
+23.
 
 
 LaTeX Warning: Reference `Prelim_QUC' on page 64 undefined on input line 23.
@@ -1498,6 +3245,14 @@ Package natbib Warning: Citation `Unruh10' on page 65 undefined on input line 3
 9.
 
 
+Package natbib Warning: Citation `DFLSS09' on page 65 undefined on input line 3
+9.
+
+
+LaTeX Warning: Reference `eq:main_equation_1.3.' on page 65 undefined on input 
+line 39.
+
+
 LaTeX Warning: Reference `fig:nOLE' on page 65 undefined on input line 42.
 
 
@@ -1516,8 +3271,15 @@ Package natbib Warning: Citation `HK97' on page 65 undefined on input line 42.
 LaTeX Warning: Reference `def:Hmin' on page 66 undefined on input line 52.
 
 
+Package natbib Warning: Citation `DFLSS09' on page 66 undefined on input line 5
+2.
+
+
 Package natbib Warning: Citation `Dupuis2015' on page 66 undefined on input lin
 e 52.
+
+
+LaTeX Warning: Reference `lem:leftover' on page 66 undefined on input line 52.
 
 
 LaTeX Warning: Reference `fig:func_ole' on page 66 undefined on input line 54.
@@ -1531,7 +3293,18 @@ Underfull \vbox (badness 1661) has occurred while \output is active []
 
  [66]
 
+LaTeX Warning: Reference `eq:main_ingredient' on page 67 undefined on input lin
+e 60.
+
+
 LaTeX Warning: Reference `Prelim' on page 67 undefined on input line 64.
+
+
+LaTeX Warning: Reference `insecureQOLE' on page 67 undefined on input line 64.
+
+
+LaTeX Warning: Reference `secureQROLE_overview' on page 67 undefined on input l
+ine 64.
 
 
 LaTeX Warning: Reference `qole_protocol' on page 67 undefined on input line 64.
@@ -1552,6 +3325,17 @@ LaTeX Warning: Reference `Prelim_MUB' on page 67 undefined on input line 70.
 LaTeX Warning: Reference `eq:main_relation' on page 67 undefined on input line 
 70.
 
+
+LaTeX Warning: Reference `fig:SH_QOLE' on page 67 undefined on input line 77.
+
+
+LaTeX Warning: Reference `eq:main_ingredient' on page 67 undefined on input lin
+e 77.
+
+
+LaTeX Warning: Reference `eq:main_ingredient' on page 67 undefined on input lin
+e 77.
+
 [67]
 
 LaTeX Warning: Reference `Prelim_MUB' on page 68 undefined on input line 146.
@@ -1559,6 +3343,17 @@ LaTeX Warning: Reference `Prelim_MUB' on page 68 undefined on input line 146.
 
 LaTeX Warning: Reference `eq:bob_attack' on page 68 undefined on input line 146
 .
+
+
+Package natbib Warning: Citation `DFLSS09' on page 68 undefined on input line 1
+54.
+
+
+LaTeX Warning: Reference `fig:SH_QOLE' on page 68 undefined on input line 154.
+
+
+LaTeX Warning: Reference `fig:func_com' on page 68 undefined on input line 154.
+
 
 [68]
 
@@ -1577,6 +3372,75 @@ aux'.
 (./Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.tex
 Chapter 6.
 
+Package natbib Warning: Citation `Li2016' on page 71 undefined on input line 9.
+
+
+
+Package natbib Warning: Citation `Armknecht2015' on page 71 undefined on input 
+line 9.
+
+
+Package natbib Warning: Citation `Verhaert2018' on page 71 undefined on input l
+ine 9.
+
+
+Package natbib Warning: Citation `Scardapane2017' on page 71 undefined on input
+ line 9.
+
+
+Package natbib Warning: Citation `Maulany2018' on page 71 undefined on input li
+ne 9.
+
+
+Package natbib Warning: Citation `Kikuchi2018' on page 71 undefined on input li
+ne 9.
+
+
+Package natbib Warning: Citation `Tawfik2018' on page 71 undefined on input lin
+e 9.
+
+
+Package natbib Warning: Citation `Wang2017' on page 71 undefined on input line 
+9.
+
+
+Package natbib Warning: Citation `MY19' on page 71 undefined on input line 9.
+
+
+Package natbib Warning: Citation `Naveed2015' on page 71 undefined on input lin
+e 9.
+
+
+Package natbib Warning: Citation `Chan2014' on page 71 undefined on input line 
+11.
+
+
+Package natbib Warning: Citation `Ito2017' on page 71 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `AM19' on page 71 undefined on input line 12.
+
+
+Package natbib Warning: Citation `Lemus20' on page 71 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `JSGBBWZ11' on page 71 undefined on input line
+ 12.
+
+
+Package natbib Warning: Citation `KWW12' on page 71 undefined on input line 12.
+
+
+
+Package natbib Warning: Citation `libscapi' on page 71 undefined on input line 
+20.
+
+
+Package natbib Warning: Citation `PH78' on page 71 undefined on input line 20.
+
+
 Underfull \vbox (badness 1629) has occurred while \output is active []
 
  [71
@@ -1584,7 +3448,73 @@ Underfull \vbox (badness 1629) has occurred while \output is active []
 
 
 ]
+
+LaTeX Warning: Reference `phyloTree' on page 72 undefined on input line 22.
+
+
+LaTeX Warning: Reference `secDefition' on page 72 undefined on input line 22.
+
+
+LaTeX Warning: Reference `quantumTools' on page 72 undefined on input line 23.
+
+
+LaTeX Warning: Reference `softTools' on page 72 undefined on input line 23.
+
+
+LaTeX Warning: Reference `smcPhylo' on page 72 undefined on input line 23.
+
+
+LaTeX Warning: Reference `quantumTechIntegration' on page 72 undefined on input
+ line 23.
+
+
+LaTeX Warning: Reference `systemSecurity' on page 72 undefined on input line 23
+.
+
+
+LaTeX Warning: Reference `CompleAnalysis' on page 72 undefined on input line 23
+.
+
+
+Package natbib Warning: Citation `M10' on page 72 undefined on input line 30.
+
+
+Package natbib Warning: Citation `Z06' on page 72 undefined on input line 30.
+
+
+Package natbib Warning: Citation `Felsenstein2003' on page 72 undefined on inpu
+t line 30.
+
 [72]
+
+Package natbib Warning: Citation `F89' on page 73 undefined on input line 39.
+
+
+Package natbib Warning: Citation `JC69' on page 73 undefined on input line 39.
+
+
+Package natbib Warning: Citation `K80' on page 73 undefined on input line 39.
+
+
+Package natbib Warning: Citation `F84' on page 73 undefined on input line 39.
+
+
+Package natbib Warning: Citation `L94' on page 73 undefined on input line 39.
+
+
+Package natbib Warning: Citation `Z06' on page 73 undefined on input line 39.
+
+
+Package natbib Warning: Citation `Felsenstein2003' on page 73 undefined on inpu
+t line 39.
+
+
+Package natbib Warning: Citation `PM09' on page 73 undefined on input line 62.
+
+
+LaTeX Warning: Reference `eq:Qmatrix' on page 73 undefined on input line 69.
+
+
 Overfull \hbox (2.66615pt too wide) detected at line 96
 []\OT1/cmr/bx/n/10 Q \OT1/cmr/m/n/10 = []
  []
@@ -1593,69 +3523,427 @@ Overfull \hbox (2.66615pt too wide) detected at line 96
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73]
-[74] [75] [76] [77] [78pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.6.1.7}) has been already used, duplicate ignored
+
+LaTeX Warning: Reference `eq:probability' on page 74 undefined on input line 10
+2.
+
+
+Package natbib Warning: Citation `JC69' on page 74 undefined on input line 110.
+
+
+
+LaTeX Warning: Reference `eq:Qmatrix' on page 74 undefined on input line 110.
+
+
+Package natbib Warning: Citation `K80' on page 74 undefined on input line 120.
+
+[74]
+
+Package natbib Warning: Citation `K80' on page 75 undefined on input line 127.
+
+
+Package natbib Warning: Citation `F84' on page 75 undefined on input line 136.
+
+
+Package natbib Warning: Citation `L94' on page 75 undefined on input line 148.
+
+[75]
+
+Package natbib Warning: Citation `Z06' on page 76 undefined on input line 172.
+
+[76] [77]
+
+LaTeX Warning: Reference `eq:node_distance' on page 78 undefined on input line 
+246.
+
+[78pdfTeX warning (ext4): destination with the same identifier (name{equation.6
+.1.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.252 
-      ] [79] [80]
-Overfull \hbox (13.62045pt too wide) in paragraph at lines 321--323
+      ]
+
+LaTeX Warning: Reference `eq:node_distance' on page 79 undefined on input line 
+255.
+
+
+Package natbib Warning: Citation `Evans2018' on page 79 undefined on input line
+ 280.
+
+
+Package natbib Warning: Citation `Evans2018' on page 79 undefined on input line
+ 280.
+
+[79]
+
+LaTeX Warning: Reference `eq:SH_security' on page 80 undefined on input line 31
+5.
+
+
+Package natbib Warning: Citation `Lindell2017' on page 80 undefined on input li
+ne 315.
+
+[80]
+
+LaTeX Warning: Reference `eq:SH_security' on page 81 undefined on input line 32
+2.
+
+
+Overfull \hbox (11.35672pt too wide) in paragraph at lines 321--323
 \OT1/cmr/m/n/12 Therefore, we just need to build a sim-u-la-tor that sat-is-fie
-s ex-pres-sion ([][]6.8[][]) for the $[][](\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ; 
-\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$
+s ex-pres-sion ([]) for the $[][](\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ; \OML/cmm/
+m/it/12 X\OT1/cmr/m/n/12 )$
  []
+
+
+LaTeX Warning: Reference `eq:SH_security' on page 81 undefined on input line 32
+6.
+
+
+Package natbib Warning: Citation `Goldreich98' on page 81 undefined on input li
+ne 328.
+
+
+LaTeX Warning: Reference `eq:SH_security' on page 81 undefined on input line 33
+1.
+
+
+Package natbib Warning: Citation `Goldreich98' on page 81 undefined on input li
+ne 331.
+
+
+LaTeX Warning: Reference `chapter_QOT' on page 81 undefined on input line 348.
+
+
+Package natbib Warning: Citation `BBCS92' on page 81 undefined on input line 34
+8.
+
+
+Package natbib Warning: Citation `Lemus20' on page 81 undefined on input line 3
+48.
+
+
+Package natbib Warning: Citation `HM96' on page 81 undefined on input line 348.
+
+
+
+Package natbib Warning: Citation `Shi02' on page 81 undefined on input line 348
+.
+
+
+Package natbib Warning: Citation `ABLST17' on page 81 undefined on input line 3
+48.
+
+
+Package natbib Warning: Citation `Lemus20' on page 81 undefined on input line 3
+48.
+
+
+Package natbib Warning: Citation `Lemus20' on page 81 undefined on input line 3
+48.
+
+
+Package natbib Warning: Citation `SPM21' on page 81 undefined on input line 348
+.
+
+
+LaTeX Warning: Reference `fig:QOKD_prot' on page 81 undefined on input line 348
+.
 
 [81]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Package natbib Warning: Citation `ALSZ13' on page 82 undefined on input line 40
+6.
+
+
+Package natbib Warning: Citation `YE11' on page 82 undefined on input line 406.
+
+
+
+Package natbib Warning: Citation `HS85' on page 82 undefined on input line 408.
+
+
+
+Package natbib Warning: Citation `K92' on page 82 undefined on input line 408.
+
+
+Package natbib Warning: Citation `BM84' on page 82 undefined on input line 408.
+
+
+
+Package natbib Warning: Citation `BBS86' on page 82 undefined on input line 408
+.
+
 [82]
+
+Package natbib Warning: Citation `Alkassar2005' on page 83 undefined on input l
+ine 410.
+
+
+Package natbib Warning: Citation `GaviriaRojas2017' on page 83 undefined on inp
+ut line 410.
+
+
+Package natbib Warning: Citation `HerreroCollantes2017' on page 83 undefined on
+ input line 410.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [83]
+
+Package natbib Warning: Citation `Ferreira2021' on page 84 undefined on input l
+ine 413.
+
+
+Package natbib Warning: Citation `Sho95' on page 84 undefined on input line 417
+.
+
+
+Package natbib Warning: Citation `Pirandola2020' on page 84 undefined on input 
+line 419.
+
+
+Package natbib Warning: Citation `Almeida2020' on page 84 undefined on input li
+ne 419.
+
+
+Package natbib Warning: Citation `Silva2019' on page 84 undefined on input line
+ 419.
+
+
+Package natbib Warning: Citation `Almeida2021' on page 84 undefined on input li
+ne 419.
+
+
+Package natbib Warning: Citation `R06' on page 84 undefined on input line 419.
+
+
+Package natbib Warning: Citation `Tomamichel2017' on page 84 undefined on input
+ line 419.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84]
+
+Package natbib Warning: Citation `F14' on page 85 undefined on input line 441.
+
+
+Package natbib Warning: Citation `Bscher2017' on page 85 undefined on input lin
+e 441.
+
+
+Package natbib Warning: Citation `Buescher2016' on page 85 undefined on input l
+ine 441.
+
+
+Package natbib Warning: Citation `Bscher2018' on page 85 undefined on input lin
+e 441.
+
+
+Package natbib Warning: Citation `libscapi' on page 85 undefined on input line 
+445.
+
+
+Package natbib Warning: Citation `mpc_benchmark' on page 85 undefined on input 
+line 445.
+
+
+Package natbib Warning: Citation `K15' on page 85 undefined on input line 445.
+
+
+Package natbib Warning: Citation `C15' on page 85 undefined on input line 445.
+
+
+Package natbib Warning: Citation `F89' on page 85 undefined on input line 449.
+
+
+LaTeX Warning: Reference `evolDist' on page 85 undefined on input line 449.
+
+
+LaTeX Warning: Reference `quantumTools' on page 85 undefined on input line 456.
+
+
+
+LaTeX Warning: Reference `softTools' on page 85 undefined on input line 456.
+
 [85]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=1974, 601.24625pt x 339.2675pt>
+
+LaTeX Warning: Reference `phyloTree' on page 86 undefined on input line 467.
+
+
+LaTeX Warning: Reference `fig:tree' on page 86 undefined on input line 485.
+
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=842, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
 ut line 489.
 (pdftex.def)             Requested size: 240.49423pt x 135.70459pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [86]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=1982, 589.0005pt x 349.96747pt>
+
+LaTeX Warning: Reference `yaoProtocol' on page 87 undefined on input line 507.
+
+
+LaTeX Warning: Reference `privDistances' on page 87 undefined on input line 507
+.
+
+
+LaTeX Warning: Reference `fig:network' on page 87 undefined on input line 513.
+
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=848, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
 t line 517.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
- [87 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [88 <./Chapter_PrivatePhylo
-geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2003, 458.01112pt x 358.4592pt>
+[87 <./Chapter_PrivatePhylogeneticTrees/tree.png>]
+
+LaTeX Warning: Reference `fig:network' on page 88 undefined on input line 524.
+
+
+LaTeX Warning: Reference `fig:network' on page 88 undefined on input line 526.
+
+
+LaTeX Warning: Reference `fig:network' on page 88 undefined on input line 531.
+
+[88 <./Chapter_PrivatePhylogeneticTrees/PPT.png>]
+
+LaTeX Warning: Reference `fig:network' on page 89 undefined on input line 532.
+
+
+LaTeX Warning: Reference `fig:network' on page 89 undefined on input line 533.
+
+
+Package natbib Warning: Citation `CO15' on page 89 undefined on input line 543.
+
+
+
+Package natbib Warning: Citation `KOS15' on page 89 undefined on input line 543
+.
+
+
+LaTeX Warning: Reference `classical-and-quantum-OT' on page 89 undefined on inp
+ut line 543.
+
+
+LaTeX Warning: Reference `fig:QOKD' on page 89 undefined on input line 543.
+
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=864, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
 ut line 547.
 (pdftex.def)             Requested size: 412.2062pt x 322.61029pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `Wolf2006' on page 89 undefined on input line 
+552.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 89 undefined on input line 55
+6.
 
 
 Underfull \vbox (badness 1983) has occurred while \output is active []
 
  [89]
+
+Package natbib Warning: Citation `Pirandola2020' on page 90 undefined on input 
+line 569.
+
+
+Package natbib Warning: Citation `Silva2019' on page 90 undefined on input line
+ 569.
+
+
+Package natbib Warning: Citation `FGSPSW18' on page 90 undefined on input line 
+569.
+
+
+Package natbib Warning: Citation `Lemus20' on page 90 undefined on input line 5
+69.
+
+
+Package natbib Warning: Citation `Pinto2020' on page 90 undefined on input line
+ 569.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [91] [92]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2056, 18
-00.7275pt x 1471.4975pt>
+ [90 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>]
+
+LaTeX Warning: Reference `privProtocol' on page 91 undefined on input line 573.
+
+
+
+Package natbib Warning: Citation `BB84' on page 91 undefined on input line 573.
+
+
+
+Package natbib Warning: Citation `BBCS92' on page 91 undefined on input line 57
+3.
+
+
+LaTeX Warning: Reference `chapter_QOT' on page 91 undefined on input line 573.
+
+
+Package natbib Warning: Citation `KW16' on page 91 undefined on input line 573.
+
+
+
+Package natbib Warning: Citation `RW20' on page 91 undefined on input line 573.
+
+
+
+Package natbib Warning: Citation `Pirandola2020' on page 91 undefined on input 
+line 573.
+
+
+LaTeX Warning: Reference `privProtocol' on page 91 undefined on input line 573.
+
+
+
+Package natbib Warning: Citation `JAW20' on page 91 undefined on input line 575
+.
+
+
+Package natbib Warning: Citation `KRS16' on page 91 undefined on input line 577
+.
+
+
+Package natbib Warning: Citation `KRS16' on page 91 undefined on input line 577
+.
+
+[91]
+
+LaTeX Warning: Reference `privProtocol' on page 92 undefined on input line 583.
+
+
+
+LaTeX Warning: Reference `Functionality' on page 92 undefined on input line 583
+.
+
+
+Package natbib Warning: Citation `W12' on page 92 undefined on input line 596.
+
+[92]
+
+LaTeX Warning: Reference `fig:hamming_divide' on page 93 undefined on input lin
+e 613.
+
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=896, 180
+0.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
 <use Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>
@@ -1663,11 +3951,112 @@ Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-ta
 ilored.jpeg  used on input line 617.
 (pdftex.def)             Requested size: 216.07797pt x 176.57208pt.
 
+LaTeX Warning: Reference `fig:jc_cbmc-gc' on page 93 undefined on input line 61
+8.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-[93] [94 <./Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>]
-[95] [96] [97]
+LaTeX Warning: Reference `appendix:appendixA' on page 93 undefined on input lin
+e 618.
+
+
+LaTeX Warning: Reference `fig:jc_cbmc-gc' on page 93 undefined on input line 61
+8.
+
+
+LaTeX Warning: Reference `appendix:appendixA' on page 93 undefined on input lin
+e 618.
+
+
+Underfull \vbox (badness 6348) has occurred while \output is active []
+
+ [93 <./Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>]
+
+LaTeX Warning: Reference `JK_model' on page 94 undefined on input line 624.
+
+
+LaTeX Warning: Reference `K2P_model' on page 94 undefined on input line 639.
+
+[94]
+
+LaTeX Warning: Reference `evolDist' on page 95 undefined on input line 670.
+
+
+Package natbib Warning: Citation `V59' on page 95 undefined on input line 681.
+
+
+Package natbib Warning: Citation `Songhori2019' on page 95 undefined on input l
+ine 681.
+
+
+LaTeX Warning: Reference `privProtocol' on page 95 undefined on input line 687.
+
+
+
+LaTeX Warning: Reference `Functionality' on page 95 undefined on input line 687
+.
+
+
+LaTeX Warning: Reference `def:security' on page 95 undefined on input line 687.
+
+
+[95]
+
+LaTeX Warning: Reference `fig:BBCS_Transfer' on page 96 undefined on input line
+ 717.
+
+
+Package natbib Warning: Citation `FS09' on page 96 undefined on input line 722.
+
+
+
+Package natbib Warning: Citation `DFL+09' on page 96 undefined on input line 72
+2.
+
+
+Package natbib Warning: Citation `FS09' on page 96 undefined on input line 722.
+
+
+
+Package natbib Warning: Citation `Lindell2008' on page 96 undefined on input li
+ne 722.
+
+[96]
+
+LaTeX Warning: Reference `firstlemma' on page 97 undefined on input line 726.
+
+
+LaTeX Warning: Reference `secondlemma' on page 97 undefined on input line 726.
+
+
+LaTeX Warning: Reference `compositionthm' on page 97 undefined on input line 72
+6.
+
+
+Package natbib Warning: Citation `Evans2018' on page 97 undefined on input line
+ 728.
+
+
+LaTeX Warning: Reference `privProtocol' on page 97 undefined on input line 743.
+
+
+[97]
+
+Package natbib Warning: Citation `Goldreich87' on page 98 undefined on input li
+ne 757.
+
+
+LaTeX Warning: Reference `quantumTechIntegQOT' on page 98 undefined on input li
+ne 759.
+
+
+LaTeX Warning: Reference `table:complexity' on page 98 undefined on input line 
+770.
+
+
+Package natbib Warning: Citation `SPM21' on page 98 undefined on input line 770
+.
+
+
 Underfull \vbox (badness 2644) has occurred while \output is active []
 
  [98]
@@ -1676,42 +4065,134 @@ Overfull \hbox (1.29976pt too wide) in paragraph at lines 807--808
 ntum-assisted and classical-
  []
 
+
+Package natbib Warning: Citation `ALSZ13' on page 99 undefined on input line 80
+9.
+
+
+LaTeX Warning: Reference `compAnalysis' on page 99 undefined on input line 809.
+
+
+
+LaTeX Warning: Reference `table:phylo_tree_complexity' on page 99 undefined on 
+input line 809.
+
 [99]
+
+Package natbib Warning: Citation `YPT18' on page 100 undefined on input line 83
+1.
+
+
+Package natbib Warning: Citation `IDQ' on page 100 undefined on input line 831.
+
+
+
+Package natbib Warning: Citation `C15' on page 100 undefined on input line 853.
+
+
+
+LaTeX Warning: Reference `fig:BBCS_Transfer-optimized' on page 100 undefined on
+ input line 853.
+
+
+LaTeX Warning: Reference `smcPhylo' on page 100 undefined on input line 853.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [100]
-[101] [102]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2181, 395.3169pt x 271.
-91588pt>
+
+LaTeX Warning: Reference `useCase' on page 101 undefined on input line 863.
+
+
+Package natbib Warning: Citation `GISAID' on page 101 undefined on input line 8
+67.
+
+
+Package natbib Warning: Citation `MPL19' on page 101 undefined on input line 86
+7.
+
+[101]
+
+LaTeX Warning: Reference `table:Com_JK_bool_circ' on page 102 undefined on inpu
+t line 872.
+
+
+LaTeX Warning: Reference `table:Com_JK_bool_circ' on page 102 undefined on inpu
+t line 872.
+
+
+LaTeX Warning: Reference `appendix:appendixA' on page 102 undefined on input li
+ne 872.
+
+
+LaTeX Warning: Reference `table:classical_benchmark' on page 102 undefined on i
+nput line 903.
+
+
+LaTeX Warning: Reference `table:quantum_benchmark' on page 102 undefined on inp
+ut line 903.
+
+[102]
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=980, 395.3169pt x 271.9
+1588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
 <use Chapter_PrivatePhylogeneticTrees/total_running.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 944.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2187, 395.3169pt x 267.94102pt
->
+
+
+LaTeX Warning: Reference `fig:total_running_time' on page 103 undefined on inpu
+t line 949.
+
+
+LaTeX Warning: Reference `quantumTechIntegQOT' on page 103 undefined on input l
+ine 949.
+
+
+Package natbib Warning: Citation `C15' on page 103 undefined on input line 949.
+
+
+
+Package natbib Warning: Citation `SPM21' on page 103 undefined on input line 94
+9.
+
+
+LaTeX Warning: Reference `fig:okms' on page 103 undefined on input line 951.
+
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=981, 395.3169pt x 267.94102pt>
+
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 955.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
- [103]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2192, 395.3169
-pt x 287.99596pt>
+[103]
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=989, 395.3169p
+t x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
 <use Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/proportion_in_overhea
 d.png  used on input line 962.
 (pdftex.def)             Requested size: 316.25394pt x 230.39706pt.
- [104 <./Chapter_PrivatePhylogeneticTrees/total_running.png>]
-[105 <./Chapter_PrivatePhylogeneticTrees/c-qSMC.png> <./Chapter_PrivatePhylogen
-eticTrees/proportion_in_overhead.png>]) [106]
+
+
+LaTeX Warning: Reference `table:complexity' on page 104 undefined on input line
+ 967.
+
+
+LaTeX Warning: Reference `fig:overhead' on page 104 undefined on input line 969
+.
+
+[104 <./Chapter_PrivatePhylogeneticTrees/total_running.png>] [105 <./Chapter_Pr
+ivatePhylogeneticTrees/c-qSMC.png> <./Chapter_PrivatePhylogeneticTrees/proporti
+on_in_overhead.png>]) [106]
 \openout2 = `Chapter_Conclusion/Chapter_Conclusion.aux'.
 
-
-(./Chapter_Conclusion/Chapter_Conclusion.tex
+ (./Chapter_Conclusion/Chapter_Conclusion.tex
 Chapter 7.
 ) [107
 
@@ -1726,6 +4207,17 @@ Chapter 7.
 
 ]
 Appendix A.
+
+LaTeX Warning: Reference `fig:jc_cbmc-gc' on page 109 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `W12' on page 109 undefined on input line 16.
+
+
+LaTeX Warning: Reference `fig:jc_cbmc-gc' on page 109 undefined on input line 1
+6.
+
 
 Underfull \vbox (badness 1178) has occurred while \output is active []
 
@@ -1768,12 +4260,23 @@ viousTransfer.aux)
 ation.aux)
 (./Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.aux)
 (./Chapter_Conclusion/Chapter_Conclusion.aux)
-(./Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux))
+(./Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
-Package rerunfilecheck Info: File `Chrysis.out' has not changed.
-(rerunfilecheck)             Checksum: 7457762EC0F9426D6D439F5A7A30A1D3;5847.
 
+
+Package rerunfilecheck Warning: File `Chrysis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Chrysis.out':
+(rerunfilecheck)             Before: 4698C0D1B95832E90AFBDB155C7CD5FB;688
+(rerunfilecheck)             After:  7457762EC0F9426D6D439F5A7A30A1D3;5847.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -1782,18 +4285,18 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 29045 strings out of 480608
- 563954 string characters out of 5903629
- 1165531 words of memory out of 5000000
- 43478 multiletter control sequences out of 15000+600000
+ 28960 strings out of 480608
+ 561687 string characters out of 5903629
+ 1142265 words of memory out of 5000000
+ 43407 multiletter control sequences out of 15000+600000
  563311 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,15n,105p,2177b,1392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,15n,105p,2177b,1361s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
@@ -1836,10 +4339,10 @@ s/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (156 pages, 5637772 bytes).
+Output written on Chrysis.pdf (154 pages, 5601936 bytes).
 PDF statistics:
- 2715 PDF objects out of 2984 (max. 8388607)
- 2422 compressed objects within 25 object streams
- 776 named destinations out of 1000 (max. 500000)
- 839 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1736 PDF objects out of 2073 (max. 8388607)
+ 1470 compressed objects within 15 object streams
+ 774 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

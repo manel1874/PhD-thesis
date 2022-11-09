@@ -7,7 +7,7 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces VOLE functionality.\relax }}{23}{figure.caption.23}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces BBCS OT protocol.\relax }}{29}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces BBCS OT protocol in the $\mathcal {F}_{\textbf {COM}}-$hybrid model.\relax }}{31}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces BBCS OT protocol in the $\mathcal {F}_{\textbf {COM}}-$hybrid model.\relax }}{32}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces BBCS OT protocol in the bounded-quantum-storage model.\relax }}{35}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces BBCS OT protocol in the noisy-quantum-storage model.\relax }}{39}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Alice faked-state attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{41}{figure.caption.30}%
@@ -27,7 +27,7 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Example of rooted phylogenetic tree.\relax }}{87}{figure.caption.57}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of the $A^a_d$ network structure.\relax }}{88}{figure.caption.58}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Overview of the integration of the QOKD service and the CBMC-GC tool in the Yao protocol.\relax }}{90}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt {12-19} in Figure\nobreakspace {}\ref {fig:jc_cbmc-gc} in Appendix\nobreakspace {}\ref {appendix:appendixA}.\relax }}{94}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt {12-19} in Figure\nobreakspace {}\ref {fig:jc_cbmc-gc} in Appendix\nobreakspace {}\ref {appendix:appendixA}.\relax }}{93}{figure.caption.63}%
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{104}{figure.caption.77}%
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{105}{figure.caption.78}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{105}{figure.caption.79}%
