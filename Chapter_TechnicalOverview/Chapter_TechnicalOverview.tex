@@ -100,7 +100,7 @@ For an integer $d\geq 2$ and $\mu \in [0, 1-\frac{1}{d}]$,
 
 To prove the security of protocols is more important to understand the worst-case scenario instead of the average behaviour. Therefore, standard binary entropy style definitions are not enough for securing protocols and we need a new one. This is achieved with min-entropy. Classically, for a finite random variable $X$, where $P(X=x) = p_x$, the min-entropy is given by the following expression:
 $$H_{\min}(X) = -\log \max p_x.$$
-Operationally, this gives the probability of guessing the element drawn from $X$ when choosing the element $x$ with maximum probability,, i.e. $P_{\text{guess}} = \max p_x$. We can extend this definition to cq-states $\rho_{XB}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B)$ as given in definition~\ref{def:cqentropy}.
+Operationally, this gives the probability of guessing the element drawn from $X$ when choosing the element $x$ with maximum probability,, i.e. $P_{\text{guess}} = \max p_x$. We can extend this definition to cq-states $\rho_{XB}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B)$ as given by Definition~\ref{def:cqentropy}.
 
 \begin{definition}
 \label{def:cqentropy}
@@ -111,7 +111,7 @@ $$P_{\text{guess}}(X|B) = \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{x}^B\ri
 where the maximization is taken over all POVMS $\left\{ M_x \geq 0 : \sum_x M_x = \mathds{1} \right\}$.
 \end{definition}
 
-In definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ has the operational meaning of being the probability of guessing $x$ having access to system $B$. Next, we present Lemma~\ref{lemma:bijectivefunction} that states the effect of applying a fixed bijective function to the classical subsystem of a cq-state. This Lemma will be important to prove the security of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{QOLE_chapter}.
+In Definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ has the operational meaning of being the probability of guessing $x$ having access to system $B$. Next, we present Lemma~\ref{lemma:bijectivefunction} that states how min-entropy changes when applying a fixed bijective function to the classical subsystem of a cq-state. This Lemma will be important to prove the security of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{QOLE_chapter}.
 
 \begin{lemma}
 Let $\rho_{XB} \in \mathcal{P}(\mathcal{H}_{X}\otimes \mathcal{H}_B)$ be a cq-state and let $f:\mathcal{X} \rightarrow \mathcal{X} $ be a fixed bijective function. Then,
@@ -165,11 +165,11 @@ and
 $$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
 \end{definition}
 
-It will be crucial in the security proof of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{QOLE_chapter} to understand how min-entropy changes when a completely positive (CP) map is applied. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{A}| B) \geq H_{\min}(A| B)$. However, this result is not enough to achieve useful bounds on min-entropy. To achieve a meaningful bound for certain operators $\mathcal{M}$, we can use Theorem~\ref{thm:entaglementSamplingResult} along with some other results (Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}). Note that, for readability purposes, the theorem is rewritten to take into account the notation presented in chapter~\ref{QOLE_chapter}.
+It will be crucial in the security proof of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{QOLE_chapter} to understand how min-entropy changes when a completely positive (CP) map is applied. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result is not enough to achieve useful min-entropy bounds. To achieve a meaningful bound for certain operators $\mathcal{M}$, we can use Theorem~\ref{thm:entaglementSamplingResult} along with some other two results (Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}). Note that, for readability purposes, the theorem uses the notation presented in Chapter~\ref{QOLE_chapter}.
 
 \begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
 \label{thm:entaglementSamplingResult}
-Let $\mathbf{X}$ denote a system with $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. As above, let $\sigma_{\mathbf{X} E}$ be the ideal quantum state to which the system collapsed after Alice's test measurements.  Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, we have 
+Let $\mathbf{X}$ denote a system with $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, and $\mathcal{M}(\sigma_{\mathbf{X}E}) = \sigma_{\mathbf{F}\mathbf{Y}E}$ we have 
 
 \begin{equation}
     2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + (\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n,
@@ -184,12 +184,17 @@ If we further condition on a general quantum state $\sigma_B\in\mathcal{P}(\math
 \end{equation*}
 \end{lemma}
 
-Introduce and explain when the map $\mathcal{M}$ is trace preserving.
+It is interesting to note that when $\mathcal{M}$ is trace preserving, we have,
+
+$$2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} = 2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E}}}.$$
+This follows from the definition of the collision entropy and the fact that $\Tr_{\bm{F} \bm{Y}}\left[ \mathcal{M}(\sigma_{\bm{X} E}) \right] = \sigma_{E}$ \citep{Dupuis2015}. 
+
+%% This definition comes from the fact that a a map M is (\mu-)trace-preserving iff M^\dagger is (\mu-)unital
 
 % Talk a bit about collision entropy. Look at the references here https://arxiv.org/pdf/0807.1338.pdf
 
 
-Now, we need a way to relate min-entropy and collision entropy. This is done through the following two Lemmas.
+Now, we need a way to relate min-entropy and collision entropy to have useful bounds for min-entropy. This is done through the following two Lemmas.
 
 \begin{lemma}[Lemma 17, \cite{this}]
 \label{lemma:quantumrelation}
@@ -207,14 +212,13 @@ $$H_{\min}(X|B')_{\rho} \leq H_2(X|B')_{\rho} \leq 2 H_{\min}(X|B')_{\rho}.$$
 
 \subsection{Two-universal functions}
 
-We start by defining a particular set of functions that will be useful to amplify the privacy of Alice's input and output elements. These allow to extract one OLE out of several weak OLE under certain conditions.
-
+We start by defining a particular set of functions that are usually used to amplify the privacy of the parties' input and output elements. 
 
 \begin{definition}[$\delta-$almost two-universal hash family; two-universal hash family]
-A family, $\mathcal{F}$, of functions, $h$, with domain $D$ and range $R$ is called a \textit{$\delta-$almost two-universal hash family} if for any two distinct elements $w,w'\in D$ and for $h$ chosen at random from $\mathcal{F}$, the probability of a \textit{collision} $h(w)=h(w')$ is at most $\delta$. In the special case that $\delta=1/|R|$, where $|R|$ is the size of the range $R$, the family is called \textit{two-universal}. 
+A family, $\mathfrak{G}$, of functions, $g$, with domain $D$ and range $R$ is called a $\delta-$almost two-universal hash family if for any two distinct elements $w,w'\in D$ and for $g$ chosen at random from $\mathfrak{G}$, the probability of a \textit{collision} $g(w)=g(w')$ is at most $\delta$. In the special case that $\delta=1/|R|$, where $|R|$ is the size of the range $R$, the family is called \textit{two-universal}. 
 \end{definition}
 
-Now, we define a particular two-universal hash family that preserves the structure of the OLE input and output while keeping its privacy amplification guarantees. This family is called Multi-linear Modular Hashing as it is based on the modular inner product of vectors \cite{HK97}.
+Now, we present a particular two-universal hash family that preserves the structure of the OLE input and output while keeping its privacy amplification guarantees. This family is called Multi-linear Modular Hashing as it is based on the modular inner product of vectors \cite{HK97}.
 \begin{definition}[Definition 2, \cite{HK97}]
 Let $d$ be a prime and let $n$ be an integer $n>0$. Define a family MMH$^*$ (Multi-linear Modular Hashing) of functions from $\mathbb{Z}_d^n$ to $\mathbb{Z}_d$ as follows
 

@@ -1,9 +1,9 @@
 \contentsline {section}{Abstract}{iii}{chapter*.1}%
 \contentsline {section}{Resumo}{v}{chapter*.2}%
 \contentsline {section}{Acknowledgements}{vii}{chapter*.3}%
-\contentsline {section}{List of Figures}{xiii}{section*.6}%
-\contentsline {section}{List of Tables}{xv}{section*.8}%
-\contentsline {section}{List of Abbreviations}{xvii}{section*.10}%
+\contentsline {section}{List of Figures}{xv}{section*.6}%
+\contentsline {section}{List of Tables}{xvii}{section*.8}%
+\contentsline {section}{List of Abbreviations}{xix}{section*.10}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Technical overview}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}%
@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.2.2}BBCS in the $\mathcal {F}_{\textbf {COM}}-$hybrid model}{31}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}BBCS in the limited-quantum-storage model}{34}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Bounded-quantum-storage model}{35}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{37}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{36}{subsection.3.2.5}%
 \contentsline {subsection}{\numberline {3.2.6}Experimental attacks}{38}{subsection.3.2.6}%
 \contentsline {subsubsection}{QOT attacks}{40}{section*.29}%
 \contentsline {subsubsection}{Countermeasures}{42}{section*.33}%
@@ -83,7 +83,7 @@
 \contentsline {section}{\numberline {6.7}System security}{92}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Private computation of distances}{92}{subsection.6.7.1}%
 \contentsline {subsubsection}{Hamming distance}{92}{section*.62}%
-\contentsline {subsubsection}{Jukes-Cantor}{94}{section*.64}%
+\contentsline {subsubsection}{Jukes-Cantor}{93}{section*.64}%
 \contentsline {subsubsection}{Kimura}{94}{section*.65}%
 \contentsline {subsubsection}{F84 and LogDet}{95}{section*.66}%
 \contentsline {subsection}{\numberline {6.7.2}Private computation of phylogenetic trees}{95}{subsection.6.7.2}%
