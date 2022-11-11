@@ -13,321 +13,9 @@ In this chapter, the basic mathematical and information-theoretical concepts use
 
 We denote by $\gcd (a,b), a,b\in\mathbb{Z}$ the greatest common divisor between integers $a$ and $b$. $\mathbb{Z}_q$ denotes the set of integers $a \mod q$. $\mathbb{Z}^*_q$ is the set of integers $a\in\mathbb{Z}_q$ that are coprime with $q$, i.e. $\gcd (a,q) = 1$. For $q$ prime, $\mathbb{Z}^*_q$ forms a multiplicative group of order $q-1$ and $\mathbb{Z}_q$ a finite field of order $q$. A generator $g$ of some multiplicative group $\mathbb{G}$ is an element in $\mathbb{G}$ such that $\forall\,a\in\mathbb{G}, \exists r\, :\, g^r = a$. The discrete logarithm base $g$ of some element $a\in\mathbb{G}$, denoted by $\log_g a$, is the power $r$ of $g$ such that $g^r = a$. 
 
-We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{\$}I$ to describe a situation where an element $s$ is drawn uniformly at random from the set $I$. Vectors $\bm{v}= (v_1, \ldots , v_n)$  are denoted in bold. Given a set $J$, $\bm{v}_J$ denotes the subvector of $\bm{v}$ restricted to the indices $i \in J$. Let $\mathbb{Z}_q$ denote the finite field with order $q$. Then, for $m\in \mathbb{Z}_q$, $[m]$ is the ordered set $\{1, 2, \ldots, m\}$. Also, for $m, n\in \mathbb{Z}_q$ such that $m<n$, $[m, n] = \{m, m+1, \dots, n-1, n\}$. We use the big-$\mathcal{O}$ notation to denote the fastest-growing term of the number of operations with respect to some security parameter $n$.
+We use $|I|$ to denote the size of a set $I$. We use the notation $s\leftarrow_{\$}I$ to describe a situation where an element $s$ is drawn uniformly at random from the set $I$. Vectors $\bm{v}= (v_1, \ldots , v_n)$  are denoted in bold. Given a set $J$, $\bm{v}_{|J}$ denotes the subvector of $\bm{v}$ restricted to the indices $i \in J$. Let $\mathbb{Z}_q$ denote the finite field with order $q$. Then, for $m\in \mathbb{Z}_q$, $[m]$ is the ordered set $\{1, 2, \ldots, m\}$. Also, for $m, n\in \mathbb{Z}_q$ such that $m<n$, $[m, n] = \{m, m+1, \dots, n-1, n\}$. For $\bm{x},\bm{y}\in\mathbb{Z}^n_q$, $r_H(\bm{x}, \bm{y})=d_H(\bm{x}, \bm{y})/n$ is the relative Hamming distance, with the Hamming distance given by $d_H(\bm{x}, \bm{y}) = |\{ i : x_i \neq y_i \}|$.
 
-A negligible function $\mu(n)$ is a function such that $\mu(n) < 1/p(n)$ for some polynomial $p(n)$ and sufficiently large $n$.
-
-{\cv Define Hamming distance and relative Hamming distance.}
-
-
-%********************************** %Second Section  **************************************
-\section{Quantum information}
-
-Quantum information theory studies the implications of using quantum systems as the medium of information. Consequently, the information carriers are governed by the laws of quantum mechanics, allowing to exploit properties not present amid classical methods. In this section, we present the basic elements of quantum information that will be used by the presented quantum protocols and the corresponding security proofs.
-
-As common practice in quantum information theory, a quantum system $A$ is described by some Hilbert space $\mathcal{H}_A$. In this thesis, we will only consider finite-dimensional Hilbert spaces, i.e. $\dim \mathcal{H}_A = d < \inf$. So, we can identify $\mathcal{H}_A \cong \mathbb{C}^d \cong \mathcal{H}^{*}_A$, where $\mathcal{H}^{*}_A$ is the corresponding dual space. We use the Dirac bra-ket notation to describe the states in a physical quantum system $A$. So, a quantum (pure) state is described by a normalized vector $\ket{\psi}_A\in\mathcal{H}_A$ and its dual vector as $\bra{\psi}_A\in\mathcal{H}^{*}_A$. In case it is clear from context, we may omit to which Hilbert space the state belongs to. Since we have the isomorphism $\mathcal{H}_A \cong \mathbb{C}^d$, we can identify the standard basis of $\mathbb{C}^d$ to the standard basis (also known as computational basis) of $\mathcal{H}$, i.e. $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. Also, given different subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$, the joint system can be described by their tensor product, i.e. $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are described as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
-
-We can generate quantum pure states $\ket{\psi_i}\in \mathcal{H}$ according to some probability distribution $\{p_i\}$. This situation is described by a density operator given by $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly called a mixed state. The density operators are positive semi-definite Hermitian operators with unitary trace, i.e. $\rho \geq 0$ and $\tr \rho = 1$. We denote by $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$  and $\mathcal{P}(\mathcal{H})$ the sets of Hermitian, positive-semi definite and density operators on $\mathcal{H}$, respectively.
-A mixed state is classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in\mathcal{X}} P_X(x)\ketbra{x}$, where $\mathcal{X}$ is some finite set and $P_X$ is a probability distribution over $\mathcal{X}$. In particular, we denote the uniform distribution over $\mathcal{X}$ as $\tau_{\mathcal{X}} = \frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$, where $|\mathcal{X}|$ is the size of $\mathcal{X}$. The identity operator is denoted by $\mathds{1}$. 
-
-{\cv introduce classical quantum state (cq-state)}
-
-{\cv Introduce POVMs}
-
-
-\subsection{Trace distance}
-
-To prove the security of quantum protocols, it is fundamental to have a procedure that allows to distinguish quantum states. Luckly, there is a useful metric that expresses how well two quantum states $\sigma, \rho \in \mathcal{P}(\mathcal{H})$ can be distinguished by any (potentially inefficient) procedure. This metric is commonly called \textit{trace distance} and is defined as \cite{U17}
-\begin{equation*}
-    \delta(\rho,\sigma):=\frac{1}{2}||\rho-\sigma||_1,
-\end{equation*}
-where $||\cdot||_1$ is the $1-$Schatten norm in the space of bounded operators acting on a Hilbert space. Its name comes from the fact that we can write it using the trace operator as follows
-\begin{equation*}
-    ||\rho-\sigma||_1=\Tr\left\{\sqrt{(\rho-\sigma)^\dagger(\rho-\sigma)}\right\}.
-\end{equation*}
-
-In this work, we will be working with completely positive trace preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being trace preserving) and it maps positive operators to positive operators (hence being completely positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in chapter~\ref{QOLE_chapter} (quantum oblivious linear evaluation protocol). 
-
-It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarized in Lemma~\ref{lemma:trace_distance}.
-
-
-
-%{\cv Useful links to support this: \href{https://en.wikipedia.org/wiki/Quantum_operation#Kraus_operators}{wiki} and \href{https://courses.cs.ut.ee/all/MTAT.07.024/2018_fall/uploads/notes.pdf}{Unruh lectures} on pag 16 (def of quantum operations) and Lemma 7}
-
-\begin{lemma}[Lemma 7, \cite{U17}]
-
-\begin{enumerate}
-
-    The trace distance has the following properties:
-
-    \item For any CPTP map $\mathcal{E}$ and any $\sigma, \rho \in \mathcal{P}(\mathcal{H})$ we have that
-    $$\delta(\mathcal{E}(\sigma), \mathcal{E}(\rho)) \leq \delta(\sigma, \rho)$$
-    
-    \item Let $\sigma, \sigma' \in \mathcal{P}(\mathcal{H})$ and $\rho \in \mathcal{P}(\mathcal{H}')$. Then,
-    $$\delta(\sigma\otimes \rho, \sigma'\otimes \rho) = \delta(\sigma, \sigma')$$
-\end{enumerate}
-
-\label{lemma:trace_distance}
-\end{lemma}
-
-
-\subsection{Entropy}
-
-How unpredictable is some random variable? How much information do we gain when we observe some system? To answer these questions, several measures under the name of entropy were developed. The most simple classical entropy measure was developed by Shannon \cite{this}. Shannon found a way to express the amount of information a random variable has. Intuitivelly, this should express the following behaviour: when some event is more predictable, it conveys less information. Indeed, the more scandalous and unpreditable the news are, the more informative they are. Shannon started by proposing the following function to describe the amount of information an event $A$ has:
-$$I(A) = - \log \left( P(A) \right),$$
-where $P(A)$ is the probability of the event $A$. From this, he defined the entropy to be the average information value of all the possible events. More formally, for a discrete random variable $X$
-$$H(X) = \mathbb{E}\left[ I(X) \right].$$
-
-In the special case where we consider a distribution $P(X)$ over $\left\{0,1\right\}$ that selects $1$ with probability $p$ and $0$ with probability $1-p$, we have the binary entropy given as
-$$H(X) = -p \log_2 p - (1-p)\log_2(1-p).$$
-
-Throughout our analysis, we will also use several times the so-called $d-$ary entropy function, a generalization of the standard binary entropy function. However, this entropy measure does not have such an operational meaning such as the binary entropy.
-
-\begin{definition}
-For $d\geq 2$, the \textit{d-ary entropy function} $h_d : [0,1]\rightarrow\mathbb{R}$ is given by
-$$h_d(x) = x \log_d(d-1) - x \log_d x - (1-x) \log_d (1-x).$$
-\label{def:q-ary}
-\end{definition}
-The $d-$ary entropy is specially useful to bound the size of an important object in coding theory, the Hamming ball. The Hamming ball with radius $\mu$ centered at some point $\bm{r}$ is defined to be the set of vectors $\bm{z}$ at a distance $\mu$ from $\bm{r}$, when the distance is given by the Hamming distance $d_H$. So, we have the following Lemma.
-
-\begin{lemma}[Lemma 5, \cite{V10}]
-\label{lemma:hammingBall}
-For an integer $d\geq 2$ and $\mu \in [0, 1-\frac{1}{d}]$,
-\begin{equation*}
-    |\{ \boldsymbol{z}\in \mathbb{Z}_d^{n}: d_H(\boldsymbol{z}, \boldsymbol{r})\leq \mu n \}| \leq d^{h_d(\mu)n}.
-\end{equation*}
-\end{lemma} 
-
-To prove the security of protocols is more important to understand the worst-case scenario instead of the average behaviour. Therefore, standard binary entropy style definitions are not enough for securing protocols and we need a new one. This is achieved with min-entropy. Classically, for a finite random variable $X$, where $P(X=x) = p_x$, the min-entropy is given by the following expression:
-$$H_{\min}(X) = -\log \max p_x.$$
-Operationally, this gives the probability of guessing the element drawn from $X$ when choosing the element $x$ with maximum probability,, i.e. $P_{\text{guess}} = \max p_x$. We can extend this definition to cq-states $\rho_{XB}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B)$ as given by Definition~\ref{def:cqentropy}.
-
-\begin{definition}
-\label{def:cqentropy}
-Let $\rho_{X B}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B})$ be a cq-state. The conditional min-entropy is given by
-$$H_{\min}(X|B)_{\rho} = -\log P_{\text{guess}}(X|B),$$
-where $P_{\text{guess}}(X|B)$ is given by
-$$P_{\text{guess}}(X|B) = \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{x}^B\right],$$
-where the maximization is taken over all POVMS $\left\{ M_x \geq 0 : \sum_x M_x = \mathds{1} \right\}$.
-\end{definition}
-
-In Definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ has the operational meaning of being the probability of guessing $x$ having access to system $B$. Next, we present Lemma~\ref{lemma:bijectivefunction} that states how min-entropy changes when applying a fixed bijective function to the classical subsystem of a cq-state. This Lemma will be important to prove the security of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{QOLE_chapter}.
-
-\begin{lemma}
-Let $\rho_{XB} \in \mathcal{P}(\mathcal{H}_{X}\otimes \mathcal{H}_B)$ be a cq-state and let $f:\mathcal{X} \rightarrow \mathcal{X} $ be a fixed bijective function. Then,
-
-$$H_{\min}(X|B)_{\rho} \leq H_{\min}(f(X)|B)_{\rho}.$$
-\label{lemma:bijectivefunction}
-\end{lemma}
-\begin{proof}
-Consider the unitary operator,
-
-$$U = \sum_x \ketbra{f(x)}{x}.$$ 
-
-We check that $U$ is indeed unitary:
-
-\begin{equation*}
-U U^{\dagger} = \left(\sum_x \ketbra{f(x)}{x}\right)\left(\sum_{x'} \ketbra{x'}{f(x')}\right) 
-= \sum_x \ketbra{f(x)} = I,
-\end{equation*}
-where in the last step we used the fact that the function $f$ is a bijection. The same holds for $U^{\dagger}U = I$.
-
-Now, observe the following,
-
-\begin{eqnarray*}
-H_{\min}(f(X)|B) &=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{f(x)}^B\right]\\
-&=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x U \rho_{x}^B U^{\dagger}\right]\\
-&=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho_{x}^B \right]. 
-\end{eqnarray*}
-
-Note that $\left\{ N_x \right\}_x= \left\{U^{\dagger} M_x U\right\}_x$ is also a POVM: they are all positive semidefinite operators and it sums up to unity. Therefore, we have that $\left\{U^{\dagger} M_x U\right\}_x$ can only decrease the space of possible POVMs. So, 
-
-$$\max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho_{x}^B \right] \leq \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho_{x}^B \right].$$
-
-This means that, 
-
-\begin{equation*}
-H_{\min}(f(X)|B) \geq -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho_{x}^B \right] = H_{\min}(X|B).
-\end{equation*}
-\end{proof}
-
-%In the first (quantum) part of the OLE protocol, Alice and Bob generate several random OLE instances based on expression~\eqref{eq:main_relation} and use them as a resource to generate one final OLE. However, by using entanglement, Bob is allowed to have some limited amount of information on Alice's outputs, i.e. on Alice functions $(a_i, b_i)_{i\in [n]}$. To understand the impact this have on the security of the protocol, we use the concept of \textit{min-entropy}. This quantifies the amount of information Bob has about Alice system $A$ given some (possibly quantum) side information $B'$. This measure of uncertainty has an important operational meaning when Alice's system is classical. We have that $H_{\text{min}}(A|B') = - \log P_{\text{guess}}(A|B')$, where $P_{\text{guess}}(A|B')$ is the probability that of Bob guessing Alice's classical state $A$ maximized over any possible measurement on his state $B'$. Throughout this work, $A$ will encode Alice's functions with space denoted by $\mathcal{G}^n$. We present the formal definition of min-entropy below.
-
-The conditional min-entropy can be generalized to the fully quantum case where both systems are quantum (Definition~\ref{def:conditionalquantumminentropy}).
-
-\begin{definition}
-\label{def:conditionalquantumminentropy}
-Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B')$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_B')$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
-
-$$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \}$$
-and 
-
-$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
-\end{definition}
-
-It will be crucial in the security proof of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{QOLE_chapter} to understand how min-entropy changes when a completely positive (CP) map is applied. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result is not enough to achieve useful min-entropy bounds. To achieve a meaningful bound for certain operators $\mathcal{M}$, we can use Theorem~\ref{thm:entaglementSamplingResult} along with some other two results (Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}). Note that, for readability purposes, the theorem uses the notation presented in Chapter~\ref{QOLE_chapter}.
-
-\begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
-\label{thm:entaglementSamplingResult}
-Let $\mathbf{X}$ denote a system with $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, and $\mathcal{M}(\sigma_{\mathbf{X}E}) = \sigma_{\mathbf{F}\mathbf{Y}E}$ we have 
-
-\begin{equation}
-    2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + (\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n,
-\end{equation}
- where, in general, for a (not necessarily normalized) quantum state $\rho_{AB}\in \mathcal{P}(\mathcal{H}_A\otimes\mathcal{H}_B)$, $\text{H}_2(A|B)$   is the so-called \textit{collision entropy}~\cite{R06}, given as 
-\begin{equation*} 
-    \text{H}_2(A|B)_{\rho_{AB}}=-\log \left(\Tr{\left(\rho_{B}^{-1/4}\rho_{AB}\rho_B^{-1/4}\right)^2}\right).
-\end{equation*}
-If we further condition on a general quantum state $\sigma_B\in\mathcal{P}(\mathcal{H}_B)$, we have 
-\begin{equation*}
-    \text{H}_2(A|B)_{\rho_{AB}|\sigma_B}=-\log \left(\Tr{\left(\sigma_{B}^{-1/4}\rho_{AB}\sigma_B^{-1/4}\right)^2}\right).
-\end{equation*}
-\end{lemma}
-
-It is interesting to note that when $\mathcal{M}$ is trace preserving, we have,
-
-$$2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} = 2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E}}}.$$
-This follows from the definition of the collision entropy and the fact that $\Tr_{\bm{F} \bm{Y}}\left[ \mathcal{M}(\sigma_{\bm{X} E}) \right] = \sigma_{E}$ \citep{Dupuis2015}. 
-
-%% This definition comes from the fact that a a map M is (\mu-)trace-preserving iff M^\dagger is (\mu-)unital
-
-% Talk a bit about collision entropy. Look at the references here https://arxiv.org/pdf/0807.1338.pdf
-
-
-Now, we need a way to relate min-entropy and collision entropy to have useful bounds for min-entropy. This is done through the following two Lemmas.
-
-\begin{lemma}[Lemma 17, \cite{this}]
-\label{lemma:quantumrelation}
-Let $\rho_{A B'}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B'})$ and $d_A = \dim\mathcal{H}_A$. Then
-$$H_{\min}(A|B')_{\rho} \leq H_2(A|B')_{\rho} \leq 2 H_{\min}(A|B')_{\rho} + \log d_A.$$
-\end{lemma}
-
-\begin{lemma}[Lemma 18, \cite{this}]
-\label{lemma:classicalquantumrelation}
-Let $\rho_{X B'}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B'})$ be a cq-state. Then
-$$H_{\min}(X|B')_{\rho} \leq H_2(X|B')_{\rho} \leq 2 H_{\min}(X|B')_{\rho}.$$
-\end{lemma}
-
-
-
-\subsection{Two-universal functions}
-
-We start by defining a particular set of functions that are usually used to amplify the privacy of the parties' input and output elements. 
-
-\begin{definition}[$\delta-$almost two-universal hash family; two-universal hash family]
-A family, $\mathfrak{G}$, of functions, $g$, with domain $D$ and range $R$ is called a $\delta-$almost two-universal hash family if for any two distinct elements $w,w'\in D$ and for $g$ chosen at random from $\mathfrak{G}$, the probability of a \textit{collision} $g(w)=g(w')$ is at most $\delta$. In the special case that $\delta=1/|R|$, where $|R|$ is the size of the range $R$, the family is called \textit{two-universal}. 
-\end{definition}
-
-Now, we present a particular two-universal hash family that preserves the structure of the OLE input and output while keeping its privacy amplification guarantees. This family is called Multi-linear Modular Hashing as it is based on the modular inner product of vectors \cite{HK97}.
-\begin{definition}[Definition 2, \cite{HK97}]
-Let $d$ be a prime and let $n$ be an integer $n>0$. Define a family MMH$^*$ (Multi-linear Modular Hashing) of functions from $\mathbb{Z}_d^n$ to $\mathbb{Z}_d$ as follows
-
-$$\text{MMH}^*:= \{ g_x : \mathbb{Z}_d^n\rightarrow \mathbb{Z}_d \, | \, x\in \mathbb{Z}_d^n \}$$
-where the functions $g_x$ are defined for any $x = (x_1,\ldots,x_n)$, $m = (m_1,\ldots, m_n) \in \mathbb{Z}_d^n$
-
-$$g_x(m) = x\cdot m \mod d = \sum x_i\, m_i \mod d$$
-\label{def:MMH}
-\end{definition}
-
-
-
-\begin{theorem}[Theorem 3, \cite{HK97}]
-The family MMH$^*$ is two-universal.
-\end{theorem}
-In fact, Halevi and Krawczyk \cite{HK97} prove a stronger result, namely that the MMH$^*$ family is \textit{$\Delta-$universal}, which is more general than two-universal. For the sake of simplicity, we just present here this particular version of the theorem.
-
-Next, we state a crucial result that is used to prove the security of the quantum OLE protocol~\footnote{Here we present a multidimensional version of the Generalized Leftover Hash Lemma. This can be easily deduced by using Lemma 4 from Tomamichel et al. work \cite{TSSR11} with $d_A = d$.}. This ensures that, after applying a known function $f$ from a two-universal family to a random variable $X$, the resulting random variable $Z = f(X)$ is close to uniform conditioned on some (possibly quantum) side information $E$. It also describes how close $Z$ is to uniform with respect to the amount of information we have about $X$ conditioned on $E$, i.e. $H_\text{min}(X|E)$.
-
-\begin{lemma}[Generalized Leftover Hash Lemma]
-Let $X$ be a random variable, let $E$ be a quantum system, and let $\mathcal{F}$ be a two-universal family of hash functions from $X$ to $\mathbb{Z}_d$. Then, on average over the choices of $f$ from $\mathcal{F}$, the output $Z := f(X)$ is $\epsilon'$-close to uniform conditioned on $E$, where
-
-\begin{equation}
-  \epsilon' = \frac{1}{2}\sqrt{2^{\log d - H_\text{min}(X|E)}}.  
-\end{equation}
-Note that this is a special version of the Generalized Leftover Hash Lemma. Tomamichel et al. \cite{TSSR11} show its most general case for $\delta-$almost two-universal hash families. \label{lem:leftover}
-\end{lemma}
-
-
-%********************************** %Third Section  **************************************
-\section{Universal Composability}
-
-The Universal Composability (UC) framework was introduced by Canetti \cite{C20} in the classical setting and extended to the quantum setting by Unruh, and Ben-Or and Mayers \cite{Unruh04, BenOrMay04}(see also \cite{Unruh10, FS09}).  It renders strong composability guarantees as it ensures that the security of the protocol is independent of any external execution of the same or other protocols.  Both classical and quantum frameworks follow the same ideal-real world comparison structure and consider the same interactions between machines. The difference lies on the operations allowed by the quantum-UC framework, where  we are also allowed to store, transmit, and process  quantum states. 
-
-More specifically, the quantum-UC security of some protocol $\mathcal{\pi}$ is drawn by comparing two scenarios. A real scenario where  $\mathcal{\pi}$ is executed and an ideal scenario where an ideal functionality, $\mathcal{F}$,  that carries out the same task and is defined \textit{a priori}, is executed. The comparison is done by a special machine, called the \textit{environment}, $\mathcal{Z}$, that supervises the execution of both scenarios and has access to any external information (e.g. concurrent executions of the same or any other protocol). In the two-party case that we are considering, the structure of the machines present in both scenarios is as follows: The real scenario has the environment, $\mathcal{Z}$, the adversary, $Adv$, and the two parties Alice  and Bob, while the ideal scenario has the environment $\mathcal{Z}$, the simulator $\mathcal{S}$, the two parties Alice and Bob and the ideal functionality $\mathcal{F}$. 
-%Note that the adversary $Adv$ could be integrated inside the environment $\mathcal{Z}$, as $\mathcal{Z}$ has full control over $Adv$  \cite{Unruh10}, but for clarity, we keep them separated in the real scenario. 
-Informally, we say that the protocol $\mathcal{\pi}$ is quantum-UC secure if no environment $\mathcal{Z}$ can distinguish between the execution of $\mathcal{\pi}$ in the real scenario and  the execution of the  functionality $\mathcal{F}$ in the ideal scenario. Any possible attack of the adversary $Adv$ in the execution of $\mathcal{\pi}$ can be simulated by the simulator $\mathcal{S}$ in the ideal-world execution of $\mathcal{F}$, without any noticeable difference form the point-of-view of the environment $\mathcal{Z}$. Since the ideal functionality $\mathcal{F}$ is secure by definition, the real-world adversary is not able to extract any more information than what is allowed by the  $\mathcal{F}$. %We can see the structure of both scenarios in Figure~\ref{fig:realmodel} and \ref{fig:idealmodel} for the case where Alice is corrupted and the ideal functionality is the oblivious linear evaluation, $\mathcal{F}_{\textbf{OLE}}$. 
-
-Let us now see the formal definition. Let $\mathcal{\pi}$ and $\rho$ be the real and ideal two-party protocols. We denote by $\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}}$ (analogously $\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$) the output of the environment $\mathcal{Z}$ at the end of the real (ideal) execution, and by $C$ the corrupted party. 
-
-\begin{definition}[Statistical quantum-UC security,  Computational quantum-UC security \cite{Unruh10}]
-
-Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum-UC emulates $\rho$ if and only if for every party, $C$, and for every adversary, $Adv$, there exists a simulator, $\mathcal{S}$, such that for every environment $\mathcal{Z}$, and every $z\in\{0,1\}^*$, $n\in\mathbb{N}$
-\begin{equation*}
-    \big|\text{Pr}[\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}} (n, z) = 1] - \text{Pr}[\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}(n, z) = 1]\big| \leq \mu(n),
-\end{equation*}
- where $\mu(n)$ is a negligible function, i.e., for every positive polynomial, $p(\cdot)$, there exists an integer $N_p>0$ such that for all $n> N_p$ we have $\mu(n)<1/p(n)$, and $n$ is the security parameter. We furthermore require that if $Adv$ is quantum-polynomial-time, so is $\mathcal{S}$. Finally, if we consider quantum-polynomial-time $Adv$ and $\mathcal{Z}$ we have \textit{computational} quantum-UC security.
-\label{def:statisticalquc}
-\end{definition}
-
-
-
- The role of the simulator, $\mathcal{S}$, is to  simulate the execution of the protocol $\mathcal{\pi}$ in such a way that the environment $\mathcal{Z}$ is not able to distinguish between the two executions. 
-In particular, since $\mathcal{S}$ does not have access to the inputs/outputs of the actual honest party, it runs a simulated honest party interacting with the environment which is acting as the adversary. Moreover, $\mathcal{S}$ controls the  dishonest party, therefore controlling their inputs to the ideal functionality $\mathcal{F}$. 
-It then relies on its ability to extract the inputs  that the environment provides to the dishonest party. Then, it uses them along with the ideal functionality outputs in order to successfully generate a simulated execution that cannot be distinguished by the environment.
-
-Finally, note that, in case the real execution of the protocol $\mathcal{\pi}$ makes use of some external functionality $\mathcal{F}_{\textbf{ext}}$, the simulator $\mathcal{S}$ can control and reprogram $\mathcal{F}_{\textbf{ext}}$ in whatever way suits best in the ideal world to produce an indistinguishable simulation of the real world.
-
-
-%\begin{figure}[!htb]
-%\minipage{0.32\textwidth}
-%\centering
-%  \includegraphics[width=4cm]{img/Real_net.png}
-%  \caption{Real model.}\label{fig:realmodel}
-%\endminipage\hfill
-%\minipage{0.32\textwidth}
-%\centering
-%  \includegraphics[width=4cm]{img/Ideal_net.png}
-%  \caption{Ideal model.}\label{fig:idealmodel}
-%\endminipage\hfill
-%\minipage{0.32\textwidth}%
-%\centering
-%  \includegraphics[width=4cm]{img/Real_net.png}
-%  \caption{Simulator.}\label{fig:simulator}
-%\endminipage
-%\end{figure}
-
-
- 
-Regarding the adversarial model, we consider both \textit{semi-honest} and \textit{dishonest} adversaries. Semi-honest adversaries (also called honest-but-curious or passive adversaries) do not deviate from the protocol and only try to passively gain extra information by looking at the exchanged messages. Dishonest adversaries may deviate arbitrarily from the protocol. We also adopt the static corruption adversarial model where the corruption of each party is done just before the execution of the protocol.
-
-
-\subsubsection{Ideal functionalities}\label{functinalities}
-
-As we mentioned already, we work in the so-called $\mathcal{F}_{\textbf{COM}}-$~hybrid model, where the real execution of the protocol has access to an ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, defined in Figure~\ref{fig:func_com}. Note that our protocol $\mathcal{\pi}_{\textbf{QOLE}}$ makes several calls to $\mathcal{F}_{\textbf{COM}}$ and only opens a subset of the committed elements, therefore we use an index element $i$ to specify different instance calls. In the commitment phase, Bob sends $(\texttt{commit}, i, M)$ to the functionality and the functionality sends $(\texttt{commit}, i)$ to Alice. In the opening phase, Bob sends $(\texttt{open}, i)$ and the functionality sends $(\texttt{open}, i, M)$ to Alice.
-
-The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment protocol $\pi_{\textbf{COM}}$ presented in \cite{C01} which is computationally UC-secure in the Common Reference String (CRS) model. As analyzed in \cite{CBGLM21} (Theorem 3.), the protocol $\pi_{\textbf{COM}}$ computationally quantum-UC realizes $\mathcal{F}_{\textbf{COM}}$ in the CRS model. As a result, the resulting protocol $\pi_{\textbf{QOLE}}^{\pi_{\textbf{COM}}}$ is quantum-UC secure.
-
-
-\begin{figure}[!h]
-\centering
-\framebox[\linewidth][l]{%
-    \parbox{0.95\linewidth}{%
-    \begin{center}
-        \textbf{$\mathcal{F}_{\textbf{COM}}$ functionality}
-    \end{center}
-    
-    \textbf{Committer message:} $M$
-    
-    \begin{itemize}
-        \item \textit{Commitment phase}. Upon receiving $( \texttt{commit}, M)$ from Bob, the functionality sends $\texttt{commit}$ to Alice. 
-        \item \textit{Opening phase}. Upon receiving $\texttt{open}$ from Bob, the functionality sends $(\texttt{open}, M)$ to Alice. 
-    \end{itemize}
-    }%
-}
-\caption{Commitment functionality definition.}
-\label{fig:func_com}
-\end{figure}
-
+We use the big-$\mathcal{O}$ notation to denote the fastest-growing term of the number of operations with respect to some security parameter $n$. A negligible function $\mu(n)$ is a function such that $\mu(n) < 1/p(n)$ for some polynomial $p(n)$ and sufficiently large $n$.
 
 
 
@@ -348,7 +36,7 @@ The following are some properties of SMC which we informally describe:
 
 \item Passive security: even if the adversaries do not deviate from the protocol, they do not learn the inputs of the honest parties. Throughout this thesis, we refer to adversaries who do not deviate from the protocol as semi-honest parties. In the literature, these are also called honest-but-curious adversaries.
 
-\item Active security: even if the adversaries deviate arbitrarily from the protocol, they do not learn the inputs of the honest parties. In active security there are two types of protocols that react differently with respect to the adversarial behaviour. They can be robust against the advarsaries, meaning the honest parties will still receive the correct answer. Or honest parties abort the protocol when there exists some malicious activity.
+\item Active security: even if the adversaries deviate arbitrarily from the protocol (dishonest parties), they do not learn the inputs of the honest parties. In active security there are two types of protocols that react differently with respect to the adversarial behaviour. They can be robust against the advarsaries, meaning the honest parties will still receive the correct answer. Or honest parties abort the protocol when there exists some malicious activity.
 \end{enumerate}
 
 Regarding the corruption strategy of the adversaries, they can be of two types: static or adaptive. Static security guarantees that the protocol is secure against an adversary who only corrupts parties before the execution of the protocol. Adaptive security is an harder property to attain as it assumes that the adversary can choose throughout the protocol the party to be corrupted. Also, it is interesting to note that there is a fundamental difference between the adversarial structure of encryption methods and SMC methods. In encryption methods, the adversary is not part of the protocol. It is considered as an external party (usually called Eve) that interfeers with the communication between the protocol parties. In the case of SMC methods, the adversaries are a subset of the protocol parties.
@@ -400,7 +88,6 @@ OT can be generalized to the case of $k$-out-of-$N$ OT, where Alice owns $N$ mes
 A solution to SMC was given for the first time by Yao \cite{Yao82} and its main idea resides on the fact that every function has a boolean circuit representation. From this, Yao developed the concept of garbled circuits which is one of the key elements for secure computation. The Yao's garbled circuit protocol is constrained to only two parties but its generalization was achieved by GMW \cite{Goldreich87} and BMR \cite{BMR90}. Also, some implementation optimizations on Yao protocol were later developed in order to improve its performance: point-and-permute \cite{BMR90}, row reduction \cite{NPS99, Pinkas2009}, FreeXOR \cite{Kolesnikov2005} and half gates \cite{Zahur2015}. 
 
 As we said before, the main idea of Yao protocol is to represent the desired function $f()$ as a boolean circuit $C$, i.e. by a sequence of logical gates interconnected with wires. After the generation of the circuit $C$, each party will have two very different roles. Generally speaking, Alice (usually called garbler) randomly generates keys to each input bit, encrypts each circuit's gate and sends both elements to Bob (called evaluator). This procedure masks Alice's inputs from Bob. Then, through the OT functionality, Bob receives the keys corresponding to his input bits. So, OT allows to mask Bob's inputs from Alice. Finally, since the evaluator has all the input keys, he can decrypt every gate, i.e. evaluate the circuit. Let us see in more detail how the protocol works using a four input boolean circuit description of the Millionaires' problem. This problem can be described by the following expression:
-
 \begin{equation}
 f(a, b) = 
      \begin{cases} 
@@ -552,7 +239,6 @@ To highlight the importance of OLE in secret sharing based SMC protocols, we go 
 		\begin{itemize}
 		\item \textbf{Scalar}. For Alice and Bob to multiply a secret by a scalar $x$ ($z = a \cdot x$), Alice computes $z_A = a \cdot x_A$ and Bob computes $z_B = a \cdot x_B$.
 		\item \textbf{Shares}. Observe that, for Alice and Bob to multiply secrets $x$ and $y$ ($z = x\cdot y$), they require some sort of communication to compute cross terms:
-		
 		\begin{eqnarray}
 		x\cdot y &=& (x_A + x_B)\cdot (y_A + y_B)\\
 		&=& x_A\cdot y_A + x_A\cdot y_B + x_B \cdot y_A + x_B\cdot y_B
@@ -562,6 +248,322 @@ To highlight the importance of OLE in secret sharing based SMC protocols, we go 
 	\end{itemize}
 	\item \textbf{Output}. For Alice to receive the output value $x$ of some output wire, Bob simply sends $x_B$ to Alice. Alice outputs $x = x_A + x_B$.
 \end{itemize}
+
+
+%********************************** %Second Section  **************************************
+\section{Quantum information}
+
+Quantum information theory studies the implications of using quantum systems as the medium of information. Consequently, the information carriers are governed by the laws of quantum mechanics, allowing to exploit properties not present amid classical methods. In this section, we present the basic elements of quantum information that will be used by the presented quantum protocols and the corresponding security proofs.
+
+As common practice in quantum information theory, a quantum system $A$ is described by some Hilbert space $\mathcal{H}_A$. In this thesis, we will only consider finite-dimensional Hilbert spaces, i.e. $\dim \mathcal{H}_A = d < \inf$. So, we can identify $\mathcal{H}_A \cong \mathbb{C}^d \cong \mathcal{H}^{*}_A$, where $\mathcal{H}^{*}_A$ is the corresponding dual space. We use the Dirac bra-ket notation to describe the states in a physical quantum system $A$. So, a quantum (pure) state is described by a normalized vector $\ket{\psi}_A\in\mathcal{H}_A$ and its dual vector as $\bra{\psi}_A\in\mathcal{H}^{*}_A$. In case it is clear from context, we may omit to which Hilbert space the state belongs to. Since we have the isomorphism $\mathcal{H}_A \cong \mathbb{C}^d$, we can identify the standard basis of $\mathbb{C}^d$ to the standard basis (also known as computational basis) of $\mathcal{H}$, i.e. $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. Also, given different subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$, the joint system can be described by their tensor product, i.e. $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are described as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
+
+We can generate quantum pure states $\ket{\psi_i}\in \mathcal{H}$ according to some probability distribution $\{p_i\}$. This situation is described by a density operator given by $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly called a mixed state. The density operators are positive semi-definite Hermitian operators with unitary trace, i.e. $\rho \geq 0$ and $\tr \rho = 1$. We denote by $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$  and $\mathcal{P}(\mathcal{H})$ the sets of Hermitian, positive-semi definite and density operators on $\mathcal{H}$, respectively.
+
+A mixed state is classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in\mathcal{X}} P_X(x)\ketbra{x}$, where $\mathcal{X}$ is some finite set and $P_X$ is a probability distribution over $\mathcal{X}$. In particular, we denote the uniform distribution over $\mathcal{X}$ as $\tau_{\mathcal{X}} = \frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$, where $|\mathcal{X}|$ is the size of $\mathcal{X}$. The identity operator is denoted by $\mathds{1}$. Also, for a bipartite quantum state $\rho_{XB}$, we say that $\rho_{XB}$ is a classical-quantum state (cq-state for short) if it is of the form $\rho_{XB} = \sum_{x\in \mathcal{X}} P_X(x) \ketbra{x} \otimes \rho^x_{B}$, where $P_X$ is a probability distribution over the finite set $\mathcal{X}$.
+
+\subsection{Trace distance}
+
+To prove the security of quantum protocols, it is fundamental to have a procedure that allows to distinguish quantum states. Luckly, there is a useful metric that expresses how well two quantum states $\sigma, \rho \in \mathcal{P}(\mathcal{H})$ can be distinguished by any (potentially inefficient) procedure. This metric is commonly called \textit{trace distance} and is defined as \cite{U17}
+\begin{equation*}
+    \delta(\rho,\sigma):=\frac{1}{2}||\rho-\sigma||_1,
+\end{equation*}
+where $||\cdot||_1$ is the $1-$Schatten norm in the space of bounded operators acting on a Hilbert space. Its name comes from the fact that we can write it using the trace operator as follows
+\begin{equation*}
+    ||\rho-\sigma||_1=\Tr\left\{\sqrt{(\rho-\sigma)^\dagger(\rho-\sigma)}\right\}.
+\end{equation*}
+
+In this work, we will be working with completely positive trace preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being trace preserving) and it maps positive operators to positive operators (hence being completely positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in Chapter~\ref{ch:QOLE} (quantum oblivious linear evaluation protocol). 
+
+It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarized in Lemma~\ref{lemma:trace_distance}.
+
+
+
+%{\cv Useful links to support this: \href{https://en.wikipedia.org/wiki/Quantum_operation#Kraus_operators}{wiki} and \href{https://courses.cs.ut.ee/all/MTAT.07.024/2018_fall/uploads/notes.pdf}{Unruh lectures} on pag 16 (def of quantum operations) and Lemma 7}
+
+\begin{lemma}[Lemma 7, \cite{U17}]
+
+\begin{enumerate}
+
+    The trace distance has the following properties:
+
+    \item For any CPTP map $\mathcal{E}$ and any $\sigma, \rho \in \mathcal{P}(\mathcal{H})$ we have that
+    $$\delta(\mathcal{E}(\sigma), \mathcal{E}(\rho)) \leq \delta(\sigma, \rho)$$
+    
+    \item Let $\sigma, \sigma' \in \mathcal{P}(\mathcal{H})$ and $\rho \in \mathcal{P}(\mathcal{H}')$. Then,
+    $$\delta(\sigma\otimes \rho, \sigma'\otimes \rho) = \delta(\sigma, \sigma')$$
+\end{enumerate}
+
+\label{lemma:trace_distance}
+\end{lemma}
+
+
+\subsection{Entropy}
+
+How unpredictable is some random variable? How much information do we gain when we observe some system? To answer these questions, several measures under the name of entropy were developed. The most simple classical entropy measure was developed by Shannon \cite{S48}. Shannon found a way to express the amount of information a random variable has. Intuitivelly, this should express the following behaviour: when some event is more predictable, it conveys less information. Indeed, the more scandalous and unpreditable the news are, the more informative they are. Shannon started by proposing the following function to describe the amount of information an event $A$ has:
+$$I(A) = - \log \left( P(A) \right),$$
+where $P(A)$ is the probability of the event $A$. From this, he defined the entropy to be the average information value of all the possible events. More formally, for a discrete random variable $X$
+$$H(X) = \mathbb{E}\left[ I(X) \right].$$
+
+In the special case where we consider a distribution $P(X)$ over $\left\{0,1\right\}$ that selects $1$ with probability $p$ and $0$ with probability $1-p$, we have the binary entropy given as
+$$H(X) = -p \log_2 p - (1-p)\log_2(1-p).$$
+
+Throughout our analysis, we will also use several times the so-called $d-$ary entropy function, a generalization of the standard binary entropy function. However, this entropy measure does not have such an operational meaning such as the binary entropy.
+
+\begin{definition}
+For $d\geq 2$, the \textit{d-ary entropy function} $h_d : [0,1]\rightarrow\mathbb{R}$ is given by
+$$h_d(x) = x \log_d(d-1) - x \log_d x - (1-x) \log_d (1-x).$$
+\label{def:q-ary}
+\end{definition}
+The $d-$ary entropy is specially useful to bound the size of an important object in coding theory, the Hamming ball. The Hamming ball with radius $\mu$ centered at some point $\bm{r}$ is defined to be the set of vectors $\bm{z}$ at a distance $\mu$ from $\bm{r}$, when the distance is given by the Hamming distance $d_H$. So, we have the following Lemma.
+
+\begin{lemma}[Lemma 5, \cite{V10}]
+\label{lemma:hammingBall}
+For an integer $d\geq 2$ and $\mu \in [0, 1-\frac{1}{d}]$,
+\begin{equation*}
+    |\{ \boldsymbol{z}\in \mathbb{Z}_d^{n}: d_H(\boldsymbol{z}, \boldsymbol{r})\leq \mu n \}| \leq d^{h_d(\mu)n}.
+\end{equation*}
+\end{lemma} 
+
+To prove the security of protocols is more important to understand the worst-case scenario instead of the average behaviour. Therefore, standard binary entropy style definitions are not enough for securing protocols and we need a new one. This is achieved with min-entropy. Classically, for a finite random variable $X$, where $P(X=x) = p_x$, the min-entropy is given by the following expression:
+$$H_{\min}(X) = -\log \max p_x.$$
+Operationally, this gives the probability of guessing the element drawn from $X$ when choosing the element $x$ with maximum probability,, i.e. $P_{\text{guess}} = \max p_x$. We can extend this definition to cq-states $\rho_{XB}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B)$ as given by Definition~\ref{def:cqentropy}.
+
+\begin{definition}
+\label{def:cqentropy}
+Let $\rho_{X B}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B})$ be a cq-state. The conditional min-entropy is given by
+$$H_{\min}(X|B)_{\rho} = -\log P_{\text{guess}}(X|B),$$
+where $P_{\text{guess}}(X|B)$ is given by
+$$P_{\text{guess}}(X|B) = \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{x}^B\right],$$
+where the maximization is taken over all positive operator-valued measures (POVM), i.e. $\left\{ M_x \geq 0 : \sum_x M_x = \mathds{1} \right\}$.
+\end{definition}
+
+In Definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ has the operational meaning of being the probability of guessing $x$ having access to system $B$. Also, the maximization is taken over the most general kind of measurements allowed in quantum mechanics. Next, we present Lemma~\ref{lemma:bijectivefunction} that states how min-entropy changes when applying a fixed bijective function to the classical subsystem of a cq-state. This Lemma will be important to prove the security of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE}.
+
+\begin{lemma}
+Let $\rho_{XB} \in \mathcal{P}(\mathcal{H}_{X}\otimes \mathcal{H}_B)$ be a cq-state and let $f:\mathcal{X} \rightarrow \mathcal{X} $ be a fixed bijective function. Then,
+$$H_{\min}(X|B)_{\rho} \leq H_{\min}(f(X)|B)_{\rho}.$$
+\label{lemma:bijectivefunction}
+\end{lemma}
+\begin{proof}
+Consider the unitary operator,
+$$U = \sum_x \ketbra{f(x)}{x}.$$ 
+
+We check that $U$ is indeed unitary:
+\begin{equation*}
+U U^{\dagger} = \left(\sum_x \ketbra{f(x)}{x}\right)\left(\sum_{x'} \ketbra{x'}{f(x')}\right) 
+= \sum_x \ketbra{f(x)} = I,
+\end{equation*}
+where in the last step we used the fact that the function $f$ is a bijection. The same holds for $U^{\dagger}U = I$.
+
+Now, observe the following,
+\begin{eqnarray*}
+H_{\min}(f(X)|B) &=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{f(x)}^B\right]\\
+&=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x U \rho_{x}^B U^{\dagger}\right]\\
+&=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho_{x}^B \right]. 
+\end{eqnarray*}
+
+Note that $\left\{ N_x \right\}_x= \left\{U^{\dagger} M_x U\right\}_x$ is also a POVM: they are all positive semidefinite operators and it sums up to unity. Therefore, we have that $\left\{U^{\dagger} M_x U\right\}_x$ can only decrease the space of possible POVMs. So, 
+$$\max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho_{x}^B \right] \leq \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho_{x}^B \right].$$
+
+This means that, 
+\begin{equation*}
+H_{\min}(f(X)|B) \geq -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho_{x}^B \right] = H_{\min}(X|B).
+\end{equation*}
+\end{proof}
+
+%In the first (quantum) part of the OLE protocol, Alice and Bob generate several random OLE instances based on expression~\eqref{eq:main_relation} and use them as a resource to generate one final OLE. However, by using entanglement, Bob is allowed to have some limited amount of information on Alice's outputs, i.e. on Alice functions $(a_i, b_i)_{i\in [n]}$. To understand the impact this have on the security of the protocol, we use the concept of \textit{min-entropy}. This quantifies the amount of information Bob has about Alice system $A$ given some (possibly quantum) side information $B'$. This measure of uncertainty has an important operational meaning when Alice's system is classical. We have that $H_{\text{min}}(A|B') = - \log P_{\text{guess}}(A|B')$, where $P_{\text{guess}}(A|B')$ is the probability that of Bob guessing Alice's classical state $A$ maximized over any possible measurement on his state $B'$. Throughout this work, $A$ will encode Alice's functions with space denoted by $\mathcal{G}^n$. We present the formal definition of min-entropy below.
+
+The conditional min-entropy can be generalized to the fully quantum case where both systems are quantum (Definition~\ref{def:conditionalquantumminentropy}).
+
+\begin{definition}
+\label{def:conditionalquantumminentropy}
+Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B')$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_B')$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
+$$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \}$$
+and 
+$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
+\end{definition}
+
+It will be crucial in the security proof of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE} to understand how min-entropy changes when a completely positive (CP) map is applied. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result is not enough to achieve useful min-entropy bounds. To achieve a meaningful bound for certain operators $\mathcal{M}$, we can use Theorem~\ref{thm:entaglementSamplingResult} along with some other two results (Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}). Note that, for readability purposes, the theorem uses the notation presented in Chapter~\ref{ch:QOLE}.
+
+\begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
+\label{thm:entaglementSamplingResult}
+Let $\mathbf{X}$ denote a system with $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, and $\mathcal{M}(\sigma_{\mathbf{X}E}) = \sigma_{\mathbf{F}\mathbf{Y}E}$ we have 
+
+\begin{equation}
+    2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + (\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n,
+\end{equation}
+ where, in general, for a (not necessarily normalized) quantum state $\rho_{AB}\in \mathcal{P}(\mathcal{H}_A\otimes\mathcal{H}_B)$, $\text{H}_2(A|B)$   is the so-called \textit{collision entropy}~\cite{R06}, given as 
+\begin{equation*} 
+    \text{H}_2(A|B)_{\rho_{AB}}=-\log \left(\Tr{\left(\rho_{B}^{-1/4}\rho_{AB}\rho_B^{-1/4}\right)^2}\right).
+\end{equation*}
+If we further condition on a general quantum state $\sigma_B\in\mathcal{P}(\mathcal{H}_B)$, we have 
+\begin{equation*}
+    \text{H}_2(A|B)_{\rho_{AB}|\sigma_B}=-\log \left(\Tr{\left(\sigma_{B}^{-1/4}\rho_{AB}\sigma_B^{-1/4}\right)^2}\right).
+\end{equation*}
+\end{lemma}
+
+It is interesting to note that when $\mathcal{M}$ is trace preserving, we have,
+$$2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} = 2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E}}}.$$
+This follows from the definition of the collision entropy and the fact that $\Tr_{\bm{F} \bm{Y}}\left[ \mathcal{M}(\sigma_{\bm{X} E}) \right] = \sigma_{E}$ \citep{Dupuis2015}. 
+
+%% This definition comes from the fact that a a map M is (\mu-)trace-preserving iff M^\dagger is (\mu-)unital
+
+% Talk a bit about collision entropy. Look at the references here https://arxiv.org/pdf/0807.1338.pdf
+
+
+Now, we need a way to relate min-entropy and collision entropy to have useful bounds for min-entropy. This is done through the following two Lemmas.
+
+\begin{lemma}[Lemma 17, \cite{Dupuis2015}]
+\label{lemma:quantumrelation}
+Let $\rho_{A B'}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B'})$ and $d_A = \dim\mathcal{H}_A$. Then
+$$H_{\min}(A|B')_{\rho} \leq H_2(A|B')_{\rho} \leq 2 H_{\min}(A|B')_{\rho} + \log d_A.$$
+\end{lemma}
+
+\begin{lemma}[Lemma 18, \cite{Dupuis2015}]
+\label{lemma:classicalquantumrelation}
+Let $\rho_{X B'}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B'})$ be a cq-state. Then
+$$H_{\min}(X|B')_{\rho} \leq H_2(X|B')_{\rho} \leq 2 H_{\min}(X|B')_{\rho}.$$
+\end{lemma}
+
+
+
+\subsection{Two-universal functions}
+
+We start by defining a particular set of functions that are usually used to amplify the privacy of the parties' input and output elements. 
+
+\begin{definition}[$\delta-$almost two-universal hash family; two-universal hash family]
+A family, $\mathfrak{G}$, of functions, $g$, with domain $D$ and range $R$ is called a $\delta-$almost two-universal hash family if for any two distinct elements $w,w'\in D$ and for $g$ chosen at random from $\mathfrak{G}$, the probability of a \textit{collision} $g(w)=g(w')$ is at most $\delta$. In the special case that $\delta=1/|R|$, where $|R|$ is the size of the range $R$, the family is called \textit{two-universal}. 
+\end{definition}
+
+Now, we present a particular two-universal hash family that preserves the structure of the OLE input and output while keeping its privacy amplification guarantees. This family is called Multi-linear Modular Hashing as it is based on the modular inner product of vectors \cite{HK97}.
+\begin{definition}[Definition 2, \cite{HK97}]
+Let $d$ be a prime and let $n$ be an integer $n>0$. Define a family MMH$^*$ (Multi-linear Modular Hashing) of functions from $\mathbb{Z}_d^n$ to $\mathbb{Z}_d$ as follows
+$$\text{MMH}^*:= \{ g_x : \mathbb{Z}_d^n\rightarrow \mathbb{Z}_d \, | \, x\in \mathbb{Z}_d^n \}$$
+where the functions $g_x$ are defined for any $x = (x_1,\ldots,x_n)$, $m = (m_1,\ldots, m_n) \in \mathbb{Z}_d^n$
+$$g_x(m) = x\cdot m \mod d = \sum x_i\, m_i \mod d$$
+\label{def:MMH}
+\end{definition}
+
+
+
+\begin{theorem}[Theorem 3, \cite{HK97}]
+The family MMH$^*$ is two-universal.
+\end{theorem}
+In fact, Halevi and Krawczyk \cite{HK97} prove a stronger result, namely that the MMH$^*$ family is \textit{$\Delta-$universal}, which is more general than two-universal. For the sake of simplicity, we just present here this particular version of the theorem.
+
+The following \textit{Generalized Leftover Hash Lemma} is a relevant ingredient in the security proof of Chapter~\ref{ch:QOLE}, as it ensures that, after applying a known function $g$  from a two-universal family to a random variable $X$, the resulting random variable $Z = g(X)$  is close to uniform, conditioned on some (possibly quantum) side information $E$. This is a high-dimensional version of the Lemma, that can be easily deduced by using Lemma 4 from \cite{TSSR11} with $d_A = d^l$. Note also that this is a special version, since Tomamichel et al. in \cite{TSSR11} prove it in the more general case for $\delta-$almost two-universal hash families.
+
+%Next, we state a crucial result that is used to prove the security of the quantum OLE protocol~\footnote{Here we present a multidimensional version of the Generalized Leftover Hash Lemma. This can be easily deduced by using Lemma 4 from Tomamichel et al. work \cite{TSSR11} with $d_A = d$.}. This ensures that, after applying a known function $f$ from a two-universal family to a random variable $X$, the resulting random variable $Z = f(X)$ is close to uniform conditioned on some (possibly quantum) side information $E$. It also describes how close $Z$ is to uniform with respect to the amount of information we have about $X$ conditioned on $E$, i.e. $H_\text{min}(X|E)$.
+
+\begin{lemma}[Generalized Leftover Hash Lemma \cite{TSSR11}]
+Let $X$ be a random variable, $E$ a quantum system, and $\mathfrak{G}$ a two-universal family of hash functions from $X$ to $\mathbb{Z}_d^l$. Then, on average over the choices of $g$  from $\mathfrak{G}$, the output $Z := g(X)$ is $\xi$-close to uniform conditioned on $E$, where
+\begin{equation}
+  \xi = \frac{1}{2}\sqrt{2^{l\log d - H_\text{min}(X|E)}}.  
+\end{equation}
+ \label{lem:leftover}
+\end{lemma}
+
+
+%********************************** %Third Section  **************************************
+\section{Universal Composability}
+
+The Universal Composability (UC) framework was introduced by Canetti \cite{C20} in the classical setting and extended to the quantum setting by Unruh, and Ben-Or and Mayers \cite{Unruh04, BenOrMay04}(see also \cite{Unruh10, FS09}).  It renders strong composability guarantees as it ensures that the security of the protocol is independent of any external execution of the same or other protocols.  Both classical and quantum frameworks follow the same ideal-real world comparison structure and consider the same interactions between machines. The difference lies on the operations allowed by the quantum-UC framework, where we can also store, transmit, and process  quantum states. 
+
+More specifically, the quantum-UC security of some protocol $\mathcal{\pi}$ is drawn by comparing two scenarios. A real scenario where  $\mathcal{\pi}$ is executed and an ideal scenario where an ideal functionality, $\mathcal{F}$,  that carries out the same task and is defined \textit{a priori}, is executed. The comparison is done by a special machine, called the \textit{environment}, $\mathcal{Z}$, that supervises the execution of both scenarios and has access to any external information (e.g. concurrent executions of the same or any other protocol). In the two-party case, the structure of the machines in both scenarios is as follows: The real scenario has the environment, $\mathcal{Z}$, the adversary, $Adv$, and the two parties Alice  and Bob, while the ideal scenario has the environment $\mathcal{Z}$, the simulator $\mathcal{S}$, the two parties Alice and Bob and the ideal functionality $\mathcal{F}$. 
+%Note that the adversary $Adv$ could be integrated inside the environment $\mathcal{Z}$, as $\mathcal{Z}$ has full control over $Adv$  \cite{Unruh10}, but for clarity, we keep them separated in the real scenario. 
+Informally, we say that the protocol $\mathcal{\pi}$ is quantum-UC secure if no environment $\mathcal{Z}$ can distinguish between the execution of $\mathcal{\pi}$ in the real scenario and  the execution of the  functionality $\mathcal{F}$ in the ideal scenario. Any possible attack of the adversary $Adv$ in the execution of $\mathcal{\pi}$ can be simulated by the simulator $\mathcal{S}$ in the ideal-world execution of $\mathcal{F}$, without any noticeable difference form the point-of-view of the environment $\mathcal{Z}$. Since the ideal functionality $\mathcal{F}$ is secure by definition, the real-world adversary is not able to extract any more information than what is allowed by the functionality $\mathcal{F}$. %We can see the structure of both scenarios in Figure~\ref{fig:realmodel} and \ref{fig:idealmodel} for the case where Alice is corrupted and the ideal functionality is the oblivious linear evaluation, $\mathcal{F}_{\textbf{OLE}}$. 
+
+Let us now see the formal definition. Let $\mathcal{\pi}$ and $\rho$ be the real and ideal two-party protocols. We denote by $\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}}$ (analogously $\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$) the output of the environment $\mathcal{Z}$ at the end of the real (ideal) execution, and by $C$ the corrupted party. 
+
+\begin{definition}[Statistical quantum-UC security,  Computational quantum-UC security \cite{Unruh10}]
+
+Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum-UC emulates $\rho$ if and only if for every party, $C$, and for every adversary, $Adv$, there exists a simulator, $\mathcal{S}$, such that for every environment $\mathcal{Z}$, and every $z\in\{0,1\}^*$, $n\in\mathbb{N}$
+\begin{equation*}
+    \big|\text{Pr}[\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}} (n, z) = 1] - \text{Pr}[\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}(n, z) = 1]\big| \leq \mu(n),
+\end{equation*}
+ where $\mu(n)$ is a negligible function and $n$ is the security parameter. We furthermore require that if $Adv$ is quantum-polynomial-time, so is $\mathcal{S}$. Finally, if we consider quantum-polynomial-time $Adv$ and $\mathcal{Z}$ we have \textit{computational} quantum-UC security.
+\label{def:statisticalquc}
+\end{definition}
+
+
+
+ The role of the simulator, $\mathcal{S}$, is to  simulate the execution of the protocol $\mathcal{\pi}$ in such a way that the environment $\mathcal{Z}$ is not able to distinguish between the two executions. 
+In particular, since $\mathcal{S}$ does not have access to the inputs/outputs of the actual honest party, it runs a simulated honest party interacting with the environment which is acting as the adversary. Moreover, $\mathcal{S}$ controls the  dishonest party, therefore controlling their inputs to the ideal functionality $\mathcal{F}$. 
+It then relies on its ability to extract the inputs  that the environment provides to the dishonest party. Then, it uses them along with the ideal functionality outputs in order to successfully generate a simulated execution that cannot be distinguished by the environment.
+
+Finally, note that, in case the real execution of the protocol $\mathcal{\pi}$ makes use of some external functionality $\mathcal{F}_{\textbf{ext}}$, the simulator $\mathcal{S}$ can control and reprogram $\mathcal{F}_{\textbf{ext}}$ in whatever way suits best in the ideal world to produce an indistinguishable simulation of the real world.
+
+
+%\begin{figure}[!htb]
+%\minipage{0.32\textwidth}
+%\centering
+%  \includegraphics[width=4cm]{img/Real_net.png}
+%  \caption{Real model.}\label{fig:realmodel}
+%\endminipage\hfill
+%\minipage{0.32\textwidth}
+%\centering
+%  \includegraphics[width=4cm]{img/Ideal_net.png}
+%  \caption{Ideal model.}\label{fig:idealmodel}
+%\endminipage\hfill
+%\minipage{0.32\textwidth}%
+%\centering
+%  \includegraphics[width=4cm]{img/Real_net.png}
+%  \caption{Simulator.}\label{fig:simulator}
+%\endminipage
+%\end{figure}
+
+
+ 
+%Regarding the adversarial model, we consider both \textit{semi-honest} and \textit{dishonest} adversaries. Semi-honest adversaries (also called honest-but-curious or passive adversaries) do not deviate from the protocol and only try to passively gain extra information by looking at the exchanged messages. Dishonest adversaries may deviate arbitrarily from the protocol. We also adopt the static corruption adversarial model where the corruption of each party is done just before the execution of the protocol.
+
+
+\subsubsection{Ideal functionalities}\label{functinalities}
+
+Whenever a protocol $\pi$ makes use of an external functionality $\mathcal{F}_{\textbf{ext}}$, we say that $\pi$ is in the $\mathcal{F}_{\textbf{ext}}-$hybrid model. The quantum OLE protocol $\mathcal{\pi}_{\textbf{QOLE}}$ presented in Chapter~\ref{ch:QOLE} uses the ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, defined in Figure~\ref{fig:func_com}. Note that the protocol makes several calls to $\mathcal{F}_{\textbf{COM}}$ and only opens a subset of the committed elements. Therefore, we use an index element $i$ to specify different instance calls. In the commitment phase, Bob sends $(\texttt{commit}, i, M)$ to the functionality and the functionality sends $(\texttt{commit}, i)$ to Alice. In the opening phase, Bob sends $(\texttt{open}, i)$ and the functionality sends $(\texttt{open}, i, M)$ to Alice.
+
+The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment protocol $\pi_{\textbf{COM}}$ presented in \cite{C01} which is computationally UC-secure in the Common Reference String (CRS) model. As analyzed in \cite{CBGLM21} (Theorem 3.), the protocol $\pi_{\textbf{COM}}$ computationally quantum-UC realizes $\mathcal{F}_{\textbf{COM}}$ in the CRS model. As a result, since $\mathcal{\pi}_{\textbf{QOLE}}$ is proved to be quantum-UC secure, the resulting protocol $\pi_{\textbf{QOLE}}^{\pi_{\textbf{COM}}}$ is quantum-UC secure by the composition theorem \citep{Unruh10}.
+
+
+%\begin{figure}[!h]
+%\centering
+%\framebox[\linewidth][l]{%
+%    \parbox{0.95\linewidth}{%
+%    \begin{center}
+%        \textbf{$\mathcal{F}_{\textbf{COM}}$ functionality}
+%    \end{center}
+%    
+%    \textbf{Committer message:} $M$
+%    
+%    \begin{itemize}
+%        \item \textit{Commitment phase}. Upon receiving $( \texttt{commit}, M)$ from Bob, the functionality sends $\texttt{commit}$ to Alice. 
+%        \item \textit{Opening phase}. Upon receiving $\texttt{open}$ from Bob, the functionality sends $(\texttt{open}, M)$ to Alice. 
+%    \end{itemize}
+%    }%
+%}
+%\caption{Commitment functionality definition.}
+%\label{fig:func_com}
+%\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+                        
+    \centerline{$\mathcal{F}_{\textbf{COM}}$ \textbf{functionality}}
+            
+    \
+    
+    \begin{itemize}
+        \item \textbf{Commitment phase}. Upon receiving $( \texttt{commit}, M)$ from Bob, the functionality sends $\texttt{commit}$ to Alice. 
+        \item \textbf{Opening phase}. Upon receiving $\texttt{open}$ from Bob, the functionality sends $(\texttt{open}, M)$ to Alice. 
+    \end{itemize}
+    
+\end{tcolorbox} 
+    \caption{Commitment functionality.}
+    \label{fig:func_com}
+\end{figure}
 
 
 %\bibliography{bibforthesis}

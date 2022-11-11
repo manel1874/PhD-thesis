@@ -7,19 +7,19 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Technical overview}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Quantum information}{8}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Trace distance}{8}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Entropy}{9}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Two-universal functions}{13}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Universal Composability}{14}{section.2.3}%
-\contentsline {subsubsection}{Ideal functionalities}{16}{section*.15}%
-\contentsline {section}{\numberline {2.4}Secure multiparty computation}{16}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Garbled circuit approach}{18}{subsection.2.4.1}%
-\contentsline {subsubsection}{Oblivious transfer}{18}{section*.17}%
-\contentsline {subsubsection}{Yao protocol}{19}{section*.19}%
-\contentsline {subsection}{\numberline {2.4.2}Secret sharing approach}{22}{subsection.2.4.2}%
-\contentsline {subsubsection}{Oblivious linear evaluation}{22}{section*.21}%
-\contentsline {subsubsection}{Basic operations}{23}{section*.24}%
+\contentsline {section}{\numberline {2.2}Secure multiparty computation}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Garbled circuit approach}{9}{subsection.2.2.1}%
+\contentsline {subsubsection}{Oblivious transfer}{9}{section*.15}%
+\contentsline {subsubsection}{Yao protocol}{10}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.2}Secret sharing approach}{13}{subsection.2.2.2}%
+\contentsline {subsubsection}{Oblivious linear evaluation}{13}{section*.19}%
+\contentsline {subsubsection}{Basic operations}{14}{section*.22}%
+\contentsline {section}{\numberline {2.3}Quantum information}{15}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Trace distance}{16}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Entropy}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Two-universal functions}{21}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Universal Composability}{22}{section.2.4}%
+\contentsline {subsubsection}{Ideal functionalities}{23}{section*.23}%
 \contentsline {chapter}{\numberline {3}Quantum oblivious transfer}{25}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Impossibility results}{26}{section.3.1}%
 \contentsline {section}{\numberline {3.2}BBCS-based protocols}{27}{section.3.2}%
@@ -90,7 +90,7 @@
 \contentsline {section}{\numberline {6.8}Complexity analysis}{97}{section.6.8}%
 \contentsline {subsection}{\numberline {6.8.1}Protocol complexity analysis}{97}{subsection.6.8.1}%
 \contentsline {subsubsection}{Yao protocol executions}{97}{section*.67}%
-\contentsline {subsubsection}{OT executions}{97}{section*.68}%
+\contentsline {subsubsection}{OT executions}{98}{section*.68}%
 \contentsline {subsubsection}{Oblivious keys}{98}{section*.69}%
 \contentsline {subsubsection}{QRNG}{99}{section*.70}%
 \contentsline {subsubsection}{Internal computation}{99}{section*.71}%
@@ -105,4 +105,4 @@
 \contentsline {chapter}{\numberline {7}Conclusion}{107}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Future work}{107}{section.7.1}%
 \contentsline {chapter}{\numberline {A}Jukes-Cantor distance for CBMC-GC}{109}{appendix.A}%
-\contentsline {chapter}{Bibliography}{135}{appendix*.81}%
+\contentsline {chapter}{Bibliography}{136}{appendix*.81}%

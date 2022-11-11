@@ -447,6 +447,76 @@ David Evans, Vladimir Kolesnikov, and Mike Rosulek.
 \newblock {\em Foundations and Trends{\textregistered} in Privacy and
   Security}, 2(2-3):70--246, 2018.
 
+\bibitem{U17}
+Dominique Unruh.
+\newblock Lecture notes in quantum cryptography, November 2017.
+
+\bibitem{S48}
+Claude~Elwood Shannon.
+\newblock A mathematical theory of communication.
+\newblock {\em The Bell System Technical Journal}, 27:379--423, 1948.
+
+\bibitem{V10}
+Venkatesan Guruswami.
+\newblock Lecture notes in introduction to coding theory, January 2010.
+
+\bibitem{Dupuis2015}
+Frederic Dupuis, Omar Fawzi, and Stephanie Wehner.
+\newblock Entanglement sampling and applications.
+\newblock {\em {IEEE} Transactions on Information Theory}, 61(2):1093--1112,
+  February 2015.
+
+\bibitem{R06}
+Renato Renner.
+\newblock Security of quantum key distribution, 2006.
+
+\bibitem{HK97}
+Shai Halevi and Hugo Krawczyk.
+\newblock {MMH}: Software message authentication in the gbit/second rates.
+\newblock In {\em Fast Software Encryption}, pages 172--189. Springer Berlin
+  Heidelberg, 1997.
+
+\bibitem{TSSR11}
+Marco Tomamichel, Christian Schaffner, Adam Smith, and Renato Renner.
+\newblock Leftover hashing against quantum side information.
+\newblock {\em {IEEE} Transactions on Information Theory}, 57(8):5524--5535,
+  August 2011.
+
+\bibitem{C20}
+Ran Canetti.
+\newblock Universally composable security.
+\newblock {\em Journal of the {ACM}}, 67(5):1--94, October 2020.
+
+\bibitem{Unruh04}
+Dominique Unruh.
+\newblock Simulatable security for quantum protocols.
+\newblock {\em arXiv}, 0409125, 2004.
+
+\bibitem{BenOrMay04}
+Michael Ben-Or and Dominic Mayers.
+\newblock General security definition and composability for quantum and
+  classical protocols.
+\newblock {\em arXiv}, 0409062, 2004.
+
+\bibitem{Unruh10}
+Dominique Unruh.
+\newblock Universally composable quantum multi-party computation.
+\newblock In {\em Advances in Cryptology -- EUROCRYPT 2010}, pages 486--505,
+  Berlin, Heidelberg, 2010. Springer Berlin Heidelberg.
+
+\bibitem{FS09}
+Serge Fehr and Christian Schaffner.
+\newblock Composing quantum protocols in a classical environment.
+\newblock In Omer Reingold, editor, {\em Theory of Cryptography}, pages
+  350--367, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
+
+\bibitem{CBGLM21}
+Bruno Costa, Pedro Branco, Manuel Goul{\~{a}}o, Mariano Lemus, and Paulo
+  Mateus.
+\newblock Randomized oblivious transfer for secure multiparty computation in
+  the quantum setting.
+\newblock {\em Entropy}, 23(8):1001, July 2021.
+
 \bibitem{YAVV22}
 Vijay~Kumar Yadav, Nitish Andola, Shekhar Verma, and S~Venkatesan.
 \newblock A survey of oblivious transfer protocol.
@@ -719,12 +789,6 @@ Charles~H. Bennett, Gilles Brassard, and Seth Breidbart.
   if p={NP}.
 \newblock {\em Natural Computing}, 13(4):453--458, October 2014.
 
-\bibitem{FS09}
-Serge Fehr and Christian Schaffner.
-\newblock Composing quantum protocols in a classical environment.
-\newblock In Omer Reingold, editor, {\em Theory of Cryptography}, pages
-  350--367, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
-
 \bibitem{JSGBBWZ11}
 Markus Jakobi, Christoph Simon, Nicolas Gisin, Jean-Daniel Bancal, Cyril
   Branciard, Nino Walenta, and Hugo Zbinden.
@@ -790,10 +854,6 @@ Marco Tomamichel and Renato Renner.
 \newblock Uncertainty relation for smooth entropies.
 \newblock {\em Physical Review Letters}, 106(11), March 2011.
 
-\bibitem{R06}
-Renato Renner.
-\newblock Security of quantum key distribution, 2006.
-
 \bibitem{DFRSS07}
 Ivan~B. Damg{\aa}rd, Serge Fehr, Renato Renner, Louis Salvail, and Christian
   Schaffner.
@@ -855,11 +915,6 @@ Michael Ben-Or and Dominic Mayers.
 \bibitem{U04}
 Dominique Unruh.
 \newblock Simulatable security for quantum protocols, 2004.
-
-\bibitem{C20}
-Ran Canetti.
-\newblock Universally composable security.
-\newblock {\em Journal of the {ACM}}, 67(5):1--94, October 2020.
 
 \bibitem{MR11}
 Ueli Maurer and Renato Renner.

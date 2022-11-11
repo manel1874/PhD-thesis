@@ -10,11 +10,12 @@ A level-1 auxiliary file: Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylog
 A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
 A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
-Reallocated field_info (elt_size=4) to 11233 items from 5000.
+Reallocated field_info (elt_size=4) to 11417 items from 5000.
 Database file #1: References/References.bib
-Warning--I didn't find a database entry for "Kilian"
+Warning--I didn't find a database entry for "C01"
 Warning--I didn't find a database entry for "Goldreichbook04"
 Warning--I didn't find a database entry for "Canetti00MPC"
+Warning--I didn't find a database entry for "Kilian"
 Warning--I didn't find a database entry for "Shor94"
 Warning--I didn't find a database entry for "C94"
 Warning--I didn't find a database entry for "NP06"
@@ -28,55 +29,52 @@ Warning--I didn't find a database entry for "AKBH07"
 Warning--I didn't find a database entry for "SS10"
 Warning--I didn't find a database entry for "Sitetal17"
 Warning--I didn't find a database entry for "Bouchardetal18"
-Warning--I didn't find a database entry for "Unruh10"
 Warning--I didn't find a database entry for "DHNO19"
-Warning--I didn't find a database entry for "HK97"
-Warning--I didn't find a database entry for "Dupuis2015"
 Warning--empty booktitle in HIMV19
 Warning--empty journal in CDIKLOV19
 Warning--can't use both author and editor fields in S99
 Warning--empty booktitle in IKNP03
 Warning--empty journal in NNOB12
 Warning--empty booktitle in MR19
-You've used 251 entries,
+You've used 261 entries,
             1791 wiz_defined-function locations,
-            2002 strings with 45923 characters,
-and the built_in function-call counts, 66655 in all, are:
-= -- 6000
-> -- 3162
-< -- 75
-+ -- 1148
-- -- 897
-* -- 4504
-:= -- 10119
-add.period$ -- 829
-call.type$ -- 251
-change.case$ -- 246
+            2046 strings with 46960 characters,
+and the built_in function-call counts, 68922 in all, are:
+= -- 6215
+> -- 3240
+< -- 77
++ -- 1179
+- -- 918
+* -- 4647
+:= -- 10460
+add.period$ -- 859
+call.type$ -- 261
+change.case$ -- 256
 chr.to.int$ -- 0
-cite$ -- 257
-duplicate$ -- 3199
-empty$ -- 6378
-format.name$ -- 897
-if$ -- 15398
+cite$ -- 267
+duplicate$ -- 3304
+empty$ -- 6612
+format.name$ -- 918
+if$ -- 15916
 int.to.chr$ -- 0
-int.to.str$ -- 251
-missing$ -- 228
-newline$ -- 1239
-num.names$ -- 295
-pop$ -- 882
+int.to.str$ -- 261
+missing$ -- 236
+newline$ -- 1287
+num.names$ -- 305
+pop$ -- 913
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1767
+skip$ -- 1825
 stack$ -- 0
-substring$ -- 3870
-swap$ -- 1032
-text.length$ -- 75
+substring$ -- 4033
+swap$ -- 1060
+text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 583
-width$ -- 254
-write$ -- 2812
-(There were 26 warnings)
+while$ -- 606
+width$ -- 264
+write$ -- 2919
+(There were 24 warnings)
