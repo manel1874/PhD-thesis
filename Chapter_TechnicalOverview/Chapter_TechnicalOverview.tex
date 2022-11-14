@@ -274,9 +274,7 @@ where $||\cdot||_1$ is the $1-$Schatten norm in the space of bounded operators a
 
 In this work, we will be working with completely positive trace preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being trace preserving) and it maps positive operators to positive operators (hence being completely positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in Chapter~\ref{ch:QOLE} (quantum oblivious linear evaluation protocol). 
 
-It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarized in Lemma~\ref{lemma:trace_distance}.
-
-
+It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarised in Lemma~\ref{lemma:trace_distance}.
 
 %{\cv Useful links to support this: \href{https://en.wikipedia.org/wiki/Quantum_operation#Kraus_operators}{wiki} and \href{https://courses.cs.ut.ee/all/MTAT.07.024/2018_fall/uploads/notes.pdf}{Unruh lectures} on pag 16 (def of quantum operations) and Lemma 7}
 
@@ -294,6 +292,14 @@ It can be shown that CPTP maps cannot be used to improve the distinguishability 
 \end{enumerate}
 
 \label{lemma:trace_distance}
+\end{lemma}
+
+Although the following lemma is not directly related to the trace distance, it will be used in Chapter~\ref{ch:QOLE} to bound the trace distance between two states.
+
+\begin{lemma}[Corollary 4, \cite{LPTRG13}]
+Let $X:=\{x_1, \cdot, x_n\}$ be a list of (not necessarily distinct) values in $[0,1]$ with the average $\mu_X:=\frac{1}{n}\sum_{i=1^n} x_i$. Let $\mathcal{T}$ of size $t$ be a random subset of $X$ with the average $\mu_T := \frac{1}{t}\sum_{i\in T} x_i$. Then, for any $\epsilon > 0$, the set $\bar{\mathcal{T}} = X\setminus T$ with average $\mu_{\bar{\mathcal{T}}} = \frac{1}{n-t}\sum_{i\in K} x_i$ satisfies
+$$Pr\left[ \mu_{\bar{\mathcal{T}}} - \mu_T \geq \sqrt{\frac{n(t+1)}{2(n-t)t^2} \log \frac{1}{\epsilon}}  \right] \leq \epsilon.$$
+\label{lemma:trace_distance_bound}
 \end{lemma}
 
 
@@ -382,6 +388,14 @@ $$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \t
 and 
 $$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
 \end{definition}
+
+Now, consider again the superposition state $\ket{\phi}_{AB'} = \sum_{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}_{AB'}$ and the mixture $\tilde{\rho}_{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
+
+\begin{lemma}[Lemma 3.1.13, \cite{R06}]
+Let $\rho_{AB'}$ and $\tilde{\rho}_{AB'}$ be defined as above. Then,
+$$H_{\text{min}}(A | B')_{\rho} \geq H_{\text{min}}(A | B')_{\tilde{\rho}} - \log |\mathcal{B}|$$
+\label{lemma:renner_lower_bound}
+\end{lemma}
 
 It will be crucial in the security proof of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE} to understand how min-entropy changes when a completely positive (CP) map is applied. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result is not enough to achieve useful min-entropy bounds. To achieve a meaningful bound for certain operators $\mathcal{M}$, we can use Theorem~\ref{thm:entaglementSamplingResult} along with some other two results (Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}). Note that, for readability purposes, the theorem uses the notation presented in Chapter~\ref{ch:QOLE}.
 

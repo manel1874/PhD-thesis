@@ -1,6 +1,292 @@
 
 \appendix
 
+\chapter{Proof of Lemma \ref{lemma:wrole_dishonest_bob} (Dishonest Bob)}
+\label{app:proofBobdishonest}
+
+As we mentioned in the main text this proof is  a combination and adaptation to our case of results from \cite{DFLSS09} and \cite{Dupuis2015}. 
+
+To simplify the notation, in this proof we drop the subscript $0$ that refers to the RWOLE phase, e.g. we write Alice's function vector  $\mathbf{F}_0$,  simply  as $\mathbf{F}$. 
+
+
+Let the values that Bob commits be fixed as  $(x_i, r_i)\, \forall i\in[m]$, where $m = (1+t)n$ and $t n$  the number of qudits $\ket{e^{x_i}_{r_i}}$ used in the \textit{Test Phase} to check whether he is honest or not. Throughout the proof we denote by $\boldsymbol{x} = (x_1, \ldots, x_m)$ and $\boldsymbol{r} = (r_1, \ldots, r_m)$ the vectors in $\mathbb{Z}_d^m$ whose components contain Bob's commitments $\forall i\in [m]$, and by $X^m=(X_1,\ldots,X_m)$ the vector of the  random variables associated to  $x_i, i\in [m]$. For each  pair $(x_i, r_i)$, the corresponding qudit $\ket{e^{x_i}_{r_i}}$ belongs in the Hilbert space $\mathcal{H}_{X_i}$, and the quantum system including all the qudits is in $\mathcal{H}_{X^m}=\bigotimes_{i\in [m]}\mathcal{H}_{X_i}$. For simplicity, we refer to the quantum systems in terms of the corresponding  random variables  $X_i$, instead of the Hilbert spaces $\mathcal{H}_{X_i}$.
+
+
+Recall that the set $T\subset[m]$ contains the $tn$ indices of the test qudits, and by $\bar{T}$ we denote its complement $[m]\backslash T$.  For  $i\in T$, $\boldsymbol{x}_{|T}$ is the vector whose components are the  bases $x_i$  in which Alice will measure the test qudits, and $ \boldsymbol{r'}_{|T}$ is the vector whose components are Alice's measurement results. The corresponding quantum system is in the Hilbert space $\bigotimes_{i\in T}\mathcal{H}_{X_i}$, which for simplicity we denote as $X^m_{|T}$ in terms of the associated random variables.   
+Finally, $r_H(\cdot, \cdot)=d_H(\cdot, \cdot)/n$ is the relative Hamming distance between two  vectors of size $n$, with $d_H(\cdot, \cdot)$ being their Hamming distance.
+
+
+  
+\begin{proof}
+
+
+ Let us start by proving property 1. of Lemma \ref{lemma:wrole_dishonest_bob}.
+After the first step of the protocol $\mathcal{\pi}^n_{\text{RWOLE}}$ (Figure \ref{fig:wrole}),  the generated state is $\rho_{X^m E}$, where $E$ is an auxiliary quantum system that Bob holds. Without loss of generality we assume that $\rho_{X^m E} = \ketbra{\phi_{X^m E}}$,   i.e, it is a pure state\footnote{Otherwise, we purify it and carry the purification system along with $E$.}. If Bob is honest, we have that $\ket{\phi_{X^m E}}=\ket{e^{\boldsymbol{x}}_{\boldsymbol{r}}}\otimes \ket{\psi_{E}}$, i.e.,   Bob's auxiliary quantum system $E$ is not entangled to the states that he sends to Alice.  
+
+The \textit{Test Phase} of the protocol is used to guarantee that the real state is close to an ideal state that satisfies the properties 1. and 2. of Lemma \ref{lemma:wrole_dishonest_bob}. Let $\boldsymbol{r'}$ be the vector whose components are Alice's  outcomes when measuring the state of  $X^m$  in the committed bases $\bm{x}$, and let $\mathcal{T}$ be the random variable associated to the set of indexes $T$  of size $t n$. We can consider the state:
+\begin{equation}
+    \rho_{\mathcal{T}X^m E} = \rho_\mathcal{T}\otimes \ketbra{\phi_{X^m E}} = \sum_{T} P_\mathcal{T}(T) \ketbra{T}\otimes \ketbra{\phi_{X^m E}},
+\label{eq:real_definition}
+\end{equation}
+to be the state resulting from the real execution of the protocol, and prove that it is close to some state, $\sigma_{\mathcal{T}X^m E}$, that fulfills the following property: for any choice of $T$ and for any outcome $\boldsymbol{r'}_{|T}$ when measuring the state of  ${X^m}_{|T}$ in the bases $\boldsymbol{x}_{|T}$, the relative error $r_H(\boldsymbol{r'}_{|T}, \boldsymbol{r}_{|T})$  is an upper bound on the relative error $r_H(\boldsymbol{r'}_{|\bar{T}}, \boldsymbol{r}_{|\bar{T}})$, which one would obtain by measuring the remaining subsystems ${X^m}_{|\bar{T}}$  in the bases $\boldsymbol{x}_{|\bar{T}}$. This state, $\sigma_{\mathcal{T}X^m E}$, can be  written as: 
+\begin{equation}
+\sigma_{\mathcal{T}X^m E} = \sum_{T} P_\mathcal{T}(T) \ketbra{T}\otimes \ketbra{\tilde{\phi}_{X^m E}^{T}},
+\label{eq:ideal_definition}
+\end{equation}
+where $\forall T$, 
+\begin{equation}
+\ket{\tilde{\phi}_{X^m E}^{T}} = \sum_{\boldsymbol{r'}\in \mathcal{B}_{T}} \alpha_{\boldsymbol{r'}}^{T}\ket{e^{\boldsymbol{x}}_{\boldsymbol{r'}}}\otimes \ket{\psi^{\boldsymbol{r'}}_{E}},
+\label{eq:ideal_definition_2}
+\end{equation}
+for  $\mathcal{B}_{T} = \{ \boldsymbol{r'}\in \mathbb{Z}_d^{m}: r_H(\boldsymbol{r'}_{|\bar{T}}, \boldsymbol{r}_{|\bar{T}})\leq r_H(\boldsymbol{r'}_{|T}, \boldsymbol{r}_{|T}) + \zeta \}$  for  $\zeta>0$ and arbitrary coefficients $\alpha^T_{\boldsymbol{r'}}$. The state $\ket{\psi^{\boldsymbol{r'}}_{E}}$ is an arbitrary state on $E$ subsystem that possibly depends on $\boldsymbol{r'}$. Then we have:
+
+\begin{lemma}
+
+Let the quantum states $\rho_{\mathcal{T}X^m E}$ and $\sigma_{\mathcal{T}X^m E}$   be given by \eqref{eq:real_definition} and \eqref{eq:ideal_definition}, respectively. Then, $\forall \zeta >0$ and fixed strings $\boldsymbol{x}, \boldsymbol{r}\in \mathbb{Z}_d^{m}$, we have that
+\begin{equation*}
+    \rho_{\mathcal{T}X^m E} \approx_\epsilon \sigma_{\mathcal{T}X^m E},
+\end{equation*}
+where $\epsilon(\zeta, n) = \epsilon(\zeta, n) = \exp( -\frac{2 \zeta^2t^2n^2}{(nt+1)(t+1)})$. That is, the real state $\rho_{\mathcal{T}X^m E}$ is exponentially close, with respect to $n$, to the ideal state $\sigma_{\mathcal{T}X^m E}$.
+\label{lemma:dishonest_bob_2}
+\end{lemma}
+
+
+
+\begin{proof}
+This proof is an adaptation of the proof of Lemma 4.3 from \cite{DFLSS09} to our case.
+
+For any $T$, let $\ket{\tilde{\phi}_{X^m E}^T}$ be  the renormalized projection of $\ket{\phi_{X^m E}}$ into the subspace $$\text{Span}\left\{ \ket{e^{\boldsymbol{x}}_{\boldsymbol{r'}}} : \boldsymbol{r'} \in \mathcal{B}_{T} \right\}\otimes \mathcal{H}_{E},$$ and  let $\ket{\tilde{\phi}_{X^m E}^{T^\perp}}$ be the renormalized projection of $\ket{\phi_{X^m E}}$ into its orthogonal complement. 
+
+
+We can, then, write
+\begin{equation*}
+    \ket{\phi_{X^m E}} = \epsilon_T \ket{\tilde{\phi}_{X^m E}^T} + \epsilon_T^\perp \ket{\tilde{\phi}_{X^m E}^{T^\perp}},
+\end{equation*}
+with  $\epsilon_T = \braket{\tilde{\phi}_{X^m E}^T}{\phi_{X^m E}}$ and $\epsilon_T^\perp = \braket{\tilde{\phi}_{X^m E}^{T^\perp}}{\phi_{X^m E}}$. By construction, this state satisfies \eqref{eq:ideal_definition_2}.
+
+Furthermore, we can calculate the distance:
+\begin{equation*}
+    \delta\left( \ketbra{\phi_{X^m E}}, \ketbra{\tilde{\phi}_{X^m E}^T} \right) = \sqrt{1 - \left|\braket{\tilde{\phi}_{X^m E}^T}{\phi_{X^m E}}\right|^2} 
+=\sqrt{1 - |\epsilon_T|^2} 
+= |\epsilon_T^\perp|,
+\end{equation*}
+ where,  given $T$,  $|\epsilon_T^\perp|$ is the probability amplitude for getting  outcome $\boldsymbol{r'} \notin \mathcal{B}_{T}$ when measuring the state of $X^m$ in bases $\boldsymbol{x}$.
+We continue to derive an upper bound on the distance between the real and the ideal state: 
+\begin{eqnarray*}
+    \delta\big( \rho_{\mathcal{T}X^m E}, \sigma_{\mathcal{T}X^m E} \big) &=& \Bigg( \sum_T P_\mathcal{T}(T) \delta\left( \ketbra{\phi_{X^m E}}, \ketbra{\tilde{\phi}_{X^m E}^T} \right) \Bigg)^2\\
+    & \leq &\sum_T P_\mathcal{T}(T) |\epsilon_T^\perp|^2, 
+\end{eqnarray*}
+where we used Jensen's inequality and properties of the trace norm. The last term is the probability that, when choosing $T$ according to $P_{\mathcal{T}}$ and measuring the state of $X^m$ in bases $\boldsymbol{x}$ we get an outcome  $\boldsymbol{r'} \notin \mathcal{B}_{T}$. We write  
+\begin{equation*}
+     \sum_T P_\mathcal{T}(T)|\epsilon_T^\perp|^2 = \text{Pr}_{\mathcal{T}}[\boldsymbol{r'} \notin \mathcal{B}_{T}] = \text{Pr}_{\mathcal{T}}[r_H(\boldsymbol{r'}_{|\bar{T}}, \boldsymbol{r}_{|\bar{T}}) - r_H(\boldsymbol{r'}_{|T}, \boldsymbol{r}_{|T}) > \zeta].
+\end{equation*}
+ Then, we can use Lemma~\ref{lemma:trace_distance_bound} which states that the above probability is negligible in $n$ and gives us an upper bound for $\delta\big( \rho_{\mathcal{T}X^m E}, \sigma_{\mathcal{T}X^m E} \big)$. In particular, given the set $[m]$ with $(1+t)n$ elements, we apply the aforementioned corollary for a random subset $\mathcal{T}$ of size $tn$ and its complement $\bar{\mathcal{T}}$ of size $n$. Denoting by $\mu_{\mathcal{T}}$ and $\mu_{\bar{\mathcal{T}}}$, respectively,  the averages of these subsets, we obtain
+\begin{equation*}
+\text{Pr}[\mu_{\bar{\mathcal{T}}} - \mu_{\mathcal{T}} \geq \zeta] \leq \exp( -\frac{2 \zeta^2t^2n^2}{(nt+1)(t+1)}).
+    \end{equation*}
+
+Hence, we have:
+\begin{equation}
+    \delta\big( \rho_{\mathcal{T}X^m E}, \sigma_{\mathcal{T}X^m E} \big) \leq  \sum_T P_\mathcal{T}(T)|\epsilon_T^\perp|^2 \leq \exp( -\frac{2 \zeta^2t^2n^2}{(nt+1)(t+1)})=: \epsilon,
+\end{equation}
+concluding the proof of Lemma \ref{lemma:dishonest_bob_2}, i.e. that the real state \eqref{eq:real_definition} generated by the protocol until the \textit{Computation Phase}  is  $\epsilon-$close to the ideal state \eqref{eq:ideal_definition}.
+\end{proof}
+
+It is now straightforward to complete the proof of property 1. of Lemma \ref{lemma:wrole_dishonest_bob}. 
+
+To obtain the states $\sigma_{\mathbf{F} B'}$ and $\rho_{\mathbf{F} B'}$ from the states $\sigma_{\mathcal{T}X^m E}$ and $\rho_{\mathcal{T}X^m E}$, respectively, we need to apply the operator $V^{\bm{b}}_{\bm{a}}\Tr_{X^m_{|T}\,E_{|T}}[\, \cdot\,] V^{\bm{b} \dagger}_{\bm{a}}$. This operator  is a CPTP map, being the composition of the two CPTP maps, $V^{\bm{b}}_{\bm{a}}$ and $\Tr$. Since the trace distance between two density matrices does not increase under CPTP maps (see Lemma 7 in \cite{U17}), the final states indeed satisfy  property 1. of Lemma \ref{lemma:wrole_dishonest_bob}, namely 
+\begin{equation*}
+    \sigma_{\mathbf{F} B'} \approx_{\epsilon} \rho_{\mathbf{F} B'}.
+\end{equation*}
+
+
+
+ For the rest of this proof dishonest Bob's system $B'$ is identified with $\mathbf{Y}\, E$, where $\mathbf{Y}$ corresponds to the classical information leaking to him through the output of the WROLE and $E$ is, in general, a quantum auxiliary system that he might also hold. Consequently, from now on we write $\sigma_{\mathbf{F} B'}$ as $\sigma_{\mathbf{F} \mathbf{Y}E}$. Now, we have to prove property 2. of Lemma~\ref{lemma:wrole_dishonest_bob},  i.e., obtain the corresponding lower bound on min-entropy with respect to $\sigma_{\mathbf{F} \mathbf{Y}E}$. 
+  We start with  the following Lemma~\ref{XnBound}:
+
+
+ \begin{lemma}[Corollary 4.4 in \cite{DFLSS09}]
+\label{XnBound}
+Let $err := r_H(\boldsymbol{r'}_{|T}, \boldsymbol{r}_{|T}) \leq 1-\frac{1}{d}$ be the error measured by Alice  while measuring the state of $X^m_{|T}$ according to her choice of $T$, and let $\sigma_{\mathbf{X} E} := \ketbra{\psi}_{\mathbf{X} E}$ be the state to which the ideal state $\sigma_{\mathcal{T}X^m E}$ collapses after this measurement. Following \eqref{eq:ideal_definition} and \eqref{eq:ideal_definition_2}, we  write  $\ket{\psi}_{\mathbf{X} E} = \sum_{\boldsymbol{z}\in \mathcal{B}} \alpha_{\boldsymbol{z}}\ket{e^{\boldsymbol{x}}_{\boldsymbol{z}}} \ket{\psi^{\boldsymbol{z}}_{E}}$  for some $\ket{\psi^{\boldsymbol{z}}_{E}}$ and  $\mathcal{B} = \{ \boldsymbol{z}\in \mathbb{Z}_d^{n}: r_H(\boldsymbol{z}, \boldsymbol{r}_{|\bar{T}})\leq err + \zeta \}$ with $\zeta>0$. Then, we have: 
+\begin{equation}
+H_{\min}(\mathbf{X}|E)_{\sigma_{\mathbf{X} E}} \geq -h_d(err + \zeta) n\log d,
+\label{eq:min_entropy_1_stage}
+\end{equation}
+where $h_d(x)$ is given in Definition \ref{def:q-ary}.
+
+\end{lemma}
+\begin{proof}
+
+ We start by defining the state $\tilde{\sigma}_{\mathbf{X} E}: = \sum_{\bm{z}\in \mathcal{B}} |\alpha_{\bm{z}}|^2 \ketbra{e^{\boldsymbol{x}}_{\boldsymbol{z}}} \otimes \ketbra{\psi^{\boldsymbol{z}}_{E}}$. 
+Then, by applying Lemma~\ref{lemma:renner_lower_bound}, we obtain
+\begin{equation*}
+    H_{\text{min}}(\mathbf{X} |E)_{\sigma_{\mathbf{X} E}} \geq H_{\text{min}}(\mathbf{X} | E)_{\tilde{\sigma}_{\mathbf{X} E}} - \log |\mathcal{B}|.
+\end{equation*}
+
+
+Since $\tilde{\sigma}_{\mathbf{X} E}$  is a classical-quantum state, its min-entropy cannot be negative, i.e. $$H_{\text{min}}(\mathbf{X} | E)_{\tilde{\sigma}_{\mathbf{X} E}} \geq 0,$$ thus $H_{\text{min}}(\mathbf{X} |E)_{\sigma_{\mathbf{X} E}} \geq -\log |\mathcal{B}|$. 
+
+Finally, to get the lower bound shown in \eqref{eq:min_entropy_1_stage}, we apply Lemma~\ref{lemma:hammingBall} to our case, namely for the Hamming ball around $\boldsymbol{r}_{|\bar{T}}$ with radius $n(err + \zeta)$.
+
+\end{proof}
+
+To complete the proof of property 2. of Lemma \ref{lemma:wrole_dishonest_bob} and find a lower bound on $H_\text{min}(\mathbf{F}|\mathbf{Y}\, E)\sigma_{\mathbf{F} \mathbf{Y}E}$  we need to relate it with $H_{\text{min}}(\mathbf{X} |E)_{\sigma_{\mathbf{X} E}}$, for which we just derived a lower bound. In what follows, we 
+  adapt the notation from \cite{Dupuis2015}:
+
+\begin{itemize}
+    \item $\Phi_{\mathbf{X} \bar{\mathbf{X}}} = \ketbra{\Phi}_{\mathbf{X} \bar{\mathbf{X}}}$, where $\ket{\Phi}_{\mathbf{X} \bar{\mathbf{X}}} = \sum_{\bm{s}} \ket{e^{\bm{x}}_{\bm{s}}}_{\mathbf{X} } \otimes \ket{e^{\bm{x}}_{\bm{s}}}_{\bar{\mathbf{X}}}$ for all basis choices   $\bm{x}  \in\mathbb{Z}^n_d$, and
+    \item $\Phi_{(\bm{a},\bm{b})} = \ketbra{\Phi_{(\bm{a},\bm{b})}} = \sum_{\bm{s s'}} V^{\bm{b}}_{\bm{a}} \ketbra{e^{\bm{x}}_{\bm{s}}}{e^{\bm{x}}_{\bm{s'}}} V^{\bm{b}\dagger}_{\bm{a}} \otimes \ketbra{e^{\bm{x}}_{\bm{s}}}{e^{\bm{x}}_{\bm{s'}}}$, with $\ket{\Phi_{(\bm{a},\bm{b})}} = (V^{\bm{b}}_{\bm{a}} \otimes \mathds{1}) \ket{\Phi}_{\mathbf{X} \bar{\mathbf{X}}}$,  for $(\bm{a},\bm{b})\in\mathbb{Z}^2_d$
+\end{itemize}
+and we use the following properties of the operators $V_a^b$, which can be derived from \eqref{eq:main_relation}:
+
+\begin{enumerate}%[(a)]
+    \item $V^b_a \ketbra{e^x_i} V^{b \dagger}_a = \ketbra{e^x_{ax - b + i}}$, \label{prop:a}
+    \item $V^b_a = \sum_j c_{a,b,j,x} \ketbra{e^x_{ax - b + j}}{e^x_j}$,\label{prop:b}
+    \item $V^{b\dagger}_a = \sum_j c_{a,b,j,x}^* \ketbra{e^x_j}{e^x_{ax - b + j}}$.\label{prop:c}
+\end{enumerate}
+The following lemma,  which is an adaptation of Theorem 12 in \cite{Dupuis2015} to our case, provides a lower bound for $H_\text{min}(\mathbf{F}|\mathbf{Y}\, E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$ in terms of $H_{\text{min}}(\mathbf{X} |E)_{\sigma_{\mathbf{X}E}}$:
+\begin{lemma} 
+\label{lem:GnBound}
+Let $\mathbf{X}$ denote our $n$-qudit system and $\sigma_{\mathbf{X} E}$ be the ideal quantum state to which the system collapsed after Alice's test measurements, as introduced before. Then, we have:
+\begin{equation*}
+    \text{H}_\text{min}(\mathbf{F}|\mathbf{Y}\, E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \frac{1}{2} \big(n\log d + \text{H}_\text{min}(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}\big),
+\end{equation*}
+where 
+\begin{equation}
+    \sigma_{\mathbf{F}\mathbf{Y} E} = \frac{1}{d^{2n}} \sum_{(\bm{a}, \bm{b}) \in \mathbb{Z}^{2n}_d} \ketbra{e^{\bm{x}}_{\bm{a}},e^{\bm{x}}_{\bm{b}}}\otimes V^{\bm{b}}_{\bm{a}} \, \sigma_{\mathbf{X} E}\,  V^{\bm{b}\dagger}_{\bm{a}},
+    \label{eq:VappliedX}
+\end{equation}
+is the state obtained when $V^{\bm{b}}_{\bm{a}}$ is applied to the system $\mathbf{X}$ according to $\mathbf{F}$. 
+\end{lemma}
+
+\begin{proof}
+This proof is an adaptation of the proof of Theorem 12 in \cite{Dupuis2015} to our case.
+Let us fix $x\in\mathbb{Z}_d$ and write $\ket{i} = \ket{e^x_i}$  for short. 
+ $V^b_a$ is a CPTP map, and it is known that the min-entropy does not decrease whenever a CPTP map is applied. However, this is not enough  to prove the security of the protocol and determine a lower bound. We need a more refined expression relating  $H_{\min}(\mathcal{M}(\mathbf{X})|E)$ and  $H_{\min}(\mathbf{X}|E)$ for some CPTP map $\mathcal{M}$. This is given by
+ the following Lemma~\ref{thm:entaglementSamplingResult},  which is an adaptation of Theorem 1 in \cite{Dupuis2015} to our case:
+
+\begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
+\label{thm:entaglementSamplingResult}
+Let $\mathbf{X}$ denote our system of  $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. As above, let $\sigma_{\mathbf{X} E}$ be the ideal quantum state to which the system collapsed after Alice's test measurements.  Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, we have 
+\begin{equation}
+    2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + (\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n,
+\end{equation}
+ where, in general, for a (not necessarily normalized) quantum state $\rho_{AB}\in \mathcal{P}(\mathcal{H}_A\otimes\mathcal{H}_B)$, $\text{H}_2(A|B)$   is the so-called \textit{collision entropy}~\cite{R06}, given as 
+\begin{equation*} 
+    \text{H}_2(A|B)_{\rho_{AB}}=-\log \left(\Tr{\left(\rho_{B}^{-1/4}\rho_{AB}\rho_B^{-1/4}\right)^2}\right).
+\end{equation*}
+If we further condition on a general quantum state $\sigma_B\in\mathcal{P}(\mathcal{H}_B)$, we have 
+\begin{equation*}
+    \text{H}_2(A|B)_{\rho_{AB}|\sigma_B}=-\log \left(\Tr{\left(\sigma_{B}^{-1/4}\rho_{AB}\sigma_B^{-1/4}\right)^2}\right).
+\end{equation*}
+\end{lemma}
+We can apply the above Lemma~\ref{thm:entaglementSamplingResult}  with $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}} = \mathcal{N}^{\otimes n}$, where $\mathcal{N}(\sigma_X) = \frac{1}{d^2}\sum_{(a,b)\in\mathbb{Z}^2_d}\mathcal{N}_{a,b} \sigma_X \mathcal{N}_{a,b}^\dagger = \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \bigg( \ket{a,b} \otimes V^b_a \bigg) \sigma_X \bigg( \bra{a,b} \otimes V^{b\dagger}_a \bigg) $. The operator $\mathcal{N}$ applies the operator $V^b_a$ to the single system $X$ and saves its choice $(a,b)$ to a new record in the  $F$ space.  
+
+To continue, we want to write $((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}) (\Phi_{\mathbf{X} \bar{\mathbf{X}}})$  as a linear combination of $\Phi_{(\bm{a},\bm{b})}$, i.e.
+$$((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}) (\Phi_{\mathbf{X} \bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in \mathbb{Z}^{2n}} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}.$$
+
+First, note that 
+\begin{align}
+    \mathcal{N}(\ketbra{i}{j}) &= \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \bigg( \ket{a,b} \otimes V^b_a \bigg) \ketbra{i}{j} \bigg( \bra{a,b} \otimes V^{b\dagger}_a \bigg) \nonumber\\
+    \alignedoverset{\ref{prop:a}}{=} \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \ketbra{a,b} \otimes \ketbra{ax-b+i}{ax-b+j}, \label{eqn:Nresult}
+\end{align}
+
+where we used the property \ref{prop:a}.  We proceed to compute $\mathcal{N}^\dagger \circ \mathcal{N} \ketbra{i}{j}$:
+\begin{align}
+\mathcal{N}^\dagger \circ \mathcal{N} \ketbra{i}{j} &= \frac{1}{d^2} \sum_{(a',b')\in\mathbb{Z}^2_d} \mathcal{N}^\dagger_{a' b'} (\mathcal{N}\ketbra{i}{j})) \mathcal{N}_{a' b'} \nonumber\\
+\alignedoverset{\text{eq.(\ref{eqn:Nresult})}}{=} \frac{1}{d^4} \sum_{(a',b'),(a,b)\in\mathbb{Z}^2_d} \Big(\bra{a',b'} \otimes V^{b'\dagger}_{a'} \Big) \ketbra{a,b} \nonumber \\
+&\hspace{4.5cm}\otimes \ketbra{ax-b+i}{ax-b+j} \Big( \ket{a',b'} \otimes V^{b'}_{a'}  \Big) \nonumber\\
+\alignedoverset{\ref{prop:b}, \ref{prop:c}}{=} \frac{1}{d^4}\sum_{(a,b)\in\mathbb{Z}^2_d} V^{b\dagger}_{a} \ketbra{ax-b+i}{ax-b+j} V^b_a \nonumber\\
+&= \frac{1}{d^4} \sum_{(a,b)\in\mathbb{Z}^2_d} \ketbra{i}{j} \nonumber\\
+&= \frac{1}{d^2} \ketbra{i}{j}, \label{eqn:NdaggerNresult} 
+\end{align}
+and
+\begin{align}
+    ((\mathcal{N}^\dagger \circ \mathcal{N})_{X} \otimes \text{id}_{\bar{X}}) (\Phi_{X \bar{X}}) &= \sum_{i,j} \mathcal{N}^\dagger \circ \mathcal{N} (\ketbra{i}{j}) \otimes \ketbra{i}{j} \nonumber\\
+\alignedoverset{\text{eq.}(\ref{eqn:NdaggerNresult}) }{=} \sum_{i,j} \Big(  \frac{1}{d^2} \ketbra{i}{j} \Big) \otimes \ketbra{i}{j} \nonumber\\
+&= \frac{1}{d^2} \sum_{i,j} \ketbra{i}{j} \otimes \ketbra{i}{j} \nonumber\\
+&= \frac{1}{d^2} \Phi_{X \bar{X}}.\label{eqn:NdaggerNidresult}
+\end{align}
+Therefore, we have that 
+\begin{equation}
+    \big((\mathcal{N}^\dagger \circ \mathcal{N})_{X} \otimes \text{id}_{\bar{X}}\big) (\Phi_{X \bar{X}}) = \frac{1}{d^2} \Phi_{(0,0)},
+\end{equation}
+from which we easily see that 
+\begin{equation}
+    \big((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}\big) (\Phi_{\mathbf{X} \bar{\mathbf{X}}}) = \frac{1}{d^{2n}} \Phi_{(\bm{0},\bm{0})}.
+\end{equation}
+Consequently, 
+\begin{equation*}
+    \lambda_{(\bm{a}, \bm{b})}= \left\{
+\begin{array}{ll}
+      \frac{1}{d^{2n}} & \text{if } (\bm{a}, \bm{b}) = (\bm{0},\bm{0})\\
+      0 & \text{otherwise.} \\
+\end{array} 
+\right. 
+\end{equation*}
+
+Now, we want to choose the partition that gives us the best lower bound on the collision entropy, i.e. decreases the r.h.s of the following relation:
+\begin{equation*}
+2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}} \leq \sum_{(\bm{a},\bm{b}) \in \mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}} + (\max_{(\bm{a},\bm{b}) \in \mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n.
+\end{equation*}
+
+Note that  we dropped the conditioning on the state $\sigma_{\mathbf{X}E}$ at $\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$. This is because the map $\mathcal{M}$ is trace-preserving (for a detailed explanation see \cite{Dupuis2015} below Theorem 1). For our case there are just two types of partitions: the case where $0 \in \mathfrak{S}_+$ and the case where $0 \in \mathfrak{S}_-$. If $0 \in \mathfrak{S}_+$:
+\begin{equation*}
+\text{r.h.s} = \sum_{(\bm{a}, \bm{b}) \in \mathfrak{S}_+} \lambda_{s} 2^{-\text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}} = \frac{1}{d^{2n}} 2^{-\text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}} \leq \frac{1}{d^n}.
+\end{equation*}
+The last inequality holds because $-n\log d \leq \text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}} \leq n\log d$. In fact,
+\begin{equation*}
+ \frac{1}{d^{2n}} 2^{-\text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}} \leq \frac{1}{d^n}
+\iff 2^{-\text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}} \leq d^n 
+\iff \text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}\geq -n\log d.
+\end{equation*}
+
+If $0 \in \mathfrak{S}_-$, $\text{r.h.s} = \frac{1}{d^n}$ which, as we have just seen by the previous inequality, does not provide a better lower bound on the collision entropy whenever $\text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}} \neq -n\log d$.
+
+So, choosing any partition such that $0 \in \mathfrak{S}_+$, we get
+\begin{equation*}
+2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}} \leq \sum_{(\bm{a}, \bm{b}) \in \mathfrak{S}_+} \lambda_{(\bm{a}, \bm{b})} 2^{-\text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}} + (\max_{(\bm{a}, \bm{b}) \in \mathfrak{S}_-} \lambda_{(\bm{a}, \bm{b})}) d^n =\frac{1}{d^{2n}} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X} E}}},
+\end{equation*}
+from which we conclude that
+\begin{equation}
+\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq 2n\log d + \text{H}_2(\mathbf{X}|E)_{\sigma_{\mathbf{X} E}}.  \label{eqn:firstineq} 
+\end{equation}
+
+In order to relate $\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$ with $\text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$, we use the chain rule proved in Proposition 8 of \cite{MDSFT13}:
+\begin{equation}
+\text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} - \log \text{rank}(\sigma_{\mathbf{Y}}) \geq \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} - n \log d,
+ \label{eqn:chainRule} 
+\end{equation}
+since $\log \text{rank}(\sigma_{\mathbf{Y}}) \leq n \log d$. Combining (\ref{eqn:firstineq}) and (\ref{eqn:chainRule}), we get the desired result:
+
+\begin{equation*}
+    \text{H}_2(\mathbf{F}|\mathbf{Y}\, E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq n\log d + \text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}.
+\end{equation*}
+To express the above relation in terms of the min-entropy instead of the collision entropy, we start by noticing that 
+ the state given in \eqref{eq:VappliedX} can be written as 
+\begin{align}
+  \sigma_{\mathbf{F}\mathbf{Y} E} &= \frac{1}{d^{2n}} \sum_{(\bm{a}, \bm{b}) \in \mathbb{Z}^{2n}_d} \ketbra{\bm{a},\bm{b}}\otimes V^{\bm{b}}_{\bm{a}} \, \sigma_{\mathbf{X} E}\,  V^{\bm{b}\dagger}_{\bm{a}} = \frac{1}{d^{2n}} \sum_{(\bm{a}, \bm{b}) \in \mathbb{Z}^{2n}_d} \ketbra{\bm{a},\bm{b}}\otimes \sigma_{\mathbf{X} E}^{\bm{a},\bm{b}},
+\end{align}
+which is a classical-quantum state. Therefore, we can use Lemma 18 from \cite{Dupuis2015} to obtain
+\begin{equation*}
+     \text{H}_{\text{min}}(\mathbf{F}|\mathbf{Y}\, E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}  \geq \frac{1}{2}\left(n\log d + \text{H}_2(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}}\right).
+\end{equation*}
+Furthermore,  $\sigma_{\mathbf{X}E}$  is a general quantum state, and from Lemma 17 in \cite{Dupuis2015} we have 
+\begin{equation*}
+    \text{H}_{\text{min}}(\mathbf{F}|\mathbf{Y}\, E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}  \geq \frac{1}{2}\left(n\log d + \text{H}_{\text{min}}(\mathbf{X}| E)_{\sigma_{\mathbf{X} E}} \right).
+\end{equation*}
+\end{proof}
+
+
+
+To complete the proof of property 2. of Lemma \ref{lemma:wrole_dishonest_bob}, we  combine Lemma~\ref{XnBound} and Lemma~\ref{lem:GnBound}  and obtain:
+\begin{equation*}
+H_{\min}(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \frac{1}{2}(n\log d - h_d(\zeta)n\log d) = \frac{n\log d}{2}(1 - h_d(\zeta)),
+\end{equation*}
+for $err = 0$.
+
+\end{proof}
+
 \chapter{Jukes-Cantor distance for CBMC-GC}\label{appendix:appendixA}
 %\addcontentsline{toc}{chapter}{Appendix A}
 

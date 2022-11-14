@@ -60,7 +60,90 @@ For a dishonest Bob, we have to show the existence of a simulator, $\mathcal{S}_
 
 
 \subsection{Organization}\label{Intro_organization}
+{\cv Check in the end!}
  In Section \ref{Prelim}, we introduce notation and state results and definitions, that we will use in the rest of the paper. In Section \ref{insecureQOLE}, in order to build some intuition, we present a QOLE protocol that is secure only if we consider Bob to be semi-honest; in case Bob is dishonest, its security is compromised. In Section \ref{secureQROLE_overview}, we construct a secure protocol that comprises the first part of our main QOLE protocol presented in Section \ref{qole_protocol}. Next, in Section \ref{secureQROLE_protocol}, we prove the security of the QOLE protocol in the quantum-UC framework.   Finally, in the last Section \ref{sec:protgeneral}, we show how to generalize the presented QOLE protocol to  Galois Fields of prime-power dimensions and we also present a quantum-UC secure protocol achieving VOLE.
+
+
+\section{Mutually unbiased bases}\label{Prelim_MUB}
+
+In this section, we present the basics and some properties of mutually unbiased bases (MUBs) in some high-dimensional Hilbert space $\mathcal{H}^d$. This is the main tool that is used in our protocol. For more details about MUBs see \cite{DEBZ10}.
+
+\begin{definition}
+Let $\mathcal{B}_0 = \{\ket{\psi_1}, \ldots, \ket{\psi_d}\}$ and $\mathcal{B}_1 = \{\ket{\phi_1}, \ldots, \ket{\phi_d}\}$ be orthonormal bases in the d-dimensional Hilbert space $\mathcal{H}^d$. They are said to be \textit{mutually unbiased} if $| \braket{\psi_i}{\phi_j} | = \frac{1}{\sqrt{d}}$ for all $i, j\in \{1,\ldots,d\}$. Furthermore, a set $\{\mathcal{B}_0, \ldots, \mathcal{B}_m\}$ of orthonormal bases on $\mathcal{H}^d$ is said to be a set of MUBs if, for every $i\neq j$, $\mathcal{B}_i$ is mutually unbiased with $\mathcal{B}_j$.
+\end{definition}
+
+MUBs are extensively used in quantum cryptography because, in some sense, these bases are as far as possible from each other and the overlap between two elements from different bases is constant. Let $\big\{\ket{0}, \ldots, \ket{d-1}\big\}$ be the computational basis of $\mathcal{H}^d$, where $d$ is a prime number, and $\big\{\ket{\tilde{0}}, \ldots, \ket{\widetilde{d-1}}\big\}$ be the dual basis which is given by the Fourier transform on the computational basis:
+\begin{equation*}
+    \ket{\tilde{j}} = \frac{1}{\sqrt{d}} \sum_{i=0}^{d-1} \omega^{-i j} \ket{i},\label{eq:dualbasis}
+\end{equation*}
+where $\omega = e^{\frac{2\pi i}{d}}$. We can easily verify that the computational basis and its dual basis are mutually unbiased, and we will make use of the following two operators, $V^0_a$ and $V^b_0$, to encode Alice's functions during the first (quantum) phase of the protocol.
+
+\begin{definition}[Shift operators]
+The \textit{shift operator} $V^0_a$ shifts the computational basis by $a$ elements, i.e.
+\begin{equation*}
+    V^0_a\ket{i} = \ket{i+a}.\label{eq:shiftoperato}
+\end{equation*}
+
+Similarly, the \textit{dual shift operator} $V^b_0$ shifts the dual basis by $b$ elements, i.e.
+
+\begin{equation*}
+    V^b_0\ket{\tilde{j}} = \ket{\widetilde{j-b}}.\label{eq:dualshift}
+\end{equation*}
+\end{definition}
+The operators $V^0_a$ and $V^b_0$ are diagonal in the dual and computational basis, respectively\footnote{Note that $V^0_a$ and $V^b_0$ can be seen as a generalization of the Pauli $X$ and $Z$ operators, respectively.}, i.e.
+\begin{equation*}
+    V^0_a = \sum_{j=0}^{d-1} \omega^{a j} \ketbra{\tilde{j}}{\tilde{j}} \text{ and }V^b_0 = \sum_{i=0}^{d-1} \omega^{b i} \ketbra{i}{i}.
+\end{equation*}
+Furthermore, following the convention from \cite{DEBZ10}, we can define
+\begin{eqnarray*}
+V^b_a &:=& V^b_0 V_a^0= \sum^{d-1}_{l=0} \omega^{(l+a)b} \ketbra{l+a}{l},
+\end{eqnarray*}
+obtaining the so-called \textit{Heisenberg-Weyl operators}. These operators form a group of unitary transformations with $d^2$ elements; the group has $d+1$ commuting abelian subgroups of $d$ elements, and for each abelian subgroup, there exists a basis of joint eigenstates of all $V^b_a$ in the subgroup. These $d+1$ bases are pairwise mutually unbiased.
+Let $x\in\mathbb{Z}_{d+1}$ label the abelian subgroups, let $l\in\mathbb{Z}_d$ label the elements of each subgroup, and let $U^x_l$ denote the corresponding subgroup operators. Finally, let the $i-$th basis element associated with the $x-$th subgroup be denoted by $\ket{e^x_i}$. Then, it can be seen that \cite{DEBZ10},
+
+\begin{equation*}
+    U^x_l = \sum^{d-1}_{i=0} \omega^{i l} \ketbra{e^x_i}{e^x_i} \text{ and }\ket{e^x_i} = \frac{1}{\sqrt{d}} \sum^{d-1}_{l=0} \omega^{- i l + \frac{l(l-1)}{2}x}\ket{l},
+\end{equation*}
+where
+\begin{equation*}
+    U^x_l = \alpha^x_l V^{x l}_l \text{ with }\alpha^x_l = \omega^{-x l(l+1)/2}.
+\end{equation*}
+One can show that
+\begin{equation*}
+  V^b_a \ket{e^x_0} = c_{x,a,b} \ket{e^x_{ax - b}},\, x\in\mathbb{Z}_d  \text{ and }
+V^b_a \ket{e^d_0} = c_{d,a,b} \ket{e^d_a} {\text{ for } x=d},\end{equation*}
+or more generally
+\begin{equation}
+    V^b_a \ket{e^x_r} = c_{a, b, x, r} \ket{e^x_{ax - b + r}}, \text{ with }\, c_{a, b, x, r} = \omega^{ar + \frac{a(a+1)}{2}x}. \label{eq:main_relation}
+\end{equation}
+\begin{proof}
+By definition, we have that
+\begin{eqnarray*}
+V^b_a \ket{e^x_r} &=& \frac{1}{\sqrt{d}} \sum_{k,l = 0}^{d-1} \omega^{(k+a)b}\ketbra{k+a}{k} \omega^{-rl + \frac{l(l-1)}{2}x} \ket{l}\\
+&=&  \frac{1}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{(l+a)b} \omega^{-rl + \frac{l(l-1)}{2}x} \ket{l+a}\\
+&=&  \frac{1}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{lb}\omega^{-r(l-a) + \frac{(l-a)(l-a-1)}{2}x} \ket{l} \\
+&=&  \frac{\omega^{ar}}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{-l(-b+r)}\omega^{ \frac{l(l-1)}{2}x + lax + \frac{a(a+1)}{2}x } \ket{l} \\
+&=&  \frac{\omega^{ar}}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{-l(-b+r)}\omega^{ \frac{l(l-1)}{2}x - lax + \frac{a(a+1)}{2}x } \ket{l} \\
+&=&  \frac{\omega^{ar + \frac{a(a+1)}{2}x}}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{-l(ax-b+r) + \frac{l(l-1)}{2}x}\\
+&=& \omega^{ar + \frac{a(a+1)}{2}x \ket{e^x_{ax - b + r}}}
+\end{eqnarray*}
+\end{proof}
+This last property is the main ingredient for the construction of our protocol as it encodes a linear evaluation based on values $a$, $b$ and $x \in \mathbb{Z}_d$\footnote{While $x \in \mathbb{Z}_{d+1}$, henceforth we consider $x \in \mathbb{Z}_{d}$, since we only use $d $ out of the $d+1$ MUBs.}. In our protocol, we take $a,b$ -- that determine the operators $V^b_ a$ -- to be Alice's inputs and $x$ to be Bob's input.
+
+Finally, let us see how the operators $V^b_a$ act on the so-called \textit{generalized Bell states}, since Bob's attack to the protocol is based on that. We start with the definition of the \textit{seed} Bell state 
+\begin{equation*}
+    \ket{B_{0,0}} = \frac{1}{\sqrt{d}}\sum_{i} \ket{i^*, i},\label{eq:Bellseed}
+\end{equation*}
+where the map $\ket{\psi}\rightarrow\ket{\psi^*}$ is defined by taking the complex conjugate of the coefficients:
+
+$$\ket{\psi} = \sum_i \beta_i \ket{i}\rightarrow \ket{\psi^*} = \sum_i \beta_i^* \ket{i}.$$
+
+Using the properties of the operators $V_a^b$, we can derive the rest of the generalized Bell states from the seed state, as
+
+\begin{eqnarray}
+\ket{B_{a,b}} &=& (\mathds{1} \otimes V^b_a) \ket{B_{0,0}} = \frac{1}{\sqrt{d}} \sum_{i=0}^{d-1} \omega^{(i+a)b} \ket{i^*, i+a}, \label{eq:bob_attack}
+\end{eqnarray}
+and one can prove that the set $\{\ket{B_{a, b}}\}_{(a,b) \in\mathbb{Z}_d^2}$ constitutes an orthonormal maximally entangled basis in the Hilbert space of two-qudit states \cite{DEBZ10}.
 
 
 
@@ -168,17 +251,17 @@ In the next sections, we break down the protocol, show its correctness and retri
 We now introduce the quantum phase of the proposed QOLE protocol, which we informally call the random weak OLE (RWOLE) phase. We denote by $\mathcal{\pi}^n_{\text{RWOLE}}$ the protocol that implements this RWOLE phase and we present it in Figure~\ref{fig:wrole}. The protocol $\mathcal{\pi}^n_{\text{RWOLE}}$ is divided into four phases: Initialization, Test, Computation and Measurement. 
 
 
-
-
 \begin{figure}[h!]
-\centering
-\framebox[\linewidth][c]{%
-    \parbox{0.95\linewidth}{%
-    \begin{center}
-        \textbf{Protocol $\mathcal{\pi}^n_{\text{RWOLE}}$}
-    \end{center}
-    
-    \textbf{Parameters:} $n$, number of output  qudits; $t$, proportion of receiver test  qudits.
+    \centering
+        \begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+            
+            \centerline{\textbf{Protocol $\mathcal{\pi}^n_{\text{RWOLE}}$}}
+            
+            \
+            
+\textbf{Parameters:} $n$, number of output  qudits; $t$, proportion of receiver test  qudits.
 
     \
     
@@ -221,11 +304,12 @@ We now introduce the quantum phase of the proposed QOLE protocol, which we infor
     \textbf{Alice's output:} $(a^0_i, b^0_i)$, for $i \in [n]$.
     
     \textbf{Bob's output:} $(x^0_i, y^0_i)$, where $y^0_i=g_i(x^0_i) = a^0_i x^0_i - b^0_i$ for $i \in [n]$.
-    }%
-}
+        
+        \end{tcolorbox}
 \caption{RWOLE protocol.}
 \label{fig:wrole}
 \end{figure}
+
 
 If both parties are honest the  protocol is correct: if Alice is honest, her functions $\mathbf{F}_0$ are chosen uniformly at random, and if Bob is honest he will obtain $\ket{e^{x^0_i}_{a^0_ix^0_i - b^0_i + r_i}}_{i\in [n]}$ according to Equation \eqref{eq:main_ingredient}.
  %We could think of RWOLE protocol as a preparation phase protocol where some "key" is generated in order to be used later during the post-processing phase (compare with oblivious keys \cite{Lemus2020}, \cite{DFLSS09}). 
