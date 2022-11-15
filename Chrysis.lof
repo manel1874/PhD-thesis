@@ -21,24 +21,24 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {ALSZ13}.\relax }}{58}{figure.caption.41}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Precomputation and transfer phases of OT extensions protocol presented in \cite {KOS15}.\relax }}{61}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Semi-honest QOLE protocol.\relax }}{73}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces RWOLE protocol.\relax }}{75}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces WOLE protocol.\relax }}{77}{figure.caption.51}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Extraction protocol.\relax }}{81}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces QOLE protocol.\relax }}{83}{figure.caption.54}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Simulator $\mathcal {S}_A$ against dishonest Alice.\relax }}{85}{figure.caption.55}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Simulator $\mathcal {S}_B$ against dishonest Bob.\relax }}{87}{figure.caption.56}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Extraction protocol for VOLE.\relax }}{92}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces QOKD protocol in the bounded-quantum-storage model.\relax }}{77}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Example of rooted phylogenetic tree.\relax }}{81}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Overview of the $A^a_d$ network structure.\relax }}{82}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Overview of the integration of the QOKD service and the CBMC-GC tool in the Yao protocol.\relax }}{84}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt {12-19} in Figure\nobreakspace {}\ref {fig:jc_cbmc-gc} in Appendix\nobreakspace {}\ref {appendix:appendixA}.\relax }}{88}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{98}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{99}{figure.caption.77}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{99}{figure.caption.78}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces QOKD protocol in the bounded-quantum-storage model.\relax }}{107}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Example of rooted phylogenetic tree.\relax }}{111}{figure.caption.66}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of the $A^a_d$ network structure.\relax }}{112}{figure.caption.67}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Overview of the integration of the QOKD service and the CBMC-GC tool in the Yao protocol.\relax }}{114}{figure.caption.68}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt {12-19} in Figure\nobreakspace {}\ref {fig:jc_cbmc-gc} in Appendix\nobreakspace {}\ref {appendix:appendixA}.\relax }}{118}{figure.caption.72}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{128}{figure.caption.86}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{129}{figure.caption.87}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{129}{figure.caption.88}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Semi-honest QOLE protocol.\relax }}{109}{figure.caption.79}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces RWOLE protocol.\relax }}{111}{figure.caption.80}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces WOLE protocol.\relax }}{113}{figure.caption.82}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Extraction protocol.\relax }}{117}{figure.caption.84}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces QOLE protocol.\relax }}{119}{figure.caption.85}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Simulator $\mathcal {S}_A$ against dishonest Alice.\relax }}{121}{figure.caption.86}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulator $\mathcal {S}_B$ against dishonest Bob.\relax }}{123}{figure.caption.87}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Extraction protocol for VOLE.\relax }}{128}{figure.caption.88}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Jukes-Cantor distance C code for CBMC-GC boolean circuit generation.\relax }}{135}{figure.caption.89}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Jukes-Cantor distance C code for CBMC-GC boolean circuit generation.\relax }}{143}{figure.caption.89}%

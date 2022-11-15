@@ -1,6 +1,86 @@
 
 \appendix
 
+\chapter{Jukes-Cantor distance for CBMC-GC}\label{appendix:appendixA}
+%\addcontentsline{toc}{chapter}{Appendix A}
+
+%\begin{appendices}
+%
+%\section{Jukes-Cantor code for CBMC-GC}
+%\label{appendix:JC}
+
+The boolean circuit that represents the Jukes-Cantor distance receives as inputs two four-based sequences ($A$, $C$, $G$, $T$) with size $32\, 000$. Since we are using a boolean circuit representation, the nucleotide sequences must be represented in binary. So, by convention, we use the following 2-bit encoding: $A = 00$, $C = 01$, $G = 10$ and $T = 11$. As a result, we start by defining a sequence type of size $4\, 000$ with the $\texttt{unsigned short}$ type elements (Figure~\ref{fig:jc_cbmc-gc}, lines $1-5$). In fact, the type $\texttt{Array\_Seq}$ saves $4\, 000 \times 16 = 64\, 000$ bits. Each element of $\texttt{Array\_Seq}$ represents a small sequence of eight elements. This is an implementation choice that renders a good compromise between accuracy level and circuit size.
+
+As we saw in the main text, the hamming distance between two binary strings can then be easily computed by XORing them and counting the number of 1’s. This last operation is commonly called $\texttt{popcount}$. We cannot directly apply this approach because our sequences are in fact four-based sequences. In fact, our version of the $\texttt{popcount}$ function is only interested in computing the number of 2-bit elements that are different between both sequences.
+
+We follow a tailored divide-and-conquer technique. The original technique is described by Henry Warren in his book “Hacker’s Delight”, chapter 5 \citep{W12}. In summary, the original technique starts by counting in parallel the number of 1’s inside each 2-bit block and saves it in 2-bit blocks. Then, it adds two 2-bit blocks and saves the result in a 4-bit block. It continues until we get the final sum. If we follow directly this approach we might run into wrong results as described in the main text. For our case, instead of counting the number of 1’s inside every 2-bit block, we only care if there is one element 1 inside each 2-bit block. This simply indicates that the elements at that site are different. This is achieved by applying an $\texttt{OR}$ operation (represented by $\texttt{|}$) to the bits inside each 2-bit block (Figure~\ref{fig:jc_cbmc-gc}, line $14$). For 4-bit blocks and above we follow the same recipe of the original divide-and-conquer technique. 
+
+The main function that computes the Hamming weight between two nucleotide sequences $\texttt{INPUT\_A}$ and $\texttt{INPUT\_B}$ is defined by the function $\texttt{mpc\_main}$, line $21$. It outputs the inverse of the hamming weight: $\texttt{total/distance}$ line $37$. Since we know the hamming weight lies between $0$ and $1$, it renders smaller circuits to use the native integer division operator, $/$, from the CBMC-GC tool and then invert the output after the Yao computation. Otherwise, we would need a fixed precision representation to output decimal numbers.
+
+Below we describe the variables used in the $\texttt{mpc\_main}$ function:
+\begin{itemize}
+\item $\texttt{INPUT\_A}$ and $\texttt{INPUT\_B}$: the binary input sequences of Alice and Bob, respectively. Following the CBMC-GC convention, the input elements must start with the identifier $\texttt{INPUT\_}$.
+
+\item $\texttt{OUTPUT\_distance}$: the inverse of the hamming weight. Following the CBMC-GC convention, the output element must start with the identifier $\texttt{OUTPUT\_}$.
+
+\item $\texttt{total}$: keeps track of the number of elements that can be compared between aligned sequences.
+
+\item $\texttt{distance}$: keeps track of the hamming distance between both sequences.
+
+\item $\texttt{count\_axorb}$: saves the number of elements that are different in a 16-bit block sequence (i.e. in $\texttt{INPUT\_A.el[i]\^{}INPUT\_B.el[i]}$).
+\end{itemize}
+
+
+\begin{figure}
+\begin{lstlisting}[language=C]
+#define LEN_SEQ 4000
+
+typedef struct {
+	unsigned short el[LEN_SEQ];
+} Array_Seq;
+
+const unsigned int m1  = 0x55555555; //binary: 0101...
+const unsigned int m2  = 0x33333333; //binary: 00110011..
+const unsigned int m4  = 0x0f0f0f0f; //binary: 4 zeros, 4 ones ...
+const unsigned int m8  = 0x00ff00ff; //binary: 8 zeros, 8 ones ...
+
+unsigned int popcount(unsigned short INPUT_B_x) {
+    unsigned int x = INPUT_B_x;
+    x = (x & m1 ) | ((x >>  1) & m1 ); // changed step
+    x = (x & m2 ) + ((x >>  2) & m2 );
+    x = (x & m4 ) + ((x >>  4) & m4 ); 
+    x = (x & m8 ) + ((x >>  8) & m8 );
+    return x;
+}
+
+void mpc_main(Array_Seq INPUT_A, Array_Seq INPUT_B){
+	unsigned int distance = 0;
+	int total = 0;
+	for(int i=0; i<LEN_SEQ; i++){		
+		int count_a = popcount(INPUT_A.el[i]);
+		int count_b = popcount(INPUT_B.el[i]);
+		if(count_a > 0 && count_b > 0){
+			int count_axorb = popcount(INPUT_A.el[i]^INPUT_B.el[i]);			
+			if(count_axorb == 1){
+				distance = distance + 1;
+			}
+			total = total + 8;
+		}
+	}
+	unsigned int OUTPUT_distance;
+	if(distance > 0){
+		OUTPUT_distance = total/distance;
+	} else {
+		OUTPUT_distance = 0;
+	}
+}
+\end{lstlisting}
+\caption{Jukes-Cantor distance C code for CBMC-GC boolean circuit generation.}
+\label{fig:jc_cbmc-gc}
+\end{figure}
+ 
+%\end{appendices}
+
 \chapter{Proof of Lemma \ref{lemma:wrole_dishonest_bob} (Dishonest Bob)}
 \label{app:proofBobdishonest}
 
@@ -268,86 +348,6 @@ H_{\min}(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \frac
 for $err = 0$.
 
 \end{proof}
-
-\chapter{Jukes-Cantor distance for CBMC-GC}\label{appendix:appendixA}
-%\addcontentsline{toc}{chapter}{Appendix A}
-
-%\begin{appendices}
-%
-%\section{Jukes-Cantor code for CBMC-GC}
-%\label{appendix:JC}
-
-The boolean circuit that represents the Jukes-Cantor distance receives as inputs two four-based sequences ($A$, $C$, $G$, $T$) with size $32\, 000$. Since we are using a boolean circuit representation, the nucleotide sequences must be represented in binary. So, by convention, we use the following 2-bit encoding: $A = 00$, $C = 01$, $G = 10$ and $T = 11$. As a result, we start by defining a sequence type of size $4\, 000$ with the $\texttt{unsigned short}$ type elements (Figure~\ref{fig:jc_cbmc-gc}, lines $1-5$). In fact, the type $\texttt{Array\_Seq}$ saves $4\, 000 \times 16 = 64\, 000$ bits. Each element of $\texttt{Array\_Seq}$ represents a small sequence of eight elements. This is an implementation choice that renders a good compromise between accuracy level and circuit size.
-
-As we saw in the main text, the hamming distance between two binary strings can then be easily computed by XORing them and counting the number of 1’s. This last operation is commonly called $\texttt{popcount}$. We cannot directly apply this approach because our sequences are in fact four-based sequences. In fact, our version of the $\texttt{popcount}$ function is only interested in computing the number of 2-bit elements that are different between both sequences.
-
-We follow a tailored divide-and-conquer technique. The original technique is described by Henry Warren in his book “Hacker’s Delight”, chapter 5 \citep{W12}. In summary, the original technique starts by counting in parallel the number of 1’s inside each 2-bit block and saves it in 2-bit blocks. Then, it adds two 2-bit blocks and saves the result in a 4-bit block. It continues until we get the final sum. If we follow directly this approach we might run into wrong results as described in the main text. For our case, instead of counting the number of 1’s inside every 2-bit block, we only care if there is one element 1 inside each 2-bit block. This simply indicates that the elements at that site are different. This is achieved by applying an $\texttt{OR}$ operation (represented by $\texttt{|}$) to the bits inside each 2-bit block (Figure~\ref{fig:jc_cbmc-gc}, line $14$). For 4-bit blocks and above we follow the same recipe of the original divide-and-conquer technique. 
-
-The main function that computes the Hamming weight between two nucleotide sequences $\texttt{INPUT\_A}$ and $\texttt{INPUT\_B}$ is defined by the function $\texttt{mpc\_main}$, line $21$. It outputs the inverse of the hamming weight: $\texttt{total/distance}$ line $37$. Since we know the hamming weight lies between $0$ and $1$, it renders smaller circuits to use the native integer division operator, $/$, from the CBMC-GC tool and then invert the output after the Yao computation. Otherwise, we would need a fixed precision representation to output decimal numbers.
-
-Below we describe the variables used in the $\texttt{mpc\_main}$ function:
-\begin{itemize}
-\item $\texttt{INPUT\_A}$ and $\texttt{INPUT\_B}$: the binary input sequences of Alice and Bob, respectively. Following the CBMC-GC convention, the input elements must start with the identifier $\texttt{INPUT\_}$.
-
-\item $\texttt{OUTPUT\_distance}$: the inverse of the hamming weight. Following the CBMC-GC convention, the output element must start with the identifier $\texttt{OUTPUT\_}$.
-
-\item $\texttt{total}$: keeps track of the number of elements that can be compared between aligned sequences.
-
-\item $\texttt{distance}$: keeps track of the hamming distance between both sequences.
-
-\item $\texttt{count\_axorb}$: saves the number of elements that are different in a 16-bit block sequence (i.e. in $\texttt{INPUT\_A.el[i]\^{}INPUT\_B.el[i]}$).
-\end{itemize}
-
-
-\begin{figure}
-\begin{lstlisting}[language=C]
-#define LEN_SEQ 4000
-
-typedef struct {
-	unsigned short el[LEN_SEQ];
-} Array_Seq;
-
-const unsigned int m1  = 0x55555555; //binary: 0101...
-const unsigned int m2  = 0x33333333; //binary: 00110011..
-const unsigned int m4  = 0x0f0f0f0f; //binary: 4 zeros, 4 ones ...
-const unsigned int m8  = 0x00ff00ff; //binary: 8 zeros, 8 ones ...
-
-unsigned int popcount(unsigned short INPUT_B_x) {
-    unsigned int x = INPUT_B_x;
-    x = (x & m1 ) | ((x >>  1) & m1 ); // changed step
-    x = (x & m2 ) + ((x >>  2) & m2 );
-    x = (x & m4 ) + ((x >>  4) & m4 ); 
-    x = (x & m8 ) + ((x >>  8) & m8 );
-    return x;
-}
-
-void mpc_main(Array_Seq INPUT_A, Array_Seq INPUT_B){
-	unsigned int distance = 0;
-	int total = 0;
-	for(int i=0; i<LEN_SEQ; i++){		
-		int count_a = popcount(INPUT_A.el[i]);
-		int count_b = popcount(INPUT_B.el[i]);
-		if(count_a > 0 && count_b > 0){
-			int count_axorb = popcount(INPUT_A.el[i]^INPUT_B.el[i]);			
-			if(count_axorb == 1){
-				distance = distance + 1;
-			}
-			total = total + 8;
-		}
-	}
-	unsigned int OUTPUT_distance;
-	if(distance > 0){
-		OUTPUT_distance = total/distance;
-	} else {
-		OUTPUT_distance = 0;
-	}
-}
-\end{lstlisting}
-\caption{Jukes-Cantor distance C code for CBMC-GC boolean circuit generation.}
-\label{fig:jc_cbmc-gc}
-\end{figure}
- 
-%\end{appendices}
 
 %
 %
