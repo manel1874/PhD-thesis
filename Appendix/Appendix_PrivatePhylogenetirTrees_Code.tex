@@ -162,27 +162,9 @@ is the state obtained when $V^{\bm{b}}_{\bm{a}}$ is applied to the system $\math
 \begin{proof}
 This proof is an adaptation of the proof of Theorem 12 in \cite{Dupuis2015} to our case.
 Let us fix $x\in\mathbb{Z}_d$ and write $\ket{i} = \ket{e^x_i}$  for short. 
- $V^b_a$ is a CPTP map, and it is known that the min-entropy does not decrease whenever a CPTP map is applied. However, this is not enough  to prove the security of the protocol and determine a lower bound. We need a more refined expression relating  $H_{\min}(\mathcal{M}(\mathbf{X})|E)$ and  $H_{\min}(\mathbf{X}|E)$ for some CPTP map $\mathcal{M}$. This is given by
- the following Lemma~\ref{thm:entaglementSamplingResult},  which is an adaptation of Theorem 1 in \cite{Dupuis2015} to our case:
+ $V^b_a$ is a CPTP map, and it is known that the min-entropy does not decrease whenever a CPTP map is applied. However, this is not enough  to prove the security of the protocol and determine a lower bound. We need a more refined expression relating  $H_{\min}(\mathcal{M}(\mathbf{X})|E)$ and  $H_{\min}(\mathbf{X}|E)$ for some CPTP map $\mathcal{M}$. This is given by Lemma~\ref{thm:entaglementSamplingResult}, which can be applied for $$\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}} = \mathcal{N}^{\otimes n},$$ where $\mathcal{N}(\sigma_X) = \frac{1}{d^2}\sum_{(a,b)\in\mathbb{Z}^2_d}\mathcal{N}_{a,b} \sigma_X \mathcal{N}_{a,b}^\dagger = \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \bigg( \ket{a,b} \otimes V^b_a \bigg) \sigma_X \bigg( \bra{a,b} \otimes V^{b\dagger}_a \bigg) $. The operator $\mathcal{N}$ applies the operator $V^b_a$ to the single system $X$ and saves its choice $(a,b)$ to a new record in the  $F$ space.  
 
-\begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
-\label{thm:entaglementSamplingResult}
-Let $\mathbf{X}$ denote our system of  $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. As above, let $\sigma_{\mathbf{X} E}$ be the ideal quantum state to which the system collapsed after Alice's test measurements.  Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, we have 
-\begin{equation}
-    2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + (\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n,
-\end{equation}
- where, in general, for a (not necessarily normalized) quantum state $\rho_{AB}\in \mathcal{P}(\mathcal{H}_A\otimes\mathcal{H}_B)$, $\text{H}_2(A|B)$   is the so-called \textit{collision entropy}~\cite{R06}, given as 
-\begin{equation*} 
-    \text{H}_2(A|B)_{\rho_{AB}}=-\log \left(\Tr{\left(\rho_{B}^{-1/4}\rho_{AB}\rho_B^{-1/4}\right)^2}\right).
-\end{equation*}
-If we further condition on a general quantum state $\sigma_B\in\mathcal{P}(\mathcal{H}_B)$, we have 
-\begin{equation*}
-    \text{H}_2(A|B)_{\rho_{AB}|\sigma_B}=-\log \left(\Tr{\left(\sigma_{B}^{-1/4}\rho_{AB}\sigma_B^{-1/4}\right)^2}\right).
-\end{equation*}
-\end{lemma}
-We can apply the above Lemma~\ref{thm:entaglementSamplingResult}  with $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}} = \mathcal{N}^{\otimes n}$, where $\mathcal{N}(\sigma_X) = \frac{1}{d^2}\sum_{(a,b)\in\mathbb{Z}^2_d}\mathcal{N}_{a,b} \sigma_X \mathcal{N}_{a,b}^\dagger = \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \bigg( \ket{a,b} \otimes V^b_a \bigg) \sigma_X \bigg( \bra{a,b} \otimes V^{b\dagger}_a \bigg) $. The operator $\mathcal{N}$ applies the operator $V^b_a$ to the single system $X$ and saves its choice $(a,b)$ to a new record in the  $F$ space.  
-
-To continue, we want to write $((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}) (\Phi_{\mathbf{X} \bar{\mathbf{X}}})$  as a linear combination of $\Phi_{(\bm{a},\bm{b})}$, i.e.
+To use Lemma~\ref{thm:entaglementSamplingResult}, we have to prove that $((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}) (\Phi_{\mathbf{X} \bar{\mathbf{X}}})$ can be written as a linear combination of $\Phi_{(\bm{a},\bm{b})}$, i.e.
 $$((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}) (\Phi_{\mathbf{X} \bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in \mathbb{Z}^{2n}} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}.$$
 
 First, note that 
@@ -252,7 +234,7 @@ from which we conclude that
 \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq 2n\log d + \text{H}_2(\mathbf{X}|E)_{\sigma_{\mathbf{X} E}}.  \label{eqn:firstineq} 
 \end{equation}
 
-In order to relate $\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$ with $\text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$, we use the chain rule proved in Proposition 8 of \cite{MDSFT13}:
+In order to relate $\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$ with $\text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$, we use the chain rule given by LEmma~\ref{lemma:chain_rule}:
 \begin{equation}
 \text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} - \log \text{rank}(\sigma_{\mathbf{Y}}) \geq \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} - n \log d,
  \label{eqn:chainRule} 

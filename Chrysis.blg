@@ -10,71 +10,56 @@ A level-1 auxiliary file: Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylog
 A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
 A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
-Reallocated field_info (elt_size=4) to 11417 items from 5000.
+Reallocated field_info (elt_size=4) to 11992 items from 5000.
 Database file #1: References/References.bib
 Warning--I didn't find a database entry for "C01"
-Warning--I didn't find a database entry for "Goldreichbook04"
-Warning--I didn't find a database entry for "Canetti00MPC"
-Warning--I didn't find a database entry for "Kilian"
-Warning--I didn't find a database entry for "Shor94"
-Warning--I didn't find a database entry for "C94"
-Warning--I didn't find a database entry for "NP06"
-Warning--I didn't find a database entry for "NP99"
-Warning--I didn't find a database entry for "LP02"
-Warning--I didn't find a database entry for "H18"
-Warning--I didn't find a database entry for "G99"
-Warning--I didn't find a database entry for "CBKG02"
-Warning--I didn't find a database entry for "AGS03"
-Warning--I didn't find a database entry for "AKBH07"
-Warning--I didn't find a database entry for "SS10"
-Warning--I didn't find a database entry for "Sitetal17"
-Warning--I didn't find a database entry for "Bouchardetal18"
-Warning--I didn't find a database entry for "DHNO19"
+Warning--I didn't find a database entry for "D21"
+Warning--I didn't find a database entry for "CW79"
 Warning--empty booktitle in HIMV19
 Warning--empty journal in CDIKLOV19
 Warning--can't use both author and editor fields in S99
 Warning--empty booktitle in IKNP03
 Warning--empty journal in NNOB12
 Warning--empty booktitle in MR19
-You've used 261 entries,
+You've used 301 entries,
             1791 wiz_defined-function locations,
-            2046 strings with 46960 characters,
-and the built_in function-call counts, 68922 in all, are:
-= -- 6215
-> -- 3240
-< -- 77
-+ -- 1179
-- -- 918
-* -- 4647
-:= -- 10460
-add.period$ -- 859
-call.type$ -- 261
-change.case$ -- 256
+            2242 strings with 53574 characters,
+and the built_in function-call counts, 78957 in all, are:
+= -- 7072
+> -- 3763
+< -- 82
++ -- 1369
+- -- 1068
+* -- 5412
+:= -- 12072
+add.period$ -- 985
+call.type$ -- 301
+change.case$ -- 294
 chr.to.int$ -- 0
-cite$ -- 267
-duplicate$ -- 3304
-empty$ -- 6612
-format.name$ -- 918
-if$ -- 15916
+cite$ -- 307
+duplicate$ -- 3745
+empty$ -- 7539
+format.name$ -- 1068
+if$ -- 18142
 int.to.chr$ -- 0
-int.to.str$ -- 261
-missing$ -- 236
-newline$ -- 1287
-num.names$ -- 305
-pop$ -- 913
+int.to.str$ -- 301
+missing$ -- 278
+newline$ -- 1487
+num.names$ -- 345
+pop$ -- 989
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1825
+skip$ -- 2042
 stack$ -- 0
-substring$ -- 4033
-swap$ -- 1060
-text.length$ -- 77
+substring$ -- 4680
+swap$ -- 1168
+text.length$ -- 82
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 606
-width$ -- 264
-write$ -- 2919
-(There were 24 warnings)
+while$ -- 689
+width$ -- 304
+write$ -- 3366
+(There were 9 warnings)

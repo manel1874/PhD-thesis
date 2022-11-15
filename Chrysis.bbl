@@ -451,6 +451,12 @@ David Evans, Vladimir Kolesnikov, and Mike Rosulek.
 Dominique Unruh.
 \newblock Lecture notes in quantum cryptography, November 2017.
 
+\bibitem{LPTRG13}
+Charles Ci~Wen Lim, Christopher Portmann, Marco Tomamichel, Renato Renner, and
+  Nicolas Gisin.
+\newblock Device-independent quantum key distribution with local bell test.
+\newblock {\em Physical Review X}, 3(3), July 2013.
+
 \bibitem{S48}
 Claude~Elwood Shannon.
 \newblock A mathematical theory of communication.
@@ -460,15 +466,27 @@ Claude~Elwood Shannon.
 Venkatesan Guruswami.
 \newblock Lecture notes in introduction to coding theory, January 2010.
 
+\bibitem{R06}
+Renato Renner.
+\newblock Security of quantum key distribution, 2006.
+
 \bibitem{Dupuis2015}
 Frederic Dupuis, Omar Fawzi, and Stephanie Wehner.
 \newblock Entanglement sampling and applications.
 \newblock {\em {IEEE} Transactions on Information Theory}, 61(2):1093--1112,
   February 2015.
 
-\bibitem{R06}
-Renato Renner.
-\newblock Security of quantum key distribution, 2006.
+\bibitem{MDSFT13}
+Martin Müller-Lennert, Frédéric Dupuis, Oleg Szehr, Serge Fehr, and Marco
+  Tomamichel.
+\newblock On quantum rényi entropies: A new generalization and some
+  properties.
+\newblock {\em Journal of Mathematical Physics}, 54(12):122203, 2013.
+
+\bibitem{T16}
+Marco Tomamichel.
+\newblock {\em Quantum Information Processing with Finite Resources}.
+\newblock Springer International Publishing, 2016.
 
 \bibitem{HK97}
 Shai Halevi and Hugo Krawczyk.
@@ -1205,6 +1223,229 @@ Philip~S. Hirschhorn, Jeffrey Hoffstein, Nick Howgrave-Graham, and William
 \newblock In Michel Abdalla, David Pointcheval, Pierre-Alain Fouque, and Damien
   Vergnaud, editors, {\em Applied Cryptography and Network Security}, pages
   437--455, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
+
+\bibitem{Goldreichbook04}
+Oded Goldreich.
+\newblock {\em Foundations of Cryptography}.
+\newblock Cambridge University Press, May 2004.
+
+\bibitem{Canetti00MPC}
+Ran Canetti.
+\newblock Security and composition of multiparty cryptographic protocols.
+\newblock {\em Journal of Cryptology}, 13(1):143--202, 2000.
+
+\bibitem{C94}
+Claude Crépeau.
+\newblock Quantum oblivious transfer.
+\newblock {\em Journal of Modern Optics}, 41(12):2445--2454, 1994.
+
+\bibitem{NP06}
+Moni Naor and Benny Pinkas.
+\newblock Oblivious polynomial evaluation.
+\newblock {\em {SIAM} Journal on Computing}, 35(5):1254--1281, January 2006.
+
+\bibitem{NP99}
+Moni Naor and Benny Pinkas.
+\newblock Oblivious transfer and polynomial evaluation.
+\newblock In {\em Proceedings of the thirty-first annual {ACM} symposium on
+  Theory of computing - {STOC} {\textquotesingle}99}. {ACM} Press, 1999.
+
+\bibitem{LP02}
+Lindell and Pinkas.
+\newblock Privacy preserving data mining.
+\newblock {\em Journal of Cryptology}, 15(3):177--206, June 2002.
+
+\bibitem{H18}
+Carmit Hazay.
+\newblock Oblivious polynomial evaluation and secure set-intersection from
+  algebraic prfs.
+\newblock {\em J. Cryptol.}, 31(2):537–586, apr 2018.
+
+\bibitem{G99}
+Niv Gilboa.
+\newblock Two party {RSA} key generation.
+\newblock In {\em Advances in Cryptology {\textemdash} {CRYPTO}' 99}, pages
+  116--129. Springer Berlin Heidelberg, 1999.
+
+\bibitem{CBKG02}
+Nicolas~J. Cerf, Mohamed Bourennane, Anders Karlsson, and Nicolas Gisin.
+\newblock Security of quantum key distribution using $\mathit{d}$-level
+  systems.
+\newblock {\em Phys. Rev. Lett.}, 88:127902, Mar 2002.
+
+\bibitem{AGS03}
+Antonio Acin, Nicolas Gisin, and Valerio Scarani.
+\newblock Security bounds in quantum cryptography using d-level systems.
+\newblock {\em Quantum Info. Comput.}, 3(6):563–580, nov 2003.
+
+\bibitem{AKBH07}
+Irfan Ali-Khan, Curtis~J. Broadbent, and John~C. Howell.
+\newblock Large-alphabet quantum key distribution using energy-time entangled
+  bipartite states.
+\newblock {\em Phys. Rev. Lett.}, 98:060503, Feb 2007.
+
+\bibitem{SS10}
+Lana Sheridan and Valerio Scarani.
+\newblock Security proof for quantum key distribution using qudit systems.
+\newblock {\em Phys. Rev. A}, 82:030301, Sep 2010.
+
+\bibitem{Sitetal17}
+Alicia Sit, Fr\'{e}d\'{e}ric Bouchard, Robert Fickler, J\'{e}r\'{e}mie
+  Gagnon-Bischoff, Hugo Larocque, Khabat Heshami, Dominique Elser, Christian
+  Peuntinger, Kevin G\"{u}nthner, Bettina Heim, Christoph Marquardt, Gerd
+  Leuchs, Robert~W. Boyd, and Ebrahim Karimi.
+\newblock High-dimensional intracity quantum cryptography with structured
+  photons.
+\newblock {\em Optica}, 4(9):1006--1010, 2017.
+
+\bibitem{Bouchardetal18}
+Fr{\'{e}}d{\'{e}}ric Bouchard, Khabat Heshami, Duncan England, Robert Fickler,
+  Robert~W. Boyd, Berthold-Georg Englert, Luis~L. S{\'{a}}nchez-Soto, and
+  Ebrahim Karimi.
+\newblock Experimental investigation of high-dimensional quantum key
+  distribution protocols with twisted photons.
+\newblock {\em {Quantum}}, 2:111, 2018.
+
+\bibitem{DHNO19}
+Ivan Damg{\aa}rd, Helene Haagh, Michael Nielsen, and Claudio Orlandi.
+\newblock Commodity-based 2pc for arithmetic circuits.
+\newblock In {\em Cryptography and Coding}, pages 154--177. Springer
+  International Publishing, 2019.
+
+\bibitem{M05}
+Carlos Mochon.
+\newblock Large family of quantum weak coin-flipping protocols.
+\newblock {\em Phys. Rev. A}, 72:022341, Aug 2005.
+
+\bibitem{MTVUZ05}
+G.~Molina-Terriza, A.~Vaziri, R.~Ursin, and A.~Zeilinger.
+\newblock Experimental quantum coin tossing.
+\newblock {\em Phys. Rev. Lett.}, 94:040501, Jan 2005.
+
+\bibitem{BBBG09}
+Guido Berl\'{\i}n, Gilles Brassard, F\'elix Bussi\`eres, and Nicolas Godbout.
+\newblock Fair loss-tolerant quantum coin flipping.
+\newblock {\em Phys. Rev. A}, 80:062321, Dec 2009.
+
+\bibitem{BBBGST11}
+Guido Berl{\'\i}n, Gilles Brassard, F{\'e}lix Bussi{\`e}res, Nicolas Godbout,
+  Joshua~A. Slater, and Wolfgang Tittel.
+\newblock Experimental loss-tolerant quantum coin flipping.
+\newblock {\em Nature Communications}, 2(1):561, 2011.
+
+\bibitem{DV12}
+Ariel Danan and Lev Vaidman.
+\newblock Practical quantum bit commitment protocol.
+\newblock {\em Quantum Information Processing}, 11(3):769--775, 2012.
+
+\bibitem{SG12}
+S.~{Arash Sheikholeslam} and T.~{Aaron Gulliver}.
+\newblock A practical quantum bit commitment protocol.
+\newblock {\em Results in Physics}, 2:97--99, 2012.
+
+\bibitem{NJCKW12}
+Nelly Huei~Ying Ng, Siddarth~K. Joshi, Chia Chen~Ming, Christian Kurtsiefer,
+  and Stephanie Wehner.
+\newblock Experimental implementation of bit commitment in the noisy-storage
+  model.
+\newblock {\em Nature Communications}, 3(1):1326, 2012.
+
+\bibitem{KC13}
+I.~Kerenidis and A.~Chailloux.
+\newblock Optimal bounds for quantum bit commitment.
+\newblock In {\em 2013 IEEE 54th Annual Symposium on Foundations of Computer
+  Science}, pages 354--362, Los Alamitos, CA, USA, oct 2011. IEEE Computer
+  Society.
+
+\bibitem{PJLCLTKD14}
+Anna Pappa, Paul Jouguet, Thomas Lawson, Andr{\'e} Chailloux, Matthieu
+  Legr{\'e}, Patrick Trinkler, Iordanis Kerenidis, and Eleni Diamanti.
+\newblock Experimental plug and play quantum coin flipping.
+\newblock {\em Nature Communications}, 5(1):3717, 2014.
+
+\bibitem{LAAPMP14}
+Ricardo Loura, \'Alvaro~J. Almeida, Paulo~S. Andr\'e, Armando~N. Pinto, Paulo
+  Mateus, and Nikola Paunkovi\ifmmode~\acute{c}\else \'{c}\fi{}.
+\newblock Noise and measurement errors in a practical two-state quantum bit
+  commitment protocol.
+\newblock {\em Phys. Rev. A}, 89:052336, May 2014.
+
+\bibitem{LAPPP16}
+Ricardo Loura, D.~Arsenovi\ifmmode~\acute{c}\else \'{c}\fi{}, Nikola
+  Paunkovi\ifmmode~\acute{c}\else \'{c}\fi{}, D.~B.
+  Popovi\ifmmode~\acute{c}\else \'{c}\fi{}, and Slobodan
+  Prvanovi\ifmmode~\acute{c}\else \'{c}\fi{}.
+\newblock Security of two-state and four-state practical quantum bit-commitment
+  protocols.
+\newblock {\em Phys. Rev. A}, 94:062335, Dec 2016.
+
+\bibitem{ARW19}
+Atul~Singh Arora, J\'{e}r\'{e}mie Roland, and Stephan Weis.
+\newblock Quantum weak coin flipping.
+\newblock In {\em Proceedings of the 51st Annual ACM SIGACT Symposium on Theory
+  of Computing}, STOC 2019, page 205–216, New York, NY, USA, 2019.
+  Association for Computing Machinery.
+
+\bibitem{BCKD20}
+Mathieu Bozzio, Ulysse Chabaud, Iordanis Kerenidis, and Eleni Diamanti.
+\newblock Quantum weak coin flipping with a single photon.
+\newblock {\em Phys. Rev. A}, 102:022414, Aug 2020.
+
+\bibitem{SY20}
+Yaqi Song and Li~Yang.
+\newblock Semi-counterfactual quantum bit commitment protocol.
+\newblock {\em Scientific Reports}, 10(1):6531, 2020.
+
+\bibitem{ARV21}
+Atul~Singh Arora, J\'{e}r\'{e}mie Roland, and Chrysoula Vlachou.
+\newblock Analytic quantum weak coin flipping protocols with arbitrarily small
+  bias.
+\newblock In {\em Proceedings of the Thirty-Second Annual ACM-SIAM Symposium on
+  Discrete Algorithms}, SODA '21, page 919–938. Society for Industrial and
+  Applied Mathematics, 2021.
+
+\bibitem{BCDP21}
+Mathieu Bozzio, Adrien Cavaill\`es, Eleni Diamanti, Adrian Kent, and Dami\'an
+  Pital\'ua-Garc\'{\i}a.
+\newblock Multiphoton and side-channel attacks in mistrustful quantum
+  cryptography.
+\newblock {\em PRX Quantum}, 2:030338, Sep 2021.
+
+\bibitem{CZK18}
+Yao-Hsin Chou, Guo-Jyun Zeng, and Shu-Yu Kuo.
+\newblock One-out-of-two quantum oblivious transfer based on nonorthogonal
+  states.
+\newblock {\em Scientific Reports}, 8(1), October 2018.
+
+\bibitem{ASRP21}
+Ryan Amiri, Robert St{\'{a}}rek, David Reichmuth, Ittoop~V. Puthoor, Michal
+  Mi{\v{c}}uda, Jr. Ladislav~Mi{\v{s}}ta, Miloslav Du{\v{s}}ek, Petros Wallden,
+  and Erika Andersson.
+\newblock Imperfect 1-out-of-2 quantum oblivious transfer: Bounds, a protocol,
+  and its experimental implementation.
+\newblock {\em {PRX} Quantum}, 2(1), March 2021.
+
+\bibitem{KST21}
+Srijita Kundu, Jamie Sikora, and Ernest Y.~Z. Tan.
+\newblock A device-independent protocol for xor oblivious transfer.
+\newblock {\em Quantum}, 6:735, 2022.
+
+\bibitem{CKS10}
+Andr{\'{e}} Chailloux, Iordanis Kerenidis, and Jamie Sikora.
+\newblock Lower bounds for quantum oblivious transfer.
+\newblock {\em Quantum Inf. Comput.}, 13(1-2):158--177, 2013.
+
+\bibitem{CGS16}
+Andr{\'e} Chailloux, Gus Gutoski, and Jamie Sikora.
+\newblock Optimal bounds for semi-honest quantum oblivious transfer.
+\newblock {\em Chic. J. Theor. Comput. Sci.}, 2016, 2016.
+
+\bibitem{SSH+21}
+Lara Stroh, Nikola Horov\'a, Robert St\'arek, Ittoop~V. Puthoor, Michal
+  Mičuda, Miloslav Dušek, and Erika Andersson.
+\newblock Non-interactive xor quantum oblivious transfer: optimal protocols and
+  their experimental implementations.
+\newblock {\em arXiv}, 2209.11300, 2022.
 
 \bibitem{Verhaert2018}
 Danilo Verhaert, Majid Nateghizad, and Zekeriya Erkin.

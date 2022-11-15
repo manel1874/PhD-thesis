@@ -389,7 +389,7 @@ and
 $$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
 \end{definition}
 
-Now, consider again the superposition state $\ket{\phi}_{AB'} = \sum_{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}_{AB'}$ and the mixture $\tilde{\rho}_{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
+Now, consider the superposition state $\ket{\phi}_{AB'} = \sum_{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}_{AB'}$ and the mixture $\tilde{\rho}_{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
 
 \begin{lemma}[Lemma 3.1.13, \cite{R06}]
 Let $\rho_{AB'}$ and $\tilde{\rho}_{AB'}$ be defined as above. Then,
@@ -402,7 +402,6 @@ It will be crucial in the security proof of the quantum oblivious linear evaluat
 \begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
 \label{thm:entaglementSamplingResult}
 Let $\mathbf{X}$ denote a system with $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, and $\mathcal{M}(\sigma_{\mathbf{X}E}) = \sigma_{\mathbf{F}\mathbf{Y}E}$ we have 
-
 \begin{equation}
     2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + (\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n,
 \end{equation}
@@ -424,6 +423,14 @@ This follows from the definition of the collision entropy and the fact that $\Tr
 
 % Talk a bit about collision entropy. Look at the references here https://arxiv.org/pdf/0807.1338.pdf
 
+Next, we present a chain rule for the collision entropy.
+
+\begin{lemma}[Proposition 8, \cite{MDSFT13}]
+For any $\rho_{ABC}\in\mathcal{P}(\mathcal{H}_A\otimes\mathcal{H}_B\otimes\mathcal{H}_C)$, it holeds that
+$$H_2(A|BC)_{\rho} \geq H_2(AC|B) - \log d_C,$$
+where $d_C$ is the rank of $\rho_C$.
+\label{lemma:chain_rule}
+\end{lemma}
 
 Now, we need a way to relate min-entropy and collision entropy to have useful bounds for min-entropy. This is done through the following two Lemmas.
 
@@ -439,7 +446,13 @@ Let $\rho_{X B'}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B'})$ be a cq-
 $$H_{\min}(X|B')_{\rho} \leq H_2(X|B')_{\rho} \leq 2 H_{\min}(X|B')_{\rho}.$$
 \end{lemma}
 
+Finally, we present a data-processing inequality which reflects the intuitive idea that the min-entropy of some system $A$ given side information $B$ is non-decrease under local physical operation applied to $B$. 
 
+\begin{lemma}[Data processing inequality, Theorem 6.19, \cite{T16}]
+\label{lemma:data_processing_inequality}
+Let $\rho_{A B}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B})$. Moreover, let $\mathcal{E}$ be a sub-unital CPTP map from system $A$ to $A'$ (i.e. $\mathcal{E}(\mathds{1}_A) \leq \mathds{1}_{A'}$) and $\mathcal{T}$ be a CPTP map from system $B$ to $B'$. Then, the state $\tau_{A' B'} = \left(\mathcal{E}\otimes \mathcal{T}  \right)\rho_{AB}$ satisfies
+$$H_{\min}(A|B)_{\rho}\leq H_{\min}(A'|B')_{\tau}.$$
+\end{lemma}
 
 \subsection{Two-universal functions}
 
@@ -479,7 +492,7 @@ Let $X$ be a random variable, $E$ a quantum system, and $\mathfrak{G}$ a two-uni
 
 
 %********************************** %Third Section  **************************************
-\section{Universal Composability}
+\section{Universal composability}
 
 The Universal Composability (UC) framework was introduced by Canetti \cite{C20} in the classical setting and extended to the quantum setting by Unruh, and Ben-Or and Mayers \cite{Unruh04, BenOrMay04}(see also \cite{Unruh10, FS09}).  It renders strong composability guarantees as it ensures that the security of the protocol is independent of any external execution of the same or other protocols.  Both classical and quantum frameworks follow the same ideal-real world comparison structure and consider the same interactions between machines. The difference lies on the operations allowed by the quantum-UC framework, where we can also store, transmit, and process  quantum states. 
 

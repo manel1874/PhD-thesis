@@ -45,7 +45,7 @@
 \BOOKMARK [1][-]{section.5.5}{5.5 UC security}{chapter.5}% 45
 \BOOKMARK [1][-]{section.5.6}{5.6 Protocol Generalizations}{chapter.5}% 46
 \BOOKMARK [2][-]{subsection.5.6.1}{5.6.1 QOLE in Galois fields of prime-power dimensions}{section.5.6}% 47
-\BOOKMARK [2][-]{subsection.5.6.2}{5.6.2 Quantum Vector OLE}{section.5.6}% 48
+\BOOKMARK [2][-]{subsection.5.6.2}{5.6.2 Quantum vector OLE}{section.5.6}% 48
 \BOOKMARK [1][-]{section.5.7}{5.7 Outlook and further work}{chapter.5}% 49
 \BOOKMARK [0][-]{chapter.6}{6 Private phylogenetic trees}{}% 50
 \BOOKMARK [1][-]{section.6.1}{6.1 Phylogenetic trees}{chapter.6}% 51
@@ -83,6 +83,6 @@
 \BOOKMARK [1][-]{section.6.10}{6.10 Conclusion}{chapter.6}% 83
 \BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 84
 \BOOKMARK [1][-]{section.7.1}{7.1 Future work}{chapter.7}% 85
-\BOOKMARK [0][-]{appendix.A}{A Proof of Lemma 10 \(Dishonest Bob\)}{}% 86
+\BOOKMARK [0][-]{appendix.A}{A Proof of Lemma 12 \(Dishonest Bob\)}{}% 86
 \BOOKMARK [0][-]{appendix.B}{B Jukes-Cantor distance for CBMC-GC}{}% 87
 \BOOKMARK [0][-]{appendix*.90}{Bibliography}{}% 88
