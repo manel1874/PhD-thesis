@@ -11,32 +11,18 @@ As stated in the introduction, this dissertation aims to study the impact and im
 In Chapter~\ref{•}, we theoretically compared the complexity of quantum and classical OT protocols to evaluate how these can impact the efficiency of SMC protocols. This is motivated by the straight connection between Yao garbled circuit protocol and OT. We proposed an optimised version($\Pi^{\textbf{BBCS}}_{\textbf{O}}$) of the BBCS-based QOT protocols and compared its transfer phase with the transfer phase of the protocol that, to the best of our knowledge, is the fastest classical OT implementation \cite{ALSZ13}. We concluded that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase has the potential to be faster than ALSZ13 OT extension transfer phase while preserving a much higher security. In fact, the ALSZ13 protocol is only proved to be secure in the semi-honest model while $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is secure in the malicious setting. 
 We also compared the transfer phase of maliciously secure classical protocols \cite{ALSZ15, KOS15} with $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase and concluded that these have greater computation and communication complexity than the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase. 
 
-In Chapter~\ref{•}, we give a step closer to 
+In Chapter~\ref{•}, we give a step closer to close the gap between theory and practice. We presented an SMC protocol assisted with quantum technologies tailored for distance-based algorithms of phylogenetic trees. The proposed system is based on ready to use libraries (CBMC-GC, Libscapi and PHYLIP) that are integrated with quantum technologies to provide a full quantum-proof solution. We implement and compare the performance of a classical-only and a quantum-assisted system based on simulated symmetric and oblivious keys. The analysis performed in Chapter~\ref{•} points to a scenario where the quantum-assisted version does not add an extra efficiency cost. However, in practice, this only happens if we do not take into account the overhead created by the oblivious key management system. Despite this difference, we stress that the quantum-assisted system has a significantly higher degree of security against quantum computer attacks.
 
-
-
-In this chapter, we presented an SMC protocol assisted with quantum technologies tailored for distance-based algorithms of phylogenetic trees. It is a modular protocol that uses one distance metric taken from four possible evolutionary models (Jukes-Cantor, Kimura 2-parameter, F84 and LogDet) and three different protocols (UPGMA, Neighbour-Joining and Fitch-Margoliash). In total, we can implement twelve different combinations of protocols.
-
-The proposed system is based on ready to use libraries (CBMC-GC, Libscapi and PHYLIP) that are integrated with quantum technologies to provide a full quantum-proof solution. We use the quantum version of primitives that play a central role in the security of the system: oblivious transfer, encryption and random number generation.
-
-We compare the performance of a classical-only and a quantum-assisted system based on simulated symmetric and oblivious keys. Previous analyses on the computation and communication complexity point to a scenario where the quantum-assisted version does not add an extra efficiency cost. This is confirmed by comparing the running times of both approaches without considering the overhead created by the oblivious key management system that increases with the number of shared keys. Further work is required to develop more efficient key management systems. Despite this extra cost, the quantum-assisted version significantly improves the system security when compared with the classical-only as it renders a protocol with enhanced security against quantum computers.
-
-
+In Chapter~\ref{•}, we presented a two-phase quantum oblivious linear evaluation that, to the best of our knowledge, is the first quantum protocol proposed for this primitive.
 
 
 \section{Future work}
 
+To conclude, we believe that the work presented in this dissertation not only complements the literature, but also opens new directions of research both theoretical and practical.
 
+In the practical side, further work is required to develop more efficient oblivious key management systems. Indeed, a file system was used to save the oblivious keys in the SMC system and this method is not the most efficient. However, it was used in order to render a more modular solution. This can be improved by extending Libscapi implementation to include a function field that receives a pointer to the oblivious keys loaded in memory. 
 
-
-
-Future work is required to develop more efficient oblivious key management systems. Despite this difference, we stress that the quantum-assisted system has a significantly higher degree of security against quantum computer attacks. This can be done by including a field that receives a pointer to the oblivious key. 
-
-
-
-
-
-While the security of $\pi_{\textbf{QOLE}}$ is thoroughly analyzed, this is done in the noiseless case. Proving security assuming the existence of noise should follow a similar reasoning (see also \cite{DFLSS09}). Indeed, in the presence of noise, in Step 4 in the quantum phase of $\pi_{\textbf{QOLE}}$ (Figure~\ref{fig:fullprotocol}), Alice should abort the protocol if the errors measured ($err$) exceed some predetermined value $\nu$, that is assumed to be due to noise. This way, the error parameter is $err = \nu + \zeta '$, where $\zeta '$ accounts for the activity of a dishonest Bob. Naturally, this will decrease the bound on the min-entropy of Alice's functions $\textbf{F}$ given Bob's side information, i.e.
+In the theoretical side, the protocol $\pi_{\textbf{QOLE}}$ can be lead to various extensions. While the security of $\pi_{\textbf{QOLE}}$ is thoroughly analysed, this is done in the noiseless case. Proving security assuming the existence of noise should follow a similar reasoning (see also \cite{DFLSS09}). Indeed, in the presence of noise, in Step 4 in the quantum phase of $\pi_{\textbf{QOLE}}$ (Figure~\ref{fig:fullprotocol}), Alice should abort the protocol if the errors measured ($err$) exceed some predetermined value $\nu$, that is assumed to be due to noise. This way, the error parameter is $err = \nu + \zeta '$, where $\zeta '$ accounts for the activity of a dishonest Bob. Naturally, this will decrease the bound on the min-entropy of Alice's functions $\textbf{F}$ given Bob's side information, i.e.
 $$H_{\min}(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \frac{n\log d}{2}\left(1 - h_d(\nu + \zeta ' + \zeta)\right).$$
 Although it is possible to generalize the security results to the setting of noisy quantum communication, it is not guaranteed that the proposed protocol retains correct. Therefore, as future work, it would be useful to propose  specific implementations where noise is taken into account and its effect on the security properties is studied (see also \cite{BCDP21}).
 

@@ -111,9 +111,9 @@
 \contentsline {section}{\numberline {6.6}Protocol Generalizations}{124}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}QOLE in Galois fields of prime-power dimensions}{124}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}Quantum vector OLE}{126}{subsection.6.6.2}%
-\contentsline {section}{\numberline {6.7}Outlook and further work}{129}{section.6.7}%
+\contentsline {section}{\numberline {6.7}Conclusion}{129}{section.6.7}%
 \contentsline {chapter}{\numberline {7}Conclusion}{131}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Future work}{131}{section.7.1}%
-\contentsline {chapter}{\numberline {A}Jukes-Cantor distance for CBMC-GC}{133}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Proof of Lemma \ref {lemma:wrole_dishonest_bob} (Dishonest Bob)}{137}{appendix.B}%
-\contentsline {chapter}{Bibliography}{172}{appendix*.90}%
+\contentsline {section}{\numberline {7.1}Future work}{132}{section.7.1}%
+\contentsline {chapter}{\numberline {A}Jukes-Cantor distance for CBMC-GC}{135}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Proof of Lemma \ref {lemma:wrole_dishonest_bob} (Dishonest Bob)}{139}{appendix.B}%
+\contentsline {chapter}{Bibliography}{174}{appendix*.90}%
