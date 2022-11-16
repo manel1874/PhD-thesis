@@ -6,6 +6,21 @@
 
 \chapter{Conclusion}
 
+As stated in the introduction, this dissertation aims to study the impact and improve on the adoption of quantum cryptography by secure multiparty computation (SMC) systems. In Chapter~\ref{•}, we start by reviewing quantum oblivious transfer (QOT) protocols which is a central primitive in most SMC protocols. These protocols were based on oblivious keys which allow a modular execution SMC protocols. Oblivious keys can be precomputed using quantum technology and later be consumed during the secure computation phase. This modular execution allows to separate the use of quantum technology and the execution of SMC. We analysed the impact of quantum hacking tehniques in QOT protocols and how these affect SMC security. We also reviewed some practical and theoretical measures to prevent these attacks.
+
+In Chapter~\ref{•}, we theoretically compared the complexity of quantum and classical OT protocols to evaluate how these can impact the efficiency of SMC protocols. This is motivated by the straight connection between Yao garbled circuit protocol and OT. We proposed an optimised version($\Pi^{\textbf{BBCS}}_{\textbf{O}}$) of the BBCS-based QOT protocols and compared its transfer phase with the transfer phase of the protocol that, to the best of our knowledge, is the fastest classical OT implementation \cite{ALSZ13}. We concluded that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase has the potential to be faster than ALSZ13 OT extension transfer phase while preserving a much higher security. In fact, the ALSZ13 protocol is only proved to be secure in the semi-honest model while $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is secure in the malicious setting. 
+We also compared the transfer phase of maliciously secure classical protocols \cite{ALSZ15, KOS15} with $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase and concluded that these have greater computation and communication complexity than the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase. 
+
+In Chapter~\ref{•}, we give a step closer to 
+
+
+
+In this chapter, we presented an SMC protocol assisted with quantum technologies tailored for distance-based algorithms of phylogenetic trees. It is a modular protocol that uses one distance metric taken from four possible evolutionary models (Jukes-Cantor, Kimura 2-parameter, F84 and LogDet) and three different protocols (UPGMA, Neighbour-Joining and Fitch-Margoliash). In total, we can implement twelve different combinations of protocols.
+
+The proposed system is based on ready to use libraries (CBMC-GC, Libscapi and PHYLIP) that are integrated with quantum technologies to provide a full quantum-proof solution. We use the quantum version of primitives that play a central role in the security of the system: oblivious transfer, encryption and random number generation.
+
+We compare the performance of a classical-only and a quantum-assisted system based on simulated symmetric and oblivious keys. Previous analyses on the computation and communication complexity point to a scenario where the quantum-assisted version does not add an extra efficiency cost. This is confirmed by comparing the running times of both approaches without considering the overhead created by the oblivious key management system that increases with the number of shared keys. Further work is required to develop more efficient key management systems. Despite this extra cost, the quantum-assisted version significantly improves the system security when compared with the classical-only as it renders a protocol with enhanced security against quantum computers.
+
 
 
 
@@ -15,9 +30,22 @@
 
 
 
-Future work is required to develop more efficient oblivious key management systems. Despite this difference, we stress that the quantum-assisted system has a significantly higher degree of security against quantum computer attacks.   This can be done by including a field that receives a pointer to the oblivious key. 
+Future work is required to develop more efficient oblivious key management systems. Despite this difference, we stress that the quantum-assisted system has a significantly higher degree of security against quantum computer attacks. This can be done by including a field that receives a pointer to the oblivious key. 
 
 
+
+
+
+While the security of $\pi_{\textbf{QOLE}}$ is thoroughly analyzed, this is done in the noiseless case. Proving security assuming the existence of noise should follow a similar reasoning (see also \cite{DFLSS09}). Indeed, in the presence of noise, in Step 4 in the quantum phase of $\pi_{\textbf{QOLE}}$ (Figure~\ref{fig:fullprotocol}), Alice should abort the protocol if the errors measured ($err$) exceed some predetermined value $\nu$, that is assumed to be due to noise. This way, the error parameter is $err = \nu + \zeta '$, where $\zeta '$ accounts for the activity of a dishonest Bob. Naturally, this will decrease the bound on the min-entropy of Alice's functions $\textbf{F}$ given Bob's side information, i.e.
+$$H_{\min}(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \frac{n\log d}{2}\left(1 - h_d(\nu + \zeta ' + \zeta)\right).$$
+Although it is possible to generalize the security results to the setting of noisy quantum communication, it is not guaranteed that the proposed protocol retains correct. Therefore, as future work, it would be useful to propose  specific implementations where noise is taken into account and its effect on the security properties is studied (see also \cite{BCDP21}).
+
+Following a different assumption model, the $\pi_{\textbf{QOLE}}$ protocol can be easily adapted to remain secure in the bounded-quantum-storage model. In this adapted version, the test phase of $\pi^n_{\textbf{RWOLE}}$ is simply substituted by a waiting time $\Delta t$. This ensures that Bob is only able to store a noisy or limited amount of qudits. It would be interesting to explore how different noisy channels affect the security properties. Also, to guarantee the composability of the protocol, an analysis in the bounded-quantum-storage-UC model put forth by Unruh \cite{U11} can be performed.
+
+Our protocol is a two-way protocol, i.e. Bob prepares and sends a quantum state, Alice applies some operation to it, and sends it back to Bob who measures the final state. For QOT there exist several proposals for two-way  protocols \cite{CZK18, ASRP21, KST21, CKS10, CGS16}, and, in particular, the one presented by Amiri et al. \cite{ASRP21} also demonstrates their experimental feasibility. This is further motivation to work on developing realistic practical implementations of our protocol. 
+Furthermore, one could increase the security standards  by making our protocol device-independent. The proposal of Kundu et al. \cite{KST21}, who extended the work of Chailloux et al. \cite{CKS10}, could serve as an inspiration. And while the aforementioned works focus on two-way QOT protocols,  recently, non-interactive  or one-way protocols have also been proposed for device-independent \cite{BY21} and XOR QOT  \cite{SSH+21}.
+
+Finally, based on our results, one could construct quantum protocols for oblivious polynomial evaluation, which -- as mentioned in the beginning of Chapter~\ref{ch:QOLE} -- is another important primitive facilitating various applications.
 
 
 
