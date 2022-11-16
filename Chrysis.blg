@@ -5,61 +5,61 @@ A level-1 auxiliary file: Introduction/Introduction.aux
 A level-1 auxiliary file: Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux
 A level-1 auxiliary file: Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux
 A level-1 auxiliary file: Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObliviousTransfer.aux
-A level-1 auxiliary file: Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousLinearEvaluation.aux
 A level-1 auxiliary file: Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.aux
+A level-1 auxiliary file: Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousLinearEvaluation.aux
 A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
 A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
 Reallocated field_info (elt_size=4) to 11992 items from 5000.
 Database file #1: References/References.bib
 Warning--I didn't find a database entry for "C01"
-Warning--I didn't find a database entry for "D21"
-Warning--I didn't find a database entry for "CW79"
 Warning--empty booktitle in HIMV19
 Warning--empty journal in CDIKLOV19
 Warning--can't use both author and editor fields in S99
 Warning--empty booktitle in IKNP03
 Warning--empty journal in NNOB12
 Warning--empty booktitle in MR19
-You've used 301 entries,
+Warning--empty title in D21
+Warning--empty year in D21
+You've used 303 entries,
             1791 wiz_defined-function locations,
-            2242 strings with 53574 characters,
-and the built_in function-call counts, 78957 in all, are:
-= -- 7072
-> -- 3763
+            2249 strings with 53687 characters,
+and the built_in function-call counts, 79316 in all, are:
+= -- 7102
+> -- 3775
 < -- 82
-+ -- 1369
-- -- 1068
-* -- 5412
-:= -- 12072
-add.period$ -- 985
-call.type$ -- 301
-change.case$ -- 294
++ -- 1374
+- -- 1071
+* -- 5439
+:= -- 12130
+add.period$ -- 990
+call.type$ -- 303
+change.case$ -- 295
 chr.to.int$ -- 0
-cite$ -- 307
-duplicate$ -- 3745
-empty$ -- 7539
-format.name$ -- 1068
-if$ -- 18142
+cite$ -- 311
+duplicate$ -- 3762
+empty$ -- 7577
+format.name$ -- 1071
+if$ -- 18220
 int.to.chr$ -- 0
-int.to.str$ -- 301
-missing$ -- 278
-newline$ -- 1487
-num.names$ -- 345
-pop$ -- 989
+int.to.str$ -- 303
+missing$ -- 280
+newline$ -- 1496
+num.names$ -- 347
+pop$ -- 993
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2042
+skip$ -- 2050
 stack$ -- 0
-substring$ -- 4680
-swap$ -- 1168
+substring$ -- 4701
+swap$ -- 1170
 text.length$ -- 82
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 6
-while$ -- 689
-width$ -- 304
-write$ -- 3366
+warning$ -- 8
+while$ -- 692
+width$ -- 306
+write$ -- 3385
 (There were 9 warnings)

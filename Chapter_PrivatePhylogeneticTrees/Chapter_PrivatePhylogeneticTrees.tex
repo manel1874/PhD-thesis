@@ -5,6 +5,7 @@
 %\begin{document}
 
 \chapter{Private phylogenetic trees}
+\label{ch:phylogenetic-trees}
 
 Several privacy-enhancing technologies (PET) (differential privacy \cite{Li2016}, homomorphic encryption \cite{Armknecht2015} and secure multiparty computation) have already been applied to biomedical data analysis \cite{Verhaert2018, Scardapane2017, Maulany2018, Kikuchi2018, Tawfik2018}. In particular, these classical techniques have been used in the context of genomic private data analysis. As a way to push research and innovation forward, there have been several competitions \cite{Wang2017} focused on developing faster and more secure solutions in the field of genomic analysis. Also, in recent surveys \cite{MY19, Naveed2015}, the authors describe the role of PETs in four different computational domains of the genomic's field (genomic aggregation, GWASs and statistical analysis, sequence comparison and genetic testing). However, these surveys do not provide any reference covering privacy-preserving methods applied to phylogeny inference. 
 
@@ -438,7 +439,7 @@ Next, we present the open-source tools used to implement the system presented in
 
 \subsection{CBMC-GC}
 
-The CBMC-GC compiler \cite{F14} is used in step $1)$ of Yao protocol to generate the boolean circuit representation of the desired function. It translates C-like code into boolean circuits based on a model checking tool called CBMC and it optimizes circuits for size and depth \cite{Bscher2017, Buescher2016}. HyCC \cite{Bscher2018} is also a potential candidate for this step as it builds upon CBMC-GC. However, it aims to build circuits for hybrid MPC protocols in which our system is not based.
+The CBMC-GC compiler \cite{F14} is used in step $1)$ of Yao protocol to generate the boolean circuit representation of the desired function. It translates C-like code into boolean circuits based on a model checking tool called CBMC and it optimizes circuits for size and depth \cite{Bscher2017, Buescher2016}. HyCC \cite{Bscher2018} is also a potential candidate for this step as it builds upon CBMC-GC. However, it aims to build circuits for hybrid SMC protocols in which our system is not based.
 
 \subsection{Libscapi}
 
