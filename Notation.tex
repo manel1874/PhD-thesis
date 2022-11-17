@@ -13,6 +13,7 @@ $\mathbb{Z}_q$ & set of integers $a \mod q$\\
 $\gcd (a,b)$ & greatest common divisor between integers $a$ and $b$ \\
 $\mathbb{Z}^*_q$ & set of integers $a\in\mathbb{Z}_q$ that are coprime with $q$, i.e. $\gcd (a,q) = 1$ \\
 $|I|$ & size of a set $I$ \\
+$\bar{T}$ & complement of set $T$ \\
 $s\leftarrow_{\$}I$ & $s$ is drawn uniformly at random from the set $I$ \\
 $\bm{v}_{|J}$ & subvector of $\bm{v}$ restricted to the indices $i \in J$ \\
 $[m]$ & the ordered set $\{1, 2, \ldots, m\}$ for $m\in \mathbb{Z}_q$ \\
@@ -20,8 +21,8 @@ $[m, n]$ & the ordered set $\{m, m+1, \dots, n-1, n\}$ for $m, n\in \mathbb{Z}_q
 $d_H(\bm{x}, \bm{y})$ & Hamming distance given by $ |\{ i : x_i \neq y_i \}|$ for $\bm{x},\bm{y}\in\mathbb{Z}^n_q$ \\
 $r_H(\bm{x}, \bm{y})$ & the relative Hamming distance given by $d_H(\bm{x}, \bm{y})/n$ \\
 $\mu(n)$ & Negligible function \\
-%  $\log$ & binary logarithm  \\
-%  $\ln$ & natural logarithm \\
+  $\log$ & natural logarithm  \\
+ $\log_d$ & logarithm with base $d$ \\
   $\ExpE_{x}[f(x)]$ & expectation of $f(x)$ over random choices of $x$ \\
   dim & dimension \\
 \tabstop
@@ -30,10 +31,17 @@ $\mu(n)$ & Negligible function \\
 
 \tabstart{Secure multiparty computation}
 $P_i$ & Party $i$ \\
+$\mathsf{Enc}_k$ & Symmetric encryption method with key $k$ \\
+$\bot$ & Empty string/element\\
+$\mathcal{F}$ & ideal functionality \\
 $\mathcal{F}_{\textbf{OT}}$ & OT functionality \\
 $\mathcal{F}_{\textbf{OLE}}$ & OLE functionality \\
 $\mathcal{F}_{\textbf{VOLE}}$ & VOLE functionality \\
-$\mathsf{Enc}_k$ & Symmetric encryption method with key $k$ \\
+$\mathcal{F}_{\textbf{ext}}$ & external functionality \\
+$\pi$ & protocol \\ 
+$\mathcal{Z}$ & environment \\ 
+$Adv$ & adversary \\ 
+EXEC
 %$\freq{\bx}$ & frequency distribution of the $n$-tuple $\bx$ \\
 %$\freqset{\cX}{n}$ & set of types with denominator $n$ on the set $\cX$ \\
 %$\ntuplefreq{Q}{n}$ & type class of the type $Q$ with denominator $n$
@@ -42,36 +50,37 @@ $\mathsf{Enc}_k$ & Symmetric encryption method with key $k$ \\
 \tabinter
 
 \tabstart{Quantum information}  
+$\mathcal{H}_A\, (\mathcal{H}_A^*)$ & Hilbert space (its dual) of quantum system $A$\\
   $\spr{\phi}{\psi}$ & scalar product of the vectors $\ket{\phi}$ and $\ket{\psi}$ \\
   $\|\ket{\phi}\|$ & norm of the vector $\ket{\phi}$ \\
   $\proj{\phi}$ & projector onto the vector $\ket{\phi}$ \\ 
-  $\cS_1(\cH)$ & set of normalized vectors on $\cH$
+  $\rho$, $\sigma$ & density operators \\
+  $\tau_{\mathcal{X}}$ & uniform distribution over $\mathcal{X}$ given as $\frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$ \\
+  $\cS_1(\cH)$ & set of normalized vectors on $\cH$ \\
+  $\text{Herm}(\mathcal{H})$ & sets of hermitian operators on $\mathcal{H}$ \\
+  $\text{Pos}(\mathcal{H})$ & sets of positive-semi definite on $\mathcal{H}$ \\
+   $\mathcal{P}(\mathcal{H})$ the sets density operators on $\mathcal{H}$ \\
+   $ \delta(\rho,\sigma)$ & trace distance \\
+   $\mathdd{1}$ & identity \\
+$\tr(\rho)$ & trace of the hermitian operator $\rho$ \\
+$\rank(\rho)$ & rank of the hermitian operator $\rho$ \\
+$\mathcal{E}$, $\mathcal{T}$, $\mathcal{C}$, $\mathcal{O}^{2}$, $\mathcal{O}^{3}$, $\mathcal{M}$ & CPTP maps \\
+
+$H_{\min}(X|B)_{\rho}$ & conditional min-entropy of a cq-state $\rho_{XB}$\\
+$H_{\text{min}}(A | B')_{\rho|\sigma}$ & min-entropy of $\rho_{A B'}$ relative to $\sigma_{B'}$ \\
+
+   
 \tabstop
 
 \tabinter
 
-\tabstart{Operators}
-%$\NN(\cH)$ & set of nonnegative operators on $\cH$  \\
-$\id$ & identity \\
-$\tr(S)$ & trace of the hermitian operator $S$ \\
-%$\im(S)$ & support of the hermitian operator $S$ \\
-$\rank(S)$ & rank of the hermitian operator $S$ \\
-$\lambda_{\max}(S)$ & maximum eigenvalue of the hermitian operator $S$ \\
-$\| S \|_1$ & trace norm of the hermitian operator $S$ 
-
-\tabstop
-
-\tabinter
-
-\tabstart{Distance measures for operators}
-$\|\rho - \rho'\|_1$ & \distance{} between $\rho$ and $\rho'$ \\
-$F(\rho, \rho')$ & fidelity between $\rho$ and
-$\rho'$. \\
-$d(\rho_{A B}|B)$ & \distance{} from uniform of $\rho_{A B}$ given $B$ \\
-$d_2(\rho_{A B}|\sigma_B)$ & $L_2$-distance from uniform of $\rho_{A B}$
-relative to $\sigma_B$ 
-% $\cB^{\eps}(\rho)$ & set of operators $\rho'$ with $\|\rho-\rho'\|
-% \leq 1$ and $\tr(\rho') \leq \tr(\rho)$
+\tabstart{Classical information}
+$\mu_X$ & average value of elements in set $X$\\
+$I(A)$ & amount of information some event $A$ \\
+$H(X)$ & Shannon entropy of random variable $X$\\
+$h_d(x)$ & d-ary entropy function \\
+$H_{\min}(X)$ & min-entropy of classical random variable $X$ \\
+$\mathfrak{F}$ & two-universal hash family \\
 \tabstop
 
 % \tabinter
@@ -106,15 +115,6 @@ relative to $\sigma_B$
   $H_2(\rho_{A B}|\sigma_B)$ & collision entropy of $\rho_{A B}$ relative to $\sigma_B$
 \tabstop
 
-\tabinter
-
-\tabstart{Symmetric spaces}
-%  $\Upi$ & permutation of the subsystems \\
- % $\Sym{\cH}{n}$ & Symmetric subspace of
-  %$\cH^{\otimes n}$ \\
-%  $\SymR{\cH}{n}{\theta}{m}$ & Symmetric subspace of $\cH^{\otimes
-%  n}$ along $\ket{\theta}^{\otimes m}$
-\tabstop
 
 
 

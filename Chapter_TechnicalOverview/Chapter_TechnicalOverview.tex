@@ -257,7 +257,7 @@ Quantum information theory studies the implications of using quantum systems as 
 
 As common practice in quantum information theory, a quantum system $A$ is described by some Hilbert space $\mathcal{H}_A$. In this thesis, we will only consider finite-dimensional Hilbert spaces, i.e. $\dim \mathcal{H}_A = d < \inf$. So, we can identify $\mathcal{H}_A \cong \mathbb{C}^d \cong \mathcal{H}^{*}_A$, where $\mathcal{H}^{*}_A$ is the corresponding dual space. We use the Dirac bra-ket notation to describe the states in a physical quantum system $A$. So, a quantum (pure) state is described by a normalized vector $\ket{\psi}_A\in\mathcal{H}_A$ and its dual vector as $\bra{\psi}_A\in\mathcal{H}^{*}_A$. In case it is clear from context, we may omit to which Hilbert space the state belongs to. Since we have the isomorphism $\mathcal{H}_A \cong \mathbb{C}^d$, we can identify the standard basis of $\mathbb{C}^d$ to the standard basis (also known as computational basis) of $\mathcal{H}$, i.e. $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. Also, given different subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$, the joint system can be described by their tensor product, i.e. $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are described as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
 
-We can generate quantum pure states $\ket{\psi_i}\in \mathcal{H}$ according to some probability distribution $\{p_i\}$. This situation is described by a density operator given by $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly called a mixed state. The density operators are positive semi-definite Hermitian operators with unitary trace, i.e. $\rho \geq 0$ and $\tr \rho = 1$. We denote by $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$  and $\mathcal{P}(\mathcal{H})$ the sets of Hermitian, positive-semi definite and density operators on $\mathcal{H}$, respectively.
+We can generate quantum pure states $\ket{\psi_i}\in \mathcal{H}$ according to some probability distribution $\{p_i\}$. This situation is described by a density operator given by $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly called a mixed state. The density operators are positive semi-definite hermitian operators with unitary trace, i.e. $\rho \geq 0$ and $\tr \rho = 1$. We denote by $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$  and $\mathcal{P}(\mathcal{H})$ the sets of hermitian, positive-semi definite and density operators on $\mathcal{H}$, respectively.
 
 A mixed state is classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in\mathcal{X}} P_X(x)\ketbra{x}$, where $\mathcal{X}$ is some finite set and $P_X$ is a probability distribution over $\mathcal{X}$. In particular, we denote the uniform distribution over $\mathcal{X}$ as $\tau_{\mathcal{X}} = \frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$, where $|\mathcal{X}|$ is the size of $\mathcal{X}$. The identity operator is denoted by $\mathds{1}$. Also, for a bipartite quantum state $\rho_{XB}$, we say that $\rho_{XB}$ is a classical-quantum state (cq-state for short) if it is of the form $\rho_{XB} = \sum_{x\in \mathcal{X}} P_X(x) \ketbra{x} \otimes \rho^x_{B}$, where $P_X$ is a probability distribution over the finite set $\mathcal{X}$.
 
@@ -297,8 +297,8 @@ It can be shown that CPTP maps cannot be used to improve the distinguishability 
 Although the following lemma is not directly related to the trace distance, it will be used in Chapter~\ref{ch:QOLE} to bound the trace distance between two states.
 
 \begin{lemma}[Corollary 4, \cite{LPTRG13}]
-Let $X:=\{x_1, \cdot, x_n\}$ be a list of (not necessarily distinct) values in $[0,1]$ with the average $\mu_X:=\frac{1}{n}\sum_{i=1^n} x_i$. Let $\mathcal{T}$ of size $t$ be a random subset of $X$ with the average $\mu_T := \frac{1}{t}\sum_{i\in T} x_i$. Then, for any $\epsilon > 0$, the set $\bar{\mathcal{T}} = X\setminus T$ with average $\mu_{\bar{\mathcal{T}}} = \frac{1}{n-t}\sum_{i\in K} x_i$ satisfies
-$$Pr\left[ \mu_{\bar{\mathcal{T}}} - \mu_T \geq \sqrt{\frac{n(t+1)}{2(n-t)t^2} \log \frac{1}{\epsilon}}  \right] \leq \epsilon.$$
+Let $X:=\{x_1, \ldot, x_n\}$ be a list of (not necessarily distinct) values in $[0,1]$ with the average $\mu_X:=\frac{1}{n}\sum_{i=1^n} x_i$. Let $T$ of size $t$ be a random subset of $X$ with the average $\mu_T := \frac{1}{t}\sum_{i\in T} x_i$. Then, for any $\epsilon > 0$, the set $\bar{T} = X\setminus T$ with average $\mu_{\bar{T}} = \frac{1}{n-t}\sum_{i\in K} x_i$ satisfies
+$$P\left[ \mu_{\bar{T}} - \mu_T \geq \sqrt{\frac{n(t+1)}{2(n-t)t^2} \log \frac{1}{\epsilon}}  \right] \leq \epsilon.$$
 \label{lemma:trace_distance_bound}
 \end{lemma}
 
@@ -450,8 +450,8 @@ Finally, we present a data-processing inequality which reflects the intuitive id
 
 \begin{lemma}[Data processing inequality, Theorem 6.19, \cite{T16}]
 \label{lemma:data_processing_inequality}
-Let $\rho_{A B}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B})$. Moreover, let $\mathcal{E}$ be a sub-unital CPTP map from system $A$ to $A'$ (i.e. $\mathcal{E}(\mathds{1}_A) \leq \mathds{1}_{A'}$) and $\mathcal{T}$ be a CPTP map from system $B$ to $B'$. Then, the state $\tau_{A' B'} = \left(\mathcal{E}\otimes \mathcal{T}  \right)\rho_{AB}$ satisfies
-$$H_{\min}(A|B)_{\rho}\leq H_{\min}(A'|B')_{\tau}.$$
+Let $\rho_{A B}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B})$. Moreover, let $\mathcal{E}$ be a sub-unital CPTP map from system $A$ to $A'$ (i.e. $\mathcal{E}(\mathds{1}_A) \leq \mathds{1}_{A'}$) and $\mathcal{T}$ be a CPTP map from system $B$ to $B'$. Then, the state $\sigma{A' B'} = \left(\mathcal{E}\otimes \mathcal{T}  \right)\rho_{AB}$ satisfies
+$$H_{\min}(A|B)_{\rho}\leq H_{\min}(A'|B')_{\sigma}.$$
 \end{lemma}
 
 \subsection{Two-universal functions}
@@ -459,7 +459,7 @@ $$H_{\min}(A|B)_{\rho}\leq H_{\min}(A'|B')_{\tau}.$$
 We start by defining a particular set of functions that are usually used to amplify the privacy of the parties' input and output elements. 
 
 \begin{definition}[$\delta-$almost two-universal hash family; two-universal hash family]
-A family, $\mathfrak{G}$, of functions, $g$, with domain $D$ and range $R$ is called a $\delta-$almost two-universal hash family if for any two distinct elements $w,w'\in D$ and for $g$ chosen at random from $\mathfrak{G}$, the probability of a \textit{collision} $g(w)=g(w')$ is at most $\delta$. In the special case that $\delta=1/|R|$, where $|R|$ is the size of the range $R$, the family is called \textit{two-universal}. 
+A family, $\mathfrak{F}$, of functions, $g$, with domain $D$ and range $R$ is called a $\delta-$almost two-universal hash family if for any two distinct elements $w,w'\in D$ and for $g$ chosen at random from $\mathfrak{F}$, the probability of a \textit{collision} $g(w)=g(w')$ is at most $\delta$. In the special case that $\delta=1/|R|$, where $|R|$ is the size of the range $R$, the family is called \textit{two-universal}. 
 \end{definition}
 
 Now, we present a particular two-universal hash family that preserves the structure of the OLE input and output while keeping its privacy amplification guarantees. This family is called Multi-linear Modular Hashing as it is based on the modular inner product of vectors \cite{HK97}.
@@ -483,7 +483,7 @@ The following \textit{Generalized Leftover Hash Lemma} is a relevant ingredient 
 %Next, we state a crucial result that is used to prove the security of the quantum OLE protocol~\footnote{Here we present a multidimensional version of the Generalized Leftover Hash Lemma. This can be easily deduced by using Lemma 4 from Tomamichel et al. work \cite{TSSR11} with $d_A = d$.}. This ensures that, after applying a known function $f$ from a two-universal family to a random variable $X$, the resulting random variable $Z = f(X)$ is close to uniform conditioned on some (possibly quantum) side information $E$. It also describes how close $Z$ is to uniform with respect to the amount of information we have about $X$ conditioned on $E$, i.e. $H_\text{min}(X|E)$.
 
 \begin{lemma}[Generalized Leftover Hash Lemma \cite{TSSR11}]
-Let $X$ be a random variable, $E$ a quantum system, and $\mathfrak{G}$ a two-universal family of hash functions from $X$ to $\mathbb{Z}_d^l$. Then, on average over the choices of $g$  from $\mathfrak{G}$, the output $Z := g(X)$ is $\xi$-close to uniform conditioned on $E$, where
+Let $X$ be a random variable, $E$ a quantum system, and $\mathfrak{F}$ a two-universal family of hash functions from $X$ to $\mathbb{Z}_d^l$. Then, on average over the choices of $g$  from $\mathfrak{F}$, the output $Z := g(X)$ is $\xi$-close to uniform conditioned on $E$, where
 \begin{equation}
   \xi = \frac{1}{2}\sqrt{2^{l\log d - H_\text{min}(X|E)}}.  
 \end{equation}
@@ -506,7 +506,7 @@ Let us now see the formal definition. Let $\mathcal{\pi}$ and $\rho$ be the real
 
 Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum-UC emulates $\rho$ if and only if for every party, $C$, and for every adversary, $Adv$, there exists a simulator, $\mathcal{S}$, such that for every environment $\mathcal{Z}$, and every $z\in\{0,1\}^*$, $n\in\mathbb{N}$
 \begin{equation*}
-    \big|\text{Pr}[\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}} (n, z) = 1] - \text{Pr}[\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}(n, z) = 1]\big| \leq \mu(n),
+    \big|\text{P}[\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}} (n, z) = 1] - \text{P}[\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}(n, z) = 1]\big| \leq \mu(n),
 \end{equation*}
  where $\mu(n)$ is a negligible function and $n$ is the security parameter. We furthermore require that if $Adv$ is quantum-polynomial-time, so is $\mathcal{S}$. Finally, if we consider quantum-polynomial-time $Adv$ and $\mathcal{Z}$ we have \textit{computational} quantum-UC security.
 \label{def:statisticalquc}
