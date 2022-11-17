@@ -671,11 +671,9 @@ n_2 &=& \text{popcount}_t(x\oplus y) - n_1.
 Recall from section \ref{evolDist}, that the F84 ($F_{xy} $) and LogDet ($L_{xy} $) distances are given, respectively, by:
 \begin{equation}
     F_{xy} = -2 A\ln\bigg( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \bigg) + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg),
-\label{eq:F84_distance}
 \end{equation}
 \begin{equation}
     L_{xy} = -\frac{1}{4}\ln\Bigg( \frac{\det F_{xy}}{\sqrt{\det \prod_x \prod_y}} \Bigg),
-\label{eq:LogDet_distance}
 \end{equation}
 where $A = \frac{\pi_C \pi_T}{\pi_Y} + \frac{\pi_A \pi_G}{\pi_R}$, $B=\pi_C\pi_T + \pi_A\pi_G$ and $C=\pi_R\pi_Y$ for $\pi_Y = \pi_C + \pi_T$ and $\pi_R = \pi_A + \pi_G$, and $P$ and $Q$ are defined as in the Kimura 2-parameter mode above. Also, the divergence matrix $F_{xy}$ is a $4\times 4$ matrix such that the $ij-$th entry gives the proportion of sites in sequence $x$ and $y$ with nucleotide $i$ and $j$, respectively. Also, $\prod_x$ and $\prod_y$ are diagonal matrices where its $i-$th component correspond to the proportion of $i$ nucleotide in the sequence $x$ and $y$, respectively.
 
@@ -965,7 +963,7 @@ In the quantum-assisted implementation, we separate the precomputation phase (ge
     \label{fig:overhead}
 \end{figure}
 
-The reason for oblivious keys management to be more expensive than symmetric management and to be the main cause of overhead is twofold: the total size of oblivious keys used is three orders of magnitude higher than that of symmetric keys (compare $L^j_{qkd}$ and $L^j_{\text{bok}}$ from Table~\ref{table:complexity}); oblivious keys are loaded into ROM memory (slower access) whereas symmetric keys are loaded into RAM memory (faster access). The main reason for oblivious keys to be managed from a file system is that it allows to use Libscapi implementation of Yao protocol in a modular way, i.e. we only have to change the type of base OT used by Libscapi implementation without tailoring any other module.
+The reason for oblivious keys management to be more expensive than symmetric management and to be the main cause of overhead is twofold: the total size of oblivious keys used is three orders of magnitude higher than that of symmetric keys (compare $L^j_{qkd}$ and $L^j_{\text{bok}}$ from Table~\ref{table:complexity}); oblivious keys are saved in files (slower access) whereas symmetric keys are loaded into RAM memory (faster access). The main reason for oblivious keys to be managed from a file system is that it allows to use Libscapi implementation of Yao protocol in a modular way, i.e. we only have to change the type of base OT used by Libscapi implementation without tailoring any other module.
 
 As the management of files is time-sensitive to their size, the proportion of time spent on the overhead due to the oblivious key management system (OKM) increases with the number of shared keys per party. This can be confirmed by Figure~\ref{fig:overhead} which shows the proportion of time spent by the oblivious key management system in the difference between the quantum-assisted and the classical-only system.
 

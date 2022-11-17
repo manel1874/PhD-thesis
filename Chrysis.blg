@@ -10,9 +10,8 @@ A level-1 auxiliary file: Chapter_QuantumObliviousLinearEvaluation/Chapter_Quant
 A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
 A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
-Reallocated field_info (elt_size=4) to 11992 items from 5000.
+Reallocated field_info (elt_size=4) to 11969 items from 5000.
 Database file #1: References/References.bib
-Warning--I didn't find a database entry for "C01"
 Warning--empty booktitle in HIMV19
 Warning--empty journal in CDIKLOV19
 Warning--can't use both author and editor fields in S99
@@ -23,7 +22,7 @@ Warning--empty title in D21
 Warning--empty year in D21
 You've used 303 entries,
             1791 wiz_defined-function locations,
-            2249 strings with 53687 characters,
+            2247 strings with 53681 characters,
 and the built_in function-call counts, 79316 in all, are:
 = -- 7102
 > -- 3775
@@ -62,4 +61,4 @@ warning$ -- 8
 while$ -- 692
 width$ -- 306
 write$ -- 3385
-(There were 9 warnings)
+(There were 8 warnings)

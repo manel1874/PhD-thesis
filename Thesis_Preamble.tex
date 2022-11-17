@@ -578,8 +578,6 @@
 
 
 
-\newcommand{\ket}[1]{| #1 \rangle}
-\newcommand{\bra}[1]{\langle #1 |}
 \newcommand{\proj}[1]{\ket{#1}\bra{#1}}
 \newcommand{\tr}{\text{Tr}}
 \newcommand{\q}[1]{\vec{#1}\cdot\vec{\sigma}}
@@ -815,3 +813,185 @@
 %\newtheorem{corollary}{Corollary}[theorem]
 %\newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{claim}[theorem]{Claim}
+
+%%%%%%%%%%%% Renner Thesis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*{\textfrac}[2]{{\textstyle \frac{#1}{#2}}}
+
+\newcommand*{\lfunc}{\bar{h}}
+
+\newcommand*{\eps}{\varepsilon}
+\newcommand*{\epsb}{\bar{\eps}}
+\newcommand*{\epst}{\tilde{\eps}}
+
+\newcommand*{\lambdat}{\tilde{\lambda}}
+
+\newcommand*{\blambda}{\boldsymbol{\lambda}}
+
+\newcommand*{\bz}{\mathbf{z}}
+\newcommand*{\bzb}{\mathbf{\bar{z}}}
+\newcommand*{\bzp}{\mathbf{z'}}
+\newcommand*{\bzpp}{\mathbf{z''}}
+
+\newcommand*{\bZ}{\mathbf{Z}}
+\newcommand*{\bZb}{\mathbf{\bar{Z}}}
+
+\newcommand*{\cB}{\mathcal{B}}
+\newcommand*{\cC}{\mathcal{C}}
+\newcommand*{\cD}{\mathcal{D}}
+\newcommand*{\cE}{\mathcal{E}}
+\newcommand*{\cF}{\mathcal{F}}
+\newcommand*{\cH}{\mathcal{H}}
+\newcommand*{\cI}{\mathcal{I}}
+\newcommand*{\cL}{\mathcal{L}}
+\newcommand*{\cM}{\mathcal{M}}
+\newcommand*{\cN}{\mathcal{N}}
+\newcommand*{\cP}{\mathcal{P}}
+\newcommand*{\cQ}{\mathcal{Q}}
+\newcommand*{\cR}{\mathcal{R}}
+\newcommand*{\cS}{\mathcal{S}}
+\newcommand*{\cT}{\mathcal{T}}
+\newcommand*{\cU}{\mathcal{U}}
+\newcommand*{\cV}{\mathcal{V}}
+\newcommand*{\cW}{\mathcal{W}}
+\newcommand*{\cX}{\mathcal{X}}
+\newcommand*{\cY}{\mathcal{Y}}
+\newcommand*{\cZ}{\mathcal{Z}}
+
+\newcommand*{\fW}{\mathfrak{W}}
+\newcommand*{\fX}{\mathfrak{X}}
+\newcommand*{\fZ}{\mathfrak{Z}}
+
+\newcommand*{\bbC}{\mathbb{C}}
+\newcommand*{\bbN}{\mathbb{N}}
+\newcommand*{\bbR}{\mathbb{R}}
+
+\newcommand*{\cHb}{\bar{\cH}}
+
+\newcommand*{\nN}[1]{\{1, \ldots, #1\}}
+
+\newcommand*{\Thetab}{\bar{\Theta}}
+\newcommand*{\thetab}{\bar{\theta}}
+\newcommand*{\rhob}{\bar{\rho}}
+\newcommand*{\rhot}{\tilde{\rho}}
+\newcommand*{\sigmat}{\tilde{\sigma}}
+\newcommand*{\Psih}{\hat{\Psi}}
+
+\newcommand*{\psib}{\bar{\psi}}
+\newcommand*{\psit}{\tilde{\psi}}
+
+\newcommand*{\conc}[2]{({#1},{#2})} % concatenation of two strings
+
+\newcommand*{\probdist}{\mathrm{Distr}} % Probability distributions
+
+\newcommand*{\sfrac}[2]{{\frac{#1}{#2}}}
+\newcommand*{\ssfrac}[2]{{\textstyle \frac{#1}{#2}}}
+\newcommand*{\slfrac}[2]{#1/#2}
+
+\newcommand*{\xor}{\oplus}
+\newcommand*{\hb}{\bar{h}}
+
+\DeclareMathOperator*{\PrS}{\mathbb{P}}
+\DeclareMathOperator*{\PrE}{\mathbb{P}}
+\DeclareMathOperator*{\ExpE}{\mathbb{E}}
+
+\newcommand*{\spr}[2]{\langle #1 | #2 \rangle}
+
+
+\newcommand*{\dist}{\delta}
+
+\newcommand*{\ts}[1]{\overline{#1}} % state over #1 subsystems
+
+\newcommand*{\id}{\mathrm{id}}
+
+\newcommand*{\state}{\mathrm{S}}
+
+\newcommand*{\freq}[1]{\lambda_{#1}}
+\newcommand*{\freqfix}{q}
+
+\newcommand*{\matone}[2]{{\hspace{-.17em}\begin{smallmatrix}
+ #1 \\[-0.155ex] #2 
+\end{smallmatrix}}}
+\newcommand*{\mattwo}[4]{{\hspace{-.17em}\begin{smallmatrix}
+ #1 & \hspace{-.3em} #2 \\[-0.155ex] #3 & \hspace{-.3em} #4
+\end{smallmatrix}}}
+\newcommand*{\mattwosmall}[4]{\raisebox{0.1ex}{$\hspace{-.17em}
+    \begin{smallmatrix} #1 & \hspace{-.3em} #2 \\[-0.4ex] #3 &
+      \hspace{-.3em} #4
+\end{smallmatrix}$}}
+
+\newcommand*{\mresult}[1]{_{#1}}
+\newcommand*{\mresultA}[2]{\matone{#1}{#2}}
+\newcommand*{\AcondB}[2]{\mattwosmall{#1}{}{}{|#2}}
+\newcommand*{\mresultAcondB}[3]{\mattwo{#1}{}{#2}{|#3}}
+
+\newcommand*{\expdist}[2]{D_{#2}(#1)} % expected distance between Q_#1 and $2
+
+\newcommand*{\Cconst}{C}
+\newcommand*{\Cone}{\Cconst_1}
+\newcommand*{\Ctwo}{\Cconst_2}
+
+\newcommand*{\xz}[1]{(x_1, \ldots, x_{#1})}
+\newcommand*{\xzb}[1]{(x_1, \ldots, x_{#1})}
+\newcommand*{\Xz}[1]{X_1 \cdots X_{#1}}
+
+\newcommand*{\yz}[1]{(y_1, \ldots, y_{#1})}
+\newcommand*{\yzb}[1]{(y_1, \ldots, y_{#1})}
+\newcommand*{\Yz}[1]{Y_1 \cdots Y_{#1}}
+
+\newcommand*{\Qb}{\bar{Q}}
+
+\newcommand*{\be}{\mathbf{e}}
+\newcommand*{\bE}{\mathbf{E}}
+\newcommand*{\bi}{\mathbf{i}}
+\newcommand*{\bk}{\mathbf{k}}
+\newcommand*{\br}{\mathbf{r}}
+\newcommand*{\bs}{\mathbf{s}}
+\newcommand*{\bu}{\mathbf{u}}
+\newcommand*{\bv}{\mathbf{v}}
+\newcommand*{\bw}{\mathbf{w}}
+\newcommand*{\bW}{\mathbf{W}}
+\newcommand*{\bx}{\mathbf{x}}
+\newcommand*{\bX}{\mathbf{X}}
+\newcommand*{\by}{\mathbf{y}}
+\newcommand*{\bY}{\mathbf{Y}}
+\newcommand*{\bc}{\mathbf{c}}
+\newcommand*{\bC}{\mathbf{C}}
+\newcommand*{\buh}{\mathbf{\hat{u}}}
+\newcommand*{\bxh}{\mathbf{\hat{x}}}
+
+
+\newcommand*{\Ab}{\bar{A}}
+\newcommand*{\Eb}{\bar{E}}
+%\newcommand*{\pb}{\bar{p}}
+\newcommand*{\qb}{\bar{q}}
+\newcommand*{\xb}{\bar{x}}
+\newcommand*{\yb}{\bar{y}}
+\newcommand*{\zb}{\bar{z}}
+\newcommand*{\Pb}{\bar{P}}
+\newcommand*{\Rb}{\bar{R}}
+\newcommand*{\Sb}{\bar{S}}
+\newcommand*{\Xb}{\bar{X}}
+\newcommand*{\Yb}{\bar{Y}}
+\newcommand*{\Zb}{\bar{Z}}
+\newcommand*{\cXb}{\bar{\cX}}
+\newcommand*{\cZb}{\bar{\cZ}}
+
+\newcommand*{\Psit}{\tilde{\Psi}}
+
+\newcommand*{\Hmin}{H_{\min}}
+\newcommand*{\Hmax}{H_{\max}}
+
+\newcommand*{\Upi}{\pi}
+
+\newcommand*{\tabprotsep}{\vspace{3.5ex}}
+
+\newcommand*{\rate}{\mathrm{rate}}
+
+\newcommand*{\leak}{\mathrm{leak}}
+
+\newcommand*{\distPE}{\mu}
+
+\newcommand*{\distance}{$L_1$-distance}
+\newcommand*{\Distance}{$L_1$-distance}
+

@@ -1,0 +1,126 @@
+\chapter*{Notation}
+
+
+\newcommand{\tabstart}[1]{\noindent \begin{tabular}{p{2.95cm}p{8.7cm}}
+    \multicolumn{2}{l}{{\bf #1}} \\ \hline \\[-2.5ex] } 
+
+\newcommand{\tabstop}{\\ \hline \end{tabular}}
+
+\newcommand{\tabinter}{\vspace{1ex}}
+
+\tabstart{General}
+$\mathbb{Z}_q$ & set of integers $a \mod q$\\
+$\gcd (a,b)$ & greatest common divisor between integers $a$ and $b$ \\
+$\mathbb{Z}^*_q$ & set of integers $a\in\mathbb{Z}_q$ that are coprime with $q$, i.e. $\gcd (a,q) = 1$ \\
+$|I|$ & size of a set $I$ \\
+$s\leftarrow_{\$}I$ & $s$ is drawn uniformly at random from the set $I$ \\
+$\bm{v}_{|J}$ & subvector of $\bm{v}$ restricted to the indices $i \in J$ \\
+$[m]$ & the ordered set $\{1, 2, \ldots, m\}$ for $m\in \mathbb{Z}_q$ \\
+$[m, n]$ & the ordered set $\{m, m+1, \dots, n-1, n\}$ for $m, n\in \mathbb{Z}_q$ such that $m<n$ \\
+$d_H(\bm{x}, \bm{y})$ & Hamming distance given by $ |\{ i : x_i \neq y_i \}|$ for $\bm{x},\bm{y}\in\mathbb{Z}^n_q$ \\
+$r_H(\bm{x}, \bm{y})$ & the relative Hamming distance given by $d_H(\bm{x}, \bm{y})/n$ \\
+$\mu(n)$ & Negligible function \\
+%  $\log$ & binary logarithm  \\
+%  $\ln$ & natural logarithm \\
+  $\ExpE_{x}[f(x)]$ & expectation of $f(x)$ over random choices of $x$ \\
+  dim & dimension \\
+\tabstop
+
+\tabinter
+
+\tabstart{Secure multiparty computation}
+$P_i$ & Party $i$ \\
+$\mathcal{F}_{\textbf{OT}}$ & OT functionality \\
+$\mathcal{F}_{\textbf{OLE}}$ & OLE functionality \\
+$\mathcal{F}_{\textbf{VOLE}}$ & VOLE functionality \\
+$\mathsf{Enc}_k$ & Symmetric encryption method with key $k$ \\
+%$\freq{\bx}$ & frequency distribution of the $n$-tuple $\bx$ \\
+%$\freqset{\cX}{n}$ & set of types with denominator $n$ on the set $\cX$ \\
+%$\ntuplefreq{Q}{n}$ & type class of the type $Q$ with denominator $n$
+\tabstop
+
+\tabinter
+
+\tabstart{Quantum information}  
+  $\spr{\phi}{\psi}$ & scalar product of the vectors $\ket{\phi}$ and $\ket{\psi}$ \\
+  $\|\ket{\phi}\|$ & norm of the vector $\ket{\phi}$ \\
+  $\proj{\phi}$ & projector onto the vector $\ket{\phi}$ \\ 
+  $\cS_1(\cH)$ & set of normalized vectors on $\cH$
+\tabstop
+
+\tabinter
+
+\tabstart{Operators}
+%$\NN(\cH)$ & set of nonnegative operators on $\cH$  \\
+$\id$ & identity \\
+$\tr(S)$ & trace of the hermitian operator $S$ \\
+%$\im(S)$ & support of the hermitian operator $S$ \\
+$\rank(S)$ & rank of the hermitian operator $S$ \\
+$\lambda_{\max}(S)$ & maximum eigenvalue of the hermitian operator $S$ \\
+$\| S \|_1$ & trace norm of the hermitian operator $S$ 
+
+\tabstop
+
+\tabinter
+
+\tabstart{Distance measures for operators}
+$\|\rho - \rho'\|_1$ & \distance{} between $\rho$ and $\rho'$ \\
+$F(\rho, \rho')$ & fidelity between $\rho$ and
+$\rho'$. \\
+$d(\rho_{A B}|B)$ & \distance{} from uniform of $\rho_{A B}$ given $B$ \\
+$d_2(\rho_{A B}|\sigma_B)$ & $L_2$-distance from uniform of $\rho_{A B}$
+relative to $\sigma_B$ 
+% $\cB^{\eps}(\rho)$ & set of operators $\rho'$ with $\|\rho-\rho'\|
+% \leq 1$ and $\tr(\rho') \leq \tr(\rho)$
+\tabstop
+
+% \tabinter
+
+% To indicate that an operator acts on a product space, we add
+% subscripts which correspond to each of the subspaces, e.g., $\rho_{A
+%   B} \in \NN(\cH_A \otimes \cH_B)$.  To denote the operator obtained
+% by taking the partial trace over some of the subsystems, we omit the
+% corresponding subscripts, e.g., $\rho_A = \tr_B(\rho_{A B})$.
+
+\tabinter
+
+\tabstart{Entropies}
+  $H(P_X)$ & Shannon entropy of the probability distribution $P_X$ \\
+%   $H_{P_{X Y}}(X|Y)$ & conditional entropy $H(P_{X Y}) -
+%   H(P_Y)$ \\
+%   $H(X|Y)$ & abbreviation of $H_{P_{X Y}}(X|Y)$ \\
+  $h(p)$ & binary Shannon entropy with bias $p$ \\
+  $H(\rho_A)$ & von Neumann entropy of the density operator $\rho_A$ \\
+  $H(A|B)$ &  conditional entropy $H(\rho_{A B}) - H(\rho_B)$ \\
+%  $H(A|B)$ & abbreviation of $H_{\sigma_{A B}}(A|B)$ \\
+  $D(\rho\|\sigma)$ & relative entropy of $\rho$ to $\sigma$ \\
+  $\Hmin(\rho_{A B}|\sigma_B)$ & min-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
+  $\Hmax(\rho_{A B}|\sigma_B)$ & max-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
+  $\Hmin^\eps(\rho_{A B}|\sigma_B)$ & $\eps$-smooth min-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
+  $\Hmax^\eps(\rho_{A B}|\sigma_B)$ & $\eps$-smooth max-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
+  $\Hmin^\eps(\rho_{A B}|B)$ & $\eps$-smooth min-entropy of $\rho_{A B}$ given $\cH_B$\\
+  $\Hmax^\eps(\rho_{A B}|B)$ & $\eps$-smooth max-entropy of $\rho_{A
+  B}$ given $\cH_B$\\
+  $\Hmin^\eps(A|B)$ & abbreviation for $\Hmin^\eps(\rho_{A B}|B)$ \\
+  $\Hmax^\eps(A|B)$ & abbreviation for $\Hmax^\eps(\rho_{A B}|B)$ \\
+  $H_2(\rho_{A B}|\sigma_B)$ & collision entropy of $\rho_{A B}$ relative to $\sigma_B$
+\tabstop
+
+\tabinter
+
+\tabstart{Symmetric spaces}
+%  $\Upi$ & permutation of the subsystems \\
+ % $\Sym{\cH}{n}$ & Symmetric subspace of
+  %$\cH^{\otimes n}$ \\
+%  $\SymR{\cH}{n}{\theta}{m}$ & Symmetric subspace of $\cH^{\otimes
+%  n}$ along $\ket{\theta}^{\otimes m}$
+\tabstop
+
+
+
+
+
+
+
+
+

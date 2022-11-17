@@ -28,6 +28,18 @@ Marcel Keller, Emmanuela Orsini, and Peter Scholl.
   Lecture Notes in Computer Science}, pages 724--741. Springer, August 2015.
 \newblock Date of Acceptance: 08/05/2015.
 
+\bibitem{BB84}
+Charles~H. Bennett and Gilles Brassard.
+\newblock Quantum cryptography: Public key distribution and coin tossing.
+\newblock {\em Theoretical Computer Science}, 560:7--11, December 2014.
+
+\bibitem{Bscher2018}
+Niklas B\"{u}scher, Daniel Demmler, Stefan Katzenbeisser, David Kretzmer, and
+  Thomas Schneider.
+\newblock {HyCC}.
+\newblock In {\em Proceedings of the 2018 {ACM} {SIGSAC} Conference on Computer
+  and Communications Security}. {ACM}, January 2018.
+
 \bibitem{Wang11}
 Jun Wang.
 \newblock Personal genomes: For one and for all.
@@ -528,6 +540,12 @@ Serge Fehr and Christian Schaffner.
 \newblock In Omer Reingold, editor, {\em Theory of Cryptography}, pages
   350--367, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
 
+\bibitem{CF01}
+Ran Canetti and Marc Fischlin.
+\newblock Universally composable commitments.
+\newblock In Joe Kilian, editor, {\em Advances in Cryptology --- CRYPTO 2001},
+  pages 19--40, Berlin, Heidelberg, 2001. Springer Berlin Heidelberg.
+
 \bibitem{CBGLM21}
 Bruno Costa, Pedro Branco, Manuel Goul{\~{a}}o, Mariano Lemus, and Paulo
   Mateus.
@@ -791,11 +809,6 @@ Stephen Wiesner.
 \newblock Conjugate coding.
 \newblock {\em {ACM} {SIGACT} News}, 15(1):78--88, January 1983.
 
-\bibitem{BB84}
-Charles~H. Bennett and Gilles Brassard.
-\newblock Quantum cryptography: Public key distribution and coin tossing.
-\newblock {\em Theoretical Computer Science}, 560:7--11, December 2014.
-
 \bibitem{BBBW83}
 Charles~H. Bennett, Gilles Brassard, Seth Breidbart, and Stephen Wiesner.
 \newblock Quantum cryptography, or unforgeable subway tokens.
@@ -906,12 +919,6 @@ Iftach Haitner and Omer Reingold.
 \newblock Statistically-hiding commitment from any one-way function.
 \newblock In {\em Proceedings of the thirty-ninth annual {ACM} symposium on
   Theory of computing - {STOC} '07}. {ACM} Press, 2007.
-
-\bibitem{CF01}
-Ran Canetti and Marc Fischlin.
-\newblock Universally composable commitments.
-\newblock In Joe Kilian, editor, {\em Advances in Cryptology --- CRYPTO 2001},
-  pages 19--40, Berlin, Heidelberg, 2001. Springer Berlin Heidelberg.
 
 \bibitem{U11}
 Dominique Unruh.
@@ -1485,13 +1492,6 @@ Niklas Buescher, Andreas Holzer, Alina Weber, and Stefan Katzenbeisser.
 \newblock Compiling low depth circuits for practical secure computation.
 \newblock In {\em Computer Security {\textendash} {ESORICS} 2016}, pages
   80--98. Springer International Publishing, 2016.
-
-\bibitem{Bscher2018}
-Niklas B\"{u}scher, Daniel Demmler, Stefan Katzenbeisser, David Kretzmer, and
-  Thomas Schneider.
-\newblock {HyCC}.
-\newblock In {\em Proceedings of the 2018 {ACM} {SIGSAC} Conference on Computer
-  and Communications Security}. {ACM}, January 2018.
 
 \bibitem{mpc_benchmark}
 Mpc-benchmark.
