@@ -106,7 +106,7 @@ The protocol goes as follows:
         \centering
         \includegraphics[scale=0.3]{Chapter_TechnicalOverview/booleanCircuit.png}
 
-        \caption{Boolean circuit of the Millionaires' Problem. Optimized circuit according to the construction in \cite{Kolesnikov2009}.}
+        \caption{Boolean circuit of the Millionaires' Problem. Optimised circuit according to the construction in \cite{Kolesnikov2009}.}
         \label{fig:boolean}
     \end{figure}
     
@@ -297,7 +297,7 @@ It can be shown that CPTP maps cannot be used to improve the distinguishability 
 Although the following lemma is not directly related to the trace distance, it will be used in Chapter~\ref{ch:QOLE} to bound the trace distance between two states.
 
 \begin{lemma}[Corollary 4, \cite{LPTRG13}]
-Let $X:=\{x_1, \ldot, x_n\}$ be a list of (not necessarily distinct) values in $[0,1]$ with the average $\mu_X:=\frac{1}{n}\sum_{i=1^n} x_i$. Let $T$ of size $t$ be a random subset of $X$ with the average $\mu_T := \frac{1}{t}\sum_{i\in T} x_i$. Then, for any $\epsilon > 0$, the set $\bar{T} = X\setminus T$ with average $\mu_{\bar{T}} = \frac{1}{n-t}\sum_{i\in K} x_i$ satisfies
+Let $X:=\{x_1, \ldots, x_n\}$ be a list of (not necessarily distinct) values in $[0,1]$ with the average $\mu_X:=\frac{1}{n}\sum_{i=1^n} x_i$. Let $T$ of size $t$ be a random subset of $X$ with the average $\mu_T := \frac{1}{t}\sum_{i\in T} x_i$. Then, for any $\epsilon > 0$, the set $\bar{T} = X\setminus T$ with average $\mu_{\bar{T}} = \frac{1}{n-t}\sum_{i\in K} x_i$ satisfies
 $$P\left[ \mu_{\bar{T}} - \mu_T \geq \sqrt{\frac{n(t+1)}{2(n-t)t^2} \log \frac{1}{\epsilon}}  \right] \leq \epsilon.$$
 \label{lemma:trace_distance_bound}
 \end{lemma}
@@ -496,17 +496,17 @@ Let $X$ be a random variable, $E$ a quantum system, and $\mathfrak{F}$ a two-uni
 
 The universal composability (UC) framework was introduced by Canetti \cite{C20} in the classical setting and extended to the quantum setting by Unruh, and Ben-Or and Mayers \cite{Unruh04, BenOrMay04}(see also \cite{Unruh10, FS09}).  It renders strong composability guarantees as it ensures that the security of the protocol is independent of any external execution of the same or other protocols.  Both classical and quantum frameworks follow the same ideal-real world comparison structure and consider the same interactions between machines. The difference lies on the operations allowed by the quantum-UC framework, where we can also store, transmit, and process  quantum states. 
 
-More specifically, the quantum-UC security of some protocol $\mathcal{\pi}$ is drawn by comparing two scenarios. A real scenario where  $\mathcal{\pi}$ is executed and an ideal scenario where an ideal functionality, $\mathcal{F}$,  that carries out the same task and is defined \textit{a priori}, is executed. The comparison is done by a special machine, called the \textit{environment}, $\mathcal{Z}$, that supervises the execution of both scenarios and has access to any external information (e.g. concurrent executions of the same or any other protocol). In the two-party case, the structure of the machines in both scenarios is as follows: The real scenario has the environment, $\mathcal{Z}$, the adversary, $Adv$, and the two parties Alice  and Bob, while the ideal scenario has the environment $\mathcal{Z}$, the simulator $\mathcal{S}$, the two parties Alice and Bob and the ideal functionality $\mathcal{F}$. 
+More specifically, the quantum-UC security of some protocol $\Pi$ is drawn by comparing two scenarios. A real scenario where  $\Pi$ is executed and an ideal scenario where an ideal functionality, $\mathcal{F}$,  that carries out the same task and is defined \textit{a priori}, is executed. The comparison is done by a special machine, called the \textit{environment}, $\mathcal{Z}$, that supervises the execution of both scenarios and has access to any external information (e.g. concurrent executions of the same or any other protocol). In the two-party case, the structure of the machines in both scenarios is as follows: The real scenario has the environment, $\mathcal{Z}$, the adversary, $Adv$, and the two parties Alice  and Bob, while the ideal scenario has the environment $\mathcal{Z}$, the simulator $\mathcal{S}$, the two parties Alice and Bob and the ideal functionality $\mathcal{F}$. 
 %Note that the adversary $Adv$ could be integrated inside the environment $\mathcal{Z}$, as $\mathcal{Z}$ has full control over $Adv$  \cite{Unruh10}, but for clarity, we keep them separated in the real scenario. 
-Informally, we say that the protocol $\mathcal{\pi}$ is quantum-UC secure if no environment $\mathcal{Z}$ can distinguish between the execution of $\mathcal{\pi}$ in the real scenario and  the execution of the  functionality $\mathcal{F}$ in the ideal scenario. Any possible attack of the adversary $Adv$ in the execution of $\mathcal{\pi}$ can be simulated by the simulator $\mathcal{S}$ in the ideal-world execution of $\mathcal{F}$, without any noticeable difference form the point-of-view of the environment $\mathcal{Z}$. Since the ideal functionality $\mathcal{F}$ is secure by definition, the real-world adversary is not able to extract any more information than what is allowed by the functionality $\mathcal{F}$. %We can see the structure of both scenarios in Figure~\ref{fig:realmodel} and \ref{fig:idealmodel} for the case where Alice is corrupted and the ideal functionality is the oblivious linear evaluation, $\mathcal{F}_{\textbf{OLE}}$. 
+Informally, we say that the protocol $\Pi$ is quantum-UC secure if no environment $\mathcal{Z}$ can distinguish between the execution of $\Pi$ in the real scenario and  the execution of the  functionality $\mathcal{F}$ in the ideal scenario. Any possible attack of the adversary $Adv$ in the execution of $\Pi$ can be simulated by the simulator $\mathcal{S}$ in the ideal-world execution of $\mathcal{F}$, without any noticeable difference form the point-of-view of the environment $\mathcal{Z}$. Since the ideal functionality $\mathcal{F}$ is secure by definition, the real-world adversary is not able to extract any more information than what is allowed by the functionality $\mathcal{F}$. %We can see the structure of both scenarios in Figure~\ref{fig:realmodel} and \ref{fig:idealmodel} for the case where Alice is corrupted and the ideal functionality is the oblivious linear evaluation, $\mathcal{F}_{\textbf{OLE}}$. 
 
-Let us now see the formal definition. Let $\mathcal{\pi}$ and $\rho$ be the real and ideal two-party protocols. We denote by $\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}}$ (analogously $\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$) the output of the environment $\mathcal{Z}$ at the end of the real (ideal) execution, and by $C$ the corrupted party. 
+Let us now see the formal definition. Let $\Pi$ and $\rho$ be the real and ideal two-party protocols. We denote by $\text{EXEC}_{\Pi^C, Adv, \mathcal{Z}}$ (analogously $\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$) the output of the environment $\mathcal{Z}$ at the end of the real (ideal) execution, and by $C$ the corrupted party. 
 
 \begin{definition}[Statistical quantum-UC security,  Computational quantum-UC security \cite{Unruh10}]
 
 Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum-UC emulates $\rho$ if and only if for every party, $C$, and for every adversary, $Adv$, there exists a simulator, $\mathcal{S}$, such that for every environment $\mathcal{Z}$, and every $z\in\{0,1\}^*$, $n\in\mathbb{N}$
 \begin{equation*}
-    \big|\text{P}[\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}} (n, z) = 1] - \text{P}[\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}(n, z) = 1]\big| \leq \mu(n),
+    \big|\text{P}[\text{EXEC}_{\Pi^C, Adv, \mathcal{Z}} (n, z) = 1] - \text{P}[\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}(n, z) = 1]\big| \leq \mu(n),
 \end{equation*}
  where $\mu(n)$ is a negligible function and $n$ is the security parameter. We furthermore require that if $Adv$ is quantum-polynomial-time, so is $\mathcal{S}$. Finally, if we consider quantum-polynomial-time $Adv$ and $\mathcal{Z}$ we have \textit{computational} quantum-UC security.
 \label{def:statisticalquc}
@@ -514,11 +514,11 @@ Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum
 
 
 
- The role of the simulator, $\mathcal{S}$, is to  simulate the execution of the protocol $\mathcal{\pi}$ in such a way that the environment $\mathcal{Z}$ is not able to distinguish between the two executions. 
+ The role of the simulator, $\mathcal{S}$, is to  simulate the execution of the protocol $\Pi$ in such a way that the environment $\mathcal{Z}$ is not able to distinguish between the two executions. 
 In particular, since $\mathcal{S}$ does not have access to the inputs/outputs of the actual honest party, it runs a simulated honest party interacting with the environment which is acting as the adversary. Moreover, $\mathcal{S}$ controls the  dishonest party, therefore controlling their inputs to the ideal functionality $\mathcal{F}$. 
 It then relies on its ability to extract the inputs  that the environment provides to the dishonest party. Then, it uses them along with the ideal functionality outputs in order to successfully generate a simulated execution that cannot be distinguished by the environment.
 
-Finally, note that, in case the real execution of the protocol $\mathcal{\pi}$ makes use of some external functionality $\mathcal{F}_{\textbf{ext}}$, the simulator $\mathcal{S}$ can control and reprogram $\mathcal{F}_{\textbf{ext}}$ in whatever way suits best in the ideal world to produce an indistinguishable simulation of the real world.
+Finally, note that, in case the real execution of the protocol $\Pi$ makes use of some external functionality $\mathcal{F}_{\textbf{ext}}$, the simulator $\mathcal{S}$ can control and reprogram $\mathcal{F}_{\textbf{ext}}$ in whatever way suits best in the ideal world to produce an indistinguishable simulation of the real world.
 
 
 %\begin{figure}[!htb]
@@ -546,9 +546,9 @@ Finally, note that, in case the real execution of the protocol $\mathcal{\pi}$ m
 
 \subsubsection{Ideal functionalities}\label{functinalities}
 
-Whenever a protocol $\pi$ makes use of an external functionality $\mathcal{F}_{\textbf{ext}}$, we say that $\pi$ is in the $\mathcal{F}_{\textbf{ext}}-$hybrid model. The quantum OLE protocol $\mathcal{\pi}_{\textbf{QOLE}}$ presented in Chapter~\ref{ch:QOLE} uses the ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, defined in Figure~\ref{fig:func_com}. Note that the protocol makes several calls to $\mathcal{F}_{\textbf{COM}}$ and only opens a subset of the committed elements. Therefore, we use an index element $i$ to specify different instance calls. In the commitment phase, Bob sends $(\texttt{commit}, i, M)$ to the functionality and the functionality sends $(\texttt{commit}, i)$ to Alice. In the opening phase, Bob sends $(\texttt{open}, i)$ and the functionality sends $(\texttt{open}, i, M)$ to Alice.
+Whenever a protocol $\pi$ makes use of an external functionality $\mathcal{F}_{\textbf{ext}}$, we say that $\pi$ is in the $\mathcal{F}_{\textbf{ext}}-$hybrid model. The quantum OLE protocol $\Pi_{\textbf{QOLE}}$ presented in Chapter~\ref{ch:QOLE} uses the ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, defined in Figure~\ref{fig:func_com}. Note that the protocol makes several calls to $\mathcal{F}_{\textbf{COM}}$ and only opens a subset of the committed elements. Therefore, we use an index element $i$ to specify different instance calls. In the commitment phase, Bob sends $(\texttt{commit}, i, M)$ to the functionality and the functionality sends $(\texttt{commit}, i)$ to Alice. In the opening phase, Bob sends $(\texttt{open}, i)$ and the functionality sends $(\texttt{open}, i, M)$ to Alice.
 
-The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment protocol $\pi_{\textbf{COM}}$ presented in \cite{CF01} which is computationally UC-secure in the Common Reference String (CRS) model. As analyzed in \cite{CBGLM21} (Theorem 3.), the protocol $\pi_{\textbf{COM}}$ computationally quantum-UC realizes $\mathcal{F}_{\textbf{COM}}$ in the CRS model. As a result, since $\mathcal{\pi}_{\textbf{QOLE}}$ is proved to be quantum-UC secure, the resulting protocol $\pi_{\textbf{QOLE}}^{\pi_{\textbf{COM}}}$ is quantum-UC secure by the composition theorem \citep{Unruh10}.
+The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment protocol $\pi_{\textbf{COM}}$ presented in \cite{CF01} which is computationally UC-secure in the Common Reference String (CRS) model. As analyzed in \cite{CBGLM21} (Theorem 3.), the protocol $\pi_{\textbf{COM}}$ computationally quantum-UC realizes $\mathcal{F}_{\textbf{COM}}$ in the CRS model. As a result, since $\Pi_{\textbf{QOLE}}$ is proved to be quantum-UC secure, the resulting protocol $\pi_{\textbf{QOLE}}^{\pi_{\textbf{COM}}}$ is quantum-UC secure by the composition theorem \citep{Unruh10}.
 
 
 %\begin{figure}[!h]

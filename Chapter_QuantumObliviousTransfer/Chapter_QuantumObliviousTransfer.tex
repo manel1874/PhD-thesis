@@ -482,7 +482,7 @@ We denote by $\tilde{\bm{\theta}}^{\mathsf{B}}_J \leftarrow \mathcal{A}_{\textbf
 \
 
 \noindent\textbf{FSA attacks.} These attacks can be performed with well crafted optical signals that allow Alice to take control over Bob's measurement outcomes. In summary, as described by Jain et al. \cite{JSKEML16}, when both parties' bases coincide, Bob's detector clicks; when these are orthogonal, he gets no detection event ($\bot$). In other words, Alice forces Bob to only use the measurements where their bases coincide. So, the indexes corresponding to no detection events will be discarded by both parties whereas the others will be used in the rest of the protocol. This way, Alice gains full knowledge about Bob's bases and can easily distinguish $I_0$ from $I_1$. Note that Alice does not have to attack all measurement turns. She only needs one successful FSA to guess one basis. This happens with high probability in the number of attacks $q$,
-$$Pr[\text{Success Alice attack in }q\text{ rounds} ] = 1 - \bigg(\frac{1}{2}\bigg)^q.$$
+$$P[\text{Success Alice attack in }q\text{ rounds} ] = 1 - \bigg(\frac{1}{2}\bigg)^q.$$
 From this basis, Alice can deduce to which set ($I_0$ or $I_1$) the corresponding index ($j$) belongs. As Bob computes his message $m_b$ with the set where their basis coincide, and since Alice computes both messsages $m_0$ and $m_1$ out of both sets, she can determine Bob's message $m_b$. Indeed, $m_b$ will be the message that comes from the set where $j$ belongs. The attack $\rotPi^{\mathsf{A}}_{\textbf{FSA}}$ against both $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ and $\Pi^{\textbf{BBCS}}_{\mathcal{F}_\textbf{COM}}$ is summarized in Figure~\ref{fig:A_FSA}.
 
 \begin{figure}[h!]

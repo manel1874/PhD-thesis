@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  17 NOV 2022 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  18 NOV 2022 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1273,7 +1273,7 @@ Underfull \vbox (badness 5403) has occurred while \output is active []
 ] [18
 
 ] (./List_of_Abbreviations.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--140
+Underfull \hbox (badness 10000) in paragraph at lines 4--144
 
  []
 
@@ -1290,377 +1290,50 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21])
 (./Notation.tex [22]
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.5     \multicolumn{2}{l}{{\bf #1}}
-                                     \\ \hline \\[-2.5ex] }
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \span.
-\sp@n ->\span 
-              \omit \advance \@multicnt \m@ne 
-l.5     \multicolumn{2}{l}{{\bf #1}}
-                                     \\ \hline \\[-2.5ex] }
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \omit.
-\sp@n ->\span \omit 
-                    \advance \@multicnt \m@ne 
-l.5     \multicolumn{2}{l}{{\bf #1}}
-                                     \\ \hline \\[-2.5ex] }
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Illegal parameter number in definition of \@sharp.
-<to be read again> 
-                   1
-l.5     \multicolumn{2}{l}{{\bf #1}}
-                                     \\ \hline \\[-2.5ex] }
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! You can't use `macro parameter character #' in restricted horizontal mode.
-\@sharp ->{\bf ##
-                 1}
-l.5     \multicolumn{2}{l}{{\bf #1}}
-                                     \\ \hline \\[-2.5ex] }
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \ifadl@zwhrule \vskip -\arrayrulewidth \el...
-l.5     \multicolumn{2}{l}{{\bf #1}} \\ \hline
-                                               \\[-2.5ex] }
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Undefined control sequence.
-\adl@hline ...mpcnta \xdef \adl@rowsL {\adl@rowsL 
-                                                  (#1/\number \@tempcnta );}...
-l.5     \multicolumn{2}{l}{{\bf #1}} \\ \hline
-                                               \\[-2.5ex] }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \adl@connect 
-                        
-l.5     \multicolumn{2}{l}{{\bf #1}} \\ \hline
-                                               \\[-2.5ex] }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\adl@hline ...nta );}\xdef \adl@rowsR {\adl@rowsR 
-                                                  (#1/\number \@tempcnta );}
-l.5     \multicolumn{2}{l}{{\bf #1}} \\ \hline
-                                               \\[-2.5ex] }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \adl@connect 
-                        
-l.5     \multicolumn{2}{l}{{\bf #1}} \\ \hline
-                                               \\[-2.5ex] }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
-
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[]|\OT1/cmr/m/n/12 the rel-a-tive Ham-ming dis-tance given by
  []
 
 
-! LaTeX Error: There's no line here to end.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 ...column{2}{l}{{\bf #1}} \\ \hline \\[-2.5ex]
-                                                   }
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Too many }'s.
-l.5 ...lumn{2}{l}{{\bf #1}} \\ \hline \\[-2.5ex] }
-                                                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-! Undefined control sequence.
-l.13 \noidentation
-                  \textbf{General}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Misplaced alignment tab character &.
-l.15 $\mathbb{Z}_q$ &
-                      set of integers $a \mod q$\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.16 $\gcd (a,b)$ &
-                    greatest common divisor between integers $a$ and $b$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.17 $\mathbb{Z}^*_q$ &
-                        set of integers $a\in\mathbb{Z}_q$ that are coprime ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.18 $|I|$ &
-             size of a set $I$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.19 $s\leftarrow_{\$}I$ &
-                           $s$ is drawn uniformly at random from the set $I$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.20 $\bm{v}_{|J}$ &
-                     subvector of $\bm{v}$ restricted to the indices $i \in ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.21 $[m]$ &
-             the ordered set $\{1, 2, \ldots, m\}$ for $m\in \mathbb{Z}_q$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.22 $[m, n]$ &
-                the ordered set $\{m, m+1, \dots, n-1, n\}$ for $m, n\in \ma...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.23 $d_H(\bm{x}, \bm{y})$ &
-                             Hamming distance given by $ |\{ i : x_i \neq y_...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.24 $r_H(\bm{x}, \bm{y})$ &
-                             the relative Hamming distance given by $d_H(\bm...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.25 $\mu(n)$ &
-                Negligible function \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.28   $\ExpE_{x}[f(x)]$ &
-                           expectation of $f(x)$ over random choices of $x$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.29   dim &
-             dimension \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--31
-
- []
-
-! Misplaced alignment tab character &.
-l.35 $P_i$ &
-             Party $i$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.36 $\mathcal{F}_{\textbf{OT}}$ &
-                                   OT functionality \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.37 $\mathcal{F}_{\textbf{OLE}}$ &
-                                    OLE functionality \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.38 $\mathcal{F}_{\textbf{VOLE}}$ &
-                                     VOLE functionality \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.39 $\mathsf{Enc}_k$ &
-                        Symmetric encryption method with key $k$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--44
-
- []
-
-! Misplaced alignment tab character &.
-l.48   $\spr{\phi}{\psi}$ &
-                            scalar product of the vectors $\ket{\phi}$ and $...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.49   $\|\ket{\phi}\|$ &
-                          norm of the vector $\ket{\phi}$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.50   $\proj{\phi}$ &
-                       projector onto the vector $\ket{\phi}$ \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.51   $\cS_1(\cH)$ &
-                      set of normalized vectors on $\cH$
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-) [23
-
-] [24
+ [23
 
 ]
+Overfull \vbox (52.57597pt too high) has occurred while \output is active []
+
+
+[24]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 4
+8.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+euf on input line 62.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+Overfull \vbox (14.25093pt too high) has occurred while \output is active []
+
+
+[28]
 \openout2 = `Introduction/Introduction.aux'.
 
  (./Introduction/Introduction.tex
 Chapter 1.
 [1
+
 
 
 ] [2] [3]
@@ -1699,7 +1372,7 @@ Underfull \vbox (badness 1117) has occurred while \output is active []
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [9] [10]
-<Chapter_TechnicalOverview/booleanCircuit.png, id=954, 884.30376pt x 520.94624p
+<Chapter_TechnicalOverview/booleanCircuit.png, id=974, 884.30376pt x 520.94624p
 t>
 File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
 <use Chapter_TechnicalOverview/booleanCircuit.png>
@@ -1707,12 +1380,7 @@ Package pdftex.def Info: Chapter_TechnicalOverview/booleanCircuit.png  used on
 input line 107.
 (pdftex.def)             Requested size: 265.29317pt x 156.28508pt.
  [11 <./Chapter_TechnicalOverview/booleanCircuit.png>] [12] [13]
-[14] [15]
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
-62.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [16] [17] [18]
+[14] [15] [16] [17] [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
@@ -1723,11 +1391,7 @@ Overfull \hbox (11.46487pt too wide) in paragraph at lines 392--393
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 404
-.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [20]
+[20]
 Overfull \hbox (1.20277pt too wide) in paragraph at lines 419--421
 \OT1/cmr/m/n/12 This fol-lows from the def-i-ni-tion of the col-li-sion en-trop
 y and the fact that $[][] [] =
@@ -1824,7 +1488,7 @@ Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [48]
 [49] [50]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1616, 462.5
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1632, 462.5
 28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
@@ -1915,7 +1579,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
 [79]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=2059, 601.24625pt x 339.2675pt>
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=2075, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1926,7 +1590,7 @@ ut line 490.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [80]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2067, 589.0005pt x 349.96747pt>
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2083, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
@@ -1934,7 +1598,7 @@ t line 518.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
  [81 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [82 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2088, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2105, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1951,7 +1615,7 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [85] [86]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2142, 18
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2158, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -1975,7 +1639,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [94]
 [95] [96]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2265, 395.3169pt x 271.
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2282, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
@@ -1983,7 +1647,7 @@ File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 943.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2271, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2288, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
@@ -1991,7 +1655,7 @@ Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 954.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
  [97]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2277, 395.3169
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2293, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
@@ -2112,10 +1776,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [128]
-Overfull \hbox (8.81737pt too wide) in paragraph at lines 1027--1029
-[][]\OT1/cmr/bx/n/12 Theorem 7 \OT1/cmr/m/n/12 (quan-tum-UC se-cu-rity of $\OML
-/cmm/m/it/12 ^^Y[]$\OT1/cmr/m/n/12 )\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 The p
-ro-to-col $\OML/cmm/m/it/12 ^^Y[]$ \OT1/cmr/m/it/12 sta-tis-ti-cally quantum-
+Overfull \hbox (10.29518pt too wide) in paragraph at lines 1027--1029
+[][]\OT1/cmr/bx/n/12 Theorem 7 \OT1/cmr/m/n/12 (quan-tum-UC se-cu-rity of $\OMS
+/cmsy/m/n/12 ^^E[]$\OT1/cmr/m/n/12 )\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 The p
+ro-to-col $\OT1/cmr/m/n/12 ^^E[]$ \OT1/cmr/m/it/12 sta-tis-ti-cally quantum-
  []
 
 ) [129]
@@ -2203,10 +1867,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
- 32205 strings out of 480608
- 610746 string characters out of 5903629
- 1226373 words of memory out of 5000000
- 46354 multiletter control sequences out of 15000+600000
+ 32212 strings out of 480608
+ 610807 string characters out of 5903629
+ 1226435 words of memory out of 5000000
+ 46357 multiletter control sequences out of 15000+600000
  567432 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,19n,105p,2177b,1638s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2260,10 +1924,10 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (198 pages, 5883214 bytes).
+Output written on Chrysis.pdf (202 pages, 5888005 bytes).
 PDF statistics:
- 3470 PDF objects out of 3580 (max. 8388607)
- 3078 compressed objects within 31 object streams
- 996 named destinations out of 1000 (max. 500000)
+ 3488 PDF objects out of 3580 (max. 8388607)
+ 3092 compressed objects within 31 object streams
+ 1000 named destinations out of 1000 (max. 500000)
  919 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -29,51 +29,6 @@ $\mu(n)$ & Negligible function \\
 
 \tabinter
 
-\tabstart{Secure multiparty computation}
-$P_i$ & Party $i$ \\
-$\mathsf{Enc}_k$ & Symmetric encryption method with key $k$ \\
-$\bot$ & Empty string/element\\
-$\mathcal{F}$ & ideal functionality \\
-$\mathcal{F}_{\textbf{OT}}$ & OT functionality \\
-$\mathcal{F}_{\textbf{OLE}}$ & OLE functionality \\
-$\mathcal{F}_{\textbf{VOLE}}$ & VOLE functionality \\
-$\mathcal{F}_{\textbf{ext}}$ & external functionality \\
-$\pi$ & protocol \\ 
-$\mathcal{Z}$ & environment \\ 
-$Adv$ & adversary \\ 
-EXEC
-%$\freq{\bx}$ & frequency distribution of the $n$-tuple $\bx$ \\
-%$\freqset{\cX}{n}$ & set of types with denominator $n$ on the set $\cX$ \\
-%$\ntuplefreq{Q}{n}$ & type class of the type $Q$ with denominator $n$
-\tabstop
-
-\tabinter
-
-\tabstart{Quantum information}  
-$\mathcal{H}_A\, (\mathcal{H}_A^*)$ & Hilbert space (its dual) of quantum system $A$\\
-  $\spr{\phi}{\psi}$ & scalar product of the vectors $\ket{\phi}$ and $\ket{\psi}$ \\
-  $\|\ket{\phi}\|$ & norm of the vector $\ket{\phi}$ \\
-  $\proj{\phi}$ & projector onto the vector $\ket{\phi}$ \\ 
-  $\rho$, $\sigma$ & density operators \\
-  $\tau_{\mathcal{X}}$ & uniform distribution over $\mathcal{X}$ given as $\frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$ \\
-  $\cS_1(\cH)$ & set of normalized vectors on $\cH$ \\
-  $\text{Herm}(\mathcal{H})$ & sets of hermitian operators on $\mathcal{H}$ \\
-  $\text{Pos}(\mathcal{H})$ & sets of positive-semi definite on $\mathcal{H}$ \\
-   $\mathcal{P}(\mathcal{H})$ the sets density operators on $\mathcal{H}$ \\
-   $ \delta(\rho,\sigma)$ & trace distance \\
-   $\mathdd{1}$ & identity \\
-$\tr(\rho)$ & trace of the hermitian operator $\rho$ \\
-$\rank(\rho)$ & rank of the hermitian operator $\rho$ \\
-$\mathcal{E}$, $\mathcal{T}$, $\mathcal{C}$, $\mathcal{O}^{2}$, $\mathcal{O}^{3}$, $\mathcal{M}$ & CPTP maps \\
-
-$H_{\min}(X|B)_{\rho}$ & conditional min-entropy of a cq-state $\rho_{XB}$\\
-$H_{\text{min}}(A | B')_{\rho|\sigma}$ & min-entropy of $\rho_{A B'}$ relative to $\sigma_{B'}$ \\
-
-   
-\tabstop
-
-\tabinter
-
 \tabstart{Classical information}
 $\mu_X$ & average value of elements in set $X$\\
 $I(A)$ & amount of information some event $A$ \\
@@ -83,36 +38,106 @@ $H_{\min}(X)$ & min-entropy of classical random variable $X$ \\
 $\mathfrak{F}$ & two-universal hash family \\
 \tabstop
 
-% \tabinter
+\tabinter
 
-% To indicate that an operator acts on a product space, we add
-% subscripts which correspond to each of the subspaces, e.g., $\rho_{A
-%   B} \in \NN(\cH_A \otimes \cH_B)$.  To denote the operator obtained
-% by taking the partial trace over some of the subsystems, we omit the
-% corresponding subscripts, e.g., $\rho_A = \tr_B(\rho_{A B})$.
+\tabstart{Quantum information}  
+$\mathcal{H}_A\, (\mathcal{H}_A^*)$ & Hilbert space (its dual) of quantum system $A$\\
+  $\spr{\phi}{\psi}$ & scalar product of the vectors $\ket{\phi}$ and $\ket{\psi}$ \\
+  $\proj{\phi}$ & projector onto the vector $\ket{\phi}$ \\ 
+  $\rho$, $\sigma$ & density operators \\
+  $\ket{B_{a,b}}$ & generalised Bell states
+  $\tau_{\mathcal{X}}$ & uniform distribution over $\mathcal{X}$ \\
+  $\cS_1(\cH)$ & set of normalized vectors on $\cH$ \\
+  $\text{Herm}(\mathcal{H})$ & sets of hermitian operators on $\mathcal{H}$ \\
+  $\text{Pos}(\mathcal{H})$ & sets of positive-semi definite on $\mathcal{H}$ \\
+   $\mathcal{P}(\mathcal{H})$ & the sets density operators on $\mathcal{H}$ \\
+   $ \delta(\rho,\sigma)$ & trace distance between $\rho$ and $\sigma$ \\
+   $\mathds{1}$ & identity operator\\
+$\tr(\rho)$ & trace of the hermitian operator $\rho$ \\
+$\rank(\rho)$ & rank of the hermitian operator $\rho$ \\
+$\mathcal{E}$, $\mathcal{T}$, $\mathcal{C}$, $\mathcal{O}^{()}$, $\mathcal{M}$ & CPTP maps \\
+$H_{\min}(X|B)_{\rho}$ & conditional min-entropy of a cq-state $\rho_{XB}$\\
+$H_{\text{min}}(A | B)_{\rho|\sigma}$ & min-entropy of $\rho_{A B}$ relative to $\sigma_{B}$ \\
+\tabstop
 
 \tabinter
 
-\tabstart{Entropies}
-  $H(P_X)$ & Shannon entropy of the probability distribution $P_X$ \\
-%   $H_{P_{X Y}}(X|Y)$ & conditional entropy $H(P_{X Y}) -
-%   H(P_Y)$ \\
-%   $H(X|Y)$ & abbreviation of $H_{P_{X Y}}(X|Y)$ \\
-  $h(p)$ & binary Shannon entropy with bias $p$ \\
-  $H(\rho_A)$ & von Neumann entropy of the density operator $\rho_A$ \\
-  $H(A|B)$ &  conditional entropy $H(\rho_{A B}) - H(\rho_B)$ \\
-%  $H(A|B)$ & abbreviation of $H_{\sigma_{A B}}(A|B)$ \\
-  $D(\rho\|\sigma)$ & relative entropy of $\rho$ to $\sigma$ \\
-  $\Hmin(\rho_{A B}|\sigma_B)$ & min-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
-  $\Hmax(\rho_{A B}|\sigma_B)$ & max-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
-  $\Hmin^\eps(\rho_{A B}|\sigma_B)$ & $\eps$-smooth min-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
-  $\Hmax^\eps(\rho_{A B}|\sigma_B)$ & $\eps$-smooth max-entropy of $\rho_{A B}$ relative to $\sigma_B$\\
-  $\Hmin^\eps(\rho_{A B}|B)$ & $\eps$-smooth min-entropy of $\rho_{A B}$ given $\cH_B$\\
-  $\Hmax^\eps(\rho_{A B}|B)$ & $\eps$-smooth max-entropy of $\rho_{A
-  B}$ given $\cH_B$\\
-  $\Hmin^\eps(A|B)$ & abbreviation for $\Hmin^\eps(\rho_{A B}|B)$ \\
-  $\Hmax^\eps(A|B)$ & abbreviation for $\Hmax^\eps(\rho_{A B}|B)$ \\
-  $H_2(\rho_{A B}|\sigma_B)$ & collision entropy of $\rho_{A B}$ relative to $\sigma_B$
+\tabstart{Secure multiparty computation}
+$P_i$ & party $i$ \\
+$\mathsf{Enc}_k$ & symmetric encryption method with key $k$ \\
+$\bot$ & empty string/element\\
+$\mathcal{F}$ & ideal functionality \\
+$\mathcal{F}_{\textbf{OT}}$ & OT functionality \\
+$\mathcal{F}_{\textbf{OLE}}$ & OLE functionality \\
+$\mathcal{F}_{\textbf{VOLE}}$ & VOLE functionality \\
+$\mathcal{F}_{\textbf{COM}}$ & COM functionality \\
+$\mathcal{F}_{\textbf{ext}}$ & external functionality \\
+$\Pi$ & protocol \\
+$\mathcal{Z}$ & environment \\ 
+$Adv$ & adversary \\ 
+$\mathcal{S}$ & simulator \\
+$\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}}$  & the output of the environment $\mathcal{Z}$ at the end of the real execution, and by $C$ the corrupted party \\
+$\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$ & the output of the environment $\mathcal{Z}$ at the end of the ideal execution, and by $C$ the corrupted party \\
+$\mathtt{DM}_{d}$ & distance matrix functionality \\
+$\mathtt{D}_{d}$ & two-party distance functionality \\
+$\mathtt{A}$ & phylogenetic tree functionality \\
+%$\freq{\bx}$ & frequency distribution of the $n$-tuple $\bx$ \\
+%$\freqset{\cX}{n}$ & set of types with denominator $n$ on the set $\cX$ \\
+%$\ntuplefreq{Q}{n}$ & type class of the type $Q$ with denominator $n$
+\tabstop
+
+\tabinter
+
+
+\tabstart{Protocols}
+$m_i$ & Alice's messages \\
+$b$ & Bob's bit choice \\
+$l$ & length of OT protocol messages \\ 
+$\kappa$ & symmetric security parameter \\
+$\bm{\theta}^{\mathsf{A}}$, $\bm{\theta}^{\mathsf{B}}$ & Alice and Bob's bases vectors \\
+$\mathsf{ok}$ & oblivious key \\
+$\mathsf{ok}^{\mathsf{A}}$ & Alice's oblivious key \\
+$\mathsf{ok}^{\mathsf{A}}$ & Bob's oblivious key \\
+$\mathsf{e}^{\mathsf{B}}$ & Bob's signal string \\
+$\mathsf{pk}_i$ & public key \\
+$T$ & test set \\
+$\Delta t$ & waiting time \\
+ $\nu$ & fraction of the transmitted qubits kept by the adversary \\
+ $c_{\mathcal{N}}$ & classical capacity of quantum channel $\mathcal{N}$ \\
+$\mathcal{A}_{\textbf{qok}}(J)$ & Alice's quantum hacking procedure \\
+$\mathcal{B}_{\textbf{qok}}(J)$ & Bob's quantum hacking procedure \\
+$\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ & BBCS protocol in the $\mathcal{F}_{\textbf{COM}}-$hybrid model \\ 
+$\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ & BBCS protocol in the BQS model \\ 
+$\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ & BBCS protocol in the NQS model \\ 
+$\Pi^{\textbf{BBCS}}_{\textbf{O}}$ & Optimised BBCS protocol \\ 
+$\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$ & quantum oblivious key distribution protocol in the BQS model \\
+$\rotPi^{\mathsf{A}}_{\textbf{FSA}}$ & Alice's faked-state attack on qubits indexed by $J$\\
+$\rotPi^{\mathsf{A}}_{\textbf{THA}}$ & Alice's trojan-horse attack on qubits indexed by $J$\\
+$\rotPi^{\mathsf{B}}_{\textbf{THA}}$ & Bob's trojan-horse attack on qubits indexed by $J$\\
+$B_{\text{op}}^\text{ALSZ13}$ & number of binary operations executed by ALSZ13 protocol \\
+$B_{\text{op}}^\text{BBCS}$ & number of binary operations executed by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol \\
+$B_{\text{op}}^\text{KOS15}$ & number of binary operations executed by KOS15 protocol \\
+$A^a_d$ & private phylogenetic tree algorithm for distance $d$ and algorithm $a$ \\
+$M$ & number of genomic sequences \\ 
+$s$ & length of genomic sequences \\
+$L^j_{\text{ok}}$ & size of total oblivious key \\
+$L^j_{\text{bok}}$ &  total size of oblivious key for base OT \\
+$L^j_{\text{QRNG}}$ & random bits generated by QRNG \\\
+$L^{j}_{qkd}$ & total size of QKD keys \\
+$N^j_{\text{Yao}}$ & number of Yao protocol executions \\
+$N^j_{\text{OT}}$ & number of OT executions \\
+$N^j_{\text{bOT}}$ & number of base OT executions \\
+$N^j_{\text{int}}$ & number of internal computations \\ 
+$V^b_a$ & Heisenberg-Weyl operators \\
+$\ket{e^x_r}$ & $r-$th eigenket of the $V^x_1$ operator \\
+$\mathbf{F}_0$ & random variable for Alice's functions in the RWOLE protocol \\
+$\mathbf{F}$ & random variable for Alice's functions in the WOLE protocol \\
+
+$A'$ & dishonest Alice quantum system \\
+$B'$ & dishonest Bob quantum system \\
+$\Pi^n_{\textbf{RWOLE}}$ 
+$\Pi^n_{\textbf{WOLE}}$ 
+$\Pi_{\textbf{QOLE}}$ 
 \tabstop
 
 

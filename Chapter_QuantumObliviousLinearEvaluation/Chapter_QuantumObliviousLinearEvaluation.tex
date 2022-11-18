@@ -12,7 +12,7 @@ Oblivious Linear Evaluation (OLE) is a cryptographic task that permits two distr
 Impagliazzo and Rudich proved that OT protocols require public-key cryptography and cannot just rely on symmetric cryptography \cite{IR89}. Consequently, OLE cannot rely on symmetric cryptography either, and we need to resort to public-key cryptography.  However, Shor's  quantum algorithm \cite{Sho95}  poses a threat to the currently deployed public-key systems, motivating the search for protocols secure against quantum attacks. Bennet et al. \cite{BBCS92} and Cr{\'e}peau \cite{C94} proposed the first protocols for quantum OT (QOT). As far as quantum OLE (QOLE) is concerned, to the best of our knowledge, no protocol has been proposed as of now.
 Analogously to the classical case, it is expected that one can implement QOLE based on QOT protocols. That said, in this work we propose a protocol for QOLE that, additionally, does not rely on any QOT implementation.
 
-OLE is commonly generalized to vector OLE (VOLE). In this setting, Alice defines a set of $k$ linear functions $(\bm{a}, \bm{b})\in\mathbb{F}^k\times\mathbb{F}^k$ and Bob receives the evaluation of all these functions on a specified element $x\in\mathbb{F}$, i.e. $\bm{f}:=\bm{a} x+ \bm{b}$. One can think of VOLE as the arithmetic analog of string OT and show how it can be used  in certain Secure Arithmetic Computation and Non-Interactive Zero Knowledge proofs \cite{BCGI18}. Ghosh et. al  put further in evidence the usefulness of VOLE by showing that it serves as the building block of Oblivious Polynomial Evaluation \cite{GNN17}, a primitive which allows more sophisticated applications, such as password authentication, secure  list intersection,  anonymous complaint boxes \cite{NP06}, anonymous initialization for secure metering of client visits in servers \cite{NP99},  secure Taylor approximation of relevant functions (e.g. logarithm) \cite{LP02}, secure set intersection \cite{H18} and distributed generation of RSA keys \cite{G99}.  We also show how our QOLE protocol can be adapted to achieve secure VOLE.
+OLE is commonly generalised to vector OLE (VOLE). In this setting, Alice defines a set of $k$ linear functions $(\bm{a}, \bm{b})\in\mathbb{F}^k\times\mathbb{F}^k$ and Bob receives the evaluation of all these functions on a specified element $x\in\mathbb{F}$, i.e. $\bm{f}:=\bm{a} x+ \bm{b}$. One can think of VOLE as the arithmetic analog of string OT and show how it can be used  in certain Secure Arithmetic Computation and Non-Interactive Zero Knowledge proofs \cite{BCGI18}. Ghosh et. al  put further in evidence the usefulness of VOLE by showing that it serves as the building block of Oblivious Polynomial Evaluation \cite{GNN17}, a primitive which allows more sophisticated applications, such as password authentication, secure  list intersection,  anonymous complaint boxes \cite{NP06}, anonymous initialization for secure metering of client visits in servers \cite{NP99},  secure Taylor approximation of relevant functions (e.g. logarithm) \cite{LP02}, secure set intersection \cite{H18} and distributed generation of RSA keys \cite{G99}.  We also show how our QOLE protocol can be adapted to achieve secure VOLE.
 
 \section{Contributions overview}\label{Intro_contributions}
 
@@ -20,7 +20,7 @@ We present a quantum protocol for OLE with universally composable security (quan
 
 \
 
-\noindent\textbf{Main tool.} The proposed protocol $\pi_{\textbf{QOLE}}$ (see Figure \ref{fig:fullprotocol}) is based on the fact that in a Hilbert space of dimension $d$ (isomorphic to $\mathbb{Z}_d$) there exists a set of MUBs $\{\ket{e^x_r}\}_{x, r\in\mathbb{Z}_d}$, such that, upon the action of a certain operator $V^b_a$,  each basis element $r$ is shifted by some linear factor $ax - b$ inside the same basis $x$:
+\noindent\textbf{Main tool.} The proposed protocol $\Pi_{\textbf{QOLE}}$ (see Figure \ref{fig:fullprotocol}) is based on the fact that in a Hilbert space of dimension $d$ (isomorphic to $\mathbb{Z}_d$) there exists a set of MUBs $\{\ket{e^x_r}\}_{x, r\in\mathbb{Z}_d}$, such that, upon the action of a certain operator $V^b_a$,  each basis element $r$ is shifted by some linear factor $ax - b$ inside the same basis $x$:
 
 \begin{equation}
     V^b_a \ket{e^x_r} = c_{a,b,x, r} \ket{e^x_{ax - b + r}},
@@ -34,19 +34,19 @@ where $a, b, x, r \in \mathbb{Z}_d =\{0,1,\ldots,d-1\}$. If Alice controls the o
 
 More specifically, in the quantum phase, Bob randomly generates $m=(1 + t)n$ quantum states $\ket{e^{x^0_i}_{r_i}}$ and sends them to Alice. Then, Bob commits to his choice $(x^0_i, r_i)$, $\forall i\in [m]$, where for any $l\in\mathbb{N}$, $[l]$ denotes the set $\{1, \ldots, l\}$, using an ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, and Alice asks to verify  a subset $T$ of size $tn$ of these commitments. This intermediate \textit{commit-and-open} step allows Alice to test Bob's behaviour and ensure that he does not deviate \textit{too much} from the protocol, and it is a common method used in security proofs of QOT protocols \cite{Unruh10, DFLSS09}. If Bob passes all the tests, Alice randomly generates $(a^0_i, b^0_i)$ and applies $V^{b^0_i}_{a^0_i}$ to the remaining $n$ received states $\ket{e^{x^0_i}_{r_i}}$,  for $i\in [m]\setminus T$.  For the rest of this section we relabel and denote $[n]=[m]\setminus T$. According to the expression~\eqref{eq:main_equation_1.3.}, the output states are given by $\ket{e^{x^0_i}_{a^0_i x^0_i - b^0_i + r_i}}$ and she sends them to Bob, who outputs $y^0_i = a^0_i x^0_i - b^0_i$ by measuring the received states in the corresponding basis $ x^0_i$ and subtracting $r_i$,  $\forall i\in [n]$. 
 
-The post-processing phase uses two subprotocols: a derandomization step (see Figure \ref{fig:nOLE}) and an extraction step (see Figure \ref{fig:privacy_amplification}). The derandomization step is based on the protocol $\pi^n_{\text{OLE}}$ from \cite{DHNO19} and transforms the $n$ RWOLE instances into $n$ weak OLE (WOLE) instances with inputs $(a_i, b_i)_{i\in [n]}$ chosen by Alice and inputs $x_i$ for $i\in [n]$ chosen by Bob. The extraction protocol uses the so-called \textit{Multi-linear Modular Hashing} family, MMH$^*$, of two-universal hash functions \cite{HK97} to render Bob's information on Alice's system useless and to extract one secure OLE out of $n$ instances of WOLE. In the extraction phase, Alice samples a two-universal hash function $g_{\bm{\kappa}}$ from MMH$^*$ and sends it to Bob. Then, with adequately-crafted vectors $(\bm{a}, \bm{b}) = \big( (a_1, \ldots, a_n), (b_1, \ldots, b_n) \big)$, Alice has $a = g_{\bm{\kappa}}(\bm{a})$ and $b = g_{\bm{\kappa}}(\bm{b})$, and Bob outputs $y = g_{\bm{\kappa}}(\bm{y})$, where $\bm{y} = \bm{a} \bm{x} + \bm{b}$ after point-wise vector multiplication with the constant vector $\bm{x} = (x, \ldots, x)$. 
+The post-processing phase uses two subprotocols: a derandomization step (see Figure \ref{fig:nOLE}) and an extraction step (see Figure \ref{fig:privacy_amplification}). The derandomization step is based on the protocol $\Pi^n_{\text{OLE}}$ from \cite{DHNO19} and transforms the $n$ RWOLE instances into $n$ weak OLE (WOLE) instances with inputs $(a_i, b_i)_{i\in [n]}$ chosen by Alice and inputs $x_i$ for $i\in [n]$ chosen by Bob. The extraction protocol uses the so-called \textit{Multi-linear Modular Hashing} family, MMH$^*$, of two-universal hash functions \cite{HK97} to render Bob's information on Alice's system useless and to extract one secure OLE out of $n$ instances of WOLE. In the extraction phase, Alice samples a two-universal hash function $g_{\bm{\kappa}}$ from MMH$^*$ and sends it to Bob. Then, with adequately-crafted vectors $(\bm{a}, \bm{b}) = \big( (a_1, \ldots, a_n), (b_1, \ldots, b_n) \big)$, Alice has $a = g_{\bm{\kappa}}(\bm{a})$ and $b = g_{\bm{\kappa}}(\bm{b})$, and Bob outputs $y = g_{\bm{\kappa}}(\bm{y})$, where $\bm{y} = \bm{a} \bm{x} + \bm{b}$ after point-wise vector multiplication with the constant vector $\bm{x} = (x, \ldots, x)$. 
 
 
 
 \
 
 
-\noindent\textbf{quantum-UC security.} %The intuition behind the security of the proposed protocol $\pi_{\textbf{QOLE}}$ comes from the following observations. 
+\noindent\textbf{quantum-UC security.} %The intuition behind the security of the proposed protocol $\Pi_{\textbf{QOLE}}$ comes from the following observations. 
 Due to the quantum nature of the states $\ket{e^{x^0_i}_{r_i}}_{i\in [n]}$, a dishonest Alice is not able to distinguish which bases $x^0_i, i\in [n]$ are used by Bob. From her point of view, Bob's states are maximally mixed and therefore completely hide $x^0_i$. This is enough to ensure that, in the derandomization step, Alice does not receive any information about Bob's final input $x$. For a dishonest Bob, to correctly pass all Alice's tests, it means he did not cheat at all rounds with overwhelming probability. This ensures that he  has some \textit{bounded} information on Alice's random elements $(a^0_i, b^0_i)_{i\in [n]}$, and using privacy amplification techniques in the extraction step, Alice can guarantee that Bob's information about her final input $(a,b)$ is the same as in the case of an ideal OLE functionality, i.e. the probability distribution of $a$ is close to uniform.
 
 Turning this intuition into a quantum-UC security proof requires some additional insights. First, we need a way to quantify Bob's information on Alice's elements $(a^0_i, b^0_i)$ after the testing phase and the application of the corresponding $V^{b^0_i}_{a^0_i}$  operators, for $ i\in [n]$; for this purpose we use the quantum \textit{min-entropy} (see Definition \ref{def:conditionalquantumminentropy}). We follow the approach of \cite{DFLSS09} to guarantee that Bob does not significantly deviate from the protocol in all the rounds, and we use Theorem 1 from~\cite{Dupuis2015} to compute a concrete lower bound of Bob's min-entropy on Alice elements $(a^0_i, b^0_i)_{i\in [n]}$. Along with Lemma \ref{lem:leftover}, we have that $a = g_{\bm{\kappa}}(\bm{a})$ is close to uniform, which is sufficient to prove that Bob does not know more about $(a,b)$ than what the output $y = ax + b$ reveals. 
 
-In order to show that the protocol $\pi_{\textbf{QOLE}}$ is quantum-UC secure, we need to show that an ideal execution of $\pi_{\textbf{QOLE}}$ with access to $\mathcal{F}_{\textbf{OLE}}$ (Figure \ref{fig:OLE_functionality}) is indistinguishable from a real execution of the protocol from the point of view of an external entity called the \textit{environment}. To prove this indistinguishability, we have to build a simulator that simulates the execution of the protocol in the ideal setting and generates messages on behalf of the honest simulated parties,  while trying to extract the dishonest party's inputs and feed them in $\mathcal{F}_{\textbf{OLE}}$. In particular, for a dishonest Alice, we have to demonstrate the existence of a simulator, $\mathcal{S}_A$, that generates messages on behalf of honest Bob and extracts Alice's input $(a,b)$ which, in turn, feeds into $\mathcal{F}_{\textbf{OLE}}$.  To this end, we consider that $\mathcal{S}_A$ simulates an attack by Bob at all rounds, $i$, of the protocol  which allows to extract the $m$ values of Alice  $(a^0_i,b^0_i)$. However, the commit-and-open scheme described above is designed to catch such an attack, and to work around this issue we substitute the ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, with a fake commitment functionality, $\mathcal{F}_{\textbf{FakeCOM}}$, that allows $\mathcal{S}_A$ to open the commitments later \cite{Unruh10}.  From the remaining $n$ values $(a^0_i,b^0_i)$, $\mathcal{S}_A$ computes Alice's input $(a,b)$ and feeds it to $\mathcal{F}_{\textbf{OLE}}$.
+In order to show that the protocol $\Pi_{\textbf{QOLE}}$ is quantum-UC secure, we need to show that an ideal execution of $\Pi_{\textbf{QOLE}}$ with access to $\mathcal{F}_{\textbf{OLE}}$ (Figure \ref{fig:OLE_functionality}) is indistinguishable from a real execution of the protocol from the point of view of an external entity called the \textit{environment}. To prove this indistinguishability, we have to build a simulator that simulates the execution of the protocol in the ideal setting and generates messages on behalf of the honest simulated parties,  while trying to extract the dishonest party's inputs and feed them in $\mathcal{F}_{\textbf{OLE}}$. In particular, for a dishonest Alice, we have to demonstrate the existence of a simulator, $\mathcal{S}_A$, that generates messages on behalf of honest Bob and extracts Alice's input $(a,b)$ which, in turn, feeds into $\mathcal{F}_{\textbf{OLE}}$.  To this end, we consider that $\mathcal{S}_A$ simulates an attack by Bob at all rounds, $i$, of the protocol  which allows to extract the $m$ values of Alice  $(a^0_i,b^0_i)$. However, the commit-and-open scheme described above is designed to catch such an attack, and to work around this issue we substitute the ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, with a fake commitment functionality, $\mathcal{F}_{\textbf{FakeCOM}}$, that allows $\mathcal{S}_A$ to open the commitments later \cite{Unruh10}.  From the remaining $n$ values $(a^0_i,b^0_i)$, $\mathcal{S}_A$ computes Alice's input $(a,b)$ and feeds it to $\mathcal{F}_{\textbf{OLE}}$.
 
 For a dishonest Bob, we have to show the existence of a simulator, $\mathcal{S}_B$, that generates messages on behalf of  honest Alice and extracts Bob's input $x$. We assume that $\mathcal{S}_B$ has full control over  $\mathcal{F}_{\textbf{COM}}$, which means that it has access to Bob's $m$ committed values $(x^0_i, r_i)$;  the input $x$ can be easily extracted from these values. %The rest of the simulation goes according to the output value of the ideal OLE functionality $y$ on the simulator input $x$. {\cv not sure what the last sentence means}
 
@@ -56,7 +56,7 @@ For a dishonest Bob, we have to show the existence of a simulator, $\mathcal{S}_
 
 
 \subsection{Organization}\label{Intro_organization}
-In Section \ref{Prelim_MUB}, we introduce the main tool used in the QOLE protocol. In Section \ref{insecureQOLE}, in order to build some intuition, we present a QOLE protocol that is secure only if we consider Bob to be semi-honest; in case Bob is dishonest, its security is compromised. In Section \ref{secureQROLE_overview}, we construct a secure protocol that comprises the first part of our main QOLE protocol presented in Section \ref{qole_protocol}. Next, in Section \ref{secureQROLE_protocol}, we prove the security of the QOLE protocol in the quantum-UC framework. Then, in Section \ref{sec:protgeneral}, we show how to generalize the presented QOLE protocol to  Galois Fields of prime-power dimensions and we also present a quantum-UC secure protocol achieving VOLE.
+In Section \ref{Prelim_MUB}, we introduce the main tool used in the QOLE protocol. In Section \ref{insecureQOLE}, in order to build some intuition, we present a QOLE protocol that is secure only if we consider Bob to be semi-honest; in case Bob is dishonest, its security is compromised. In Section \ref{secureQROLE_overview}, we construct a secure protocol that comprises the first part of our main QOLE protocol presented in Section \ref{qole_protocol}. Next, in Section \ref{secureQROLE_protocol}, we prove the security of the QOLE protocol in the quantum-UC framework. Then, in Section \ref{sec:protgeneral}, we show how to generalise the presented QOLE protocol to  Galois Fields of prime-power dimensions and we also present a quantum-UC secure protocol achieving VOLE.
 
 
 \section{Mutually unbiased bases}\label{Prelim_MUB}
@@ -71,7 +71,7 @@ MUBs are extensively used in quantum cryptography because, in some sense, these 
 \begin{equation*}
     \ket{\tilde{j}} = \frac{1}{\sqrt{d}} \sum_{i=0}^{d-1} \omega^{-i j} \ket{i},\label{eq:dualbasis}
 \end{equation*}
-where $\omega = e^{\frac{2\pi i}{d}}$. We can easily verify that the computational basis and its dual basis are mutually unbiased, and we will make use of the following two operators, $V^0_a$ and $V^b_0$, to encode Alice's functions during the first (quantum) phase of the protocol.
+where $\omega = e^{\frac{2\Pi i}{d}}$. We can easily verify that the computational basis and its dual basis are mutually unbiased, and we will make use of the following two operators, $V^0_a$ and $V^b_0$, to encode Alice's functions during the first (quantum) phase of the protocol.
 
 \begin{definition}[Shift operators]
 The \textit{shift operator} $V^0_a$ shifts the computational basis by $a$ elements, i.e.
@@ -125,7 +125,7 @@ V^b_a \ket{e^x_r} &=& \frac{1}{\sqrt{d}} \sum_{k,l = 0}^{d-1} \omega^{(k+a)b}\ke
 \end{proof}
 This last property is the main ingredient for the construction of our protocol as it encodes a linear evaluation based on values $a$, $b$ and $x \in \mathbb{Z}_d$\footnote{While $x \in \mathbb{Z}_{d+1}$, henceforth we consider $x \in \mathbb{Z}_{d}$, since we only use $d $ out of the $d+1$ MUBs.}. In our protocol, we take $a,b$ -- that determine the operators $V^b_ a$ -- to be Alice's inputs and $x$ to be Bob's input.
 
-Finally, let us see how the operators $V^b_a$ act on the so-called \textit{generalized Bell states}, since Bob's attack to the protocol is based on that. We start with the definition of the \textit{seed} Bell state 
+Finally, let us see how the operators $V^b_a$ act on the so-called \textit{generalised Bell states}, since Bob's attack to the protocol is based on that. We start with the definition of the \textit{seed} Bell state 
 \begin{equation*}
     \ket{B_{0,0}} = \frac{1}{\sqrt{d}}\sum_{i} \ket{i^*, i},\label{eq:Bellseed}
 \end{equation*}
@@ -133,7 +133,7 @@ where the map $\ket{\psi}\rightarrow\ket{\psi^*}$ is defined by taking the compl
 
 $$\ket{\psi} = \sum_i \beta_i \ket{i}\rightarrow \ket{\psi^*} = \sum_i \beta_i^* \ket{i}.$$
 
-Using the properties of the operators $V_a^b$, we can derive the rest of the generalized Bell states from the seed state, as
+Using the properties of the operators $V_a^b$, we can derive the rest of the generalised Bell states from the seed state, as
 
 \begin{eqnarray}
 \ket{B_{a,b}} &=& (\mathds{1} \otimes V^b_a) \ket{B_{0,0}} = \frac{1}{\sqrt{d}} \sum_{i=0}^{d-1} \omega^{(i+a)b} \ket{i^*, i+a}, \label{eq:bob_attack}
@@ -220,12 +220,12 @@ Alice and Bob can use the above property to compute together a linear function $
 As far as the security of this protocol is concerned, we can easily see that it is secure against a dishonest Alice.  From her point of view, all the density matrices describing the several possible cases for $x = 0, \ldots, d-1$  are maximally mixed states. Therefore, she cannot know anything about the value of $x$. 
 
 If, moreover, Bob is semi-honest the protocol remains secure. On the other hand, if Bob is dishonest and deviates from the protocol, he is able to find out Alice's inputs $a$ and $b$ with certainty. %His attack is based on his ability to generate entangled states.
-In Section~\ref{Prelim_MUB} equation~\eqref{eq:bob_attack}, we saw that the generalized Bell basis is generated by Alice's operators, $V^b_a$, i.e. $ \ket{B_{a,b}} = (1 \otimes V^b_a) \ket{B_{0,0}} $,  and Bob can make use of this property in order to extract her inputs $a$ and $b$. His attack can be described as follows:
+In Section~\ref{Prelim_MUB} equation~\eqref{eq:bob_attack}, we saw that the generalised Bell basis is generated by Alice's operators, $V^b_a$, i.e. $ \ket{B_{a,b}} = (1 \otimes V^b_a) \ket{B_{0,0}} $,  and Bob can make use of this property in order to extract her inputs $a$ and $b$. His attack can be described as follows:
 
 \begin{enumerate}
     \item Bob prepares the state $\ket{B_{0,0}}$ and sends the second qudit to Alice.
     \item Alice applies her chosen operator $V^b_a$.
-    \item Bob measures both qudits in the generalized Bell basis and outputs  $a,b$.
+    \item Bob measures both qudits in the generalised Bell basis and outputs  $a,b$.
 \end{enumerate}
 
 It becomes clear that the protocol is secure only as long as Bob does not deviate from it; a dishonest Bob can break its security by performing the above attack. Therefore, we have to make sure that Bob sticks to the protocol. To achieve this, we apply a \textit{commit-and-open} scheme \cite{DFLSS09} that can be briefly described as follows:  Bob runs step 1. of the Semi-honest QOLE protocol (see Figure~\ref{fig:SH_QOLE}) multiple times, say $m$ in total, for multiple values of $x_i, \text{ and } r_i,\text{ for } i\in [m]$ and commits to these values by means of the functionality $\mathcal{F}_{\textbf{COM}}$ (see Figure~\ref{fig:func_com}). Then, he sends these states to Alice, who, in turn, asks him to disclose his chosen  $x_i$'s and $r_i$'s for some of the $m$ instances that she chooses. The functionality $\mathcal{F}_{\textbf{COM}}$ forwards these committed values to Alice and she measures the corresponding received states in the disclosed bases. She can, thus, verify whether she got the right basis element for all the instances she chose to check. If Bob had used the Bell state $\ket{B_{0,0}}$ in one out of the $m$ instances, then the probability of Alice getting the correct result after measuring the state in the committed basis would be $\frac{1}{d}$. In other words, Bob would get caught with high probability $1-\frac{1}{d}$. Furthermore, if he chooses to attack all the instances, the probability of Alice getting correctly all the results is negligible, i.e. exponentially small in the number of instances, $m$. We explore this in detail in the next section, where we present a  QOLE protocol secure against dishonest adversaries.
@@ -238,12 +238,12 @@ In the next sections, we break down the protocol, show its correctness and retri
 
 \
 
-\noindent\textbf{Notation.}  During the RWOLE phase, $\mathbf{F}_0 = (F^0_1,F^0_2 ,\ldots, F^0_n)$ is the vector whose components are the  random variables associated to Alice's functions. Each  $F^0_i$ ranges over the set of affine functions in $\mathbb{Z}_d$ such that $\Pr(F^0_i(x)=a^0_ix+ b^0_i)$ is uniform for all $i\in [n]$. We do not distinguish the set of affine functions in $\mathbb{Z}_d$ from $\mathbb{Z}_d^2$. The classical values $\mathbf{F}_0$ are saved in the Hilbert space $\mathcal{H}_{\mathbf{F}_0}$. The same holds for the derandomization phase, where $\mathbf{F}$ denotes the random variable for Alice's functions in the protocol $\pi^n_{\textbf{WOLE}}$. $\textbf{X}_0$ and $\textbf{Y}_0$ are the random variables for $\textbf{x}_0, \textbf{y}_0 \in \mathbb{Z}^{ n}_d$  in the RWOLE phase. and $\textbf{X}$ and $\textbf{Y}$ the corresponding random variables for $\textbf{x}, \textbf{y} \in \mathbb{Z}^{n}_d$  in the post-processing phase. Also, we use $A'$ and $B'$ to denote the system that a dishonest Alice and Bob, respectively, hold at the end of the execution of the protocol.
+\noindent\textbf{Notation.}  During the RWOLE phase, $\mathbf{F}_0 = (F^0_1,F^0_2 ,\ldots, F^0_n)$ is the vector whose components are the  random variables associated to Alice's functions. Each  $F^0_i$ ranges over the set of affine functions in $\mathbb{Z}_d$ such that $\P(F^0_i(x)=a^0_ix+ b^0_i)$ is uniform for all $i\in [n]$. We do not distinguish the set of affine functions in $\mathbb{Z}_d$ from $\mathbb{Z}_d^2$. The classical values $\mathbf{F}_0$ are saved in the Hilbert space $\mathcal{H}_{\mathbf{F}_0}$. The same holds for the derandomization phase, where $\mathbf{F}$ denotes the random variable for Alice's functions in the protocol $\Pi^n_{\textbf{WOLE}}$. $\textbf{X}_0$ and $\textbf{Y}_0$ are the random variables for $\textbf{x}_0, \textbf{y}_0 \in \mathbb{Z}^{ n}_d$  in the RWOLE phase. and $\textbf{X}$ and $\textbf{Y}$ the corresponding random variables for $\textbf{x}, \textbf{y} \in \mathbb{Z}^{n}_d$  in the post-processing phase. Also, we use $A'$ and $B'$ to denote the system that a dishonest Alice and Bob, respectively, hold at the end of the execution of the protocol.
 
 
 \subsection{RWOLE phase}
 
-We now introduce the quantum phase of the proposed QOLE protocol, which we informally call the random weak OLE (RWOLE) phase. We denote by $\mathcal{\pi}^n_{\text{RWOLE}}$ the protocol that implements this RWOLE phase and we present it in Figure~\ref{fig:wrole}. The protocol $\mathcal{\pi}^n_{\text{RWOLE}}$ is divided into four phases: Initialization, Test, Computation and Measurement. 
+We now introduce the quantum phase of the proposed QOLE protocol, which we informally call the random weak OLE (RWOLE) phase. We denote by $\Pi^n_{\text{RWOLE}}$ the protocol that implements this RWOLE phase and we present it in Figure~\ref{fig:wrole}. The protocol $\Pi^n_{\text{RWOLE}}$ is divided into four phases: Initialization, Test, Computation and Measurement. 
 
 
 \begin{figure}[h!]
@@ -252,7 +252,7 @@ We now introduce the quantum phase of the proposed QOLE protocol, which we infor
                         frame hidden,
                         ]
             
-            \centerline{\textbf{Protocol $\mathcal{\pi}^n_{\text{RWOLE}}$}}
+            \centerline{\textbf{Protocol $\Pi^n_{\text{RWOLE}}$}}
             
             \
             
@@ -313,11 +313,11 @@ If both parties are honest the  protocol is correct: if Alice is honest, her fun
  
 
 
-\noindent\textbf{Security.} In the case of a dishonest Alice, it is straightforward to verify that the security property of the semi-honest protocol still holds; following the same reasoning, we can conclude that she cannot learn anything about Bob's input or output values $(x^0_i, y^0_i)$.  In the case of dishonest Bob, though, these random instances of OLE might leak some information on Alice's random functions $\mathbf{F}_0$ to him. To quantify this  side information of Bob, we must  bound the min-entropy $H_{\min}(\mathbf{F}_0|B')_{\rho_{\mathbf{F}_0 B'}}$ on the state $\rho_{\mathbf{F}_0 B'}$, which is the output state of the real execution of  $\pi^n_{\textbf{RWOLE}}$. The following lemma shows that  $\rho_{\mathbf{F}_0 B'}$  is at least $\epsilon-$close to an ideal state $\sigma_{\mathbf{F}_0 B'}$ independently of the attack that the dishonest party may perform. This ideal state $\sigma_{\mathbf{F}_0 B'}$ has the important property of having a bound on $H_{\min}(\mathbf{F}_0|B')_{\sigma_{\mathbf{F}_0 B'}}$ that is proportional to the security parameter. 
+\noindent\textbf{Security.} In the case of a dishonest Alice, it is straightforward to verify that the security property of the semi-honest protocol still holds; following the same reasoning, we can conclude that she cannot learn anything about Bob's input or output values $(x^0_i, y^0_i)$.  In the case of dishonest Bob, though, these random instances of OLE might leak some information on Alice's random functions $\mathbf{F}_0$ to him. To quantify this  side information of Bob, we must  bound the min-entropy $H_{\min}(\mathbf{F}_0|B')_{\rho_{\mathbf{F}_0 B'}}$ on the state $\rho_{\mathbf{F}_0 B'}$, which is the output state of the real execution of  $\Pi^n_{\textbf{RWOLE}}$. The following lemma shows that  $\rho_{\mathbf{F}_0 B'}$  is at least $\epsilon-$close to an ideal state $\sigma_{\mathbf{F}_0 B'}$ independently of the attack that the dishonest party may perform. This ideal state $\sigma_{\mathbf{F}_0 B'}$ has the important property of having a bound on $H_{\min}(\mathbf{F}_0|B')_{\sigma_{\mathbf{F}_0 B'}}$ that is proportional to the security parameter. 
 \begin{lemma}[Security against dishonest Bob]
 \label{lemma:wrole_dishonest_bob}
 
-Let $\rho_{\mathbf{F}_0 B'}$ be the state given by the real execution of the protocol $\mathcal{\pi}^n_{\textbf{RWOLE}}$, where $\mathbf{F}_0$ is the system saving Alice's functions, $B'$ is Bob's (possibly quantum) system. Fix $\zeta \in ]0, 1-\frac{1}{d}]$ and let 
+Let $\rho_{\mathbf{F}_0 B'}$ be the state given by the real execution of the protocol $\Pi^n_{\textbf{RWOLE}}$, where $\mathbf{F}_0$ is the system saving Alice's functions, $B'$ is Bob's (possibly quantum) system. Fix $\zeta \in ]0, 1-\frac{1}{d}]$ and let 
 $$\epsilon(\zeta, n) = \exp( -\frac{2 \zeta^2t^2n^2}{(nt+1)(t+1)}).$$
 Then, for any attack of a dishonest Bob, there exists an ideal classical-quantum state $\sigma_{\mathbf{F}_0 B'}$, such that
 
@@ -333,13 +333,13 @@ The proof comprises two parts corresponding to the two conditions of Lemma \ref{
 
 \subsection{Post-processing phase}\label{qole_protocol}
 
-The $\mathcal{\pi}^n_{\textbf{RWOLE}}$ protocol (see Figure~\ref{fig:wrole})  generates several instances of RWOLE, which leak information to Bob about Alice's inputs. In this section, we present the  post-processing phase that allows to extract one secure QOLE out of several RWOLE instances. Combining these instances is sufficient to generate a secure QOLE protocol, because Bob has only a negligible probability of attacking \textit{all} the weak instances without being caught; indeed, if he chooses to attack one of the instances the probability of Alice not aborting is $\frac{1}{t+1}+\frac{t}{d(1+t)}$, while if he chooses to attack all instances this probability becomes  $\frac{1}{d^{tn}}$, which is negligible in $n$, thus ensuring the asymptotic security of our protocol. The post-processing  comprises two subprotocols: the first is a derandomization protocol (Figure~\ref{fig:nOLE})  that integrates the randomized outputs of RWOLE into a deterministic scheme where Alice and Bob choose their inputs;   the second is an extraction protocol (Figure
+The $\Pi^n_{\textbf{RWOLE}}$ protocol (see Figure~\ref{fig:wrole})  generates several instances of RWOLE, which leak information to Bob about Alice's inputs. In this section, we present the  post-processing phase that allows to extract one secure QOLE out of several RWOLE instances. Combining these instances is sufficient to generate a secure QOLE protocol, because Bob has only a negligible probability of attacking \textit{all} the weak instances without being caught; indeed, if he chooses to attack one of the instances the probability of Alice not aborting is $\frac{1}{t+1}+\frac{t}{d(1+t)}$, while if he chooses to attack all instances this probability becomes  $\frac{1}{d^{tn}}$, which is negligible in $n$, thus ensuring the asymptotic security of our protocol. The post-processing  comprises two subprotocols: the first is a derandomization protocol (Figure~\ref{fig:nOLE})  that integrates the randomized outputs of RWOLE into a deterministic scheme where Alice and Bob choose their inputs;   the second is an extraction protocol (Figure
 ~\ref{fig:privacy_amplification}) that generates a secure QOLE protocol from these deterministic weak instances by means of a two-universal family of hash functions.  Note that the classical post-processing phase does not give any advantage to a potentially dishonest Alice, therefore we only need to prove security against dishonest Bob.
 
 
 
 \subsubsection{Derandomization}
-Our derandomization protocol, denoted as  $\mathcal{\pi}^n_{\textbf{WOLE}}$ and summarized in Figure~\ref{fig:nOLE}, reduces the randomized RWOLE instances into deterministic ones, which we informally call  weak OLE (WOLE). The output of $\pi^n_{\textbf{WOLE}}$ is still a weak version of OLE because Bob is allowed to have some knowledge on Alice's inputs. The difference between RWOLE and WOLE is that the parties now  choose their inputs. 
+Our derandomization protocol, denoted as  $\Pi^n_{\textbf{WOLE}}$ and summarized in Figure~\ref{fig:nOLE}, reduces the randomized RWOLE instances into deterministic ones, which we informally call  weak OLE (WOLE). The output of $\Pi^n_{\textbf{WOLE}}$ is still a weak version of OLE because Bob is allowed to have some knowledge on Alice's inputs. The difference between RWOLE and WOLE is that the parties now  choose their inputs. 
 Our derandomization protocol is an adaptation of the derandomization protocol in \cite{DHNO19}. We denote by $*$ the product of two matrices of the same dimensions, such that the result is also a matrix of the same dimensions whose elements are the product of the respective elements of the operand matrices.
 
 \begin{figure}[h!]
@@ -348,7 +348,7 @@ Our derandomization protocol is an adaptation of the derandomization protocol in
                         frame hidden,
                         ]
             
-            \centerline{\textbf{Protocol $\mathcal{\pi}^n_{\text{WOLE}}$}}
+            \centerline{\textbf{Protocol $\Pi^n_{\text{WOLE}}$}}
             
             \
             
@@ -357,7 +357,7 @@ Our derandomization protocol is an adaptation of the derandomization protocol in
     \textbf{Bob's input:} $\bm{x}\in \mathbb{Z}^{n}_d$
 
     \begin{enumerate}
-        \item Alice and Bob run the $\mathcal{\pi}^n_{\textbf{RWOLE}}$ protocol and receive  $(\bm{a}_0, \bm{b}_0)$ and $(\bm{x}_0, \bm{y}_0)$, respectively.
+        \item Alice and Bob run the $\Pi^n_{\textbf{RWOLE}}$ protocol and receive  $(\bm{a}_0, \bm{b}_0)$ and $(\bm{x}_0, \bm{y}_0)$, respectively.
         \item Bob computes and sends to Alice $\bm{c} = \bm{x} - \bm{x}_0$.
         \item Alice computes and  sends to Bob $\bm{d} = \bm{a} - \bm{a}_0$ and $\bm{s} = \bm{b}_0 + \bm{a} * \bm{c} + \bm{b}$. 
         \item Bob computes $\bm{y} = \bm{y}_0 + \bm{x} * \bm{d} - \bm{d} * \bm{c} + \bm{s}$.
@@ -376,12 +376,12 @@ Our derandomization protocol is an adaptation of the derandomization protocol in
 
 \
 
-\noindent\textbf{Security.}  The requirements to prove security against dishonest Bob are summarized in Lemma~\ref{lemma:wole_bob_dishonest}, which is very similar in structure to Lemma~\ref{lemma:wrole_dishonest_bob}. We show that the real output state $\rho_{\mathbf{F} B'}$ of the protocol $\pi^n_{\textbf{WOLE}}$ is $\epsilon-$close to an ideal state $\sigma_{\mathbf{F} B'}$, which has min-entropy lower-bounded by a fixed value proportional to the security parameter $n$. Intuitively, this means that Bob's state is indistinguishable from a state where his knowledge on Alice's inputs is limited.
+\noindent\textbf{Security.}  The requirements to prove security against dishonest Bob are summarized in Lemma~\ref{lemma:wole_bob_dishonest}, which is very similar in structure to Lemma~\ref{lemma:wrole_dishonest_bob}. We show that the real output state $\rho_{\mathbf{F} B'}$ of the protocol $\Pi^n_{\textbf{WOLE}}$ is $\epsilon-$close to an ideal state $\sigma_{\mathbf{F} B'}$, which has min-entropy lower-bounded by a fixed value proportional to the security parameter $n$. Intuitively, this means that Bob's state is indistinguishable from a state where his knowledge on Alice's inputs is limited.
 
 \begin{lemma}
 \label{lemma:wole_bob_dishonest}
 
-Let $\rho_{\mathbf{F} B'}$ be the state given by the real execution of the protocol $\mathcal{\pi}^n_{\textbf{WOLE}}$, where $\mathbf{F}$ is the system saving Alice's inputs, $B'$ is Bob's (possibly quantum) system. Fix $\zeta \in ]0, 1-\frac{1}{d}]$ and let 
+Let $\rho_{\mathbf{F} B'}$ be the state given by the real execution of the protocol $\Pi^n_{\textbf{WOLE}}$, where $\mathbf{F}$ is the system saving Alice's inputs, $B'$ is Bob's (possibly quantum) system. Fix $\zeta \in ]0, 1-\frac{1}{d}]$ and let 
 \begin{equation}
     \epsilon(\zeta, n) =\exp( -\frac{2 \zeta^2t^2n^2}{(nt+1)(t+1)}).
     \label{eq:epsilon}
@@ -399,7 +399,7 @@ where $h_d(\zeta)$ is given in Definition \ref{def:q-ary}.
 Alice holds the system $A = \mathbf{F} \mathbf{F}_0 \mathbf{C} \mathbf{D} \mathbf{S}$, where $\mathbf{F} = (\mathbf{F}_{\bm{a}}, \mathbf{F}_{\bm{b}})$ refers to her inputs $(\bm{a}, \bm{b})\in \mathbb{Z}^{2n}_d$, $\mathbf{F}_0 = (\mathbf{F}_{\bm{a}_0}, \mathbf{F}_{\bm{b}_0})$ is the subsystem obtained from the RWOLE phase, and $\mathbf{C}, \mathbf{D}$ and $\mathbf{S}$ are classical subsystems used to save the values of  $\bm{c}$, $\bm{d}$, and $\bm{s}$ from the protocol, respectively.  Bob holds the system $B' = \mathbf{C} \mathbf{D} \mathbf{S} B'_0$ where $\mathbf{C}, \mathbf{D}$ and $\mathbf{S}$ are the subsystems on Bob's side where the values of $\bm{c}$, $\bm{d}$ and $\bm{s}$ are saved, respectively, and $B'_0 = \mathbf{Y}_0 E_0$ is his (possibly quantum) system generated from the RWOLE phase.
 
 To prove property $1.$, we will use Lemma~\ref{lemma:wrole_dishonest_bob}, namely that the state $\rho_{\mathbf{F}_0 B'_0}$  resulting from the RWOLE scheme is $\epsilon-$close to the ideal state $\sigma_{\mathbf{F}_0 B'_0}$. Then, we will show that the operations applied to $\rho_{\mathbf{F}_0 B'_0}$ during the derandomization process can only decrease the distance between the real and the ideal output states of the WOLE protocol, thus keeping them at least $\epsilon-$close.
-We start by specifying the operators corresponding to the classical operations executed in steps $2$ and $3$ of $\mathcal{\pi}^n_{\textbf{WOLE}}$. In step 2, a dishonest Bob can send to Alice some value $\bm{c}$ that depends on his system $B'_0$. So, he starts by applying a CPTP map $\mathcal{T}_{B'_0 \rightarrow \mathbf{C} B'_0}: \mathcal{P}\left( \mathcal{H}_{B'_0}\right) \rightarrow \mathcal{P}\left( \mathcal{H}_{B'_0}\otimes \mathcal{H}_{\mathbf{C}} \right)$ to his state and then projects it into the Hilbert space $\mathcal{H}_{\mathbf{C}}$. The operator for step $2$ is a CPTP map 
+We start by specifying the operators corresponding to the classical operations executed in steps $2$ and $3$ of $\Pi^n_{\textbf{WOLE}}$. In step 2, a dishonest Bob can send to Alice some value $\bm{c}$ that depends on his system $B'_0$. So, he starts by applying a CPTP map $\mathcal{T}_{B'_0 \rightarrow \mathbf{C} B'_0}: \mathcal{P}\left( \mathcal{H}_{B'_0}\right) \rightarrow \mathcal{P}\left( \mathcal{H}_{B'_0}\otimes \mathcal{H}_{\mathbf{C}} \right)$ to his state and then projects it into the Hilbert space $\mathcal{H}_{\mathbf{C}}$. The operator for step $2$ is a CPTP map 
 $$\mathcal{O}^{(2)} :  \mathcal{P}\left(\mathcal{H}_{\mathbf{F}_0} \otimes \mathcal{H}_{B'_0}\right) \rightarrow \mathcal{P}\left(\mathcal{H}_{\mathbf{F}_0} \otimes \mathcal{H}_{\mathbf{C}} \otimes \mathcal{H}_{\mathbf{D}} \otimes \mathcal{H}_{\mathbf{S}} \otimes \mathcal{H}_{B'_0}\right)$$
 described by his action on some general quantum state $\rho$, as
 \begin{equation*}
@@ -465,7 +465,7 @@ The inequality at step \eqref{first_rel} comes from Lemma~\ref{lemma:bijectivefu
 
 \subsubsection{Extraction}
 
- In this section, we present our extraction protocol, $\mathcal{\pi}_{\textbf{EXT}}$,  that generates one OLE instance using the derandomization protocol $\mathcal{\pi}^n_{\textbf{WOLE}}$ and the two-universal family of hash functions, $MMH^*$ (see \cite{HK97} and Definition~\ref{def:MMH}). This family uses the inner product between two vectors in the $\mathbb{Z}^n_d$ space, and since OLE only involves linear operations, we can apply the inner product operation to all vectors $\bm{a}$, $\bm{b}$ and $\bm{y}$ without affecting the overall structure. The protocol $\mathcal{\pi}_{\textbf{EXT}}$ is summarized in Figure~\ref{fig:privacy_amplification} and uses the $n$ instances of WOLE in such a way that Bob's knowledge on Alice's inputs decreases exponentially with respect to $n$\footnote{ This extraction step is similar to the privacy amplification step of QKD protocols.}  For this reason, $n$ is our security parameter.
+ In this section, we present our extraction protocol, $\Pi_{\textbf{EXT}}$,  that generates one OLE instance using the derandomization protocol $\Pi^n_{\textbf{WOLE}}$ and the two-universal family of hash functions, $MMH^*$ (see \cite{HK97} and Definition~\ref{def:MMH}). This family uses the inner product between two vectors in the $\mathbb{Z}^n_d$ space, and since OLE only involves linear operations, we can apply the inner product operation to all vectors $\bm{a}$, $\bm{b}$ and $\bm{y}$ without affecting the overall structure. The protocol $\Pi_{\textbf{EXT}}$ is summarized in Figure~\ref{fig:privacy_amplification} and uses the $n$ instances of WOLE in such a way that Bob's knowledge on Alice's inputs decreases exponentially with respect to $n$\footnote{ This extraction step is similar to the privacy amplification step of QKD protocols.}  For this reason, $n$ is our security parameter.
 
 \begin{figure}[h!]
     \centering
@@ -473,7 +473,7 @@ The inequality at step \eqref{first_rel} comes from Lemma~\ref{lemma:bijectivefu
                         frame hidden,
                         ]
             
-            \centerline{\textbf{Protocol $\mathcal{\pi}_{\textbf{EXT}}$}}
+            \centerline{\textbf{Protocol $\Pi_{\textbf{EXT}}$}}
             
             \
             
@@ -484,7 +484,7 @@ The inequality at step \eqref{first_rel} comes from Lemma~\ref{lemma:bijectivefu
 \begin{enumerate}
     \item Alice chooses randomly some function $g_{\bm{\kappa}} \in MMH^*$ and sends it to Bob.
     \item  Alice randomly generates $a_2, \ldots, a_n, b_2, \ldots, b_n\leftarrow_{\$}\mathbb{Z}_d$. She computes $a_1 = \big(a - \sum_{i=2}^{n} a_i \kappa_i\big)/\kappa_1$ and $b_1 = \big(b - \sum_{i=2}^{n} b_i \kappa_i\big)/\kappa_1$. We write $\bm{a} = (a_1, \ldots, a_n)$ and $\bm{b} = (b_1, \ldots, b_n)$.
-    \item Alice and Bob run the derandomization protocol $\mathcal{\pi}^n_{\textbf{WOLE}}((\bm{a}, \bm{b}), \bm{x})$. Bob receives  $\bm{y}$ as output.
+    \item Alice and Bob run the derandomization protocol $\Pi^n_{\textbf{WOLE}}((\bm{a}, \bm{b}), \bm{x})$. Bob receives  $\bm{y}$ as output.
     
     \item Bob computes $y = g_{\bm{\kappa}}(\bm{y})$.
 \end{enumerate}
@@ -498,7 +498,7 @@ The inequality at step \eqref{first_rel} comes from Lemma~\ref{lemma:bijectivefu
 \label{fig:privacy_amplification}
 \end{figure}
 
-The correctness of $\mathcal{\pi}_{\textbf{EXT}}$ is given by linearity:
+The correctness of $\Pi_{\textbf{EXT}}$ is given by linearity:
 \begin{eqnarray*}
 y &=& g_{\bm{\kappa}}(\bm{y}) = \bm{\kappa} \cdot (a_1 x + b_1 ,\ldots a_n x + b_n) \\
 &=& \bm{\kappa} \cdot \Bigg(\frac{a - \sum_{i=2}^{n} a_i \kappa_i}{
@@ -509,12 +509,12 @@ y &=& g_{\bm{\kappa}}(\bm{y}) = \bm{\kappa} \cdot (a_1 x + b_1 ,\ldots a_n x + b
 \
 
 \noindent\textbf{Security.} 
-By definition, the derandomization protocol leaks some information to Bob about Alice's inputs $(\bm{a}, \bm{b})$. Since $\bm{y = a  * x + b}$, without loss of generality, any leakage of Alice's inputs can be seen as a leakage on just $\bm{a}$. In this case, the min-entropy of $\mathbf{F} = (\mathbf{F}_{\bm{a}}, \mathbf{F}_{\bm{b}})$ should be the same as the min-entropy of $\mathbf{F}_{\bm{a}}$. Now, recall the $\mathcal{F}_{\textbf{OLE}}$ functionality definition (see Figure \ref{fig:OLE_functionality}),  and note that Bob does not possess any knowledge about Alice's input $(a,b)$ other than what can be deduced from his input and output $(x, y)$. Similarly, since $y = ax + b$, Bob has some knowledge on the relation between $a$ and $b$ and --  as $b$ is completely determined by $(a,x,y)$ --  we only have to guarantee that $a$ looks uniformly random to Bob. The role of the hash functions used in the above protocol $\mathcal{\pi}_{\textbf{EXT}}$ is precisely to extract a uniformly random $a$ from the leaky vector $\bm{a}$, while preserving the structure of the OLE. This result is summarized in Lemma~\ref{lemma:extraction} and its proof is based on  Lemma \ref{lem:leftover}. 
+By definition, the derandomization protocol leaks some information to Bob about Alice's inputs $(\bm{a}, \bm{b})$. Since $\bm{y = a  * x + b}$, without loss of generality, any leakage of Alice's inputs can be seen as a leakage on just $\bm{a}$. In this case, the min-entropy of $\mathbf{F} = (\mathbf{F}_{\bm{a}}, \mathbf{F}_{\bm{b}})$ should be the same as the min-entropy of $\mathbf{F}_{\bm{a}}$. Now, recall the $\mathcal{F}_{\textbf{OLE}}$ functionality definition (see Figure \ref{fig:OLE_functionality}),  and note that Bob does not possess any knowledge about Alice's input $(a,b)$ other than what can be deduced from his input and output $(x, y)$. Similarly, since $y = ax + b$, Bob has some knowledge on the relation between $a$ and $b$ and --  as $b$ is completely determined by $(a,x,y)$ --  we only have to guarantee that $a$ looks uniformly random to Bob. The role of the hash functions used in the above protocol $\Pi_{\textbf{EXT}}$ is precisely to extract a uniformly random $a$ from the leaky vector $\bm{a}$, while preserving the structure of the OLE. This result is summarized in Lemma~\ref{lemma:extraction} and its proof is based on  Lemma \ref{lem:leftover}. 
 
 
 
 \begin{lemma}
-Let $\rho_{F B'}$ be the state given by the real execution of the protocol $\pi_{\textbf{EXT}}$, where $F$ is the system saving Alice's inputs $(a,b)$, $B'$ is Bob's (possibly quantum) system. Fix $\zeta \in ]0, 1-\frac{1}{d}]$ and let 
+Let $\rho_{F B'}$ be the state given by the real execution of the protocol $\Pi_{\textbf{EXT}}$, where $F$ is the system saving Alice's inputs $(a,b)$, $B'$ is Bob's (possibly quantum) system. Fix $\zeta \in ]0, 1-\frac{1}{d}]$ and let 
 
 $$\epsilon(\zeta, n) = \exp( -\frac{2 \zeta^2t^2n^2}{(nt+1)(t+1)}).$$
 Then, for any attack of a dishonest Bob, there exists a classical-quantum state  $\sigma_{F B'}$, where   $F = (F_{a}, F_{b})$, such that 
@@ -528,7 +528,7 @@ Then, for any attack of a dishonest Bob, there exists a classical-quantum state 
 \end{lemma}
 \begin{proof}
 
- To prove property $1$, we note that the extraction operation applied to the output of $\mathcal{\pi}^n_{\textbf{WOLE}}$ can be described by a projective operator on the space  $F = (F_{a}, F_{b})$. Therefore, as in the case of  Lemma~\ref{lemma:wole_bob_dishonest}, property $1$ follows from  the fact that CPTP maps do not increase the trace distance (see Lemma~\ref{lemma:trace_distance}).
+ To prove property $1$, we note that the extraction operation applied to the output of $\Pi^n_{\textbf{WOLE}}$ can be described by a projective operator on the space  $F = (F_{a}, F_{b})$. Therefore, as in the case of  Lemma~\ref{lemma:wole_bob_dishonest}, property $1$ follows from  the fact that CPTP maps do not increase the trace distance (see Lemma~\ref{lemma:trace_distance}).
 
 Regarding property $2$,  let us first consider Bob's subsystem $E$  to integrate Bob's inputs $\bm{x}$, i.e. $E = \mathbf{X} E'$. Then, his full system $B'$ is identified with $\mathbf{Y} E=\mathbf{Y}\mathbf{X} E'$. We have:
 \begin{eqnarray*}
@@ -545,7 +545,7 @@ where $K = \frac{\sqrt{d}}{2}$, $f_d(\zeta) = \frac{\log d}{4} (1-h_d(\zeta))$ a
 
 \end{proof}
 
-Now, we are in position to combine the above subprotocols ($\pi^n_{\textbf{RWOLE}}$, $\pi^n_{\textbf{WOLE}}$ and $\pi_{\textbf{EXT}}$) and present the full protocol $\pi_{\textbf{QOLE}}$ in Figure~\ref{fig:fullprotocol}. 
+Now, we are in position to combine the above subprotocols ($\Pi^n_{\textbf{RWOLE}}$, $\Pi^n_{\textbf{WOLE}}$ and $\Pi_{\textbf{EXT}}$) and present the full protocol $\Pi_{\textbf{QOLE}}$ in Figure~\ref{fig:fullprotocol}. 
 
 
 
@@ -555,7 +555,7 @@ Now, we are in position to combine the above subprotocols ($\pi^n_{\textbf{RWOLE
                         frame hidden,
                         ]
             
-            \centerline{\textbf{Protocol $\mathcal{\pi}_{\text{QOLE}}$}}
+            \centerline{\textbf{Protocol $\Pi_{\text{QOLE}}$}}
             
     \footnotesize
     
@@ -612,11 +612,11 @@ Now, we are in position to combine the above subprotocols ($\pi^n_{\textbf{RWOLE
 \section{UC security}\label{secureQROLE_protocol}
 
 
-In this section, we will show that our protocol  $\mathcal{\pi}_{\textbf{QOLE}}$ (see Figure~\ref{fig:fullprotocol}) is quantum-UC secure. More formally, we will show that $\mathcal{\pi}_{\textbf{QOLE}}$  statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) the functionality $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.
+In this section, we will show that our protocol  $\Pi_{\textbf{QOLE}}$ (see Figure~\ref{fig:fullprotocol}) is quantum-UC secure. More formally, we will show that $\Pi_{\textbf{QOLE}}$  statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) the functionality $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.
 
-\begin{theorem}[quantum-UC security of $\mathcal{\pi}_{\textbf{QOLE}}$]
+\begin{theorem}[quantum-UC security of $\Pi_{\textbf{QOLE}}$]
 
-The protocol $\mathcal{\pi}_{\textbf{QOLE}}$ from Figure~\ref{fig:fullprotocol} statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.
+The protocol $\Pi_{\textbf{QOLE}}$ from Figure~\ref{fig:fullprotocol} statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.
 \label{thm:QUC}
 \end{theorem}
 
@@ -624,7 +624,7 @@ Theorem~\ref{thm:QUC} is proved by combining Lemma~\ref{lemma:dishonestAlice} an
 In the first case, we have:
 
 \begin{lemma}
-The protocol $\mathcal{\pi}_{\textbf{QOLE}}$ (Figure~\ref{fig:fullprotocol}) statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model in the case of dishonest Alice and honest Bob.
+The protocol $\Pi_{\textbf{QOLE}}$ (Figure~\ref{fig:fullprotocol}) statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model in the case of dishonest Alice and honest Bob.
 \label{lemma:dishonestAlice}
 \end{lemma}
 
@@ -686,12 +686,12 @@ We start by presenting the simulator $\mathcal{S}_A$ for the case where Alice is
 \caption{Simulator $\mathcal{S}_A$ against  dishonest Alice.}
 \label{fig:simulator_dis_Alice}
 \end{figure}
-To prove statistical quantum-UC security according to Definition \ref{def:statisticalquc}, we first consider a sequence of hybrid protocols from $\mathsf{H}_0$ to $\mathsf{H}_4$. The first hybrid protocol, $\mathsf{H}_0$, in the sequence  is the real execution of the protocol $\mathcal{\pi}_{\textbf{QOLE}}$, and we gradually change it until obtaining the hybrid $\mathsf{H}_4$ which corresponds to the description of the simulator $\mathcal{S}_A$. By proving indistinguishaility of the hybrids throughout the sequence, we show statistical quantum-UC security for the protocol $\mathcal{\pi}_{\textbf{QOLE}}$ in the case of dishonest Alice.
+To prove statistical quantum-UC security according to Definition \ref{def:statisticalquc}, we first consider a sequence of hybrid protocols from $\mathsf{H}_0$ to $\mathsf{H}_4$. The first hybrid protocol, $\mathsf{H}_0$, in the sequence  is the real execution of the protocol $\Pi_{\textbf{QOLE}}$, and we gradually change it until obtaining the hybrid $\mathsf{H}_4$ which corresponds to the description of the simulator $\mathcal{S}_A$. By proving indistinguishaility of the hybrids throughout the sequence, we show statistical quantum-UC security for the protocol $\Pi_{\textbf{QOLE}}$ in the case of dishonest Alice.
 
 
 \
 
-\textbf{Hybrid $\mathsf{H}_0$:} This is the real execution of the protocol $\mathcal{\pi}_{\textbf{QOLE}}$.
+\textbf{Hybrid $\mathsf{H}_0$:} This is the real execution of the protocol $\Pi_{\textbf{QOLE}}$.
 
 \
 
@@ -733,7 +733,7 @@ Thus, the environment is not able to distinguish the two scenarios. Furthermore,
 
 \
 
-\textbf{Hybrid $\mathsf{H}_3$:} This hybrid is identical to the previous one, $\mathsf{H}_2$, except that now $\mathcal{S}_A$ extracts Alice's elements $\mathbf{F}_0 = (\bm{a}_0, \bm{b}_0)$  by applying a joint measurement on the systems $\hat{Q}_A Q_S$ in the generalized Bell basis.
+\textbf{Hybrid $\mathsf{H}_3$:} This hybrid is identical to the previous one, $\mathsf{H}_2$, except that now $\mathcal{S}_A$ extracts Alice's elements $\mathbf{F}_0 = (\bm{a}_0, \bm{b}_0)$  by applying a joint measurement on the systems $\hat{Q}_A Q_S$ in the generalised Bell basis.
 
 \
 
@@ -751,7 +751,7 @@ Hybrids $\mathsf{H}_3$ and $ \mathsf{H}_4$ are perfectly indistinguishable for t
 We now proceed to the case  where Alice is honest and Bob is dishonest. We have:
 
 \begin{lemma}
-The protocol $\mathcal{\pi}_{\textbf{QOLE}}$ (Figure~\ref{fig:fullprotocol}) statistically quantum-UC realizes (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model in the case of honest Alice and dishonest Bob.
+The protocol $\Pi_{\textbf{QOLE}}$ (Figure~\ref{fig:fullprotocol}) statistically quantum-UC realizes (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{OLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model in the case of honest Alice and dishonest Bob.
 \label{lemma:dishonestBob}
 \end{lemma}
 
@@ -771,7 +771,7 @@ We start by presenting the simulator $\mathcal{S}_B$ for the case where Bob is d
     \textit{(Quantum phase:)}
     
     \begin{enumerate}
-        \item $\mathcal{S}_B$ receives the qudits from Bob and tests them as in the protocol $\mathcal{\pi}_{\textbf{QOLE}}$.
+        \item $\mathcal{S}_B$ receives the qudits from Bob and tests them as in the protocol $\Pi_{\textbf{QOLE}}$.
         \item $\mathcal{S}_B$ randomly chooses vectors $\bm{a}_0$ and $\bm{b}_0$ and applies  $V^{b^0_i}_{a^0_i}$, $i\in [n]$ to the received qudits.
         \item $\mathcal{S}_B$ extracts the input element $\bm{x}_0$  from  $\mathcal{F}_{\textbf{COM}}$.
     \end{enumerate}
@@ -797,7 +797,7 @@ Then, we consider the following sequence of hybrid protocols, from $\mathsf{H}_0
 
 \
 
-\textbf{Hybrid $\mathsf{H}_0$:} This is the execution of the real protocol $\mathcal{\pi}_{\textbf{QOLE}}$. In this hybrid, $\mathcal{S}_B$ behaves just like honest Alice up to step 6 of $\mathcal{\pi}_{\textbf{QOLE}}$:  tests the received qudits  (steps 1-4), randomly generates $n$ pairs $(a^0_i, b^0_i)_{ i\in [n]}$ (step 5), and applies the respective operators $V^{b^0_i}_{a^0_i}$ ${ \text{ for } i\in [n]}$ to the received states (step 6).
+\textbf{Hybrid $\mathsf{H}_0$:} This is the execution of the real protocol $\Pi_{\textbf{QOLE}}$. In this hybrid, $\mathcal{S}_B$ behaves just like honest Alice up to step 6 of $\Pi_{\textbf{QOLE}}$:  tests the received qudits  (steps 1-4), randomly generates $n$ pairs $(a^0_i, b^0_i)_{ i\in [n]}$ (step 5), and applies the respective operators $V^{b^0_i}_{a^0_i}$ ${ \text{ for } i\in [n]}$ to the received states (step 6).
 
 \
 
@@ -847,7 +847,7 @@ So far, we have been working in Hilbert spaces of prime dimensions; this reflect
 V^b_a \ket{e^x_r} = c_{a, b, x, r} \ket{e^x_{ax - b +r}}.
 \end{equation*}
 
-In this section, we generalize our protocol, $\pi_{\textbf{QOLE}}$, to Hilbert spaces of prime-power dimensions, $N=d^M$ ($d$ prime and $M>1$), taking advantage  of the fact that in a Galois field of dimension $d^M$, $GF(d^M)$, we can build a complete set of $N + 1$ MUBs \cite{DEBZ10}.
+In this section, we generalise our protocol, $\Pi_{\textbf{QOLE}}$, to Hilbert spaces of prime-power dimensions, $N=d^M$ ($d$ prime and $M>1$), taking advantage  of the fact that in a Galois field of dimension $d^M$, $GF(d^M)$, we can build a complete set of $N + 1$ MUBs \cite{DEBZ10}.
 
 Succinctly, in $GF(d^M)$, we identify the integers $i\in\mathbb{Z}_N$ with their $d-$ary representation, i.e.
 $$\mathbb{Z}_N \ni i = \sum^{M-1}_{n=0} i_n d^n \, \longleftrightarrow \, (i_0, \dots , i_{M-1}) \in GF(d^M).$$
@@ -891,13 +891,13 @@ V^b_a\ket{e^i_r} &=& \frac{1}{\sqrt{N}} \sum_{k,l = 0}^{N-1} \ket{k\oplus a}\ome
 \end{eqnarray*}
 \end{proof}
 
-Notice that all the steps in the $\pi_{\textbf{QOLE}}$ depend on the properties of the field operations (addition and multiplication) and on the fact that expression \eqref{eq:main_ingredient} holds. Hence, we can use  $\pi_{\textbf{QOLE}}$ adapted for the operations $\oplus$ and $\odot$, in order to quantum-UC-realize $\mathcal{F}_{\textbf{OLE}}$ in  fields of prime-power dimension $d^M$.
+Notice that all the steps in the $\Pi_{\textbf{QOLE}}$ depend on the properties of the field operations (addition and multiplication) and on the fact that expression \eqref{eq:main_ingredient} holds. Hence, we can use  $\Pi_{\textbf{QOLE}}$ adapted for the operations $\oplus$ and $\odot$, in order to quantum-UC-realize $\mathcal{F}_{\textbf{OLE}}$ in  fields of prime-power dimension $d^M$.
 
 \subsection{Quantum vector OLE}
 \label{sec:qvole}
-In the proposed protocol $\pi_{\textbf{QOLE}}$, we extract one instance of OLE out of $n$ instances of WOLE. As far as efficiency is concerned, it would be desirable to generate more instances of OLE out of those $n$ instances of WOLE. Here, we show how to use WOLE as a resource to realize the VOLE functionality, $\mathcal{F}_{\textbf{VOLE}}$, presented in Figure \ref{fig:VOLE_functionality}. In this case, Alice  fixes a $k$ (which is specified later), defines a set of $k$ linear functions $(\bm{a}, \bm{b})\in\mathbb{F}^k_q\times\mathbb{F}^k_q$ and Bob outputs the evaluation of all these functions on a specified element $x\in\mathbb{F}_q$ that he chooses, i.e. $\bm{f}:=\bm{a} x+ \bm{b}$. Since  $\pi_{\textbf{QOLE}}$ can be extended to finite fields $\mathbb{F}_q$, where $q$ is a prime or prime-power number (see Section \ref{sec:galois_ext}), the $\mathcal{F}_{\textbf{VOLE}}$ functionality can also be defined in $\mathbb{F}_q$. 
+In the proposed protocol $\Pi_{\textbf{QOLE}}$, we extract one instance of OLE out of $n$ instances of WOLE. As far as efficiency is concerned, it would be desirable to generate more instances of OLE out of those $n$ instances of WOLE. Here, we show how to use WOLE as a resource to realize the VOLE functionality, $\mathcal{F}_{\textbf{VOLE}}$, presented in Figure \ref{fig:VOLE_functionality}. In this case, Alice  fixes a $k$ (which is specified later), defines a set of $k$ linear functions $(\bm{a}, \bm{b})\in\mathbb{F}^k_q\times\mathbb{F}^k_q$ and Bob outputs the evaluation of all these functions on a specified element $x\in\mathbb{F}_q$ that he chooses, i.e. $\bm{f}:=\bm{a} x+ \bm{b}$. Since  $\Pi_{\textbf{QOLE}}$ can be extended to finite fields $\mathbb{F}_q$, where $q$ is a prime or prime-power number (see Section \ref{sec:galois_ext}), the $\mathcal{F}_{\textbf{VOLE}}$ functionality can also be defined in $\mathbb{F}_q$. 
 
-In the extraction phase of $\pi_{\textbf{QOLE}}$, Alice randomly chooses a function $g_{\bm{\kappa}}$ and applies it to the pair $(\bm{a},\bm{b})$. This procedure suggests that, in order to generate different input elements $(a', b')$, Alice can randomly choose another function $g_{\bm{\kappa'}}$ and set $a' = g_{\bm{\kappa'}}(\bm{a})$ and $b' = g_{\bm{\kappa'}}(\bm{b})$. This is equivalent to generating a random $2\times n$ matrix in  $\mathbb{F}_q$, i.e.
+In the extraction phase of $\Pi_{\textbf{QOLE}}$, Alice randomly chooses a function $g_{\bm{\kappa}}$ and applies it to the pair $(\bm{a},\bm{b})$. This procedure suggests that, in order to generate different input elements $(a', b')$, Alice can randomly choose another function $g_{\bm{\kappa'}}$ and set $a' = g_{\bm{\kappa'}}(\bm{a})$ and $b' = g_{\bm{\kappa'}}(\bm{b})$. This is equivalent to generating a random $2\times n$ matrix in  $\mathbb{F}_q$, i.e.
 \[
 \left[
   \begin{array}{ccc}
@@ -919,7 +919,7 @@ In the extraction phase of $\pi_{\textbf{QOLE}}$, Alice randomly chooses a funct
 \right].
 \]
 However, in case $\bm{\kappa}$ and $\bm{\kappa'}$ are linearly dependent (i.e. $\bm{\kappa} = c\bm{\kappa'}$ for some $c\in\mathbb{Z}_d$), Bob would have some extra information about Alice's elements $(a,b)$ and $(a', b')$, as $(a,b) = c( a', b')$. This leads to a situation beyond the  $\mathcal{F}_{\textbf{VOLE}}$ definition. 
-To avoid this issue, let us consider the set of $k\times n$ matrices with rank $k$ over $\mathbb{F}_q$ for $1\leq k\leq n$, and denote it by $\mathcal{R}_{k\times n}(\mathbb{F}_q)$. For a binary finite field,  $\mathcal{R}_{k\times n}(\mathbb{F}_2)$ is a two-universal hash family \cite{D21, CW79}. Similarly, one can prove that the more general set $\mathcal{R}_{k\times n}(\mathbb{F}_q)$ is also a two-universal hash family from $\mathbb{F}_q^n$ to $\mathbb{F}_q^k$. During the extraction phase of the original $\pi_{\textbf{QOLE}}$, Alice chooses vectors $(\bm{a}, \bm{b})$ according to the random vector $\bm{\kappa}$ and the desired final elements $(a,b)$ (see step 9 in Figure \ref{fig:fullprotocol}). In that case, since there is only one random vector $\bm{\kappa}$, there are $n-1$ undefined variables for each vector $\bm{a}$ and $\bm{b}$, i.e. $a_2, \ldots, a_n$ and $b_2, \ldots, b_n$ that can be chosen freely. For the VOLE protocol, instead of choosing just one vector $\bm{\kappa}$, Alice randomly chooses a  matrix $\mathcal{K}\in\mathcal{R}_{k\times n}(\mathbb{F}_q)$ of rank $k$. She then defines vectors $(\bm{a}', \bm{b}')\in \mathbb{F}^n_q\times \mathbb{F}^n_q$ consistent with the final elements $(\bm{a}, \bm{b})\in \mathbb{F}^k_q\times \mathbb{F}^k_q$. That is, Alice has the following system:
+To avoid this issue, let us consider the set of $k\times n$ matrices with rank $k$ over $\mathbb{F}_q$ for $1\leq k\leq n$, and denote it by $\mathcal{R}_{k\times n}(\mathbb{F}_q)$. For a binary finite field,  $\mathcal{R}_{k\times n}(\mathbb{F}_2)$ is a two-universal hash family \cite{D21, CW79}. Similarly, one can prove that the more general set $\mathcal{R}_{k\times n}(\mathbb{F}_q)$ is also a two-universal hash family from $\mathbb{F}_q^n$ to $\mathbb{F}_q^k$. During the extraction phase of the original $\Pi_{\textbf{QOLE}}$, Alice chooses vectors $(\bm{a}, \bm{b})$ according to the random vector $\bm{\kappa}$ and the desired final elements $(a,b)$ (see step 9 in Figure \ref{fig:fullprotocol}). In that case, since there is only one random vector $\bm{\kappa}$, there are $n-1$ undefined variables for each vector $\bm{a}$ and $\bm{b}$, i.e. $a_2, \ldots, a_n$ and $b_2, \ldots, b_n$ that can be chosen freely. For the VOLE protocol, instead of choosing just one vector $\bm{\kappa}$, Alice randomly chooses a  matrix $\mathcal{K}\in\mathcal{R}_{k\times n}(\mathbb{F}_q)$ of rank $k$. She then defines vectors $(\bm{a}', \bm{b}')\in \mathbb{F}^n_q\times \mathbb{F}^n_q$ consistent with the final elements $(\bm{a}, \bm{b})\in \mathbb{F}^k_q\times \mathbb{F}^k_q$. That is, Alice has the following system:
 \begin{equation*}
 \left[
   \begin{array}{ccc}
@@ -944,7 +944,7 @@ To avoid this issue, let us consider the set of $k\times n$ matrices with rank $
 %\Leftrightarrow& \mathcal{K}_{(k,k)} \mathcal{G}'_{(k,2)} + %\mathcal{K}_{(k,-(n-k))} \mathcal{G}'_{(-(n-k),2)} &= \mathcal{G}\\
 %\Leftrightarrow& \mathcal{G}'_{(k,2)} &= \bigg( \mathcal{G} - \mathcal{G}'_{(k,2)} - \mathcal{K}_{(k,-(n-k))} \mathcal{G}'_{(-(n-k),2)} \bigg) \mathcal{K}_{(k,k)}^{-1}
 \end{equation*}
-that can be solved by means of the Gaussian elimination method. Since $\mathcal{K}\in \mathcal{R}_{k\times n}(\mathbb{F}_q)$, there will be $n-k$ undefined variables in both vectors $\bm{a}'$ and $\bm{b}'$. Let $U$ denote the set of undefined indexes in $\bm{a}'$ and $\bm{b}'$. Alice randomly chooses $a'_i$ and $b'_i$ for $i\in U$ and solves the above equation system. Then, they proceed similarly to the original $\pi_{\textbf{QOLE}}$ and execute the derandomization protocol $\pi^n_{\textbf{WOLE}}((\bm{a}',\bm{b}'), \bm{x})$. Finally, Bob applies Alice's chosen matrix $\mathcal{K}$ to his output vector $\bm{y}'$ to get the final element $\bm{y}$. This vectorized extraction protocol $\pi_{\textbf{VEXT}}$ is presented in Figure~\ref{fig:vext}. 
+that can be solved by means of the Gaussian elimination method. Since $\mathcal{K}\in \mathcal{R}_{k\times n}(\mathbb{F}_q)$, there will be $n-k$ undefined variables in both vectors $\bm{a}'$ and $\bm{b}'$. Let $U$ denote the set of undefined indexes in $\bm{a}'$ and $\bm{b}'$. Alice randomly chooses $a'_i$ and $b'_i$ for $i\in U$ and solves the above equation system. Then, they proceed similarly to the original $\Pi_{\textbf{QOLE}}$ and execute the derandomization protocol $\Pi^n_{\textbf{WOLE}}((\bm{a}',\bm{b}'), \bm{x})$. Finally, Bob applies Alice's chosen matrix $\mathcal{K}$ to his output vector $\bm{y}'$ to get the final element $\bm{y}$. This vectorized extraction protocol $\Pi_{\textbf{VEXT}}$ is presented in Figure~\ref{fig:vext}. 
 
 %% TODO: maybe add here the fact that if \mathcal{K} rank is lower than k, Alice is not able to choose \bm{a} and \bm{b} because it could lead to an impossible system. This is of special importance in the simulation proof because, for dishonest Bob, the simulator has to be able to simulate this step and invert this .
 
@@ -955,7 +955,7 @@ that can be solved by means of the Gaussian elimination method. Since $\mathcal{
                         frame hidden,
                         ]
             
-            \centerline{\textbf{Protocol $\mathcal{\pi}_{\textbf{VEXT}}$}}
+            \centerline{\textbf{Protocol $\Pi_{\textbf{VEXT}}$}}
             
             \
     
@@ -991,7 +991,7 @@ that can be solved by means of the Gaussian elimination method. Since $\mathcal{
         \item Alice randomly generates $a'_i, b'_i \leftarrow_{\$}\mathbb{F}_q$ for $i\in U$.
         \item Alice solves the system for indexes $i\notin U$.
     \end{enumerate}
-    \item Alice and Bob run $\mathcal{\pi}^n_{\textbf{WOLE}}((\bm{a}', \bm{b}'), \bm{x})$, where $\bm{x} = (x, \ldots, x)$. Bob outputs  $\bm{y}'\in \mathbb{F}_q^n$.
+    \item Alice and Bob run $\Pi^n_{\textbf{WOLE}}((\bm{a}', \bm{b}'), \bm{x})$, where $\bm{x} = (x, \ldots, x)$. Bob outputs  $\bm{y}'\in \mathbb{F}_q^n$.
     
     \item Bob computes $\bm{y} = \mathcal{K}\bm{y}'$.
 \end{enumerate}
@@ -1013,18 +1013,18 @@ The correctness of the protocol is drawn immediately from linearity:
 = \bm{a}x + \bm{b}.
 \end{equation*}
 
-The security of the protocol is constrained by the closeness parameter $$\xi = \frac{1}{2}\sqrt{2^{k\log q - H_\text{min}(X|E)}}$$ given by Lemma~\ref{lem:leftover}, where we consider $l$ to be $k$ and $d$ to be $q$. As before, $\mathbf{F}_{\bm{a}'}$ denotes the distribution of the $\pi^n_{\textbf{WOLE}}$ protocol's input ${\bm{a}'}$ from Bob's perspective. From Lemma~\ref{lem:leftover}, since $\mathcal{R}_{k\times n}(\mathbb{F}_q)$ is a two-universal family of hash functions, we know that $\mathcal{K}\in \mathcal{R}_{k\times n}(\mathbb{F}_q)$ approximates $\mathcal{K}\mathbf{F}_{\bm{a}'} = \mathbf{F}_{\bm{a}}$ to uniform conditioned on Bob's side information. However, the closeness parameter has to be negligible in the security parameter $n$, thus setting a bound on $k$ (the size of VOLE), i.e. for $\eta > 0$,
+The security of the protocol is constrained by the closeness parameter $$\xi = \frac{1}{2}\sqrt{2^{k\log q - H_\text{min}(X|E)}}$$ given by Lemma~\ref{lem:leftover}, where we consider $l$ to be $k$ and $d$ to be $q$. As before, $\mathbf{F}_{\bm{a}'}$ denotes the distribution of the $\Pi^n_{\textbf{WOLE}}$ protocol's input ${\bm{a}'}$ from Bob's perspective. From Lemma~\ref{lem:leftover}, since $\mathcal{R}_{k\times n}(\mathbb{F}_q)$ is a two-universal family of hash functions, we know that $\mathcal{K}\in \mathcal{R}_{k\times n}(\mathbb{F}_q)$ approximates $\mathcal{K}\mathbf{F}_{\bm{a}'} = \mathbf{F}_{\bm{a}}$ to uniform conditioned on Bob's side information. However, the closeness parameter has to be negligible in the security parameter $n$, thus setting a bound on $k$ (the size of VOLE), i.e. for $\eta > 0$,
 \begin{align*}
 k \log q - \frac{n \log q}{2}\big(1-h_{q}(\zeta)\big) &< -n \eta \log q\\
 k &< n \Big(\frac{1}{2}\big(1-h_q(\zeta)\big) - \eta\Big).
 \end{align*}
 Since $k>0$, we have that  $ 0 < \eta < \frac{1}{2}\big(1-h_q(\zeta)\big)$. This gives a bound on the proportion of elements that we can extract from $n$ WOLEs  and  shows how Alice can fix $k$ in the beginning.  Note that this bound is not necessarily optimal, and one could try to improve it. We leave this as future work, as it goes beyond the scope of this paper, which is to introduce a quantum protocol for OLE that can be, in turn, adapted accordingly to also achieve VOLE.
 
-Let us denote by $\mathcal{\pi}_{\textbf{QVOLE}}$ the protocol $\mathcal{\pi}_{\textbf{QOLE}}$ with the subprotocol $\mathcal{\pi}_{\textbf{VEXT}}$ instead of $\mathcal{\pi}_{\textbf{EXT}}$. For the security of $\mathcal{\pi}_{\textbf{QVOLE}}$, we have:
+Let us denote by $\Pi_{\textbf{QVOLE}}$ the protocol $\Pi_{\textbf{QOLE}}$ with the subprotocol $\Pi_{\textbf{VEXT}}$ instead of $\Pi_{\textbf{EXT}}$. For the security of $\Pi_{\textbf{QVOLE}}$, we have:
 
-\begin{theorem}[quantum-UC security of $\mathcal{\pi}_{\textbf{QVOLE}}$]
+\begin{theorem}[quantum-UC security of $\Pi_{\textbf{QVOLE}}$]
 
-The protocol $\mathcal{\pi}_{\textbf{QOVLE}}$ statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{VOLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.
+The protocol $\Pi_{\textbf{QOVLE}}$ statistically quantum-UC realizes  (see Definition~\ref{def:statisticalquc}) $\mathcal{F}_{\textbf{VOLE}}$ in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.
 \label{thm:QUC-VOLE}
 \end{theorem}
 
@@ -1033,7 +1033,7 @@ The proof is much the same as the proof of Theorem~\ref{thm:QUC}, therefore we o
 
 \section{Conclusion} 
 
-OLE is an important primitive for secure two-party computation, and while for stronger primitives such as bit commitment, OT  and coin flipping there is a plethora of both theoretical as well as concrete protocol proposals \cite{M05, MTVUZ05, BBBG09, BBBGST11, DV12, SG12, KWW12, NJCKW12, KC13, PJLCLTKD14, LAAPMP14, LAPPP16, ARW19, BCKD20,  SY20,  ARV21,  SMP22}, up until now, there was no OLE protocol based on quantum communication. In this chapter, we present two protocols for QOLE. The first protocol is secure against semi-honest adversaries in the static corruption setting. The second proposed protocol, $\pi_{\textbf{QOLE}}$, builds upon the semi-honest version and extends it to the dishonest case, following a commit-and-open approach. We prove this second protocol to be secure in the quantum-UC framework when assuming ideal commitments, making it possible to be composed in any arbitrary way. We also constructed two generalizations of our protocol: the first achieves QOLE in Galois fields of prime-power dimensions and the second is a protocol for quantum vector OLE.
+OLE is an important primitive for secure two-party computation, and while for stronger primitives such as bit commitment, OT  and coin flipping there is a plethora of both theoretical as well as concrete protocol proposals \cite{M05, MTVUZ05, BBBG09, BBBGST11, DV12, SG12, KWW12, NJCKW12, KC13, PJLCLTKD14, LAAPMP14, LAPPP16, ARW19, BCKD20,  SY20,  ARV21,  SMP22}, up until now, there was no OLE protocol based on quantum communication. In this chapter, we present two protocols for QOLE. The first protocol is secure against semi-honest adversaries in the static corruption setting. The second proposed protocol, $\Pi_{\textbf{QOLE}}$, builds upon the semi-honest version and extends it to the dishonest case, following a commit-and-open approach. We prove this second protocol to be secure in the quantum-UC framework when assuming ideal commitments, making it possible to be composed in any arbitrary way. We also constructed two generalizations of our protocol: the first achieves QOLE in Galois fields of prime-power dimensions and the second is a protocol for quantum vector OLE.
  Note that our protocol achieves everlasting security, i.e. it remains information-theoretically secure after its execution, even if the dishonest party becomes more powerful in the future.
 
 %\bibliography{bibforthesis}

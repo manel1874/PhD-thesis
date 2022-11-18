@@ -20,8 +20,8 @@ In this chapter, we present a feasible modular private phylogenetic tree protoco
 %We present a feasible modular protocol for privately computing phylogenetic trees that is secure against quantum computer attacks and do not add any efficiency overhead during the execution phase. 
 The system is built on top of Libscapi \cite{libscapi} implementation of Yao protocol and PHYLIP phylogeny package \cite{PH78}. It integrates three crucial quantum primitives: quantum oblivious transfer, quantum key distribution and quantum random number generator.
 
-This chapter follows a top-down approach. In section \ref{phyloTree}, we start by explaining the concept of phylogenetic trees and the distance-based algorithms used to generate these trees. In section \ref{secDefition}, we set down the security definitions that will be used to analyse and prove the system's security. %In section \ref{cryptoTools}, we explain the cryptographic tools used in the system. 
-In sections \ref{quantumTools} and \ref{softTools}, we describe the quantum cryptographic tools and the software tools that are integrated into the protocol, respectively. In section \ref{smcPhylo}, we describe the proposed SMC system for phylogenetic trees. In section \ref{quantumTechIntegration} we explain how the quantum cryptographic tools are integrated into the system. Section \ref{systemSecurity} is devoted to the theoretical security analysis of the protocol and in section \ref{CompleAnalysis} we perform a complexity analysis. In the last section we present a performance comparison of the system between a classical-only and a quantum-assisted implementation.
+This chapter follows a top-down approach. In Section \ref{phyloTree}, we start by explaining the concept of phylogenetic trees and the distance-based algorithms used to generate these trees. In Section \ref{secDefition}, we set down the security definitions that will be used to analyse and prove the system's security. %In Section \ref{cryptoTools}, we explain the cryptographic tools used in the system. 
+In sections \ref{quantumTools} and \ref{softTools}, we describe the quantum cryptographic tools and the software tools that are integrated into the protocol, respectively. In Section \ref{smcPhylo}, we describe the proposed SMC system for phylogenetic trees. In Section \ref{quantumTechIntegration} we explain how the quantum cryptographic tools are integrated into the system. Section \ref{systemSecurity} is devoted to the theoretical security analysis of the protocol and in Section \ref{CompleAnalysis} we perform a complexity analysis. In the last Section we present a performance comparison of the system between a classical-only and a quantum-assisted implementation.
 
 
 
@@ -202,7 +202,7 @@ As we have seen, the UPGMA joins the clusters with the minimum distance between 
 $$q(C_i,C_j) = (r-2) d(C_i, C_j) - u(C_i) - u(C_j)$$
 where $r$ is the number of clusters in the current iteration and $u(C_i) = \sum_j d(C_i, C_j)$. 
 
-As opposed to the UPGMA algorithm, this method produces an unrooted tree and it can be summarized in the following steps:
+As opposed to the UPGMA algorithm, this method produces an unrooted tree and it can be summarised in the following steps:
 
 \begin{enumerate}
     \item Consider every sequence as a single-valued cluster and connect it to a central point;
@@ -288,7 +288,7 @@ In this chapter, we consider a multiparty computation scenario that is secure ag
     \item $C$ is the set of corrupted parties;
     \item $\mathtt{view}^i_\pi(X) := (X^i, r^i; m_1^i,...,m_t^i)$. This tuple is called the view of party $P^i$ and it contains its inputs ($X^i$), its random-tape value ($r^i$) and the messages $m_j^i$ received during the SMC execution;
     \item $\mathtt{output}_\pi(X) = (\mathtt{output}^1_\pi(X), ..., \mathtt{output}^n_\pi(X))$, where $\mathtt{output}^i_\pi(X)$ is the output of party $i$ computed from its view $\mathtt{view}^i_\pi(X)$;
-    \item $Sim$ is a probabilistic polynomial-time simulator in the ideal-world;
+    \item $S$ is a probabilistic polynomial-time simulator in the ideal-world;
     \item The distribution on inputs $X$ given by a real-world execution of the protocol $\pi$:
     
     \begin{equation*}
@@ -298,15 +298,15 @@ In this chapter, we consider a multiparty computation scenario that is secure ag
     \item The distribution on inputs $X$ given by the ideal-world simulation of the parties' view: 
     
     \begin{equation*}
-    \mathtt{Ideal}_{Sim,\mathcal{F}}(C; X):=\big\{ Sim\big(\{(X^i, \mathcal{F}(X^i)) : i\in C \}\big), \mathcal{F}(X) \big\}_X.
+    \mathtt{Ideal}_{S,\mathcal{F}}(C; X):=\big\{ S\big(\{(X^i, \mathcal{F}(X^i)) : i\in C \}\big), \mathcal{F}(X) \big\}_X.
     \end{equation*}
 \end{itemize}
 
 \begin{definition}[Semi-honest security]\label{def:security}
-A protocol securely realizes $\mathcal{F}$ in the presence of semi-honest adversaries if there exists a simulator $Sim$ such that, for every subset of corrupted parties $C$ and all inputs $X$, we have
+A protocol securely realizes $\mathcal{F}$ in the presence of semi-honest adversaries if there exists a simulator $S$ such that, for every subset of corrupted parties $C$ and all inputs $X$, we have
 
 \begin{equation}
-    \mathtt{Real}_\pi(C; X) \stackrel{c}{\equiv} \mathtt{Ideal}_{Sim, \mathcal{F}}(C; X),
+    \mathtt{Real}_\pi(C; X) \stackrel{c}{\equiv} \mathtt{Ideal}_{S, \mathcal{F}}(C; X),
     \label{eq:SH_security}
 \end{equation}
 where $\stackrel{c}{\equiv}$ denotes computational indistinguishability.
@@ -319,8 +319,8 @@ $$\mathtt{Real}_\pi(C; X) = \{ \mathtt{view}^i_\pi(X) : i\in C \}_X$$
 
 and
 
-$$\mathtt{Ideal}_{Sim, \mathcal{F}}(C; X) = \big\{ Sim\big(\{(X^i, \mathcal{F}(X^i)) : i\in C \}\big) \big\}_{X}.$$
-Therefore, we just need to build a simulator that satisfies expression (\ref{eq:SH_security}) for the $\mathtt{Real}_\pi(C; X)$ and $\mathtt{Ideal}_{Sim, \mathcal{F}}(C; X)$ given as above in order to prove security.
+$$\mathtt{Ideal}_{S, \mathcal{F}}(C; X) = \big\{ S\big(\{(X^i, \mathcal{F}(X^i)) : i\in C \}\big) \big\}_{X}.$$
+Therefore, we just need to build a simulator that satisfies expression (\ref{eq:SH_security}) for the $\mathtt{Real}_\pi(C; X)$ and $\mathtt{Ideal}_{S, \mathcal{F}}(C; X)$ given as above in order to prove security.
 
 \subsection{Distance matrix functionality}
 
@@ -346,7 +346,7 @@ In this section, we present three quantum primitives used in the private computa
 
 \subsection{Quantum oblivious key distribution}
 
-We explored the concept of oblivious keys in chapter~\ref{chapter_QOT}. To generate these oblivious keys, we saw that we can follow the prepare-and-measure quantum approach developed by Bennet \cite{BBCS92} along with some commitment functionality. As an example, Lemus et al. \cite{Lemus20} proposed to use the Halevi and Micali classical bit commitments based on universal and cryptographic hashing \cite{HM96}. Thus, its security is based on the laws of physics and on the fact that there is no significant quantum speed-up in finding collisions on the hash-based bit commitments \cite{Shi02, ABLST17, Lemus20}. Also, as discussed in \cite{Lemus20, SPM21}, this protocol has an important security feature: it is resistant against \textit{intercept now - decipher later} attacks. It this chapter, we call quantum oblivious key distribution (QOKD) the subprotocol of BBCS-based QOT protocols that comprises all the phases excluding the transfer phase. For illustration, the QOKD protocol in the bounded-quantum-storage model, $\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$, is summarized in Figure~\ref{fig:QOKD_prot}.
+We explored the concept of oblivious keys in chapter~\ref{chapter_QOT}. To generate these oblivious keys, we saw that we can follow the prepare-and-measure quantum approach developed by Bennet \cite{BBCS92} along with some commitment functionality. As an example, Lemus et al. \cite{Lemus20} proposed to use the Halevi and Micali classical bit commitments based on universal and cryptographic hashing \cite{HM96}. Thus, its security is based on the laws of physics and on the fact that there is no significant quantum speed-up in finding collisions on the hash-based bit commitments \cite{Shi02, ABLST17, Lemus20}. Also, as discussed in \cite{Lemus20, SPM21}, this protocol has an important security feature: it is resistant against \textit{intercept now - decipher later} attacks. It this chapter, we call quantum oblivious key distribution (QOKD) the subprotocol of BBCS-based QOT protocols that comprises all the phases excluding the transfer phase. For illustration, the QOKD protocol in the bounded-quantum-storage model, $\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$, is summarised in Figure~\ref{fig:QOKD_prot}.
 
 \begin{figure}[h!]
     \centering
@@ -447,7 +447,7 @@ The Libscapi library \cite{libscapi} implements several important cryptographic 
 
 \subsection{PHYLIP}
 
-The PHYLIP package \cite{F89} is a C++ open-source project that provides a set of programs to infer phylogenies. Among other programs, it implements distance-based methods (UPGMA, Neighbour-Joining, Fitch-Margoliash) and computes the evolutionary distances described previously in section \ref{evolDist} (JK, K2P, F84, LD). Due to its modularity, we integrate PHYLIP distance methods with Yao protocol for evolutionary distances assisted with quantum technologies.
+The PHYLIP package \cite{F89} is a C++ open-source project that provides a set of programs to infer phylogenies. Among other programs, it implements distance-based methods (UPGMA, Neighbour-Joining, Fitch-Margoliash) and computes the evolutionary distances described previously in Section \ref{evolDist} (JK, K2P, F84, LD). Due to its modularity, we integrate PHYLIP distance methods with Yao protocol for evolutionary distances assisted with quantum technologies.
 
 
 
@@ -465,7 +465,7 @@ The proposed system allows to securely compute a suite of algorithms that perfor
 
 \subsection{Functionality definition}\label{Functionality}
 
-As already mentioned in section \ref{phyloTree}, all distance-based methods are divided into two phases: distance matrix computation and distance matrix processing. Apart from the metric used, the first phase is similar among all methods whereas the second phase is specific to each one while depending only on the distance matrix. Therefore, each phase corresponds to a particular functionality that can be formalized as follows: 
+As already mentioned in Section \ref{phyloTree}, all distance-based methods are divided into two phases: distance matrix computation and distance matrix processing. Apart from the metric used, the first phase is similar among all methods whereas the second phase is specific to each one while depending only on the distance matrix. Therefore, each phase corresponds to a particular functionality that can be formalized as follows: 
 
 \begin{itemize}
     \item Functionality $\mathtt{DM}$: receives some distance metric $d\in\{\text{JC}, \text{K2P}, \text{F84}, \text{LD}\}$ and all input sequences, and outputs a matrix with the pairwise distances between every sequence, i.e. 
@@ -505,7 +505,7 @@ For simplicity, denote by $A_d^a$ the private protocol that implements sequentia
 
 \subsection{Private protocol}
 
-During the distance matrix computation phase ($\mathtt{DM}$) of the private $A_d^a$, each party has to compute the distance between his sequences and the other parties' sequences privately, i.e. without revealing his sequences to the other participating parties. Since this corresponds to several instances of a two-party secure computation, we make use of the Yao protocol described in section~\ref{yaoProtocol}. This means that each party has to generate the boolean circuit representation of the elected distance $d$, which is accomplished by the CBMC-GC software tool before the beginning of the protocol. In section \ref{privDistances}, we analyse how to generate these circuits.
+During the distance matrix computation phase ($\mathtt{DM}$) of the private $A_d^a$, each party has to compute the distance between his sequences and the other parties' sequences privately, i.e. without revealing his sequences to the other participating parties. Since this corresponds to several instances of a two-party secure computation, we make use of the Yao protocol described in Section~\ref{yaoProtocol}. This means that each party has to generate the boolean circuit representation of the elected distance $d$, which is accomplished by the CBMC-GC software tool before the beginning of the protocol. In Section \ref{privDistances}, we analyse how to generate these circuits.
 
 Now, since the Yao protocol is executed only between two different parties $P^i$ and $P^j$ for $i, j \in[n]$, the other participating parties $P^t$, $t\in[n]\setminus \{i,j\}$, do not have access to the distances computed between theses two parties. For this reason, $P^t$ has to receive the result of the Yao protocol execution from both $P^j$ and $P^i$. After this, each party outputs the distance matrix that is used as the input of PHYLIP programs: \texttt{fitch}, \texttt{kitsch} or \texttt{neighbor}. 
 
@@ -571,7 +571,7 @@ Both QKD and QOKD protocols rely on the same physical processes. They can both b
 
 \subsubsection{Network topology}
 
-The quantum private protocol explained above in section~\ref{privProtocol} assumes that every two parties have a direct quantum channel between them that is used to generate oblivious keys and symmetric keys, i.e. a fully connected quantum network. This approach follows from the fact that the first QKD and quantum OT (QOT) protocols were based on prepare-and-measure techniques \cite{BB84, BBCS92}. However, as discussed in chapter~\ref{chapter_QOT}, there are also protocols that implement device-independent QOT (DI-QOT) \cite{KW16, RW20} (under some constraints) and DI-QKD \cite{Pirandola2020}. In addition to the advantages from a security point of view, these DI protocols can also be implemented within a star-structured quantum network having an untrusted party as the middle point. This increases the implementation flexibility of the proposed quantum private protocol of phylogenetic trees (section~\ref{privProtocol}).
+The quantum private protocol explained above in Section~\ref{privProtocol} assumes that every two parties have a direct quantum channel between them that is used to generate oblivious keys and symmetric keys, i.e. a fully connected quantum network. This approach follows from the fact that the first QKD and quantum OT (QOT) protocols were based on prepare-and-measure techniques \cite{BB84, BBCS92}. However, as discussed in chapter~\ref{chapter_QOT}, there are also protocols that implement device-independent QOT (DI-QOT) \cite{KW16, RW20} (under some constraints) and DI-QKD \cite{Pirandola2020}. In addition to the advantages from a security point of view, these DI protocols can also be implemented within a star-structured quantum network having an untrusted party as the middle point. This increases the implementation flexibility of the proposed quantum private protocol of phylogenetic trees (Section~\ref{privProtocol}).
 
 As analysed by Joshi et al. \cite{JAW20}, existing networks fall into three possible types: trusted node networks, actively switched and fully connected quantum networks based on entanglement sharing and wavelength multiplexing. Using the two types of protocols just mentioned (prepare-and-measure and device-independent), it is possible to implement our proposed system in all three existing quantum network implementation types.
 
@@ -581,7 +581,7 @@ Moreover, Kumaresann et al. \cite{KRS16} analyses possible SMC infrastructure to
 
 \section{System security}\label{systemSecurity}
 
-In this section, we analyse the security of the proposed system. We start by describing the methods used to privately compute the distance between two sequences and then we prove the security of the private protocol proposed in section~\ref{privProtocol} which implements the functionality described in section~\ref{Functionality}.
+In this section, we analyse the security of the proposed system. We start by describing the methods used to privately compute the distance between two sequences and then we prove the security of the private protocol proposed in Section~\ref{privProtocol} which implements the functionality described in Section~\ref{Functionality}.
 
 
 \subsection{Private computation of distances} \label{privDistances}
@@ -598,17 +598,17 @@ We use an adapted divide-and-conquer technique for the computation of $\text{pop
 
 We follow the approach described above but we have to tailor it for the computation of the Hamming distance between two four-based sequences $(A, C, G, T)$. Since we are using a boolean circuit representation, the nucleotide sequences must be represented in binary. So, by convention, we use the following 2-bit encoding: $A = 00$, $C=01$, $G=10$ and $T=11$. If we follow directly the approach described above, we would have that the Hamming distance between the single-valued sequences $``A"$ and $``C"$ is smaller than the single-valued sequence between $``A"$ and $``T"$:
 \begin{eqnarray*}
-h(A, C) &=& \text{popcount}(00 \oplus 01)\\
+d_H(A, C) &=& \text{popcount}(00 \oplus 01)\\
 &=& \text{popcount}(01) = 1,
 \end{eqnarray*}
 \begin{eqnarray*}
-h(A, T) &=& \text{popcount}(00 \oplus 11)\\
+d_H(A, T) &=& \text{popcount}(00 \oplus 11)\\
 &=& \text{popcount}(11) = 2.
 \end{eqnarray*}
 
 This issue comes from the fact that we are counting the number of $1$'s inside every 2-bit blocks. Instead, we are just interested in knowing if there is at least one element 1 inside each 2-bit block because it indicates that the bases at that site are different. Therefore, before counting the number of 1's in the \texttt{XOR}ed sequence, we apply an \texttt{OR} operation to the bits inside every 2-bit blocks. We call this operation $\text{popcount}^t(z)$. For simplicity, hereafter we denote by $h_{xy}$ the tailored Hamming distance between sequences $x$ and $y$. Now, we have that the tailored Hamming distance between $``A"$ and $``T"$ gives the desired result:
 \begin{eqnarray*}
-h(A, T) &=& \text{popcount}^t(00 \oplus 11)\\
+d_H(A, T) &=& \text{popcount}^t(00 \oplus 11)\\
 &=& \text{popcount}^t(11) \\
 &=& \text{popcount}\big(\texttt{OR}(1,1)\big) = 1.
 \end{eqnarray*} In Figure~\ref{fig:hamming_divide}, we show an example on how to compute the Hamming distance between two-valued sequences $``AG"$ and $``GC"$.
@@ -622,7 +622,7 @@ h(A, T) &=& \text{popcount}^t(00 \oplus 11)\\
 
 
 \subsubsection{Jukes-Cantor} 
-As described in section \ref{JK_model}, the Jukes-Cantor distance between two sequences is given by:
+As described in Section \ref{JK_model}, the Jukes-Cantor distance between two sequences is given by:
 $$d_{xy} = -\frac{3}{4} \ln \Big(1- \frac{4}{3}\frac{h_{xy}}{N}\Big),$$
 where $h_{xy}$ is the hamming distance between sequence $x$ and sequence $y$.
 
@@ -637,7 +637,7 @@ This way, we just have to generate the boolean circuit for $h_{xy}$ rather than 
 
 
 \subsubsection{Kimura}
-In section~\ref{K2P_model}, we saw that the Kimura 2-parameter model leads to the following distance:
+In Section~\ref{K2P_model}, we saw that the Kimura 2-parameter model leads to the following distance:
 $$d_{xy} = -\frac{1}{2}\ln\bigg( \big(1-2P-Q\big) \sqrt{1-2Q} \bigg),$$
 where $P=\frac{n_1}{N}$, $Q=\frac{n_2}{N}$ and $n_1$ and $n_2$ are respectively the number of sites for which two sequences differ from each other with respect to type I ("transition" type) and type II ("transversion" type) substitutions.
 
@@ -668,7 +668,7 @@ n_2 &=& \text{popcount}_t(x\oplus y) - n_1.
 
 
 \subsubsection{F84 and LogDet}
-Recall from section \ref{evolDist}, that the F84 ($F_{xy} $) and LogDet ($L_{xy} $) distances are given, respectively, by:
+Recall from Section \ref{evolDist}, that the F84 ($F_{xy} $) and LogDet ($L_{xy} $) distances are given, respectively, by:
 \begin{equation}
     F_{xy} = -2 A\ln\bigg( 1- \frac{P}{2A} - \frac{(A-B)Q}{2AC} \bigg) + 2(A-B-C)\ln\bigg( 1-\frac{Q}{2C} \bigg),
 \end{equation}
@@ -683,7 +683,7 @@ As before, we want to split the private computation of both $F_{xy}$ and $L_{xy}
 
 \subsection{Private computation of phylogenetic trees}
 
-In this section, we prove that the protocol $A^a_d$ described in section~\ref{privProtocol} securely implements functionality $\mathtt{A}\circ \mathtt{DM}$ described in section~\ref{Functionality} according to the security definition~\ref{def:security}. So, we want to prove the following theorem:
+In this section, we prove that the protocol $A^a_d$ described in Section~\ref{privProtocol} securely implements functionality $\mathtt{A}\circ \mathtt{DM}$ described in Section~\ref{Functionality} according to the security definition~\ref{def:security}. So, we want to prove the following theorem:
 
 \begin{theorem}
 The protocol $A^a_d$ securely realizes $\mathtt{A}\circ \mathtt{DM}$ in the presence of semi-honest adversaries.
@@ -698,7 +698,7 @@ $A^a_d$ privately reduces $\mathtt{DM}$ to $\mathtt{D}_d$, i.e. an oracle-aided 
 \end{lemma}
 
 \begin{proof}
-In order to prove this lemma, we have to develop a simulator $Sim$ that simulates the view of a set of corrupted parties $C$. The $Sim$ starts from receiving all the input sequences from the corrupted parties. It then proceeds as follows:
+In order to prove this lemma, we have to develop a simulator $S$ that simulates the view of a set of corrupted parties $C$. $S$ starts from receiving all the input sequences from the corrupted parties. It then proceeds as follows:
 
 \begin{enumerate}
     \item Generates random sequences of the honest parties, $H$.
@@ -733,16 +733,16 @@ We have proved that our system is well designed and secure against quantum compu
 
 %\hl{ explicar melhor aqui que vamos primeiro fazer uma comparação da análise de complexidade entre os dois casos e depois vamos avaliar experimentalmente na secção seguinte.}
 
-In this section, we start by analysing the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, \ldots, P^n$, with $M_1, \ldots, M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotides, $s$.
+In this section, we start by analysing the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P_1, \ldots, P_n$, with $M_1, \ldots, M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotides, $s$.
 
 % In this section we start by comparing the computation and communication complexity of the fastest reported malicious oblivious extension protocol implemented in Libscapi library \cite{K15} and the optimized version of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ presented in \cite{SPM21}. Then, we analyse the complexity of the protocol $A^a_d$ presented before. We assume there are $n$ parties, $P^1, ..., P^n$, with $M_1, ..., M_n$ sequences, respectively. Also, we assume that the sequences are aligned and that they have the same number of nucleotide, $s$. 
 
 \subsection{Protocol complexity analysis}\label{compAnalysis}
 
-Now, let us analyse the complexity of the protocol presented in section \ref{privProtocol}. 
+Now, let us analyse the complexity of the protocol presented in Section \ref{privProtocol}. 
 
 \subsubsection{Yao protocol executions}
-Regarding the number of Yao protocol executions, we have that each party $P^j$ owning $M_j$ sequences has to perform $N_{\text{Yao}}^j = M_j\sum_{i\neq j} M_i$ secure distance computations. So, the total number of Yao protocol executions is given by
+Regarding the number of Yao protocol executions, we have that each party $P_j$ owning $M_j$ sequences has to perform $N_{\text{Yao}}^j = M_j\sum_{i\neq j} M_i$ secure distance computations. So, the total number of Yao protocol executions is given by
 $$N_{\text{Yao}} = \sum_j N_{\text{Yao}}^j = \sum_{j, i\neq j} M_j M_i.$$
 If we assume the number of sequences per party to be the same, i.e. $M_j = M\, \forall j\in[n]$, then we can simplify the expression above and conclude that $N_{\text{Yao}} = M^2 n(n-1)$. This means that the number of Yao protocol executions is quadratic in the number of sequences per party ($\mathcal{O}(n^2)$) and also in the number of parties ($\mathcal{O}(M^2)$). 
 
@@ -755,7 +755,7 @@ N_{\text{OT}}^j &=& N^j_\text{Yao} \cdot 2s \\
 
 It is important to note that $N_{\text{OT}}^j$ is independent of the size of the boolean circuit used, i.e. it is independent of the distance metric $d$ used in the protocol. This is a consequence of using the Yao protocol where the number of OT only depends on the input size. In case we were using GMW \cite{Goldreich87} protocol, the number of OT per party would depend on the size of the circuit.
 
-As mentioned in section \ref{quantumTechIntegQOT}, in case the number of oblivious keys generated is scarce compared to the number of OT required, we can use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the base OT used within OT extension protocol. In this case, we just have to generate $\kappa$ $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocols per Yao execution: $L^j_\text{bOT} = N^j_\text{Yao} \cdot \kappa = \kappa M^2(n-1)$.
+As mentioned in Section \ref{quantumTechIntegQOT}, in case the number of oblivious keys generated is scarce compared to the number of OT required, we can use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the base OT used within OT extension protocol. In this case, we just have to generate $\kappa$ $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocols per Yao execution: $L^j_\text{bOT} = N^j_\text{Yao} \cdot \kappa = \kappa M^2(n-1)$.
 
 \subsubsection{Oblivious keys}
 At this point, we can easily deduce the size of oblivious keys that each pair of parties have to generate when using messages of size $l$. 
@@ -791,9 +791,9 @@ Number of internal computations per party:
 $$N_\text{int}^j = \binom{M}{2} = \frac{M!}{2!(M-2)!}.$$
 
 \subsubsection{Encryption keys}
-As discussed before, for every party $P^j$, $P^t$ ($t\neq j$) has to receive from $P^j$ the distances known by $P^j$ that $P^t$ does not have access. So, $P^j$ has to send $M^2(n-2) + N_\text{int}^j$ distance values to $P^t$. Consequently, the length of the QKD key used to send these distances to $P^t$ is:
+As discussed before, for every party $P^j$, $P^t$ ($t\neq j$) has to receive from $P_j$ the distances known by $P_j$ that $P_t$ does not have access. So, $P_j$ has to send $M^2(n-2) + N_\text{int}^j$ distance values to $P_t$. Consequently, the length of the QKD key used to send these distances to $P_t$ is:
 $$32(M^2(n-2) + N^j_\text{int}),$$
-for a $32-$bit number representation. Therefore, the total size of key shared between two parties $P^j$ and $P^t$ must be:
+for a $32-$bit number representation. Therefore, the total size of key shared between two parties $P_j$ and $P_t$ must be:
 $$L^{jt}_{qkd} = 64(M^2(n-2) + N_\text{int}).$$
 
 Also, each party must have an overall shared key of $L^{j}_{qkd} = \sum_{i\neq j} L^{i}_{qkd} = 64(n-1)(M^2(n-2) + N^j_\text{int})$.
@@ -805,7 +805,7 @@ Also, each party must have an overall shared key of $L^{j}_{qkd} = \sum_{i\neq j
 
 We now present the scenario used to test and compare both quantum-assisted and classical-only approaches. We start by exploring the complexity analysis and the OT comparison carried out in previous sections. We extend this analysis in the next section with a testbed implementation. 
 
-We consider a scenario where three parties $n=3$ have $M$ SARS-CoV-2 genome sequences (with length $s=32\,000$) and want to privately compute a phylogenetic tree from them. In the next section we consider a varying number of sequences, but, for now, we set $M=10$. Following a standard choice \cite{ALSZ13}, we consider garbled circuit keys with $l = 128$ bits, computational security parameter with $\kappa = 128$ bits and statistical security parameter with $w = 64$ bits. For these parameter values, we can instantiate the expressions deduced in the complexity analysis (section~\ref{compAnalysis}). This information is summarized in Table~ \ref{table:phylo_tree_complexity}. As expected, the total size of oblivious keys ($L^j_{\text{ok}}$) required for a scenario where $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is the main OT protocol is three orders of magnitude higher than the case where $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ serves as a base OT protocol in KOS15 ($L^j_{\text{bok}}$). Also, we note that the total size of symmetric keys required in the protocol ($L^j_{qkd}$) is much smaller than that of oblivious keys ($L^j_{\text{ok}}$ and $L^j_{\text{bok}}$), pointing to the fact that its management should be less expensive than the oblivious keys management system. This will be discussed further in the next section.
+We consider a scenario where three parties $n=3$ have $M$ SARS-CoV-2 genome sequences (with length $s=32\,000$) and want to privately compute a phylogenetic tree from them. In the next section we consider a varying number of sequences, but, for now, we set $M=10$. Following a standard choice \cite{ALSZ13}, we consider garbled circuit keys with $l = 128$ bits, computational security parameter with $\kappa = 128$ bits and statistical security parameter with $w = 64$ bits. For these parameter values, we can instantiate the expressions deduced in the complexity analysis (Section~\ref{compAnalysis}). This information is summarised in Table~ \ref{table:phylo_tree_complexity}. As expected, the total size of oblivious keys ($L^j_{\text{ok}}$) required for a scenario where $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is the main OT protocol is three orders of magnitude higher than the case where $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ serves as a base OT protocol in KOS15 ($L^j_{\text{bok}}$). Also, we note that the total size of symmetric keys required in the protocol ($L^j_{qkd}$) is much smaller than that of oblivious keys ($L^j_{\text{ok}}$ and $L^j_{\text{bok}}$), pointing to the fact that its management should be less expensive than the oblivious keys management system. This will be discussed further in the next section.
 
 \begin{table*}[t]
 \centering
@@ -829,7 +829,7 @@ $N^j_{\text{int}}$ & $\binom{M}{2}$ & $45$ &  \\
 
 We can also estimate the time required to generate the keys based on their size. If we consider state-of-the-art rates of 10 Mbit/s for both QKD and QOKD systems \cite{YPT18} and a rate of 240 Mbit/s for QRNG (ID Quantique QRNG PCIe cards \cite{IDQ}), we would need around $5\text{ minutes}$ for $L^j_{\text{ok}}$, $0.64\text{s}$ for $L^j_{\text{bok}}$, $28$s for $L^j_{\text{QRNG}}$ and $1.9\times 10^{-3}$s for $L^{j}_{qkd}$. Note that we can significantly reduce the time of the precomputation phase in case we integrate $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ with KOS15 OT extension protocol. 
 
-%Finally, we compare the number of binary operations and bits sent by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ and the KOS15 OT extension. Considering the number of OT required for this use case to be $N^j_{\text{OT}} = 12.8\times 10^6$ (Table~\ref{table:complexity}), we get the results summarized in Table~\ref{table:Com_Comp_complexity}. Observe that KOS15 requires around four times (4.2) more binary operations than $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ for this scenario. This points to the conclusion that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ has the potential to provide a faster transfer phase execution when compared to KOS15.
+%Finally, we compare the number of binary operations and bits sent by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ and the KOS15 OT extension. Considering the number of OT required for this use case to be $N^j_{\text{OT}} = 12.8\times 10^6$ (Table~\ref{table:complexity}), we get the results summarised in Table~\ref{table:Com_Comp_complexity}. Observe that KOS15 requires around four times (4.2) more binary operations than $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ for this scenario. This points to the conclusion that $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ has the potential to provide a faster transfer phase execution when compared to KOS15.
 %
 %\begin{table}[!h]
 %\centering
@@ -849,7 +849,7 @@ We can also estimate the time required to generate the keys based on their size.
 
 \section{Performance evaluation}\label{perfEvaluation}
 
-In this section, we set out to explore and compare the performance of two implementations of the proposed secure phylogenetic tree computation ($A^a_d$): classical-only and quantum-assisted. The quantum-assisted system replaces Libscapi base OT (SimpleOT \cite{C15}) implementation with the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol presented before (Figure~\ref{fig:BBCS_Transfer-optimized}). It also uses symmetric keys along with one-time pad to encrypt distance values as described in section~\ref{smcPhylo}. More specifically, we benchmark our implementation for the duration of its main components: circuit generation, communication, (internal) computation and SMC operation.
+In this section, we set out to explore and compare the performance of two implementations of the proposed secure phylogenetic tree computation ($A^a_d$): classical-only and quantum-assisted. The quantum-assisted system replaces Libscapi base OT (SimpleOT \cite{C15}) implementation with the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol presented before (Figure~\ref{fig:BBCS_Transfer-optimized}). It also uses symmetric keys along with one-time pad to encrypt distance values as described in Section~\ref{smcPhylo}. More specifically, we benchmark our implementation for the duration of its main components: circuit generation, communication, (internal) computation and SMC operation.
 
 Here, we do not assess the generation performance of both symmetric keys and oblivious keys. We precompute these keys using a simulator that mimics the structure of the quantum generated keys and we do not include their generation time in the performance analysis. The reason for this is twofold: performance in quantum cryptography is an active field of research with no clear way on how to be compared with classical approaches; quantum generation of both keys (symmetric and oblivious) can be precomputed without depending on the parties' inputs and used later as a resource in the execution of the system.
 
@@ -859,7 +859,7 @@ We leverage a testbed on a virtual environment composed of three Ubuntu (64-bit)
 
 The performance of the implementation was measured on the VMs with the clock type \texttt{CLOCK\_REALTIME} from the C$++$ library \texttt{time}. Although the values might differ for different host machines, this method is certainly adequate to use as a comparison between a classical-only and a quantum-assisted system.
 
-We follow the scenario presented in section~\ref{useCase}, where we have three parties ($n=3$) owning at most ten sequences ($M\leq10$) with $32\,000$ nucleotides. For the sake of comparison, we use the Jukes-Cantor phylogenetic distance along with PHYLIP implementation of UPGMA algorithm, i.e. $(d, a) = (\text{JC}, \text{UPGMA})$.
+We follow the scenario presented in Section~\ref{useCase}, where we have three parties ($n=3$) owning at most ten sequences ($M\leq10$) with $32\,000$ nucleotides. For the sake of comparison, we use the Jukes-Cantor phylogenetic distance along with PHYLIP implementation of UPGMA algorithm, i.e. $(d, a) = (\text{JC}, \text{UPGMA})$.
 
 \subsubsection{Sequences preprocessing}
 
@@ -945,7 +945,7 @@ We join the internal computation of sequences and PHYLIP phylogenetic computatio
     \label{fig:total_running_time}
 \end{figure}
 
-Figure~\ref{fig:total_running_time} present us with the average duration of both systems with standard deviation as error bars. Here, we see that the quantum-assisted approach has a higher cost than the classical-only implementation. As discussed in section~\ref{quantumTechIntegQOT}, we can either use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol as the main OT in the Libscapi implementation or we can use it as a base OT in the KOS15 OT Extension used by Libscapi. Since we have implemented the latter, our $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is competing against the SimpleOT \cite{C15} base OT implementation. As analysed by the authors (section 4 \cite{SPM21}), the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is expected to outperform base OT implementations and to have comparable performance to OT Extension protocols. However, these analyses only compared cryptographic and computational operations and did not take into account implementation constraints and memory complexity.
+Figure~\ref{fig:total_running_time} present us with the average duration of both systems with standard deviation as error bars. Here, we see that the quantum-assisted approach has a higher cost than the classical-only implementation. As discussed in Section~\ref{quantumTechIntegQOT}, we can either use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol as the main OT in the Libscapi implementation or we can use it as a base OT in the KOS15 OT Extension used by Libscapi. Since we have implemented the latter, our $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ is competing against the SimpleOT \cite{C15} base OT implementation. As analysed by the authors (Section 4 \cite{SPM21}), the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ transfer phase is expected to outperform base OT implementations and to have comparable performance to OT Extension protocols. However, these analyses only compared cryptographic and computational operations and did not take into account implementation constraints and memory complexity.
 
 In the quantum-assisted implementation, we separate the precomputation phase (generation of symmetric and oblivious keys) from the secure computation phase of the proposed protocol, $A^a_d$. For this reason, it is necessary to develop a key management system to save and keep key synchronization between parties. Consequently, the key management system becomes the bottleneck as the number of sequences increases. In particular, the key management system of oblivious keys is responsible for most of the overhead (Figure~\ref{fig:okms}).
 
