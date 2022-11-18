@@ -12,53 +12,44 @@ A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
 Reallocated field_info (elt_size=4) to 11969 items from 5000.
 Database file #1: References/References.bib
-Warning--empty booktitle in HIMV19
-Warning--empty journal in CDIKLOV19
-Warning--can't use both author and editor fields in S99
-Warning--empty booktitle in IKNP03
-Warning--empty journal in NNOB12
-Warning--empty booktitle in MR19
-Warning--empty title in D21
-Warning--empty year in D21
 You've used 303 entries,
             1791 wiz_defined-function locations,
-            2247 strings with 53681 characters,
-and the built_in function-call counts, 79316 in all, are:
-= -- 7102
-> -- 3775
-< -- 82
-+ -- 1374
-- -- 1071
-* -- 5439
-:= -- 12130
-add.period$ -- 990
+            2250 strings with 54155 characters,
+and the built_in function-call counts, 79961 in all, are:
+= -- 7198
+> -- 3779
+< -- 85
++ -- 1375
+- -- 1072
+* -- 5447
+:= -- 12187
+add.period$ -- 994
 call.type$ -- 303
-change.case$ -- 295
+change.case$ -- 296
 chr.to.int$ -- 0
-cite$ -- 311
-duplicate$ -- 3762
-empty$ -- 7577
-format.name$ -- 1071
-if$ -- 18220
+cite$ -- 303
+duplicate$ -- 3819
+empty$ -- 7624
+format.name$ -- 1072
+if$ -- 18418
 int.to.chr$ -- 0
 int.to.str$ -- 303
 missing$ -- 280
-newline$ -- 1496
-num.names$ -- 347
+newline$ -- 1497
+num.names$ -- 349
 pop$ -- 993
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2050
+skip$ -- 2110
 stack$ -- 0
-substring$ -- 4701
-swap$ -- 1170
-text.length$ -- 82
+substring$ -- 4748
+swap$ -- 1220
+text.length$ -- 85
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 8
-while$ -- 692
+warning$ -- 0
+while$ -- 697
 width$ -- 306
-write$ -- 3385
-(There were 8 warnings)
+write$ -- 3400

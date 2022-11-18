@@ -7,7 +7,7 @@
 \chapter{Introduction}
 %\addcontentsline{toc}{chapter}{Introduction}
 
-The emerging fields of Data Mining and Data Analysis have deeply benefited from the increasing power of computers \cite{Wang11}. However, its need for a massive and methodical collection of data can lead to the complete or partial leak of private sensitive information, such as in the case of the genomics field \cite{NS08, L02, Homer08, Gymrek13}. As a consequence, the aggregation of data from different sources is most of the times blocked due to legally imposed regulations such as the General Data Protection Regulation (GDPR) \cite{EUdataregulations2016}. Although this has the benefit of protecting people's privacy, it also has the downside of preventing honest players from accessing data necessary to tackle some of the most important issues in our society. 
+The emerging fields of data mining and data analysis have deeply benefited from the increasing power of computers \cite{Wang11}. However, its need for a massive and methodical collection of data can lead to the complete or partial leak of private sensitive information, such as in the case of the genomics field \cite{NS08, L02, Homer08, Gymrek13}. As a consequence, the aggregation of data from different sources is most of the times blocked due to legally imposed regulations such as the General Data Protection Regulation (GDPR) \cite{EUdataregulations2016}. Although this has the benefit of protecting people's privacy, it also has the downside of preventing honest players from accessing data necessary to tackle some of the most important issues in our society. 
 
 %********************************** %First Section  **************************************
 \section*{Secure Multiparty Computation}
@@ -36,7 +36,7 @@ Also, the intrinsic randomness provided by quantum phenomena is an ideal resourc
 
 Despite the many advances, the adoption of quantum cryptography by secure multiparty computation (SMC) systems is still reduced. This is due to the efficiency challenges imposed by quantum technology and the need of high throughput of both OT and OLE primitives in boolean- and arithmetic-based SMC, respectively.
 
-The overall goal of this dissertation is to give one step closer to the adoption of quantum cryptography by SMC systems. We do this with three contributions. In our first contribution, we start the studying of comparing the efficiency of both classical and quantum protocols. Our second contribution is the first quantum OLE protocol which does not rely on OT. Our last contribution is an implementation of a special-purpose SMC system applied to genomics analysis assisted with quantum OT. Along the way, we produced a review dedicated to quantum OT protocols alone. Usually, its analysis is integrated into more general surveys under the topic of “quantum cryptography”, leading to a less in-depth exposition of the topic.
+The overall goal of this dissertation is to give one step closer to the adoption of quantum cryptography by SMC systems. We do this with three contributions. In our first contribution, we start the studying of comparing the efficiency of both classical and quantum protocols. Our second contribution is an implementation of a special-purpose SMC system applied to genomics analysis assisted with quantum OT. Our last contribution is the first quantum OLE protocol which does not rely on OT. Along the way, we produced a review dedicated to quantum OT protocols alone. Usually, its analysis is integrated into more general surveys under the topic of “quantum cryptography”, leading to a less in-depth exposition of the topic.
 
 We describe the contributions in a bit more detail.
 
@@ -50,17 +50,16 @@ We make a detailed comparison between the complexity of the transfer phase of tw
 
 \
 
-\noindent\textbf{Quantum assisted secure multiparty computation.} Individuals’ privacy and legal regulations demand genomic data be handled and studied with highly secure privacy-preserving techniques. In this contribution, we propose a feasible secure multiparty computation (SMC) system assisted with quantum cryptographic protocols that is designed to compute a phylogenetic tree from a set of private genome sequences. This system adapts several distance-based methods (Unweighted Pair Group Method with Arithmetic mean, Neighbour-Joining, Fitch-Margoliash) into a private setting where the sequences owned by each party are not disclosed to the other members present in the protocol. We do not apply a generic implementation of SMC to the problem of phylogenetic trees. Instead, we develop a tailored private protocol for this use case in order to improve efficiency. 
-
-We theoretically evaluate the performance and privacy guarantees of the system through a complexity analysis and security proof and give an extensive explanation about the implementation details and cryptographic protocols. We also implement a quantum-assisted secure phylogenetic tree computation based on the Libscapi implementation of the Yao protocol, the PHYLIP library and simulated keys of two quantum systems: quantum oblivious key distribution and quantum key distribution.\footnote{ The code can be accessed at the following repo: \href{https://github.com/manel1874/QSHY/tree/dev-cq-phylip}{https://github.com/manel1874/QSHY/tree/dev-cq-phylip}}. This demonstrates its effectiveness and practicality. We benchmark our implementation against a classical-only solution and we conclude that both approaches render similar execution times. The only difference between the quantum and classical systems is the time overhead taken by the oblivious key management system of the quantum-assisted approach.
-
-
-\
-
 \noindent\textbf{Quantum oblivious linear evaluation protocol.} Our second contribution is a quantum protocol for OLE with quantum universally composable (quantum-UC) security in the $\mathcal{F}_{\textbf{COM}}-$hybrid model, i.e. when assuming the existence of a commitment functionality, $\mathcal{F}_{\textbf{COM}}$. To obtain a secure protocol, we take advantage of the properties of Mutually Unbiased Bases in high-dimensional Hilbert spaces with prime and prime-power dimension. Such a choice is motivated by recent theoretical and experimental advances that pave the way for the development and realization of new solutions for quantum cryptography \cite{BPT00,DEBZ10,Zhongetal2015,BHVBFHM18,DHMPPV21}. 
 
 To the best of our knowledge our protocol is the first quantum-UC secure quantum OLE proposal. Moreover, it is not based on any quantum OT implementation which would be the standard approach. %Instead, we only assume the existence of a commitment functionality that seems to be a simpler task than OT, as argued in \cite{Unruh10}.
 We consider the static corruption adversarial model with both semi-honest and malicious adversaries. We develop a weaker version of OLE, which may be of independent interest. We also modify the proposed protocol to generate quantum-UC secure vector OLE (VOLE). We give bounds on the possible size of VOLE according to the security parameters.
+
+\
+
+\noindent\textbf{Quantum assisted secure multiparty computation.} Individuals’ privacy and legal regulations demand genomic data be handled and studied with highly secure privacy-preserving techniques. In this contribution, we propose a feasible secure multiparty computation (SMC) system assisted with quantum cryptographic protocols that is designed to compute a phylogenetic tree from a set of private genome sequences. This system adapts several distance-based methods (Unweighted Pair Group Method with Arithmetic mean, Neighbour-Joining, Fitch-Margoliash) into a private setting where the sequences owned by each party are not disclosed to the other members present in the protocol. We do not apply a generic implementation of SMC to the problem of phylogenetic trees. Instead, we develop a tailored private protocol for this use case in order to improve efficiency. 
+
+We theoretically evaluate the performance and privacy guarantees of the system through a complexity analysis and security proof and give an extensive explanation about the implementation details and cryptographic protocols. We also implement a quantum-assisted secure phylogenetic tree computation based on the Libscapi implementation of the Yao protocol, the PHYLIP library and simulated keys of two quantum systems: quantum oblivious key distribution and quantum key distribution.\footnote{ The code can be accessed at the following repo: \href{https://github.com/manel1874/QSHY/tree/dev-cq-phylip}{https://github.com/manel1874/QSHY/tree/dev-cq-phylip}}. This demonstrates its effectiveness and practicality. We benchmark our implementation against a classical-only solution and we conclude that both approaches render similar execution times. The only difference between the quantum and classical systems is the time overhead taken by the oblivious key management system of the quantum-assisted approach.
 
 \
 
@@ -74,11 +73,11 @@ The results are presented as follows. We start presenting the technical elements
 This thesis is based on research published in various journals. During my PhD I was involved in the following projects.
 
 \begin{itemize}
+	\item\cite{SMV22} Manuel B. Santos, Paulo Mateus, and Chrysoula Vlachou. Quantum Universally
+Composable Oblivious Linear Evaluation. 2022. DOI: 10.48550/ARXIV.2204.14171. Poster at QCrypt2022.	
+	
 	\item\cite{SMP22} Manuel B. Santos, Paulo Mateus, and Armando N. Pinto. “Quantum Oblivious Transfer:
 A Short Review”. In: Entropy 24.7 (2022), p. 945.
-
-	\item\cite{SMV22} Manuel B. Santos, Paulo Mateus, and Chrysoula Vlachou. Quantum Universally
-Composable Oblivious Linear Evaluation. 2022. DOI: 10.48550/ARXIV.2204.14171. Poster at QCrypt2022.
 
 	\item\cite{SGPM22} Manuel B. Santos et al. “Private Computation of Phylogenetic Trees Based on Quantum
 Technologies”. In: IEEE Access 10 (2022), pp. 38065–38088.

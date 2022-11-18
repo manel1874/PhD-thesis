@@ -98,7 +98,6 @@ isbn="978-3-540-46766-3"
 
 @inbook{S99,
     author="Salvail, Louis",
-    editor="Damg{\aa}rd, Ivan Bjerre",
     title="The Search for the Holy Grail in Quantum Cryptography",
     bookTitle="Lectures on Data Security: Modern Cryptology in Theory and Practice",
     year="1999",
@@ -2821,14 +2820,18 @@ volume = {2007},
 journal = {IACR Cryptology ePrint Archive}
 }
 
-@article{NNOB12,
-author = {Nielsen, Jesper and Nordholt, Peter and Orlandi, Claudio and Burra, Sai},
-year = {2012},
-month = {02},
-pages = {},
+@inproceedings{NNOB12,
+author = {Nielsen, Jesper Buus and Nordholt, Peter Sebastian and Orlandi, Claudio and Burra, Sai Sheshank},
 title = {A New Approach to Practical Active-Secure Two-Party Computation},
-volume = {8},
-doi = {10.1007/978-3-642-32009-5_40}
+year = {2012},
+isbn = {9783642320088},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-642-32009-5_40},
+doi = {10.1007/978-3-642-32009-5_40},
+booktitle = {Proceedings of the 32nd Annual Cryptology Conference on Advances in Cryptology --- CRYPTO 2012 - Volume 7417},
+pages = {681–700},
+numpages = {20}
 }
 
 @inproceedings{ALSZ13,
@@ -2864,14 +2867,19 @@ pages={673--701},
 isbn={978-3-662-46800-5}
 }
 
-@inproceedings{IKNP03,
-author = {Ishai, Yuval and Kilian, Joe and Nissim, Kobbi and Petrank, Erez},
-title = {Extending Oblivious Transfers Efficiently},
-year = {2003},
-month = {06},
-pages = {},
-journal = {Lecture Notes in Computer Science},
-doi = {10.1007/978-3-540-45146-4_9}
+@InProceedings{IKNP03,
+author="Ishai, Yuval
+and Kilian, Joe
+and Nissim, Kobbi
+and Petrank, Erez",
+editor="Boneh, Dan",
+title="Extending Oblivious Transfers Efficiently",
+booktitle="Advances in Cryptology - CRYPTO 2003",
+year="2003",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="145--161",
+isbn="978-3-540-45146-4"
 }
 
 @inproceedings{PST19,
@@ -2883,6 +2891,7 @@ doi = {10.1007/978-3-540-45146-4_9}
   organization={Springer}
 }
 
+
 @inproceedings{MR19,
 author = {Mansy, Daniel and Rindal, Peter},
 title = {Endemic Oblivious Transfer},
@@ -2892,6 +2901,7 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3319535.3354210},
 doi = {10.1145/3319535.3354210},
+booktitle = {Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security},
 pages = {309–326},
 numpages = {18},
 keywords = {extension, oblivious transfer},
@@ -3866,8 +3876,9 @@ address="Cham",
 pages="223--254",
 isbn="978-3-319-63688-7"
 }
-  
-  @inproceedings{HIMV19,
+ 
+
+@inproceedings{HIMV19,
 author = {Hazay, Carmit and Ishai, Yuval and Marcedone, Antonio and Venkitasubramaniam, Muthuramakrishnan},
 title = {LevioSA: Lightweight Secure Arithmetic Computation},
 year = {2019},
@@ -3876,9 +3887,10 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3319535.3354258},
 doi = {10.1145/3319535.3354258},
+booktitle = {Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security},
 pages = {327–344},
 numpages = {18},
-keywords = {oblivious linear evaluation (OLE), secure arithmetic two-party computation, MPC-in-the-head},
+keywords = {oblivious linear evaluation (OLE), MPC-in-the-head, secure arithmetic two-party computation},
 location = {London, United Kingdom},
 series = {CCS '19}
 }
@@ -3894,17 +3906,21 @@ series = {CCS '19}
   booktitle = {Proceedings of the 2018 {ACM} {SIGSAC} Conference on Computer and Communications Security}
 }
 
- @article{CDIKLOV19,
-  title={Reusable Non-Interactive Secure Computation},
-  booktitle={Advances in Cryptology – CRYPTO 2019},
-  series={Lecture Notes in Computer Science},
-  publisher={Springer},
-  volume={11694},
-  pages={462-488},
-  doi={10.1007/978-3-030-26954-8_15},
-  author={Melissa Chase and Yevgeniy Dodis and Yuval Ishai and Daniel Kraschewski and Tianren Liu and Rafail Ostrovsky and Vinod Vaikuntanathan},
-  year=2019
+@inproceedings{CDIKLOV19,
+author = {Chase, Melissa and Dodis, Yevgeniy and Ishai, Yuval and Kraschewski, Daniel and Liu, Tianren and Ostrovsky, Rafail and Vaikuntanathan, Vinod},
+title = {Reusable Non-Interactive Secure Computation},
+year = {2019},
+isbn = {978-3-030-26953-1},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-030-26954-8_15},
+doi = {10.1007/978-3-030-26954-8_15},
+booktitle = {Advances in Cryptology – CRYPTO 2019: 39th Annual International Cryptology Conference, Santa Barbara, CA, USA, August 18–22, 2019, Proceedings, Part III},
+pages = {462–488},
+numpages = {27},
+location = {Santa Barbara, CA, USA}
 }
+
 
 @InProceedings{GN19,
 author="Ghosh, Satrajit
@@ -4567,7 +4583,7 @@ month = {oct}
   url = {https://arxiv.org/abs/2109.06709},
   journal={arxiv},
   volume = {2109.06709},
-  author = {Ostrev, Dimiter},}
+  author = {Ostrev, Dimiter},
   
   keywords = {Quantum Physics (quant-ph), Cryptography and Security (cs.CR), Information Theory (cs.IT), FOS: Physical sciences, FOS: Physical sciences, FOS: Computer and information sciences, FOS: Computer and information sciences},
   

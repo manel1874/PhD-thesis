@@ -1,10 +1,12 @@
 \chapter*{Notation}
 
 
-\newcommand{\tabstart}[1]{\noindent \begin{tabular}{p{2.95cm}p{8.7cm}}
-    \multicolumn{2}{l}{{\bf #1}} \\ \hline \\[-2.5ex] } 
+\newcommand{\tabstart}[1]{\noindent \begin{tabular}{p{2.95cm}p{12cm}}
+    \multicolumn{2}{l}{{\bf #1}} \\ 
+    \hline}
+    %[-2.5ex] } 
 
-\newcommand{\tabstop}{\\ \hline \end{tabular}}
+\newcommand{\tabstop}{\hline \end{tabular}}
 
 \newcommand{\tabinter}{\vspace{1ex}}
 
@@ -45,7 +47,7 @@ $\mathcal{H}_A\, (\mathcal{H}_A^*)$ & Hilbert space (its dual) of quantum system
   $\spr{\phi}{\psi}$ & scalar product of the vectors $\ket{\phi}$ and $\ket{\psi}$ \\
   $\proj{\phi}$ & projector onto the vector $\ket{\phi}$ \\ 
   $\rho$, $\sigma$ & density operators \\
-  $\ket{B_{a,b}}$ & generalised Bell states
+  $\ket{B_{a,b}}$ & generalised Bell states \\
   $\tau_{\mathcal{X}}$ & uniform distribution over $\mathcal{X}$ \\
   $\cS_1(\cH)$ & set of normalized vectors on $\cH$ \\
   $\text{Herm}(\mathcal{H})$ & sets of hermitian operators on $\mathcal{H}$ \\
@@ -57,6 +59,9 @@ $\tr(\rho)$ & trace of the hermitian operator $\rho$ \\
 $\rank(\rho)$ & rank of the hermitian operator $\rho$ \\
 $\mathcal{E}$, $\mathcal{T}$, $\mathcal{C}$, $\mathcal{O}^{()}$, $\mathcal{M}$ & CPTP maps \\
 $H_{\min}(X|B)_{\rho}$ & conditional min-entropy of a cq-state $\rho_{XB}$\\
+\end{tabular}
+
+\noindent \begin{tabular}{p{2.95cm}p{12cm}}
 $H_{\text{min}}(A | B)_{\rho|\sigma}$ & min-entropy of $\rho_{A B}$ relative to $\sigma_{B}$ \\
 \tabstop
 
@@ -72,10 +77,13 @@ $\mathcal{F}_{\textbf{OLE}}$ & OLE functionality \\
 $\mathcal{F}_{\textbf{VOLE}}$ & VOLE functionality \\
 $\mathcal{F}_{\textbf{COM}}$ & COM functionality \\
 $\mathcal{F}_{\textbf{ext}}$ & external functionality \\
+$\mathcal{F}_{\textbf{FakeCOM}}$ & fake commitment functionality \\
 $\Pi$ & protocol \\
 $\mathcal{Z}$ & environment \\ 
 $Adv$ & adversary \\ 
 $\mathcal{S}$ & simulator \\
+$\mathcal{S}_A$ & simulator against dishonest Alice\\
+$\mathcal{S}_B$ & simulator against dishonest Bob\\
 $\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}}$  & the output of the environment $\mathcal{Z}$ at the end of the real execution, and by $C$ the corrupted party \\
 $\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$ & the output of the environment $\mathcal{Z}$ at the end of the ideal execution, and by $C$ the corrupted party \\
 $\mathtt{DM}_{d}$ & distance matrix functionality \\
@@ -113,6 +121,9 @@ $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ & Optimised BBCS protocol \\
 $\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$ & quantum oblivious key distribution protocol in the BQS model \\
 $\rotPi^{\mathsf{A}}_{\textbf{FSA}}$ & Alice's faked-state attack on qubits indexed by $J$\\
 $\rotPi^{\mathsf{A}}_{\textbf{THA}}$ & Alice's trojan-horse attack on qubits indexed by $J$\\
+\end{tabular}
+
+\noindent \begin{tabular}{p{2.95cm}p{12cm}}
 $\rotPi^{\mathsf{B}}_{\textbf{THA}}$ & Bob's trojan-horse attack on qubits indexed by $J$\\
 $B_{\text{op}}^\text{ALSZ13}$ & number of binary operations executed by ALSZ13 protocol \\
 $B_{\text{op}}^\text{BBCS}$ & number of binary operations executed by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol \\
@@ -132,12 +143,17 @@ $V^b_a$ & Heisenberg-Weyl operators \\
 $\ket{e^x_r}$ & $r-$th eigenket of the $V^x_1$ operator \\
 $\mathbf{F}_0$ & random variable for Alice's functions in the RWOLE protocol \\
 $\mathbf{F}$ & random variable for Alice's functions in the WOLE protocol \\
-
 $A'$ & dishonest Alice quantum system \\
 $B'$ & dishonest Bob quantum system \\
-$\Pi^n_{\textbf{RWOLE}}$ 
-$\Pi^n_{\textbf{WOLE}}$ 
-$\Pi_{\textbf{QOLE}}$ 
+$\Pi^n_{\textbf{RWOLE}}$ & RWOLE protocol \\
+$\Pi^n_{\textbf{WOLE}}$  & WOLE protocol \\
+$\Pi_{\textbf{EXT}}$ & extraction protocol \\
+\end{tabular}
+
+\noindent \begin{tabular}{p{2.95cm}p{12cm}}
+$\Pi_{\textbf{VEXT}}$ & vector extraction protocol \\
+$\Pi_{\textbf{QOLE}}$ & quantum OLE protocol \\
+$\Pi_{\textbf{QVOLE}}$ & quantum vector OLE protocol\\
 \tabstop
 
 

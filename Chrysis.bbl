@@ -250,25 +250,25 @@ Mirdit Doda, Marcus Huber, Gl\'aucia Murta, Matej Pivoluska, Martin Plesch, and
   subspace coding using high-dimensional entanglement.
 \newblock {\em Phys. Rev. Applied}, 15:034003, Mar 2021.
 
+\bibitem{SMV22}
+Manuel~B. Santos, Paulo Mateus, and Chrysoula Vlachou.
+\newblock Quantum universally composable oblivious linear evaluation, 2022.
+
 \bibitem{SMP22}
 Manuel~B. Santos, Paulo Mateus, and Armando~N. Pinto.
 \newblock Quantum oblivious transfer: A short review.
 \newblock {\em Entropy}, 24(7):945, July 2022.
-
-\bibitem{SPM21}
-Manuel~B. Santos, Armando~N. Pinto, and Paulo Mateus.
-\newblock Quantum and classical oblivious transfer: A comparative analysis.
-\newblock {\em {IET} Quantum Communication}, 2(2):42--53, May 2021.
-
-\bibitem{SMV22}
-Manuel~B. Santos, Paulo Mateus, and Chrysoula Vlachou.
-\newblock Quantum universally composable oblivious linear evaluation, 2022.
 
 \bibitem{SGPM22}
 Manuel~B. Santos, Ana~C. Gomes, Armando~N. Pinto, and Paulo Mateus.
 \newblock Private computation of phylogenetic trees based on quantum
   technologies.
 \newblock {\em {IEEE} Access}, 10:38065--38088, 2022.
+
+\bibitem{SPM21}
+Manuel~B. Santos, Armando~N. Pinto, and Paulo Mateus.
+\newblock Quantum and classical oblivious transfer: A comparative analysis.
+\newblock {\em {IET} Quantum Communication}, 2(2):42--53, May 2021.
 
 \bibitem{SGPM21}
 Manuel~B. Santos, Ana~C. Gomes, Armando~N. Pinto, and Paulo Mateus.
@@ -437,14 +437,18 @@ Elette Boyle, Geoffroy Couteau, Niv Gilboa, and Yuval Ishai.
 Carmit Hazay, Yuval Ishai, Antonio Marcedone, and Muthuramakrishnan
   Venkitasubramaniam.
 \newblock Leviosa: Lightweight secure arithmetic computation.
-\newblock CCS '19, page 327–344, New York, NY, USA, 2019. Association for
-  Computing Machinery.
+\newblock In {\em Proceedings of the 2019 ACM SIGSAC Conference on Computer and
+  Communications Security}, CCS '19, page 327–344, New York, NY, USA, 2019.
+  Association for Computing Machinery.
 
 \bibitem{CDIKLOV19}
 Melissa Chase, Yevgeniy Dodis, Yuval Ishai, Daniel Kraschewski, Tianren Liu,
   Rafail Ostrovsky, and Vinod Vaikuntanathan.
 \newblock Reusable non-interactive secure computation.
-\newblock 11694:462--488, 2019.
+\newblock In {\em Advances in Cryptology – CRYPTO 2019: 39th Annual
+  International Cryptology Conference, Santa Barbara, CA, USA, August 18–22,
+  2019, Proceedings, Part III}, page 462–488, Berlin, Heidelberg, 2019.
+  Springer-Verlag.
 
 \bibitem{GN19}
 Satrajit Ghosh and Tobias Nilges.
@@ -1172,7 +1176,8 @@ Donald Beaver.
 \bibitem{IKNP03}
 Yuval Ishai, Joe Kilian, Kobbi Nissim, and Erez Petrank.
 \newblock Extending oblivious transfers efficiently.
-\newblock 06 2003.
+\newblock In Dan Boneh, editor, {\em Advances in Cryptology - CRYPTO 2003},
+  pages 145--161, Berlin, Heidelberg, 2003. Springer Berlin Heidelberg.
 
 \bibitem{N07}
 Jesper Nielsen.
@@ -1181,9 +1186,12 @@ Jesper Nielsen.
 \newblock {\em IACR Cryptology ePrint Archive}, 2007:215, 01 2007.
 
 \bibitem{NNOB12}
-Jesper Nielsen, Peter Nordholt, Claudio Orlandi, and Sai Burra.
+Jesper~Buus Nielsen, Peter~Sebastian Nordholt, Claudio Orlandi, and
+  Sai~Sheshank Burra.
 \newblock A new approach to practical active-secure two-party computation.
-\newblock 8, 02 2012.
+\newblock In {\em Proceedings of the 32nd Annual Cryptology Conference on
+  Advances in Cryptology --- CRYPTO 2012 - Volume 7417}, page 681–700,
+  Berlin, Heidelberg, 2012. Springer-Verlag.
 
 \bibitem{ALSZ15}
 Gilad Asharov, Yehuda Lindell, Thomas Schneider, and Michael Zohner.
@@ -1202,8 +1210,9 @@ Christian Paquin, Douglas Stebila, and Goutam Tamvada.
 \bibitem{MR19}
 Daniel Mansy and Peter Rindal.
 \newblock Endemic oblivious transfer.
-\newblock CCS '19, page 309–326, New York, NY, USA, 2019. Association for
-  Computing Machinery.
+\newblock In {\em Proceedings of the 2019 ACM SIGSAC Conference on Computer and
+  Communications Security}, CCS '19, page 309–326, New York, NY, USA, 2019.
+  Association for Computing Machinery.
 
 \bibitem{CrystalKyber17}
 Roberto Avanzi, Joppe Bos, L{\'e}o Ducas, Eike Kiltz, Tancrede Lepoint, Vadim
@@ -1690,7 +1699,9 @@ Ivan Damg{\aa}rd, Helene Haagh, Michael Nielsen, and Claudio Orlandi.
 
 \bibitem{D21}
 Dimiter Ostrev.
-\newblock {\em arxiv}, 2109.06709.
+\newblock Qkd parameter estimation by two-universal hashing leads to faster
+  convergence to the asymptotic rate.
+\newblock {\em arxiv}, 2109.06709, 2021.
 
 \bibitem{CW79}
 J.~Lawrence Carter and Mark~N. Wegman.
