@@ -10,7 +10,7 @@
 The emerging fields of data mining and data analysis have deeply benefited from the increasing power of computers \cite{Wang11}. However, its need for a massive and methodical collection of data can lead to the complete or partial leak of private sensitive information, such as in the case of the genomics field \cite{NS08, L02, Homer08, Gymrek13}. As a consequence, the aggregation of data from different sources is most of the times blocked due to legally imposed regulations such as the General Data Protection Regulation (GDPR) \cite{EUdataregulations2016}. Although this has the benefit of protecting people's privacy, it also has the downside of preventing honest players from accessing data necessary to tackle some of the most important issues in our society. 
 
 %********************************** %First Section  **************************************
-\section*{Secure Multiparty Computation}
+\section*{Secure multiparty computation}
 
 
 To overcome the privacy-related issues described above, several privacy-enhancing technologies have been proposed \cite{Li2016, Armknecht2015, Yao82}. One important area of research is secure multiparty computation (SMC). This technology allows a set of $n$ parties $P_i$ to jointly compute some function $f( x_1, ..., x_n ) = (y_1, ..., y_n)$ without disclosing their inputs to the other parties. The security requirements of SMC are equivalent to an ideal case, where every party $P_i$ sends his inputs to some independent and trusted third party, who computes $f()$ and sends back to each party their corresponding output.
@@ -18,7 +18,7 @@ To overcome the privacy-related issues described above, several privacy-enhancin
 Since Yao seminal work \cite{Y86}, several SMC protocols have been developed, rendering different framework implementations \cite{Goldreich87, Bendlin11, D12}. However, they can generally be separated into two types according to the circuit logic being used: boolean or arithmetic. In each case, the efficiency and security of SMC heavily rely on the efficiency and security of important cryptographic primitives. Boolean-based SMC protocols rely on oblivious transfer (OT) \cite{K88} and arithmetic-based rely on oblivious linear evaluation (OLE) \cite{DPSZ12}. Impagliazzo and Rudich \cite{IR99} proved that both OT and OLE protocols require public cryptography and cannot just rely on symmetric cryptography. This is an unfortunate result both from an efficiency and security perspective. Indeed, symmetric cryptography is lighter than asymmetric cryptography and requires less computational assumptions. Moreover, with the emergence of quantum computers, Shor’s algorithm \cite{Sho95} jeopardizes all the current public-key methods based on RSA, Elliptic Curves or Diffie-Hellman, in which many OT and OLE implementations rely on. This puts at risk the deployment of classical OT and OLE, which ultimately leads to the exposure of the SMC parties’ private inputs. Thus, it is essential to develop SMC methods secure against quantum computers while not compromising state-of-the-art performance levels.
 
 
-\section*{A Quantum Era}
+\section*{A quantum era}
 
 We are now in the beginning of what is known to be
 the second quantum revolution. Quantum technology has evolved to a point where we can integrate quantum exotic features into complex engineering systems. Most of the applications lie in the field of quantum cryptography, where one thrives to find protocols that offer some advantage over their classical counterparts. As analysed in \cite{B15, PSAN13}, these advantages can be of two types:
@@ -32,7 +32,7 @@ Despite the most famous use-case of quantum cryptography being quantum key distr
 Also, the intrinsic randomness provided by quantum phenomena is an ideal resource to develop quantum communication protocols for oblivious transfer (OT) \cite{BBCS92}. Remarkably, there is a distinctive difference between classical and quantum OT from a security standpoint, as the latter is proved to be possible assuming only the existence of quantum-hard one-way functions \cite{GLSV21, BCKM21}. This means quantum OT can be based only on symmetric cryptography, requiring weaker security assumptions than classical OT. Moreover, these quantum protocols frequently have a desirable property that guarantees information-theoretic security after the execution of the protocol. This property is commonly called everlasting security. This greatly improves the security of SMC protocols, allowing them to have their security based on symmetric cryptography alone and with this important feature of everlasting security. Regarding oblivious linear evaluation (OLE) primitive, it is known that it can be reduced to OT \cite{KOS16} through classical methods that do not require further assumptions. Therefore, it seems natural to use quantum OT to generate quantum-secure OLE instances.
 
 
-\section*{Contributions and Outline} %Section - 1.2
+\section*{Contributions and outline} %Section - 1.2
 
 Despite the many advances, the adoption of quantum cryptography by secure multiparty computation (SMC) systems is still reduced. This is due to the efficiency challenges imposed by quantum technology and the need of high throughput of both OT and OLE primitives in boolean- and arithmetic-based SMC, respectively.
 
