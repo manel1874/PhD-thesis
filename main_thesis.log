@@ -1,0 +1,4266 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  23 NOV 2022 13:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main_thesis.tex
+(./main_thesis.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup4
+)
+(./Thesis_Preamble.tex
+(/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count176
+\Gm@cntv=\count177
+\c@Gm@tempcnt=\count178
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks16
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen143
+\captionmargin@=\dimen144
+\captionwidth=\dimen145
+\caption@tempdima=\dimen146
+\caption@indent=\dimen147
+\caption@parindent=\dimen148
+\caption@hangindent=\dimen149
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count179
+\c@continuedfloat=\count180
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip49
+\multirow@cntb=\count181
+\multirow@dima=\skip50
+\bigstrutjot=\dimen150
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box45
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen153
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen154
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count182
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count183
+\leftroot@=\count184
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count185
+\DOTSCASE@=\count186
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box46
+\strutbox@=\box47
+\big@size=\dimen155
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count187
+\c@MaxMatrixCols=\count188
+\dotsspace@=\muskip16
+\c@parentequation=\count189
+\dspbrk@lvl=\count190
+\tag@help=\toks18
+\row@=\count191
+\column@=\count192
+\maxfields@=\count193
+\andhelp@=\toks19
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks27
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count194
+\c@subtable=\count195
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box48
+\extrarowheight=\dimen163
+\NC@list=\toks28
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box49
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count196
+\rotFPtop=\skip59
+\rotFPbot=\skip60
+\rot@float@box=\box50
+\rot@mess@toks=\toks29
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen164
+\Hy@linkcounter=\count197
+\Hy@pagecounter=\count198
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count199
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count266
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen165
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count267
+\Field@Width=\dimen166
+\Fld@charsize=\dimen167
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count268
+\c@Item=\count269
+\c@Hfootnote=\count270
+)
+Package hyperref Info: Driver: hpdftex.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count271
+\c@bookmark@seq@number=\count272
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip61
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 392.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 392.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 392.
+
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 392
+.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/oberdiek/hypcap.sty
+Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip62
+\bibsep=\skip63
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count273
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen168
+\dashlinegap=\dimen169
+\adl@box=\box51
+\adl@height=\dimen170
+\adl@heightsave=\dimen171
+\adl@depth=\dimen172
+\adl@depthsave=\dimen173
+\adl@finaldepth=\dimen174
+\adl@columns=\count274
+\adl@ncol=\count275
+\adl@currentcolumn=\count276
+\adl@currentcolumnsave=\count277
+\adl@totalheight=\count278
+\adl@totalheightsave=\count279
+\adl@dash=\count280
+\adl@gap=\count281
+\adl@cla=\count282
+\adl@clb=\count283
+\adl@everyvbox=\toks30
+\adl@LTpagetotal=\dimen175
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(./bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/carlisle/slashed.sty
+Package: slashed 1997/01/16 v0.01 Feynman Slashed Character Notation (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+\c@theorem=\count284
+\c@corollary=\count285
+\c@lemma=\count286
+\c@definition=\count287
+\c@proposition=\count288
+\c@remark=\count289
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/braket/braket.sty)
+\c@protocol=\count290
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2019/11/15 version 4.22 text color boxes
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen176
+\pgfutil@tempdimb=\dimen177
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box52
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen178
+\pgf@y=\dimen179
+\pgf@xa=\dimen180
+\pgf@ya=\dimen181
+\pgf@xb=\dimen182
+\pgf@yb=\dimen183
+\pgf@xc=\dimen184
+\pgf@yc=\dimen185
+\pgf@xd=\dimen186
+\pgf@yd=\dimen187
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count291
+\c@pgf@countb=\count292
+\c@pgf@countc=\count293
+\c@pgf@countd=\count294
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count295
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count296
+\pgfsyssoftpath@bigbuffer@items=\count297
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen188
+\pgfmath@count=\count298
+\pgfmath@box=\box53
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count299
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen189
+\pgf@picmaxx=\dimen190
+\pgf@picminy=\dimen191
+\pgf@picmaxy=\dimen192
+\pgf@pathminx=\dimen193
+\pgf@pathmaxx=\dimen194
+\pgf@pathminy=\dimen195
+\pgf@pathmaxy=\dimen196
+\pgf@xx=\dimen197
+\pgf@xy=\dimen198
+\pgf@yx=\dimen199
+\pgf@yy=\dimen256
+\pgf@zx=\dimen257
+\pgf@zy=\dimen258
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen259
+\pgf@path@lasty=\dimen260
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen261
+\pgf@shorten@start@additional=\dimen262
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count300
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen263
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen264
+\pgf@pt@y=\dimen265
+\pgf@pt@temp=\dimen266
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen267
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen268
+\pgf@sys@shading@range@num=\count301
+\pgf@shadingcount=\count302
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box57
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box58
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen269
+\pgf@nodesepend=\dimen270
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks41
+\verbatim@line=\toks42
+\verbatim@in@stream=\read3
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count303
+)
+\tcb@titlebox=\box59
+\tcb@upperbox=\box60
+\tcb@lowerbox=\box61
+\tcb@phantombox=\box62
+\c@tcbbreakpart=\count304
+\c@tcblayer=\count305
+\tcolorbox@number=\count306
+\tcb@temp=\box63
+\tcb@temp=\box64
+\tcb@temp=\box65
+\tcb@temp=\box66
+\tcb@out=\write4
+\tcb@record@out=\write5
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '4.22'
+\c@tcbrastercolumn=\count307
+\c@tcbrasterrow=\count308
+\c@tcbraster=\count309
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen271
+\pgffor@skip=\dimen272
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count310
+\pgfplotmarksize=\dimen273
+)
+\tikz@lastx=\dimen274
+\tikz@lasty=\dimen275
+\tikz@lastxsaved=\dimen276
+\tikz@lastysaved=\dimen277
+\tikz@lastmovetox=\dimen278
+\tikz@lastmovetoy=\dimen279
+\tikzleveldistance=\dimen280
+\tikzsiblingdistance=\dimen281
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count311
+\tikznumberofchildren=\count312
+\tikznumberofcurrentchild=\count313
+\tikz@fig@count=\count314
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count315
+\pgfmatrixcurrentcolumn=\count316
+\pgf@matrix@numberofcolumns=\count317
+)
+\tikz@expandcount=\count318
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+\tcb@waterbox=\box71
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.22'
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.22'
+\tcb@testbox=\box72
+\tcb@totalupperbox=\box73
+\tcb@totallowerbox=\box74
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.22'
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.22'
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.22'
+\tcbfitdim=\dimen282
+\tcb@lowerfitdim=\dimen283
+\tcb@upperfitdim=\dimen284
+\tcb@cur@hbadness=\count319
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count320
+\l__pdf_internal_box=\box75
+))
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count321
+\g__xparse_grabber_int=\count322
+\l__xparse_m_args_int=\count323
+\l__xparse_v_nesting_int=\count324
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.te
+x
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count325
+\lst@gtempboxa=\box76
+\lst@token=\toks45
+\lst@length=\count326
+\lst@currlwidth=\dimen285
+\lst@column=\count327
+\lst@pos=\count328
+\lst@lostspace=\dimen286
+\lst@width=\dimen287
+\lst@newlines=\count329
+\lst@lineno=\count330
+\lst@maxwidth=\dimen288
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count331
+\lst@skipnumbers=\count332
+\lst@framebox=\box77
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '4.22'
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
+x
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+))
+\c@tcblisting=\count333
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '4.22'
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '4.22'
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '4.22'
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings
+.code.tex
+File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '4.22'
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen289
+\lightrulewidth=\dimen290
+\cmidrulewidth=\dimen291
+\belowrulesep=\dimen292
+\belowbottomsep=\dimen293
+\aboverulesep=\dimen294
+\abovetopsep=\dimen295
+\cmidrulesep=\dimen296
+\cmidrulekern=\dimen297
+\defaultaddspace=\dimen298
+\@cmidla=\count334
+\@cmidlb=\count335
+\@aboverulesep=\dimen299
+\@belowrulesep=\dimen300
+\@thisruleclass=\count336
+\@lastruleclass=\count337
+\@thisrulewidth=\dimen301
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/sttools/cuted.sty
+Package: cuted 2012/10/04 v1.5 Mixing onecolumn and twocolumn modes
+\At@ViperColsBreak=\toks46
+\v@aaa=\box78
+\v@ccc=\box79
+\lastskip@a=\skip64
+\lastskip@b=\skip65
+\lastskip@d=\skip66
+\lastbox@a=\box80
+\stripsep=\skip67
+\@viper=\box81
+\viper@penalty=\count338
+\hold@viper=\box82
+\ht@viper=\dimen302
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count339
+\c@@ppsavesec=\count340
+\c@@ppsaveapp=\count341
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/cryptocode/cryptocode.sty
+Package: cryptocode 2018/11/11 v0.3.0 Cryptocode LaTeX package for typesetting 
+pseudocode, algorithms and protocols as well as cryptographic proofs.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count342
+\calc@Bcount=\count343
+\calc@Adimen=\dimen303
+\calc@Bdimen=\dimen304
+\calc@Askip=\skip68
+\calc@Bskip=\skip69
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count344
+\calc@Cskip=\skip70
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count345
+\l_MT_multwidth_dim=\dimen305
+\origjot=\skip71
+\l_MT_shortvdotswithinadjustabove_dim=\dimen306
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen307
+\l_MT_above_intertext_sep=\dimen308
+\l_MT_below_intertext_sep=\dimen309
+\l_MT_above_shortintertext_sep=\dimen310
+\l_MT_below_shortintertext_sep=\dimen311
+\xmathstrut@box=\box83
+\xmathstrut@dim=\dimen312
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+
+
+Package etex Warning: Extended allocation already in use.
+(etex)                etex.sty code will not be used.
+(etex)                To force etex package to load, add
+(etex)                \RequirePackage{etex}
+(etex)                at the start of the document.
+
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks47
+\XKV@tempa@toks=\toks48
+)
+\XKV@depth=\count346
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\xargs@max=\count347
+\xargs@toksa=\toks49
+\xargs@toksb=\toks50
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/forloop/forloop.sty
+Package: forloop 2006/09/18 v3.0 For Loops for LaTeX
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pbox/pbox.sty
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
+\pb@xlen=\skip72
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box84
+\sift@deathcycles=\count348
+\@vwid@loff=\dimen313
+\@vwid@roff=\dimen314
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+\c@@pc@global@pc@cnt=\count349
+\c@@pc@global@pc@nestcnt=\count350
+\c@@spacecounter=\count351
+\c@pclinenumber=\count352
+\c@Hpclinenumber=\count353
+\c@@pclinenumber=\count354
+\c@H@pclinenumber=\count355
+\c@@pclinenumbertmp=\count356
+\c@pcgamecounter=\count357
+\c@Hpcgamecounter=\count358
+\c@pcrlinenumber=\count359
+\c@Hpcrlinenumber=\count360
+\c@@pcrlinenumbertmp=\count361
+\@pcindentwidth=\skip73
+\@pc@minipage@length=\skip74
+\@pc@alt@minipage@length=\skip75
+\@pc@length@tmp@width@vstack=\skip76
+\c@@pc@indentationlevel=\count362
+\c@pccolumncounter=\count363
+\c@@pc@remember=\count364
+\@bb@message@hoffset=\skip77
+\@bb@query@hoffset=\skip78
+\@bb@oraclequery@hoffset=\skip79
+\@bb@challengerquery@hoffset=\skip80
+\c@@bb@oracle@cnt=\count365
+\c@@bb@oracle@nestcnt=\count366
+\c@@bb@challenger@cnt=\count367
+\c@@bb@challenger@nestcnt=\count368
+\c@@bb@env@nestcnt=\count369
+\@bb@com@tmpoffset=\skip81
+\@bb@tmplength@b=\skip82
+\pcbeforehstackskip=\skip83
+\c@@pcsubprogcnt1=\count370
+\c@@pcrsubprogcnt1=\count371
+\c@@pcsubprogcnt2=\count372
+\c@@pcrsubprogcnt2=\count373
+\c@@pcsubprogcnt3=\count374
+\c@@pcrsubprogcnt3=\count375
+\c@@pcsubprogcnt4=\count376
+\c@@pcrsubprogcnt4=\count377
+\c@@pcsubprogcnt5=\count378
+\c@@pcrsubprogcnt5=\count379
+\c@@pcsubprogcnt6=\count380
+\c@@pcrsubprogcnt6=\count381
+\c@@pcsubprogcnt7=\count382
+\c@@pcrsubprogcnt7=\count383
+\c@@pcsubprogcnt8=\count384
+\c@@pcrsubprogcnt8=\count385
+\c@@pcsubprogcnt9=\count386
+\c@@pcrsubprogcnt9=\count387
+\c@@pcsubprogstep=\count388
+\pcmessagearrow=\skip84
+\c@pcstartgamecounter=\count389
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+\oversetwidth=\skip85
+\underwidth=\skip86
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip87
+\@affilsep=\skip88
+\c@Maxaffil=\count390
+\c@authors=\count391
+\c@affil=\count392
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip89
+\LTright=\skip90
+\LTpre=\skip91
+\LTpost=\skip92
+\LTchunksize=\count393
+\LTcapwidth=\dimen315
+\LT@head=\box85
+\LT@firsthead=\box86
+\LT@foot=\box87
+\LT@lastfoot=\box88
+\LT@cols=\count394
+\LT@rows=\count395
+\c@LT@tables=\count396
+\c@LT@chunks=\count397
+\LT@p@ftn=\toks51
+))
+(./main_thesis.aux (./Introduction/Introduction.aux)
+(./Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux)
+(./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux)
+(./Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObli
+viousTransfer.aux)
+(./Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.aux)
+(./Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousLinearEvalu
+ation.aux) (./Chapter_Conclusion/Chapter_Conclusion.aux)
+(./Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux))
+\openout1 = `main_thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: hypcap package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count398
+\scratchdimen=\dimen316
+\scratchbox=\box89
+\nofMPsegments=\count399
+\nofMParguments=\count400
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count401
+\MPscratchDim=\dimen317
+\MPnumerator=\count402
+\makeMPintoPDFobject=\count403
+\everyMPtoPDFconversion=\toks53
+)
+\AtBeginShipoutBox=\box90
+Package hyperref Info: Link coloring ON on input line 9.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count404
+)
+LaTeX Info: Redefining \ref on input line 9.
+LaTeX Info: Redefining \pageref on input line 9.
+LaTeX Info: Redefining \nameref on input line 9.
+ (./main_thesis.out) (./main_thesis.out)
+\@outlinefile=\write6
+\openout6 = `main_thesis.out'.
+
+
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count405
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks54
+\inpenc@posthook=\toks55
+)
+(./Thesis_FrontCover.tex
+<IST_A_CMYK_POS.pdf, id=396, 845.0471pt x 597.51233pt>
+File: IST_A_CMYK_POS.pdf Graphic file (type pdf)
+<use IST_A_CMYK_POS.pdf>
+Package pdftex.def Info: IST_A_CMYK_POS.pdf  used on input line 5.
+(pdftex.def)             Requested size: -78.38533pt x -74.25978pt.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 9.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 21.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 25.
+
+[1
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./IST_A
+_CMYK_POS.pdf>] [2
+
+]) (./abstract.tex
+Underfull \vbox (badness 5403) has occurred while \output is active []
+
+ [3
+
+]
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
+.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) (./resumo.tex
+[4]
+Underfull \vbox (badness 5403) has occurred while \output is active []
+
+ [5
+
+])
+(./acknowledgments.tex [6]) (./Thesis_Dedication.tex [7
+
+] [8
+
+]) [9] [10
+
+]
+(./main_thesis.toc [11] [12])
+\tf@toc=\write7
+\openout7 = `main_thesis.toc'.
+
+ [13] [14
+
+] (./main_thesis.lof
+
+Package natbib Warning: Citation `Kolesnikov2009' on page xv undefined on input
+ line 4.
+
+
+Package natbib Warning: Citation `BM89' on page xv undefined on input line 17.
+
+
+Package natbib Warning: Citation `ALSZ13' on page xv undefined on input line 21
+.
+
+
+Package natbib Warning: Citation `KOS15' on page xv undefined on input line 22.
+
+
+[15
+
+])
+\tf@lof=\write8
+\openout8 = `main_thesis.lof'.
+
+ [16] (./main_thesis.lot
+
+Package natbib Warning: Citation `ALSZ13' on page xvii undefined on input line 
+7.
+
+
+Package natbib Warning: Citation `ALSZ13' on page xvii undefined on input line 
+8.
+
+
+Package natbib Warning: Citation `KOS15' on page xvii undefined on input line 9
+.
+
+
+Package natbib Warning: Citation `KOS15' on page xvii undefined on input line 1
+0.
+
+)
+\tf@lot=\write9
+\openout9 = `main_thesis.lot'.
+
+ [17
+
+
+] [18
+
+] (./List_of_Abbreviations.tex
+
+Package natbib Warning: Citation `ALSZ13' on page xix undefined on input line 6
+.
+
+
+Package natbib Warning: Citation `BB84' on page xix undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `Bscher2018' on page xix undefined on input li
+ne 60.
+
+
+Package natbib Warning: Citation `KOS15' on page xix undefined on input line 66
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--144
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21])
+(./Notation.tex [22]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 40.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23
+
+]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
+7.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28]
+\openout2 = `Introduction/Introduction.aux'.
+
+ (./Introduction/Introduction.tex
+Chapter 1.
+
+Package natbib Warning: Citation `Wang11' on page 1 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `NS08' on page 1 undefined on input line 10.
+
+
+Package natbib Warning: Citation `L02' on page 1 undefined on input line 10.
+
+
+Package natbib Warning: Citation `Homer08' on page 1 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `Gymrek13' on page 1 undefined on input line 1
+0.
+
+
+Package natbib Warning: Citation `EUdataregulations2016' on page 1 undefined on
+ input line 10.
+
+
+Package natbib Warning: Citation `Li2016' on page 1 undefined on input line 16.
+
+
+
+Package natbib Warning: Citation `Armknecht2015' on page 1 undefined on input l
+ine 16.
+
+
+Package natbib Warning: Citation `Yao82' on page 1 undefined on input line 16.
+
+
+Package natbib Warning: Citation `Y86' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `Goldreich87' on page 1 undefined on input lin
+e 18.
+
+
+Package natbib Warning: Citation `Bendlin11' on page 1 undefined on input line 
+18.
+
+
+Package natbib Warning: Citation `D12' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `K88' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `DPSZ12' on page 1 undefined on input line 18.
+
+
+
+Package natbib Warning: Citation `IR99' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `Sho95' on page 1 undefined on input line 18.
+
+[1
+
+
+
+]
+
+Package natbib Warning: Citation `B15' on page 2 undefined on input line 24.
+
+
+Package natbib Warning: Citation `PSAN13' on page 2 undefined on input line 24.
+
+
+
+Package natbib Warning: Citation `CK11' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `CK09' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `BFK09' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `Unr14' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `DFSS14' on page 2 undefined on input line 30.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 2 undefined on input line 30
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 2 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `GLSV21' on page 2 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `BCKM21' on page 2 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `KOS16' on page 2 undefined on input line 32.
+
+[2] [3]
+
+Package natbib Warning: Citation `ALSZ13' on page 4 undefined on input line 49.
+
+
+
+Package natbib Warning: Citation `KOS15' on page 4 undefined on input line 49.
+
+
+Package natbib Warning: Citation `BPT00' on page 4 undefined on input line 53.
+
+
+Package natbib Warning: Citation `DEBZ10' on page 4 undefined on input line 53.
+
+
+
+Package natbib Warning: Citation `Zhongetal2015' on page 4 undefined on input l
+ine 53.
+
+
+Package natbib Warning: Citation `BHVBFHM18' on page 4 undefined on input line 
+53.
+
+
+Package natbib Warning: Citation `DHMPPV21' on page 4 undefined on input line 5
+3.
+
+
+Overfull \hbox (2.1999pt too wide) in paragraph at lines 62--63
+[]\OT1/cmr/m/n/12 We the-o-ret-i-cally eval-u-ate the per-for-mance and pri-vac
+y guar-an-tees of the sys-tem through
+ []
+
+[4]
+
+Package natbib Warning: Citation `SMV22' on page 5 undefined on input line 76.
+
+
+Overfull \hbox (27.10277pt too wide) in paragraph at lines 76--78
+\OT1/cmr/m/n/12 sally Com-pos-able Obliv-i-ous Lin-ear Eval-u-a-tion. 2022. DOI
+: 10.48550/ARXIV.2204.14171.
+ []
+
+
+Package natbib Warning: Citation `SMP22' on page 5 undefined on input line 79.
+
+
+Package natbib Warning: Citation `SGPM22' on page 5 undefined on input line 82.
+
+
+
+Package natbib Warning: Citation `SPM21' on page 5 undefined on input line 85.
+
+
+Package natbib Warning: Citation `SGPM21' on page 5 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `POS+20' on page 5 undefined on input line 90.
+
+
+[5]
+
+Package natbib Warning: Citation `SMP22' on page 6 undefined on input line 95.
+
+
+Package natbib Warning: Citation `SGPM22' on page 6 undefined on input line 95.
+
+
+
+Package natbib Warning: Citation `SPM21' on page 6 undefined on input line 95.
+
+
+Package natbib Warning: Citation `SGPM22' on page 6 undefined on input line 95.
+
+
+
+Package natbib Warning: Citation `SGPM22' on page 6 undefined on input line 95.
+
+
+
+Package natbib Warning: Citation `SGPM21' on page 6 undefined on input line 95.
+
+
+
+Package natbib Warning: Citation `POS+20' on page 6 undefined on input line 95.
+
+
+
+Package natbib Warning: Citation `SMV22' on page 6 undefined on input line 95.
+
+) [6]
+\openout2 = `Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux'.
+
+ (./Chapter_TechnicalOverview/Chapter_TechnicalOverview.tex
+Chapter 2.
+
+Overfull \hbox (1.88725pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/n/12 In this chap-ter, the ba-sic math-e-mat-i-cal and information-t
+heoretical con-cepts used through-
+ []
+
+
+Underfull \vbox (badness 1117) has occurred while \output is active []
+
+ [7
+
+
+
+]
+[8]
+
+Package natbib Warning: Citation `Yao82' on page 9 undefined on input line 44.
+
+
+Package natbib Warning: Citation `BGW88' on page 9 undefined on input line 44.
+
+
+Package natbib Warning: Citation `CCD88' on page 9 undefined on input line 44.
+
+
+Package natbib Warning: Citation `Yao82' on page 9 undefined on input line 48.
+
+
+Package natbib Warning: Citation `PWM+20' on page 9 undefined on input line 48.
+
+
+
+Package natbib Warning: Citation `Rabin81' on page 9 undefined on input line 54
+.
+
+
+Package natbib Warning: Citation `Y86' on page 9 undefined on input line 54.
+
+
+Package natbib Warning: Citation `K88' on page 9 undefined on input line 54.
+
+
+Package natbib Warning: Citation `KOS16' on page 9 undefined on input line 54.
+
+
+Package natbib Warning: Citation `Che04' on page 9 undefined on input line 54.
+
+
+Package natbib Warning: Citation `MEP17' on page 9 undefined on input line 54.
+
+
+Package natbib Warning: Citation `BHM+19' on page 9 undefined on input line 54.
+
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9]
+
+Package natbib Warning: Citation `Yao82' on page 10 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `Goldreich87' on page 10 undefined on input li
+ne 88.
+
+
+Package natbib Warning: Citation `BMR90' on page 10 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `BMR90' on page 10 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `NPS99' on page 10 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `Pinkas2009' on page 10 undefined on input lin
+e 88.
+
+
+Package natbib Warning: Citation `Kolesnikov2005' on page 10 undefined on input
+ line 88.
+
+
+Package natbib Warning: Citation `Zahur2015' on page 10 undefined on input line
+ 88.
+
+[10]
+<Chapter_TechnicalOverview/booleanCircuit.png, id=844, 884.30376pt x 520.94624p
+t>
+File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
+<use Chapter_TechnicalOverview/booleanCircuit.png>
+Package pdftex.def Info: Chapter_TechnicalOverview/booleanCircuit.png  used on 
+input line 107.
+(pdftex.def)             Requested size: 265.29317pt x 156.28508pt.
+
+
+Package natbib Warning: Citation `Kolesnikov2009' on page 11 undefined on input
+ line 109.
+
+
+Package natbib Warning: Citation `Kolesnikov2009' on page 11 undefined on input
+ line 109.
+
+[11 <./Chapter_TechnicalOverview/booleanCircuit.png>]
+
+Package natbib Warning: Citation `IR89' on page 12 undefined on input line 153.
+
+
+[12]
+
+Package natbib Warning: Citation `BGW88' on page 13 undefined on input line 169
+.
+
+
+Package natbib Warning: Citation `CCD88' on page 13 undefined on input line 169
+.
+
+
+Package natbib Warning: Citation `Rabin81' on page 13 undefined on input line 1
+73.
+
+
+Package natbib Warning: Citation `K88' on page 13 undefined on input line 173.
+
+
+Package natbib Warning: Citation `AIK11' on page 13 undefined on input line 173
+.
+
+
+Package natbib Warning: Citation `DKMQ12' on page 13 undefined on input line 17
+3.
+
+
+Package natbib Warning: Citation `GNN17' on page 13 undefined on input line 173
+.
+
+
+Package natbib Warning: Citation `DGNBNT17' on page 13 undefined on input line 
+173.
+
+
+Package natbib Warning: Citation `GMW87' on page 13 undefined on input line 173
+.
+
+
+Package natbib Warning: Citation `DGNBNT17' on page 13 undefined on input line 
+173.
+
+
+Package natbib Warning: Citation `IPS09' on page 13 undefined on input line 173
+.
+
+
+Package natbib Warning: Citation `ADINZ17' on page 13 undefined on input line 1
+73.
+
+
+Package natbib Warning: Citation `BCGI18' on page 13 undefined on input line 17
+3.
+
+
+Package natbib Warning: Citation `HIMV19' on page 13 undefined on input line 17
+3.
+
+
+Package natbib Warning: Citation `CDIKLOV19' on page 13 undefined on input line
+ 173.
+
+
+Package natbib Warning: Citation `GN19' on page 13 undefined on input line 173.
+
+
+[13]
+
+Package natbib Warning: Citation `Evans2018' on page 14 undefined on input line
+ 229.
+
+[14] [15]
+
+Package natbib Warning: Citation `U17' on page 16 undefined on input line 266.
+
+
+Package natbib Warning: Citation `U17' on page 16 undefined on input line 281.
+
+[16]
+
+Package natbib Warning: Citation `LPTRG13' on page 17 undefined on input line 2
+99.
+
+
+Package natbib Warning: Citation `S48' on page 17 undefined on input line 308.
+
+[17]
+
+Package natbib Warning: Citation `V10' on page 18 undefined on input line 325.
+
+[18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Overfull \hbox (11.46487pt too wide) in paragraph at lines 392--393
+\OT1/cmr/m/n/12 bi-trary co-ef-fi-cients $\OML/cmm/m/it/12 []$\OT1/cmr/m/n/12 
+. We de-fine $\OML/cmm/m/it/12 ^^Z[] \OT1/cmr/m/n/12 = [][]$ and the mix-ture $
+[] = [][] \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 []\OMS/cmsy/m/n/12 j[] [] 
+
+ []
+
+
+Package natbib Warning: Citation `R06' on page 20 undefined on input line 394.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 20 undefined on input lin
+e 402.
+
+
+Package natbib Warning: Citation `R06' on page 20 undefined on input line 408.
+
+[20]
+
+Package natbib Warning: Citation `Dupuis2015' on page 21 undefined on input lin
+e 420.
+
+
+Overfull \hbox (1.20277pt too wide) in paragraph at lines 419--421
+\OT1/cmr/m/n/12 This fol-lows from the def-i-ni-tion of the col-li-sion en-trop
+y and the fact that $[][] [] =
+ []
+
+
+Package natbib Warning: Citation `MDSFT13' on page 21 undefined on input line 4
+28.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 21 undefined on input lin
+e 437.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 21 undefined on input lin
+e 443.
+
+
+Package natbib Warning: Citation `T16' on page 21 undefined on input line 451.
+
+[21]
+
+Package natbib Warning: Citation `HK97' on page 22 undefined on input line 465.
+
+
+
+Package natbib Warning: Citation `HK97' on page 22 undefined on input line 466.
+
+
+
+Package natbib Warning: Citation `HK97' on page 22 undefined on input line 476.
+
+
+
+Package natbib Warning: Citation `HK97' on page 22 undefined on input line 479.
+
+
+
+Package natbib Warning: Citation `TSSR11' on page 22 undefined on input line 48
+1.
+
+
+Package natbib Warning: Citation `TSSR11' on page 22 undefined on input line 48
+1.
+
+[22]
+
+Package natbib Warning: Citation `TSSR11' on page 23 undefined on input line 48
+5.
+
+
+Package natbib Warning: Citation `C20' on page 23 undefined on input line 497.
+
+
+Package natbib Warning: Citation `Unruh04' on page 23 undefined on input line 4
+97.
+
+
+Package natbib Warning: Citation `BenOrMay04' on page 23 undefined on input lin
+e 497.
+
+
+Package natbib Warning: Citation `Unruh10' on page 23 undefined on input line 4
+97.
+
+
+Package natbib Warning: Citation `FS09' on page 23 undefined on input line 497.
+
+
+[23]
+
+Package natbib Warning: Citation `Unruh10' on page 24 undefined on input line 5
+05.
+
+
+Package natbib Warning: Citation `CF01' on page 24 undefined on input line 551.
+
+
+
+Package natbib Warning: Citation `CBGLM21' on page 24 undefined on input line 5
+51.
+
+
+Package natbib Warning: Citation `Unruh10' on page 24 undefined on input line 5
+51.
+
+[24]) [25]
+\openout2 = `Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.
+aux'.
+
+
+(./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.tex
+[26
+
+
+
+]
+Chapter 3.
+
+Package natbib Warning: Citation `YAVV22' on page 27 undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `IR89' on page 27 undefined on input line 12.
+
+
+Package natbib Warning: Citation `GKMRV00' on page 27 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `EGL85' on page 27 undefined on input line 12.
+
+
+
+Package natbib Warning: Citation `NP01' on page 27 undefined on input line 12.
+
+
+Package natbib Warning: Citation `CO15' on page 27 undefined on input line 12.
+
+
+Package natbib Warning: Citation `Sho95' on page 27 undefined on input line 12.
+
+
+
+Package natbib Warning: Citation `Rabin81' on page 27 undefined on input line 1
+4.
+
+
+Package natbib Warning: Citation `BBCS92' on page 27 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `GLSV21' on page 27 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `BCKM21' on page 27 undefined on input line 14
+.
+
+
+Underfull \vbox (badness 3179) has occurred while \output is active []
+
+ [27]
+
+Package natbib Warning: Citation `BC96' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `B05' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `M06' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `F10' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `B15' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `PAB+20' on page 28 undefined on input line 16
+.
+
+
+Package natbib Warning: Citation `PR21' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `SH22' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `BBCS92' on page 28 undefined on input line 23
+.
+
+
+Package natbib Warning: Citation `K88' on page 28 undefined on input line 23.
+
+
+Package natbib Warning: Citation `S99' on page 28 undefined on input line 23.
+
+
+Package natbib Warning: Citation `Y95' on page 28 undefined on input line 23.
+
+
+Package natbib Warning: Citation `BBCS92' on page 28 undefined on input line 23
+.
+
+
+Package natbib Warning: Citation `BCJL93' on page 28 undefined on input line 25
+.
+
+
+Package natbib Warning: Citation `M96' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `LC97' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `M97' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `BC96' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `LC97' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `M97' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `L97' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `C07' on page 28 undefined on input line 25.
+
+
+Package natbib Warning: Citation `BCS12' on page 28 undefined on input line 25.
+
+
+
+Package natbib Warning: Citation `SSS14' on page 28 undefined on input line 25.
+
+
+
+Package natbib Warning: Citation `SJFHV13' on page 28 undefined on input line 2
+5.
+
+
+Package natbib Warning: Citation `BCMS97' on page 28 undefined on input line 25
+.
+
+
+Package natbib Warning: Citation `S99' on page 28 undefined on input line 25.
+
+[28]
+
+Package natbib Warning: Citation `Y00' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `Y02' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `Y04' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `C03' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `Y00' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `B01' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `C05' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `Che07' on page 29 undefined on input line 27.
+
+
+
+Package natbib Warning: Citation `A07' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `A07' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `CAP10' on page 29 undefined on input line 27.
+
+
+
+Package natbib Warning: Citation `CAPSW13' on page 29 undefined on input line 2
+7.
+
+
+Package natbib Warning: Citation `H13' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `K12' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `SHW20' on page 29 undefined on input line 27.
+
+
+
+Package natbib Warning: Citation `BK22' on page 29 undefined on input line 27.
+
+
+Package natbib Warning: Citation `LC97' on page 29 undefined on input line 42.
+
+
+Package natbib Warning: Citation `M97' on page 29 undefined on input line 42.
+
+
+Package natbib Warning: Citation `BCKM21' on page 29 undefined on input line 42
+.
+
+
+Package natbib Warning: Citation `GLSV21' on page 29 undefined on input line 42
+.
+
+
+Package natbib Warning: Citation `A02' on page 29 undefined on input line 42.
+
+
+Package natbib Warning: Citation `DFSS05' on page 29 undefined on input line 42
+.
+
+
+Package natbib Warning: Citation `WST08' on page 29 undefined on input line 42.
+
+
+
+Package natbib Warning: Citation `KWW12' on page 29 undefined on input line 42.
+
+
+
+Package natbib Warning: Citation `L14' on page 29 undefined on input line 42.
+
+
+Package natbib Warning: Citation `Pit16' on page 29 undefined on input line 42.
+
+
+
+Package natbib Warning: Citation `Ken11' on page 29 undefined on input line 42.
+
+
+
+Package natbib Warning: Citation `U18' on page 29 undefined on input line 42.
+
+[29]
+
+Package natbib Warning: Citation `W83' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `BB84' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `BBBW83' on page 30 undefined on input line 48
+.
+
+
+Package natbib Warning: Citation `DFSS14' on page 30 undefined on input line 48
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 30 undefined on input line 48
+.
+
+
+Package natbib Warning: Citation `BBBW83' on page 30 undefined on input line 48
+.
+
+
+Package natbib Warning: Citation `BBB14' on page 30 undefined on input line 48.
+
+
+
+Package natbib Warning: Citation `S99' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `BBCS92' on page 30 undefined on input line 59
+.
+
+[30]
+
+Package natbib Warning: Citation `FS09' on page 31 undefined on input line 117.
+
+
+
+Package natbib Warning: Citation `JSGBBWZ11' on page 31 undefined on input line
+ 117.
+
+
+Package natbib Warning: Citation `Lemus20' on page 31 undefined on input line 1
+17.
+
+[31]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+
+Package natbib Warning: Citation `KWW12' on page 32 undefined on input line 134
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 32 undefined on input line 13
+8.
+
+[32]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 141.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 141.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 141.
+
+
+Package natbib Warning: Citation `BBCS92' on page 33 undefined on input line 14
+3.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `CK88' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `BBCS92' on page 33 undefined on input line 19
+9.
+
+
+Package natbib Warning: Citation `MS94' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `Y95' on page 33 undefined on input line 199.
+
+
+Package natbib Warning: Citation `M96b' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `CDMS04' on page 33 undefined on input line 19
+9.
+
+
+Package natbib Warning: Citation `FS09' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 33 undefined on input line 1
+99.
+
+
+Package natbib Warning: Citation `U10' on page 33 undefined on input line 199.
+
+
+Package natbib Warning: Citation `BF10' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `GLSV21' on page 33 undefined on input line 19
+9.
+
+
+Package natbib Warning: Citation `BCKM21' on page 33 undefined on input line 19
+9.
+
+
+Package natbib Warning: Citation `MS94' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `Y95' on page 33 undefined on input line 199.
+
+
+Package natbib Warning: Citation `MS94' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `Y95' on page 33 undefined on input line 199.
+
+
+Package natbib Warning: Citation `M96b' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `FS09' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `U10' on page 33 undefined on input line 199.
+
+
+Package natbib Warning: Citation `FS09' on page 33 undefined on input line 199.
+
+
+
+Package natbib Warning: Citation `U10' on page 33 undefined on input line 199.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 33 undefined on input line 1
+99.
+
+
+Package natbib Warning: Citation `KWW12' on page 33 undefined on input line 199
+.
+
+
+Package natbib Warning: Citation `BCC+10' on page 33 undefined on input line 19
+9.
+
+
+Package natbib Warning: Citation `TR11' on page 33 undefined on input line 199.
+
+
+[33]
+
+Package natbib Warning: Citation `R06' on page 34 undefined on input line 201.
+
+
+Package natbib Warning: Citation `DFRSS07' on page 34 undefined on input line 2
+01.
+
+
+Package natbib Warning: Citation `BCC+10' on page 34 undefined on input line 20
+1.
+
+
+Package natbib Warning: Citation `TR11' on page 34 undefined on input line 201.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 34 undefined on input line 2
+04.
+
+
+Package natbib Warning: Citation `FS09' on page 34 undefined on input line 204.
+
+
+
+Package natbib Warning: Citation `DFRSS07' on page 34 undefined on input line 2
+04.
+
+
+Package natbib Warning: Citation `RK05' on page 34 undefined on input line 204.
+
+
+
+Package natbib Warning: Citation `R05' on page 34 undefined on input line 204.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 34 undefined on input line 2
+04.
+
+
+Package natbib Warning: Citation `U10' on page 34 undefined on input line 204.
+
+
+Underfull \vbox (badness 1648) has occurred while \output is active []
+
+ [34]
+
+Package natbib Warning: Citation `A02' on page 35 undefined on input line 212.
+
+
+Package natbib Warning: Citation `N91' on page 35 undefined on input line 212.
+
+
+Package natbib Warning: Citation `HILL99' on page 35 undefined on input line 21
+2.
+
+
+Package natbib Warning: Citation `HR07' on page 35 undefined on input line 212.
+
+
+
+Package natbib Warning: Citation `GLSV21' on page 35 undefined on input line 21
+2.
+
+
+Package natbib Warning: Citation `BCKM21' on page 35 undefined on input line 21
+7.
+
+
+Package natbib Warning: Citation `GLSV21' on page 35 undefined on input line 21
+7.
+
+
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+ [35]
+
+Package natbib Warning: Citation `U10' on page 36 undefined on input line 218.
+
+
+Package natbib Warning: Citation `CF01' on page 36 undefined on input line 218.
+
+
+
+Package natbib Warning: Citation `U11' on page 36 undefined on input line 219.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 36 undefined on input line 2
+20.
+
+
+Package natbib Warning: Citation `Y86' on page 36 undefined on input line 225.
+
+
+Package natbib Warning: Citation `MR09' on page 36 undefined on input line 225.
+
+
+
+Package natbib Warning: Citation `MR09' on page 36 undefined on input line 227.
+
+
+
+Package natbib Warning: Citation `FS09' on page 36 undefined on input line 227.
+
+
+
+Package natbib Warning: Citation `BM04' on page 36 undefined on input line 227.
+
+
+
+Package natbib Warning: Citation `U04' on page 36 undefined on input line 227.
+
+
+Package natbib Warning: Citation `U10' on page 36 undefined on input line 227.
+
+
+Package natbib Warning: Citation `C20' on page 36 undefined on input line 227.
+
+
+Package natbib Warning: Citation `MR11' on page 36 undefined on input line 227.
+
+
+
+Package natbib Warning: Citation `BK22' on page 36 undefined on input line 227.
+
+
+
+Package natbib Warning: Citation `FS09' on page 36 undefined on input line 227.
+
+
+
+Package natbib Warning: Citation `DFLSS09' on page 36 undefined on input line 2
+27.
+
+
+Package natbib Warning: Citation `U10' on page 36 undefined on input line 227.
+
+
+Package natbib Warning: Citation `DFSS05' on page 36 undefined on input line 23
+3.
+
+
+Package natbib Warning: Citation `WST08' on page 36 undefined on input line 233
+.
+
+[36] [37]
+
+Package natbib Warning: Citation `DFRSS07' on page 38 undefined on input line 2
+97.
+
+
+Package natbib Warning: Citation `F10' on page 38 undefined on input line 297.
+
+
+Package natbib Warning: Citation `KWW12' on page 38 undefined on input line 303
+.
+
+
+Package natbib Warning: Citation `MW11' on page 38 undefined on input line 303.
+
+
+
+Package natbib Warning: Citation `DFSS05' on page 38 undefined on input line 30
+7.
+
+
+Package natbib Warning: Citation `DFRSS07' on page 38 undefined on input line 3
+07.
+
+
+Package natbib Warning: Citation `WW08' on page 38 undefined on input line 307.
+
+
+
+Package natbib Warning: Citation `WW08' on page 38 undefined on input line 307.
+
+
+
+Package natbib Warning: Citation `U11' on page 38 undefined on input line 309.
+
+
+Package natbib Warning: Citation `KWW12' on page 38 undefined on input line 315
+.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+
+Package natbib Warning: Citation `S10' on page 39 undefined on input line 319.
+
+
+Package natbib Warning: Citation `KWW12' on page 39 undefined on input line 319
+.
+
+
+Package natbib Warning: Citation `WST08' on page 39 undefined on input line 319
+.
+
+
+Package natbib Warning: Citation `S10' on page 39 undefined on input line 330.
+
+
+Package natbib Warning: Citation `KWW12' on page 39 undefined on input line 330
+.
+
+
+Package natbib Warning: Citation `CCM98' on page 39 undefined on input line 330
+.
+
+
+Package natbib Warning: Citation `DHRS04' on page 39 undefined on input line 33
+0.
+
+
+Package natbib Warning: Citation `S07' on page 39 undefined on input line 330.
+
+
+Package natbib Warning: Citation `CCM98' on page 39 undefined on input line 330
+.
+
+
+Package natbib Warning: Citation `DHRS04' on page 39 undefined on input line 33
+0.
+
+
+Package natbib Warning: Citation `S07' on page 39 undefined on input line 330.
+
+
+Package natbib Warning: Citation `KWW12' on page 39 undefined on input line 330
+.
+
+
+Package natbib Warning: Citation `KWW12' on page 39 undefined on input line 339
+.
+
+
+Package natbib Warning: Citation `DHRS04' on page 39 undefined on input line 33
+9.
+
+
+Package natbib Warning: Citation `S07' on page 39 undefined on input line 339.
+
+[39]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `WST08' on page 40 undefined on input line 413
+.
+
+
+Package natbib Warning: Citation `STW09' on page 40 undefined on input line 413
+.
+
+
+Package natbib Warning: Citation `S10' on page 40 undefined on input line 413.
+
+
+Package natbib Warning: Citation `KWW12' on page 40 undefined on input line 413
+.
+
+
+Package natbib Warning: Citation `KWW12' on page 40 undefined on input line 415
+.
+
+
+Package natbib Warning: Citation `KWW12' on page 40 undefined on input line 427
+.
+
+
+Package natbib Warning: Citation `LCT14' on page 40 undefined on input line 437
+.
+
+
+Package natbib Warning: Citation `Pirandola2020' on page 40 undefined on input 
+line 437.
+
+[40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+
+Package natbib Warning: Citation `MH05' on page 42 undefined on input line 443.
+
+
+
+Package natbib Warning: Citation `GFKZR06' on page 42 undefined on input line 4
+43.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `JSKEML16' on page 42 undefined on input line 
+484.
+
+[42]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43]
+
+Package natbib Warning: Citation `JSKEML16' on page 44 undefined on input line 
+576.
+
+[44]
+
+Package natbib Warning: Citation `JBI+16' on page 45 undefined on input line 57
+8.
+
+
+Package natbib Warning: Citation `MY04' on page 45 undefined on input line 578.
+
+
+
+Package natbib Warning: Citation `E91' on page 45 undefined on input line 578.
+
+
+Package natbib Warning: Citation `KW16' on page 45 undefined on input line 582.
+
+
+
+Package natbib Warning: Citation `KW16' on page 45 undefined on input line 582.
+
+
+
+Package natbib Warning: Citation `RTK+18' on page 45 undefined on input line 58
+2.
+
+
+Package natbib Warning: Citation `KWW12' on page 45 undefined on input line 584
+.
+
+
+Package natbib Warning: Citation `AGM06' on page 45 undefined on input line 586
+.
+
+
+Package natbib Warning: Citation `CHSH69' on page 45 undefined on input line 58
+6.
+
+
+Underfull \vbox (badness 1412) has occurred while \output is active []
+
+ [45]
+
+Package natbib Warning: Citation `BY21' on page 46 undefined on input line 591.
+
+
+
+Package natbib Warning: Citation `BY21' on page 46 undefined on input line 591.
+
+
+
+Package natbib Warning: Citation `MDC+21' on page 46 undefined on input line 59
+1.
+
+
+Package natbib Warning: Citation `MV21' on page 46 undefined on input line 591.
+
+
+
+Package natbib Warning: Citation `P15' on page 46 undefined on input line 591.
+
+
+Package natbib Warning: Citation `RW20' on page 46 undefined on input line 595.
+
+
+
+Package natbib Warning: Citation `RW20' on page 46 undefined on input line 595.
+
+
+
+Package natbib Warning: Citation `LCQ12' on page 46 undefined on input line 595
+.
+
+
+Package natbib Warning: Citation `MDR+19' on page 46 undefined on input line 59
+5.
+
+
+Package natbib Warning: Citation `SRK+15' on page 46 undefined on input line 59
+5.
+
+
+Package natbib Warning: Citation `KWW12' on page 46 undefined on input line 595
+.
+
+
+Package natbib Warning: Citation `ZGG+20' on page 46 undefined on input line 59
+7.
+
+) [46]
+\openout2 = `Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndCla
+ssicalObliviousTransfer.aux'.
+
+
+(./Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObli
+viousTransfer.tex
+Chapter 4.
+
+Package natbib Warning: Citation `BM89' on page 47 undefined on input line 18.
+
+
+Package natbib Warning: Citation `EGL85' on page 47 undefined on input line 18.
+
+
+
+Package natbib Warning: Citation `NP01' on page 47 undefined on input line 18.
+
+
+Package natbib Warning: Citation `CO15' on page 47 undefined on input line 18.
+
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [47
+
+
+
+]
+
+Package natbib Warning: Citation `BM89' on page 48 undefined on input line 59.
+
+
+Package natbib Warning: Citation `BM89' on page 48 undefined on input line 59.
+
+
+Underfull \vbox (badness 4084) has occurred while \output is active []
+
+ [48]
+
+Package natbib Warning: Citation `PH78' on page 49 undefined on input line 69.
+
+
+Package natbib Warning: Citation `S71' on page 49 undefined on input line 69.
+
+
+Package natbib Warning: Citation `P78' on page 49 undefined on input line 69.
+
+
+Package natbib Warning: Citation `P78' on page 49 undefined on input line 69.
+
+
+Package natbib Warning: Citation `ABDGGHHSTVVWZZ15' on page 49 undefined on inp
+ut line 69.
+
+
+Package natbib Warning: Citation `Yao82' on page 49 undefined on input line 69.
+
+
+
+Package natbib Warning: Citation `Sho95' on page 49 undefined on input line 71.
+
+
+[49]
+
+Package natbib Warning: Citation `Bernstein2017' on page 50 undefined on input 
+line 88.
+
+
+Package natbib Warning: Citation `Pirandola20' on page 50 undefined on input li
+ne 88.
+
+[50]
+
+Package natbib Warning: Citation `MVV01' on page 51 undefined on input line 112
+.
+
+
+Package natbib Warning: Citation `G11' on page 51 undefined on input line 120.
+
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1150, 462.5
+28pt x 346.896pt>
+File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
+le (type png)
+<use Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>
+Package pdftex.def Info: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSec
+cond.png  used on input line 123.
+(pdftex.def)             Requested size: 455.24411pt x 341.44843pt.
+
+Package natbib Warning: Citation `ALSZ13' on page 51 undefined on input line 12
+7.
+
+
+Package natbib Warning: Citation `NP01' on page 51 undefined on input line 127.
+
+
+[51]
+
+Package natbib Warning: Citation `Yao82' on page 52 undefined on input line 129
+.
+
+
+Package natbib Warning: Citation `Bernstein2017' on page 52 undefined on input 
+line 133.
+
+
+Package natbib Warning: Citation `IR99' on page 52 undefined on input line 133.
+
+
+
+Underfull \vbox (badness 1609) has occurred while \output is active []
+
+ [52 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>]
+
+Package natbib Warning: Citation `B96' on page 53 undefined on input line 135.
+
+
+Package natbib Warning: Citation `IKNP03' on page 53 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `N07' on page 53 undefined on input line 135.
+
+
+Package natbib Warning: Citation `NNOB12' on page 53 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 53 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 53 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 53 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 53 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 53 undefined on input line 13
+5.
+
+
+Package natbib Warning: Citation `KOS15' on page 53 undefined on input line 135
+.
+
+[53]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `Lemus20' on page 54 undefined on input line 2
+33.
+
+
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+
+Package natbib Warning: Citation `EGL85' on page 56 undefined on input line 245
+.
+
+
+Package natbib Warning: Citation `BM89' on page 56 undefined on input line 246.
+
+
+
+Package natbib Warning: Citation `NP01' on page 56 undefined on input line 247.
+
+
+
+Package natbib Warning: Citation `CO15' on page 56 undefined on input line 248.
+
+
+
+Package natbib Warning: Citation `CO15' on page 56 undefined on input line 255.
+
+
+
+Package natbib Warning: Citation `PST19' on page 56 undefined on input line 259
+.
+
+
+Package natbib Warning: Citation `MR19' on page 56 undefined on input line 259.
+
+
+
+Package natbib Warning: Citation `CrystalKyber17' on page 56 undefined on input
+ line 259.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 56 undefined on input line 25
+9.
+
+
+Package natbib Warning: Citation `NP01' on page 56 undefined on input line 259.
+
+
+
+Package natbib Warning: Citation `NTRUOT1' on page 56 undefined on input line 2
+59.
+
+
+Package natbib Warning: Citation `NTRUOT2' on page 56 undefined on input line 2
+59.
+
+
+Package natbib Warning: Citation `NTRU' on page 56 undefined on input line 259.
+
+
+
+Package natbib Warning: Citation `CO15' on page 56 undefined on input line 259.
+
+
+
+Underfull \vbox (badness 1259) has occurred while \output is active []
+
+ [56]
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 27
+6.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 30
+7.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 30
+7.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 31
+1.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 57 undefined on input line 31
+3.
+
+[57]
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [58]
+
+Package natbib Warning: Citation `ALSZ13' on page 59 undefined on input line 33
+4.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 59 undefined on input line 33
+4.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 59 undefined on input line 34
+7.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 59 undefined on input line 34
+7.
+
+[59]
+
+Package natbib Warning: Citation `IKNP03' on page 60 undefined on input line 37
+1.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 371
+.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 60 undefined on input line 37
+1.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 371
+.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 60 undefined on input line 37
+1.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 371
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 384
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 431
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 431
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 451
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 451
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 464
+.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 464
+.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `KOS15' on page 60 undefined on input line 468
+.
+
+[60] [61]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 480.
+
+[62]
+
+Package natbib Warning: Citation `Lemus20' on page 63 undefined on input line 4
+90.
+
+
+Package natbib Warning: Citation `BCKM21' on page 63 undefined on input line 49
+0.
+
+
+Package natbib Warning: Citation `GLSV21' on page 63 undefined on input line 49
+0.
+
+
+Package natbib Warning: Citation `U10' on page 63 undefined on input line 490.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 63 undefined on input line 49
+2.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 63 undefined on input line 49
+2.
+
+
+Package natbib Warning: Citation `KOS15' on page 63 undefined on input line 492
+.
+
+[63]) [64]
+\openout2 = `Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.
+aux'.
+
+
+(./Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.tex
+Chapter 5.
+
+Package natbib Warning: Citation `Li2016' on page 65 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `Armknecht2015' on page 65 undefined on input 
+line 10.
+
+
+Package natbib Warning: Citation `Verhaert2018' on page 65 undefined on input l
+ine 10.
+
+
+Package natbib Warning: Citation `Scardapane2017' on page 65 undefined on input
+ line 10.
+
+
+Package natbib Warning: Citation `Maulany2018' on page 65 undefined on input li
+ne 10.
+
+
+Package natbib Warning: Citation `Kikuchi2018' on page 65 undefined on input li
+ne 10.
+
+
+Package natbib Warning: Citation `Tawfik2018' on page 65 undefined on input lin
+e 10.
+
+
+Package natbib Warning: Citation `Wang2017' on page 65 undefined on input line 
+10.
+
+
+Package natbib Warning: Citation `MY19' on page 65 undefined on input line 10.
+
+
+Package natbib Warning: Citation `Naveed2015' on page 65 undefined on input lin
+e 10.
+
+
+Package natbib Warning: Citation `Chan2014' on page 65 undefined on input line 
+12.
+
+
+Package natbib Warning: Citation `Ito2017' on page 65 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `AM19' on page 65 undefined on input line 13.
+
+
+Package natbib Warning: Citation `Lemus20' on page 65 undefined on input line 1
+3.
+
+
+Package natbib Warning: Citation `JSGBBWZ11' on page 65 undefined on input line
+ 13.
+
+
+Package natbib Warning: Citation `KWW12' on page 65 undefined on input line 13.
+
+
+
+Package natbib Warning: Citation `libscapi' on page 65 undefined on input line 
+21.
+
+
+Package natbib Warning: Citation `PH78' on page 65 undefined on input line 21.
+
+
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
+ [65
+
+
+
+]
+
+Package natbib Warning: Citation `M10' on page 66 undefined on input line 31.
+
+
+Package natbib Warning: Citation `Z06' on page 66 undefined on input line 31.
+
+
+Package natbib Warning: Citation `Felsenstein2003' on page 66 undefined on inpu
+t line 31.
+
+[66]
+
+Package natbib Warning: Citation `F89' on page 67 undefined on input line 40.
+
+
+Package natbib Warning: Citation `JC69' on page 67 undefined on input line 40.
+
+
+Package natbib Warning: Citation `K80' on page 67 undefined on input line 40.
+
+
+Package natbib Warning: Citation `F84' on page 67 undefined on input line 40.
+
+
+Package natbib Warning: Citation `L94' on page 67 undefined on input line 40.
+
+
+Package natbib Warning: Citation `Z06' on page 67 undefined on input line 40.
+
+
+Package natbib Warning: Citation `Felsenstein2003' on page 67 undefined on inpu
+t line 40.
+
+
+Package natbib Warning: Citation `PM09' on page 67 undefined on input line 63.
+
+
+Overfull \hbox (2.66615pt too wide) detected at line 97
+[][]\OT1/cmr/bx/n/10 Q \OT1/cmr/m/n/10 = []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+
+Package natbib Warning: Citation `JC69' on page 68 undefined on input line 111.
+
+
+
+Package natbib Warning: Citation `K80' on page 68 undefined on input line 121.
+
+[68]
+
+Package natbib Warning: Citation `K80' on page 69 undefined on input line 128.
+
+
+Package natbib Warning: Citation `F84' on page 69 undefined on input line 137.
+
+
+Package natbib Warning: Citation `L94' on page 69 undefined on input line 149.
+
+[69]
+
+Package natbib Warning: Citation `Z06' on page 70 undefined on input line 173.
+
+[70] [71] [72pdfTeX warning (ext4): destination with the same identifier (name{
+equation.5.1.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.253 
+      ]
+
+Package natbib Warning: Citation `Evans2018' on page 73 undefined on input line
+ 281.
+
+
+Package natbib Warning: Citation `Evans2018' on page 73 undefined on input line
+ 281.
+
+[73]
+
+Package natbib Warning: Citation `Lindell2017' on page 74 undefined on input li
+ne 316.
+
+[74]
+Overfull \hbox (13.62045pt too wide) in paragraph at lines 322--324
+\OT1/cmr/m/n/12 Therefore, we just need to build a sim-u-la-tor that sat-is-fie
+s ex-pres-sion ([][]5.8[][]) for the $[][](\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ; 
+\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$
+ []
+
+
+Package natbib Warning: Citation `Goldreich98' on page 75 undefined on input li
+ne 329.
+
+
+Package natbib Warning: Citation `Goldreich98' on page 75 undefined on input li
+ne 332.
+
+
+Package natbib Warning: Citation `BBCS92' on page 75 undefined on input line 34
+9.
+
+
+Package natbib Warning: Citation `Lemus20' on page 75 undefined on input line 3
+49.
+
+
+Package natbib Warning: Citation `HM96' on page 75 undefined on input line 349.
+
+
+
+Package natbib Warning: Citation `Shi02' on page 75 undefined on input line 349
+.
+
+
+Package natbib Warning: Citation `ABLST17' on page 75 undefined on input line 3
+49.
+
+
+Package natbib Warning: Citation `Lemus20' on page 75 undefined on input line 3
+49.
+
+
+Package natbib Warning: Citation `Lemus20' on page 75 undefined on input line 3
+49.
+
+
+Package natbib Warning: Citation `SPM21' on page 75 undefined on input line 349
+.
+
+[75]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 76 undefined on input line 40
+7.
+
+
+Package natbib Warning: Citation `YE11' on page 76 undefined on input line 407.
+
+
+
+Package natbib Warning: Citation `HS85' on page 76 undefined on input line 409.
+
+
+
+Package natbib Warning: Citation `K92' on page 76 undefined on input line 409.
+
+
+Package natbib Warning: Citation `BM84' on page 76 undefined on input line 409.
+
+
+
+Package natbib Warning: Citation `BBS86' on page 76 undefined on input line 409
+.
+
+[76]
+
+Package natbib Warning: Citation `Alkassar2005' on page 77 undefined on input l
+ine 411.
+
+
+Package natbib Warning: Citation `GaviriaRojas2017' on page 77 undefined on inp
+ut line 411.
+
+
+Package natbib Warning: Citation `HerreroCollantes2017' on page 77 undefined on
+ input line 411.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+
+Package natbib Warning: Citation `Ferreira2021' on page 78 undefined on input l
+ine 414.
+
+
+Package natbib Warning: Citation `Sho95' on page 78 undefined on input line 418
+.
+
+
+Package natbib Warning: Citation `Pirandola2020' on page 78 undefined on input 
+line 420.
+
+
+Package natbib Warning: Citation `Almeida2020' on page 78 undefined on input li
+ne 420.
+
+
+Package natbib Warning: Citation `Silva2019' on page 78 undefined on input line
+ 420.
+
+
+Package natbib Warning: Citation `Almeida2021' on page 78 undefined on input li
+ne 420.
+
+
+Package natbib Warning: Citation `R06' on page 78 undefined on input line 420.
+
+
+Package natbib Warning: Citation `Tomamichel2017' on page 78 undefined on input
+ line 420.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+
+Package natbib Warning: Citation `F14' on page 79 undefined on input line 442.
+
+
+Package natbib Warning: Citation `Bscher2017' on page 79 undefined on input lin
+e 442.
+
+
+Package natbib Warning: Citation `Buescher2016' on page 79 undefined on input l
+ine 442.
+
+
+Package natbib Warning: Citation `Bscher2018' on page 79 undefined on input lin
+e 442.
+
+
+Package natbib Warning: Citation `libscapi' on page 79 undefined on input line 
+446.
+
+
+Package natbib Warning: Citation `mpc_benchmark' on page 79 undefined on input 
+line 446.
+
+
+Package natbib Warning: Citation `K15' on page 79 undefined on input line 446.
+
+
+Package natbib Warning: Citation `C15' on page 79 undefined on input line 446.
+
+
+Package natbib Warning: Citation `F89' on page 79 undefined on input line 450.
+
+[79]
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=1410, 601.24625pt x 339.2675pt>
+File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
+<use Chapter_PrivatePhylogeneticTrees/tree.png>
+Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
+ut line 490.
+(pdftex.def)             Requested size: 240.49423pt x 135.70459pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[80]
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=1418, 589.0005pt x 349.96747pt>
+File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
+<use Chapter_PrivatePhylogeneticTrees/PPT.png>
+Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
+t line 518.
+(pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
+ [81 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [82 <./Chapter_PrivatePhylo
+geneticTrees/PPT.png>]
+
+Package natbib Warning: Citation `CO15' on page 83 undefined on input line 544.
+
+
+
+Package natbib Warning: Citation `KOS15' on page 83 undefined on input line 544
+.
+
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=1438, 458.01112pt x 358.4592pt>
+File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
+<use Chapter_PrivatePhylogeneticTrees/QOKD.png>
+Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
+ut line 548.
+(pdftex.def)             Requested size: 412.2062pt x 322.61029pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `Wolf2006' on page 83 undefined on input line 
+553.
+
+
+Package natbib Warning: Citation `ALSZ13' on page 83 undefined on input line 55
+7.
+
+
+Underfull \vbox (badness 1983) has occurred while \output is active []
+
+ [83]
+
+Package natbib Warning: Citation `Pirandola2020' on page 84 undefined on input 
+line 570.
+
+
+Package natbib Warning: Citation `Silva2019' on page 84 undefined on input line
+ 570.
+
+
+Package natbib Warning: Citation `FGSPSW18' on page 84 undefined on input line 
+570.
+
+
+Package natbib Warning: Citation `Lemus20' on page 84 undefined on input line 5
+70.
+
+
+Package natbib Warning: Citation `Pinto2020' on page 84 undefined on input line
+ 570.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>]
+
+Package natbib Warning: Citation `BB84' on page 85 undefined on input line 574.
+
+
+
+Package natbib Warning: Citation `BBCS92' on page 85 undefined on input line 57
+4.
+
+
+Package natbib Warning: Citation `KW16' on page 85 undefined on input line 574.
+
+
+
+Package natbib Warning: Citation `RW20' on page 85 undefined on input line 574.
+
+
+
+Package natbib Warning: Citation `Pirandola2020' on page 85 undefined on input 
+line 574.
+
+
+Package natbib Warning: Citation `JAW20' on page 85 undefined on input line 576
+.
+
+
+Package natbib Warning: Citation `KRS16' on page 85 undefined on input line 578
+.
+
+
+Package natbib Warning: Citation `KRS16' on page 85 undefined on input line 578
+.
+
+[85]
+
+Package natbib Warning: Citation `W12' on page 86 undefined on input line 597.
+
+[86]
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=1467, 18
+00.7275pt x 1471.4975pt>
+File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
+ file (type jpg)
+<use Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>
+Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-ta
+ilored.jpeg  used on input line 618.
+(pdftex.def)             Requested size: 216.07797pt x 176.57208pt.
+
+Underfull \vbox (badness 6348) has occurred while \output is active []
+
+ [87 <./Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg>] [88
+]
+
+Package natbib Warning: Citation `V59' on page 89 undefined on input line 680.
+
+
+Package natbib Warning: Citation `Songhori2019' on page 89 undefined on input l
+ine 680.
+
+[89]
+
+Package natbib Warning: Citation `FS09' on page 90 undefined on input line 721.
+
+
+
+Package natbib Warning: Citation `DFL+09' on page 90 undefined on input line 72
+1.
+
+
+Package natbib Warning: Citation `FS09' on page 90 undefined on input line 721.
+
+
+
+Package natbib Warning: Citation `Lindell2008' on page 90 undefined on input li
+ne 721.
+
+
+Package natbib Warning: Citation `Evans2018' on page 90 undefined on input line
+ 727.
+
+[90] [91]
+
+Package natbib Warning: Citation `Goldreich87' on page 92 undefined on input li
+ne 756.
+
+
+Package natbib Warning: Citation `SPM21' on page 92 undefined on input line 769
+.
+
+[92]
+Overfull \hbox (1.29976pt too wide) in paragraph at lines 806--807
+\OT1/cmr/m/n/12 We now present the sce-nario used to test and com-pare both qua
+ntum-assisted and classical-
+ []
+
+
+Package natbib Warning: Citation `ALSZ13' on page 93 undefined on input line 80
+8.
+
+[93]
+
+Package natbib Warning: Citation `YPT18' on page 94 undefined on input line 830
+.
+
+
+Package natbib Warning: Citation `IDQ' on page 94 undefined on input line 830.
+
+
+Package natbib Warning: Citation `C15' on page 94 undefined on input line 852.
+
+[94]
+
+Package natbib Warning: Citation `GISAID' on page 95 undefined on input line 86
+6.
+
+
+Package natbib Warning: Citation `MPL19' on page 95 undefined on input line 866
+.
+
+[95]
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=1559, 395.3169pt x 271.
+91588pt>
+File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
+)
+<use Chapter_PrivatePhylogeneticTrees/total_running.png>
+Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
+ed on input line 943.
+(pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
+
+
+Package natbib Warning: Citation `C15' on page 96 undefined on input line 948.
+
+
+Package natbib Warning: Citation `SPM21' on page 96 undefined on input line 948
+.
+
+[96] [97 <./Chapter_PrivatePhylogeneticTrees/total_running.png>]
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=1577, 395.3169pt x 267.94102pt
+>
+File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
+<use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
+Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
+nput line 954.
+(pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=1578, 395.3169
+pt x 287.99596pt>
+File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
+(type png)
+<use Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png>
+Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/proportion_in_overhea
+d.png  used on input line 961.
+(pdftex.def)             Requested size: 316.25394pt x 230.39706pt.
+ [98 <./Chapter_PrivatePhylogeneticTrees/c-qSMC.png>] [99 <./Chapter_PrivatePhy
+logeneticTrees/proportion_in_overhead.png>]) [100]
+\openout2 = `Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousL
+inearEvaluation.aux'.
+
+
+(./Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousLinearEvalu
+ation.tex
+Chapter 6.
+
+Package natbib Warning: Citation `Rabin81' on page 101 undefined on input line 
+10.
+
+
+Package natbib Warning: Citation `Goldreichbook04' on page 101 undefined on inp
+ut line 10.
+
+
+Package natbib Warning: Citation `CCD88' on page 101 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `Canetti00MPC' on page 101 undefined on input 
+line 10.
+
+
+Package natbib Warning: Citation `IR89' on page 101 undefined on input line 12.
+
+
+
+Package natbib Warning: Citation `Sho95' on page 101 undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `BBCS92' on page 101 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `C94' on page 101 undefined on input line 12.
+
+
+Package natbib Warning: Citation `BCGI18' on page 101 undefined on input line 1
+5.
+
+
+Package natbib Warning: Citation `GNN17' on page 101 undefined on input line 15
+.
+
+
+Package natbib Warning: Citation `NP06' on page 101 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `NP99' on page 101 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `LP02' on page 101 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `H18' on page 101 undefined on input line 15.
+
+
+Package natbib Warning: Citation `G99' on page 101 undefined on input line 15.
+
+
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
+ [101
+
+
+
+]
+
+Package natbib Warning: Citation `BPT00' on page 102 undefined on input line 19
+.
+
+
+Package natbib Warning: Citation `CBKG02' on page 102 undefined on input line 1
+9.
+
+
+Package natbib Warning: Citation `AGS03' on page 102 undefined on input line 19
+.
+
+
+Package natbib Warning: Citation `AKBH07' on page 102 undefined on input line 1
+9.
+
+
+Package natbib Warning: Citation `SS10' on page 102 undefined on input line 19.
+
+
+
+Package natbib Warning: Citation `DEBZ10' on page 102 undefined on input line 1
+9.
+
+
+Package natbib Warning: Citation `Zhongetal2015' on page 102 undefined on input
+ line 19.
+
+
+Package natbib Warning: Citation `Sitetal17' on page 102 undefined on input lin
+e 19.
+
+
+Package natbib Warning: Citation `Bouchardetal18' on page 102 undefined on inpu
+t line 19.
+
+
+Package natbib Warning: Citation `BHVBFHM18' on page 102 undefined on input lin
+e 19.
+
+
+Package natbib Warning: Citation `DHMPPV21' on page 102 undefined on input line
+ 19.
+
+[102]
+
+Package natbib Warning: Citation `Unruh10' on page 103 undefined on input line 
+35.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 103 undefined on input line 
+35.
+
+
+Package natbib Warning: Citation `DHNO19' on page 103 undefined on input line 3
+7.
+
+
+Package natbib Warning: Citation `HK97' on page 103 undefined on input line 37.
+
+
+
+Underfull \vbox (badness 1661) has occurred while \output is active []
+
+ [103]
+
+Package natbib Warning: Citation `DFLSS09' on page 104 undefined on input line 
+47.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 104 undefined on input li
+ne 47.
+
+
+Package natbib Warning: Citation `Unruh10' on page 104 undefined on input line 
+49.
+
+
+Underfull \vbox (badness 1442) has occurred while \output is active []
+
+ [104]
+
+Package natbib Warning: Citation `DEBZ10' on page 105 undefined on input line 6
+4.
+
+[105]
+
+Package natbib Warning: Citation `DEBZ10' on page 106 undefined on input line 9
+2.
+
+
+Package natbib Warning: Citation `DEBZ10' on page 106 undefined on input line 9
+7.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [106]
+
+Package natbib Warning: Citation `DEBZ10' on page 107 undefined on input line 1
+41.
+
+[107]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `DFLSS09' on page 108 undefined on input line 
+231.
+
+[108]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+Underfull \hbox (badness 1803) in paragraph at lines 276--277
+[]\OT1/cmr/m/n/12 Bob sends $([]\OML/cmm/m/it/12 ; i\OT1/cmr/m/n/12 )$, $\OML/c
+mm/m/it/12 i \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 T$\OT1/cmr/m/n/12 , to $\OMS/c
+msy/m/n/12 F[]$ \OT1/cmr/m/n/12 and $\OMS/cmsy/m/n/12 F[]$ \OT1/cmr/m/n/12 send
+s to Al-ice
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[110]
+Underfull \vbox (badness 1052) has occurred while \output is active []
+
+ [111]
+
+Package natbib Warning: Citation `DFLSS09' on page 112 undefined on input line 
+331.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 112 undefined on input li
+ne 331.
+
+[112]
+
+Package natbib Warning: Citation `DHNO19' on page 113 undefined on input line 3
+43.
+
+[113] [114]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [115]
+
+Package natbib Warning: Citation `HK97' on page 116 undefined on input line 468
+.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [116pdfTeX warning (ext4): destination with the same identifier (name{equation
+.6.4.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.507 \end{eqnarray*}
+                     ] [117]
+Underfull \hbox (badness 3118) in paragraph at lines 585--586
+[]\OT1/cmr/m/n/10 Alice $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 
+2 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ]$ ap-plies $\OML/cmm/m/it
+/10 V[]$ \OT1/cmr/m/n/10 to the re-ceived state $[]$, i.e. $\OML/cmm/m/it/10 V[
+] [] \OT1/cmr/m/n/10 =
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[118] [119]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[120] [121]
+Underfull \hbox (badness 2762) in paragraph at lines 787--788
+[]$\OMS/cmsy/m/n/12 S[]$ \OT1/cmr/m/n/12 ran-domly gen-er-ates the el-e-ments $
+\OML/cmm/m/it/12 a[] \OMS/cmsy/m/n/12  [] \U/msb/m/n/12 Z[]$\OT1/cmr/m/n/12 , $
+\OML/cmm/b/it/12 ^^T \OMS/cmsy/m/n/12  [] \U/msb/m/n/12 Z[]$ \OT1/cmr/m/n/12 an
+d
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[122] [123] [124]
+
+Package natbib Warning: Citation `DEBZ10' on page 125 undefined on input line 8
+52.
+
+
+Package natbib Warning: Citation `DEBZ10' on page 125 undefined on input line 8
+65.
+
+
+Package natbib Warning: Citation `DEBZ10' on page 125 undefined on input line 8
+73.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [125]
+Underfull \vbox (badness 4391) has occurred while \output is active []
+
+ [126]
+
+Package natbib Warning: Citation `D21' on page 127 undefined on input line 924.
+
+
+
+Package natbib Warning: Citation `CW79' on page 127 undefined on input line 924
+.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [127]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [128]
+Overfull \hbox (13.10341pt too wide) in paragraph at lines 1029--1031
+[][]\OT1/cmr/bx/n/12 Theorem 7 \OT1/cmr/m/n/12 (quan-tum-UC se-cu-rity of $^^E[
+]$)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 The pro-to-col $\OT1/cmr/m/n/12 ^^E[]$
+ \OT1/cmr/m/it/12 sta-tis-ti-cally quantum-
+ []
+
+
+Package natbib Warning: Citation `M05' on page 129 undefined on input line 1038
+.
+
+
+Package natbib Warning: Citation `MTVUZ05' on page 129 undefined on input line 
+1038.
+
+
+Package natbib Warning: Citation `BBBG09' on page 129 undefined on input line 1
+038.
+
+
+Package natbib Warning: Citation `BBBGST11' on page 129 undefined on input line
+ 1038.
+
+
+Package natbib Warning: Citation `DV12' on page 129 undefined on input line 103
+8.
+
+
+Package natbib Warning: Citation `SG12' on page 129 undefined on input line 103
+8.
+
+
+Package natbib Warning: Citation `KWW12' on page 129 undefined on input line 10
+38.
+
+
+Package natbib Warning: Citation `NJCKW12' on page 129 undefined on input line 
+1038.
+
+
+Package natbib Warning: Citation `KC13' on page 129 undefined on input line 103
+8.
+
+
+Package natbib Warning: Citation `PJLCLTKD14' on page 129 undefined on input li
+ne 1038.
+
+
+Package natbib Warning: Citation `LAAPMP14' on page 129 undefined on input line
+ 1038.
+
+
+Package natbib Warning: Citation `LAPPP16' on page 129 undefined on input line 
+1038.
+
+
+Package natbib Warning: Citation `ARW19' on page 129 undefined on input line 10
+38.
+
+
+Package natbib Warning: Citation `BCKD20' on page 129 undefined on input line 1
+038.
+
+
+Package natbib Warning: Citation `SY20' on page 129 undefined on input line 103
+8.
+
+
+Package natbib Warning: Citation `ARV21' on page 129 undefined on input line 10
+38.
+
+
+Package natbib Warning: Citation `SMP22' on page 129 undefined on input line 10
+38.
+
+) [129]
+\openout2 = `Chapter_Conclusion/Chapter_Conclusion.aux'.
+
+ (./Chapter_Conclusion/Chapter_Conclusion.tex [130
+
+
+
+]
+Chapter 7.
+
+Package natbib Warning: Citation `ALSZ13' on page 131 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `ALSZ15' on page 131 undefined on input line 1
+3.
+
+
+Package natbib Warning: Citation `KOS15' on page 131 undefined on input line 13
+.
+
+
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
+ [131]
+
+Package natbib Warning: Citation `DFLSS09' on page 132 undefined on input line 
+25.
+
+
+Package natbib Warning: Citation `BCDP21' on page 132 undefined on input line 2
+7.
+
+
+Package natbib Warning: Citation `U11' on page 132 undefined on input line 29.
+
+[132]
+
+Package natbib Warning: Citation `CZK18' on page 133 undefined on input line 31
+.
+
+
+Package natbib Warning: Citation `ASRP21' on page 133 undefined on input line 3
+1.
+
+
+Package natbib Warning: Citation `KST21' on page 133 undefined on input line 31
+.
+
+
+Package natbib Warning: Citation `CKS10' on page 133 undefined on input line 31
+.
+
+
+Package natbib Warning: Citation `CGS16' on page 133 undefined on input line 31
+.
+
+
+Package natbib Warning: Citation `ASRP21' on page 133 undefined on input line 3
+1.
+
+
+Package natbib Warning: Citation `KST21' on page 133 undefined on input line 32
+.
+
+
+Package natbib Warning: Citation `CKS10' on page 133 undefined on input line 32
+.
+
+
+Package natbib Warning: Citation `BY21' on page 133 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `SSH+21' on page 133 undefined on input line 3
+2.
+
+) [133]
+\openout2 = `Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux'.
+
+ (./Appendix/Appendix_PrivatePhylogenetirTrees_Code.tex [134
+
+
+
+]
+Appendix A.
+
+Package natbib Warning: Citation `W12' on page 135 undefined on input line 16.
+
+
+Underfull \vbox (badness 1178) has occurred while \output is active []
+
+ [135]
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+) [136]
+[137] [138
+
+]
+Appendix B.
+
+Package natbib Warning: Citation `DFLSS09' on page 139 undefined on input line 
+87.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 139 undefined on input li
+ne 87.
+
+[139]
+
+Package natbib Warning: Citation `DFLSS09' on page 140 undefined on input line 
+136.
+
+[140]
+
+Package natbib Warning: Citation `U17' on page 141 undefined on input line 177.
+
+
+[141]
+
+Package natbib Warning: Citation `DFLSS09' on page 142 undefined on input line 
+188.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 142 undefined on input li
+ne 214.
+
+[142]
+
+Package natbib Warning: Citation `Dupuis2015' on page 143 undefined on input li
+ne 227.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 143 undefined on input li
+ne 243.
+
+[143]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [144]
+
+Package natbib Warning: Citation `Dupuis2015' on page 145 undefined on input li
+ne 295.
+
+[145]
+
+Package natbib Warning: Citation `Dupuis2015' on page 146 undefined on input li
+ne 332.
+
+
+Package natbib Warning: Citation `Dupuis2015' on page 146 undefined on input li
+ne 336.
+
+) [146]
+No file main_thesis.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 189.
+(./main_thesis.aux (./Introduction/Introduction.aux)
+(./Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux)
+(./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux)
+(./Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObli
+viousTransfer.aux)
+(./Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.aux)
+(./Chapter_QuantumObliviousLinearEvaluation/Chapter_QuantumObliviousLinearEvalu
+ation.aux) (./Chapter_Conclusion/Chapter_Conclusion.aux)
+(./Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 189.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 189.
+Package rerunfilecheck Info: File `main_thesis.out' has not changed.
+(rerunfilecheck)             Checksum: D107C73A2F3BC3C552B52F56160F6F2F;6525.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
+ ) 
+Here is how much of TeX's memory you used:
+ 31076 strings out of 480608
+ 596217 string characters out of 5903629
+ 1223913 words of memory out of 5000000
+ 45551 multiletter control sequences out of 15000+600000
+ 567224 words of font info for 148 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 67i,19n,105p,2181b,1401s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbs
+y8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
+></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/
+2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/cm-super/sfrb1440.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/cm-super/sfrb1728.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/public/cm-super/sfrm1728.pfb>
+Output written on main_thesis.pdf (174 pages, 5776592 bytes).
+PDF statistics:
+ 2434 PDF objects out of 2487 (max. 8388607)
+ 2085 compressed objects within 21 object streams
+ 668 named destinations out of 1000 (max. 500000)
+ 911 words of extra memory for PDF output out of 10000 (max. 10000000)
+
