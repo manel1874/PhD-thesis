@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  18 JAN 2023 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  18 JAN 2023 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1396,15 +1396,18 @@ File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
 Package pdftex.def Info: Chapter_TechnicalOverview/booleanCircuit.png  used on 
 input line 109.
 (pdftex.def)             Requested size: 265.29317pt x 156.28508pt.
-
-Underfull \vbox (badness 3323) has occurred while \output is active []
-
  [11 <./Chapter_TechnicalOverview/booleanCircuit.png>] [12]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13] [14] [15] [16] [17] [18] [19]
-Overfull \hbox (11.46487pt too wide) in paragraph at lines 394--395
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13] [14] [15] [16] [17] [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Overfull \hbox (11.46487pt too wide) in paragraph at lines 392--393
 \OT1/cmr/m/n/12 bi-trary co-ef-fi-cients $\OML/cmm/m/it/12 []$\OT1/cmr/m/n/12 
 . We de-fine $\OML/cmm/m/it/12 ^^Z[] \OT1/cmr/m/n/12 = [][]$ and the mix-ture $
 [] = [][] \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 []\OMS/cmsy/m/n/12 j[] [] 
@@ -1412,7 +1415,7 @@ Overfull \hbox (11.46487pt too wide) in paragraph at lines 394--395
  []
 
 [20]
-Overfull \hbox (1.20277pt too wide) in paragraph at lines 421--423
+Overfull \hbox (1.20277pt too wide) in paragraph at lines 419--421
 \OT1/cmr/m/n/12 This fol-lows from the def-i-ni-tion of the col-li-sion en-trop
 y and the fact that $[][] [] =
  []
@@ -1508,7 +1511,7 @@ Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [48]
 [49] [50]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1640, 462.5
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1637, 462.5
 28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
@@ -1599,7 +1602,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
 [79]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=2081, 601.24625pt x 339.2675pt>
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=2078, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1610,7 +1613,7 @@ ut line 490.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [80]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2089, 589.0005pt x 349.96747pt>
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2086, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
@@ -1618,7 +1621,7 @@ t line 518.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
  [81 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [82 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2111, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2108, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1635,7 +1638,7 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [85] [86]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2164, 18
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2161, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -1659,7 +1662,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [94]
 [95] [96]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2288, 395.3169pt x 271.
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2285, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
@@ -1667,7 +1670,7 @@ File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 943.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2294, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2291, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
@@ -1675,7 +1678,7 @@ Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 954.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
  [97]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2299, 395.3169
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2296, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
@@ -1944,10 +1947,10 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (202 pages, 5890704 bytes).
+Output written on Chrysis.pdf (202 pages, 5890442 bytes).
 PDF statistics:
- 3496 PDF objects out of 3580 (max. 8388607)
- 3100 compressed objects within 31 object streams
+ 3494 PDF objects out of 3580 (max. 8388607)
+ 3098 compressed objects within 31 object streams
  1001 named destinations out of 1200 (max. 500000)
  919 words of extra memory for PDF output out of 10000 (max. 10000000)
 

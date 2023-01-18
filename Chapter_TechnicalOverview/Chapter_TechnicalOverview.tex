@@ -87,9 +87,9 @@ OT can be generalized to the case of $k$-out-of-$N$ OT, where Alice owns $N$ mes
 
 \subsubsection{Yao protocol}\label{yaoProtocol}
 
-A solution to SMC was given for the first time by Yao \cite{Yao82} and its main idea resides on the fact that every function has a boolean circuit representation. From this, Yao developed the concept of garbled circuits which is one of the key elements for secure computation. The Yao's garbled circuit protocol is constrained to only two parties but its generalization was achieved by GMW \cite{Goldreich87} and BMR \cite{BMR90}. Also, some implementation optimizations on Yao protocol were later developed in order to improve its performance: point-and-permute \cite{BMR90}, row reduction \cite{NPS99, Pinkas2009}, FreeXOR \cite{Kolesnikov2005} and half gates \cite{Zahur2015}. 
+A solution for SMC was first proposed by Yao \cite{Yao82}. The main idea behind Yao's solution is that every function has a boolean circuit representation. Based on this idea, Yao developed the concept of garbled circuits, which is one of the key elements for secure computation. The Yao's garbled circuit protocol is originally designed for only two parties, but its generalization to multiple parties was later achieved by GMW \cite{Goldreich87} and BMR \cite{BMR90}. Additionally, various implementation optimizations have been developed to improve the performance of the Yao protocol, such as point-and-permute \cite{BMR90}, row reduction \cite{NPS99, Pinkas2009}, FreeXOR \cite{Kolesnikov2005} and half gates \cite{Zahur2015}.
 
-As we said before, the main idea of Yao protocol is to represent the desired function $f()$ as a boolean circuit $C$, i.e. by a sequence of logical gates interconnected with wires. After the generation of the circuit $C$, each party will have two very different roles. Generally speaking, Alice (usually called garbler) randomly generates keys to each input bit, encrypts each circuit's gate and sends both elements to Bob (called evaluator). This procedure masks Alice's inputs from Bob. Then, through the OT functionality, Bob receives the keys corresponding to his input bits. So, OT allows to mask Bob's inputs from Alice. Finally, since the evaluator has all the input keys, he can decrypt every gate, i.e. evaluate the circuit. Let us see in more detail how the protocol works using a four input boolean circuit description of the Millionaires' problem. This problem can be described by the following expression:
+As mentioned before, the main idea of the Yao protocol is to represent the desired function $f()$ as a boolean circuit $C$, i.e. a sequence of logical gates interconnected with wires. After the generation of the circuit $C$, each party will have two distinct roles. Generally speaking, Alice (also known as the garbler) randomly generates keys for each input bit, encrypts each circuit's gate, and sends both elements to Bob (also known as the evaluator). This procedure masks Alice's inputs from Bob. Then, through the oblivious transfer (OT) functionality, Bob receives the keys corresponding to his input bits. This allows to mask Bob's inputs from Alice. Finally, since the evaluator has all the input keys, he can decrypt every gate, and evaluate the circuit. To better understand how the protocol works, let us consider a four-input boolean circuit description of the Millionaires' problem. This problem can be described by the following expression:
 \begin{equation}
 f(a, b) = 
      \begin{cases} 
@@ -168,11 +168,11 @@ The Yao protocol has its security based on two main building blocks: garbled cir
 
 \subsection{Secret sharing approach}
 
-The secret sharing approach was initiated by two concurrent works, known as BGW \cite{BGW88} and CCD \cite{CCD88}. This approach does not generate an ``encrypted" version of the circuit. Instead, the parties use some secret sharing scheme in order to evaluate the circuit. In this approach we use simple operations (addition and multiplication) but the communication rounds will depend on the size of circuit being evaluated. We start by defining an important primitive for secret sharing based protocols: oblivious linear evaluation.
+The secret sharing approach, first introduced by BGW \cite{BGW88} and CCD \cite{CCD88}, does not involve encrypting the circuit. Instead, parties use a secret sharing scheme to evaluate the circuit. This approach involves simple operations such as addition and multiplication, but the number of communication rounds needed will depend on the size of the circuit being evaluated. An important primitive for secret sharing based protocols is oblivious linear evaluation (OLE).
 
 \subsubsection{Oblivious linear evaluation}
 
-Oblivious linear evaluation (OLE) can be seen as a generalization of oblivious transfer (OT) \cite{Rabin81}. OT has been shown to be complete for secure multi-party computation \cite{K88}, i.e., any such task, including OLE, can be achieved given an OT implementation. A compelling reason to study OLE protocols is that they can serve as building blocks for the secure evaluation of arithmetic circuits \cite{AIK11,DKMQ12,GNN17,DGNBNT17}, just like OT allows the secure evaluation of boolean circuits \cite{GMW87}. Specifically, OLE can be used to generate multiplication triples which are the basic tool for securely computing multiplication gates \cite{DGNBNT17}. Besides that, OLE has applications in more tasks for two-party secure computation  \cite{IPS09,ADINZ17,BCGI18,HIMV19,CDIKLOV19} and private set intersection \cite{GN19}.
+Oblivious linear evaluation (OLE) can be thought of as a generalization of oblivious transfer (OT) \cite{Rabin81}. It has been shown to be a building block for securely evaluating arithmetic circuits, such as in \cite{AIK11,DKMQ12,GNN17,DGNBNT17}. Specifically, OLE can be used to generate multiplication triples, which are essential for securely computing multiplication gates \cite{DGNBNT17}. OLE also has applications in tasks such as two-party secure computation \cite{IPS09,ADINZ17,BCGI18,HIMV19,CDIKLOV19} and private set intersection \cite{GN19}.
 
 
 \begin{figure}[h!]
@@ -228,7 +228,7 @@ We can also generalize the OLE functionality to a vectorized version. The vector
 
 \subsubsection{Basic operations}
 
-To highlight the importance of OLE in secret sharing based SMC protocols, we go through a passively secure protocol \cite{Evans2018}. We consider the two party case (Alice and Bob) where the parties own additive shares of the secret. So, for some secret value $x$, Alice owns $x_A$, Bob owns $x_B$ and $x = x_A + x_B$. The operations used in the protocol according to the circuit are as follows:
+To highlight the importance of OLE in secret sharing based SMC protocols, we go through a passively secure protocol \cite{Evans2018}. We consider the two party case (Alice and Bob) where the parties own additive shares of the secret. So, for some secret value $x$, Alice owns $x_A$, Bob owns $x_B$ and $x = x_A + x_B$. Depending on the circuit, the operations used in the protocol are as follows:
 
 \begin{itemize}
 	\item \textbf{Input}. For Alice to secret share her input value $x$, she randomly chooses $x_B$ and sends it to Bob. Alice defines $x_A$ as $x_A = x - x_B$;
@@ -255,17 +255,17 @@ To highlight the importance of OLE in secret sharing based SMC protocols, we go 
 %********************************** %Second Section  **************************************
 \section{Quantum information}
 
-Quantum information theory studies the implications of using quantum systems as the medium of information. Consequently, the information carriers are governed by the laws of quantum mechanics, allowing to exploit properties not present amid classical methods. In this section, we present the basic elements of quantum information that will be used by the quantum protocols presented and their security proofs.
+Quantum information theory is a field that studies the implications of using quantum systems as the medium of information. The information carriers in quantum systems are governed by the laws of quantum mechanics, allowing for properties not present in classical methods to be exploited. In this section, we present the basic elements of quantum information that will be used in the quantum protocols presented and their security proofs.
 
-As common practice in quantum information theory, a quantum system $A$ is described by some Hilbert space $\mathcal{H}_A$. In this thesis, we will only consider finite-dimensional Hilbert spaces, i.e. $\dim \mathcal{H}_A = d < \inf$. So, we can identify $\mathcal{H}_A \cong \mathbb{C}^d \cong \mathcal{H}^{*}_A$, where $\mathcal{H}^{*}_A$ is the corresponding dual space. We use the Dirac bra-ket notation to describe the states in a physical quantum system $A$. So, a quantum (pure) state is described by a normalized vector $\ket{\psi}_A\in\mathcal{H}_A$ and its dual vector as $\bra{\psi}_A\in\mathcal{H}^{*}_A$. In case it is clear from context, we may omit to which Hilbert space the state belongs to. Since we have the isomorphism $\mathcal{H}_A \cong \mathbb{C}^d$, we can identify the standard basis of $\mathbb{C}^d$ to the standard basis (also known as computational basis) of $\mathcal{H}$, i.e. $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. Also, given different subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$, the joint system can be described by their tensor product, i.e. $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are described as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
+In quantum information theory, a quantum system is described by a Hilbert space $\mathcal{H}_A$. In this thesis, we will consider only finite-dimensional Hilbert spaces, where $\dim \mathcal{H}_A = d < \inf$. The space $\mathcal{H}_A$ can be identified with the complex vector space $\mathbb{C}^d$, as well as its corresponding dual space $\mathcal{H}^{*}_A$. We use the Dirac bra-ket notation to describe the states of a quantum system. A pure state is described by a normalized vector $\ket{\psi}_A \in \mathcal{H}_A$ and its dual vector $\bra{\psi}_A \in \mathcal{H}^{*}_A$. To simplify notation, we may omit specifying the Hilbert space to which a state belongs if it is clear from context. The standard basis of $\mathbb{C}^d$ can be identified with the computational basis of $\mathcal{H}_A$, denoted as $\left\{ \ket{i} \right\}{i=0}^{d-1}$. The joint system of multiple subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$ can be described by their tensor product, denoted as $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are represented as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
 
-We can generate quantum pure states $\ket{\psi_i}\in \mathcal{H}$ according to some probability distribution $\{p_i\}$. This situation is described by a density operator given by $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly called a mixed state. The density operators are positive semi-definite hermitian operators with unitary trace, i.e. $\rho \geq 0$ and $\tr \rho = 1$. We denote by $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$  and $\mathcal{P}(\mathcal{H})$ the sets of hermitian, positive-semi definite and density operators on $\mathcal{H}$, respectively.
+We can generate quantum pure states, denoted as $\ket{\psi_i}\in \mathcal{H}$, according to a probability distribution ${p_i}$. This situation is described by a density operator, denoted as $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly referred to as a mixed state. Density operators are positive semi-definite hermitian operators with unitary trace, that is, $\rho \geq 0$ and $\tr \rho = 1$. The set of hermitian operators, positive semi-definite operators and density operators on a Hilbert space $\mathcal{H}$ are denoted as $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$ and $\mathcal{P}(\mathcal{H})$ respectively.
 
-A mixed state is classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in\mathcal{X}} P_X(x)\ketbra{x}$, where $\mathcal{X}$ is some finite set and $P_X$ is a probability distribution over $\mathcal{X}$. In particular, we denote the uniform distribution over $\mathcal{X}$ as $\tau_{\mathcal{X}} = \frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$, where $|\mathcal{X}|$ is the size of $\mathcal{X}$. The identity operator is denoted by $\mathds{1}$. Also, for a bipartite quantum state $\rho_{XB}$, we say that $\rho_{XB}$ is a classical-quantum state (cq-state for short) if it is of the form $\rho_{XB} = \sum_{x\in \mathcal{X}} P_X(x) \ketbra{x} \otimes \rho^x_{B}$, where $P_X$ is a probability distribution over the finite set $\mathcal{X}$.
+A mixed state is considered classical if it is of the form $\rho_{\mathcal{X}} = \sum_{x\in\mathcal{X}} P_X(x)\ketbra{x}$, where $\mathcal{X}$ is a finite set and $P_X$ is a probability distribution over $\mathcal{X}$. The uniform distribution over $\mathcal{X}$ is denoted as $\tau_{\mathcal{X}} = \frac{1}{|\mathcal{X}|}\sum_{x\in\mathcal{X}}\ketbra{x}$, where $|\mathcal{X}|$ is the size of $\mathcal{X}$. The identity operator is denoted by $\mathds{1}$. Additionally, for a bipartite quantum state $\rho_{XB}$, it is said to be a classical-quantum state (cq-state for short) if it is of the form $\rho_{XB} = \sum_{x\in \mathcal{X}} P_X(x) \ketbra{x} \otimes \rho^x_{B}$, where $P_X$ is a probability distribution over the finite set $\mathcal{X}$.
 
 \subsection{Trace distance}
 
-To prove the security of quantum protocols, it is fundamental to have a procedure that allows to distinguish quantum states. Luckly, there is a useful metric that expresses how well two quantum states $\sigma, \rho \in \mathcal{P}(\mathcal{H})$ can be distinguished by any (potentially inefficient) procedure. This metric is commonly called \textit{trace distance} and is defined as \cite{U17}
+Proving the security of quantum protocols requires a method for distinguishing quantum states. Fortunately, there is a useful metric, known as the trace distance, that measures the distinguishability of two quantum states, $\sigma, \rho \in \mathcal{P}(\mathcal{H})$, by any procedure, regardless of efficiency. The trace distance is defined as \cite{U17}
 \begin{equation*}
     \delta(\rho,\sigma):=\frac{1}{2}||\rho-\sigma||_1,
 \end{equation*}
@@ -274,9 +274,7 @@ where $||\cdot||_1$ is the $1-$Schatten norm in the space of bounded operators a
     ||\rho-\sigma||_1=\Tr\left\{\sqrt{(\rho-\sigma)^\dagger(\rho-\sigma)}\right\}.
 \end{equation*}
 
-In this work, we will be working with completely positive trace preserving (CPTP) maps. By definition, a CPTP map preserves the normalization of the input states (hence being trace preserving) and it maps positive operators to positive operators (hence being completely positive). These two properties ensure that density operators are mapped to density operators. In summary, these operators describe all possible physically operations and will be extensively used in Chapter~\ref{ch:QOLE} (quantum oblivious linear evaluation protocol). 
-
-It can be shown that CPTP maps cannot be used to improve the distinguishability between quantum states. In other words, CPTP maps do not increase the trace distance. This is summarised in Lemma~\ref{lemma:trace_distance}.
+In this work, we will utilize completely positive trace preserving (CPTP) maps. These maps are defined as preserving the normalization of input states and mapping positive operators to positive operators. As a result, they ensure that density operators are mapped to density operators, making them useful in describing all physically possible operations. They will be a key focus in Chapter~\ref{ch:QOLE}, which deals with the quantum oblivious linear evaluation protocol. However, it is important to note that CPTP maps do not increase the distinguishability between quantum states, as proven in Lemma~\ref{lemma:trace_distance}. In other words, the trace distance between two quantum states remains unchanged after being transformed by a CPTP map.
 
 %{\cv Useful links to support this: \href{https://en.wikipedia.org/wiki/Quantum_operation#Kraus_operators}{wiki} and \href{https://courses.cs.ut.ee/all/MTAT.07.024/2018_fall/uploads/notes.pdf}{Unruh lectures} on pag 16 (def of quantum operations) and Lemma 7}
 
@@ -287,10 +285,10 @@ It can be shown that CPTP maps cannot be used to improve the distinguishability 
     The trace distance has the following properties:
 
     \item For any CPTP map $\mathcal{E}$ and any $\sigma, \rho \in \mathcal{P}(\mathcal{H})$ we have that
-    $$\delta(\mathcal{E}(\sigma), \mathcal{E}(\rho)) \leq \delta(\sigma, \rho)$$
+    $$\delta(\mathcal{E}(\sigma), \mathcal{E}(\rho)) \leq \delta(\sigma, \rho).$$
     
     \item Let $\sigma, \sigma' \in \mathcal{P}(\mathcal{H})$ and $\rho \in \mathcal{P}(\mathcal{H}')$. Then,
-    $$\delta(\sigma\otimes \rho, \sigma'\otimes \rho) = \delta(\sigma, \sigma')$$
+    $$\delta(\sigma\otimes \rho, \sigma'\otimes \rho) = \delta(\sigma, \sigma').$$
 \end{enumerate}
 
 \label{lemma:trace_distance}
@@ -304,6 +302,7 @@ $$P\left[ \mu_{\bar{T}} - \mu_T \geq \sqrt{\frac{n(t+1)}{2(n-t)t^2} \log \frac{1
 \label{lemma:trace_distance_bound}
 \end{lemma}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HERE
 
 \subsection{Entropy}
 
