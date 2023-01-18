@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  15 JAN 2023 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  18 JAN 2023 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1352,54 +1352,59 @@ Chapter 1.
 
 
 ] [2] [3]
-Overfull \hbox (2.1999pt too wide) in paragraph at lines 61--62
-[]\OT1/cmr/m/n/12 We the-o-ret-i-cally eval-u-ate the per-for-mance and pri-vac
-y guar-an-tees of the sys-tem through
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (32.9777pt too wide) in paragraph at lines 78--80
+\OT1/cmr/m/n/12 sally Com-pos-able Obliv-i-ous Lin-ear Eval-u-a-tion". 2022. DO
+I: 10.48550/ARXIV.2204.14171.
  []
 
-[4]
-Overfull \hbox (1.25304pt too wide) in paragraph at lines 75--77
-\OT1/cmr/m/n/12 Com-pos-able Obliv-i-ous Lin-ear Eval-u-a-tion. 2022. DOI: 10.4
-8550/ARXIV.2204.14171.
- []
+[5]
 
-[5]) [6]
+Package natbib Warning: Citation `SMV23' on page 6 undefined on input line 109.
+
+
+
+Package natbib Warning: Citation `TSP23' on page 6 undefined on input line 110.
+
+
+
+Package natbib Warning: Citation `SP23' on page 6 undefined on input line 111.
+
+
+Package natbib Warning: Citation `TSP23' on page 6 undefined on input line 119.
+
+
+
+Package natbib Warning: Citation `SP23' on page 6 undefined on input line 119.
+
+) [6]
 \openout2 = `Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux'.
 
  (./Chapter_TechnicalOverview/Chapter_TechnicalOverview.tex
 Chapter 2.
-
-Overfull \hbox (1.88725pt too wide) in paragraph at lines 10--11
-\OT1/cmr/m/n/12 In this chap-ter, the ba-sic math-e-mat-i-cal and information-t
-heoretical con-cepts used through-
- []
-
-
-Underfull \vbox (badness 1117) has occurred while \output is active []
-
- [7
+[7
 
 
 
-]
-[8]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9] [10]
-<Chapter_TechnicalOverview/booleanCircuit.png, id=973, 884.30376pt x 520.94624p
+] [8] [9] [10]
+<Chapter_TechnicalOverview/booleanCircuit.png, id=981, 884.30376pt x 520.94624p
 t>
 File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
 <use Chapter_TechnicalOverview/booleanCircuit.png>
 Package pdftex.def Info: Chapter_TechnicalOverview/booleanCircuit.png  used on 
-input line 107.
+input line 109.
 (pdftex.def)             Requested size: 265.29317pt x 156.28508pt.
- [11 <./Chapter_TechnicalOverview/booleanCircuit.png>] [12] [13]
-[14] [15] [16] [17] [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
-Overfull \hbox (11.46487pt too wide) in paragraph at lines 392--393
+Underfull \vbox (badness 3323) has occurred while \output is active []
+
+ [11 <./Chapter_TechnicalOverview/booleanCircuit.png>] [12]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13] [14] [15] [16] [17] [18] [19]
+Overfull \hbox (11.46487pt too wide) in paragraph at lines 394--395
 \OT1/cmr/m/n/12 bi-trary co-ef-fi-cients $\OML/cmm/m/it/12 []$\OT1/cmr/m/n/12 
 . We de-fine $\OML/cmm/m/it/12 ^^Z[] \OT1/cmr/m/n/12 = [][]$ and the mix-ture $
 [] = [][] \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 []\OMS/cmsy/m/n/12 j[] [] 
@@ -1407,7 +1412,7 @@ Overfull \hbox (11.46487pt too wide) in paragraph at lines 392--393
  []
 
 [20]
-Overfull \hbox (1.20277pt too wide) in paragraph at lines 419--421
+Overfull \hbox (1.20277pt too wide) in paragraph at lines 421--423
 \OT1/cmr/m/n/12 This fol-lows from the def-i-ni-tion of the col-li-sion en-trop
 y and the fact that $[][] [] =
  []
@@ -1503,7 +1508,7 @@ Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [48]
 [49] [50]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1636, 462.5
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1640, 462.5
 28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
@@ -1594,7 +1599,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
 [79]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=2087, 601.24625pt x 339.2675pt>
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=2081, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1605,7 +1610,7 @@ ut line 490.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [80]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2095, 589.0005pt x 349.96747pt>
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2089, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
@@ -1613,7 +1618,7 @@ t line 518.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
  [81 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [82 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2118, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2111, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1630,7 +1635,7 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [85] [86]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2172, 18
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2164, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -1654,7 +1659,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [94]
 [95] [96]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2298, 395.3169pt x 271.
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2288, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
@@ -1662,7 +1667,7 @@ File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 943.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2304, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2294, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
@@ -1670,7 +1675,7 @@ Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 954.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
  [97]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2310, 395.3169
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2299, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
@@ -1856,9 +1861,12 @@ tinger, Kevin
  []
 
 [172] [173]) [174]
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 189.
- (./Chrysis.aux (./Introduction/Introduction.aux)
+(./Chrysis.aux (./Introduction/Introduction.aux)
 (./Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux)
 (./Chapter_QuantumObliviousTransfer/Chapter_QuantumObliviousTransfer.aux)
 (./Chapter_QuantumAndClassicalObliviousTransfer/Chapter_QuantumAndClassicalObli
@@ -1869,155 +1877,77 @@ ation.aux) (./Chapter_Conclusion/Chapter_Conclusion.aux)
 (./Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 189.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 189.
+Package rerunfilecheck Info: File `Chrysis.out' has not changed.
+(rerunfilecheck)             Checksum: 23519CCAC35CCF5EA590A8EC66CBA947;6576.
 
-
-Package rerunfilecheck Warning: File `Chrysis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Chrysis.out':
-(rerunfilecheck)             Before: 7BFA952DE79F0E913571CF8FD55D57BC;6576
-(rerunfilecheck)             After:  23519CCAC35CCF5EA590A8EC66CBA947;6576.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
- 32354 strings out of 480608
- 612836 string characters out of 5903629
- 1229167 words of memory out of 5000000
+ 32331 strings out of 480608
+ 612461 string characters out of 5903629
+ 1229152 words of memory out of 5000000
  46470 multiletter control sequences out of 15000+600000
  567601 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,19n,105p,2177b,1620s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.50} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.19} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.46} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.75} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.48} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.44} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.41} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.37} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.86} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.84} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.78} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.64} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.57} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.47} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.43} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.38} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.36} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.32} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.26} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.22} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.20} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.18} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{appendix*.92} has been referenced but does not exis
-t, replaced by a fixed one
-
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
-/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8
-.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.
-pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2020/texmf-dist/fo
-nts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/cm-super/sfrb1440.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/cm-super/sfrb1728.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/
-type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
-pe1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (202 pages, 5890081 bytes).
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbs
+y8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
+></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/
+2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/cm-super/sfrb1440.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/cm-super/sfrb1728.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/cm-super/sfrb2074.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
+type1/public/cm-super/sfti1200.pfb>
+Output written on Chrysis.pdf (202 pages, 5890704 bytes).
 PDF statistics:
- 3516 PDF objects out of 3580 (max. 8388607)
- 3119 compressed objects within 32 object streams
- 1024 named destinations out of 1200 (max. 500000)
+ 3496 PDF objects out of 3580 (max. 8388607)
+ 3100 compressed objects within 31 object streams
+ 1001 named destinations out of 1200 (max. 500000)
  919 words of extra memory for PDF output out of 10000 (max. 10000000)
 

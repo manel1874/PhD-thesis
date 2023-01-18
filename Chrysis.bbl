@@ -92,12 +92,6 @@ A.~C. {Yao}.
 \newblock In {\em 23rd Annual Symposium on Foundations of Computer Science
   (sfcs 1982)}, pages 160--164, 1982.
 
-\bibitem{Y86}
-Andrew Chi-Chih Yao.
-\newblock How to generate and exchange secrets.
-\newblock In {\em 27th Annual Symposium on Foundations of Computer Science
-  (sfcs 1986)}. {IEEE}, October 1986.
-
 \bibitem{Goldreich87}
 O.~Goldreich, S.~Micali, and A.~Wigderson.
 \newblock How to play {ANY} mental game.
@@ -111,18 +105,6 @@ Rikke Bendlin, Ivan Damg{\aa}rd, Claudio Orlandi, and Sarah Zakarias.
   169--188. Springer Berlin Heidelberg, 2011.
 
 \bibitem{D12}
-Ivan Damg{\aa}rd, Valerio Pastro, Nigel Smart, and Sarah Zakarias.
-\newblock Multiparty computation from somewhat homomorphic encryption.
-\newblock In {\em Lecture Notes in Computer Science}, pages 643--662. Springer
-  Berlin Heidelberg, 2012.
-
-\bibitem{K88}
-Joe Kilian.
-\newblock Founding cryptography on oblivious transfer.
-\newblock In {\em Proceedings of the twentieth annual {ACM} symposium on Theory
-  of computing - {STOC} '88}. {ACM} Press, 1988.
-
-\bibitem{DPSZ12}
 Ivan Damg{\aa}rd, Valerio Pastro, Nigel Smart, and Sarah Zakarias.
 \newblock Multiparty computation from somewhat homomorphic encryption.
 \newblock In {\em Lecture Notes in Computer Science}, pages 643--662. Springer
@@ -285,6 +267,12 @@ Armando~N. Pinto, Laura Ortiz, Manuel Santos, Ana~C. Gomes, Juan~P. Brito,
 \newblock In {\em 2020 22nd International Conference on Transparent Optical
   Networks ({ICTON})}. {IEEE}, July 2020.
 
+\bibitem{S22}
+Manuel~B. Santos.
+\newblock Peco: methods to enhance the privacy of deco protocol.
+\newblock Cryptology ePrint Archive, Paper 2022/1774, 2022.
+\newblock \url{https://eprint.iacr.org/2022/1774}.
+
 \bibitem{BGW88}
 Michael Ben-Or, Shafi Goldwasser, and Avi Wigderson.
 \newblock Completeness theorems for non-cryptographic fault-tolerant
@@ -313,6 +301,18 @@ Michael~O. Rabin.
 \newblock How to exchange secrets with oblivious transfer.
 \newblock Technical Report TR-81, Aiken Computation Laboratory, Harvard
   University, 1981.
+
+\bibitem{Y86}
+Andrew Chi-Chih Yao.
+\newblock How to generate and exchange secrets.
+\newblock In {\em 27th Annual Symposium on Foundations of Computer Science
+  (sfcs 1986)}. {IEEE}, October 1986.
+
+\bibitem{K88}
+Joe Kilian.
+\newblock Founding cryptography on oblivious transfer.
+\newblock In {\em Proceedings of the twentieth annual {ACM} symposium on Theory
+  of computing - {STOC} '88}. {ACM} Press, 1988.
 
 \bibitem{Che04}
 Yan-Cheng Chang.
