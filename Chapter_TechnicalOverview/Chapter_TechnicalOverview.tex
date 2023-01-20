@@ -306,15 +306,15 @@ $$P\left[ \mu_{\bar{T}} - \mu_T \geq \sqrt{\frac{n(t+1)}{2(n-t)t^2} \log \frac{1
 
 \subsection{Entropy}
 
-How unpredictable is some random variable? How much information do we gain when we observe some system? To answer these questions, several measures under the name of entropy were developed. The most simple classical entropy measure was developed by Shannon \cite{S48}. Shannon found a way to express the amount of information a random variable has. Intuitivelly, this should express the following behaviour: when some event is more predictable, it conveys less information. Indeed, the more scandalous and unpreditable the news are, the more informative they are. Shannon started by proposing the following function to describe the amount of information an event $A$ has:
+Entropy measures are used to quantify the unpredictability of a random variable and the amount of information gained by observing a system. One of the earliest and most widely used classical entropy measures was developed by Shannon in 1948 \cite{S48}. Shannon's entropy measure captures the idea that more predictable events convey less information. The more surprising and unpredictable an event is, the more informative it is. Shannon started by proposing the following function to describe the amount of information an event $A$ has:
 $$I(A) = - \log \left( P(A) \right),$$
-where $P(A)$ is the probability of the event $A$. From this, he defined the entropy to be the average information value of all the possible events. More formally, for a discrete random variable $X$
+where $P(A)$ is the probability of event $A$. Shannon's entropy is defined as the average amount of information of all possible events, and, for a discrete random variable X,  is calculated as follows:
 $$H(X) = \mathbb{E}\left[ I(X) \right].$$
 
-In the special case where we consider a distribution $P(X)$ over $\left\{0,1\right\}$ that selects $1$ with probability $p$ and $0$ with probability $1-p$, we have the binary entropy given as
+In the case of a distribution $P(X)$ over the set $\left{0,1\right}$ that selects 1 with probability $p$ and 0 with probability $1-p$, the binary entropy is given by the following equation:
 $$H(X) = -p \log_2 p - (1-p)\log_2(1-p).$$
 
-Throughout our analysis, we will also use several times the so-called $d-$ary entropy function, a generalization of the standard binary entropy function. However, this entropy measure does not have such an operational meaning such as the binary entropy.
+Throughout our analysis, we will also frequently use the $d-$ary entropy function, which is a generalization of the standard binary entropy function. However, it should be noted that the $d-$ary entropy does not possess the same operational meaning as the binary entropy measure.
 
 \begin{definition}
 For $d\geq 2$, the \textit{d-ary entropy function} $h_d : [0,1]\rightarrow\mathbb{R}$ is given by
@@ -331,9 +331,11 @@ For an integer $d\geq 2$ and $\mu \in [0, 1-\frac{1}{d}]$,
 \end{equation*}
 \end{lemma} 
 
-To prove the security of protocols is more important to understand the worst-case scenario instead of the average behaviour. Therefore, standard binary entropy style definitions are not enough for securing protocols and we need a new one. This is achieved with min-entropy. Classically, for a finite random variable $X$, where $P(X=x) = p_x$, the min-entropy is given by the following expression:
+The $d-$ary entropy is particularly useful in bounding the size of the Hamming ball, an important object in coding theory. The Hamming ball with radius $\mu$ centered at a point $\bm{r}$ is defined as the set of vectors $\bm{z}$ that are a distance of $\mu$ away from $\bm{r}$, as measured by the Hamming distance $d_H$. This is stated in the following lemma.
+
+When proving the security of protocols, it is crucial to understand the worst-case scenario rather than the average behavior. Therefore, the standard binary entropy definitions are not sufficient for securing protocols, and a new measure is needed. This is achieved through the use of min-entropy. Classically, for a finite random variable $X$, where $P(X=x) = p_x$, the min-entropy is defined as:
 $$H_{\min}(X) = -\log \max p_x.$$
-Operationally, this gives the probability of guessing the element drawn from $X$ when choosing the element $x$ with maximum probability,, i.e. $P_{\text{guess}} = \max p_x$. We can extend this definition to cq-states $\rho_{XB}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B)$ as given by Definition~\ref{def:cqentropy}.
+Operationally, this gives the probability of correctly guessing the element drawn from $X$, when choosing the element $x$ with maximum probability. That is, $P_{\text{guess}} = \max p_x$. This definition can also be extended to cq-states $\rho_{XB}\in\mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B)$ as defined in Definition~\ref{def:cqentropy}.
 
 \begin{definition}
 \label{def:cqentropy}
@@ -344,7 +346,7 @@ $$P_{\text{guess}}(X|B) = \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{x}^B\ri
 where the maximization is taken over all positive operator-valued measures (POVM), i.e. $\left\{ M_x \geq 0 : \sum_x M_x = \mathds{1} \right\}$.
 \end{definition}
 
-In Definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ has the operational meaning of being the probability of guessing $x$ having access to system $B$. Also, the maximization is taken over the most general kind of measurements allowed in quantum mechanics. Next, we present Lemma~\ref{lemma:bijectivefunction} that states how min-entropy changes when applying a fixed bijective function to the classical subsystem of a cq-state. This Lemma will be important to prove the security of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE}.
+In Definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ represents the probability of correctly guessing $x$ given access to system $B$. Additionally, the maximization is taken over the most general type of measurements allowed in quantum mechanics. The following Lemma~\ref{lemma:bijectivefunction} states how min-entropy changes when a fixed bijective function is applied to the classical subsystem of a cq-state. This lemma will be important in the proof of security for the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE}.
 
 \begin{lemma}
 Let $\rho_{XB} \in \mathcal{P}(\mathcal{H}_{X}\otimes \mathcal{H}_B)$ be a cq-state and let $f:\mathcal{X} \rightarrow \mathcal{X} $ be a fixed bijective function. Then,
@@ -369,8 +371,8 @@ H_{\min}(f(X)|B) &=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{f(x)}^
 &=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho_{x}^B \right]. 
 \end{eqnarray*}
 
-Note that $\left\{ N_x \right\}_x= \left\{U^{\dagger} M_x U\right\}_x$ is also a POVM: they are all positive semidefinite operators and it sums up to unity. Therefore, we have that $\left\{U^{\dagger} M_x U\right\}_x$ can only decrease the space of possible POVMs. So, 
-$$\max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho_{x}^B \right] \leq \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho_{x}^B \right].$$
+It is important to note that $\left{ N_x \right}_x= \left{U^{\dagger} M_x U\right}_x$ is also a POVM, as they are all positive semidefinite operators and they sum up to unity. Therefore, we have that $\left{U^{\dagger} M_x U\right}_x$ can only decrease the space of possible POVMs, which is why we have:
+$$\max_{{M_x}x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho{x}^B \right] \leq \max_{{M_x}x} \sum_x p_x \tr\left[ M_x \rho{x}^B \right].$$
 
 This means that, 
 \begin{equation*}
@@ -390,7 +392,8 @@ and
 $$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
 \end{definition}
 
-Now, consider the superposition state $\ket{\phi}_{AB'} = \sum_{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}_{AB'}$ and the mixture $\tilde{\rho}_{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
+Furthermore, consider the superposition state $\ket{\phi}{AB'} = \sum{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}{AB'}$ and the mixture $\tilde{\rho}{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives a lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
+
 
 \begin{lemma}[Lemma 3.1.13, \cite{R06}]
 Let $\rho_{AB'}$ and $\tilde{\rho}_{AB'}$ be defined as above. Then,
@@ -398,7 +401,8 @@ $$H_{\text{min}}(A | B')_{\rho} \geq H_{\text{min}}(A | B')_{\tilde{\rho}} - \lo
 \label{lemma:renner_lower_bound}
 \end{lemma}
 
-It will be crucial in the security proof of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE} to understand how min-entropy changes when a completely positive (CP) map is applied. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result is not enough to achieve useful min-entropy bounds. To achieve a meaningful bound for certain operators $\mathcal{M}$, we can use Theorem~\ref{thm:entaglementSamplingResult} along with some other two results (Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}). Note that, for readability purposes, the theorem uses the notation presented in Chapter~\ref{ch:QOLE}.
+To understand how min-entropy changes when a completely positive (CP) map is applied, it is crucial in the security proof of the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE}. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result alone is not sufficient to achieve useful min-entropy bounds. To achieve a meaningful bound for certain operators $\mathcal{M}$, we can use Theorem~\ref{thm:entaglementSamplingResult} along with Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}. It is worth noting that, for the sake of readability, the theorem uses the notation presented in Chapter~\ref{ch:QOLE}.
+
 
 \begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
 \label{thm:entaglementSamplingResult}
@@ -447,7 +451,7 @@ Let $\rho_{X B'}\in\mathcal{P}(\mathcal{H}_X \otimes \mathcal{H}_{B'})$ be a cq-
 $$H_{\min}(X|B')_{\rho} \leq H_2(X|B')_{\rho} \leq 2 H_{\min}(X|B')_{\rho}.$$
 \end{lemma}
 
-Finally, we present a data-processing inequality which reflects the intuitive idea that the min-entropy of some system $A$ given side information $B$ is non-decrease under local physical operation applied to $B$. 
+Finally, we present a data-processing inequality, which reflects the intuitive idea that the min-entropy of a system $A$, given side information $B$, does not decrease under local physical operations applied to $B$.
 
 \begin{lemma}[Data processing inequality, Theorem 6.19, \cite{T16}]
 \label{lemma:data_processing_inequality}
@@ -472,6 +476,14 @@ $$g_x(m) = x\cdot m \mod d = \sum x_i\, m_i \mod d$$
 \label{def:MMH}
 \end{definition}
 
+
+%%%%%%% chatgpt ::::
+Now, we present a particular two-universal hash family, known as Multi-linear Modular Hashing (MMH), that preserves the structure of the OLE input and output while maintaining its privacy amplification guarantees. This family is based on the modular inner product of vectors \cite{HK97}.
+
+Halevi and Krawczyk \cite{HK97} actually prove a stronger result, namely that the MMH$^*$ family is \textit{$\Delta-$universal}, which is more general than two-universal. For the sake of simplicity, we will only present the simpler version of this theorem here.
+
+The Generalized Leftover Hash Lemma, presented below, is a crucial component in the security proof of Chapter~\ref{ch:QOLE}. It ensures that, after applying a known function $g$ from a two-universal family to a random variable $X$, the resulting random variable $Z = g(X)$ is close to uniform, given some (possibly quantum) side information $E$. This is a high-dimensional version of the Lemma, which can be easily derived by using Lemma 4 from \cite{TSSR11} with $d_A = d^l$. Note that this is a special version, as Tomamichel et al. in \cite{TSSR11} prove it in the more general case for $\delta-$almost two-universal hash families.
+%%%%%%% chatgpt ::::
 
 
 \begin{theorem}[Theorem 3, \cite{HK97}]
