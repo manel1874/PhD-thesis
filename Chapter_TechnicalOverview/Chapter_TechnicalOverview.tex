@@ -257,7 +257,7 @@ To highlight the importance of OLE in secret sharing based SMC protocols, we go 
 
 Quantum information theory is a field that studies the implications of using quantum systems as the medium of information. The information carriers in quantum systems are governed by the laws of quantum mechanics, allowing for properties not present in classical methods to be exploited. In this section, we present the basic elements of quantum information that will be used in the quantum protocols presented and their security proofs.
 
-In quantum information theory, a quantum system is described by a Hilbert space $\mathcal{H}_A$. In this thesis, we will consider only finite-dimensional Hilbert spaces, where $\dim \mathcal{H}_A = d < \inf$. The space $\mathcal{H}_A$ can be identified with the complex vector space $\mathbb{C}^d$, as well as its corresponding dual space $\mathcal{H}^{*}_A$. We use the Dirac bra-ket notation to describe the states of a quantum system. A pure state is described by a normalized vector $\ket{\psi}_A \in \mathcal{H}_A$ and its dual vector $\bra{\psi}_A \in \mathcal{H}^{*}_A$. To simplify notation, we may omit specifying the Hilbert space to which a state belongs if it is clear from context. The standard basis of $\mathbb{C}^d$ can be identified with the computational basis of $\mathcal{H}_A$, denoted as $\left\{ \ket{i} \right\}{i=0}^{d-1}$. The joint system of multiple subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$ can be described by their tensor product, denoted as $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are represented as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
+In quantum information theory, a quantum system is described by a Hilbert space $\mathcal{H}_A$. In this thesis, we will consider only finite-dimensional Hilbert spaces, where $\dim \mathcal{H}_A = d < \inf$. The space $\mathcal{H}_A$ can be identified with the complex vector space $\mathbb{C}^d$, as well as its corresponding dual space $\mathcal{H}^{*}_A$. We use the Dirac bra-ket notation to describe the states of a quantum system. A pure state is described by a normalized vector $\ket{\psi}_A \in \mathcal{H}_A$ and its dual vector $\bra{\psi}_A \in \mathcal{H}^{*}_A$. To simplify notation, we may omit specifying the Hilbert space to which a state belongs if it is clear from context. The standard basis of $\mathbb{C}^d$ can be identified with the computational basis of $\mathcal{H}_A$, denoted as $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. The joint system of multiple subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$ can be described by their tensor product, denoted as $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are represented as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
 
 We can generate quantum pure states, denoted as $\ket{\psi_i}\in \mathcal{H}$, according to a probability distribution ${p_i}$. This situation is described by a density operator, denoted as $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly referred to as a mixed state. Density operators are positive semi-definite hermitian operators with unitary trace, that is, $\rho \geq 0$ and $\tr \rho = 1$. The set of hermitian operators, positive semi-definite operators and density operators on a Hilbert space $\mathcal{H}$ are denoted as $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$ and $\mathcal{P}(\mathcal{H})$ respectively.
 
@@ -311,7 +311,7 @@ $$I(A) = - \log \left( P(A) \right),$$
 where $P(A)$ is the probability of event $A$. Shannon's entropy is defined as the average amount of information of all possible events, and, for a discrete random variable X,  is calculated as follows:
 $$H(X) = \mathbb{E}\left[ I(X) \right].$$
 
-In the case of a distribution $P(X)$ over the set $\left{0,1\right}$ that selects 1 with probability $p$ and 0 with probability $1-p$, the binary entropy is given by the following equation:
+In the case of a distribution $P(X)$ over the set $\left\{0,1\right\}$ that selects 1 with probability $p$ and 0 with probability $1-p$, the binary entropy is given by the following equation:
 $$H(X) = -p \log_2 p - (1-p)\log_2(1-p).$$
 
 Throughout our analysis, we will also frequently use the $d-$ary entropy function, which is a generalization of the standard binary entropy function. However, it should be noted that the $d-$ary entropy does not possess the same operational meaning as the binary entropy measure.
@@ -371,7 +371,7 @@ H_{\min}(f(X)|B) &=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{f(x)}^
 &=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho_{x}^B \right]. 
 \end{eqnarray*}
 
-It is important to note that $\left{ N_x \right}_x= \left{U^{\dagger} M_x U\right}_x$ is also a POVM, as they are all positive semidefinite operators and they sum up to unity. Therefore, we have that $\left{U^{\dagger} M_x U\right}_x$ can only decrease the space of possible POVMs, which is why we have:
+It is important to note that $\left\{ N_x \right\}_x= \left\{U^{\dagger} M_x U\right\}_x$ is also a POVM, as they are all positive semidefinite operators and they sum up to unity. Therefore, we have that $\left\{U^{\dagger} M_x U\right\}_x$ can only decrease the space of possible POVMs, which is why we have:
 $$\max_{{M_x}x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho{x}^B \right] \leq \max_{{M_x}x} \sum_x p_x \tr\left[ M_x \rho{x}^B \right].$$
 
 This means that, 
@@ -387,9 +387,9 @@ The conditional min-entropy can be generalized to the fully quantum case where b
 \begin{definition}
 \label{def:conditionalquantumminentropy}
 Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B')$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_B')$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
-$$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \}$$
+$$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \},$$
 and 
-$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma} $$
+$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma}.$$
 \end{definition}
 
 Furthermore, consider the superposition state $\ket{\phi}{AB'} = \sum{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}{AB'}$ and the mixture $\tilde{\rho}{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives a lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
@@ -397,7 +397,7 @@ Furthermore, consider the superposition state $\ket{\phi}{AB'} = \sum{z\in B}\al
 
 \begin{lemma}[Lemma 3.1.13, \cite{R06}]
 Let $\rho_{AB'}$ and $\tilde{\rho}_{AB'}$ be defined as above. Then,
-$$H_{\text{min}}(A | B')_{\rho} \geq H_{\text{min}}(A | B')_{\tilde{\rho}} - \log |\mathcal{B}|$$
+$$H_{\text{min}}(A | B')_{\rho} \geq H_{\text{min}}(A | B')_{\tilde{\rho}} - \log |\mathcal{B}|.$$
 \label{lemma:renner_lower_bound}
 \end{lemma}
 
@@ -408,7 +408,7 @@ To understand how min-entropy changes when a completely positive (CP) map is app
 \label{thm:entaglementSamplingResult}
 Let $\mathbf{X}$ denote a system with $n$ qudits, and  $\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}}$ be a CP map such that $((\mathcal{M}^\dagger \circ \mathcal{M})_{\mathbf{X}}\otimes \text{id}_{\bar{\mathbf{X}}})(\Phi_{\mathbf{X}\bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in\mathbb{Z}^{2n}_d} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}$. Then, for any partition of $\mathbb{Z}^{2n}_d = \mathfrak{S}_+ \cup \mathfrak{S}_-$ into subsets $\mathfrak{S}_+$ and $\mathfrak{S}_-$, and $\mathcal{M}(\sigma_{\mathbf{X}E}) = \sigma_{\mathbf{F}\mathbf{Y}E}$ we have 
 \begin{equation}
-    2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + (\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}) d^n,
+    2^{-\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y}E} | \sigma_{\mathbf{X}E}}} \leq \sum_{(\bm{a},\bm{b})\in\mathfrak{S}_+} \lambda_{(\bm{a},\bm{b})} 2^{-\text{H}_2(\mathbf{X} | E)_{\sigma_{\mathbf{X}E}}} + \left(\max_{(\bm{a},\bm{b})\in\mathfrak{S}_-} \lambda_{(\bm{a},\bm{b})}\right) d^n,
 \end{equation}
  where, in general, for a (not necessarily normalized) quantum state $\rho_{AB}\in \mathcal{P}(\mathcal{H}_A\otimes\mathcal{H}_B)$, $\text{H}_2(A|B)$   is the so-called \textit{collision entropy}~\cite{R06}, given as 
 \begin{equation*} 
@@ -467,7 +467,7 @@ We start by defining a particular set of functions that are usually used to ampl
 A family, $\mathfrak{F}$, of functions, $g$, with domain $D$ and range $R$ is called a $\delta-$almost two-universal hash family if for any two distinct elements $w,w'\in D$ and for $g$ chosen at random from $\mathfrak{F}$, the probability of a \textit{collision} $g(w)=g(w')$ is at most $\delta$. In the special case that $\delta=1/|R|$, where $|R|$ is the size of the range $R$, the family is called \textit{two-universal}. 
 \end{definition}
 
-Now, we present a particular two-universal hash family that preserves the structure of the OLE input and output while keeping its privacy amplification guarantees. This family is called Multi-linear Modular Hashing as it is based on the modular inner product of vectors \cite{HK97}.
+Now, we present a particular two-universal hash family, known as Multi-linear Modular Hashing (MMH), that preserves the structure of the OLE input and output while maintaining its privacy amplification guarantees. This family is based on the modular inner product of vectors \cite{HK97}.
 \begin{definition}[Definition 2, \cite{HK97}]
 Let $d$ be a prime and let $n$ be an integer $n>0$. Define a family MMH$^*$ (Multi-linear Modular Hashing) of functions from $\mathbb{Z}_d^n$ to $\mathbb{Z}_d$ as follows
 $$\text{MMH}^*:= \{ g_x : \mathbb{Z}_d^n\rightarrow \mathbb{Z}_d \, | \, x\in \mathbb{Z}_d^n \}$$
@@ -477,21 +477,12 @@ $$g_x(m) = x\cdot m \mod d = \sum x_i\, m_i \mod d$$
 \end{definition}
 
 
-%%%%%%% chatgpt ::::
-Now, we present a particular two-universal hash family, known as Multi-linear Modular Hashing (MMH), that preserves the structure of the OLE input and output while maintaining its privacy amplification guarantees. This family is based on the modular inner product of vectors \cite{HK97}.
-
-Halevi and Krawczyk \cite{HK97} actually prove a stronger result, namely that the MMH$^*$ family is \textit{$\Delta-$universal}, which is more general than two-universal. For the sake of simplicity, we will only present the simpler version of this theorem here.
-
-The Generalized Leftover Hash Lemma, presented below, is a crucial component in the security proof of Chapter~\ref{ch:QOLE}. It ensures that, after applying a known function $g$ from a two-universal family to a random variable $X$, the resulting random variable $Z = g(X)$ is close to uniform, given some (possibly quantum) side information $E$. This is a high-dimensional version of the Lemma, which can be easily derived by using Lemma 4 from \cite{TSSR11} with $d_A = d^l$. Note that this is a special version, as Tomamichel et al. in \cite{TSSR11} prove it in the more general case for $\delta-$almost two-universal hash families.
-%%%%%%% chatgpt ::::
-
-
 \begin{theorem}[Theorem 3, \cite{HK97}]
 The family MMH$^*$ is two-universal.
 \end{theorem}
-In fact, Halevi and Krawczyk \cite{HK97} prove a stronger result, namely that the MMH$^*$ family is \textit{$\Delta-$universal}, which is more general than two-universal. For the sake of simplicity, we just present here this particular version of the theorem.
+Halevi and Krawczyk \cite{HK97} actually prove a stronger result, namely that the MMH$^*$ family is \textit{$\Delta-$universal}, which is more general than two-universal. For the sake of simplicity, we only present the simpler version of this theorem here.
 
-The following \textit{Generalized Leftover Hash Lemma} is a relevant ingredient in the security proof of Chapter~\ref{ch:QOLE}, as it ensures that, after applying a known function $g$  from a two-universal family to a random variable $X$, the resulting random variable $Z = g(X)$  is close to uniform, conditioned on some (possibly quantum) side information $E$. This is a high-dimensional version of the Lemma, that can be easily deduced by using Lemma 4 from \cite{TSSR11} with $d_A = d^l$. Note also that this is a special version, since Tomamichel et al. in \cite{TSSR11} prove it in the more general case for $\delta-$almost two-universal hash families.
+The Generalized Leftover Hash Lemma, presented below, is a crucial component in the security proof of Chapter~\ref{ch:QOLE}. It ensures that, after applying a known function $g$ from a two-universal family to a random variable $X$, the resulting random variable $Z = g(X)$ is close to uniform, given some (possibly quantum) side information $E$. This is a high-dimensional version of the Leftover Hash Lemma, which can be easily derived by using Lemma 4 from \cite{TSSR11} with $d_A = d^l$. Note that this is a special version, as Tomamichel et al. in \cite{TSSR11} prove it in the more general case for $\delta-$almost two-universal hash families.
 
 %Next, we state a crucial result that is used to prove the security of the quantum OLE protocol~\footnote{Here we present a multidimensional version of the Generalized Leftover Hash Lemma. This can be easily deduced by using Lemma 4 from Tomamichel et al. work \cite{TSSR11} with $d_A = d$.}. This ensures that, after applying a known function $f$ from a two-universal family to a random variable $X$, the resulting random variable $Z = f(X)$ is close to uniform conditioned on some (possibly quantum) side information $E$. It also describes how close $Z$ is to uniform with respect to the amount of information we have about $X$ conditioned on $E$, i.e. $H_\text{min}(X|E)$.
 
@@ -507,17 +498,15 @@ Let $X$ be a random variable, $E$ a quantum system, and $\mathfrak{F}$ a two-uni
 %********************************** %Third Section  **************************************
 \section{Universal composability}
 
-The universal composability (UC) framework was introduced by Canetti \cite{C20} in the classical setting and extended to the quantum setting by Unruh, and Ben-Or and Mayers \cite{Unruh04, BenOrMay04}(see also \cite{Unruh10, FS09}).  It renders strong composability guarantees as it ensures that the security of the protocol is independent of any external execution of the same or other protocols.  Both classical and quantum frameworks follow the same ideal-real world comparison structure and consider the same interactions between machines. The difference lies on the operations allowed by the quantum-UC framework, where we can also store, transmit, and process  quantum states. 
+The universal composability (UC) framework, first introduced by Canetti in the classical setting \cite{C20}, was extended to the quantum setting by Unruh, Ben-Or, and Mayers \cite{Unruh04, BenOrMay04} (see also \cite{Unruh10, FS09}). It provides strong composability guarantees by ensuring the security of a protocol is independent of any external execution of the same or other protocols. Both the classical and quantum frameworks use the same ideal-real world comparison structure and consider similar interactions between machines. However, the quantum-UC framework allows for the manipulation of quantum states in addition to classical operations.
 
-More specifically, the quantum-UC security of some protocol $\Pi$ is drawn by comparing two scenarios. A real scenario where  $\Pi$ is executed and an ideal scenario where an ideal functionality, $\mathcal{F}$,  that carries out the same task and is defined \textit{a priori}, is executed. The comparison is done by a special machine, called the \textit{environment}, $\mathcal{Z}$, that supervises the execution of both scenarios and has access to any external information (e.g. concurrent executions of the same or any other protocol). In the two-party case, the structure of the machines in both scenarios is as follows: The real scenario has the environment, $\mathcal{Z}$, the adversary, $Adv$, and the two parties Alice  and Bob, while the ideal scenario has the environment $\mathcal{Z}$, the simulator $\mathcal{S}$, the two parties Alice and Bob and the ideal functionality $\mathcal{F}$. 
-%Note that the adversary $Adv$ could be integrated inside the environment $\mathcal{Z}$, as $\mathcal{Z}$ has full control over $Adv$  \cite{Unruh10}, but for clarity, we keep them separated in the real scenario. 
-Informally, we say that the protocol $\Pi$ is quantum-UC secure if no environment $\mathcal{Z}$ can distinguish between the execution of $\Pi$ in the real scenario and  the execution of the  functionality $\mathcal{F}$ in the ideal scenario. Any possible attack of the adversary $Adv$ in the execution of $\Pi$ can be simulated by the simulator $\mathcal{S}$ in the ideal-world execution of $\mathcal{F}$, without any noticeable difference form the point-of-view of the environment $\mathcal{Z}$. Since the ideal functionality $\mathcal{F}$ is secure by definition, the real-world adversary is not able to extract any more information than what is allowed by the functionality $\mathcal{F}$. %We can see the structure of both scenarios in Figure~\ref{fig:realmodel} and \ref{fig:idealmodel} for the case where Alice is corrupted and the ideal functionality is the oblivious linear evaluation, $\mathcal{F}_{\textbf{OLE}}$. 
+Specifically, the quantum-UC security of a protocol $\Pi$ is determined by comparing its execution in a real scenario, where $\Pi$ is executed, to an ideal scenario, where an ideal functionality $\mathcal{F}$ that carries out the same task is executed. The comparison is performed by a special machine called the environment, $\mathcal{Z}$, which supervises the execution of both scenarios and has access to any external information, such as concurrent executions of the same or any other protocol. In the two-party case, the structure of the machines in both scenarios is as follows: in the real scenario, there is the environment $\mathcal{Z}$, the adversary $Adv$, and the two parties, Alice and Bob. In the ideal scenario, there is the environment $\mathcal{Z}$, the simulator $\mathcal{S}$, the two parties Alice and Bob, and the ideal functionality $\mathcal{F}$. Informally, a protocol $\Pi$ is considered quantum-UC secure if the environment $\mathcal{Z}$ cannot distinguish between the execution of $\Pi$ in the real scenario and the execution of the functionality $\mathcal{F}$ in the ideal scenario. Any possible attack of the adversary $Adv$ in the execution of $\Pi$ can be simulated by the simulator $\mathcal{S}$ in the ideal-world execution of $\mathcal{F}$, without any noticeable difference from the point-of-view of the environment $\mathcal{Z}$. As the ideal functionality $\mathcal{F}$ is secure by definition, the real-world adversary is not able to extract any more information than what is allowed by the functionality $\mathcal{F}$.
 
-Let us now see the formal definition. Let $\Pi$ and $\rho$ be the real and ideal two-party protocols. We denote by $\text{EXEC}_{\Pi^C, Adv, \mathcal{Z}}$ (analogously $\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$) the output of the environment $\mathcal{Z}$ at the end of the real (ideal) execution, and by $C$ the corrupted party. 
+The formal definition of quantum-UC security can be stated as follows. Let $\Pi$ and $\rho$ represent the real and ideal two-party protocols, respectively. Let $\text{EXEC}{\Pi^C, Adv, \mathcal{Z}}$ denote the output of the environment $\mathcal{Z}$ at the end of the real execution, where $C$ denotes the corrupted party and $Adv$ denotes the adversary. Similarly, let $\text{EXEC}{\rho^C, \mathcal{S}, \mathcal{Z}}$ denote the output of the environment $\mathcal{Z}$ at the end of the ideal execution, where $\mathcal{S}$ is the simulator. 
 
 \begin{definition}[Statistical quantum-UC security,  Computational quantum-UC security \cite{Unruh10}]
 
-Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum-UC emulates $\rho$ if and only if for every party, $C$, and for every adversary, $Adv$, there exists a simulator, $\mathcal{S}$, such that for every environment $\mathcal{Z}$, and every $z\in\{0,1\}^*$, $n\in\mathbb{N}$
+Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum-UC emulates $\rho$ if and only if for every party, $C$, and for every adversary, $Adv$, there exists a simulator, $\mathcal{S}$, such that for every environment $\mathcal{Z}$, and every $z\in\{0,1\}^*$, $n\in\mathbb{N}$,
 \begin{equation*}
     \big|\text{P}[\text{EXEC}_{\Pi^C, Adv, \mathcal{Z}} (n, z) = 1] - \text{P}[\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}(n, z) = 1]\big| \leq \mu(n),
 \end{equation*}
@@ -527,11 +516,11 @@ Let protocols $\pi$ and $\rho$ be given. We say that $\pi$ statistically quantum
 
 
 
- The role of the simulator, $\mathcal{S}$, is to  simulate the execution of the protocol $\Pi$ in such a way that the environment $\mathcal{Z}$ is not able to distinguish between the two executions. 
-In particular, since $\mathcal{S}$ does not have access to the inputs/outputs of the actual honest party, it runs a simulated honest party interacting with the environment which is acting as the adversary. Moreover, $\mathcal{S}$ controls the  dishonest party, therefore controlling their inputs to the ideal functionality $\mathcal{F}$. 
-It then relies on its ability to extract the inputs  that the environment provides to the dishonest party. Then, it uses them along with the ideal functionality outputs in order to successfully generate a simulated execution that cannot be distinguished by the environment.
+The role of the simulator, $\mathcal{S}$, in the quantum-UC framework is to simulate the execution of the protocol $\Pi$ in such a way that the environment $\mathcal{Z}$ is not able to distinguish between the real execution and the ideal execution. To accomplish this, $\mathcal{S}$ runs a simulated honest party that interacts with the environment, which is acting as the adversary. Additionally, $\mathcal{S}$ controls the dishonest party and their inputs to the ideal functionality $\mathcal{F}$, as well as the external functionality $\mathcal{F}_{\textbf{ext}}$ if used in the real execution.
 
-Finally, note that, in case the real execution of the protocol $\Pi$ makes use of some external functionality $\mathcal{F}_{\textbf{ext}}$, the simulator $\mathcal{S}$ can control and reprogram $\mathcal{F}_{\textbf{ext}}$ in whatever way suits best in the ideal world to produce an indistinguishable simulation of the real world.
+In order to generate a simulated execution that cannot be distinguished by the environment, $\mathcal{S}$ relies on its ability to extract the inputs provided to the dishonest party by the environment and uses them along with the ideal functionality outputs. Furthermore, $\mathcal{S}$ can reprogram $\mathcal{F}_{\textbf{ext}}$ in the ideal world as needed to produce an indistinguishable simulation of the real world.
+
+In summary, the simulator $\mathcal{S}$ plays a crucial role in the quantum-UC framework by simulating the execution of the real protocol $\Pi$ in the ideal scenario, in order to ensure that the environment $\mathcal{Z}$ is not able to distinguish between the real execution and the ideal execution, thereby providing strong composability guarantees for the protocol $\Pi$.
 
 
 %\begin{figure}[!htb]
@@ -559,9 +548,9 @@ Finally, note that, in case the real execution of the protocol $\Pi$ makes use o
 
 \subsubsection{Ideal functionalities}\label{functinalities}
 
-Whenever a protocol $\pi$ makes use of an external functionality $\mathcal{F}_{\textbf{ext}}$, we say that $\pi$ is in the $\mathcal{F}_{\textbf{ext}}-$hybrid model. The quantum OLE protocol $\Pi_{\textbf{QOLE}}$ presented in Chapter~\ref{ch:QOLE} uses the ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, defined in Figure~\ref{fig:func_com}. Note that the protocol makes several calls to $\mathcal{F}_{\textbf{COM}}$ and only opens a subset of the committed elements. Therefore, we use an index element $i$ to specify different instance calls. In the commitment phase, Bob sends $(\texttt{commit}, i, M)$ to the functionality and the functionality sends $(\texttt{commit}, i)$ to Alice. In the opening phase, Bob sends $(\texttt{open}, i)$ and the functionality sends $(\texttt{open}, i, M)$ to Alice.
+Whenever a protocol $\Pi$ utilizes an external functionality $\mathcal{F}_{\textbf{ext}}$, we say that $\Pi$ is in the $\mathcal{F}_{\textbf{ext}}-$hybrid model. The quantum OLE protocol $\Pi_{\textbf{QOLE}}$ presented in Chapter~\ref{ch:QOLE} employs the ideal commitment functionality, $\mathcal{F}_{\textbf{COM}}$, defined in Figure~\ref{fig:func_com}. Note that the protocol makes multiple calls to $\mathcal{F}_{\textbf{COM}}$ and only opens a subset of the committed elements. To specify different instance calls, we use an index element $i$. In the commitment phase, Bob sends $(\texttt{commit}, i, M)$ to the functionality, which in turn sends $(\texttt{commit}, i)$ to Alice. In the opening phase, Bob sends $(\texttt{open}, i)$, and the functionality sends $(\texttt{open}, i, M)$ to Alice.
 
-The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment protocol $\pi_{\textbf{COM}}$ presented in \cite{CF01} which is computationally UC-secure in the Common Reference String (CRS) model. As analyzed in \cite{CBGLM21} (Theorem 3.), the protocol $\pi_{\textbf{COM}}$ computationally quantum-UC realizes $\mathcal{F}_{\textbf{COM}}$ in the CRS model. As a result, since $\Pi_{\textbf{QOLE}}$ is proved to be quantum-UC secure, the resulting protocol $\pi_{\textbf{QOLE}}^{\pi_{\textbf{COM}}}$ is quantum-UC secure by the composition theorem \citep{Unruh10}.
+The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment protocol $\Pi_{\textbf{COM}}$ presented in \cite{CF01}, which is computationally UC-secure in the Common Reference String (CRS) model. As analyzed in \cite{CBGLM21} (Theorem 3.), the protocol $\Pi_{\textbf{COM}}$ computationally quantum-UC realizes $\mathcal{F}_{\textbf{COM}}$ in the CRS model. Therefore, since $\Pi_{\textbf{QOLE}}$ is proved to be quantum-UC secure, the resulting protocol $\Pi_{\textbf{QOLE}}^{\Pi_{\textbf{COM}}}$ is quantum-UC secure by the composition theorem \citep{Unruh10}.
 
 
 %\begin{figure}[!h]
