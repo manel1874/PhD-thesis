@@ -12,7 +12,7 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces BBCS OT protocol in the noisy-quantum-storage model.\relax }}{40}{figure.caption.31}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Alice faked-state attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{42}{figure.caption.33}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Alice trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{43}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Bob trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{44}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Bob trojan-horse attack to $\Pi ^{\textbf {BBCS}}_{\textbf {bqs}}$ and $\Pi ^{\textbf {BBCS}}_{\mathcal {F}_\textbf {COM}}$ protocols.\relax }}{43}{figure.caption.35}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Bellare-Micali classical OT protocol divided into two phases \cite {BM89}.\relax }}{48}{figure.caption.37}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Plot of expression (\ref {eq:nOTs}) on the overestimation of OT rate against the number of modular exponentiation operations required per OT.\relax }}{52}{figure.caption.39}%

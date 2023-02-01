@@ -29,9 +29,9 @@
 \contentsline {subsection}{\numberline {3.2.3}BBCS in the limited-quantum-storage model}{36}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Bounded-quantum-storage model}{36}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{38}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Experimental attacks}{41}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.6}Experimental attacks}{40}{subsection.3.2.6}%
 \contentsline {subsubsection}{QOT attacks}{41}{section*.32}%
-\contentsline {subsubsection}{Countermeasures}{43}{section*.36}%
+\contentsline {subsubsection}{Countermeasures}{44}{section*.36}%
 \contentsline {chapter}{\numberline {4}Classical and quantum oblivious transfer}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Classical oblivious transfer}{48}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Security issues}{49}{subsection.4.1.1}%
