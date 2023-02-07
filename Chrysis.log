@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  6 FEB 2023 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  7 FEB 2023 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1514,55 +1514,46 @@ viousTransfer.tex [46
 ]
 Chapter 4.
 
-Underfull \vbox (badness 2302) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
 Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [48]
 [49] [50]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1629, 462.5
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1628, 462.5
 28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
 <use Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>
 Package pdftex.def Info: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSec
-cond.png  used on input line 123.
+cond.png  used on input line 131.
 (pdftex.def)             Requested size: 455.24411pt x 341.44843pt.
- [51]
-Underfull \vbox (badness 1609) has occurred while \output is active []
-
- [52 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>] [53]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 Underfull \vbox (badness 1533) has occurred while \output is active []
 
- [54]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [51]
+[52 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>]
+[53] [54]
+Underfull \vbox (badness 3000) has occurred while \output is active []
 
  [55]
-Underfull \vbox (badness 1259) has occurred while \output is active []
-
- [56]
-[57]
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
- [58]
-[59]
+[56] [57] [58]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[60] [61]
+
+Underfull \vbox (badness 4479) has occurred while \output is active []
+
+ [59]
+Underfull \vbox (badness 8056) has occurred while \output is active []
+
+ [60]
+[61] [62]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 480.
+(amsmath)                trying to recover with `aligned' on input line 488.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
 [63]) [64]
 \openout2 = `Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.
 aux'.
@@ -1612,7 +1603,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
 [79]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=2071, 601.24625pt x 339.2675pt>
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=2070, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1623,7 +1614,7 @@ ut line 490.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [80]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2079, 589.0005pt x 349.96747pt>
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2078, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
@@ -1631,7 +1622,7 @@ t line 518.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
  [81 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [82 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2101, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2100, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1648,7 +1639,7 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [85] [86]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2154, 18
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2153, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -1672,7 +1663,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [94]
 [95] [96]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2278, 395.3169pt x 271.
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2277, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
@@ -1680,7 +1671,7 @@ File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 943.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2284, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2283, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
@@ -1688,7 +1679,7 @@ Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 954.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
  [97]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2289, 395.3169
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2288, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
@@ -1897,6 +1888,9 @@ Package rerunfilecheck Info: File `Chrysis.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
@@ -1906,7 +1900,7 @@ Here is how much of TeX's memory you used:
  46470 multiletter control sequences out of 15000+600000
  567601 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,19n,105p,2177b,1620s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,19n,105p,1928b,1620s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><
@@ -1957,7 +1951,7 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (202 pages, 5886884 bytes).
+Output written on Chrysis.pdf (202 pages, 5886234 bytes).
 PDF statistics:
  3488 PDF objects out of 3580 (max. 8388607)
  3092 compressed objects within 31 object streams
