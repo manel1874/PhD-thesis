@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  8 FEB 2023 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  8 FEB 2023 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1534,25 +1534,14 @@ Underfull \vbox (badness 1132) has occurred while \output is active []
 
  [51]
 [52 <./Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png>]
-[53] [54]
-Underfull \vbox (badness 3000) has occurred while \output is active []
+[53] [54] [55] [56] [57]
+Underfull \vbox (badness 1024) has occurred while \output is active []
 
- [55]
-[56] [57] [58]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 4479) has occurred while \output is active []
-
- [59]
-Underfull \vbox (badness 8056) has occurred while \output is active []
-
- [60]
-[61] [62]
+ [58]
+[59] [60] [61] [62]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 494.
+(amsmath)                trying to recover with `aligned' on input line 501.
 
 [63]) [64]
 \openout2 = `Chapter_PrivatePhylogeneticTrees/Chapter_PrivatePhylogeneticTrees.
@@ -1603,7 +1592,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
 [79]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=2070, 601.24625pt x 339.2675pt>
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=2067, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1614,7 +1603,7 @@ ut line 490.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [80]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2078, 589.0005pt x 349.96747pt>
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2075, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
@@ -1622,7 +1611,7 @@ t line 518.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
  [81 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [82 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2100, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2097, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1639,7 +1628,7 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [85] [86]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2153, 18
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2150, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -1663,7 +1652,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [94]
 [95] [96]
-<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2277, 395.3169pt x 271.
+<Chapter_PrivatePhylogeneticTrees/total_running.png, id=2274, 395.3169pt x 271.
 91588pt>
 File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 )
@@ -1671,7 +1660,7 @@ File: Chapter_PrivatePhylogeneticTrees/total_running.png Graphic file (type png
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/total_running.png  us
 ed on input line 943.
 (pdftex.def)             Requested size: 316.25394pt x 217.53299pt.
-<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2283, 395.3169pt x 267.94102pt
+<Chapter_PrivatePhylogeneticTrees/c-qSMC.png, id=2280, 395.3169pt x 267.94102pt
 >
 File: Chapter_PrivatePhylogeneticTrees/c-qSMC.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/c-qSMC.png>
@@ -1679,7 +1668,7 @@ Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/c-qSMC.png  used on i
 nput line 954.
 (pdftex.def)             Requested size: 316.25394pt x 214.3531pt.
  [97]
-<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2288, 395.3169
+<Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png, id=2285, 395.3169
 pt x 287.99596pt>
 File: Chapter_PrivatePhylogeneticTrees/proportion_in_overhead.png Graphic file 
 (type png)
@@ -1897,7 +1886,7 @@ Here is how much of TeX's memory you used:
  46470 multiletter control sequences out of 15000+600000
  567601 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,19n,105p,1928b,1620s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,19n,105p,1933b,1620s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><
@@ -1948,10 +1937,10 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (202 pages, 5886189 bytes).
+Output written on Chrysis.pdf (202 pages, 5885140 bytes).
 PDF statistics:
- 3488 PDF objects out of 3580 (max. 8388607)
- 3092 compressed objects within 31 object streams
+ 3485 PDF objects out of 3580 (max. 8388607)
+ 3089 compressed objects within 31 object streams
  1001 named destinations out of 1200 (max. 500000)
  919 words of extra memory for PDF output out of 10000 (max. 10000000)
 

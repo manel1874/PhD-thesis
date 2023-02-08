@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Classical OT}{56}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}OT extension}{57}{subsection.4.2.3}%
 \contentsline {subsubsection}{ALSZ13 comparison}{57}{section*.43}%
-\contentsline {subsubsection}{KOS15 comparison}{61}{section*.47}%
+\contentsline {subsubsection}{KOS15 comparison}{60}{section*.47}%
 \contentsline {section}{\numberline {4.3}Conclusion}{63}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Private phylogenetic trees}{65}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Phylogenetic trees}{66}{section.5.1}%
