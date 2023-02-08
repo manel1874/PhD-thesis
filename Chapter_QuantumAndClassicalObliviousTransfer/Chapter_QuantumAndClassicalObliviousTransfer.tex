@@ -98,10 +98,10 @@ The research literature mainly presents two approaches to address this issue: de
 
 \subsection{Efficiency issues}
 
-In the previous section, we noted that every mitigation process used to increase security would bring a downside in efficiency: generating safe primes is more demanding, computing bigger exponents and module primes is heavier in general, and using post-quantum solutions require stronger computational assumptions and thus tends to increase the computational complexity. 
 
-Now, let us understand the efficiency limitations of the BM OT protocol. We start by looking at the operations used in the protocol (random number generation, modular multiplication, modular inversion, modular exponentiation, hash function evaluation, XOR operation) from which the most demanding operation is modular exponentiation. For this reason, the complexity of BM OT heavily depends on the complexity of modular exponentiation. The number of modular exponentiations executed in each phase is summarised in the Table~\ref{table:BMOT_mexp}.
+In the previous section, we highlighted that increasing security through mitigation processes always has an impact on efficiency. This is because generating secure primes is more demanding, larger exponents and prime modules result in heavier computations, and post-quantum solutions generally require stronger computational assumptions, leading to increased computational complexity.
 
+Now, let's examine the efficiency limitations of the BM OT protocol. To start, we will consider the operations used in the protocol, including random number generation, modular multiplication, modular inversion, modular exponentiation, hash function evaluation, and XOR operation. Of all these operations, modular exponentiation is the most demanding, meaning that the complexity of BM OT is heavily influenced by the complexity of modular exponentiation. The number of modular exponentiations performed in each phase is summarized in Table~\ref{table:BMOT_mexp}.
 
 \begin{table}[h!]
 \centering
@@ -117,13 +117,29 @@ Now, let us understand the efficiency limitations of the BM OT protocol. We star
 \label{table:BMOT_mexp}
 \end{table}
 
-One of the most efficient methods to compute general modular exponentiation with $n-$bit numbers is through a square-and-multiply algorithm along with Karatsuba multiplication. The former method takes $\mathcal{O}(n)$ multiplications and the latter has complexity $\mathcal{O}(n^{1.58})$. Thus, the overall method takes $\mathcal{O}(n^{2.58})$ $n-$bit operations \cite{MVV01}. To set an overestimation on the OT generation rate, let us only consider the time (in CPU cycles) required to compute all modular exponentiation operations. We can use the following expression:
+%%%%%%%%%%%%%%%%%%%% chatGPT
 
+One of the most efficient ways to perform general modular exponentiation with $n$-bit numbers is to use a combination of square-and-multiply algorithm and Karatsuba multiplication. The former has a complexity of $\mathcal{O}(n)$ multiplications, while the latter has a complexity of $\mathcal{O}(n^{1.58})$. The overall complexity of this method is $\mathcal{O}(n^{2.58})$ $n$-bit operations \cite{MVV01}. To overestimate the rate of OT generation, we'll consider the time (in CPU cycles) required to perform all modular exponentiation operations. The rate can be calculated using the following expression:
+\begin{equation}
+\label{eq:nOTs}
+\Big( \frac{C_{mexp}}{C_{cycles}} \times N_{mexp} \Big)^{-1}
+\end{equation}
+where $C_{mexp}$ is the number of CPU cycles required to perform one modular exponentiation, $C_{cycles}$ is the CPU frequency (number of cycles per second), and $N_{mexp}$ is the number of modular exponentiations performed in the OT implementation. It's important to note that this expression only provides an overestimation, as it depends on both the implementation of the modular exponentiation operation and the CPU frequency being used.
+
+
+%%%%%%%%%%%%%%%%%%%%%5
+
+
+One of the most efficient methods to compute general modular exponentiation with $n-$bit numbers is through a square-and-multiply algorithm along with Karatsuba multiplication. The former method takes $\mathcal{O}(n)$ multiplications and the latter has complexity $\mathcal{O}(n^{1.58})$. Thus, the overall method takes $\mathcal{O}(n^{2.58})$ $n-$bit operations \cite{MVV01}. To set an overestimation on the OT generation rate, let us only consider the time (in CPU cycles) required to compute all modular exponentiation operations. We can use the following expression:
 \begin{equation}
 \label{eq:nOTs}
 \Big( \frac{C_{mexp}}{C_{cycles}} \times N_{mexp} \Big)^{-1}
 \end{equation}
 where $C_{mexp}$ is the number of CPU cycles required to compute one modular exponentiation, $C_{cycles}$ is the CPU frequency (number of cycles per second) and $N_{mexp}$ is the number of modular exponentiations performed in the OT implementation. This expression only renders an overestimation because it depends on both the implementation of the modular exponentiation operation and the CPU frequency used. 
+
+
+
+
 
 Considering a standard CPU operating around $2.5$ GHz ($C_{cycles} = 2.5\times 10^9 $ cycles per second) and a very efficient implementation of modular exponentiation \cite{G11} ($C_{mexp} \sim 400\,000$ CPU cycles), the BM OT protocol would be able to perform at most $\sim 1041$ BM OTs in one second as represented in Fig.~\ref{fig:nOTsplot}.
 \begin{figure}[]
