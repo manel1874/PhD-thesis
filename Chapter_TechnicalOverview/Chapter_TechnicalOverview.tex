@@ -470,9 +470,9 @@ A family, $\mathfrak{F}$, of functions, $g$, with domain $D$ and range $R$ is ca
 Now, we present a particular two-universal hash family, known as Multi-linear Modular Hashing (MMH), that preserves the structure of the OLE input and output while maintaining its privacy amplification guarantees. This family is based on the modular inner product of vectors \cite{HK97}.
 \begin{definition}[Definition 2, \cite{HK97}]
 Let $d$ be a prime and let $n$ be an integer $n>0$. Define a family MMH$^*$ (Multi-linear Modular Hashing) of functions from $\mathbb{Z}_d^n$ to $\mathbb{Z}_d$ as follows
-$$\text{MMH}^*:= \{ g_x : \mathbb{Z}_d^n\rightarrow \mathbb{Z}_d \, | \, x\in \mathbb{Z}_d^n \}$$
+$$\text{MMH}^*:= \{ g_x : \mathbb{Z}_d^n\rightarrow \mathbb{Z}_d \, | \, x\in \mathbb{Z}_d^n \},$$
 where the functions $g_x$ are defined for any $x = (x_1,\ldots,x_n)$, $m = (m_1,\ldots, m_n) \in \mathbb{Z}_d^n$
-$$g_x(m) = x\cdot m \mod d = \sum x_i\, m_i \mod d$$
+$$g_x(m) = x\cdot m \mod d = \sum x_i\, m_i \mod d.$$
 \label{def:MMH}
 \end{definition}
 

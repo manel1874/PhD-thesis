@@ -451,10 +451,10 @@ where
 Hence, for the min-entropy bound,  we have that:
 \begin{align}
 H_{\min}(\mathbf{F} \,|\, B')_{\sigma_{\mathbf{F}B'}} &= H_{\min}(\mathbf{F}_{\bm{a}}, \mathbf{F}_{\bm{b}} \,|\, B')_{\sigma_{\mathbf{F}B'}} \nonumber\\
-&=H_{\min}( f^{\bm{C},\bm{D},\bm{S}}(\mathbf{F}_{\bm{a}_0}, \mathbf{F}_{\bm{b}_0} )  \,|\, \mathbf{C} \mathbf{D} \mathbf{S} B'_0)_{\mathcal{O}^{(3)} \mathcal{O}^{(2)}\sigma_{\mathbf{F}_0B'_0}} \nonumber\\
+&=H_{\min}( g^{\bm{C},\bm{D},\bm{S}}(\mathbf{F}_{\bm{a}_0}, \mathbf{F}_{\bm{b}_0} )  \,|\, \mathbf{C} \mathbf{D} \mathbf{S} B'_0)_{\mathcal{O}^{(3)} \mathcal{O}^{(2)}\sigma_{\mathbf{F}_0B'_0}} \nonumber\\
 &\geq H_{\min}(\mathbf{F}_{\bm{a}_0}, \mathbf{F}_{\bm{b}_0} \,|\, \mathbf{C} \mathbf{D} \mathbf{S} B'_0)_{ \mathcal{O}^{(2)}\sigma_{\mathbf{F}_0B'_0}} \label{first_rel} \\
 &\geq H_{\min}(\mathbf{F}_{\bm{a}_0}, \mathbf{F}_{\bm{b}_0} \,|\, B'_0)_{\sigma_{\mathbf{F}_0B'_0}} \label{second_rel}\\
-&\geq \frac{\log d}{2}(1 - h_d(\zeta)). \label{third_rel}
+&\geq \frac{n\log d}{2}(1 - h_d(\zeta)). \label{third_rel}
 \end{align}
 The inequality at step \eqref{first_rel} comes from Lemma~\ref{lemma:bijectivefunction},  as $g^{\bm{c},\bm{d},\bm{s}}$ is bijective. The inequality at step \eqref{second_rel} comes from Lemma~\ref{lemma:data_processing_inequality}, as the operator $\mathcal{O}^{(2)}$ takes the form of $\mathcal{O}^{(2)} = \mathds{1} \otimes \mathcal{M}$, where $\mathcal{M}$ is a CPTP map. The last inequality comes from Lemma~\ref{lemma:wrole_dishonest_bob}, property 2.
 
