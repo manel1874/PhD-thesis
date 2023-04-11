@@ -52,16 +52,16 @@ We compare the complexity of the transfer phase of two classical OT extension pr
 
 \
 
-\noindent\textbf{Quantum oblivious linear evaluation protocol.} Our second contribution is a quantum protocol for OLE that provides quantum-UC security in the $\mathcal{F}_{\textbf{COM}}-$hybrid model, which assumes the availability of a commitment functionality, $\mathcal{F}{\textbf{COM}}$. To ensure security, we leverage the properties of Mutually Unbiased Bases in high-dimensional Hilbert spaces with prime and prime-power dimensions. This approach is motivated by recent theoretical and experimental advancements in quantum cryptography \cite{BPT00,DEBZ10,Zhongetal2015,BHVBFHM18,DHMPPV21} that have opened the door for new solutions in the field.
-
-As far as we are aware, our protocol is the first to propose a quantum-UC secure quantum OLE. Furthermore, it does not rely on any quantum OT implementation, which is a common approach. We design the protocol to handle static corruption adversarial model for both semi-honest and malicious adversaries. Additionally, we introduce a weaker version of OLE, which has potential independent value. We also modify the proposed protocol to generate quantum-UC secure vector OLE (VOLE) and provide bounds on the size of VOLE based on the security parameters.
-
-\
-
 \noindent\textbf{Quantum assisted secure multiparty computation.} In light of individuals' privacy concerns and legal regulations, it is crucial to handle and study genomic data using highly secure privacy-preserving techniques. We propose a practical secure multiparty computation (SMC) system that utilizes quantum cryptographic protocols to compute a phylogenetic tree from a set of private genome sequences. This system applies several distance-based methods, such as Unweighted Pair Group Method with Arithmetic mean, Neighbour-Joining, and Fitch-Margoliash, in a private setting where the sequences owned by each party are not revealed to other members during the protocol. Instead of using a generic SMC implementation for phylogenetic trees, we develop a specialized private protocol that improves efficiency for this specific use case.
 
 
 We conduct a theoretical evaluation of the performance and privacy guarantees of our proposed system, providing a complexity analysis and security proof. We also provide a detailed explanation of the implementation details and cryptographic protocols used. We demonstrate the effectiveness and practicality of our quantum-assisted secure phylogenetic tree computation by implementing it using the Libscapi implementation of the Yao protocol, the PHYLIP library and simulated keys of two quantum systems: quantum oblivious key distribution and quantum key distribution. \footnote{ The code can be accessed at the following repo: \href{https://github.com/manel1874/private-phylogenetic-analysis}{github.com/manel1874/private-phylogenetic-analysis}.} We compare our implementation with a classical-only solution and find that both approaches have similar execution times. The only difference between the quantum and classical systems is the time overhead taken by the quantum-assisted approach for oblivious key management.
+
+\
+
+\noindent\textbf{Quantum oblivious linear evaluation protocol.} Our second contribution is a quantum protocol for OLE that provides quantum-UC security in the $\mathcal{F}_{\textbf{COM}}-$hybrid model, which assumes the availability of a commitment functionality, $\mathcal{F}_{\textbf{COM}}$. To ensure security, we leverage the properties of Mutually Unbiased Bases in high-dimensional Hilbert spaces with prime and prime-power dimensions. This approach is motivated by recent theoretical and experimental advancements in quantum cryptography \cite{BPT00,DEBZ10,Zhongetal2015,BHVBFHM18,DHMPPV21} that have opened the door for new solutions in the field.
+
+As far as we are aware, our protocol is the first to propose a quantum-UC secure quantum OLE. Furthermore, it does not rely on any quantum OT implementation, which is a common approach. We design the protocol to handle static corruption adversarial model for both semi-honest and malicious adversaries. Additionally, we introduce a weaker version of OLE, which has potential independent value. We also modify the proposed protocol to generate quantum-UC secure vector OLE (VOLE) and provide bounds on the size of VOLE based on the security parameters.
 
 \section*{Outline}
 

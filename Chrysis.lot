@@ -3,7 +3,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Number of modular exponentiations in the BM protocol for each phase.\relax }}{51}{table.caption.38}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Number of modular exponentiation operations and communication rounds executed during the transfer phase of four other classical protocols.\relax }}{56}{table.caption.42}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Number of modular exponentiation operations and communication rounds executed during the transfer phase of four classical protocols.\relax }}{56}{table.caption.42}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Computational complexity comparison between ALSZ13 \cite {ALSZ13} OT extension protocol and $\Pi ^{\textbf {BBCS}}_{\textbf {O}}$ protocol from section\nobreakspace {}\ref {O-OT}.\relax }}{59}{table.caption.45}%
 \contentsline {table}{\numberline {4.4}{\ignorespaces Communication complexity comparison between ALSZ13 \cite {ALSZ13} OT extension protocol and $\Pi ^{\textbf {BBCS}}_{\textbf {O}}$ protocol from section\nobreakspace {}\ref {O-OT}.\relax }}{59}{table.caption.46}%
 \contentsline {table}{\numberline {4.5}{\ignorespaces Computational complexity comparison between KOS15 \cite {KOS15} OT extension protocol and $\Pi ^{\textbf {BBCS}}_{\textbf {O}}$ protocol from section\nobreakspace {}\ref {O-OT}.\relax }}{61}{table.caption.49}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  16 MAR 2023 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  11 APR 2023 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1440,13 +1440,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Underfull \vbox (badness 1038) has occurred while \output is active []
 
  [32]
-[33]
-Overfull \hbox (0.43742pt too wide) in paragraph at lines 222--223
-[]\OT1/cmr/m/n/12 The work by Aaron-son [[]] pro-vides non-constructive ev-i-de
-nce ``that collision-resistant
- []
-
-[34] [35]
+[33] [34] [35]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1860,7 +1854,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
 Here is how much of TeX's memory you used:
  32331 strings out of 480608
  612461 string characters out of 5903629
- 1229211 words of memory out of 5000000
+ 1229205 words of memory out of 5000000
  46470 multiletter control sequences out of 15000+600000
  567601 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1915,7 +1909,7 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (202 pages, 5882653 bytes).
+Output written on Chrysis.pdf (202 pages, 5882654 bytes).
 PDF statistics:
  3476 PDF objects out of 3580 (max. 8388607)
  3080 compressed objects within 31 object streams
