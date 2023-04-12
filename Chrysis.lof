@@ -27,8 +27,8 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Overview of the integration of the QOKD service and the CBMC-GC tool in the Yao protocol.\relax }}{84}{figure.caption.61}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Overview of the tailored divide-and-conquer technique. This corresponds to lines \texttt {12-19} in Figure\nobreakspace {}\ref {fig:jc_cbmc-gc} in Appendix\nobreakspace {}\ref {appendix:appendixA}.\relax }}{88}{figure.caption.65}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Total running time of both quantum-assisted and classical-only systems.\relax }}{98}{figure.caption.79}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems. CSMC: classical-only SMC; QSMC: quantum-assisted SMC; OKM: oblivious key management system.\relax }}{99}{figure.caption.80}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Oblivious key management system proportion in the overhead of quantum-assisted system.\relax }}{99}{figure.caption.81}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Total running time of the pairwise SMC computation of distances for both quantum-assisted and classical-only systems.\relax }}{99}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces The proportion of the quantum-assisted system's overhead that is attributable to the Oblivious Key Management System (OKMS).\relax }}{99}{figure.caption.81}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Semi-honest QOLE protocol.\relax }}{109}{figure.caption.82}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces RWOLE protocol.\relax }}{111}{figure.caption.83}%
