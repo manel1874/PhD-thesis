@@ -33,12 +33,59 @@ Charles~H. Bennett and Gilles Brassard.
 \newblock Quantum cryptography: Public key distribution and coin tossing.
 \newblock {\em Theoretical Computer Science}, 560:7--11, December 2014.
 
+\bibitem{BBCS92}
+Charles~H. Bennett, Gilles Brassard, Claude Cr{\'e}peau, and
+  Marie-H{\'e}l{\`e}ne Skubiszewska.
+\newblock Practical quantum oblivious transfer.
+\newblock In Joan Feigenbaum, editor, {\em Advances in Cryptology --- CRYPTO
+  '91}, pages 351--366, Berlin, Heidelberg, 1992. Springer Berlin Heidelberg.
+
+\bibitem{BCJL93}
+G.~Brassard, C.~Crepeau, R.~Jozsa, and D.~Langlois.
+\newblock A quantum bit commitment scheme provably unbreakable by both parties.
+\newblock In {\em Proceedings of 1993 {IEEE} 34th Annual Foundations of
+  Computer Science}. {IEEE}, 1993.
+
+\bibitem{BGW88}
+Michael Ben-Or, Shafi Goldwasser, and Avi Wigderson.
+\newblock Completeness theorems for non-cryptographic fault-tolerant
+  distributed computation.
+\newblock In {\em Proceedings of the Twentieth Annual ACM Symposium on Theory
+  of Computing}, STOC '88, page 1–10, New York, NY, USA, 1988. Association
+  for Computing Machinery.
+
+\bibitem{BMR90}
+D.~Beaver, S.~Micali, and P.~Rogaway.
+\newblock The round complexity of secure protocols.
+\newblock In {\em Proceedings of the Twenty-Second Annual ACM Symposium on
+  Theory of Computing}, STOC '90, page 503–513, New York, NY, USA, 1990.
+  Association for Computing Machinery.
+
+\bibitem{CCD88}
+David Chaum, Claude Cr\'{e}peau, and Ivan Damgard.
+\newblock Multiparty unconditionally secure protocols.
+\newblock In {\em Proceedings of the Twentieth Annual ACM Symposium on Theory
+  of Computing}, STOC '88, page 11–19, New York, NY, USA, 1988. Association
+  for Computing Machinery.
+
+\bibitem{GMW87}
+O.~Goldreich, S.~Micali, and A.~Wigderson.
+\newblock How to play any mental game.
+\newblock In {\em Proceedings of the Nineteenth Annual ACM Symposium on Theory
+  of Computing}, STOC '87, page 218–229, New York, NY, USA, 1987. Association
+  for Computing Machinery.
+
 \bibitem{Bscher2018}
 Niklas B\"{u}scher, Daniel Demmler, Stefan Katzenbeisser, David Kretzmer, and
   Thomas Schneider.
 \newblock {HyCC}.
 \newblock In {\em Proceedings of the 2018 {ACM} {SIGSAC} Conference on Computer
   and Communications Security}. {ACM}, January 2018.
+
+\bibitem{NP01}
+M.~Naor and Benny Pinkas.
+\newblock Efficient oblivious transfer protocols.
+\newblock In {\em SODA '01}, 2001.
 
 \bibitem{Wang11}
 Jun Wang.
@@ -110,6 +157,12 @@ Ivan Damg{\aa}rd, Valerio Pastro, Nigel Smart, and Sarah Zakarias.
 \newblock In {\em Lecture Notes in Computer Science}, pages 643--662. Springer
   Berlin Heidelberg, 2012.
 
+\bibitem{KOS16}
+Marcel Keller, Emmanuela Orsini, and Peter Scholl.
+\newblock {MASCOT}.
+\newblock In {\em Proceedings of the 2016 {ACM} {SIGSAC} Conference on Computer
+  and Communications Security}. {ACM}, October 2016.
+
 \bibitem{IR99}
 R.~Impagliazzo and S.~Rudich.
 \newblock Limits on the provable consequences of one-way permutations.
@@ -171,13 +224,6 @@ Ivan Damg{\aa}rd, Serge Fehr, Carolin Lunemann, Louis Salvail, and Christian
 \newblock In Shai Halevi, editor, {\em Advances in Cryptology - CRYPTO 2009},
   pages 408--427, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
 
-\bibitem{BBCS92}
-Charles~H. Bennett, Gilles Brassard, Claude Cr{\'e}peau, and
-  Marie-H{\'e}l{\`e}ne Skubiszewska.
-\newblock Practical quantum oblivious transfer.
-\newblock In Joan Feigenbaum, editor, {\em Advances in Cryptology --- CRYPTO
-  '91}, pages 351--366, Berlin, Heidelberg, 1992. Springer Berlin Heidelberg.
-
 \bibitem{GLSV21}
 Alex~B. Grilo, Huijia Lin, Fang Song, and Vinod Vaikuntanathan.
 \newblock Oblivious transfer is in miniqcrypt.
@@ -192,11 +238,11 @@ James Bartusek, Andrea Coladangelo, Dakshita Khurana, and Fermi Ma.
   -- CRYPTO 2021}, pages 467--496, Cham, 2021. Springer International
   Publishing.
 
-\bibitem{KOS16}
-Marcel Keller, Emmanuela Orsini, and Peter Scholl.
-\newblock {MASCOT}.
-\newblock In {\em Proceedings of the 2016 {ACM} {SIGSAC} Conference on Computer
-  and Communications Security}. {ACM}, October 2016.
+\bibitem{U10}
+Dominique Unruh.
+\newblock Universally composable quantum multi-party computation.
+\newblock In {\em Advances in Cryptology {\textendash} {EUROCRYPT} 2010}, pages
+  486--505. Springer Berlin Heidelberg, 2010.
 
 \bibitem{BPT00}
 H.~Bechmann-Pasquinucci and W.~Tittel.
@@ -267,27 +313,6 @@ Armando~N. Pinto, Laura Ortiz, Manuel Santos, Ana~C. Gomes, Juan~P. Brito,
 \newblock In {\em 2020 22nd International Conference on Transparent Optical
   Networks ({ICTON})}. {IEEE}, July 2020.
 
-\bibitem{S22}
-Manuel~B. Santos.
-\newblock Peco: methods to enhance the privacy of deco protocol.
-\newblock Cryptology ePrint Archive, Paper 2022/1774, 2022.
-\newblock \url{https://eprint.iacr.org/2022/1774}.
-
-\bibitem{BGW88}
-Michael Ben-Or, Shafi Goldwasser, and Avi Wigderson.
-\newblock Completeness theorems for non-cryptographic fault-tolerant
-  distributed computation.
-\newblock In {\em Proceedings of the Twentieth Annual ACM Symposium on Theory
-  of Computing}, STOC '88, page 1–10, New York, NY, USA, 1988. Association
-  for Computing Machinery.
-
-\bibitem{CCD88}
-David Chaum, Claude Cr\'{e}peau, and Ivan Damgard.
-\newblock Multiparty unconditionally secure protocols.
-\newblock In {\em Proceedings of the Twentieth Annual ACM Symposium on Theory
-  of Computing}, STOC '88, page 11–19, New York, NY, USA, 1988. Association
-  for Computing Machinery.
-
 \bibitem{PWM+20}
 Rushi Patel, Pierre-Francois Wolfe, Robert Munafo, Mayank Varia, and Martin
   Herbordt.
@@ -334,13 +359,6 @@ Bo~Bi, Darong Huang, Bo~Mi, Zhenping Deng, and Hongyang Pan.
 \newblock Efficient {LBS} security-preserving based on {NTRU} oblivious
   transfer.
 \newblock {\em Wireless Personal Communications}, 108(4):2663--2674, May 2019.
-
-\bibitem{BMR90}
-D.~Beaver, S.~Micali, and P.~Rogaway.
-\newblock The round complexity of secure protocols.
-\newblock In {\em Proceedings of the Twenty-Second Annual ACM Symposium on
-  Theory of Computing}, STOC '90, page 503–513, New York, NY, USA, 1990.
-  Association for Computing Machinery.
 
 \bibitem{NPS99}
 Moni Naor, Benny Pinkas, and Reuban Sumner.
@@ -405,13 +423,6 @@ Nico D\"{o}ttling, Satrajit Ghosh, Jesper~Buus Nielsen, Tobias Nilges, and
 \newblock In {\em Proceedings of the 2017 ACM SIGSAC Conference on Computer and
   Communications Security}, CCS '17, page 2263–2276, New York, NY, USA, 2017.
   Association for Computing Machinery.
-
-\bibitem{GMW87}
-O.~Goldreich, S.~Micali, and A.~Wigderson.
-\newblock How to play any mental game.
-\newblock In {\em Proceedings of the Nineteenth Annual ACM Symposium on Theory
-  of Computing}, STOC '87, page 218–229, New York, NY, USA, 1987. Association
-  for Computing Machinery.
 
 \bibitem{IPS09}
 Yuval Ishai, Manoj Prabhakaran, and Amit Sahai.
@@ -506,7 +517,7 @@ Marco Tomamichel.
 
 \bibitem{HK97}
 Shai Halevi and Hugo Krawczyk.
-\newblock {MMH}: Software message authentication in the gbit/second rates.
+\newblock {MMH}: Software message authentication in the {G}bit/second rates.
 \newblock In {\em Fast Software Encryption}, pages 172--189. Springer Berlin
   Heidelberg, 1997.
 
@@ -557,11 +568,6 @@ Bruno Costa, Pedro Branco, Manuel Goul{\~{a}}o, Mariano Lemus, and Paulo
   the quantum setting.
 \newblock {\em Entropy}, 23(8):1001, July 2021.
 
-\bibitem{YAVV22}
-Vijay~Kumar Yadav, Nitish Andola, Shekhar Verma, and S~Venkatesan.
-\newblock A survey of oblivious transfer protocol.
-\newblock {\em {ACM} Computing Surveys}, January 2022.
-
 \bibitem{GKMRV00}
 Y.~Gertner, S.~Kannan, T.~Malkin, O.~Reingold, and M.~Viswanathan.
 \newblock The relationship between public key encryption and oblivious
@@ -573,11 +579,6 @@ Y.~Gertner, S.~Kannan, T.~Malkin, O.~Reingold, and M.~Viswanathan.
 Shimon Even, Oded Goldreich, and Abraham Lempel.
 \newblock A randomized protocol for signing contracts.
 \newblock {\em Commun. ACM}, 28(6):637--647, June 1985.
-
-\bibitem{NP01}
-M.~Naor and Benny Pinkas.
-\newblock Efficient oblivious transfer protocols.
-\newblock In {\em SODA '01}, 2001.
 
 \bibitem{CO15}
 Tung Chou and Claudio Orlandi.
@@ -637,12 +638,6 @@ Andrew Chi-Chih Yao.
 \newblock Security of quantum protocols against coherent measurements.
 \newblock In {\em Proceedings of the twenty-seventh annual {ACM} symposium on
   Theory of computing - {STOC} '95}. {ACM} Press, 1995.
-
-\bibitem{BCJL93}
-G.~Brassard, C.~Crepeau, R.~Jozsa, and D.~Langlois.
-\newblock A quantum bit commitment scheme provably unbreakable by both parties.
-\newblock In {\em Proceedings of 1993 {IEEE} 34th Annual Foundations of
-  Computer Science}. {IEEE}, 1993.
 
 \bibitem{M96}
 Dominic Mayers.
@@ -865,12 +860,6 @@ Claude Cr{\'e}peau, Paul Dumais, Dominic Mayers, and Louis Salvail.
   transfer.
 \newblock In Moni Naor, editor, {\em Theory of Cryptography}, pages 374--393,
   Berlin, Heidelberg, 2004. Springer Berlin Heidelberg.
-
-\bibitem{U10}
-Dominique Unruh.
-\newblock Universally composable quantum multi-party computation.
-\newblock In {\em Advances in Cryptology {\textendash} {EUROCRYPT} 2010}, pages
-  486--505. Springer Berlin Heidelberg, 2010.
 
 \bibitem{BF10}
 Niek~J. Bouman and Serge Fehr.
@@ -1147,14 +1136,6 @@ Daniel~J. Bernstein and Tanja Lange.
 \newblock Post-quantum cryptography.
 \newblock {\em Nature}, 549(7671):188--194, 2017.
 
-\bibitem{Pirandola20}
-S.~Pirandola, U.~L. Andersen, L.~Banchi, M.~Berta, D.~Bunandar, R.~Colbeck,
-  D.~Englund, T.~Gehring, C.~Lupo, C.~Ottaviani, J.~L. Pereira, M.~Razavi,
-  J.~Shamsul Shaari, M.~Tomamichel, V.~C. Usenko, G.~Vallone, P.~Villoresi, and
-  P.~Wallden.
-\newblock Advances in quantum cryptography.
-\newblock {\em Adv. Opt. Photon.}, 12(4):1012--1236, Dec 2020.
-
 \bibitem{MVV01}
 Alfred~J. Menezes, Paul~C. van Oorschot, and Scott~A. Vanstone.
 \newblock {\em Handbook of Applied Cryptography}.
@@ -1207,6 +1188,13 @@ Christian Paquin, Douglas Stebila, and Goutam Tamvada.
 \newblock In {\em International Conference on Post-Quantum Cryptography}, pages
   72--91. Springer, 2020.
 
+\bibitem{CrystalKyber17}
+Roberto Avanzi, Joppe Bos, L{\'e}o Ducas, Eike Kiltz, Tancrede Lepoint, Vadim
+  Lyubashevsky, John~M Schanck, Peter Schwabe, Gregor Seiler, and Damien
+  Stehl{\'e}.
+\newblock Crystals-kyber.
+\newblock {\em NIST, Tech. Rep}, 2017.
+
 \bibitem{MR19}
 Daniel Mansy and Peter Rindal.
 \newblock Endemic oblivious transfer.
@@ -1214,12 +1202,14 @@ Daniel Mansy and Peter Rindal.
   Communications Security}, CCS '19, page 309–326, New York, NY, USA, 2019.
   Association for Computing Machinery.
 
-\bibitem{CrystalKyber17}
-Roberto Avanzi, Joppe Bos, L{\'e}o Ducas, Eike Kiltz, Tancrede Lepoint, Vadim
-  Lyubashevsky, John~M Schanck, Peter Schwabe, Gregor Seiler, and Damien
-  Stehl{\'e}.
-\newblock Crystals-kyber.
-\newblock {\em NIST, Tech. Rep}, 2017.
+\bibitem{NTRU}
+Philip~S. Hirschhorn, Jeffrey Hoffstein, Nick Howgrave-Graham, and William
+  Whyte.
+\newblock Choosing ntruencrypt parameters in light of combined lattice
+  reduction and mitm approaches.
+\newblock In Michel Abdalla, David Pointcheval, Pierre-Alain Fouque, and Damien
+  Vergnaud, editors, {\em Applied Cryptography and Network Security}, pages
+  437--455, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
 
 \bibitem{NTRUOT1}
 Bo~Mi, Darong Huang, Shaohua Wan, Libo Mi, and J.~Cao.
@@ -1230,15 +1220,6 @@ Bo~Mi, Darong Huang, Shaohua Wan, Libo Mi, and J.~Cao.
 Bo~Mi, Darong Huang, Shaohua Wan, Yu~Hu, and Kim-Kwang~Raymond Choo.
 \newblock A post-quantum light weight 1-out-n oblivious transfer protocol.
 \newblock {\em Computers \& Electrical Engineering}, 75:90--100, 2019.
-
-\bibitem{NTRU}
-Philip~S. Hirschhorn, Jeffrey Hoffstein, Nick Howgrave-Graham, and William
-  Whyte.
-\newblock Choosing ntruencrypt parameters in light of combined lattice
-  reduction and mitm approaches.
-\newblock In Michel Abdalla, David Pointcheval, Pierre-Alain Fouque, and Damien
-  Vergnaud, editors, {\em Applied Cryptography and Network Security}, pages
-  437--455, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
 
 \bibitem{Verhaert2018}
 Danilo Verhaert, Majid Nateghizad, and Zekeriya Erkin.
@@ -1308,11 +1289,6 @@ Tomohiro Ito, Hayato Koizumi, Nobumitsu Suzuki, Izumi Kakesu, Kento Iwakawa,
 \newblock Physical implementation of oblivious transfer using optical
   correlated randomness.
 \newblock {\em Scientific Reports}, 7(1), August 2017.
-
-\bibitem{AM19}
-Adam~M. Lewis and Martino Travagnin.
-\newblock A secure quantum communications infrastructure for europe.
-\newblock {\em JRC116937}, 2019.
 
 \bibitem{libscapi}
 libscapi.

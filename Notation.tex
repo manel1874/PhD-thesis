@@ -11,84 +11,88 @@
 \newcommand{\tabinter}{\vspace{1ex}}
 
 \tabstart{General}
-$\mathbb{Z}_q$ & set of integers $a \mod q$.\\
-$\gcd (a,b)$ & greatest common divisor between integers $a$ and $b$.\\
-$\mathbb{Z}^*_q$ & set of integers $a\in\mathbb{Z}_q$ that are coprime with $q$, i.e. $\gcd (a,q) = 1$.\\
-$|I|$ & size of a set $I$.\\
-$\bar{T}$ & complement of set $T$.\\
+$\mathbb{Z}_q$ & Set of integers $a \mod q$.\\
+$\gcd (a,b)$ & Greatest common divisor between integers $a$ and $b$.\\
+$\mathbb{Z}^*_q$ & Set of integers $a\in\mathbb{Z}_q$ that are coprime with $q$, i.e. $\gcd (a,q) = 1$.\\
+$|I|$ & Size of a set $I$.\\
+$\bar{T}$ & Complement of set $T$.\\
 $s\leftarrow_{\$}I$ & $s$ is drawn uniformly at random from the set $I$.\\
-$\bm{v}_{|J}$ & subvector of $\bm{v}$ restricted to the indices $i \in J$.\\
-$[m]$ & the ordered set $\{1, 2, \ldots, m\}$ for $m\in \mathbb{Z}_q$.\\
-$[m, n]$ & the ordered set $\{m, m+1, \dots, n-1, n\}$ for $m, n\in \mathbb{Z}_q$ such that $m<n$.\\
+$\bm{v}_{|J}$ & Subvector of $\bm{v}$ restricted to the indices $i \in J$.\\
+$[m]$ & The ordered set $\{1, 2, \ldots, m\}$ for $m\in \mathbb{Z}_q$.\\
+$[m, n]$ & The ordered set $\{m, m+1, \dots, n-1, n\}$ for $m, n\in \mathbb{Z}_q$ such that $m<n$.\\
 $d_H(\bm{x}, \bm{y})$ & Hamming distance given by $ |\{ i : x_i \neq y_i \}|$ for $\bm{x},\bm{y}\in\mathbb{Z}^n_q$.\\
-$r_H(\bm{x}, \bm{y})$ & the relative Hamming distance given by $d_H(\bm{x}, \bm{y})/n$.\\
+$r_H(\bm{x}, \bm{y})$ & The relative Hamming distance given by $d_H(\bm{x}, \bm{y})/n$.\\
 $\mu(n)$ & Negligible function.\\
-  $\log$ & natural logarithm.\\
- $\log_d$ & logarithm with base $d$.\\
-  $\ExpE_{x}[f(x)]$ & expectation of $f(x)$ over random choices of $x$.\\
-  dim & dimension.\\
+  $\log$ & Natural logarithm.\\
+ $\log_d$ & Logarithm with base $d$.\\
+  $\ExpE_{x}[f(x)]$ & Expectation of $f(x)$ over random choices of $x$.\\
+  dim & Dimension.\\
 \tabstop
 
 \tabinter
 
 \tabstart{Classical information}
-$\mu_X$ & average value of elements in set $X$.\\
-$I(A)$ & amount of information some event $A$.\\
+$\mu_X$ & Average value of elements in set $X$.\\
+$I(A)$ & Amount of information some event $A$.\\
 $H(X)$ & Shannon entropy of random variable $X$.\\
 $h_d(x)$ & d-ary entropy function.\\
-$H_{\min}(X)$ & min-entropy of classical random variable $X$.\\
-$\mathfrak{F}$ & two-universal hash family.\\
+$H_{\min}(X)$ & Min-entropy of classical random variable $X$.\\
+$\mathfrak{F}$ & Two-universal hash family.\\
 \tabstop
 
 \tabinter
 
 \tabstart{Quantum information}  
 $\mathcal{H}_A\, (\mathcal{H}_A^*)$ & Hilbert space (its dual) of quantum system $A$.\\
-  $\spr{\phi}{\psi}$ & scalar product of the vectors $\ket{\phi}$ and $\ket{\psi}$.\\
-  $\proj{\phi}$ & projector onto the vector $\ket{\phi}$.\\ 
-  $\rho$, $\sigma$ & density operators.\\
-  $\ket{B_{a,b}}$ & generalised Bell states.\\
-  $\tau_{\mathcal{X}}$ & uniform distribution over $\mathcal{X}$.\\
-  $\cS_1(\cH)$ & set of normalized vectors on $\cH$.\\
-  $\text{Herm}(\mathcal{H})$ & sets of hermitian operators on $\mathcal{H}$.\\
-  $\text{Pos}(\mathcal{H})$ & sets of positive-semi definite on $\mathcal{H}$.\\
-   $\mathcal{P}(\mathcal{H})$ & the sets density operators on $\mathcal{H}$.\\
-   $ \delta(\rho,\sigma)$ & trace distance between $\rho$ and $\sigma$.\\
-   $\mathds{1}$ & identity operator.\\
-$\tr(\rho)$ & trace of the hermitian operator $\rho$.\\
-$\rank(\rho)$ & rank of the hermitian operator $\rho$.\\
+  $\spr{\phi}{\psi}$ & Scalar product of the vectors $\ket{\phi}$ and $\ket{\psi}$.\\
+  $\proj{\phi}$ & Projector onto the vector $\ket{\phi}$.\\ 
+  $\rho$, $\sigma$ & Density operators.\\
+  $\ket{B_{a,b}}$ & Generalised Bell states.\\
+  $\tau_{\mathcal{X}}$ & Uniform distribution over $\mathcal{X}$.\\
+  $\cS_1(\cH)$ & Set of normalized vectors on $\cH$.\\
+  $\text{Herm}(\mathcal{H})$ & Sets of hermitian operators on $\mathcal{H}$.\\
+  $\text{Pos}(\mathcal{H})$ & Sets of positive-semi definite on $\mathcal{H}$.\\
+   $\mathcal{P}(\mathcal{H})$ & The sets density operators on $\mathcal{H}$.\\
+   $ \delta(\rho,\sigma)$ & Trace distance between $\rho$ and $\sigma$.\\
+   $\mathds{1}$ & Identity operator.\\
+$\tr(\rho)$ & Trace of the hermitian operator $\rho$.\\
+$\rank(\rho)$ & Rank of the hermitian operator $\rho$.\\
 $\mathcal{E}$, $\mathcal{T}$, $\mathcal{C}$, $\mathcal{O}^{()}$, $\mathcal{M}$ & CPTP maps.\\
-$H_{\min}(X|B)_{\rho}$ & conditional min-entropy of a cq-state $\rho_{XB}$.\\
 \end{tabular}
 
 \noindent \begin{tabular}{p{2.95cm}p{12cm}}
-$H_{\text{min}}(A | B)_{\rho|\sigma}$ & min-entropy of $\rho_{A B}$ relative to $\sigma_{B}$.\\
+$H_{\min}(X|B)_{\rho}$ & Conditional min-entropy of a cq-state $\rho_{XB}$.\\
+$H_{\text{min}}(A | B)_{\rho|\sigma}$ & Min-entropy of $\rho_{A B}$ relative to $\sigma_{B}$.\\
 \tabstop
 
 \tabinter
 
 \tabstart{Secure multiparty computation}
-$P_i$ & party $i$ \\
-$\mathsf{Enc}_k$ & symmetric encryption method with key $k$.\\
-$\bot$ & empty string/element.\\
-$\mathcal{F}$ & ideal functionality.\\
+$P_i$ & Party $i$.\\
+$P_{\mathsf{TTP}}$ & Third trusted party.\\
+$\mathsf{Enc}_k$ & Symmetric encryption method with key $k$.\\
+$\bot$ & Empty string/element.\\
+$\mathcal{F}$ & Ideal functionality.\\
 $\mathcal{F}_{\textbf{OT}}$ & OT functionality.\\
 $\mathcal{F}_{\textbf{OLE}}$ & OLE functionality.\\
 $\mathcal{F}_{\textbf{VOLE}}$ & VOLE functionality.\\
 $\mathcal{F}_{\textbf{COM}}$ & COM functionality.\\
-$\mathcal{F}_{\textbf{ext}}$ & external functionality.\\
-$\mathcal{F}_{\textbf{FakeCOM}}$ & fake commitment functionality.\\
-$\Pi$ & protocol.\\
-$\mathcal{Z}$ & environment.\\ 
-$Adv$ & adversary.\\ 
-$\mathcal{S}$ & simulator.\\
-$\mathcal{S}_A$ & simulator against dishonest Alice.\\
-$\mathcal{S}_B$ & simulator against dishonest Bob.\\
-$\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}}$  & the output of the environment $\mathcal{Z}$ at the end of the real execution, and by $C$ the corrupted party.\\
-$\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$ & the output of the environment $\mathcal{Z}$ at the end of the ideal execution, and by $C$ the corrupted party.\\
-$\mathtt{DM}_{d}$ & distance matrix functionality.\\
-$\mathtt{D}_{d}$ & two-party distance functionality.\\
-$\mathtt{A}$ & phylogenetic tree functionality.\\
+$\mathcal{F}_{\textbf{ext}}$ & External functionality.\\
+$\mathcal{F}_{\textbf{FakeCOM}}$ & Fake commitment functionality.\\
+$\Pi$ & Protocol.\\
+$\mathcal{Z}$ & Environment.\\ 
+$Adv$ & Adversary.\\ 
+$\mathcal{S}$ & Simulator.\\
+$\mathcal{S}_A$ & Simulator against dishonest Alice.\\
+$\mathcal{S}_B$ & Simulator against dishonest Bob.\\
+$\text{EXEC}_{\mathcal{\pi}^C, Adv, \mathcal{Z}}$  & The output of the environment $\mathcal{Z}$ at the end of the real execution, and by $C$ the corrupted party.\\
+$\text{EXEC}_{\rho^C, \mathcal{S}, \mathcal{Z}}$ & The output of the environment $\mathcal{Z}$ at the end of the ideal execution, and by $C$ the corrupted party.\\
+$\mathtt{DM}_{d}$ & Distance matrix functionality.\\
+\end{tabular}
+
+\noindent \begin{tabular}{p{2.95cm}p{12cm}}
+$\mathtt{D}_{d}$ & Two-party distance functionality.\\
+$\mathtt{A}$ & Phylogenetic tree functionality.\\
 %$\freq{\bx}$ & frequency distribution of the $n$-tuple $\bx$ \\
 %$\freqset{\cX}{n}$ & set of types with denominator $n$ on the set $\cX$ \\
 %$\ntuplefreq{Q}{n}$ & type class of the type $Q$ with denominator $n$
@@ -100,62 +104,61 @@ $\mathtt{A}$ & phylogenetic tree functionality.\\
 \tabstart{Protocols}
 $m_i$ & Alice's messages.\\
 $b$ & Bob's bit choice.\\
-$l$ & length of OT protocol messages.\\ 
-$\kappa$ & symmetric security parameter.\\
+$l$ & Length of OT protocol messages.\\ 
+$\kappa$ & Symmetric security parameter.\\
 $\bm{\theta}^{\mathsf{A}}$, $\bm{\theta}^{\mathsf{B}}$ & Alice and Bob's bases vectors.\\
-$\mathsf{ok}$ & oblivious key.\\
+$\mathsf{ok}$ & Oblivious key.\\
 $\mathsf{ok}^{\mathsf{A}}$ & Alice's oblivious key.\\
 $\mathsf{ok}^{\mathsf{A}}$ & Bob's oblivious key.\\
 $\mathsf{e}^{\mathsf{B}}$ & Bob's signal string.\\
-$\mathsf{pk}_i$ & public key.\\
-$T$ & test set.\\
-$\Delta t$ & waiting time.\\
- $\nu$ & fraction of the transmitted qubits kept by the adversary.\\
- $c_{\mathcal{N}}$ & classical capacity of quantum channel $\mathcal{N}$.\\
+$\mathsf{pk}_i$ & Public key.\\
+$T$ & Test set.\\
+$\Delta t$ & Waiting time.\\
+ $\nu$ & Fraction of the transmitted qubits kept by the adversary.\\
+ $c_{\mathcal{N}}$ & Classical capacity of quantum channel $\mathcal{N}$.\\
 $\mathcal{A}_{\textbf{qok}}(J)$ & Alice's quantum hacking procedure.\\
 $\mathcal{B}_{\textbf{qok}}(J)$ & Bob's quantum hacking procedure.\\
 $\Pi^{\textbf{BBCS}}_{\mathcal{F}_{\textbf{COM}}}$ & BBCS protocol in the $\mathcal{F}_{\textbf{COM}}-$hybrid model.\\ 
 $\Pi^{\textbf{BBCS}}_{\textbf{bqs}}$ & BBCS protocol in the BQS model.\\ 
 $\Pi^{\textbf{BBCS}}_{\textbf{nqs}}$ & BBCS protocol in the NQS model.\\ 
 $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ & Optimised BBCS protocol.\\ 
-$\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$ & quantum oblivious key distribution protocol in the BQS model.\\
+$\Pi^{\textbf{QOKD}}_{\textbf{bqs}}$ & Quantum oblivious key distribution protocol in the BQS model.\\
+\end{tabular}
+
+\noindent \begin{tabular}{p{2.95cm}p{12cm}}
 $\rotPi^{\mathsf{A}}_{\textbf{FSA}}$ & Alice's faked-state attack on qubits indexed by $J$.\\
 $\rotPi^{\mathsf{A}}_{\textbf{THA}}$ & Alice's trojan-horse attack on qubits indexed by $J$.\\
-\end{tabular}
-
-\noindent \begin{tabular}{p{2.95cm}p{12cm}}
 $\rotPi^{\mathsf{B}}_{\textbf{THA}}$ & Bob's trojan-horse attack on qubits indexed by $J$.\\
-$B_{\text{op}}^\text{ALSZ13}$ & number of binary operations executed by ALSZ13 protocol.\\
-$B_{\text{op}}^\text{BBCS}$ & number of binary operations executed by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol.\\
-$B_{\text{op}}^\text{KOS15}$ & number of binary operations executed by KOS15 protocol.\\
-$A^a_d$ & private phylogenetic tree algorithm for distance $d$ and algorithm $a$.\\
-$M$ & number of genomic sequences.\\ 
-$s$ & length of genomic sequences.\\
-$L^j_{\text{ok}}$ & size of total oblivious key.\\
-$L^j_{\text{bok}}$ &  total size of oblivious key for base OT.\\
-$L^j_{\text{QRNG}}$ & random bits generated by QRNG.\\
-$L^{j}_{qkd}$ & total size of QKD keys.\\
-$N^j_{\text{Yao}}$ & number of Yao protocol executions.\\
-$N^j_{\text{OT}}$ & number of OT executions.\\
-$N^j_{\text{bOT}}$ & number of base OT executions.\\
-$N^j_{\text{int}}$ & number of internal computations.\\ 
+$B_{\text{op}}^\text{ALSZ13}$ & Number of binary operations executed by ALSZ13 protocol.\\
+$B_{\text{op}}^\text{BBCS}$ & Number of binary operations executed by $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol.\\
+$B_{\text{op}}^\text{KOS15}$ & Number of binary operations executed by KOS15 protocol.\\
+$A^a_d$ & Private phylogenetic tree algorithm for distance $d$ and algorithm $a$.\\
+$M$ & Number of genomic sequences.\\ 
+$s$ & Length of genomic sequences.\\
+$L^j_{\text{ok}}$ & Size of total oblivious key.\\
+$L^j_{\text{bok}}$ & Total size of oblivious key for base OT.\\
+$L^j_{\text{QRNG}}$ & Random bits generated by QRNG.\\
+$L^{j}_{qkd}$ & Total size of QKD keys.\\
+$N^j_{\text{Yao}}$ & Number of Yao protocol executions.\\
+$N^j_{\text{OT}}$ & Number of OT executions.\\
+$N^j_{\text{bOT}}$ & Number of base OT executions.\\
+$N^j_{\text{int}}$ & Number of internal computations.\\ 
 $V^b_a$ & Heisenberg-Weyl operators.\\
 $\ket{e^x_r}$ & $r-$th eigenket of the $V^x_1$ operator.\\
-$\mathbf{F}_0$ & random variable for Alice's functions in the RWOLE protocol.\\
-$\mathbf{F}$ & random variable for Alice's functions in the WOLE protocol.\\
-$A'$ & dishonest Alice quantum system.\\
-$B'$ & dishonest Bob quantum system.\\
+$\mathbf{F}_0$ & Random variable for Alice's functions in the RWOLE protocol.\\
+$\mathbf{F}$ & Random variable for Alice's functions in the WOLE protocol.\\
+$A'$ & Dishonest Alice quantum system.\\
+$B'$ & Dishonest Bob quantum system.\\
 $\Pi^n_{\textbf{RWOLE}}$ & RWOLE protocol.\\
 $\Pi^n_{\textbf{WOLE}}$  & WOLE protocol.\\
-$\Pi_{\textbf{EXT}}$ & extraction protocol.\\
+$\Pi_{\textbf{EXT}}$ & Extraction protocol.\\
 \end{tabular}
 
 \noindent \begin{tabular}{p{2.95cm}p{12cm}}
-$\Pi_{\textbf{VEXT}}$ & vector extraction protocol.\\
-$\Pi_{\textbf{QOLE}}$ & quantum OLE protocol.\\
-$\Pi_{\textbf{QVOLE}}$ & quantum vector OLE protocol.\\
+$\Pi_{\textbf{VEXT}}$ & Vector extraction protocol.\\
+$\Pi_{\textbf{QOLE}}$ & Quantum OLE protocol.\\
+$\Pi_{\textbf{QVOLE}}$ & Quantum vector OLE protocol.\\
 \tabstop
-
 
 
 

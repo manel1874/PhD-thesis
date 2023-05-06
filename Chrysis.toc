@@ -26,9 +26,9 @@
 \contentsline {section}{\numberline {3.2}BBCS-based protocols}{29}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}BBCS protocol}{30}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}BBCS in the $\mathcal {F}_{\textbf {COM}}-$hybrid model}{32}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}BBCS in the limited-quantum-storage model}{36}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}BBCS in the limited-quantum-storage model}{35}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Bounded-quantum-storage model}{36}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{38}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.5}Noisy-quantum-storage model}{37}{subsection.3.2.5}%
 \contentsline {subsection}{\numberline {3.2.6}Experimental attacks}{40}{subsection.3.2.6}%
 \contentsline {subsubsection}{QOT attacks}{40}{section*.32}%
 \contentsline {subsubsection}{Countermeasures}{43}{section*.36}%
@@ -109,7 +109,7 @@
 \contentsline {subsubsection}{Derandomization}{113}{section*.84}%
 \contentsline {subsubsection}{Extraction}{116}{section*.86}%
 \contentsline {section}{\numberline {6.5}UC security}{119}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Protocol Generalizations}{124}{section.6.6}%
+\contentsline {section}{\numberline {6.6}Protocol generalizations}{124}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}QOLE in Galois fields of prime-power dimensions}{124}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}Quantum vector OLE}{126}{subsection.6.6.2}%
 \contentsline {section}{\numberline {6.7}Conclusion}{129}{section.6.7}%

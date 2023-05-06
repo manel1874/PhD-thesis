@@ -10,50 +10,46 @@ A level-1 auxiliary file: Chapter_QuantumObliviousLinearEvaluation/Chapter_Quant
 A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
 A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
-Reallocated field_info (elt_size=4) to 12038 items from 5000.
+Reallocated field_info (elt_size=4) to 11877 items from 5000.
 Database file #1: References/References.bib
-Warning--I didn't find a database entry for "SMV23"
-Warning--I didn't find a database entry for "TSP23"
-Warning--I didn't find a database entry for "SP23"
-You've used 303 entries,
+You've used 299 entries,
             1791 wiz_defined-function locations,
-            2260 strings with 54327 characters,
-and the built_in function-call counts, 79700 in all, are:
-= -- 7170
-> -- 3769
+            2235 strings with 53866 characters,
+and the built_in function-call counts, 78772 in all, are:
+= -- 7107
+> -- 3687
 < -- 84
-+ -- 1372
-- -- 1069
-* -- 5425
-:= -- 12156
-add.period$ -- 994
-call.type$ -- 303
-change.case$ -- 296
++ -- 1343
+- -- 1044
+* -- 5351
+:= -- 11987
+add.period$ -- 981
+call.type$ -- 299
+change.case$ -- 292
 chr.to.int$ -- 0
-cite$ -- 303
-duplicate$ -- 3802
-empty$ -- 7604
-format.name$ -- 1069
-if$ -- 18352
+cite$ -- 299
+duplicate$ -- 3772
+empty$ -- 7532
+format.name$ -- 1044
+if$ -- 18163
 int.to.chr$ -- 0
-int.to.str$ -- 303
-missing$ -- 279
-newline$ -- 1498
-num.names$ -- 349
-pop$ -- 993
+int.to.str$ -- 299
+missing$ -- 276
+newline$ -- 1477
+num.names$ -- 345
+pop$ -- 980
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2098
+skip$ -- 2086
 stack$ -- 0
-substring$ -- 4716
-swap$ -- 1211
+substring$ -- 4685
+swap$ -- 1207
 text.length$ -- 84
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 694
-width$ -- 306
-write$ -- 3400
-(There were 3 warnings)
+while$ -- 688
+width$ -- 302
+write$ -- 3357
