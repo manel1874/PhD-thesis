@@ -2,9 +2,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces OT functionality.\relax }}{10}{figure.caption.19}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Boolean circuit of the Millionaires' Problem. Optimised circuit according to the construction in \cite {Kolesnikov2009}.\relax }}{11}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces OLE functionality.\relax }}{14}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces OLE functionality.\relax }}{13}{figure.caption.23}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces VOLE functionality.\relax }}{14}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Commitment functionality.\relax }}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Commitment functionality.\relax }}{24}{figure.caption.26}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces BBCS OT protocol.\relax }}{31}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces BBCS OT protocol in the $\mathcal {F}_{\textbf {COM}}-$hybrid model.\relax }}{33}{figure.caption.29}%

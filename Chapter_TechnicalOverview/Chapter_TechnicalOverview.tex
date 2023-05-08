@@ -8,7 +8,7 @@
 \label{ch:tech-overview}
 %\addcontentsline{toc}{chapter}{Introduction}
 
-In this chapter, we present the fundamental mathematical and information-theoretic concepts that are utilized throughout the thesis. The chapter is divided into four main sections. First, we provide a succinct overview of key mathematical notation elements. Next, we introduce the basic formalism of quantum information and the universal composability framework in the quantum setting. Finally, we give an informal description of secure multiparty computation.
+In this chapter, we present the fundamental mathematical and information-theoretic concepts that are utilized throughout the thesis.
 
 \section{Mathematical preliminaries}
 
@@ -280,18 +280,14 @@ In this work, we will utilize completely positive trace preserving (CPTP) maps. 
 %{\cv Useful links to support this: \href{https://en.wikipedia.org/wiki/Quantum_operation#Kraus_operators}{wiki} and \href{https://courses.cs.ut.ee/all/MTAT.07.024/2018_fall/uploads/notes.pdf}{Unruh lectures} on pag 16 (def of quantum operations) and Lemma 7}
 
 \begin{lemma}[Lemma 7, \cite{U17}]
-
+The trace distance has the following properties:
 \begin{enumerate}
-
-    The trace distance has the following properties:
-
     \item For any CPTP map $\mathcal{E}$ and any $\sigma, \rho \in \mathcal{P}(\mathcal{H})$ we have that
     $$\delta(\mathcal{E}(\sigma), \mathcal{E}(\rho)) \leq \delta(\sigma, \rho).$$
     
     \item Let $\sigma, \sigma' \in \mathcal{P}(\mathcal{H})$ and $\rho \in \mathcal{P}(\mathcal{H}')$. Then,
     $$\delta(\sigma\otimes \rho, \sigma'\otimes \rho) = \delta(\sigma, \sigma').$$
 \end{enumerate}
-
 \label{lemma:trace_distance}
 \end{lemma}
 
@@ -544,6 +540,26 @@ In summary, the simulator $\mathcal{S}$ plays a crucial role in the quantum-UC f
  
 %Regarding the adversarial model, we consider both \textit{semi-honest} and \textit{dishonest} adversaries. Semi-honest adversaries (also called honest-but-curious or passive adversaries) do not deviate from the protocol and only try to passively gain extra information by looking at the exchanged messages. Dishonest adversaries may deviate arbitrarily from the protocol. We also adopt the static corruption adversarial model where the corruption of each party is done just before the execution of the protocol.
 
+\begin{figure}[]
+\centering
+\begin{tcolorbox}[enhanced, 
+                        frame hidden,
+                        ]
+                        
+    \centerline{$\mathcal{F}_{\textbf{COM}}$ \textbf{functionality}}
+            
+    \
+    
+    \begin{itemize}
+        \item \textbf{Commitment phase}. Upon receiving $( \texttt{commit}, M)$ from Bob, the functionality sends $\texttt{commit}$ to Alice. 
+        \item \textbf{Opening phase}. Upon receiving $\texttt{open}$ from Bob, the functionality sends $(\texttt{open}, M)$ to Alice. 
+    \end{itemize}
+    
+\end{tcolorbox} 
+    \caption{Commitment functionality.}
+    \label{fig:func_com}
+\end{figure}
+
 
 \subsubsection{Ideal functionalities}\label{functinalities}
 
@@ -573,25 +589,9 @@ The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment
 %\end{figure}
 
 
-\begin{figure}[h!]
-\centering
-\begin{tcolorbox}[enhanced, 
-                        frame hidden,
-                        ]
-                        
-    \centerline{$\mathcal{F}_{\textbf{COM}}$ \textbf{functionality}}
-            
-    \
-    
-    \begin{itemize}
-        \item \textbf{Commitment phase}. Upon receiving $( \texttt{commit}, M)$ from Bob, the functionality sends $\texttt{commit}$ to Alice. 
-        \item \textbf{Opening phase}. Upon receiving $\texttt{open}$ from Bob, the functionality sends $(\texttt{open}, M)$ to Alice. 
-    \end{itemize}
-    
-\end{tcolorbox} 
-    \caption{Commitment functionality.}
-    \label{fig:func_com}
-\end{figure}
+\section{Conclusion}
+
+Throughout this chapter, we introduce the essential concepts that underpin the rest of the thesis. The chapter is divided into four main sections. First, we provide a succinct overview of key mathematical notation elements. Next, we give an informal description of secure multiparty computation. Finally, we introduce the basic formalism of quantum information and the universal composability framework in the quantum setting.
 
 
 %\bibliography{bibforthesis}
