@@ -120,7 +120,7 @@ V^b_a \ket{e^x_r} &=& \frac{1}{\sqrt{d}} \sum_{k,l = 0}^{d-1} \omega^{(k+a)b}\ke
 &=&  \frac{\omega^{ar}}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{-l(-b+r)}\omega^{ \frac{l(l-1)}{2}x + lax + \frac{a(a+1)}{2}x } \ket{l} \\
 &=&  \frac{\omega^{ar}}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{-l(-b+r)}\omega^{ \frac{l(l-1)}{2}x - lax + \frac{a(a+1)}{2}x } \ket{l} \\
 &=&  \frac{\omega^{ar + \frac{a(a+1)}{2}x}}{\sqrt{d}} \sum_{l = 0}^{d-1} \omega^{-l(ax-b+r) + \frac{l(l-1)}{2}x}\\
-&=& \omega^{ar + \frac{a(a+1)}{2}x \ket{e^x_{ax - b + r}}}
+&=& \omega^{ar + \frac{a(a+1)}{2}x \ket{e^x_{ax - b + r}}}.
 \end{eqnarray*}
 \end{proof}
 This last property is the main ingredient for the construction of our protocol as it encodes a linear evaluation based on values $a$, $b$ and $x \in \mathbb{Z}_d$\footnote{While $x \in \mathbb{Z}_{d+1}$, henceforth we consider $x \in \mathbb{Z}_{d}$, since we only use $d $ out of the $d+1$ MUBs.}. In our protocol, we take $a,b$ -- that determine the operators $V^b_ a$ -- to be Alice's inputs and $x$ to be Bob's input.
@@ -238,7 +238,7 @@ In the next sections, we break down the protocol, show its correctness and retri
 
 \
 
-\noindent\textbf{Notation.}  During the RWOLE phase, $\mathbf{F}_0 = (F^0_1,F^0_2 ,\ldots, F^0_n)$ is the vector whose components are the  random variables associated to Alice's functions. Each  $F^0_i$ ranges over the set of affine functions in $\mathbb{Z}_d$ such that $\P(F^0_i(x)=a^0_ix+ b^0_i)$ is uniform for all $i\in [n]$. We do not distinguish the set of affine functions in $\mathbb{Z}_d$ from $\mathbb{Z}_d^2$. The classical values $\mathbf{F}_0$ are saved in the Hilbert space $\mathcal{H}_{\mathbf{F}_0}$. The same holds for the derandomization phase, where $\mathbf{F}$ denotes the random variable for Alice's functions in the protocol $\Pi^n_{\textbf{WOLE}}$. $\textbf{X}_0$ and $\textbf{Y}_0$ are the random variables for $\textbf{x}_0, \textbf{y}_0 \in \mathbb{Z}^{ n}_d$  in the RWOLE phase. and $\textbf{X}$ and $\textbf{Y}$ the corresponding random variables for $\textbf{x}, \textbf{y} \in \mathbb{Z}^{n}_d$  in the post-processing phase. Also, we use $A'$ and $B'$ to denote the system that a dishonest Alice and Bob, respectively, hold at the end of the execution of the protocol.
+\noindent\textbf{Notation.}  During the RWOLE phase, $\mathbf{F}_0 = (F^0_1,F^0_2 ,\ldots, F^0_n)$ is the vector whose components are the  random variables associated to Alice's functions. Each  $F^0_i$ ranges over the set of affine functions in $\mathbb{Z}_d$ such that $P(F^0_i(x)=a^0_ix+ b^0_i)$ is uniform for all $i\in [n]$. We do not distinguish the set of affine functions in $\mathbb{Z}_d$ from $\mathbb{Z}_d^2$. The classical values $\mathbf{F}_0$ are saved in the Hilbert space $\mathcal{H}_{\mathbf{F}_0}$. The same holds for the derandomization phase, where $\mathbf{F}$ denotes the random variable for Alice's functions in the protocol $\Pi^n_{\textbf{WOLE}}$. $\textbf{X}_0$ and $\textbf{Y}_0$ are the random variables for $\textbf{x}_0, \textbf{y}_0 \in \mathbb{Z}^{ n}_d$  in the RWOLE phase. and $\textbf{X}$ and $\textbf{Y}$ the corresponding random variables for $\textbf{x}, \textbf{y} \in \mathbb{Z}^{n}_d$  in the post-processing phase. Also, we use $A'$ and $B'$ to denote the system that a dishonest Alice and Bob, respectively, hold at the end of the execution of the protocol.
 
 
 \subsection{RWOLE phase}
@@ -836,6 +836,9 @@ for $\zeta\in\,]0, 1-\frac{1}{d}]$, $n$ the security parameter and $\epsilon(\ze
 \end{eqnarray*}
 where $K = \frac{\sqrt{d}}{2}$, $f_d(\zeta) = \frac{\log d}{4} (1-h_d(\zeta))$. This means that the triple $(\bm{d}, \bm{s}, \bm{\kappa})$ only gives to the environment a negligible advantage in distinguishing between the real and ideal world executions.
 \end{proof}
+
+This finishes the proof of Lemma~\ref{lemma:dishonestBob}.
+
 \end{proof}
 
 

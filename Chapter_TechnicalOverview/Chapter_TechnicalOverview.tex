@@ -258,7 +258,7 @@ To highlight the importance of OLE in secret sharing based SMC protocols, we go 
 
 Quantum information theory is a field that studies the implications of using quantum systems as the medium of information. The information carriers in quantum systems are governed by the laws of quantum mechanics, allowing for properties not present in classical methods to be exploited. In this section, we present the basic elements of quantum information that will be used in the quantum protocols presented and their security proofs.
 
-In quantum information theory, a quantum system is described by a Hilbert space $\mathcal{H}_A$. In this thesis, we will consider only finite-dimensional Hilbert spaces, where $\dim \mathcal{H}_A = d < \inf$. The space $\mathcal{H}_A$ can be identified with the complex vector space $\mathbb{C}^d$, as well as its corresponding dual space $\mathcal{H}^{*}_A$. We use the Dirac bra-ket notation to describe the states of a quantum system. A pure state is described by a normalized vector $\ket{\psi}_A \in \mathcal{H}_A$ and its dual vector $\bra{\psi}_A \in \mathcal{H}^{*}_A$. To simplify notation, we may omit specifying the Hilbert space to which a state belongs if it is clear from context. The standard basis of $\mathbb{C}^d$ can be identified with the computational basis of $\mathcal{H}_A$, denoted as $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. The joint system of multiple subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$ can be described by their tensor product, denoted as $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are represented as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
+In quantum information theory, a quantum system is described by a Hilbert space $\mathcal{H}_A$. In this thesis, we will consider only finite-dimensional Hilbert spaces, where $\dim \mathcal{H}_A = d < \infty$. The space $\mathcal{H}_A$ can be identified with the complex vector space $\mathbb{C}^d$, as well as its corresponding dual space $\mathcal{H}^{*}_A$. We use the Dirac bra-ket notation to describe the states of a quantum system. A pure state is described by a normalized vector $\ket{\psi}_A \in \mathcal{H}_A$ and its dual vector $\bra{\psi}_A \in \mathcal{H}^{*}_A$. To simplify notation, we may omit specifying the Hilbert space to which a state belongs if it is clear from context. The standard basis of $\mathbb{C}^d$ can be identified with the computational basis of $\mathcal{H}_A$, denoted as $\left\{ \ket{i} \right\}_{i=0}^{d-1}$. The joint system of multiple subsystems $\mathcal{H}_1, \ldots, \mathcal{H}_n$ can be described by their tensor product, denoted as $\mathcal{H}_1 \otimes \ldots \otimes \mathcal{H}_n$. The vectors in this joint system are represented as $\ket{\bm{x}} = \ket{x_1} \otimes \ldots \otimes \ket{x_n}$, where $\bm{x} \in \mathbb{Z}_d^n$.
 
 We can generate quantum pure states, denoted as $\ket{\psi_i}\in \mathcal{H}$, according to a probability distribution ${p_i}$. This situation is described by a density operator, denoted as $\rho = \sum_i p_i \ketbra{\psi_i}$, which is commonly referred to as a mixed state. Density operators are positive semi-definite hermitian operators with unitary trace, that is, $\rho \geq 0$ and $\tr \rho = 1$. The set of hermitian operators, positive semi-definite operators and density operators on a Hilbert space $\mathcal{H}$ are denoted as $\text{Herm}(\mathcal{H})$, $\text{Pos}(\mathcal{H})$ and $\mathcal{P}(\mathcal{H})$ respectively.
 
@@ -341,7 +341,7 @@ $$P_{\text{guess}}(X|B) = \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{x}^B\ri
 where the maximization is taken over all positive operator-valued measures (POVM), i.e. $\left\{ M_x \geq 0 : \sum_x M_x = \mathds{1} \right\}$.
 \end{definition}
 
-In Definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ represents the probability of correctly guessing $x$ given access to system $B$. Additionally, the maximization is taken over the most general type of measurements allowed in quantum mechanics. The following Lemma~\ref{lemma:bijectivefunction} states how min-entropy changes when a fixed bijective function is applied to the classical subsystem of a cq-state. This lemma will be important in the proof of security for the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE}.
+In Definition~\ref{def:cqentropy}, $P_{\text{guess}}(X|B)$ represents the probability of correctly guessing $x$ given access to system $B$. Additionally, the maximization is taken over the most general type of measurements allowed in quantum mechanics. The following lemma states how min-entropy changes when a fixed bijective function is applied to the classical subsystem of a cq-state. This lemma will be important in the proof of security for the quantum oblivious linear evaluation protocol presented in Chapter~\ref{ch:QOLE}.
 
 \begin{lemma}
 Let $\rho_{XB} \in \mathcal{P}(\mathcal{H}_{X}\otimes \mathcal{H}_B)$ be a cq-state and let $f:\mathcal{X} \rightarrow \mathcal{X} $ be a fixed bijective function. Then,
@@ -367,7 +367,7 @@ H_{\min}(f(X)|B) &=& -\log \max_{\{M_x\}_x} \sum_x p_x \tr\left[M_x \rho_{f(x)}^
 \end{eqnarray*}
 
 It is important to note that $\left\{ N_x \right\}_x= \left\{U^{\dagger} M_x U\right\}_x$ is also a POVM, as they are all positive semidefinite operators and they sum up to unity. Therefore, we have that $\left\{U^{\dagger} M_x U\right\}_x$ can only decrease the space of possible POVMs, which is why we have:
-$$\max_{{M_x}x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho{x}^B \right] \leq \max_{{M_x}x} \sum_x p_x \tr\left[ M_x \rho{x}^B \right].$$
+$$\max_{\{M_x\}_x} \sum_x p_x \tr\left[U^{\dagger} M_x U \rho{x}^B \right] \leq \max_{\{M_x\}_x} \sum_x p_x \tr\left[ M_x \rho{x}^B \right].$$
 
 This means that, 
 \begin{equation*}
@@ -384,10 +384,10 @@ The conditional min-entropy can be generalized to the fully quantum case where b
 Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B')$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_B')$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
 $$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \},$$
 and 
-$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma}.$$
+$$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma_{B'}}.$$
 \end{definition}
 
-Furthermore, consider the superposition state $\ket{\phi}{AB'} = \sum{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}{AB'}$ and the mixture $\tilde{\rho}{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives a lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
+Furthermore, consider the superposition state $\ket{\phi}_{AB'} = \sum{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}_{AB'}$ and the mixture $\tilde{\rho}_{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives a lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
 
 
 \begin{lemma}[Lemma 3.1.13, \cite{R06}]
@@ -591,7 +591,7 @@ The $\mathcal{F}_{\textbf{COM}}$ functionality can be replaced by the commitment
 
 \section{Conclusion}
 
-Throughout this chapter, we introduce the essential concepts that underpin the rest of the thesis. The chapter is divided into four main sections. First, we provide a succinct overview of key mathematical notation elements. Next, we give an informal description of secure multiparty computation. Finally, we introduce the basic formalism of quantum information and the universal composability framework in the quantum setting.
+Throughout this chapter, we introduce the essential concepts that underpin the rest of the thesis. The chapter is divided into four main sections. First, we provide a succinct overview of the mathematical notation. Next, we give an informal description of secure multiparty computation. Finally, we introduce the basic formalism of quantum information and the universal composability framework in the quantum setting.
 
 
 %\bibliography{bibforthesis}

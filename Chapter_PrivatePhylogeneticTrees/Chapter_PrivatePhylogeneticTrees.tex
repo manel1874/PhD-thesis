@@ -99,9 +99,9 @@ j\mu\pi_A & k\mu\pi_C & l\mu\pi_G & -\mu(i\pi_A+k\pi_C + l\pi_G)
 
 In $\mathbf{Q}$, each entry $\mathbf{Q}_{ij}$ represents the substitution rate from nucleotide i to j and both its columns and rows follow the order $A$, $C$, $G$, $T$. $\mu$ is the total number of substitutions per unit time and we can define the evolutionary distance, $d$, to be given by $d = \mu t$. The parameters $a, b, c, ..., l$ represent the relative rate of each nucleotide substitution to any other. Finally, $\pi_A, \pi_C, \pi_G, \pi_T$ describe the frequency of each nucleotide in the sequences. 
 
-From expression (\ref{eq:probability}), it is possible to define a likelihood function on the distance $d$ and use the maximum likelihood approach to get an estimation of the evolutionary distance. The likelihood function defines the probability of observing two particular sequences, $x$ and $y$, given the distance $d$:
+From Expression (\ref{eq:probability}), it is possible to define a likelihood function on the distance $d$ and use the maximum likelihood approach to get an estimation of the evolutionary distance. The likelihood function defines the probability of observing two particular sequences, $x$ and $y$, given the distance $d$:
 
-$$L(d) = \prod_{i=1}^n \pi_{x_i}P_{x_i, y_i}\Big(\frac{d}{\mu}\Big)$$
+$$L(d) = \prod_{i=1}^n \pi_{x_i}P_{x_i, y_i}\Big(\frac{d}{\mu}\Big).$$
 
 The parameters of $\mathbf{Q}$ are defined differently depending on the evolutionary model used and the maximum likelihood solution leads to different evolutionary distances. 
 
@@ -129,7 +129,7 @@ These two different types of transformation lead to different probability distri
 \begin{equation}
 d_{xy} = -\frac{1}{2}\ln\bigg( \big(1-2P-Q\big) \sqrt{1-2Q} \bigg)
 \end{equation}
-where $P=\frac{n_1}{n}$, $Q=\frac{n_2}{n}$ and $n_1$ and $n_2$ are respectively the number of sites for which two sequences differ from each other with respect to type I ("transition" type) and type II ("transversion" type) substitutions.
+where $P=\frac{n_1}{n}$, $Q=\frac{n_2}{n}$ and $n_1$ and $n_2$ are respectively the number of sites for which two sequences differ from each other with respect to type I (``transition" type) and type II (``transversion" type) substitutions.
 
 \subsubsection{F84}\label{F84_model}
 
@@ -232,15 +232,14 @@ This method renders an unrooted tree and also assumes that the distances are add
 \begin{eqnarray}
 d(C_i, C_j) &= d(C_i, a) + d(a, C_j) \nonumber \\
 d(C_i, C_l) &= d(C_i, a) + d(a, C_l) \nonumber\\
-d(C_l, C_j) &= d(C_l, a) + d(a, C_j) \nonumber
+d(C_l, C_j) &= d(C_l, a) + d(a, C_j), \nonumber
 \end{eqnarray}
-
 from which we can easily see that 
 
 \begin{eqnarray}
 d(a, C_i) &= \frac{1}{2}\bigg(d(C_i, C_j) + d(C_i, C_l) - d(C_l, C_j)\bigg)\nonumber \\
 d(a, C_j) &= \frac{1}{2}\bigg(d(C_i, C_j) + d(C_l, C_j) - d(C_i, C_l)\bigg)\label{eq:node_distance}\\
-d(a, C_l) &= \frac{1}{2}\bigg(d(C_i, C_l) + d(C_l, C_j) - d(C_i, C_j)\bigg)\nonumber 
+d(a, C_l) &= \frac{1}{2}\bigg(d(C_i, C_l) + d(C_l, C_j) - d(C_i, C_j)\bigg).\nonumber 
 \end{eqnarray}
 
 Thus, we can estimate the distances from the known clusters to the new internal node using the distances between the clusters as given in (\ref{eq:node_distance}). Based on this, the Fitch-Margoliash algorithm goes as follows:
@@ -277,9 +276,7 @@ All these methods output a tree with some topology, $\mathcal{T}$ along with the
 
 \section{Security definition} \label{secDefition}
 
-In this chapter, we consider a multiparty computation scenario that is secure against \textit{semi-honest} parties. This means that all the parties strictly follow the protocol but can use their inputs, received messages and outputs to deduce any additional information. As such, these are also commonly called \textit{honest-but-curious} parties. Nevertheless, we can extend the protocol to the malicious setting, by simply implementing a two-party secure computation protocol that is secure against malicious adversaries \cite{Evans2018}. Our security will follow the simulation paradigm and we start with the definition of security in a multi-party setting. The formal definition is taken from \cite{Evans2018}.
-
-\textit{Notation}. 
+In this chapter, we consider a multiparty computation scenario that is secure against \textit{semi-honest} parties. This means that all the parties strictly follow the protocol but can use their inputs, received messages and outputs to deduce any additional information. As such, these are also commonly called \textit{honest-but-curious} parties. Nevertheless, we can extend the protocol to the malicious setting, by simply implementing a two-party secure computation protocol that is secure against malicious adversaries \cite{Evans2018}. Our security will follow the simulation paradigm and we start with the definition of security in a multi-party setting. The formal definition is taken from \cite{Evans2018} and it requires the following elements:
 
 \begin{itemize}
     \item $\mathcal{F}$ denotes the ideal functionality to be computed in the SMC session, i.e. $\mathcal{F}: \mathcal{X}^n \rightarrow \mathcal{Y}^n$ where $n$ is the number of parties participating in the SMC and $\mathcal{X}$ and $\mathcal{Y}$ are the input and output space of each party, respectively. $X^i\in \mathcal{X}$ and $Y^i\in \mathcal{Y}$ denote the sets of input and output of party $P^i$, respectively. Also, for short, $X = (X^1, ..., X^n)$ and $Y = (Y^1, ..., Y^n)$;
@@ -638,7 +635,7 @@ This way, we just have to generate the boolean circuit for $h_{xy}$ rather than 
 \subsubsection{Kimura}
 In Section~\ref{K2P_model}, we saw that the Kimura 2-parameter model leads to the following distance:
 $$d_{xy} = -\frac{1}{2}\ln\bigg( \big(1-2P-Q\big) \sqrt{1-2Q} \bigg),$$
-where $P=\frac{n_1}{N}$, $Q=\frac{n_2}{N}$ and $n_1$ and $n_2$ are respectively the number of sites for which two sequences differ from each other with respect to type I ("transition" type) and type II ("transversion" type) substitutions.
+where $P=\frac{n_1}{N}$, $Q=\frac{n_2}{N}$ and $n_1$ and $n_2$ are respectively the number of sites for which two sequences differ from each other with respect to type I (``transition" type) and type II (``transversion" type) substitutions.
 
 Similar to the case of Jukes-Cantor metric, note that $h(x) = -\frac{1}{2}\ln(\sqrt{\frac{x}{N^3}})$ is one-to-one and only defined for $x>0$. Thus, we can proceed as follows:
 
@@ -702,7 +699,7 @@ In order to prove this lemma, we have to develop a simulator $S$ that simulates 
 \begin{enumerate}
     \item Generates random sequences of the honest parties, $H$.
     \item Invokes the oracle-functionality $\mathtt{D}_d$ on these sequences.
-    \item Sends to all corrupted parties $C$ the results of distances computed from honest parties sequences
+    \item Sends to all corrupted parties $C$ the results of distances computed from honest parties sequences.
     \item Invokes the oracle-functionality $\mathtt{D}_d$ on the sequences owned by the corrupted parties.
     \item Invokes the oracle-functionality $\mathtt{D}_d(s_i, s_j)$ for $s_i\in H$ and $s_j\in C$. 
 \end{enumerate}

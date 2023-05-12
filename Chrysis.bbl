@@ -238,6 +238,20 @@ James Bartusek, Andrea Coladangelo, Dakshita Khurana, and Fermi Ma.
   -- CRYPTO 2021}, pages 467--496, Cham, 2021. Springer International
   Publishing.
 
+\bibitem{IR89}
+Russel Impagliazzo and Steven Rudich.
+\newblock Limits on the provable consequences of one-way permutations.
+\newblock In {\em Proceedings of the Twenty-First Annual ACM Symposium on
+  Theory of Computing}, STOC '89, page 44–61, New York, NY, USA, 1989.
+  Association for Computing Machinery.
+
+\bibitem{GKMRV00}
+Y.~Gertner, S.~Kannan, T.~Malkin, O.~Reingold, and M.~Viswanathan.
+\newblock The relationship between public key encryption and oblivious
+  transfer.
+\newblock In {\em Proceedings 41st Annual Symposium on Foundations of Computer
+  Science}. {IEEE} Comput. Soc, 2000.
+
 \bibitem{U10}
 Dominique Unruh.
 \newblock Universally composable quantum multi-party computation.
@@ -385,13 +399,6 @@ Samee Zahur, Mike Rosulek, and David Evans.
 \newblock Two halves make a whole.
 \newblock In {\em Advances in Cryptology - {EUROCRYPT} 2015}, pages 220--250.
   Springer Berlin Heidelberg, 2015.
-
-\bibitem{IR89}
-Russel Impagliazzo and Steven Rudich.
-\newblock Limits on the provable consequences of one-way permutations.
-\newblock In {\em Proceedings of the Twenty-First Annual ACM Symposium on
-  Theory of Computing}, STOC '89, page 44–61, New York, NY, USA, 1989.
-  Association for Computing Machinery.
 
 \bibitem{AIK11}
 Benny Applebaum, Yuval Ishai, and Eyal Kushilevitz.
@@ -567,13 +574,6 @@ Bruno Costa, Pedro Branco, Manuel Goul{\~{a}}o, Mariano Lemus, and Paulo
 \newblock Randomized oblivious transfer for secure multiparty computation in
   the quantum setting.
 \newblock {\em Entropy}, 23(8):1001, July 2021.
-
-\bibitem{GKMRV00}
-Y.~Gertner, S.~Kannan, T.~Malkin, O.~Reingold, and M.~Viswanathan.
-\newblock The relationship between public key encryption and oblivious
-  transfer.
-\newblock In {\em Proceedings 41st Annual Symposium on Foundations of Computer
-  Science}. {IEEE} Comput. Soc, 2000.
 
 \bibitem{EGL85}
 Shimon Even, Oded Goldreich, and Abraham Lempel.
@@ -1776,12 +1776,27 @@ Atul~Singh Arora, J\'{e}r\'{e}mie Roland, and Chrysoula Vlachou.
   Discrete Algorithms}, SODA '21, page 919–938. Society for Industrial and
   Applied Mathematics, 2021.
 
-\bibitem{BCDP21}
-Mathieu Bozzio, Adrien Cavaill\`es, Eleni Diamanti, Adrian Kent, and Dami\'an
-  Pital\'ua-Garc\'{\i}a.
-\newblock Multiphoton and side-channel attacks in mistrustful quantum
-  cryptography.
-\newblock {\em PRX Quantum}, 2:030338, Sep 2021.
+\bibitem{PW08}
+Bartosz Przydatek and J{\"u}rg Wullschleger.
+\newblock Error-tolerant combiners for oblivious primitives.
+\newblock In Luca Aceto, Ivan Damg{\aa}rd, Leslie~Ann Goldberg, Magn{\'u}s~M.
+  Halld{\'o}rsson, Anna Ing{\'o}lfsd{\'o}ttir, and Igor Walukiewicz, editors,
+  {\em Automata, Languages and Programming}, pages 461--472, Berlin,
+  Heidelberg, 2008. Springer Berlin Heidelberg.
+
+\bibitem{DPV+12}
+Anindya De, Christopher Portmann, Thomas Vidick, and Renato Renner.
+\newblock Trevisan{\textquotesingle}s extractor in the presence of quantum side
+  information.
+\newblock {\em {SIAM} Journal on Computing}, 41(4):915--940, January 2012.
+
+\bibitem{KK10}
+Roy Kasher and Julia Kempe.
+\newblock Two-source extractors secure against quantum adversaries.
+\newblock In Maria Serna, Ronen Shaltiel, Klaus Jansen, and Jos{\'e} Rolim,
+  editors, {\em Approximation, Randomization, and Combinatorial Optimization.
+  Algorithms and Techniques}, pages 656--669, Berlin, Heidelberg, 2010.
+  Springer Berlin Heidelberg.
 
 \bibitem{CZK18}
 Yao-Hsin Chou, Guo-Jyun Zeng, and Shu-Yu Kuo.

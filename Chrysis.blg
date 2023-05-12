@@ -10,46 +10,46 @@ A level-1 auxiliary file: Chapter_QuantumObliviousLinearEvaluation/Chapter_Quant
 A level-1 auxiliary file: Chapter_Conclusion/Chapter_Conclusion.aux
 A level-1 auxiliary file: Appendix/Appendix_PrivatePhylogenetirTrees_Code.aux
 The style file: unsrt.bst
-Reallocated field_info (elt_size=4) to 11877 items from 5000.
+Reallocated field_info (elt_size=4) to 11923 items from 5000.
 Database file #1: References/References.bib
-You've used 299 entries,
+You've used 301 entries,
             1791 wiz_defined-function locations,
-            2235 strings with 53866 characters,
-and the built_in function-call counts, 78772 in all, are:
-= -- 7107
-> -- 3687
-< -- 84
-+ -- 1343
-- -- 1044
-* -- 5351
-:= -- 11987
-add.period$ -- 981
-call.type$ -- 299
-change.case$ -- 292
+            2246 strings with 54192 characters,
+and the built_in function-call counts, 79690 in all, are:
+= -- 7198
+> -- 3734
+< -- 86
++ -- 1358
+- -- 1057
+* -- 5416
+:= -- 12118
+add.period$ -- 989
+call.type$ -- 301
+change.case$ -- 294
 chr.to.int$ -- 0
-cite$ -- 299
-duplicate$ -- 3772
-empty$ -- 7532
-format.name$ -- 1044
-if$ -- 18163
+cite$ -- 301
+duplicate$ -- 3814
+empty$ -- 7608
+format.name$ -- 1057
+if$ -- 18380
 int.to.chr$ -- 0
-int.to.str$ -- 299
-missing$ -- 276
-newline$ -- 1477
-num.names$ -- 345
-pop$ -- 980
+int.to.str$ -- 301
+missing$ -- 278
+newline$ -- 1487
+num.names$ -- 351
+pop$ -- 990
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2086
+skip$ -- 2116
 stack$ -- 0
-substring$ -- 4685
-swap$ -- 1207
-text.length$ -- 84
+substring$ -- 4756
+swap$ -- 1227
+text.length$ -- 86
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 688
-width$ -- 302
-write$ -- 3357
+while$ -- 699
+width$ -- 304
+write$ -- 3383
