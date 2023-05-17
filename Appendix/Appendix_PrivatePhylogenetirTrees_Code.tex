@@ -84,7 +84,7 @@ void mpc_main(Array_Seq INPUT_A, Array_Seq INPUT_B){
 \chapter{Proof of Lemma \ref{lemma:wrole_dishonest_bob} (Dishonest Bob)}
 \label{app:proofBobdishonest}
 
-As we mentioned in the main text this proof is  a combination and adaptation to our case of results from \cite{DFLSS09} and \cite{Dupuis2015}. 
+As we mentioned in the main text, this proof is a combination and adaptation of results from \cite{DFLSS09} and \cite{Dupuis2015} to our case. 
 
 To simplify the notation, in this proof we drop the subscript $0$ that refers to the RWOLE phase, e.g. we write Alice's function vector  $\mathbf{F}_0$,  simply  as $\mathbf{F}$. 
 
@@ -242,17 +242,15 @@ is the state obtained when $V^{\bm{b}}_{\bm{a}}$ is applied to the system $\math
 \begin{proof}
 This proof is an adaptation of the proof of Theorem 12 in \cite{Dupuis2015} to our case.
 Let us fix $x\in\mathbb{Z}_d$ and write $\ket{i} = \ket{e^x_i}$  for short. 
- $V^b_a$ is a CPTP map, and it is known that the min-entropy does not decrease whenever a CPTP map is applied. However, this is not enough  to prove the security of the protocol and determine a lower bound. We need a more refined expression relating  $H_{\min}(\mathcal{M}(\mathbf{X})|E)$ and  $H_{\min}(\mathbf{X}|E)$ for some CPTP map $\mathcal{M}$. This is given by Lemma~\ref{thm:entaglementSamplingResult}, which can be applied for $$\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}} = \mathcal{N}^{\otimes n},$$ where $\mathcal{N}(\sigma_X) = \frac{1}{d^2}\sum_{(a,b)\in\mathbb{Z}^2_d}\mathcal{N}_{a,b} \sigma_X \mathcal{N}_{a,b}^\dagger = \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \bigg( \ket{a,b} \otimes V^b_a \bigg) \sigma_X \bigg( \bra{a,b} \otimes V^{b\dagger}_a \bigg) $. The operator $\mathcal{N}$ applies the operator $V^b_a$ to the single system $X$ and saves its choice $(a,b)$ to a new record in the  $F$ space.  
+ $V^b_a$ is a CPTP map, and it is known that the min-entropy does not decrease whenever a CPTP map is applied. However, this is not enough  to prove the security of the protocol and determine a lower bound. We need a more refined expression relating  $H_{\min}(\mathcal{M}(\mathbf{X})|E)$ and  $H_{\min}(\mathbf{X}|E)$ for some CPTP map $\mathcal{M}$. This is given by Lemma~\ref{thm:entaglementSamplingResult}, which can be applied for $$\mathcal{M}_{\mathbf{X}\rightarrow \mathbf{F}\mathbf{Y}} = \mathcal{N}^{\otimes n},$$ where $\mathcal{N}(\sigma_X) = \frac{1}{d^2}\sum_{(a,b)\in\mathbb{Z}^2_d}\mathcal{N}_{a,b} \sigma_X \mathcal{N}_{a,b}^\dagger = \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \bigg( \ket{a,b} \otimes V^b_a \bigg) \sigma_X \bigg( \bra{a,b} \otimes V^{b\dagger}_a \bigg) $. The operator $\mathcal{N}$ applies the operator $V^b_a$ to the single system $X$ and saves its choice $(a,b)$ to a new record in the $F$ space.  
 
 To use Lemma~\ref{thm:entaglementSamplingResult}, we have to prove that $((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}) (\Phi_{\mathbf{X} \bar{\mathbf{X}}})$ can be written as a linear combination of $\Phi_{(\bm{a},\bm{b})}$, i.e.
 $$((\mathcal{M}^\dagger \circ \mathcal{M} )_{\mathbf{X}} \otimes \text{id}_{\bar{\mathbf{X}}}) (\Phi_{\mathbf{X} \bar{\mathbf{X}}}) = \sum_{(\bm{a},\bm{b})\in \mathbb{Z}^{2n}} \lambda_{(\bm{a},\bm{b})} \Phi_{(\bm{a},\bm{b})}.$$
-
 First, note that 
 \begin{align}
     \mathcal{N}(\ketbra{i}{j}) &= \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \bigg( \ket{a,b} \otimes V^b_a \bigg) \ketbra{i}{j} \bigg( \bra{a,b} \otimes V^{b\dagger}_a \bigg) \nonumber\\
     \alignedoverset{\ref{prop:a}}{=} \frac{1}{d^2} \sum_{(a,b)\in\mathbb{Z}^2_d} \ketbra{a,b} \otimes \ketbra{ax-b+i}{ax-b+j}, \label{eqn:Nresult}
 \end{align}
-
 where we used the property \ref{prop:a}.  We proceed to compute $\mathcal{N}^\dagger \circ \mathcal{N} \ketbra{i}{j}$:
 \begin{align}
 \mathcal{N}^\dagger \circ \mathcal{N} \ketbra{i}{j} &= \frac{1}{d^2} \sum_{(a',b')\in\mathbb{Z}^2_d} \mathcal{N}^\dagger_{a' b'} (\mathcal{N}\ketbra{i}{j})) \mathcal{N}_{a' b'} \nonumber\\
@@ -314,7 +312,7 @@ from which we conclude that
 \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq 2n\log d + \text{H}_2(\mathbf{X}|E)_{\sigma_{\mathbf{X} E}}.  \label{eqn:firstineq} 
 \end{equation}
 
-In order to relate $\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$ with $\text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$, we use the chain rule given by LEmma~\ref{lemma:chain_rule}:
+In order to relate $\text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$ with $\text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}}$, we use the chain rule given by Lemma~\ref{lemma:chain_rule}:
 \begin{equation}
 \text{H}_2(\mathbf{F} | \mathbf{Y} E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} \geq \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} - \log \text{rank}(\sigma_{\mathbf{Y}}) \geq \text{H}_2(\mathbf{F}\mathbf{Y} | E)_{\sigma_{\mathbf{F}\mathbf{Y} E}} - n \log d,
  \label{eqn:chainRule} 

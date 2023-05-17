@@ -56,7 +56,16 @@ Before delving into the details of the Yao protocol, it is important to introduc
 
 The study of oblivious transfer (OT) has been active since its first proposal by Rabin in 1981 \cite{Rabin81}. The importance of OT comes from its wide range of applications. In particular, it can be proven that OT is equivalent to the secure two-party computation of general functions \cite{Y86, K88}, meaning that a secure two-party computation can be implemented using OT as its building block. Additionally, this primitive can also be used for secure multiparty computation (SMC) \cite{KOS16}, private information retrieval \cite{Che04}, private set intersection \cite{MEP17}, and privacy-preserving location-based services \cite{BHM+19}.
 
-\begin{figure}[h!]
+The OT functionality can be presented in many flavours. In this thesis, when we refer to OT, we mean the $1$-out-of-$2$ OT that is specified in Figure~\ref{fig:OT_functionality}. Consequently, we have that OT must satisfy the following security requirements:
+
+\begin{itemize}
+	\item Concealing: Alices knows nothing about Bob's bit choice $b$.
+	\item Obliviousness: Bob knows nothing about the message $m_{b\oplus 1}$.
+\end{itemize}
+
+OT can be generalized to the case of $k$-out-of-$N$ OT, where Alice owns $N$ messages, and Bob can choose $k$ of them. For $k=1$, this is commonly called private database query (PDQ). Also, we call random OT when both parties' inputs are random.
+
+\begin{figure}[b!]
 \centering
 \begin{tcolorbox}[enhanced, 
                         frame hidden,
@@ -75,16 +84,6 @@ The study of oblivious transfer (OT) has been active since its first proposal by
     \caption{OT functionality.}
     \label{fig:OT_functionality}
 \end{figure}
-
-The OT functionality can be presented in many flavours. In this thesis, when we refer to OT, we mean the $1$-out-of-$2$ OT that is specified in Figure~\ref{fig:OT_functionality}. Consequently, we have that OT must satisfy the following security requirements:
-
-\begin{itemize}
-	\item Concealing: Alices knows nothing about Bob's bit choice $b$.
-	\item Obliviousness: Bob knows nothing about the message $m_{b\oplus 1}$.
-\end{itemize}
-
-OT can be generalized to the case of $k$-out-of-$N$ OT, where Alice owns $N$ messages, and Bob can choose $k$ of them. For $k=1$, this is commonly called private database query (PDQ). Also, we call random OT when both parties' inputs are random.
-
 
 \subsubsection{Yao protocol}\label{yaoProtocol}
 
