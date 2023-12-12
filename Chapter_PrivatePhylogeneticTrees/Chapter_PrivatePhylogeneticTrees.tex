@@ -745,36 +745,36 @@ If we assume the number of sequences per party to be the same, i.e. $M_j = M\, \
 \subsubsection{OT executions}
 From $N_{\text{Yao}}$ we can deduce the number of OT executions. In the Yao protocol, we need to execute one OT for each of the evaluator's input wires. For a sequence with $s$ nucleotides and using a two-bit representation of each nucleotide, the boolean circuit that computes the distance between two sequences will have $2s$ input wires for each party input. Therefore, each party executes the following number of OT executions ($\forall j$):
 \begin{eqnarray*}
-N_{\text{OT}}^j &=& N^j_\text{Yao} \cdot 2s \\
+N_{\text{OT}}^j &=& 2sN^j_\text{Yao}  \\
 &=& 2sM^2(n-1).
 \end{eqnarray*}
 
 It is important to note that $N_{\text{OT}}^j$ is independent of the size of the boolean circuit used, i.e. it is independent of the distance metric $d$ used in the protocol. This is a consequence of using the Yao protocol where the number of OT only depends on the input size. In case we were using GMW \cite{Goldreich87} protocol, the number of OT per party would depend on the size of the circuit.
 
-As mentioned in Section \ref{quantumTechIntegQOT}, in case the number of oblivious keys generated is scarce compared to the number of OT required, we can use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the base OT used within OT extension protocol. In this case, we just have to generate $\kappa$ $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocols per Yao execution: $L^j_\text{bOT} = N^j_\text{Yao} \cdot \kappa = \kappa M^2(n-1)$.
+As mentioned in Section \ref{quantumTechIntegQOT}, in case the number of oblivious keys generated is scarce compared to the number of OT required, we can use the $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the base OT used within OT extension protocol. In this case, we just have to generate $\kappa$ $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocols per Yao execution: $L^j_\text{bOT} = \kappa N^j_\text{Yao}  = \kappa M^2(n-1)$.
 
 \subsubsection{Oblivious keys}
 At this point, we can easily deduce the size of oblivious keys that each pair of parties have to generate when using messages of size $l$. 
 
 In case we use $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the final OT:
 \begin{eqnarray*}
-L^j_{\text{ok}} &=& N_{\text{OT}}^j \cdot 2l \\
+L^j_{\text{ok}} &=& 2l N_{\text{OT}}^j \\
 &=& 4slM^2(n-1).
 \end{eqnarray*}
 
 Also, we can use the number of OT executions per party and the analysis from Table~\ref{table:complexity} and \cite{SPM21} to compute the computational and communication complexity (in bits) of $\Pi^{\textbf{BBCS}}_{\textbf{O}}$:
 \begin{eqnarray*}
-\mathcal{C}^j_{\text{comp}} &=&  N_{\text{OT}}^j \cdot 8l \\
+\mathcal{C}^j_{\text{comp}} &=&  8l N_{\text{OT}}^j \\
 &=& 16 slM^2(n-1),
 \end{eqnarray*}
 \begin{eqnarray*}
-\mathcal{C}^j_{\text{comm}} &=&  N_{\text{OT}}^j \cdot 3l \\
+\mathcal{C}^j_{\text{comm}} &=&  3l N_{\text{OT}}^j \\
 &=& 6 slM^2(n-1).
 \end{eqnarray*}
 
 In case we use $\Pi^{\textbf{BBCS}}_{\textbf{O}}$ protocol to generate the base OT, the total size of oblivious key required is:
 \begin{eqnarray*}
-L^j_{\text{bok}} &=& N_{\text{bOT}}^j \cdot 2l \\
+L^j_{\text{bok}} &=& 2l N_{\text{bOT}}^j \\
 &=& 2\kappa lM^2(n-1).
 \end{eqnarray*}
 
@@ -792,7 +792,7 @@ $$32(M^2(n-2) + N^j_\text{int}),$$
 for a $32-$bit number representation. Therefore, the total size of key shared between two parties $P_j$ and $P_t$ must be:
 $$L^{jt}_{qkd} = 64(M^2(n-2) + N_\text{int}).$$
 
-Also, each party must have an overall shared key of $L^{j}_{qkd} = \sum_{i\neq j} L^{i}_{qkd} = 64(n-1)(M^2(n-2) + N^j_\text{int})$.
+Also, each party must have an overall shared key of: $$L^{j}_{qkd} = \sum_{i\neq j} L^{i}_{qkd} = 64(n-1)(M^2(n-2) + N^j_\text{int}).$$
 
 % Dizer a que é que corresponde este cenário (!!) 
 

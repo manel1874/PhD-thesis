@@ -87,6 +87,12 @@ M.~Naor and Benny Pinkas.
 \newblock Efficient oblivious transfer protocols.
 \newblock In {\em SODA '01}, 2001.
 
+\bibitem{RSA78}
+R.~L. Rivest, A.~Shamir, and L.~Adleman.
+\newblock A method for obtaining digital signatures and public-key
+  cryptosystems.
+\newblock {\em Communications of the ACM}, 21(2):120–126, February 1978.
+
 \bibitem{Wang11}
 Jun Wang.
 \newblock Personal genomes: For one and for all.
