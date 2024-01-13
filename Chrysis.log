@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  12 DEC 2023 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  15 DEC 2023 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1488,13 +1488,8 @@ Chapter 1.
 ] [2] [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
-Overfull \hbox (32.9777pt too wide) in paragraph at lines 74--76
-\OT1/cmr/m/n/12 sally Com-pos-able Obliv-i-ous Lin-ear Eval-u-a-tion". 2022. DO
-I: 10.48550/ARXIV.2204.14171.
- []
-
-) [5]
+ [4])
+[5]
 \openout2 = `Chapter_TechnicalOverview/Chapter_TechnicalOverview.aux'.
 
  (./Chapter_TechnicalOverview/Chapter_TechnicalOverview.tex [6
@@ -2079,7 +2074,7 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (202 pages, 5572085 bytes).
+Output written on Chrysis.pdf (202 pages, 5572077 bytes).
 PDF statistics:
  3496 PDF objects out of 3580 (max. 8388607)
  3105 compressed objects within 32 object streams

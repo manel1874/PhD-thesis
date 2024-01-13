@@ -35,7 +35,7 @@ Also, the intrinsic randomness provided by quantum phenomena can be leveraged to
 
 Despite the many advances, the adoption of quantum cryptography in secure multiparty computation (SMC) systems has been limited due to the efficiency challenges posed by quantum technology and the need for high throughput of both OT and OLE primitives in boolean- and arithmetic-based SMC.
 
-The aim of this thesis is to further the adoption of quantum cryptography in SMC systems through three key contributions. The first contribution involves a study comparing the efficiency of classical and quantum protocols. The second contribution is the implementation of a specialized SMC system for genomics analysis utilizing quantum OT. And the final contribution is the development of the first quantum OLE protocol that does not rely on OT. Additionally, we have also created a comprehensive review dedicated solely to quantum OT protocols, which is often overlooked in broader surveys on the topic of ``quantum cryptography''. We describe the contributions in a bit more detail.
+The aim of this thesis is to further the adoption of quantum cryptography in SMC systems through three key contributions. The first contribution involves a study comparing the efficiency of classical and quantum protocols. The second contribution is the implementation of a specialized SMC system for genomics analysis utilizing quantum OT. The final contribution is the development of the first quantum OLE protocol that does not rely on OT. Additionally, we have also created a comprehensive review dedicated solely to quantum OT protocols, which is often overlooked in broader surveys on the topic of ``quantum cryptography''. We describe the contributions in a bit more detail.
 
 \
 
@@ -55,7 +55,7 @@ We conduct a theoretical evaluation of the performance and privacy guarantees of
 
 \
 
-\noindent\textbf{Quantum oblivious linear evaluation protocol.} Our second contribution is a quantum protocol for OLE that provides quantum-UC security in the $\mathcal{F}_{\textbf{COM}}-$hybrid model, which assumes the availability of a commitment functionality, $\mathcal{F}_{\textbf{COM}}$. To ensure security, we leverage the properties of Mutually Unbiased Bases in high-dimensional Hilbert spaces with prime and prime-power dimensions. This approach is motivated by recent theoretical and experimental advancements in quantum cryptography \cite{BPT00,DEBZ10,Zhongetal2015,BHVBFHM18,DHMPPV21} that have opened the door for new solutions in the field.
+\noindent\textbf{Quantum oblivious linear evaluation protocol.} Our last contribution is a quantum protocol for OLE that provides quantum-UC security in the $\mathcal{F}_{\textbf{COM}}-$hybrid model, which assumes the availability of a commitment functionality, $\mathcal{F}_{\textbf{COM}}$. To ensure security, we leverage the properties of Mutually Unbiased Bases in high-dimensional Hilbert spaces with prime and prime-power dimensions. This approach is motivated by recent theoretical and experimental advancements in quantum cryptography \cite{BPT00,DEBZ10,Zhongetal2015,BHVBFHM18,DHMPPV21} that have opened the door for new solutions in the field.
 
 As far as we are aware, our protocol is the first to propose a quantum-UC secure quantum OLE. Furthermore, it does not rely on any quantum OT implementation, which is a common approach. We design the protocol to handle static corruption adversarial model for both semi-honest and malicious adversaries. Additionally, we introduce a weaker version of OLE, which has potential independent value. We also modify the proposed protocol to generate quantum-UC secure vector OLE (VOLE) and provide bounds on the size of VOLE based on the security parameters.
 
@@ -72,7 +72,7 @@ The results are presented as follows. We start presenting the technical elements
 
 \begin{itemize}
 	\item\cite{SMV22} Manuel B. Santos, Paulo Mateus, and Chrysoula Vlachou. “Quantum Universally
-Composable Oblivious Linear Evaluation”. 2022. DOI: 10.48550/ARXIV.2204.14171. Poster at QCrypt2022.	
+Composable Oblivious Linear Evaluation”. 2022. DOI: 10.48550/ARXIV.2204 .14171. Poster at QCrypt2022.	
 	
 	\item\cite{SMP22} Manuel B. Santos, Paulo Mateus, and Armando N. Pinto. “Quantum Oblivious Transfer:
 A Short Review”. In: Entropy 24.7 (2022), p. 945.
@@ -90,7 +90,7 @@ in Genome and Proteins”. In: 2020 22nd International Conference on Transparent
 Networks (ICTON). IEEE, July 2020. 
 \end{itemize}
 
-Chapter~\ref{chapter_QOT} is based on \cite{SMP22} and \cite{SGPM22}. Chapter~\ref{classical-and-quantum-OT} is based on the work developed on both \cite{SPM21} and \cite{SGPM22}. Chapter~\ref{ch:phylogenetic-trees} is the combination of \cite{SGPM22, SGPM21, POS+20}. Finally, Chapter~\ref{ch:QOLE} presents all the results from \cite{SMV22}. 
+Chapter~\ref{chapter_QOT} is based on \cite{SMP22} and \cite{SGPM22}. Chapter~\ref{classical-and-quantum-OT} is based on the work developed in both \cite{SPM21} and \cite{SGPM22}. Chapter~\ref{ch:phylogenetic-trees} is the combination of \cite{SGPM22, SGPM21, POS+20}. Finally, Chapter~\ref{ch:QOLE} presents all the results from \cite{SMV22}. 
 
 %\
 
