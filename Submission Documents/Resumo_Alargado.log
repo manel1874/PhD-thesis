@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  14 DEC 2023 22:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  16 JAN 2024 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -55,7 +55,7 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count179
 \l__pdf_internal_box=\box45
 )
-No file Resumo_Alargado.aux.
+(./Resumo_Alargado.aux)
 \openout1 = `Resumo_Alargado.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -72,6 +72,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -132,8 +133,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3] (./Resumo_Alargado.aux) ) 
 Here is how much of TeX's memory you used:
- 948 strings out of 480608
- 14568 string characters out of 5903629
+ 950 strings out of 480608
+ 14608 string characters out of 5903629
  262679 words of memory out of 5000000
  16901 multiletter control sequences out of 15000+600000
  535731 words of font info for 35 fonts, out of 8000000 for 9000
@@ -145,7 +146,7 @@ Here is how much of TeX's memory you used:
 public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb>
-Output written on Resumo_Alargado.pdf (3 pages, 71719 bytes).
+Output written on Resumo_Alargado.pdf (3 pages, 71727 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream
