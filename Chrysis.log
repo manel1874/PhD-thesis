@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  16 JAN 2024 22:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.10.13)  7 FEB 2025 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1341,36 +1341,41 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into
 your preamble.
  on input line 9.
 
-(./Thesis_FrontCover.tex
+(./Cover_print_1st_page_Final.tex
 <IST_A_CMYK_POS.pdf, id=408, 845.0471pt x 597.51233pt>
 File: IST_A_CMYK_POS.pdf Graphic file (type pdf)
 <use IST_A_CMYK_POS.pdf>
-Package pdftex.def Info: IST_A_CMYK_POS.pdf  used on input line 5.
+Package pdftex.def Info: IST_A_CMYK_POS.pdf  used on input line 32.
 (pdftex.def)             Requested size: -78.38533pt x -74.25978pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/b/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 9.
+(Font)              size <17.28> substituted on input line 36.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/b/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 21.
+(Font)              size <20.74> substituted on input line 48.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 25.
+(Font)              size <17.28> substituted on input line 52.
 
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./IST_A
 _CMYK_POS.pdf>] [2
 
-]) (./abstract.tex
-Underfull \vbox (badness 5403) has occurred while \output is active []
-
- [3
+]
+File: IST_A_CMYK_POS.pdf Graphic file (type pdf)
+<use IST_A_CMYK_POS.pdf>
+Package pdftex.def Info: IST_A_CMYK_POS.pdf  used on input line 83.
+(pdftex.def)             Requested size: -78.38533pt x -74.25978pt.
+) (./abstract.tex [3] [4
 
 ]
+Underfull \vbox (badness 5403) has occurred while \output is active []
+
+ [5]
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
 .
 
@@ -1389,26 +1394,31 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) (./resumo.tex
-[4]
+[6]
 Underfull \vbox (badness 5403) has occurred while \output is active []
 
- [5
+ [7
 
 ])
-(./acknowledgments.tex [6]) (./Thesis_Dedication.tex [7
+(./acknowledgments.tex [8]) (./Thesis_Dedication.tex [9
 
-] [8
+] [10
 
-]) [9] [10
+]) [11] [12
 
 ]
-(./Chrysis.toc [11] [12])
+(./Chrysis.toc
+Overfull \hbox (1.89308pt too wide) detected at line 7
+ []\OT1/cmr/m/n/12 xxiv
+ []
+
+[13] [14])
 \tf@toc=\write7
 \openout7 = `Chrysis.toc'.
 
- [13] [14
+ [15] [16
 
-] (./Chrysis.lof [15
+] (./Chrysis.lof [17
 
 ]
 Overfull \hbox (11.48721pt too wide) in paragraph at lines 31--31
@@ -1420,14 +1430,14 @@ over-head that is at-tributable
 \tf@lof=\write8
 \openout8 = `Chrysis.lof'.
 
- [16] (./Chrysis.lot)
+ [18] (./Chrysis.lot)
 \tf@lot=\write9
 \openout9 = `Chrysis.lot'.
 
- [17
+ [19
 
 
-] [18
+] [20
 
 ] (./List_of_Abbreviations.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--142
@@ -1437,16 +1447,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--142
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19
+ [21
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21])
-(./Notation.tex [22]
+ [23])
+(./Notation.tex [24]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 40.
 
 
@@ -1455,7 +1465,7 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23
+ [25
 
 ]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
@@ -1466,17 +1476,17 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
 Overfull \vbox (26.36755pt too high) has occurred while \output is active []
 
 
-[27]) [28]
+[29]) [30]
 \openout2 = `Introduction/Introduction.aux'.
 
  (./Introduction/Introduction.tex
@@ -1506,7 +1516,7 @@ Underfull \vbox (badness 3942) has occurred while \output is active []
 Underfull \vbox (badness 1009) has occurred while \output is active []
 
  [10]
-<Chapter_TechnicalOverview/booleanCircuit.png, id=1003, 884.30376pt x 520.94624
+<Chapter_TechnicalOverview/booleanCircuit.png, id=1011, 884.30376pt x 520.94624
 pt>
 File: Chapter_TechnicalOverview/booleanCircuit.png Graphic file (type png)
 <use Chapter_TechnicalOverview/booleanCircuit.png>
@@ -1606,7 +1616,7 @@ Underfull \vbox (badness 4084) has occurred while \output is active []
 
  [48]
 [49] [50]
-<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1647, 462.5
+<Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png, id=1656, 462.5
 28pt x 346.896pt>
 File: Chapter_QuantumAndClassicalObliviousTransfer/nOTperSeccond.png Graphic fi
 le (type png)
@@ -1677,7 +1687,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
 [79]
-<Chapter_PrivatePhylogeneticTrees/tree.png, id=2083, 601.24625pt x 339.2675pt>
+<Chapter_PrivatePhylogeneticTrees/tree.png, id=2092, 601.24625pt x 339.2675pt>
 File: Chapter_PrivatePhylogeneticTrees/tree.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/tree.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/tree.png  used on inp
@@ -1688,7 +1698,7 @@ ut line 486.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [80]
-<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2091, 589.0005pt x 349.96747pt>
+<Chapter_PrivatePhylogeneticTrees/PPT.png, id=2100, 589.0005pt x 349.96747pt>
 File: Chapter_PrivatePhylogeneticTrees/PPT.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/PPT.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/PPT.png  used on inpu
@@ -1696,7 +1706,7 @@ t line 514.
 (pdftex.def)             Requested size: 441.74928pt x 262.47495pt.
  [81 <./Chapter_PrivatePhylogeneticTrees/tree.png>] [82 <./Chapter_PrivatePhylo
 geneticTrees/PPT.png>]
-<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2114, 458.01112pt x 358.4592pt>
+<Chapter_PrivatePhylogeneticTrees/QOKD.png, id=2122, 458.01112pt x 358.4592pt>
 File: Chapter_PrivatePhylogeneticTrees/QOKD.png Graphic file (type png)
 <use Chapter_PrivatePhylogeneticTrees/QOKD.png>
 Package pdftex.def Info: Chapter_PrivatePhylogeneticTrees/QOKD.png  used on inp
@@ -1713,7 +1723,7 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84 <./Chapter_PrivatePhylogeneticTrees/QOKD.png>] [85] [86]
-<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2166, 18
+<Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg, id=2175, 18
 00.7275pt x 1471.4975pt>
 File: Chapter_PrivatePhylogeneticTrees/divide-and-conquer-tailored.jpeg Graphic
  file (type jpg)
@@ -2017,9 +2027,9 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
- 43179 strings out of 480608
- 978492 string characters out of 5903629
- 1690248 words of memory out of 5000000
+ 43181 strings out of 480608
+ 978536 string characters out of 5903629
+ 1690246 words of memory out of 5000000
  57178 multiletter control sequences out of 15000+600000
  567601 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2074,10 +2084,10 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Chrysis.pdf (202 pages, 5572276 bytes).
+Output written on Chrysis.pdf (204 pages, 5577192 bytes).
 PDF statistics:
- 3496 PDF objects out of 3580 (max. 8388607)
- 3105 compressed objects within 32 object streams
- 1002 named destinations out of 1200 (max. 500000)
+ 3505 PDF objects out of 3580 (max. 8388607)
+ 3112 compressed objects within 32 object streams
+ 1004 named destinations out of 1200 (max. 500000)
  920 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,10 @@
-\contentsline {section}{Abstract}{iii}{chapter*.1}%
-\contentsline {section}{Resumo}{v}{chapter*.2}%
-\contentsline {section}{Acknowledgements}{vii}{chapter*.3}%
-\contentsline {section}{List of Figures}{xv}{section*.6}%
-\contentsline {section}{List of Tables}{xvii}{section*.8}%
-\contentsline {section}{List of Abbreviations}{xix}{section*.10}%
-\contentsline {section}{Notation}{xxii}{section*.12}%
+\contentsline {section}{Abstract}{v}{chapter*.1}%
+\contentsline {section}{Resumo}{vii}{chapter*.2}%
+\contentsline {section}{Acknowledgements}{ix}{chapter*.3}%
+\contentsline {section}{List of Figures}{xvii}{section*.6}%
+\contentsline {section}{List of Tables}{xix}{section*.8}%
+\contentsline {section}{List of Abbreviations}{xxi}{section*.10}%
+\contentsline {section}{Notation}{xxiv}{section*.12}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Technical overview}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Mathematical preliminaries}{7}{section.2.1}%

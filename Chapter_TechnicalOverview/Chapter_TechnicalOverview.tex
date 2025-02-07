@@ -380,13 +380,13 @@ The conditional min-entropy can be generalized to the fully quantum case where b
 
 \begin{definition}
 \label{def:conditionalquantumminentropy}
-Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_B')$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_B')$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
+Let $\rho_{A B'} \in \mathcal{P}(\mathcal{H}_A \otimes \mathcal{H}_{B'})$ and $\sigma_{B'} \in \mathcal{P}(\mathcal{H}_{B'})$. The \textit{min-entropy} of $\rho_{A B'}$ relative to $\sigma_{B'}$ is given by
 $$H_{\text{min}}(A | B')_{\rho|\sigma} = -\log \min\{ \lambda : \lambda \cdot \text{id}_A \otimes \sigma_{B'} \geq \rho_{A B'} \},$$
 and 
 $$ H_{\text{min}}(A | B')_{\rho} = \sup_{\sigma_{B'}} H_{\text{min}}(A | B')_{\rho|\sigma_{B'}}.$$
 \end{definition}
 
-Furthermore, consider the superposition state $\ket{\phi}_{AB'} = \sum{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}_{AB'}$ and the mixture $\tilde{\rho}_{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives a lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
+Furthermore, consider the superposition state $\ket{\phi}_{AB'} = \sum_{z\in B}\alpha_z\ket{z} \ket{\psi^z}$ for some set $\mathcal{B}$ and arbitrary coefficients $\alpha_z$. We define $\rho_{AB'} = \ketbra{\phi}_{AB'}$ and the mixture $\tilde{\rho}_{AB'} = \sum_{z\in \mathcal{B}} |\alpha_z|^2 \ketbra{z} \otimes \ketbra{\psi^z}$. The following lemma gives a lower bound on the min-entropy of $\rho_{AB'}$ in terms of the min-entropy of $\tilde{\rho}_{AB'} $.
 
 
 \begin{lemma}[Lemma 3.1.13, \cite{R06}]
@@ -395,7 +395,7 @@ $$H_{\text{min}}(A | B')_{\rho} \geq H_{\text{min}}(A | B')_{\tilde{\rho}} - \lo
 \label{lemma:renner_lower_bound}
 \end{lemma}
 
-It is important to understand the changes in min-entropy that occur when a completely positive (CP) map is applied, as this is a crucial aspect of the security proof for the quantum oblivious linear evaluation protocol outlined in Chapter~\ref{ch:QOLE}. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result alone is insufficient for deriving practical min-entropy bounds. To obtain meaningful bounds for specific operators $\mathcal{M}$, it is necessary to utilize Theorem~\ref{thm:entaglementSamplingResult}, in conjunction with Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}. It is important to note that for clarity, the theorem employs the notation outlined in Chapter~\ref{ch:QOLE}.
+It is important to understand the changes in min-entropy that occur when a completely positive (CP) map is applied, as this is a crucial aspect of the security proof for the quantum oblivious linear evaluation protocol outlined in Chapter~\ref{ch:QOLE}. It is known that, for a unital CP map $\mathcal{M}$ (i.e. $\mathcal{M}(\mathds{1}) = \mathds{1}$), the conditional min-entropy does not decrease, i.e. $H_{\min}(\mathcal{M}(A)| B) \geq H_{\min}(A| B)$. However, this result alone is insufficient for deriving practical min-entropy bounds. To obtain meaningful bounds for specific operators $\mathcal{M}$, it is necessary to use Lemma~\ref{thm:entaglementSamplingResult}, in conjunction with Lemma~\ref{lemma:quantumrelation} and Lemma~\ref{lemma:classicalquantumrelation}. It is important to note that for clarity, the lemma employs the notation outlined in Chapter~\ref{ch:QOLE}.
 
 
 \begin{lemma}[Theorem 1, \cite{Dupuis2015}] 
@@ -426,7 +426,7 @@ Next, we present a chain rule for the collision entropy.
 
 \begin{lemma}[Proposition 8, \cite{MDSFT13}]
 For any $\rho_{ABC}\in\mathcal{P}(\mathcal{H}_A\otimes\mathcal{H}_B\otimes\mathcal{H}_C)$, it holds that
-$$H_2(A|BC)_{\rho} \geq H_2(AC|B) - \log d_C,$$
+$$H_2(A|BC)_{\rho} \geq H_2(AC|B)_{\rho} - \log d_C,$$
 where $d_C$ is the rank of $\rho_C$.
 \label{lemma:chain_rule}
 \end{lemma}
